@@ -1,0 +1,3569 @@
+{
+  "face_annotations": [],
+  "full_text_annotation": {
+    "pages": [
+      {
+        "blocks": [
+          {
+            "block_type": 1,
+            "bounding_box": {
+              "normalized_vertices": [],
+              "vertices": [
+                {
+                  "x": 34,
+                  "y": 172
+                },
+                {
+                  "x": 62,
+                  "y": 172
+                },
+                {
+                  "x": 62,
+                  "y": 189
+                },
+                {
+                  "x": 34,
+                  "y": 189
+                }
+              ]
+            },
+            "confidence": 0.72140193,
+            "paragraphs": [
+              {
+                "bounding_box": {
+                  "normalized_vertices": [],
+                  "vertices": [
+                    {
+                      "x": 34,
+                      "y": 172
+                    },
+                    {
+                      "x": 62,
+                      "y": 172
+                    },
+                    {
+                      "x": 62,
+                      "y": 189
+                    },
+                    {
+                      "x": 34,
+                      "y": 189
+                    }
+                  ]
+                },
+                "confidence": 0.72140193,
+                "words": [
+                  {
+                    "bounding_box": {
+                      "normalized_vertices": [],
+                      "vertices": [
+                        {
+                          "x": 34,
+                          "y": 172
+                        },
+                        {
+                          "x": 41,
+                          "y": 172
+                        },
+                        {
+                          "x": 41,
+                          "y": 189
+                        },
+                        {
+                          "x": 34,
+                          "y": 189
+                        }
+                      ]
+                    },
+                    "confidence": 0.6352782,
+                    "symbols": [
+                      {
+                        "bounding_box": {
+                          "normalized_vertices": [],
+                          "vertices": [
+                            {
+                              "x": 34,
+                              "y": 172
+                            },
+                            {
+                              "x": 41,
+                              "y": 172
+                            },
+                            {
+                              "x": 41,
+                              "y": 189
+                            },
+                            {
+                              "x": 34,
+                              "y": 189
+                            }
+                          ]
+                        },
+                        "confidence": 0.6352782,
+                        "text": "("
+                      }
+                    ]
+                  },
+                  {
+                    "bounding_box": {
+                      "normalized_vertices": [],
+                      "vertices": [
+                        {
+                          "x": 38,
+                          "y": 172
+                        },
+                        {
+                          "x": 56,
+                          "y": 172
+                        },
+                        {
+                          "x": 56,
+                          "y": 189
+                        },
+                        {
+                          "x": 38,
+                          "y": 189
+                        }
+                      ]
+                    },
+                    "confidence": 0.7927102,
+                    "symbols": [
+                      {
+                        "bounding_box": {
+                          "normalized_vertices": [],
+                          "vertices": [
+                            {
+                              "x": 38,
+                              "y": 172
+                            },
+                            {
+                              "x": 48,
+                              "y": 172
+                            },
+                            {
+                              "x": 48,
+                              "y": 189
+                            },
+                            {
+                              "x": 38,
+                              "y": 189
+                            }
+                          ]
+                        },
+                        "confidence": 0.66414034,
+                        "text": "1"
+                      },
+                      {
+                        "bounding_box": {
+                          "normalized_vertices": [],
+                          "vertices": [
+                            {
+                              "x": 43,
+                              "y": 172
+                            },
+                            {
+                              "x": 56,
+                              "y": 172
+                            },
+                            {
+                              "x": 56,
+                              "y": 189
+                            },
+                            {
+                              "x": 43,
+                              "y": 189
+                            }
+                          ]
+                        },
+                        "confidence": 0.92127997,
+                        "text": "3"
+                      }
+                    ]
+                  },
+                  {
+                    "bounding_box": {
+                      "normalized_vertices": [],
+                      "vertices": [
+                        {
+                          "x": 55,
+                          "y": 172
+                        },
+                        {
+                          "x": 62,
+                          "y": 172
+                        },
+                        {
+                          "x": 62,
+                          "y": 189
+                        },
+                        {
+                          "x": 55,
+                          "y": 189
+                        }
+                      ]
+                    },
+                    "confidence": 0.6649093,
+                    "symbols": [
+                      {
+                        "bounding_box": {
+                          "normalized_vertices": [],
+                          "vertices": [
+                            {
+                              "x": 55,
+                              "y": 172
+                            },
+                            {
+                              "x": 62,
+                              "y": 172
+                            },
+                            {
+                              "x": 62,
+                              "y": 189
+                            },
+                            {
+                              "x": 55,
+                              "y": 189
+                            }
+                          ]
+                        },
+                        "confidence": 0.6649093,
+                        "property": {
+                          "detected_break": {
+                            "is_prefix": false,
+                            "type_": 5
+                          },
+                          "detected_languages": []
+                        },
+                        "text": "."
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "block_type": 1,
+            "bounding_box": {
+              "normalized_vertices": [],
+              "vertices": [
+                {
+                  "x": 97,
+                  "y": 174
+                },
+                {
+                  "x": 554,
+                  "y": 172
+                },
+                {
+                  "x": 554,
+                  "y": 221
+                },
+                {
+                  "x": 97,
+                  "y": 223
+                }
+              ]
+            },
+            "confidence": 0.79747325,
+            "paragraphs": [
+              {
+                "bounding_box": {
+                  "normalized_vertices": [],
+                  "vertices": [
+                    {
+                      "x": 97,
+                      "y": 176
+                    },
+                    {
+                      "x": 554,
+                      "y": 172
+                    },
+                    {
+                      "x": 554,
+                      "y": 194
+                    },
+                    {
+                      "x": 97,
+                      "y": 198
+                    }
+                  ]
+                },
+                "confidence": 0.8193572,
+                "words": [
+                  {
+                    "bounding_box": {
+                      "normalized_vertices": [],
+                      "vertices": [
+                        {
+                          "x": 97,
+                          "y": 176
+                        },
+                        {
+                          "x": 157,
+                          "y": 175
+                        },
+                        {
+                          "x": 157,
+                          "y": 197
+                        },
+                        {
+                          "x": 97,
+                          "y": 198
+                        }
+                      ]
+                    },
+                    "confidence": 0.8601304,
+                    "property": {
+                      "detected_languages": [
+                        {
+                          "confidence": 1.0,
+                          "language_code": "ro"
+                        }
+                      ]
+                    },
+                    "symbols": [
+                      {
+                        "bounding_box": {
+                          "normalized_vertices": [],
+                          "vertices": [
+                            {
+                              "x": 97,
+                              "y": 177
+                            },
+                            {
+                              "x": 111,
+                              "y": 177
+                            },
+                            {
+                              "x": 111,
+                              "y": 198
+                            },
+                            {
+                              "x": 97,
+                              "y": 198
+                            }
+                          ]
+                        },
+                        "confidence": 0.96792823,
+                        "text": "e"
+                      },
+                      {
+                        "bounding_box": {
+                          "normalized_vertices": [],
+                          "vertices": [
+                            {
+                              "x": 106,
+                              "y": 176
+                            },
+                            {
+                              "x": 121,
+                              "y": 176
+                            },
+                            {
+                              "x": 121,
+                              "y": 197
+                            },
+                            {
+                              "x": 106,
+                              "y": 197
+                            }
+                          ]
+                        },
+                        "confidence": 0.58750117,
+                        "text": "n"
+                      },
+                      {
+                        "bounding_box": {
+                          "normalized_vertices": [],
+                          "vertices": [
+                            {
+                              "x": 118,
+                              "y": 176
+                            },
+                            {
+                              "x": 132,
+                              "y": 176
+                            },
+                            {
+                              "x": 132,
+                              "y": 197
+                            },
+                            {
+                              "x": 118,
+                              "y": 197
+                            }
+                          ]
+                        },
+                        "confidence": 0.9885374,
+                        "text": "e"
+                      },
+                      {
+                        "bounding_box": {
+                          "normalized_vertices": [],
+                          "vertices": [
+                            {
+                              "x": 127,
+                              "y": 176
+                            },
+                            {
+                              "x": 139,
+                              "y": 176
+                            },
+                            {
+                              "x": 139,
+                              "y": 197
+                            },
+                            {
+                              "x": 127,
+                              "y": 197
+                            }
+                          ]
+                        },
+                        "confidence": 0.9737365,
+                        "text": "r"
+                      },
+                      {
+                        "bounding_box": {
+                          "normalized_vertices": [],
+                          "vertices": [
+                            {
+                              "x": 131,
+                              "y": 176
+                            },
+                            {
+                              "x": 147,
+                              "y": 176
+                            },
+                            {
+                              "x": 147,
+                              "y": 197
+                            },
+                            {
+                              "x": 131,
+                              "y": 197
+                            }
+                          ]
+                        },
+                        "confidence": 0.9679941,
+                        "text": "g"
+                      },
+                      {
+                        "bounding_box": {
+                          "normalized_vertices": [],
+                          "vertices": [
+                            {
+                              "x": 138,
+                              "y": 176
+                            },
+                            {
+                              "x": 149,
+                              "y": 176
+                            },
+                            {
+                              "x": 149,
+                              "y": 197
+                            },
+                            {
+                              "x": 138,
+                              "y": 197
+                            }
+                          ]
+                        },
+                        "confidence": 0.9605064,
+                        "text": "i"
+                      },
+                      {
+                        "bounding_box": {
+                          "normalized_vertices": [],
+                          "vertices": [
+                            {
+                              "x": 147,
+                              "y": 176
+                            },
+                            {
+                              "x": 157,
+                              "y": 176
+                            },
+                            {
+                              "x": 157,
+                              "y": 197
+                            },
+                            {
+                              "x": 147,
+                              "y": 197
+                            }
+                          ]
+                        },
+                        "confidence": 0.5747094,
+                        "property": {
+                          "detected_break": {
+                            "is_prefix": false,
+                            "type_": 1
+                          },
+                          "detected_languages": []
+                        },
+                        "text": "c"
+                      }
+                    ]
+                  },
+                  {
+                    "bounding_box": {
+                      "normalized_vertices": [],
+                      "vertices": [
+                        {
+                          "x": 160,
+                          "y": 176
+                        },
+                        {
+                          "x": 191,
+                          "y": 176
+                        },
+                        {
+                          "x": 191,
+                          "y": 197
+                        },
+                        {
+                          "x": 160,
+                          "y": 197
+                        }
+                      ]
+                    },
+                    "confidence": 0.85850793,
+                    "property": {
+                      "detected_languages": [
+                        {
+                          "confidence": 1.0,
+                          "language_code": "ro"
+                        }
+                      ]
+                    },
+                    "symbols": [
+                      {
+                        "bounding_box": {
+                          "normalized_vertices": [],
+                          "vertices": [
+                            {
+                              "x": 160,
+                              "y": 176
+                            },
+                            {
+                              "x": 174,
+                              "y": 176
+                            },
+                            {
+                              "x": 174,
+                              "y": 197
+                            },
+                            {
+                              "x": 160,
+                              "y": 197
+                            }
+                          ]
+                        },
+                        "confidence": 0.936153,
+                        "text": "d"
+                      },
+                      {
+                        "bounding_box": {
+                          "normalized_vertices": [],
+                          "vertices": [
+                            {
+                              "x": 172,
+                              "y": 176
+                            },
+                            {
+                              "x": 183,
+                              "y": 176
+                            },
+                            {
+                              "x": 183,
+                              "y": 197
+                            },
+                            {
+                              "x": 172,
+                              "y": 197
+                            }
+                          ]
+                        },
+                        "confidence": 0.75288206,
+                        "text": "a"
+                      },
+                      {
+                        "bounding_box": {
+                          "normalized_vertices": [],
+                          "vertices": [
+                            {
+                              "x": 181,
+                              "y": 176
+                            },
+                            {
+                              "x": 191,
+                              "y": 176
+                            },
+                            {
+                              "x": 191,
+                              "y": 197
+                            },
+                            {
+                              "x": 181,
+                              "y": 197
+                            }
+                          ]
+                        },
+                        "confidence": 0.8864888,
+                        "property": {
+                          "detected_break": {
+                            "is_prefix": false,
+                            "type_": 1
+                          },
+                          "detected_languages": []
+                        },
+                        "text": "n"
+                      }
+                    ]
+                  },
+                  {
+                    "bounding_box": {
+                      "normalized_vertices": [],
+                      "vertices": [
+                        {
+                          "x": 200,
+                          "y": 175
+                        },
+                        {
+                          "x": 224,
+                          "y": 175
+                        },
+                        {
+                          "x": 224,
+                          "y": 196
+                        },
+                        {
+                          "x": 200,
+                          "y": 196
+                        }
+                      ]
+                    },
+                    "confidence": 0.9695759,
+                    "property": {
+                      "detected_languages": [
+                        {
+                          "confidence": 1.0,
+                          "language_code": "ro"
+                        }
+                      ]
+                    },
+                    "symbols": [
+                      {
+                        "bounding_box": {
+                          "normalized_vertices": [],
+                          "vertices": [
+                            {
+                              "x": 200,
+                              "y": 175
+                            },
+                            {
+                              "x": 213,
+                              "y": 175
+                            },
+                            {
+                              "x": 213,
+                              "y": 196
+                            },
+                            {
+                              "x": 200,
+                              "y": 196
+                            }
+                          ]
+                        },
+                        "confidence": 0.9720804,
+                        "text": "d"
+                      },
+                      {
+                        "bounding_box": {
+                          "normalized_vertices": [],
+                          "vertices": [
+                            {
+                              "x": 211,
+                              "y": 175
+                            },
+                            {
+                              "x": 224,
+                              "y": 175
+                            },
+                            {
+                              "x": 224,
+                              "y": 196
+                            },
+                            {
+                              "x": 211,
+                              "y": 196
+                            }
+                          ]
+                        },
+                        "confidence": 0.96707135,
+                        "property": {
+                          "detected_break": {
+                            "is_prefix": false,
+                            "type_": 1
+                          },
+                          "detected_languages": []
+                        },
+                        "text": "e"
+                      }
+                    ]
+                  },
+                  {
+                    "bounding_box": {
+                      "normalized_vertices": [],
+                      "vertices": [
+                        {
+                          "x": 222,
+                          "y": 175
+                        },
+                        {
+                          "x": 284,
+                          "y": 174
+                        },
+                        {
+                          "x": 284,
+                          "y": 195
+                        },
+                        {
+                          "x": 222,
+                          "y": 196
+                        }
+                      ]
+                    },
+                    "confidence": 0.8917116,
+                    "property": {
+                      "detected_languages": [
+                        {
+                          "confidence": 1.0,
+                          "language_code": "ro"
+                        }
+                      ]
+                    },
+                    "symbols": [
+                      {
+                        "bounding_box": {
+                          "normalized_vertices": [],
+                          "vertices": [
+                            {
+                              "x": 222,
+                              "y": 175
+                            },
+                            {
+                              "x": 233,
+                              "y": 175
+                            },
+                            {
+                              "x": 233,
+                              "y": 196
+                            },
+                            {
+                              "x": 222,
+                              "y": 196
+                            }
+                          ]
+                        },
+                        "confidence": 0.9097052,
+                        "text": "v"
+                      },
+                      {
+                        "bounding_box": {
+                          "normalized_vertices": [],
+                          "vertices": [
+                            {
+                              "x": 231,
+                              "y": 175
+                            },
+                            {
+                              "x": 242,
+                              "y": 175
+                            },
+                            {
+                              "x": 242,
+                              "y": 196
+                            },
+                            {
+                              "x": 231,
+                              "y": 196
+                            }
+                          ]
+                        },
+                        "confidence": 0.81617856,
+                        "text": "o"
+                      },
+                      {
+                        "bounding_box": {
+                          "normalized_vertices": [],
+                          "vertices": [
+                            {
+                              "x": 239,
+                              "y": 175
+                            },
+                            {
+                              "x": 250,
+                              "y": 175
+                            },
+                            {
+                              "x": 250,
+                              "y": 196
+                            },
+                            {
+                              "x": 239,
+                              "y": 196
+                            }
+                          ]
+                        },
+                        "confidence": 0.9098813,
+                        "text": "r"
+                      },
+                      {
+                        "bounding_box": {
+                          "normalized_vertices": [],
+                          "vertices": [
+                            {
+                              "x": 245,
+                              "y": 175
+                            },
+                            {
+                              "x": 260,
+                              "y": 175
+                            },
+                            {
+                              "x": 260,
+                              "y": 196
+                            },
+                            {
+                              "x": 245,
+                              "y": 196
+                            }
+                          ]
+                        },
+                        "confidence": 0.8724169,
+                        "text": "m"
+                      },
+                      {
+                        "bounding_box": {
+                          "normalized_vertices": [],
+                          "vertices": [
+                            {
+                              "x": 258,
+                              "y": 175
+                            },
+                            {
+                              "x": 267,
+                              "y": 175
+                            },
+                            {
+                              "x": 267,
+                              "y": 196
+                            },
+                            {
+                              "x": 258,
+                              "y": 196
+                            }
+                          ]
+                        },
+                        "confidence": 0.9437416,
+                        "text": "i"
+                      },
+                      {
+                        "bounding_box": {
+                          "normalized_vertices": [],
+                          "vertices": [
+                            {
+                              "x": 265,
+                              "y": 175
+                            },
+                            {
+                              "x": 275,
+                              "y": 175
+                            },
+                            {
+                              "x": 275,
+                              "y": 196
+                            },
+                            {
+                              "x": 265,
+                              "y": 196
+                            }
+                          ]
+                        },
+                        "confidence": 0.8982701,
+                        "text": "n"
+                      },
+                      {
+                        "bounding_box": {
+                          "normalized_vertices": [],
+                          "vertices": [
+                            {
+                              "x": 271,
+                              "y": 175
+                            },
+                            {
+                              "x": 284,
+                              "y": 175
+                            },
+                            {
+                              "x": 284,
+                              "y": 196
+                            },
+                            {
+                              "x": 271,
+                              "y": 196
+                            }
+                          ]
+                        },
+                        "confidence": 0.8917876,
+                        "property": {
+                          "detected_break": {
+                            "is_prefix": false,
+                            "type_": 1
+                          },
+                          "detected_languages": []
+                        },
+                        "text": "g"
+                      }
+                    ]
+                  },
+                  {
+                    "bounding_box": {
+                      "normalized_vertices": [],
+                      "vertices": [
+                        {
+                          "x": 283,
+                          "y": 174
+                        },
+                        {
+                          "x": 313,
+                          "y": 174
+                        },
+                        {
+                          "x": 313,
+                          "y": 196
+                        },
+                        {
+                          "x": 283,
+                          "y": 196
+                        }
+                      ]
+                    },
+                    "confidence": 0.691223,
+                    "property": {
+                      "detected_languages": [
+                        {
+                          "confidence": 1.0,
+                          "language_code": "ro"
+                        }
+                      ]
+                    },
+                    "symbols": [
+                      {
+                        "bounding_box": {
+                          "normalized_vertices": [],
+                          "vertices": [
+                            {
+                              "x": 283,
+                              "y": 175
+                            },
+                            {
+                              "x": 294,
+                              "y": 175
+                            },
+                            {
+                              "x": 294,
+                              "y": 196
+                            },
+                            {
+                              "x": 283,
+                              "y": 196
+                            }
+                          ]
+                        },
+                        "confidence": 0.61365604,
+                        "text": "v"
+                      },
+                      {
+                        "bounding_box": {
+                          "normalized_vertices": [],
+                          "vertices": [
+                            {
+                              "x": 292,
+                              "y": 175
+                            },
+                            {
+                              "x": 303,
+                              "y": 175
+                            },
+                            {
+                              "x": 303,
+                              "y": 196
+                            },
+                            {
+                              "x": 292,
+                              "y": 196
+                            }
+                          ]
+                        },
+                        "confidence": 0.69382626,
+                        "text": "a"
+                      },
+                      {
+                        "bounding_box": {
+                          "normalized_vertices": [],
+                          "vertices": [
+                            {
+                              "x": 303,
+                              "y": 174
+                            },
+                            {
+                              "x": 313,
+                              "y": 174
+                            },
+                            {
+                              "x": 313,
+                              "y": 195
+                            },
+                            {
+                              "x": 303,
+                              "y": 195
+                            }
+                          ]
+                        },
+                        "confidence": 0.76618683,
+                        "property": {
+                          "detected_break": {
+                            "is_prefix": false,
+                            "type_": 1
+                          },
+                          "detected_languages": []
+                        },
+                        "text": "n"
+                      }
+                    ]
+                  },
+                  {
+                    "bounding_box": {
+                      "normalized_vertices": [],
+                      "vertices": [
+                        {
+                          "x": 317,
+                          "y": 174
+                        },
+                        {
+                          "x": 335,
+                          "y": 174
+                        },
+                        {
+                          "x": 335,
+                          "y": 195
+                        },
+                        {
+                          "x": 317,
+                          "y": 195
+                        }
+                      ]
+                    },
+                    "confidence": 0.95855737,
+                    "property": {
+                      "detected_languages": [
+                        {
+                          "confidence": 1.0,
+                          "language_code": "ro"
+                        }
+                      ]
+                    },
+                    "symbols": [
+                      {
+                        "bounding_box": {
+                          "normalized_vertices": [],
+                          "vertices": [
+                            {
+                              "x": 317,
+                              "y": 174
+                            },
+                            {
+                              "x": 327,
+                              "y": 174
+                            },
+                            {
+                              "x": 327,
+                              "y": 195
+                            },
+                            {
+                              "x": 317,
+                              "y": 195
+                            }
+                          ]
+                        },
+                        "confidence": 0.9518048,
+                        "text": "d"
+                      },
+                      {
+                        "bounding_box": {
+                          "normalized_vertices": [],
+                          "vertices": [
+                            {
+                              "x": 324,
+                              "y": 174
+                            },
+                            {
+                              "x": 335,
+                              "y": 174
+                            },
+                            {
+                              "x": 335,
+                              "y": 195
+                            },
+                            {
+                              "x": 324,
+                              "y": 195
+                            }
+                          ]
+                        },
+                        "confidence": 0.96531,
+                        "property": {
+                          "detected_break": {
+                            "is_prefix": false,
+                            "type_": 1
+                          },
+                          "detected_languages": []
+                        },
+                        "text": "e"
+                      }
+                    ]
+                  },
+                  {
+                    "bounding_box": {
+                      "normalized_vertices": [],
+                      "vertices": [
+                        {
+                          "x": 337,
+                          "y": 174
+                        },
+                        {
+                          "x": 391,
+                          "y": 173
+                        },
+                        {
+                          "x": 391,
+                          "y": 194
+                        },
+                        {
+                          "x": 337,
+                          "y": 195
+                        }
+                      ]
+                    },
+                    "confidence": 0.57519054,
+                    "property": {
+                      "detected_languages": [
+                        {
+                          "confidence": 1.0,
+                          "language_code": "ro"
+                        }
+                      ]
+                    },
+                    "symbols": [
+                      {
+                        "bounding_box": {
+                          "normalized_vertices": [],
+                          "vertices": [
+                            {
+                              "x": 337,
+                              "y": 174
+                            },
+                            {
+                              "x": 349,
+                              "y": 174
+                            },
+                            {
+                              "x": 349,
+                              "y": 195
+                            },
+                            {
+                              "x": 337,
+                              "y": 195
+                            }
+                          ]
+                        },
+                        "confidence": 0.627583,
+                        "text": "w"
+                      },
+                      {
+                        "bounding_box": {
+                          "normalized_vertices": [],
+                          "vertices": [
+                            {
+                              "x": 348,
+                              "y": 174
+                            },
+                            {
+                              "x": 361,
+                              "y": 174
+                            },
+                            {
+                              "x": 361,
+                              "y": 195
+                            },
+                            {
+                              "x": 348,
+                              "y": 195
+                            }
+                          ]
+                        },
+                        "confidence": 0.71602625,
+                        "text": "e"
+                      },
+                      {
+                        "bounding_box": {
+                          "normalized_vertices": [],
+                          "vertices": [
+                            {
+                              "x": 358,
+                              "y": 174
+                            },
+                            {
+                              "x": 372,
+                              "y": 174
+                            },
+                            {
+                              "x": 372,
+                              "y": 195
+                            },
+                            {
+                              "x": 358,
+                              "y": 195
+                            }
+                          ]
+                        },
+                        "confidence": 0.29001236,
+                        "text": "w"
+                      },
+                      {
+                        "bounding_box": {
+                          "normalized_vertices": [],
+                          "vertices": [
+                            {
+                              "x": 370,
+                              "y": 174
+                            },
+                            {
+                              "x": 380,
+                              "y": 174
+                            },
+                            {
+                              "x": 380,
+                              "y": 195
+                            },
+                            {
+                              "x": 370,
+                              "y": 195
+                            }
+                          ]
+                        },
+                        "confidence": 0.48459682,
+                        "text": "e"
+                      },
+                      {
+                        "bounding_box": {
+                          "normalized_vertices": [],
+                          "vertices": [
+                            {
+                              "x": 373,
+                              "y": 174
+                            },
+                            {
+                              "x": 386,
+                              "y": 174
+                            },
+                            {
+                              "x": 386,
+                              "y": 195
+                            },
+                            {
+                              "x": 373,
+                              "y": 195
+                            }
+                          ]
+                        },
+                        "confidence": 0.45339957,
+                        "text": "r"
+                      },
+                      {
+                        "bounding_box": {
+                          "normalized_vertices": [],
+                          "vertices": [
+                            {
+                              "x": 380,
+                              "y": 174
+                            },
+                            {
+                              "x": 391,
+                              "y": 174
+                            },
+                            {
+                              "x": 391,
+                              "y": 195
+                            },
+                            {
+                              "x": 380,
+                              "y": 195
+                            }
+                          ]
+                        },
+                        "confidence": 0.8795254,
+                        "property": {
+                          "detected_break": {
+                            "is_prefix": false,
+                            "type_": 1
+                          },
+                          "detected_languages": []
+                        },
+                        "text": "e"
+                      }
+                    ]
+                  },
+                  {
+                    "bounding_box": {
+                      "normalized_vertices": [],
+                      "vertices": [
+                        {
+                          "x": 399,
+                          "y": 173
+                        },
+                        {
+                          "x": 530,
+                          "y": 172
+                        },
+                        {
+                          "x": 530,
+                          "y": 194
+                        },
+                        {
+                          "x": 399,
+                          "y": 195
+                        }
+                      ]
+                    },
+                    "confidence": 0.8232798,
+                    "property": {
+                      "detected_languages": [
+                        {
+                          "confidence": 1.0,
+                          "language_code": "ro"
+                        }
+                      ]
+                    },
+                    "symbols": [
+                      {
+                        "bounding_box": {
+                          "normalized_vertices": [],
+                          "vertices": [
+                            {
+                              "x": 399,
+                              "y": 174
+                            },
+                            {
+                              "x": 408,
+                              "y": 174
+                            },
+                            {
+                              "x": 408,
+                              "y": 195
+                            },
+                            {
+                              "x": 399,
+                              "y": 195
+                            }
+                          ]
+                        },
+                        "confidence": 0.94081753,
+                        "text": "a"
+                      },
+                      {
+                        "bounding_box": {
+                          "normalized_vertices": [],
+                          "vertices": [
+                            {
+                              "x": 409,
+                              "y": 173
+                            },
+                            {
+                              "x": 418,
+                              "y": 173
+                            },
+                            {
+                              "x": 418,
+                              "y": 194
+                            },
+                            {
+                              "x": 409,
+                              "y": 194
+                            }
+                          ]
+                        },
+                        "confidence": 0.76787114,
+                        "text": "t"
+                      },
+                      {
+                        "bounding_box": {
+                          "normalized_vertices": [],
+                          "vertices": [
+                            {
+                              "x": 415,
+                              "y": 173
+                            },
+                            {
+                              "x": 425,
+                              "y": 173
+                            },
+                            {
+                              "x": 425,
+                              "y": 194
+                            },
+                            {
+                              "x": 415,
+                              "y": 194
+                            }
+                          ]
+                        },
+                        "confidence": 0.33563673,
+                        "text": "c"
+                      },
+                      {
+                        "bounding_box": {
+                          "normalized_vertices": [],
+                          "vertices": [
+                            {
+                              "x": 423,
+                              "y": 173
+                            },
+                            {
+                              "x": 432,
+                              "y": 173
+                            },
+                            {
+                              "x": 432,
+                              "y": 194
+                            },
+                            {
+                              "x": 423,
+                              "y": 194
+                            }
+                          ]
+                        },
+                        "confidence": 0.8234617,
+                        "text": "o"
+                      },
+                      {
+                        "bounding_box": {
+                          "normalized_vertices": [],
+                          "vertices": [
+                            {
+                              "x": 433,
+                              "y": 173
+                            },
+                            {
+                              "x": 449,
+                              "y": 173
+                            },
+                            {
+                              "x": 449,
+                              "y": 194
+                            },
+                            {
+                              "x": 433,
+                              "y": 194
+                            }
+                          ]
+                        },
+                        "confidence": 0.9104594,
+                        "text": "m"
+                      },
+                      {
+                        "bounding_box": {
+                          "normalized_vertices": [],
+                          "vertices": [
+                            {
+                              "x": 447,
+                              "y": 173
+                            },
+                            {
+                              "x": 462,
+                              "y": 173
+                            },
+                            {
+                              "x": 462,
+                              "y": 194
+                            },
+                            {
+                              "x": 447,
+                              "y": 194
+                            }
+                          ]
+                        },
+                        "confidence": 0.9654923,
+                        "text": "b"
+                      },
+                      {
+                        "bounding_box": {
+                          "normalized_vertices": [],
+                          "vertices": [
+                            {
+                              "x": 460,
+                              "y": 173
+                            },
+                            {
+                              "x": 467,
+                              "y": 173
+                            },
+                            {
+                              "x": 467,
+                              "y": 194
+                            },
+                            {
+                              "x": 460,
+                              "y": 194
+                            }
+                          ]
+                        },
+                        "confidence": 0.8101285,
+                        "text": "i"
+                      },
+                      {
+                        "bounding_box": {
+                          "normalized_vertices": [],
+                          "vertices": [
+                            {
+                              "x": 464,
+                              "y": 173
+                            },
+                            {
+                              "x": 473,
+                              "y": 173
+                            },
+                            {
+                              "x": 473,
+                              "y": 194
+                            },
+                            {
+                              "x": 464,
+                              "y": 194
+                            }
+                          ]
+                        },
+                        "confidence": 0.8572722,
+                        "text": "n"
+                      },
+                      {
+                        "bounding_box": {
+                          "normalized_vertices": [],
+                          "vertices": [
+                            {
+                              "x": 473,
+                              "y": 173
+                            },
+                            {
+                              "x": 485,
+                              "y": 173
+                            },
+                            {
+                              "x": 485,
+                              "y": 194
+                            },
+                            {
+                              "x": 473,
+                              "y": 194
+                            }
+                          ]
+                        },
+                        "confidence": 0.9740299,
+                        "text": "d"
+                      },
+                      {
+                        "bounding_box": {
+                          "normalized_vertices": [],
+                          "vertices": [
+                            {
+                              "x": 484,
+                              "y": 173
+                            },
+                            {
+                              "x": 493,
+                              "y": 173
+                            },
+                            {
+                              "x": 493,
+                              "y": 194
+                            },
+                            {
+                              "x": 484,
+                              "y": 194
+                            }
+                          ]
+                        },
+                        "confidence": 0.940887,
+                        "text": "i"
+                      },
+                      {
+                        "bounding_box": {
+                          "normalized_vertices": [],
+                          "vertices": [
+                            {
+                              "x": 490,
+                              "y": 173
+                            },
+                            {
+                              "x": 501,
+                              "y": 173
+                            },
+                            {
+                              "x": 501,
+                              "y": 194
+                            },
+                            {
+                              "x": 490,
+                              "y": 194
+                            }
+                          ]
+                        },
+                        "confidence": 0.90787065,
+                        "text": "n"
+                      },
+                      {
+                        "bounding_box": {
+                          "normalized_vertices": [],
+                          "vertices": [
+                            {
+                              "x": 495,
+                              "y": 173
+                            },
+                            {
+                              "x": 508,
+                              "y": 173
+                            },
+                            {
+                              "x": 508,
+                              "y": 194
+                            },
+                            {
+                              "x": 495,
+                              "y": 194
+                            }
+                          ]
+                        },
+                        "confidence": 0.89466524,
+                        "text": "g"
+                      },
+                      {
+                        "bounding_box": {
+                          "normalized_vertices": [],
+                          "vertices": [
+                            {
+                              "x": 506,
+                              "y": 172
+                            },
+                            {
+                              "x": 521,
+                              "y": 172
+                            },
+                            {
+                              "x": 521,
+                              "y": 193
+                            },
+                            {
+                              "x": 506,
+                              "y": 193
+                            }
+                          ]
+                        },
+                        "confidence": 0.59047484,
+                        "text": "e"
+                      },
+                      {
+                        "bounding_box": {
+                          "normalized_vertices": [],
+                          "vertices": [
+                            {
+                              "x": 517,
+                              "y": 172
+                            },
+                            {
+                              "x": 530,
+                              "y": 172
+                            },
+                            {
+                              "x": 530,
+                              "y": 193
+                            },
+                            {
+                              "x": 517,
+                              "y": 193
+                            }
+                          ]
+                        },
+                        "confidence": 0.80684996,
+                        "property": {
+                          "detected_break": {
+                            "is_prefix": false,
+                            "type_": 1
+                          },
+                          "detected_languages": []
+                        },
+                        "text": "n"
+                      }
+                    ]
+                  },
+                  {
+                    "bounding_box": {
+                      "normalized_vertices": [],
+                      "vertices": [
+                        {
+                          "x": 535,
+                          "y": 172
+                        },
+                        {
+                          "x": 554,
+                          "y": 172
+                        },
+                        {
+                          "x": 554,
+                          "y": 193
+                        },
+                        {
+                          "x": 535,
+                          "y": 193
+                        }
+                      ]
+                    },
+                    "confidence": 0.972509,
+                    "property": {
+                      "detected_languages": [
+                        {
+                          "confidence": 1.0,
+                          "language_code": "ro"
+                        }
+                      ]
+                    },
+                    "symbols": [
+                      {
+                        "bounding_box": {
+                          "normalized_vertices": [],
+                          "vertices": [
+                            {
+                              "x": 535,
+                              "y": 172
+                            },
+                            {
+                              "x": 543,
+                              "y": 172
+                            },
+                            {
+                              "x": 543,
+                              "y": 193
+                            },
+                            {
+                              "x": 535,
+                              "y": 193
+                            }
+                          ]
+                        },
+                        "confidence": 0.9716727,
+                        "text": "i"
+                      },
+                      {
+                        "bounding_box": {
+                          "normalized_vertices": [],
+                          "vertices": [
+                            {
+                              "x": 540,
+                              "y": 172
+                            },
+                            {
+                              "x": 554,
+                              "y": 172
+                            },
+                            {
+                              "x": 554,
+                              "y": 193
+                            },
+                            {
+                              "x": 540,
+                              "y": 193
+                            }
+                          ]
+                        },
+                        "confidence": 0.9733453,
+                        "property": {
+                          "detected_break": {
+                            "is_prefix": false,
+                            "type_": 5
+                          },
+                          "detected_languages": []
+                        },
+                        "text": "n"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "bounding_box": {
+                  "normalized_vertices": [],
+                  "vertices": [
+                    {
+                      "x": 101,
+                      "y": 205
+                    },
+                    {
+                      "x": 416,
+                      "y": 205
+                    },
+                    {
+                      "x": 416,
+                      "y": 221
+                    },
+                    {
+                      "x": 101,
+                      "y": 221
+                    }
+                  ]
+                },
+                "confidence": 0.76601505,
+                "words": [
+                  {
+                    "bounding_box": {
+                      "normalized_vertices": [],
+                      "vertices": [
+                        {
+                          "x": 101,
+                          "y": 205
+                        },
+                        {
+                          "x": 121,
+                          "y": 205
+                        },
+                        {
+                          "x": 121,
+                          "y": 221
+                        },
+                        {
+                          "x": 101,
+                          "y": 221
+                        }
+                      ]
+                    },
+                    "confidence": 0.6412437,
+                    "property": {
+                      "detected_languages": [
+                        {
+                          "confidence": 1.0,
+                          "language_code": "nl"
+                        }
+                      ]
+                    },
+                    "symbols": [
+                      {
+                        "bounding_box": {
+                          "normalized_vertices": [],
+                          "vertices": [
+                            {
+                              "x": 101,
+                              "y": 205
+                            },
+                            {
+                              "x": 112,
+                              "y": 205
+                            },
+                            {
+                              "x": 112,
+                              "y": 221
+                            },
+                            {
+                              "x": 101,
+                              "y": 221
+                            }
+                          ]
+                        },
+                        "confidence": 0.65556747,
+                        "text": "d"
+                      },
+                      {
+                        "bounding_box": {
+                          "normalized_vertices": [],
+                          "vertices": [
+                            {
+                              "x": 112,
+                              "y": 205
+                            },
+                            {
+                              "x": 121,
+                              "y": 205
+                            },
+                            {
+                              "x": 121,
+                              "y": 221
+                            },
+                            {
+                              "x": 112,
+                              "y": 221
+                            }
+                          ]
+                        },
+                        "confidence": 0.62691987,
+                        "property": {
+                          "detected_break": {
+                            "is_prefix": false,
+                            "type_": 1
+                          },
+                          "detected_languages": []
+                        },
+                        "text": "e"
+                      }
+                    ]
+                  },
+                  {
+                    "bounding_box": {
+                      "normalized_vertices": [],
+                      "vertices": [
+                        {
+                          "x": 127,
+                          "y": 205
+                        },
+                        {
+                          "x": 202,
+                          "y": 205
+                        },
+                        {
+                          "x": 202,
+                          "y": 221
+                        },
+                        {
+                          "x": 127,
+                          "y": 221
+                        }
+                      ]
+                    },
+                    "confidence": 0.8437889,
+                    "property": {
+                      "detected_languages": [
+                        {
+                          "confidence": 1.0,
+                          "language_code": "nl"
+                        }
+                      ]
+                    },
+                    "symbols": [
+                      {
+                        "bounding_box": {
+                          "normalized_vertices": [],
+                          "vertices": [
+                            {
+                              "x": 127,
+                              "y": 205
+                            },
+                            {
+                              "x": 139,
+                              "y": 205
+                            },
+                            {
+                              "x": 139,
+                              "y": 221
+                            },
+                            {
+                              "x": 127,
+                              "y": 221
+                            }
+                          ]
+                        },
+                        "confidence": 0.79832536,
+                        "text": "m"
+                      },
+                      {
+                        "bounding_box": {
+                          "normalized_vertices": [],
+                          "vertices": [
+                            {
+                              "x": 139,
+                              "y": 205
+                            },
+                            {
+                              "x": 150,
+                              "y": 205
+                            },
+                            {
+                              "x": 150,
+                              "y": 221
+                            },
+                            {
+                              "x": 139,
+                              "y": 221
+                            }
+                          ]
+                        },
+                        "confidence": 0.91771394,
+                        "text": "o"
+                      },
+                      {
+                        "bounding_box": {
+                          "normalized_vertices": [],
+                          "vertices": [
+                            {
+                              "x": 147,
+                              "y": 205
+                            },
+                            {
+                              "x": 155,
+                              "y": 205
+                            },
+                            {
+                              "x": 155,
+                              "y": 221
+                            },
+                            {
+                              "x": 147,
+                              "y": 221
+                            }
+                          ]
+                        },
+                        "confidence": 0.94292575,
+                        "text": "l"
+                      },
+                      {
+                        "bounding_box": {
+                          "normalized_vertices": [],
+                          "vertices": [
+                            {
+                              "x": 152,
+                              "y": 205
+                            },
+                            {
+                              "x": 163,
+                              "y": 205
+                            },
+                            {
+                              "x": 163,
+                              "y": 221
+                            },
+                            {
+                              "x": 152,
+                              "y": 221
+                            }
+                          ]
+                        },
+                        "confidence": 0.97210497,
+                        "text": "e"
+                      },
+                      {
+                        "bounding_box": {
+                          "normalized_vertices": [],
+                          "vertices": [
+                            {
+                              "x": 161,
+                              "y": 205
+                            },
+                            {
+                              "x": 171,
+                              "y": 205
+                            },
+                            {
+                              "x": 171,
+                              "y": 221
+                            },
+                            {
+                              "x": 161,
+                              "y": 221
+                            }
+                          ]
+                        },
+                        "confidence": 0.96975183,
+                        "text": "c"
+                      },
+                      {
+                        "bounding_box": {
+                          "normalized_vertices": [],
+                          "vertices": [
+                            {
+                              "x": 168,
+                              "y": 205
+                            },
+                            {
+                              "x": 179,
+                              "y": 205
+                            },
+                            {
+                              "x": 179,
+                              "y": 221
+                            },
+                            {
+                              "x": 168,
+                              "y": 221
+                            }
+                          ]
+                        },
+                        "confidence": 0.882684,
+                        "text": "u"
+                      },
+                      {
+                        "bounding_box": {
+                          "normalized_vertices": [],
+                          "vertices": [
+                            {
+                              "x": 177,
+                              "y": 205
+                            },
+                            {
+                              "x": 186,
+                              "y": 205
+                            },
+                            {
+                              "x": 186,
+                              "y": 221
+                            },
+                            {
+                              "x": 177,
+                              "y": 221
+                            }
+                          ]
+                        },
+                        "confidence": 0.8660582,
+                        "text": "l"
+                      },
+                      {
+                        "bounding_box": {
+                          "normalized_vertices": [],
+                          "vertices": [
+                            {
+                              "x": 184,
+                              "y": 205
+                            },
+                            {
+                              "x": 193,
+                              "y": 205
+                            },
+                            {
+                              "x": 193,
+                              "y": 221
+                            },
+                            {
+                              "x": 184,
+                              "y": 221
+                            }
+                          ]
+                        },
+                        "confidence": 0.59334797,
+                        "text": "e"
+                      },
+                      {
+                        "bounding_box": {
+                          "normalized_vertices": [],
+                          "vertices": [
+                            {
+                              "x": 192,
+                              "y": 205
+                            },
+                            {
+                              "x": 202,
+                              "y": 205
+                            },
+                            {
+                              "x": 202,
+                              "y": 221
+                            },
+                            {
+                              "x": 192,
+                              "y": 221
+                            }
+                          ]
+                        },
+                        "confidence": 0.6511885,
+                        "property": {
+                          "detected_break": {
+                            "is_prefix": false,
+                            "type_": 1
+                          },
+                          "detected_languages": []
+                        },
+                        "text": "n"
+                      }
+                    ]
+                  },
+                  {
+                    "bounding_box": {
+                      "normalized_vertices": [],
+                      "vertices": [
+                        {
+                          "x": 210,
+                          "y": 205
+                        },
+                        {
+                          "x": 239,
+                          "y": 205
+                        },
+                        {
+                          "x": 239,
+                          "y": 221
+                        },
+                        {
+                          "x": 210,
+                          "y": 221
+                        }
+                      ]
+                    },
+                    "confidence": 0.6706408,
+                    "property": {
+                      "detected_languages": [
+                        {
+                          "confidence": 1.0,
+                          "language_code": "nl"
+                        }
+                      ]
+                    },
+                    "symbols": [
+                      {
+                        "bounding_box": {
+                          "normalized_vertices": [],
+                          "vertices": [
+                            {
+                              "x": 210,
+                              "y": 205
+                            },
+                            {
+                              "x": 220,
+                              "y": 205
+                            },
+                            {
+                              "x": 220,
+                              "y": 221
+                            },
+                            {
+                              "x": 210,
+                              "y": 221
+                            }
+                          ]
+                        },
+                        "confidence": 0.70484483,
+                        "text": "v"
+                      },
+                      {
+                        "bounding_box": {
+                          "normalized_vertices": [],
+                          "vertices": [
+                            {
+                              "x": 217,
+                              "y": 205
+                            },
+                            {
+                              "x": 229,
+                              "y": 205
+                            },
+                            {
+                              "x": 229,
+                              "y": 221
+                            },
+                            {
+                              "x": 217,
+                              "y": 221
+                            }
+                          ]
+                        },
+                        "confidence": 0.74209154,
+                        "text": "a"
+                      },
+                      {
+                        "bounding_box": {
+                          "normalized_vertices": [],
+                          "vertices": [
+                            {
+                              "x": 229,
+                              "y": 205
+                            },
+                            {
+                              "x": 239,
+                              "y": 205
+                            },
+                            {
+                              "x": 239,
+                              "y": 221
+                            },
+                            {
+                              "x": 229,
+                              "y": 221
+                            }
+                          ]
+                        },
+                        "confidence": 0.56498605,
+                        "property": {
+                          "detected_break": {
+                            "is_prefix": false,
+                            "type_": 1
+                          },
+                          "detected_languages": []
+                        },
+                        "text": "n"
+                      }
+                    ]
+                  },
+                  {
+                    "bounding_box": {
+                      "normalized_vertices": [],
+                      "vertices": [
+                        {
+                          "x": 246,
+                          "y": 205
+                        },
+                        {
+                          "x": 265,
+                          "y": 205
+                        },
+                        {
+                          "x": 265,
+                          "y": 221
+                        },
+                        {
+                          "x": 246,
+                          "y": 221
+                        }
+                      ]
+                    },
+                    "confidence": 0.60652614,
+                    "property": {
+                      "detected_languages": [
+                        {
+                          "confidence": 1.0,
+                          "language_code": "nl"
+                        }
+                      ]
+                    },
+                    "symbols": [
+                      {
+                        "bounding_box": {
+                          "normalized_vertices": [],
+                          "vertices": [
+                            {
+                              "x": 246,
+                              "y": 205
+                            },
+                            {
+                              "x": 254,
+                              "y": 205
+                            },
+                            {
+                              "x": 254,
+                              "y": 221
+                            },
+                            {
+                              "x": 246,
+                              "y": 221
+                            }
+                          ]
+                        },
+                        "confidence": 0.5530828,
+                        "text": "d"
+                      },
+                      {
+                        "bounding_box": {
+                          "normalized_vertices": [],
+                          "vertices": [
+                            {
+                              "x": 254,
+                              "y": 205
+                            },
+                            {
+                              "x": 265,
+                              "y": 205
+                            },
+                            {
+                              "x": 265,
+                              "y": 221
+                            },
+                            {
+                              "x": 254,
+                              "y": 221
+                            }
+                          ]
+                        },
+                        "confidence": 0.65996945,
+                        "property": {
+                          "detected_break": {
+                            "is_prefix": false,
+                            "type_": 1
+                          },
+                          "detected_languages": []
+                        },
+                        "text": "e"
+                      }
+                    ]
+                  },
+                  {
+                    "bounding_box": {
+                      "normalized_vertices": [],
+                      "vertices": [
+                        {
+                          "x": 270,
+                          "y": 205
+                        },
+                        {
+                          "x": 323,
+                          "y": 205
+                        },
+                        {
+                          "x": 323,
+                          "y": 221
+                        },
+                        {
+                          "x": 270,
+                          "y": 221
+                        }
+                      ]
+                    },
+                    "confidence": 0.7385025,
+                    "property": {
+                      "detected_languages": [
+                        {
+                          "confidence": 1.0,
+                          "language_code": "nl"
+                        }
+                      ]
+                    },
+                    "symbols": [
+                      {
+                        "bounding_box": {
+                          "normalized_vertices": [],
+                          "vertices": [
+                            {
+                              "x": 270,
+                              "y": 205
+                            },
+                            {
+                              "x": 279,
+                              "y": 205
+                            },
+                            {
+                              "x": 279,
+                              "y": 221
+                            },
+                            {
+                              "x": 270,
+                              "y": 221
+                            }
+                          ]
+                        },
+                        "confidence": 0.47004247,
+                        "text": "m"
+                      },
+                      {
+                        "bounding_box": {
+                          "normalized_vertices": [],
+                          "vertices": [
+                            {
+                              "x": 280,
+                              "y": 205
+                            },
+                            {
+                              "x": 292,
+                              "y": 205
+                            },
+                            {
+                              "x": 292,
+                              "y": 221
+                            },
+                            {
+                              "x": 280,
+                              "y": 221
+                            }
+                          ]
+                        },
+                        "confidence": 0.7978919,
+                        "text": "a"
+                      },
+                      {
+                        "bounding_box": {
+                          "normalized_vertices": [],
+                          "vertices": [
+                            {
+                              "x": 294,
+                              "y": 205
+                            },
+                            {
+                              "x": 304,
+                              "y": 205
+                            },
+                            {
+                              "x": 304,
+                              "y": 221
+                            },
+                            {
+                              "x": 294,
+                              "y": 221
+                            }
+                          ]
+                        },
+                        "confidence": 0.6841267,
+                        "text": "c"
+                      },
+                      {
+                        "bounding_box": {
+                          "normalized_vertices": [],
+                          "vertices": [
+                            {
+                              "x": 302,
+                              "y": 205
+                            },
+                            {
+                              "x": 310,
+                              "y": 205
+                            },
+                            {
+                              "x": 310,
+                              "y": 221
+                            },
+                            {
+                              "x": 302,
+                              "y": 221
+                            }
+                          ]
+                        },
+                        "confidence": 0.8425191,
+                        "text": "t"
+                      },
+                      {
+                        "bounding_box": {
+                          "normalized_vertices": [],
+                          "vertices": [
+                            {
+                              "x": 310,
+                              "y": 205
+                            },
+                            {
+                              "x": 317,
+                              "y": 205
+                            },
+                            {
+                              "x": 317,
+                              "y": 221
+                            },
+                            {
+                              "x": 310,
+                              "y": 221
+                            }
+                          ]
+                        },
+                        "confidence": 0.7799435,
+                        "text": "i"
+                      },
+                      {
+                        "bounding_box": {
+                          "normalized_vertices": [],
+                          "vertices": [
+                            {
+                              "x": 315,
+                              "y": 205
+                            },
+                            {
+                              "x": 323,
+                              "y": 205
+                            },
+                            {
+                              "x": 323,
+                              "y": 221
+                            },
+                            {
+                              "x": 315,
+                              "y": 221
+                            }
+                          ]
+                        },
+                        "confidence": 0.85649115,
+                        "property": {
+                          "detected_break": {
+                            "is_prefix": false,
+                            "type_": 1
+                          },
+                          "detected_languages": []
+                        },
+                        "text": "c"
+                      }
+                    ]
+                  },
+                  {
+                    "bounding_box": {
+                      "normalized_vertices": [],
+                      "vertices": [
+                        {
+                          "x": 326,
+                          "y": 205
+                        },
+                        {
+                          "x": 405,
+                          "y": 205
+                        },
+                        {
+                          "x": 405,
+                          "y": 221
+                        },
+                        {
+                          "x": 326,
+                          "y": 221
+                        }
+                      ]
+                    },
+                    "confidence": 0.7920487,
+                    "property": {
+                      "detected_languages": [
+                        {
+                          "confidence": 1.0,
+                          "language_code": "nl"
+                        }
+                      ]
+                    },
+                    "symbols": [
+                      {
+                        "bounding_box": {
+                          "normalized_vertices": [],
+                          "vertices": [
+                            {
+                              "x": 326,
+                              "y": 205
+                            },
+                            {
+                              "x": 335,
+                              "y": 205
+                            },
+                            {
+                              "x": 335,
+                              "y": 221
+                            },
+                            {
+                              "x": 326,
+                              "y": 221
+                            }
+                          ]
+                        },
+                        "confidence": 0.83710253,
+                        "text": "p"
+                      },
+                      {
+                        "bounding_box": {
+                          "normalized_vertices": [],
+                          "vertices": [
+                            {
+                              "x": 335,
+                              "y": 205
+                            },
+                            {
+                              "x": 343,
+                              "y": 205
+                            },
+                            {
+                              "x": 343,
+                              "y": 221
+                            },
+                            {
+                              "x": 335,
+                              "y": 221
+                            }
+                          ]
+                        },
+                        "confidence": 0.9019584,
+                        "text": "r"
+                      },
+                      {
+                        "bounding_box": {
+                          "normalized_vertices": [],
+                          "vertices": [
+                            {
+                              "x": 339,
+                              "y": 205
+                            },
+                            {
+                              "x": 349,
+                              "y": 205
+                            },
+                            {
+                              "x": 349,
+                              "y": 221
+                            },
+                            {
+                              "x": 339,
+                              "y": 221
+                            }
+                          ]
+                        },
+                        "confidence": 0.8596706,
+                        "text": "o"
+                      },
+                      {
+                        "bounding_box": {
+                          "normalized_vertices": [],
+                          "vertices": [
+                            {
+                              "x": 346,
+                              "y": 205
+                            },
+                            {
+                              "x": 356,
+                              "y": 205
+                            },
+                            {
+                              "x": 356,
+                              "y": 221
+                            },
+                            {
+                              "x": 346,
+                              "y": 221
+                            }
+                          ]
+                        },
+                        "confidence": 0.8396728,
+                        "text": "d"
+                      },
+                      {
+                        "bounding_box": {
+                          "normalized_vertices": [],
+                          "vertices": [
+                            {
+                              "x": 353,
+                              "y": 205
+                            },
+                            {
+                              "x": 362,
+                              "y": 205
+                            },
+                            {
+                              "x": 362,
+                              "y": 221
+                            },
+                            {
+                              "x": 353,
+                              "y": 221
+                            }
+                          ]
+                        },
+                        "confidence": 0.6182464,
+                        "text": "u"
+                      },
+                      {
+                        "bounding_box": {
+                          "normalized_vertices": [],
+                          "vertices": [
+                            {
+                              "x": 367,
+                              "y": 205
+                            },
+                            {
+                              "x": 375,
+                              "y": 205
+                            },
+                            {
+                              "x": 375,
+                              "y": 221
+                            },
+                            {
+                              "x": 367,
+                              "y": 221
+                            }
+                          ]
+                        },
+                        "confidence": 0.6590635,
+                        "text": "c"
+                      },
+                      {
+                        "bounding_box": {
+                          "normalized_vertices": [],
+                          "vertices": [
+                            {
+                              "x": 376,
+                              "y": 205
+                            },
+                            {
+                              "x": 386,
+                              "y": 205
+                            },
+                            {
+                              "x": 386,
+                              "y": 221
+                            },
+                            {
+                              "x": 376,
+                              "y": 221
+                            }
+                          ]
+                        },
+                        "confidence": 0.70933723,
+                        "text": "t"
+                      },
+                      {
+                        "bounding_box": {
+                          "normalized_vertices": [],
+                          "vertices": [
+                            {
+                              "x": 381,
+                              "y": 205
+                            },
+                            {
+                              "x": 395,
+                              "y": 205
+                            },
+                            {
+                              "x": 395,
+                              "y": 221
+                            },
+                            {
+                              "x": 381,
+                              "y": 221
+                            }
+                          ]
+                        },
+                        "confidence": 0.8063055,
+                        "text": "e"
+                      },
+                      {
+                        "bounding_box": {
+                          "normalized_vertices": [],
+                          "vertices": [
+                            {
+                              "x": 392,
+                              "y": 205
+                            },
+                            {
+                              "x": 405,
+                              "y": 205
+                            },
+                            {
+                              "x": 405,
+                              "y": 221
+                            },
+                            {
+                              "x": 392,
+                              "y": 221
+                            }
+                          ]
+                        },
+                        "confidence": 0.8970811,
+                        "text": "n"
+                      }
+                    ]
+                  },
+                  {
+                    "bounding_box": {
+                      "normalized_vertices": [],
+                      "vertices": [
+                        {
+                          "x": 407,
+                          "y": 205
+                        },
+                        {
+                          "x": 416,
+                          "y": 205
+                        },
+                        {
+                          "x": 416,
+                          "y": 221
+                        },
+                        {
+                          "x": 407,
+                          "y": 221
+                        }
+                      ]
+                    },
+                    "confidence": 0.8514654,
+                    "property": {
+                      "detected_languages": [
+                        {
+                          "confidence": 1.0,
+                          "language_code": "nl"
+                        }
+                      ]
+                    },
+                    "symbols": [
+                      {
+                        "bounding_box": {
+                          "normalized_vertices": [],
+                          "vertices": [
+                            {
+                              "x": 407,
+                              "y": 205
+                            },
+                            {
+                              "x": 416,
+                              "y": 205
+                            },
+                            {
+                              "x": 416,
+                              "y": 221
+                            },
+                            {
+                              "x": 407,
+                              "y": 221
+                            }
+                          ]
+                        },
+                        "confidence": 0.8514654,
+                        "property": {
+                          "detected_break": {
+                            "is_prefix": false,
+                            "type_": 5
+                          },
+                          "detected_languages": []
+                        },
+                        "text": "."
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "confidence": 0.75943756,
+        "height": 845,
+        "property": {
+          "detected_languages": [
+            {
+              "confidence": 0.5790642,
+              "language_code": "ro"
+            },
+            {
+              "confidence": 0.3766022,
+              "language_code": "nl"
+            }
+          ]
+        },
+        "width": 600
+      }
+    ],
+    "text": "(13.\nenergic dan de vorming van de wewere atcombindingen in\nde moleculen van de mactic producten."
+  },
+  "label_annotations": [],
+  "landmark_annotations": [],
+  "localized_object_annotations": [],
+  "logo_annotations": [],
+  "text_annotations": [
+    {
+      "bounding_poly": {
+        "normalized_vertices": [],
+        "vertices": [
+          {
+            "x": 34,
+            "y": 172
+          },
+          {
+            "x": 554,
+            "y": 172
+          },
+          {
+            "x": 554,
+            "y": 223
+          },
+          {
+            "x": 34,
+            "y": 223
+          }
+        ]
+      },
+      "confidence": 0.0,
+      "description": "(13.\nenergic dan de vorming van de wewere atcombindingen in\nde moleculen van de mactic producten.",
+      "locale": "ro",
+      "locations": [],
+      "mid": "",
+      "properties": [],
+      "score": 0.0,
+      "topicality": 0.0
+    },
+    {
+      "bounding_poly": {
+        "normalized_vertices": [],
+        "vertices": [
+          {
+            "x": 34,
+            "y": 172
+          },
+          {
+            "x": 41,
+            "y": 172
+          },
+          {
+            "x": 41,
+            "y": 189
+          },
+          {
+            "x": 34,
+            "y": 189
+          }
+        ]
+      },
+      "confidence": 0.0,
+      "description": "(",
+      "locale": "",
+      "locations": [],
+      "mid": "",
+      "properties": [],
+      "score": 0.0,
+      "topicality": 0.0
+    },
+    {
+      "bounding_poly": {
+        "normalized_vertices": [],
+        "vertices": [
+          {
+            "x": 38,
+            "y": 172
+          },
+          {
+            "x": 56,
+            "y": 172
+          },
+          {
+            "x": 56,
+            "y": 189
+          },
+          {
+            "x": 38,
+            "y": 189
+          }
+        ]
+      },
+      "confidence": 0.0,
+      "description": "13",
+      "locale": "",
+      "locations": [],
+      "mid": "",
+      "properties": [],
+      "score": 0.0,
+      "topicality": 0.0
+    },
+    {
+      "bounding_poly": {
+        "normalized_vertices": [],
+        "vertices": [
+          {
+            "x": 55,
+            "y": 172
+          },
+          {
+            "x": 62,
+            "y": 172
+          },
+          {
+            "x": 62,
+            "y": 189
+          },
+          {
+            "x": 55,
+            "y": 189
+          }
+        ]
+      },
+      "confidence": 0.0,
+      "description": ".",
+      "locale": "",
+      "locations": [],
+      "mid": "",
+      "properties": [],
+      "score": 0.0,
+      "topicality": 0.0
+    },
+    {
+      "bounding_poly": {
+        "normalized_vertices": [],
+        "vertices": [
+          {
+            "x": 97,
+            "y": 176
+          },
+          {
+            "x": 157,
+            "y": 175
+          },
+          {
+            "x": 157,
+            "y": 197
+          },
+          {
+            "x": 97,
+            "y": 198
+          }
+        ]
+      },
+      "confidence": 0.0,
+      "description": "energic",
+      "locale": "",
+      "locations": [],
+      "mid": "",
+      "properties": [],
+      "score": 0.0,
+      "topicality": 0.0
+    },
+    {
+      "bounding_poly": {
+        "normalized_vertices": [],
+        "vertices": [
+          {
+            "x": 160,
+            "y": 176
+          },
+          {
+            "x": 191,
+            "y": 176
+          },
+          {
+            "x": 191,
+            "y": 197
+          },
+          {
+            "x": 160,
+            "y": 197
+          }
+        ]
+      },
+      "confidence": 0.0,
+      "description": "dan",
+      "locale": "",
+      "locations": [],
+      "mid": "",
+      "properties": [],
+      "score": 0.0,
+      "topicality": 0.0
+    },
+    {
+      "bounding_poly": {
+        "normalized_vertices": [],
+        "vertices": [
+          {
+            "x": 200,
+            "y": 175
+          },
+          {
+            "x": 224,
+            "y": 175
+          },
+          {
+            "x": 224,
+            "y": 196
+          },
+          {
+            "x": 200,
+            "y": 196
+          }
+        ]
+      },
+      "confidence": 0.0,
+      "description": "de",
+      "locale": "",
+      "locations": [],
+      "mid": "",
+      "properties": [],
+      "score": 0.0,
+      "topicality": 0.0
+    },
+    {
+      "bounding_poly": {
+        "normalized_vertices": [],
+        "vertices": [
+          {
+            "x": 222,
+            "y": 175
+          },
+          {
+            "x": 284,
+            "y": 174
+          },
+          {
+            "x": 284,
+            "y": 195
+          },
+          {
+            "x": 222,
+            "y": 196
+          }
+        ]
+      },
+      "confidence": 0.0,
+      "description": "vorming",
+      "locale": "",
+      "locations": [],
+      "mid": "",
+      "properties": [],
+      "score": 0.0,
+      "topicality": 0.0
+    },
+    {
+      "bounding_poly": {
+        "normalized_vertices": [],
+        "vertices": [
+          {
+            "x": 283,
+            "y": 174
+          },
+          {
+            "x": 313,
+            "y": 174
+          },
+          {
+            "x": 313,
+            "y": 196
+          },
+          {
+            "x": 283,
+            "y": 196
+          }
+        ]
+      },
+      "confidence": 0.0,
+      "description": "van",
+      "locale": "",
+      "locations": [],
+      "mid": "",
+      "properties": [],
+      "score": 0.0,
+      "topicality": 0.0
+    },
+    {
+      "bounding_poly": {
+        "normalized_vertices": [],
+        "vertices": [
+          {
+            "x": 317,
+            "y": 174
+          },
+          {
+            "x": 335,
+            "y": 174
+          },
+          {
+            "x": 335,
+            "y": 195
+          },
+          {
+            "x": 317,
+            "y": 195
+          }
+        ]
+      },
+      "confidence": 0.0,
+      "description": "de",
+      "locale": "",
+      "locations": [],
+      "mid": "",
+      "properties": [],
+      "score": 0.0,
+      "topicality": 0.0
+    },
+    {
+      "bounding_poly": {
+        "normalized_vertices": [],
+        "vertices": [
+          {
+            "x": 337,
+            "y": 174
+          },
+          {
+            "x": 391,
+            "y": 173
+          },
+          {
+            "x": 391,
+            "y": 194
+          },
+          {
+            "x": 337,
+            "y": 195
+          }
+        ]
+      },
+      "confidence": 0.0,
+      "description": "wewere",
+      "locale": "",
+      "locations": [],
+      "mid": "",
+      "properties": [],
+      "score": 0.0,
+      "topicality": 0.0
+    },
+    {
+      "bounding_poly": {
+        "normalized_vertices": [],
+        "vertices": [
+          {
+            "x": 399,
+            "y": 173
+          },
+          {
+            "x": 530,
+            "y": 172
+          },
+          {
+            "x": 530,
+            "y": 194
+          },
+          {
+            "x": 399,
+            "y": 195
+          }
+        ]
+      },
+      "confidence": 0.0,
+      "description": "atcombindingen",
+      "locale": "",
+      "locations": [],
+      "mid": "",
+      "properties": [],
+      "score": 0.0,
+      "topicality": 0.0
+    },
+    {
+      "bounding_poly": {
+        "normalized_vertices": [],
+        "vertices": [
+          {
+            "x": 535,
+            "y": 172
+          },
+          {
+            "x": 554,
+            "y": 172
+          },
+          {
+            "x": 554,
+            "y": 193
+          },
+          {
+            "x": 535,
+            "y": 193
+          }
+        ]
+      },
+      "confidence": 0.0,
+      "description": "in",
+      "locale": "",
+      "locations": [],
+      "mid": "",
+      "properties": [],
+      "score": 0.0,
+      "topicality": 0.0
+    },
+    {
+      "bounding_poly": {
+        "normalized_vertices": [],
+        "vertices": [
+          {
+            "x": 101,
+            "y": 205
+          },
+          {
+            "x": 121,
+            "y": 205
+          },
+          {
+            "x": 121,
+            "y": 221
+          },
+          {
+            "x": 101,
+            "y": 221
+          }
+        ]
+      },
+      "confidence": 0.0,
+      "description": "de",
+      "locale": "",
+      "locations": [],
+      "mid": "",
+      "properties": [],
+      "score": 0.0,
+      "topicality": 0.0
+    },
+    {
+      "bounding_poly": {
+        "normalized_vertices": [],
+        "vertices": [
+          {
+            "x": 127,
+            "y": 205
+          },
+          {
+            "x": 202,
+            "y": 205
+          },
+          {
+            "x": 202,
+            "y": 221
+          },
+          {
+            "x": 127,
+            "y": 221
+          }
+        ]
+      },
+      "confidence": 0.0,
+      "description": "moleculen",
+      "locale": "",
+      "locations": [],
+      "mid": "",
+      "properties": [],
+      "score": 0.0,
+      "topicality": 0.0
+    },
+    {
+      "bounding_poly": {
+        "normalized_vertices": [],
+        "vertices": [
+          {
+            "x": 210,
+            "y": 205
+          },
+          {
+            "x": 239,
+            "y": 205
+          },
+          {
+            "x": 239,
+            "y": 221
+          },
+          {
+            "x": 210,
+            "y": 221
+          }
+        ]
+      },
+      "confidence": 0.0,
+      "description": "van",
+      "locale": "",
+      "locations": [],
+      "mid": "",
+      "properties": [],
+      "score": 0.0,
+      "topicality": 0.0
+    },
+    {
+      "bounding_poly": {
+        "normalized_vertices": [],
+        "vertices": [
+          {
+            "x": 246,
+            "y": 205
+          },
+          {
+            "x": 265,
+            "y": 205
+          },
+          {
+            "x": 265,
+            "y": 221
+          },
+          {
+            "x": 246,
+            "y": 221
+          }
+        ]
+      },
+      "confidence": 0.0,
+      "description": "de",
+      "locale": "",
+      "locations": [],
+      "mid": "",
+      "properties": [],
+      "score": 0.0,
+      "topicality": 0.0
+    },
+    {
+      "bounding_poly": {
+        "normalized_vertices": [],
+        "vertices": [
+          {
+            "x": 270,
+            "y": 205
+          },
+          {
+            "x": 323,
+            "y": 205
+          },
+          {
+            "x": 323,
+            "y": 221
+          },
+          {
+            "x": 270,
+            "y": 221
+          }
+        ]
+      },
+      "confidence": 0.0,
+      "description": "mactic",
+      "locale": "",
+      "locations": [],
+      "mid": "",
+      "properties": [],
+      "score": 0.0,
+      "topicality": 0.0
+    },
+    {
+      "bounding_poly": {
+        "normalized_vertices": [],
+        "vertices": [
+          {
+            "x": 326,
+            "y": 205
+          },
+          {
+            "x": 405,
+            "y": 205
+          },
+          {
+            "x": 405,
+            "y": 221
+          },
+          {
+            "x": 326,
+            "y": 221
+          }
+        ]
+      },
+      "confidence": 0.0,
+      "description": "producten",
+      "locale": "",
+      "locations": [],
+      "mid": "",
+      "properties": [],
+      "score": 0.0,
+      "topicality": 0.0
+    },
+    {
+      "bounding_poly": {
+        "normalized_vertices": [],
+        "vertices": [
+          {
+            "x": 407,
+            "y": 205
+          },
+          {
+            "x": 416,
+            "y": 205
+          },
+          {
+            "x": 416,
+            "y": 221
+          },
+          {
+            "x": 407,
+            "y": 221
+          }
+        ]
+      },
+      "confidence": 0.0,
+      "description": ".",
+      "locale": "",
+      "locations": [],
+      "mid": "",
+      "properties": [],
+      "score": 0.0,
+      "topicality": 0.0
+    }
+  ]
+}
