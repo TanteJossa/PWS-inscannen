@@ -1,0 +1,21 @@
+{
+    "google_quiestion_number": "g",
+    "question_number": 10,
+    "raw_text": "g Een exotherm proces waar het gaat van een chemische reactie naar energie.\n\n10 2C\u2088H\u2081\u2082 + S \u2192 C\u2088H\u2081\u2086S + O\u2082 \u2192 7C\u2087H\u2081\u2084 + 5H\u2082S + 2O\u2082.\n\n11 De katalysator zorgt ervoor dat de reactie sneller verloopt.",
+    "correctly_spelled_text": "Een exotherm proces waar het gaat van een chemische reactie naar energie.\n\n10 2C\u2088H\u2081\u2082 + S \u2192 C\u2088H\u2081\u2086S + O\u2082 \u2192 7C\u2087H\u2081\u2084 + 5H\u2082S + 2O\u2082.\n\n11 De katalysator zorgt ervoor dat de reactie sneller verloopt.",
+    "spelling_corrections": [
+        {
+            "original": "exot-hern",
+            "changes": "exotherm"
+        },
+        {
+            "original": "katalysator",
+            "changes": "katalysator"
+        }
+    ],
+    "tokens_used": 14636,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727729376,
+    "delta_time_s": 4.214842319488525
+}

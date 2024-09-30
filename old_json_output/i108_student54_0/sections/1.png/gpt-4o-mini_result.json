@@ -1,0 +1,21 @@
+{
+    "google_quiestion_number": "1",
+    "question_number": 1,
+    "raw_text": "1 exothern, dit is omdat er en uit de reactie gaat in warmte en bewegingsenergie.",
+    "correctly_spelled_text": "1 exotherm, dit is omdat er energie uit de reactie gaat in warmte en bewegingsenergie.",
+    "spelling_corrections": [
+        {
+            "original": "exothern",
+            "changes": "exotherm"
+        },
+        {
+            "original": "en",
+            "changes": "energie"
+        }
+    ],
+    "tokens_used": 14506,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727729506,
+    "delta_time_s": 2.7135660648345947
+}

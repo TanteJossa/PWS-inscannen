@@ -1,0 +1,55 @@
+{
+  "analyzeResult": {
+    "modelVersion": "2022-04-30",
+    "readResults": [
+      {
+        "angle": 92.1994,
+        "height": 845,
+        "lines": [
+          {
+            "appearance": {
+              "style": {
+                "confidence": 0.744,
+                "name": "other"
+              }
+            },
+            "boundingBox": [
+              79,
+              154,
+              78,
+              167,
+              71,
+              168,
+              71,
+              154
+            ],
+            "text": "-",
+            "words": [
+              {
+                "boundingBox": [
+                  79,
+                  160,
+                  79,
+                  166,
+                  71,
+                  165,
+                  71,
+                  160
+                ],
+                "confidence": 0.95,
+                "text": "-"
+              }
+            ]
+          }
+        ],
+        "page": 1,
+        "unit": "pixel",
+        "width": 105
+      }
+    ],
+    "version": "3.2.0"
+  },
+  "createdDateTime": "2024-09-30T21:58:04Z",
+  "lastUpdatedDateTime": "2024-09-30T21:58:05Z",
+  "status": "succeeded"
+}

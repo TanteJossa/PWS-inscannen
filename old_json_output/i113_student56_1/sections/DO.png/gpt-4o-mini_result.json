@@ -1,0 +1,33 @@
+{
+    "google_quiestion_number": "DO",
+    "question_number": 3,
+    "raw_text": "3a\nDan gaat het uit van de pinda's er beter uit, waardoor de reactiet snelheid sneller verloopt, dan ijsje de pinda's niet meer doet.\nDus op microniveau zien we zijn de moleculen aan een, \njemade pinda dichter tegen elkaar aan. Hierdoor treedt ook het botsende deeltjesmodel op, waardoor de Reactie snelheid sneller gaat gebeuren.\n\n3b\nDit is de wet van massa behoud, behoud van massa.\nErgatieen massa behouden, omdat de stoffen die je voor de reactie, ook na de reactie. Dit betekent dat:\ngeen massa is verloren.\n\n10a\nOmdat er dan door middel onthermische reacties, andere stoffen massa's zullen ontstaan.\nhierom zal de wezenlijkheid van een proces en lastige energetisch constanten zijn.\n\n11a\n13g CO2\n5g H2O\n7g CuO 23,49g CuO\nm.a.w. 5+7=12g dus 23,5g CO",
+    "correctly_spelled_text": "3a\nDan gaat het uit van de pinda's er beter uit, waardoor de reactietijd sneller verloopt, dan ijsje de pinda's niet meer doet.\nDus op microniveau zien we zijn de moleculen aan een,\njemade pinda dichter tegen elkaar aan. Hierdoor treedt ook het botsende deeltjesmodel op, waardoor de reactietijd sneller gaat gebeuren.\n\n3b\nDit is de wet van massa behoud, behoud van massa.\nErgatieen massa behouden, omdat de stoffen die je voor de reactie, ook na de reactie. Dit betekent dat:\ngeen massa is verloren.\n\n10a\nOmdat er dan door middel onthermische reacties, andere stoffen massa's zullen ontstaan.\nhierom zal de wezenlijkheid van een proces en lastige energetisch constanten zijn.\n\n11a\n13g CO2\n5g H2O\n7g CuO 23,49g CuO\nm.a.w. 5+7=12g dus 23,5g CO",
+    "spelling_corrections": [
+        {
+            "original": "reactiesnelheid",
+            "changes": "reactietijd"
+        },
+        {
+            "original": "Reactie snelheid",
+            "changes": "reactietijd"
+        },
+        {
+            "original": "geen massa is verloren.",
+            "changes": "geen massa is verloren."
+        },
+        {
+            "original": "onthermologische",
+            "changes": "onthermische"
+        },
+        {
+            "original": "energetisch",
+            "changes": "energetisch"
+        }
+    ],
+    "tokens_used": 26287,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727730694,
+    "delta_time_s": 10.923338651657104
+}

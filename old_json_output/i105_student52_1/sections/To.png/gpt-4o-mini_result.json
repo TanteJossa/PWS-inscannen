@@ -1,0 +1,21 @@
+{
+    "google_quiestion_number": "To",
+    "question_number": 10,
+    "raw_text": "Dordt CO2 en H2O gasvormig zijn is het mogelijk om dit die te zeggen. De mogelijkheid is gebaseerd dat de reactie verschillend gelopen in ...l...l... dit wil in andere omstandigheden blijven.",
+    "correctly_spelled_text": "Dordt CO2 en H2O gasvormig zijn is het mogelijk om dit te zeggen. De mogelijkheid is gebaseerd dat de reactie verschillend gelopen is in ...l...l... dit wil in andere omstandigheden blijven.",
+    "spelling_corrections": [
+        {
+            "original": "dit die",
+            "changes": "dit"
+        },
+        {
+            "original": "gelopen in",
+            "changes": "gelopen is in"
+        }
+    ],
+    "tokens_used": 14558,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727729444,
+    "delta_time_s": 3.2045023441314697
+}

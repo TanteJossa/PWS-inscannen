@@ -1,0 +1,300 @@
+{
+  "analyzeResult": {
+    "modelVersion": "2022-04-30",
+    "readResults": [
+      {
+        "angle": 0,
+        "height": 845,
+        "lines": [
+          {
+            "appearance": {
+              "style": {
+                "confidence": 1,
+                "name": "handwriting"
+              }
+            },
+            "boundingBox": [
+              45,
+              151,
+              64,
+              151,
+              63,
+              167,
+              46,
+              166
+            ],
+            "text": "1.",
+            "words": [
+              {
+                "boundingBox": [
+                  50,
+                  151,
+                  62,
+                  151,
+                  62,
+                  167,
+                  49,
+                  167
+                ],
+                "confidence": 0.693,
+                "text": "1."
+              }
+            ]
+          },
+          {
+            "appearance": {
+              "style": {
+                "confidence": 0.911,
+                "name": "handwriting"
+              }
+            },
+            "boundingBox": [
+              41,
+              209,
+              61,
+              208,
+              59,
+              223,
+              41,
+              223
+            ],
+            "text": "2",
+            "words": [
+              {
+                "boundingBox": [
+                  45,
+                  208,
+                  55,
+                  208,
+                  55,
+                  223,
+                  45,
+                  223
+                ],
+                "confidence": 0.987,
+                "text": "2"
+              }
+            ]
+          },
+          {
+            "appearance": {
+              "style": {
+                "confidence": 1,
+                "name": "handwriting"
+              }
+            },
+            "boundingBox": [
+              41,
+              261,
+              59,
+              261,
+              58,
+              276,
+              42,
+              277
+            ],
+            "text": "3.",
+            "words": [
+              {
+                "boundingBox": [
+                  43,
+                  261,
+                  58,
+                  261,
+                  58,
+                  276,
+                  43,
+                  277
+                ],
+                "confidence": 0.94,
+                "text": "3."
+              }
+            ]
+          },
+          {
+            "appearance": {
+              "style": {
+                "confidence": 0.563,
+                "name": "handwriting"
+              }
+            },
+            "boundingBox": [
+              60,
+              319,
+              60,
+              332,
+              52,
+              331,
+              51,
+              318
+            ],
+            "text": "-",
+            "words": [
+              {
+                "boundingBox": [
+                  60,
+                  319,
+                  60,
+                  327,
+                  51,
+                  328,
+                  51,
+                  319
+                ],
+                "confidence": 0.833,
+                "text": "-"
+              }
+            ]
+          },
+          {
+            "appearance": {
+              "style": {
+                "confidence": 1,
+                "name": "handwriting"
+              }
+            },
+            "boundingBox": [
+              41,
+              381,
+              58,
+              380,
+              57,
+              397,
+              41,
+              396
+            ],
+            "text": "4.",
+            "words": [
+              {
+                "boundingBox": [
+                  41,
+                  380,
+                  57,
+                  380,
+                  57,
+                  397,
+                  41,
+                  397
+                ],
+                "confidence": 0.869,
+                "text": "4."
+              }
+            ]
+          },
+          {
+            "appearance": {
+              "style": {
+                "confidence": 0.982,
+                "name": "handwriting"
+              }
+            },
+            "boundingBox": [
+              43,
+              576,
+              57,
+              575,
+              58,
+              592,
+              43,
+              592
+            ],
+            "text": "5.",
+            "words": [
+              {
+                "boundingBox": [
+                  43,
+                  575,
+                  56,
+                  575,
+                  57,
+                  592,
+                  43,
+                  592
+                ],
+                "confidence": 0.757,
+                "text": "5."
+              }
+            ]
+          },
+          {
+            "appearance": {
+              "style": {
+                "confidence": 0.982,
+                "name": "handwriting"
+              }
+            },
+            "boundingBox": [
+              45,
+              660,
+              76,
+              661,
+              76,
+              676,
+              44,
+              675
+            ],
+            "text": "6/7",
+            "words": [
+              {
+                "boundingBox": [
+                  46,
+                  660,
+                  74,
+                  661,
+                  73,
+                  676,
+                  46,
+                  675
+                ],
+                "confidence": 0.977,
+                "text": "6/7"
+              }
+            ]
+          },
+          {
+            "appearance": {
+              "style": {
+                "confidence": 0.744,
+                "name": "other"
+              }
+            },
+            "boundingBox": [
+              96,
+              702,
+              103,
+              702,
+              103,
+              712,
+              96,
+              712
+            ],
+            "text": "P",
+            "words": [
+              {
+                "boundingBox": [
+                  96,
+                  702,
+                  103,
+                  702,
+                  103,
+                  712,
+                  96,
+                  712
+                ],
+                "confidence": 0.526,
+                "text": "P"
+              }
+            ]
+          }
+        ],
+        "page": 1,
+        "unit": "pixel",
+        "width": 105
+      }
+    ],
+    "version": "3.2.0"
+  },
+  "createdDateTime": "2024-09-30T22:04:29Z",
+  "lastUpdatedDateTime": "2024-09-30T22:04:30Z",
+  "status": "succeeded"
+}

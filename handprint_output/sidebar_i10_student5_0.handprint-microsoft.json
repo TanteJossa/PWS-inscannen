@@ -1,0 +1,209 @@
+{
+  "analyzeResult": {
+    "modelVersion": "2022-04-30",
+    "readResults": [
+      {
+        "angle": 2.1994,
+        "height": 845,
+        "lines": [
+          {
+            "appearance": {
+              "style": {
+                "confidence": 1,
+                "name": "handwriting"
+              }
+            },
+            "boundingBox": [
+              73,
+              173,
+              87,
+              173,
+              87,
+              194,
+              74,
+              193
+            ],
+            "text": "7",
+            "words": [
+              {
+                "boundingBox": [
+                  73,
+                  173,
+                  87,
+                  173,
+                  86,
+                  194,
+                  73,
+                  193
+                ],
+                "confidence": 0.995,
+                "text": "7"
+              }
+            ]
+          },
+          {
+            "appearance": {
+              "style": {
+                "confidence": 1,
+                "name": "handwriting"
+              }
+            },
+            "boundingBox": [
+              71,
+              233,
+              86,
+              234,
+              86,
+              254,
+              70,
+              253
+            ],
+            "text": "8",
+            "words": [
+              {
+                "boundingBox": [
+                  74,
+                  233,
+                  87,
+                  234,
+                  86,
+                  254,
+                  73,
+                  253
+                ],
+                "confidence": 0.99,
+                "text": "8"
+              }
+            ]
+          },
+          {
+            "appearance": {
+              "style": {
+                "confidence": 0.911,
+                "name": "handwriting"
+              }
+            },
+            "boundingBox": [
+              67,
+              345,
+              90,
+              345,
+              90,
+              363,
+              67,
+              363
+            ],
+            "text": "10",
+            "words": [
+              {
+                "boundingBox": [
+                  67,
+                  345,
+                  89,
+                  345,
+                  89,
+                  363,
+                  67,
+                  363
+                ],
+                "confidence": 0.945,
+                "text": "10"
+              }
+            ]
+          },
+          {
+            "appearance": {
+              "style": {
+                "confidence": 0.764,
+                "name": "handwriting"
+              }
+            },
+            "boundingBox": [
+              74,
+              374,
+              101,
+              376,
+              100,
+              396,
+              73,
+              393
+            ],
+            "text": "9.1",
+            "words": [
+              {
+                "boundingBox": [
+                  77,
+                  374,
+                  101,
+                  376,
+                  99,
+                  396,
+                  75,
+                  394
+                ],
+                "confidence": 0.139,
+                "text": "9.1"
+              }
+            ]
+          },
+          {
+            "appearance": {
+              "style": {
+                "confidence": 1,
+                "name": "handwriting"
+              }
+            },
+            "boundingBox": [
+              29,
+              424,
+              99,
+              408,
+              102,
+              421,
+              31,
+              438
+            ],
+            "text": "deze wel",
+            "words": [
+              {
+                "boundingBox": [
+                  30,
+                  425,
+                  67,
+                  415,
+                  68,
+                  429,
+                  32,
+                  437
+                ],
+                "confidence": 0.713,
+                "text": "deze"
+              },
+              {
+                "boundingBox": [
+                  75,
+                  413,
+                  99,
+                  409,
+                  100,
+                  422,
+                  77,
+                  427
+                ],
+                "confidence": 0.901,
+                "text": "wel"
+              }
+            ]
+          }
+        ],
+        "page": 1,
+        "unit": "pixel",
+        "width": 105
+      }
+    ],
+    "version": "3.2.0"
+  },
+  "createdDateTime": "2024-09-30T21:53:40Z",
+  "lastUpdatedDateTime": "2024-09-30T21:53:40Z",
+  "status": "succeeded"
+}

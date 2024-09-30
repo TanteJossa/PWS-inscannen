@@ -1,0 +1,139 @@
+{
+  "analyzeResult": {
+    "modelVersion": "2022-04-30",
+    "readResults": [
+      {
+        "angle": 1.9092,
+        "height": 845,
+        "lines": [
+          {
+            "appearance": {
+              "style": {
+                "confidence": 1,
+                "name": "handwriting"
+              }
+            },
+            "boundingBox": [
+              70,
+              72,
+              92,
+              69,
+              92,
+              86,
+              68,
+              87
+            ],
+            "text": "12",
+            "words": [
+              {
+                "boundingBox": [
+                  74,
+                  70,
+                  91,
+                  69,
+                  93,
+                  86,
+                  75,
+                  87
+                ],
+                "confidence": 0.995,
+                "text": "12"
+              }
+            ]
+          },
+          {
+            "appearance": {
+              "style": {
+                "confidence": 1,
+                "name": "handwriting"
+              }
+            },
+            "boundingBox": [
+              52,
+              217,
+              43,
+              96,
+              66,
+              96,
+              78,
+              215
+            ],
+            "text": "DE chemische",
+            "words": [
+              {
+                "boundingBox": [
+                  52,
+                  216,
+                  49,
+                  184,
+                  74,
+                  184,
+                  78,
+                  215
+                ],
+                "confidence": 0.621,
+                "text": "DE"
+              },
+              {
+                "boundingBox": [
+                  48,
+                  177,
+                  43,
+                  97,
+                  66,
+                  96,
+                  73,
+                  176
+                ],
+                "confidence": 0.895,
+                "text": "chemische"
+              }
+            ]
+          },
+          {
+            "appearance": {
+              "style": {
+                "confidence": 1,
+                "name": "handwriting"
+              }
+            },
+            "boundingBox": [
+              54,
+              372,
+              84,
+              373,
+              84,
+              397,
+              54,
+              396
+            ],
+            "text": "13",
+            "words": [
+              {
+                "boundingBox": [
+                  58,
+                  372,
+                  83,
+                  373,
+                  82,
+                  397,
+                  57,
+                  396
+                ],
+                "confidence": 0.648,
+                "text": "13"
+              }
+            ]
+          }
+        ],
+        "page": 1,
+        "unit": "pixel",
+        "width": 105
+      }
+    ],
+    "version": "3.2.0"
+  },
+  "createdDateTime": "2024-09-30T22:01:08Z",
+  "lastUpdatedDateTime": "2024-09-30T22:01:08Z",
+  "status": "succeeded"
+}

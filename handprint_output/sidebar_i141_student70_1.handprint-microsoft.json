@@ -1,0 +1,125 @@
+{
+  "analyzeResult": {
+    "modelVersion": "2022-04-30",
+    "readResults": [
+      {
+        "angle": 0,
+        "height": 845,
+        "lines": [
+          {
+            "appearance": {
+              "style": {
+                "confidence": 0.75,
+                "name": "handwriting"
+              }
+            },
+            "boundingBox": [
+              72,
+              91,
+              83,
+              91,
+              84,
+              103,
+              73,
+              103
+            ],
+            "text": "7",
+            "words": [
+              {
+                "boundingBox": [
+                  75,
+                  91,
+                  83,
+                  91,
+                  83,
+                  103,
+                  75,
+                  103
+                ],
+                "confidence": 0.994,
+                "text": "7"
+              }
+            ]
+          },
+          {
+            "appearance": {
+              "style": {
+                "confidence": 0.966,
+                "name": "handwriting"
+              }
+            },
+            "boundingBox": [
+              76,
+              210,
+              94,
+              212,
+              93,
+              225,
+              75,
+              224
+            ],
+            "text": "8",
+            "words": [
+              {
+                "boundingBox": [
+                  82,
+                  210,
+                  91,
+                  211,
+                  90,
+                  225,
+                  81,
+                  224
+                ],
+                "confidence": 0.642,
+                "text": "8"
+              }
+            ]
+          },
+          {
+            "appearance": {
+              "style": {
+                "confidence": 1,
+                "name": "handwriting"
+              }
+            },
+            "boundingBox": [
+              77,
+              490,
+              93,
+              489,
+              93,
+              503,
+              77,
+              504
+            ],
+            "text": "(10",
+            "words": [
+              {
+                "boundingBox": [
+                  77,
+                  490,
+                  91,
+                  489,
+                  92,
+                  503,
+                  77,
+                  504
+                ],
+                "confidence": 0.761,
+                "text": "(10"
+              }
+            ]
+          }
+        ],
+        "page": 1,
+        "unit": "pixel",
+        "width": 105
+      }
+    ],
+    "version": "3.2.0"
+  },
+  "createdDateTime": "2024-09-30T21:57:33Z",
+  "lastUpdatedDateTime": "2024-09-30T21:57:33Z",
+  "status": "succeeded"
+}
