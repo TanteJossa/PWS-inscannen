@@ -1,0 +1,21 @@
+{
+    "google_quiestion_number": "Le",
+    "question_number": 5,
+    "raw_text": "de pinda's\nvermalen\nalcohol\nhele pinda's\nvermalen\n\nof gesneden\nver\nstukjes pinda\n\ndestilleren\nver\nalcohol",
+    "correctly_spelled_text": "de pinda's\nvermalen\nalcohol\nhele pinda's\nvermalen\n\nof gesneden\nver\nstukjes pinda\n\ndestilleren\nver\nalcohol",
+    "spelling_corrections": [
+        {
+            "original": "vermaas",
+            "changes": "vermalen"
+        },
+        {
+            "original": "destileren",
+            "changes": "destilleren"
+        }
+    ],
+    "tokens_used": 14556,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727738680,
+    "delta_time_s": 2.526419162750244
+}

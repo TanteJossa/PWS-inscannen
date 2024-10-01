@@ -1,0 +1,17 @@
+{
+    "google_quiestion_number": "NOT_VALID_QUESTION_ID",
+    "question_number": 1,
+    "raw_text": "hele mails\nvermelden\n\ngemiddelde tijd classificeren\n\ngeselecteerde tijd moet geselecteerd zijn\n\nAf niet geselecteerd\nVet\n\nsteviges prinda",
+    "correctly_spelled_text": "hele mails\nvermelden\n\ngemiddelde tijd classificeren\n\ngeselecteerde tijd moet geselecteerd zijn\n\nAf niet geselecteerd\nVet\n\nstevige prinda",
+    "spelling_corrections": [
+        {
+            "original": "steviges prinda",
+            "changes": "stevige prinda"
+        }
+    ],
+    "tokens_used": 14540,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727738318,
+    "delta_time_s": 3.3110358715057373
+}

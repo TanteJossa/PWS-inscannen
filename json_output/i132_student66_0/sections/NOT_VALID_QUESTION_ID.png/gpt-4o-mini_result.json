@@ -1,0 +1,25 @@
+{
+    "google_quiestion_number": "NOT_VALID_QUESTION_ID",
+    "question_number": 3,
+    "raw_text": "De verdelingsgraad wordt kleiner waardoor de moleculen beter en sneller botsen. Er ontstaan dan meer moleculen, dus op microniveau botsen de moleculen op de goede plek van met een lagere snelheid dan met hele pinda's!\n\nDoor de wet van het behoud van massa,",
+    "correctly_spelled_text": "De verdelingsgraad wordt kleiner waardoor de moleculen beter en sneller botsen. Er ontstaan dan meer moleculen, dus op microniveau botsen de moleculen op de goede plek van met een lagere snelheid dan met hele pinda's!\n\nDoor de wet van het behoud van massa,",
+    "spelling_corrections": [
+        {
+            "original": "verdeliingsgraad",
+            "changes": "verdelingsgraad"
+        },
+        {
+            "original": "moleculien",
+            "changes": "moleculen"
+        },
+        {
+            "original": "pinda's!",
+            "changes": "pinda's!"
+        }
+    ],
+    "tokens_used": 14616,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727735783,
+    "delta_time_s": 4.4679529666900635
+}

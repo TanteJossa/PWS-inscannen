@@ -1,0 +1,17 @@
+{
+    "google_quiestion_number": "helep",
+    "question_number": 1,
+    "raw_text": "hele plichten\nverrichten\nDe standaardplichten\nexterne\nafleiden\noplost\nte\ndeelnemen\nalcohol",
+    "correctly_spelled_text": "hele plichten\nverrichten\nDe standaardplichten\nexterne\nafleiden\noplossend\nte\ndeelnemen\nalcohol",
+    "spelling_corrections": [
+        {
+            "original": "oplost",
+            "changes": "oplossend"
+        }
+    ],
+    "tokens_used": 14518,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727738425,
+    "delta_time_s": 2.9529733657836914
+}

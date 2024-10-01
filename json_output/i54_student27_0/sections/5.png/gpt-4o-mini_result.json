@@ -1,0 +1,21 @@
+{
+    "google_quiestion_number": "5",
+    "question_number": 5,
+    "raw_text": "de reactiewarntz is de hitte die ontstaat na de reactie fotosynthese van glucose",
+    "correctly_spelled_text": "de reactiewarmte is de hitte die ontstaat na de reactie fotosynthese van glucose",
+    "spelling_corrections": [
+        {
+            "original": "reactiewarntz",
+            "changes": "reactiewarmte"
+        },
+        {
+            "original": "ontbat",
+            "changes": "ontstaat"
+        }
+    ],
+    "tokens_used": 14510,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727739860,
+    "delta_time_s": 2.3053197860717773
+}

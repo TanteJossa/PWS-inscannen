@@ -1,0 +1,21 @@
+{
+    "google_quiestion_number": "11",
+    "question_number": 11,
+    "raw_text": "65 g = 13 g CO\u2082 + 5 g water + koper oxide\n65 - 18 = 44 dus 44 g koperoxide.",
+    "correctly_spelled_text": "65 g = 13 g CO\u2082 + 5 g water + koperoxide\n65 - 18 = 44 dus 44 g koperoxide.",
+    "spelling_corrections": [
+        {
+            "original": "koper oxide",
+            "changes": "koperoxide"
+        },
+        {
+            "original": "koperoxide",
+            "changes": "koperoxide"
+        }
+    ],
+    "tokens_used": 14526,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727738559,
+    "delta_time_s": 2.928635597229004
+}

@@ -1,0 +1,21 @@
+{
+    "google_quiestion_number": "d",
+    "question_number": 1,
+    "raw_text": "de activiirngs energie wat in een energie diagram staat voor",
+    "correctly_spelled_text": "de activeringsenergie wat in een energiediagram staat voor",
+    "spelling_corrections": [
+        {
+            "original": "activiirngs",
+            "changes": "activerings"
+        },
+        {
+            "original": "energie diagram",
+            "changes": "energiediagram"
+        }
+    ],
+    "tokens_used": 14500,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727738280,
+    "delta_time_s": 2.915987968444824
+}

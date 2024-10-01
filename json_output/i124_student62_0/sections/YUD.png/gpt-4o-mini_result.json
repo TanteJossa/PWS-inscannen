@@ -1,0 +1,17 @@
+{
+    "google_quiestion_number": "YUD",
+    "question_number": 1,
+    "raw_text": "Wat is de beste beschrijving\n\nbe\u00efnvloeden\n\nbelonen",
+    "correctly_spelled_text": "Wat is de beste beschrijving\n\nbe\u00efnvloeden\n\nbelonen",
+    "spelling_corrections": [
+        {
+            "original": "beschrijving",
+            "changes": "beschrijving"
+        }
+    ],
+    "tokens_used": 14486,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727735532,
+    "delta_time_s": 2.806614398956299
+}

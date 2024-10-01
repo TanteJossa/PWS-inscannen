@@ -1,0 +1,17 @@
+{
+    "google_quiestion_number": "el",
+    "question_number": 1,
+    "raw_text": "evenveel atomen als aan de rechthekt van de pijl. Zo kun je bewijzen dat er geen massa verloren gaat.",
+    "correctly_spelled_text": "evenveel atomen als aan de rechthek van de pijl. Zo kun je bewijzen dat er geen massa verloren gaat.",
+    "spelling_corrections": [
+        {
+            "original": "rechthekt",
+            "changes": "rechthek"
+        }
+    ],
+    "tokens_used": 14510,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727738799,
+    "delta_time_s": 2.489759922027588
+}

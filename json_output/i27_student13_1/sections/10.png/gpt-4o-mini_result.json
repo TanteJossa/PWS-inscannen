@@ -1,0 +1,17 @@
+{
+    "google_quiestion_number": "10",
+    "question_number": 1,
+    "raw_text": "10 omdat de stoffen dan uit het reageert kunnen ontsnappen.",
+    "correctly_spelled_text": "10 omdat de stoffen dan uit het reageert kunnen ontsnappen.",
+    "spelling_corrections": [
+        {
+            "original": "reageert",
+            "changes": "reageert"
+        }
+    ],
+    "tokens_used": 14484,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727739345,
+    "delta_time_s": 1.8869311809539795
+}

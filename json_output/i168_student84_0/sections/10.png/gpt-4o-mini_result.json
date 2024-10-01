@@ -1,0 +1,17 @@
+{
+    "google_quiestion_number": "10",
+    "question_number": 10,
+    "raw_text": "1 C\u2082H\u2086(g) + 120 O\u2082(g) \u2192 7 CO\u2082(g) + 8 H\u2082O(g) + 150 (g)",
+    "correctly_spelled_text": "1 C\u2082H\u2086(g) + 12 O\u2082(g) \u2192 7 CO\u2082(g) + 8 H\u2082O(g) + 150 (g)",
+    "spelling_corrections": [
+        {
+            "original": "120",
+            "changes": "12"
+        }
+    ],
+    "tokens_used": 14526,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727736683,
+    "delta_time_s": 2.9507625102996826
+}

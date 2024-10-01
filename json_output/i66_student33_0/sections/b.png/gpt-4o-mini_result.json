@@ -1,0 +1,33 @@
+{
+    "google_quiestion_number": "b",
+    "question_number": 2,
+    "raw_text": "Er gaat geen massa verloren omdat er ook geen atomen verloren.\nDe massa van de atomen verandert niet\n\n10\nHet wordt lastig aan te tonen omdat het een open reactie is en er dus gassen uit het vat kunnen gaan in de ruimte stromen.",
+    "correctly_spelled_text": "Er gaat geen massa verloren omdat er ook geen atomen verloren.\nDe massa van de atomen verandert niet.\n\n10\nHet wordt lastig aan te tonen omdat het een open reactie is en er dus gassen uit het vat kunnen gaan in de ruimte stromen.",
+    "spelling_corrections": [
+        {
+            "original": "massa verloren",
+            "changes": "massa verloren"
+        },
+        {
+            "original": "atomen verloren",
+            "changes": "atomen verloren"
+        },
+        {
+            "original": "atomen, veranderen niet",
+            "changes": "atomen verandert niet"
+        },
+        {
+            "original": "aan te tonen omdat het een open reactiviteit is",
+            "changes": "aan te tonen omdat het een open reactie is"
+        },
+        {
+            "original": "uit het vat kunnen gaan in de ruimte stromen",
+            "changes": "uit het vat kunnen gaan in de ruimte stromen."
+        }
+    ],
+    "tokens_used": 25977,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727740061,
+    "delta_time_s": 4.217010974884033
+}

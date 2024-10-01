@@ -1,0 +1,25 @@
+{
+    "google_quiestion_number": "DO",
+    "question_number": 4,
+    "raw_text": "links van de pij staan 2xCu atomen, 2xI, 5xO en 2xM. Rechts ook, dus zelfs de atomen hun gewicht. Links en rechts is even wel massa. Daar er is geen massa verloren.\n\n5) Net is lastig om dit te tonen, want CO2 en H2O zijn gassen. En het is een open reactie dus zo gaan de licht in.",
+    "correctly_spelled_text": "links van de pij staan 2xCu atomen, 2xI, 5xO en 2xM. Rechts ook, dus zelfs de atomen hun gewicht. Links en rechts is even wel massa. Daar er is geen massa verloren.\n\n5) Net is lastig om dit te tonen, want CO2 en H2O zijn gassen. En het is een open reactie dus zo gaan de licht in.",
+    "spelling_corrections": [
+        {
+            "original": "atomen hun gewicht",
+            "changes": "atomen hun gewicht."
+        },
+        {
+            "original": "Daar er is geen massa verloren.",
+            "changes": "Daar is geen massa verloren."
+        },
+        {
+            "original": "licht in.",
+            "changes": "licht in."
+        }
+    ],
+    "tokens_used": 14666,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727737878,
+    "delta_time_s": 4.275756120681763
+}

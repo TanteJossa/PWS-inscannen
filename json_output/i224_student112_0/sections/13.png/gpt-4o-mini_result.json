@@ -1,0 +1,17 @@
+{
+    "google_quiestion_number": "13",
+    "question_number": 13,
+    "raw_text": "exotherm\nja Hrijgt energie",
+    "correctly_spelled_text": "exotherm\nja krijgt energie",
+    "spelling_corrections": [
+        {
+            "original": "Hrijgt",
+            "changes": "krijgt"
+        }
+    ],
+    "tokens_used": 14474,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727738352,
+    "delta_time_s": 1.9527904987335205
+}

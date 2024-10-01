@@ -1,0 +1,17 @@
+{
+    "google_quiestion_number": "A",
+    "question_number": 4,
+    "raw_text": "Aan de linker kant van de figuur staan 2 C-atomen.",
+    "correctly_spelled_text": "Aan de linker kant van de figuur staan 2 C-atomen.",
+    "spelling_corrections": [
+        {
+            "original": "figuur",
+            "changes": "figuur"
+        }
+    ],
+    "tokens_used": 14484,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727739214,
+    "delta_time_s": 2.2436952590942383
+}

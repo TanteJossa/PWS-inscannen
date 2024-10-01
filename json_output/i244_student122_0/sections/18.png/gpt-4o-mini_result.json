@@ -1,0 +1,33 @@
+{
+    "google_quiestion_number": "18",
+    "question_number": 8,
+    "raw_text": "Als de pindas op microniveau gfg fijn zijn verdeeld dan is het makkelijker op om iets daarmee te mengen. Door het botsende deeltjesmodel luidt dat nu de deeltjes verder van elkaar zijn verspreid en als ze worden gemengd dat beter kan, omdat de deeltjes beter tegen elkaar kunnen botsen. Wat zorgt voor een betere effectieve botsing & Die zorgt voor een eindproduct.",
+    "correctly_spelled_text": "Als de pinda's op microniveau goed fijn zijn verdeeld, dan is het makkelijker om iets daarmee te mengen. Door het botsende deeltjesmodel luidt dat nu de deeltjes verder van elkaar zijn verspreid en als ze worden gemengd dat beter kan, omdat de deeltjes beter tegen elkaar kunnen botsen. Wat zorgt voor een betere effectieve botsing. Die zorgt voor een eindproduct.",
+    "spelling_corrections": [
+        {
+            "original": "pindas",
+            "changes": "pinda's"
+        },
+        {
+            "original": "gfg",
+            "changes": "goed"
+        },
+        {
+            "original": "makkelijker",
+            "changes": "makkelijker"
+        },
+        {
+            "original": "&",
+            "changes": ". "
+        },
+        {
+            "original": "beter",
+            "changes": "betere"
+        }
+    ],
+    "tokens_used": 14660,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727738788,
+    "delta_time_s": 5.20807671546936
+}

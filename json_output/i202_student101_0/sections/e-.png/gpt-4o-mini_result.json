@@ -1,0 +1,25 @@
+{
+    "google_quiestion_number": "e-",
+    "question_number": 1,
+    "raw_text": "een  smeltende hogere reactiesnelheid door er uorte te",
+    "correctly_spelled_text": "een smeltende hogere reactiesnelheid door eroor te",
+    "spelling_corrections": [
+        {
+            "original": "smeltende",
+            "changes": "smeltende"
+        },
+        {
+            "original": "reactiesnelheid",
+            "changes": "reactiesnelheid"
+        },
+        {
+            "original": "er uorte",
+            "changes": "eroor"
+        }
+    ],
+    "tokens_used": 14511,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727737838,
+    "delta_time_s": 2.2536633014678955
+}

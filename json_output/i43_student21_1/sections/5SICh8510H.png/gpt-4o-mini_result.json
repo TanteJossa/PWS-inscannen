@@ -1,0 +1,17 @@
+{
+    "google_quiestion_number": "5SICh8510H",
+    "question_number": 6,
+    "raw_text": "er is een deel te mriecaken van de linker kant als aan de rechter kant na de pyl",
+    "correctly_spelled_text": "er is een deel te merken van de linker kant als aan de rechter kant na de pyl",
+    "spelling_corrections": [
+        {
+            "original": "mriecaken",
+            "changes": "merken"
+        }
+    ],
+    "tokens_used": 14496,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727739583,
+    "delta_time_s": 2.7011659145355225
+}

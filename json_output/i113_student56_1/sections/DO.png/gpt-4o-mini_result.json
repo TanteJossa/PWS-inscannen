@@ -1,0 +1,45 @@
+{
+    "google_quiestion_number": "DO",
+    "question_number": 1,
+    "raw_text": "Van aachtens het dat de pinda's ei bevrucht. \nwaardoor de reactesnelheid sneller verloopt. \ndan aise de pinda's niet veranderd. \nDus op microniveau zien m zijn de moleculen wanen. \nvermade pinda dichter tegen elkaar aan. Hierdoor \ntreed ckshet botsende deeltjesmodel, waardoor \nde Reactie snelheid sneller gaat bersten.",
+    "correctly_spelled_text": "Van aachtens het dat de pinda's ei bevrucht. \nwaardoor de reactesnelheid sneller verloopt. \ndan aise de pinda's niet veranderd. \nDus op microniveau zien m zijn de moleculen wanen. \nvermade pinda dichter tegen elkaar aan. Hierdoor \ntreedt ckshet botsende deeltjesmodel, waardoor \nde Reactie snelheid sneller gaat bersten.",
+    "spelling_corrections": [
+        {
+            "original": "aachtens",
+            "changes": "aachtens -> achtens"
+        },
+        {
+            "original": "reactesnelheid",
+            "changes": "reactesnelheid -> reactiesnelheid"
+        },
+        {
+            "original": "aise",
+            "changes": "aise -> als"
+        },
+        {
+            "original": "zien m",
+            "changes": "zien m -> zien we"
+        },
+        {
+            "original": "vermade",
+            "changes": "vermade -> verminderde"
+        },
+        {
+            "original": "treed",
+            "changes": "treed -> treedt"
+        },
+        {
+            "original": "ckshet",
+            "changes": "ckshet -> het"
+        },
+        {
+            "original": "Reactie",
+            "changes": "Reactie -> reactie"
+        }
+    ],
+    "tokens_used": 14733,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727735305,
+    "delta_time_s": 7.45573091506958
+}

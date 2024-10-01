@@ -1,0 +1,37 @@
+{
+    "google_quiestion_number": "NOT_VALID_QUESTION_ID",
+    "question_number": 6,
+    "raw_text": "hele pincus -> uermalen,  stugde pincus -> uermalen\n\ngemalen pincus -> carol\n\nextraheren ->\n\nfilteren ->  egolust vet -> desitieren vet\n\n7\n\nhele pincus -> uermalen,  stugde pincus -> uermalen\n\ngemalen pincus -> carol\n\nextraheren ->\n\nfilteren ->  egolust vet ->  uistlengen vet\nrecirculatie",
+    "correctly_spelled_text": "hele pincus -> uermalen,  stugde pincus -> uermalen\n\ngemalen pincus -> carol\n\nextraheren ->\n\nfilteren ->  egestus vet -> desiteren vet\n\n7\n\nhele pincus -> uermalen,  stugde pincus -> uermalen\n\ngemalen pincus -> carol\n\nextraheren ->\n\nfilteren ->  egestus vet ->  uistlengen vet\nrecirculatie",
+    "spelling_corrections": [
+        {
+            "original": "uermalen",
+            "changes": "uermalen"
+        },
+        {
+            "original": "stugde",
+            "changes": "stugde"
+        },
+        {
+            "original": "carol",
+            "changes": "carol"
+        },
+        {
+            "original": "egolust",
+            "changes": "egestus"
+        },
+        {
+            "original": "desitieren",
+            "changes": "desiteren"
+        },
+        {
+            "original": "uistlengen",
+            "changes": "uistlengen"
+        }
+    ],
+    "tokens_used": 14741,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727736409,
+    "delta_time_s": 6.964146614074707
+}

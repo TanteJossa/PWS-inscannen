@@ -1,0 +1,17 @@
+{
+    "google_quiestion_number": "YAM",
+    "question_number": 1,
+    "raw_text": "vermalen  ->  extraheren  ->  filteren\nogesteld uit met stau\nrinda\nalcohol",
+    "correctly_spelled_text": "vermalen  ->  extraheren  ->  filteren\nogesteld uit met stau\nrinda\nalcohol",
+    "spelling_corrections": [
+        {
+            "original": "ogesteld",
+            "changes": "gesteld"
+        }
+    ],
+    "tokens_used": 14509,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727734906,
+    "delta_time_s": 3.130589008331299
+}

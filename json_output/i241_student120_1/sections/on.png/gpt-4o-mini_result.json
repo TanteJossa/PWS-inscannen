@@ -1,0 +1,21 @@
+{
+    "google_quiestion_number": "on",
+    "question_number": 6,
+    "raw_text": "suiker pinda's\nvermuzen\nalcohol\nfilteren",
+    "correctly_spelled_text": "suikerpinda's\nvermuizen\nalcohol\nfilteren",
+    "spelling_corrections": [
+        {
+            "original": "suiker pinda's",
+            "changes": "suikerpinda's"
+        },
+        {
+            "original": "vermuzen",
+            "changes": "vermuizen"
+        }
+    ],
+    "tokens_used": 25838,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727738744,
+    "delta_time_s": 3.3912694454193115
+}

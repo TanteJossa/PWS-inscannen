@@ -1,0 +1,33 @@
+{
+    "google_quiestion_number": "3",
+    "question_number": 3,
+    "raw_text": "De katalysator procedure be\u00efnvloed de reactie snelheid door als het de juiste stof is de achteverings energie om laag te halen waardoor de reactie sneller kan reageren en verlopen.",
+    "correctly_spelled_text": "De katalysatorprocedure be\u00efnvloedt de reactiesnelheid door als het de juiste stof is de activeringsenergie omlaag te halen waardoor de reactie sneller kan reageren en verlopen.",
+    "spelling_corrections": [
+        {
+            "original": "katalysator procedure",
+            "changes": "katalysatorprocedure"
+        },
+        {
+            "original": "be\u00efnvloed",
+            "changes": "be\u00efnvloedt"
+        },
+        {
+            "original": "reactie snelheid",
+            "changes": "reactiesnelheid"
+        },
+        {
+            "original": "achteverings",
+            "changes": "activerings"
+        },
+        {
+            "original": "energie om laag",
+            "changes": "energie omlaag"
+        }
+    ],
+    "tokens_used": 14588,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727736929,
+    "delta_time_s": 4.910650730133057
+}

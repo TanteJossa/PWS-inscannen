@@ -1,0 +1,17 @@
+{
+    "google_quiestion_number": "e",
+    "question_number": 1,
+    "raw_text": "exotherm, want er komt warmte vrij en je ziet licht\n2C7H16 (l) + 12O2 (g) -> 14CO2 (g) + 16H2O (l) + 2SO2 (g)\n3 De katalysator wordt gebruikt in de reactie, maar komt uit de reactie hetzelfde uit\n4 E\n( )\n geactiveerd\nbegin\nEact\nE EQV\nreactiewarmte\nverloop reactie\n5 De reactiewarmte is E.O, want door glucose te verbranden we warm en kunnen we bewegen dus de energie gaat eruit.\n6\n(pindas)\n(gemalen pindas) -> (opgelost met stukjes pindas) -> (filteren) -> (vet)",
+    "correctly_spelled_text": "exotherm, want er komt warmte vrij en je ziet licht\n2C7H16 (l) + 12O2 (g) -> 14CO2 (g) + 16H2O (l) + 2SO2 (g)\n3 De katalysator wordt gebruikt in de reactie, maar komt uit de reactie hetzelfde uit\n4 E\n( )\n geactiveerd\nbegin\nEact\nE EQV\nreactiewarmte\nverloop reactie\n5 De reactiewarmte is E.O, want door glucose te verbranden worden we warm en kunnen we bewegen dus de energie gaat eruit.\n6\n(pindas)\n(gemalen pindas) -> (opgelost met stukjes pindas) -> (filteren) -> (vet)",
+    "spelling_corrections": [
+        {
+            "original": "verbranden we warm",
+            "changes": "verbranden worden we warm"
+        }
+    ],
+    "tokens_used": 26130,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727735483,
+    "delta_time_s": 9.384318590164185
+}

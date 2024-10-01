@@ -1,0 +1,21 @@
+{
+    "google_quiestion_number": "10",
+    "question_number": 11,
+    "raw_text": "Een Katalysator versnelt de reacties - reageert met de reactie maar mindert energie van welder, en des anderen g:ito.",
+    "correctly_spelled_text": "Een katalysator versnelt de reacties - reageert met de reactie maar mindert energie van welder, en des anderen g:ito.",
+    "spelling_corrections": [
+        {
+            "original": "Katalysator",
+            "changes": "katalysator"
+        },
+        {
+            "original": "welder",
+            "changes": "welder"
+        }
+    ],
+    "tokens_used": 14527,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727736229,
+    "delta_time_s": 4.368097543716431
+}

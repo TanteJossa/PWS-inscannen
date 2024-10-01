@@ -1,0 +1,25 @@
+{
+    "google_quiestion_number": "Wit",
+    "question_number": 1,
+    "raw_text": "uit het reactievet gaan, waardoor je na de reactie niet dezelfde mass heeft als voor de reactie",
+    "correctly_spelled_text": "uit het reactievat gaan, waardoor je na de reactie niet dezelfde massa hebt als voor de reactie",
+    "spelling_corrections": [
+        {
+            "original": "reactievet",
+            "changes": "reactievat"
+        },
+        {
+            "original": "mass",
+            "changes": "massa"
+        },
+        {
+            "original": "heeft",
+            "changes": "hebt"
+        }
+    ],
+    "tokens_used": 14516,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727740888,
+    "delta_time_s": 2.9334402084350586
+}

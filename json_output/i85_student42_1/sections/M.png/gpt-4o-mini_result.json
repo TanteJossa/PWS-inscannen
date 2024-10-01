@@ -1,0 +1,21 @@
+{
+    "google_quiestion_number": "M",
+    "question_number": 3,
+    "raw_text": "De reden dat ze de pindas staafpen is dat daardoor het contact op pindas veel groter is \n\n op microniveau blijkt dit dat er veel meer oppervlak is voor de moleculen om tegen een te botsen, en dat de kans op een effectieve botsing dus groter is, de reactiesnelheid zal dus toenemen.",
+    "correctly_spelled_text": "De reden dat ze de pindas staafpen is dat daardoor het contact op pindas veel groter is \n\n op microniveau blijkt dit dat er veel meer oppervlak is voor de moleculen om tegenaan te botsen, en dat de kans op een effectieve botsing dus groter is, de reactiesnelheid zal dus toenemen.",
+    "spelling_corrections": [
+        {
+            "original": "pindas",
+            "changes": "pinda's"
+        },
+        {
+            "original": "tegen een te botsen",
+            "changes": "tegenaan te botsen"
+        }
+    ],
+    "tokens_used": 14610,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727740524,
+    "delta_time_s": 3.921757698059082
+}

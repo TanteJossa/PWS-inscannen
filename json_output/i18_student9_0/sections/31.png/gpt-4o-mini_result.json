@@ -1,0 +1,29 @@
+{
+    "google_quiestion_number": "31",
+    "question_number": 3,
+    "raw_text": "3 liet zogt erver dat de concentratie stilstofdioxides hoger wordt en daarom gaat de reactietijdelijkheid omhang.\n\nEl een tiende te maken.",
+    "correctly_spelled_text": "3 liet zogt erver dat de concentratie stikstofdioxides hoger wordt en daarom gaat de reactietijdelijkheid omhang.\n\nEl een tiende te maken.",
+    "spelling_corrections": [
+        {
+            "original": "stilstofdioxides",
+            "changes": "stikstofdioxides"
+        },
+        {
+            "original": "erver",
+            "changes": "erver"
+        },
+        {
+            "original": "omhang",
+            "changes": "omhang."
+        },
+        {
+            "original": "tiende",
+            "changes": "tiende."
+        }
+    ],
+    "tokens_used": 14566,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727737455,
+    "delta_time_s": 3.531503915786743
+}

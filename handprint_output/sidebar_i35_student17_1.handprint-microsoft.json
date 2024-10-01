@@ -1,0 +1,195 @@
+{
+  "analyzeResult": {
+    "modelVersion": "2022-04-30",
+    "readResults": [
+      {
+        "angle": 4.0856,
+        "height": 845,
+        "lines": [
+          {
+            "appearance": {
+              "style": {
+                "confidence": 1,
+                "name": "handwriting"
+              }
+            },
+            "boundingBox": [
+              86,
+              89,
+              102,
+              92,
+              99,
+              108,
+              83,
+              105
+            ],
+            "text": "4",
+            "words": [
+              {
+                "boundingBox": [
+                  90,
+                  90,
+                  101,
+                  92,
+                  98,
+                  107,
+                  88,
+                  105
+                ],
+                "confidence": 0.995,
+                "text": "4"
+              }
+            ]
+          },
+          {
+            "appearance": {
+              "style": {
+                "confidence": 1,
+                "name": "handwriting"
+              }
+            },
+            "boundingBox": [
+              84,
+              254,
+              100,
+              254,
+              100,
+              271,
+              85,
+              271
+            ],
+            "text": "5",
+            "words": [
+              {
+                "boundingBox": [
+                  84,
+                  254,
+                  95,
+                  254,
+                  95,
+                  271,
+                  84,
+                  271
+                ],
+                "confidence": 0.74,
+                "text": "5"
+              }
+            ]
+          },
+          {
+            "appearance": {
+              "style": {
+                "confidence": 1,
+                "name": "handwriting"
+              }
+            },
+            "boundingBox": [
+              81,
+              427,
+              95,
+              428,
+              95,
+              447,
+              81,
+              446
+            ],
+            "text": "6.",
+            "words": [
+              {
+                "boundingBox": [
+                  81,
+                  427,
+                  94,
+                  428,
+                  92,
+                  447,
+                  81,
+                  446
+                ],
+                "confidence": 0.17,
+                "text": "6."
+              }
+            ]
+          },
+          {
+            "appearance": {
+              "style": {
+                "confidence": 1,
+                "name": "handwriting"
+              }
+            },
+            "boundingBox": [
+              82,
+              510,
+              100,
+              510,
+              101,
+              527,
+              83,
+              527
+            ],
+            "text": "7.",
+            "words": [
+              {
+                "boundingBox": [
+                  87,
+                  510,
+                  100,
+                  510,
+                  100,
+                  527,
+                  87,
+                  527
+                ],
+                "confidence": 0.734,
+                "text": "7."
+              }
+            ]
+          },
+          {
+            "appearance": {
+              "style": {
+                "confidence": 0.901,
+                "name": "other"
+              }
+            },
+            "boundingBox": [
+              98,
+              591,
+              97,
+              613,
+              87,
+              613,
+              87,
+              593
+            ],
+            "text": "CO",
+            "words": [
+              {
+                "boundingBox": [
+                  99,
+                  592,
+                  98,
+                  607,
+                  87,
+                  607,
+                  88,
+                  591
+                ],
+                "confidence": 0.875,
+                "text": "CO"
+              }
+            ]
+          }
+        ],
+        "page": 1,
+        "unit": "pixel",
+        "width": 105
+      }
+    ],
+    "version": "3.2.0"
+  },
+  "createdDateTime": "2024-09-30T22:13:11Z",
+  "lastUpdatedDateTime": "2024-09-30T22:13:11Z",
+  "status": "succeeded"
+}

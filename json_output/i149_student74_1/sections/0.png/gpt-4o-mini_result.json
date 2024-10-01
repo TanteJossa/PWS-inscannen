@@ -1,0 +1,21 @@
+{
+    "google_quiestion_number": "0",
+    "question_number": 1,
+    "raw_text": "Een endotherme reactie, want er komt energie bij want de temperatuur stijgt uiteindelijk terwijl er niks wordt toegevoegd.\n\n2. Een exotherm proces, want er gaat energie uit bij een verbranding.",
+    "correctly_spelled_text": "Een endotherme reactie, want er komt energie bij, want de temperatuur stijgt uiteindelijk terwijl er niks wordt toegevoegd.\n\n2. Een exotherm proces, want er gaat energie uit bij een verbranding.",
+    "spelling_corrections": [
+        {
+            "original": "bij want",
+            "changes": "bij, want"
+        },
+        {
+            "original": "stijgt",
+            "changes": "stijgt"
+        }
+    ],
+    "tokens_used": 14554,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727736152,
+    "delta_time_s": 3.947848081588745
+}

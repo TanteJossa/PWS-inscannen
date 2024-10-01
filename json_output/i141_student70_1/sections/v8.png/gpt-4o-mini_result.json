@@ -1,0 +1,17 @@
+{
+    "google_quiestion_number": "v8",
+    "question_number": 8,
+    "raw_text": "Het is een exotherm proces, omdat de",
+    "correctly_spelled_text": "Het is een exotherm proces, omdat de",
+    "spelling_corrections": [
+        {
+            "original": "exotherm",
+            "changes": "exotherm"
+        }
+    ],
+    "tokens_used": 14478,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727735925,
+    "delta_time_s": 1.9160563945770264
+}

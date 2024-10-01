@@ -1,0 +1,17 @@
+{
+    "google_quiestion_number": "5",
+    "question_number": 5,
+    "raw_text": "helemaal van dat ginkel\n\nactief",
+    "correctly_spelled_text": "helemaal van dat ginkel\n\nactief",
+    "spelling_corrections": [
+        {
+            "original": "helewel",
+            "changes": "helemaal"
+        }
+    ],
+    "tokens_used": 14476,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727739783,
+    "delta_time_s": 2.4647164344787598
+}

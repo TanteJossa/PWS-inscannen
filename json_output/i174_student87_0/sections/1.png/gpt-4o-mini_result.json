@@ -1,0 +1,17 @@
+{
+    "google_quiestion_number": "1",
+    "question_number": 1,
+    "raw_text": "1 De verbranding van zwavelhoudende benzine is een endotherm proces omdat er zal minder zwaveloxide ontstaan en dat laat zien dat er meer energie nodig is dan vrijkomt",
+    "correctly_spelled_text": "1 De verbranding van zwavelhoudende benzine is een endotherm proces omdat er minder zwaveloxide ontstaat en dat laat zien dat er meer energie nodig is dan vrijkomt",
+    "spelling_corrections": [
+        {
+            "original": "er zal minder zwaveloxide ontstaan",
+            "changes": "er minder zwaveloxide ontstaat"
+        }
+    ],
+    "tokens_used": 14542,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727736921,
+    "delta_time_s": 3.1118881702423096
+}

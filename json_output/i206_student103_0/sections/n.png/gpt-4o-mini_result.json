@@ -1,0 +1,29 @@
+{
+    "google_quiestion_number": "n",
+    "question_number": 1,
+    "raw_text": "weoorzaken, want ik raar ze het andere incident op de zelfde plek.\n\nlinks van de pijp staan 2xCu atomen, 7xCl, 5xO en 2xH. Rechts ook, dus dat is de",
+    "correctly_spelled_text": "oorzaken, want ik zie het andere incident op de zelfde plek.\n\nlinks van de pijp staan 2xCu atomen, 7xCl, 5xO en 2xH. Rechts ook, dus dat is de",
+    "spelling_corrections": [
+        {
+            "original": "weoorzaken",
+            "changes": "oorzaken"
+        },
+        {
+            "original": "raar",
+            "changes": "zie"
+        },
+        {
+            "original": "zelfde",
+            "changes": "zelfde"
+        },
+        {
+            "original": "7xCl",
+            "changes": "7xCl."
+        }
+    ],
+    "tokens_used": 14595,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727737887,
+    "delta_time_s": 2.9340145587921143
+}

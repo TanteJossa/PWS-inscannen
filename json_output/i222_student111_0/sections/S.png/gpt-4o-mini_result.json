@@ -1,0 +1,33 @@
+{
+    "google_quiestion_number": "S",
+    "question_number": 5,
+    "raw_text": "5 glucose is oor en Licht, het is een endotherme reactie.\n\n6 alcohol destilleren",
+    "correctly_spelled_text": "5 Glucose is voor en licht, het is een endotherme reactie.\n\n6 Alcohol destilleren",
+    "spelling_corrections": [
+        {
+            "original": "glucose",
+            "changes": "Glucose"
+        },
+        {
+            "original": "oor",
+            "changes": "voor"
+        },
+        {
+            "original": "Licht",
+            "changes": "licht"
+        },
+        {
+            "original": "endotherme",
+            "changes": "endotherme"
+        },
+        {
+            "original": "alcohol",
+            "changes": "Alcohol"
+        }
+    ],
+    "tokens_used": 14539,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727738303,
+    "delta_time_s": 3.5555830001831055
+}

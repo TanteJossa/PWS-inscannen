@@ -1,0 +1,25 @@
+{
+    "google_quiestion_number": "k",
+    "question_number": 1,
+    "raw_text": "jans hebben op effectieve botslijnen, waardoor de reactienesnelheid oor stijgt.",
+    "correctly_spelled_text": "jansen hebben op effectieve botslijnen, waardoor de reactiesnelheid weer stijgt.",
+    "spelling_corrections": [
+        {
+            "original": "jans",
+            "changes": "jansen"
+        },
+        {
+            "original": "reactienesnelheid",
+            "changes": "reactiesnelheid"
+        },
+        {
+            "original": "oor",
+            "changes": "weer"
+        }
+    ],
+    "tokens_used": 14509,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727738086,
+    "delta_time_s": 2.311689615249634
+}

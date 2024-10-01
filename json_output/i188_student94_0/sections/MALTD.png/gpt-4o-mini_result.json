@@ -1,0 +1,21 @@
+{
+    "google_quiestion_number": "MALTD",
+    "question_number": 1,
+    "raw_text": "1) De verstlijding van een exotherm Proces, omot verhitten is.\n\n2) C7H16 + (11/2) O2(g) \u2192 7CO2(g) + 8H2O(g)",
+    "correctly_spelled_text": "1) De verbranding van een exotherm proces, om te verhitten is.\n\n2) C7H16 + (11/2) O2(g) \u2192 7CO2(g) + 8H2O(g)",
+    "spelling_corrections": [
+        {
+            "original": "verstlijding",
+            "changes": "verbranding"
+        },
+        {
+            "original": "Proces, omot",
+            "changes": "proces, om te"
+        }
+    ],
+    "tokens_used": 14576,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727737384,
+    "delta_time_s": 3.8211371898651123
+}

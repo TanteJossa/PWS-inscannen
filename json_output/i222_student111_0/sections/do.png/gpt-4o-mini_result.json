@@ -1,0 +1,17 @@
+{
+    "google_quiestion_number": "do",
+    "question_number": 1,
+    "raw_text": "dat het speller gaat.\n\n4\n\nBeantwoorde vraag",
+    "correctly_spelled_text": "dat het spelletje gaat.\n\n4\n\nBeantwoorde vraag",
+    "spelling_corrections": [
+        {
+            "original": "speller",
+            "changes": "spelletje"
+        }
+    ],
+    "tokens_used": 14488,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727738282,
+    "delta_time_s": 1.9576432704925537
+}

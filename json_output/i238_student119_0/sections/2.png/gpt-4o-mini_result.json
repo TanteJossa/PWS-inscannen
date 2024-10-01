@@ -1,0 +1,29 @@
+{
+    "google_quiestion_number": "2",
+    "question_number": 2,
+    "raw_text": "C7H16(g) +  O2(g) \u2192 SO2(g) + CO2(g) + H2O(l)\nC4H10(g) +  2 O2(g) \u2192 SO2(g) +  7 CO2(g) +  8 H2O(l)\n\n3\nDe katalysator zorgt ervoor dat het proces de reactie sneller verloopt.\neen katalysator is een stof die ervoor zorgt dat een reactie sneller verloopt; daarom wordt dus de reactiesnelheid verhoogd.",
+    "correctly_spelled_text": "C7H16(g) + O2(g) \u2192 SO2(g) + CO2(g) + H2O(l)\nC4H10(g) + 2 O2(g) \u2192 SO2(g) + 7 CO2(g) + 8 H2O(l)\n\n3\nDe katalysator zorgt ervoor dat het proces de reactie sneller verloopt.\neen katalysator is een stof die ervoor zorgt dat een reactie sneller verloopt; daarom wordt dus de reactiesnelheid verhoogd.",
+    "spelling_corrections": [
+        {
+            "original": "C7H16(g) +  O2(g) \u2192 SO2(g) + CO2(g) + H2O(l)",
+            "changes": "C7H16(g) + O2(g) \u2192 SO2(g) + CO2(g) + H2O(l)"
+        },
+        {
+            "original": "C4H10(g) +  2 O2(g) \u2192 SO2(g) +  7 CO2(g) +  8 H2O(l)",
+            "changes": "C4H10(g) + 2 O2(g) \u2192 SO2(g) + 7 CO2(g) + 8 H2O(l)"
+        },
+        {
+            "original": "De katalysator zorgt ervoor dat het proces de reactie sneller verloopt.",
+            "changes": "De katalysator zorgt ervoor dat het proces de reactie sneller verloopt."
+        },
+        {
+            "original": "een katalysator is een stof die ervoor zorgt dat een reactie sneller verloopt; daarom wordt dus de reactiesnelheid verhoogd.",
+            "changes": "een katalysator is een stof die ervoor zorgt dat een reactie sneller verloopt; daarom wordt dus de reactiesnelheid verhoogd."
+        }
+    ],
+    "tokens_used": 14892,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727738654,
+    "delta_time_s": 7.735231876373291
+}

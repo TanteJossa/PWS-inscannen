@@ -1,0 +1,21 @@
+{
+    "google_quiestion_number": "F",
+    "question_number": 7,
+    "raw_text": "6. geslist\nVCA\n\nNCA\n\nalcohol\n\nhele pinda's\n\nvermelden\n\ngehele pinda's\n\n6. geslist\nmet\npinda\n\nopgepast\n\nVCA\n\nVCA\n\n\n8. dan is er een grotere verdunning, omdat de alcohol beter hecht dan dus aan de pinda gedeltjes. Omdat de verdunningsgraad groter is, kunnen de deeltjes meer ruimte en bewegingsvrijheid hebben, de alcohol deeltjes dus makkelijker.\n\n9. die verhouding blijft hetzelfde.",
+    "correctly_spelled_text": "6. geslist\nVCA\n\nNCA\n\nalcohol\n\nhele pinda's\n\nvermelden\n\ngehele pinda's\n\n6. geslist\nmet\npinda\n\nopgepast\n\nVCA\n\nVCA\n\n\n8. dan is er een grotere verdunning, omdat de alcohol beter hecht dan dus aan de pinda deeltjes. Omdat de verdunningsgraad groter is, kunnen de deeltjes meer ruimte en bewegingsvrijheid hebben, de alcohol deeltjes dus makkelijker.\n\n9. die verhouding blijft hetzelfde.",
+    "spelling_corrections": [
+        {
+            "original": "gedeltjes",
+            "changes": "deeltjes"
+        },
+        {
+            "original": "de deeltjes",
+            "changes": "de deeltjes"
+        }
+    ],
+    "tokens_used": 26048,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727736127,
+    "delta_time_s": 6.114459037780762
+}

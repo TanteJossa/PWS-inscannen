@@ -1,0 +1,29 @@
+{
+    "google_quiestion_number": "IC",
+    "question_number": 9,
+    "raw_text": "maakt het de zelfde aantallen zijn. En er is een wet voor. De wet waar massabalans dus er gaat nooit massa we verliezen: het is dus in een gesloten ruimte gegaan.\n\nEn het is het zelfde als de massa die in een gesloten ruimte is.",
+    "correctly_spelled_text": "maakt het de zelfde aantallen zijn. En er is een wet voor. De wet waar massabalans dus er gaat nooit massa we verliezen: het is dus in een gesloten ruimte gegaan.\n\nEn het is het zelfde als de massa die in een gesloten ruimte is.",
+    "spelling_corrections": [
+        {
+            "original": "zelfde",
+            "changes": "zelfde"
+        },
+        {
+            "original": "massabalans",
+            "changes": "massabalans."
+        },
+        {
+            "original": "we verliezen",
+            "changes": "verliezen."
+        },
+        {
+            "original": "is het zelfde",
+            "changes": "is hetzelfde."
+        }
+    ],
+    "tokens_used": 14605,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727737918,
+    "delta_time_s": 3.1785857677459717
+}

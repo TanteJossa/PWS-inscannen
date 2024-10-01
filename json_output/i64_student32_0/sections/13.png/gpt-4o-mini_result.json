@@ -1,0 +1,29 @@
+{
+    "google_quiestion_number": "13",
+    "question_number": 3,
+    "raw_text": "Een katalysator zorgt voor een hoge reactiet snelheid. Dat dor t is done de activat ie energie te verlagen, daardoor is minder energie nodig voor de react ie en gaat het proces sneller.\n\nDe reactiewarmte van de fotosynthese van glucose is \u0394E70",
+    "correctly_spelled_text": "Een katalysator zorgt voor een hoge reactiesnelheid. Dat doet hij door de activatie-energie te verlagen, daardoor is minder energie nodig voor de reactie en gaat het proces sneller.\n\nDe reactiewarmte van de fotosynthese van glucose is \u0394E70",
+    "spelling_corrections": [
+        {
+            "original": "reactiet snelheid",
+            "changes": "reactiesnelheid"
+        },
+        {
+            "original": "dor t",
+            "changes": "doet"
+        },
+        {
+            "original": "activat ie",
+            "changes": "activatie-energie"
+        },
+        {
+            "original": "react ie",
+            "changes": "reactie"
+        }
+    ],
+    "tokens_used": 14608,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727740023,
+    "delta_time_s": 5.613396167755127
+}

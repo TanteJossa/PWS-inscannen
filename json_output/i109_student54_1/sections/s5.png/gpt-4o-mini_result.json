@@ -1,0 +1,73 @@
+{
+    "google_quiestion_number": "s5",
+    "question_number": 5,
+    "raw_text": "Door de verbranding van glucose in onze cellen komt er warmte of energie vrij. We ademen O2 in wat in de cellen dus als \"bijproduct\" wordt verbrand samen met glucose tot energie waar we van houden.",
+    "correctly_spelled_text": "Door de verbranding van glucose in onze cellen komt er warmte of energie vrij. We ademen O2 in wat in de cellen dus als \"bijproduct\" wordt verbrand samen met glucose tot energie waar we van houden.",
+    "spelling_corrections": [
+        {
+            "original": "extraheer",
+            "changes": "extraheer"
+        },
+        {
+            "original": "verbranding",
+            "changes": "verbranding"
+        },
+        {
+            "original": "glucose",
+            "changes": "glucose"
+        },
+        {
+            "original": "cellen",
+            "changes": "cellen"
+        },
+        {
+            "original": "warmte",
+            "changes": "warmte"
+        },
+        {
+            "original": "energie",
+            "changes": "energie"
+        },
+        {
+            "original": "vrij",
+            "changes": "vrij"
+        },
+        {
+            "original": "ademen",
+            "changes": "ademen"
+        },
+        {
+            "original": "wat",
+            "changes": "wat"
+        },
+        {
+            "original": "cellen",
+            "changes": "cellen"
+        },
+        {
+            "original": "bijproduct",
+            "changes": "bijproduct"
+        },
+        {
+            "original": "verbrand",
+            "changes": "verbrand"
+        },
+        {
+            "original": "glucose",
+            "changes": "glucose"
+        },
+        {
+            "original": "energie",
+            "changes": "energie"
+        },
+        {
+            "original": "houden",
+            "changes": "houden"
+        }
+    ],
+    "tokens_used": 14678,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727735052,
+    "delta_time_s": 5.695906400680542
+}

@@ -1,0 +1,33 @@
+{
+    "google_quiestion_number": "11",
+    "question_number": 1,
+    "raw_text": "11 65g - 13g = 52y\n52y - 5g = #ty\n47g koper(II) oxide",
+    "correctly_spelled_text": "11 65 g - 13 g = 52 y\n52 y - 5 g = # t y\n47 g koper(II) oxide",
+    "spelling_corrections": [
+        {
+            "original": "65g",
+            "changes": "65 g"
+        },
+        {
+            "original": "13g",
+            "changes": "13 g"
+        },
+        {
+            "original": "52y",
+            "changes": "52 y"
+        },
+        {
+            "original": "5g",
+            "changes": "5 g"
+        },
+        {
+            "original": "47g",
+            "changes": "47 g"
+        }
+    ],
+    "tokens_used": 14557,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727738342,
+    "delta_time_s": 5.899738550186157
+}

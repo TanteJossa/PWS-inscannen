@@ -1,0 +1,37 @@
+{
+    "google_quiestion_number": "8",
+    "question_number": 8,
+    "raw_text": "Het optredende kristallisatieproces is een exotherme reactie waarbij chemische energie wordt omgezet naar warmte, er komt dus energie vrij.",
+    "correctly_spelled_text": "Het optredende kristallisatieproces is een exotherme reactie waarbij chemische energie wordt omgezet naar warmte, er komt dus energie vrij.",
+    "spelling_corrections": [
+        {
+            "original": "kristallisatieproces",
+            "changes": "kristallisatieproces"
+        },
+        {
+            "original": "exotherme",
+            "changes": "exotherme"
+        },
+        {
+            "original": "chemische",
+            "changes": "chemische"
+        },
+        {
+            "original": "omgezet",
+            "changes": "omgezet"
+        },
+        {
+            "original": "warmte",
+            "changes": "warmte"
+        },
+        {
+            "original": "vrij",
+            "changes": "vrij"
+        }
+    ],
+    "tokens_used": 14570,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727737695,
+    "delta_time_s": 2.9908065795898438
+}

@@ -1,0 +1,17 @@
+{
+    "google_quiestion_number": "12",
+    "question_number": 12,
+    "raw_text": "E(t)\n\nge\u00efnduceerde weerstand\n\n\u0394E A\n\nt(s)",
+    "correctly_spelled_text": "E(t)\n\nge\u00efnduceerde weerstand\n\n\u0394E A\n\nt(s)",
+    "spelling_corrections": [
+        {
+            "original": "ge\u00efnduceerde",
+            "changes": ""
+        }
+    ],
+    "tokens_used": 14500,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727739234,
+    "delta_time_s": 2.510845184326172
+}

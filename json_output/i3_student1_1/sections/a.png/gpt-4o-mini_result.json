@@ -1,0 +1,25 @@
+{
+    "google_quiestion_number": "a",
+    "question_number": 1,
+    "raw_text": "de reactie geen massa verloren van de atomen als de hoeveelheid massa die je hebt van de rijl is ook hetzelfde als van de rijl als je reactie vergelijking klopt",
+    "correctly_spelled_text": "de reactie geen massa verloren van de atomen als de hoeveelheid massa die je hebt van de rijl is ook hetzelfde als van de rijl als je reactie vergelijking klopt",
+    "spelling_corrections": [
+        {
+            "original": "verloren",
+            "changes": "verloren"
+        },
+        {
+            "original": "rijl",
+            "changes": "rijl"
+        },
+        {
+            "original": "rijl",
+            "changes": "rijl"
+        }
+    ],
+    "tokens_used": 14544,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727739528,
+    "delta_time_s": 3.716001510620117
+}

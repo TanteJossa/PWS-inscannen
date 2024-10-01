@@ -1,0 +1,33 @@
+{
+    "google_quiestion_number": "11",
+    "question_number": 11,
+    "raw_text": "Een katalysator kan de reactie-snelheid be\u00efnvloeden omdat een katalysator een stof is die zorgt dat een reactie sneller gaat en de activeringsenergie daar is dan minder.",
+    "correctly_spelled_text": "Een katalysator kan de reactiesnelheid be\u00efnvloeden omdat een katalysator een stof is die zorgt dat een reactie sneller gaat en de activeringsenergie daar is dan minder.",
+    "spelling_corrections": [
+        {
+            "original": "reactie-snelheid",
+            "changes": "reactiesnelheid"
+        },
+        {
+            "original": "be\u00efnvloeden",
+            "changes": "be\u00efnvloeden"
+        },
+        {
+            "original": "sneller",
+            "changes": "sneller"
+        },
+        {
+            "original": "activeringsenergie",
+            "changes": "activeringsenergie"
+        },
+        {
+            "original": "daar is",
+            "changes": "daar is"
+        }
+    ],
+    "tokens_used": 14582,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727739913,
+    "delta_time_s": 3.5421643257141113
+}

@@ -1,0 +1,21 @@
+{
+    "google_quiestion_number": "pindas",
+    "question_number": 3,
+    "raw_text": "Als je de pinda's fijnstampot wordt de verdelinggraad",
+    "correctly_spelled_text": "Als je de pinda's fijnstampot wordt de verdelingsgraad",
+    "spelling_corrections": [
+        {
+            "original": "fijnstampot",
+            "changes": "fijnstampot"
+        },
+        {
+            "original": "verdelinggraad",
+            "changes": "verdelingsgraad"
+        }
+    ],
+    "tokens_used": 14505,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727739231,
+    "delta_time_s": 3.0146238803863525
+}

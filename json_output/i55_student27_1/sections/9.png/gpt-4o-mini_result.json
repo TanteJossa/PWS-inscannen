@@ -1,0 +1,17 @@
+{
+    "google_quiestion_number": "9",
+    "question_number": 9,
+    "raw_text": "Uit de reactievergelijking blijkt dat er geen massa verloren gaat omdat er evenveel van alles zowel aan de linker kant staat als aan de rechter.",
+    "correctly_spelled_text": "Uit de reactievergelijking blijkt dat er geen massa verloren gaat omdat er evenveel van alles zowel aan de linker kant staat als aan de rechter.",
+    "spelling_corrections": [
+        {
+            "original": "verlieber",
+            "changes": "verloren"
+        }
+    ],
+    "tokens_used": 14518,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727739881,
+    "delta_time_s": 3.204514265060425
+}

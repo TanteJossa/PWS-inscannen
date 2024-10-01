@@ -1,0 +1,37 @@
+{
+    "google_quiestion_number": "hele",
+    "question_number": 1,
+    "raw_text": "hele\nvermalen\ngaren\nPinda\n\nEXTRA\n\nmet\nstukje\n\nsilicium\n\nbestemming",
+    "correctly_spelled_text": "hele\nvermalen\ngaren\nPinda\n\nEXTRA\n\nmet\nstukje\n\nsilicium\n\nbestemming",
+    "spelling_corrections": [
+        {
+            "original": "garen",
+            "changes": "garen"
+        },
+        {
+            "original": "Pinda",
+            "changes": "Pinda"
+        },
+        {
+            "original": "EXTRA",
+            "changes": "EXTRA"
+        },
+        {
+            "original": "stukje",
+            "changes": "stukje"
+        },
+        {
+            "original": "silicium",
+            "changes": "silicium"
+        },
+        {
+            "original": "bestemming",
+            "changes": "bestemming"
+        }
+    ],
+    "tokens_used": 14568,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727740093,
+    "delta_time_s": 2.2862393856048584
+}

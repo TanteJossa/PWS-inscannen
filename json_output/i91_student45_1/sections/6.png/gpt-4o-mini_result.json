@@ -1,0 +1,25 @@
+{
+    "google_quiestion_number": "6",
+    "question_number": 6,
+    "raw_text": "helepindas's -> \n  gemalen pindas -> \n  extraheren\n\nlet\n\ndestilleren\noegestost uit\nfilteren\n\nalcohol\nstijgpinda\n\nrecliseren",
+    "correctly_spelled_text": "helpindas's -> \n  gemalen pindas -> \n  extraheren\n\nlet\n\ndestilleren\noogestost uit\nfilteren\n\nalcohol\nstijgpinda\n\nrecycleren",
+    "spelling_corrections": [
+        {
+            "original": "helepindas's",
+            "changes": "helpindas's"
+        },
+        {
+            "original": "oegestost",
+            "changes": "oogestost"
+        },
+        {
+            "original": "recliseren",
+            "changes": "recycleren"
+        }
+    ],
+    "tokens_used": 14590,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727740777,
+    "delta_time_s": 3.126087188720703
+}

@@ -1,0 +1,17 @@
+{
+    "google_quiestion_number": "16",
+    "question_number": 9,
+    "raw_text": "Er is geen massa verloren omdat er voor de pijl evenveel protonen zijn als de pijl en dus een blijft die het massetal het zelfde\n10. Wat is het verschil tussen \"zout\" en \"residu\"?",
+    "correctly_spelled_text": "Er is geen massa verloren omdat er voor de pijl evenveel protonen zijn als de pijl en dus een blijft die het massetal hetzelfde\n10. Wat is het verschil tussen \"zout\" en \"residu\"?",
+    "spelling_corrections": [
+        {
+            "original": "zelfde",
+            "changes": "zelfde"
+        }
+    ],
+    "tokens_used": 14551,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727736280,
+    "delta_time_s": 3.4503161907196045
+}

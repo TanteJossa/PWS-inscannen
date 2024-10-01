@@ -1,0 +1,25 @@
+{
+    "google_quiestion_number": "6",
+    "question_number": 6,
+    "raw_text": "Massas berekenen is een leertje. Je\nzijn van alle atomen het zelfde aantal\naan de linker kant van de rij als aan de\nrechter kant, evenals massa.\n\nDit is mogelijk, want dat is een open recept.\nEr kunnen ook nog stoffen bij!\n\n(6) 65g-13g-5g=47g, van\nhoop (h) oxide",
+    "correctly_spelled_text": "Massas berekenen is een leertje. Je\nzijn van alle atomen het zelfde aantal\naan de linker kant van de rij als aan de\nrechter kant, evenals massa.\n\nDit is mogelijk, want dat is een open recept.\nEr kunnen ook nog stoffen bij!\n\n(6) 65g - 13g - 5g = 47g, van\nhoop (h) oxide",
+    "spelling_corrections": [
+        {
+            "original": "zelfde",
+            "changes": "zelfde"
+        },
+        {
+            "original": "want dat is",
+            "changes": "want dat is"
+        },
+        {
+            "original": "stoffen bij!",
+            "changes": "stoffen bij!"
+        }
+    ],
+    "tokens_used": 14652,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727739494,
+    "delta_time_s": 4.993549585342407
+}

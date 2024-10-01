@@ -1,0 +1,49 @@
+{
+    "google_quiestion_number": "9786STh",
+    "question_number": 4,
+    "raw_text": "Bij deze reactievergelijking gaat er geen massa verloren, omdat er aan beide kanten van de pijl van alle materialen evenveel is. Het is een kloppende reactievergelijking.\n\n5\nAls het aan een reactievat is\nAls er een reactie plaatsvindt in een open reactievat, dan komen er allemaal stoffen van gassen en dampen. Er worden allemaal stoffen gemengd.\n\n6\n65 . 13 x 5 =  25 g\n\n7\nchemische energie \u2192 warme energie",
+    "correctly_spelled_text": "Bij deze reactievergelijking gaat er geen massa verloren, omdat er aan beide kanten van de pijl van alle materialen evenveel is. Het is een kloppende reactievergelijking.\n\n5\nAls het aan een reactievat is.\nAls er een reactie plaatsvindt in een open reactievat, dan komen er allemaal stoffen van gassen en dampen. Er worden allemaal stoffen gemengd.\n\n6\n65 . 13 x 5 =  25 g\n\n7\nchemische energie \u2192 warme energie",
+    "spelling_corrections": [
+        {
+            "original": "reactievergelijking",
+            "changes": "reactievergelijking"
+        },
+        {
+            "original": "materialen",
+            "changes": "materialen"
+        },
+        {
+            "original": "reactievat",
+            "changes": "reactievat"
+        },
+        {
+            "original": "reactie",
+            "changes": "reactie"
+        },
+        {
+            "original": "reactievat",
+            "changes": "reactievat"
+        },
+        {
+            "original": "stoffen van gassen en",
+            "changes": "stoffen van gassen en"
+        },
+        {
+            "original": "stoffen gemengd",
+            "changes": "stoffen gemengd"
+        },
+        {
+            "original": "reactievat",
+            "changes": "reactievat"
+        },
+        {
+            "original": "warmte energie",
+            "changes": "warme energie"
+        }
+    ],
+    "tokens_used": 14785,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727737536,
+    "delta_time_s": 6.33489203453064
+}

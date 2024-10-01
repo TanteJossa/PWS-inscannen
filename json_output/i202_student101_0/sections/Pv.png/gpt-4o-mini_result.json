@@ -1,0 +1,37 @@
+{
+    "google_quiestion_number": "Pv",
+    "question_number": 2,
+    "raw_text": "process_ want_ daarbij wordt chemische energie ingezet in een ander energie (cfr. met C2H16S(l) + 11 O2(g) \u2192 7 CO2(g) + 8 H2O(l) + 5 (s) reactie,",
+    "correctly_spelled_text": "proces, want daarbij wordt chemische energie ingezet in een ander energie (cfr. met C2H16S(l) + 11 O2(g) \u2192 7 CO2(g) + 8 H2O(l) + 5 (s) reactie,",
+    "spelling_corrections": [
+        {
+            "original": "process_",
+            "changes": "proces,"
+        },
+        {
+            "original": "want_",
+            "changes": "want"
+        },
+        {
+            "original": "daarbij",
+            "changes": "daarbij"
+        },
+        {
+            "original": "ingezet",
+            "changes": "ingezet"
+        },
+        {
+            "original": "(cfr.",
+            "changes": "(cfr."
+        },
+        {
+            "original": "met C2H16S(l)",
+            "changes": "met C2H16S(l)"
+        }
+    ],
+    "tokens_used": 14637,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727737851,
+    "delta_time_s": 4.277536869049072
+}

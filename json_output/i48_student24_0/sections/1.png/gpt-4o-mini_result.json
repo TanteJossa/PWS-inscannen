@@ -1,0 +1,17 @@
+{
+    "google_quiestion_number": "1",
+    "question_number": 10,
+    "raw_text": "Omdat er aan zuurstof komt en de het zeker weet hoeveel.",
+    "correctly_spelled_text": "Omdat er aan zuurstof komt en het zeker weet hoeveel.",
+    "spelling_corrections": [
+        {
+            "original": "de het",
+            "changes": "het"
+        }
+    ],
+    "tokens_used": 14478,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727739703,
+    "delta_time_s": 2.025824546813965
+}

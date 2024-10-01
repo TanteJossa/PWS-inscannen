@@ -1,0 +1,17 @@
+{
+    "google_quiestion_number": "3",
+    "question_number": 3,
+    "raw_text": "Tijdens het fijnstomen wordt of microniveau volgens het bestaande deeltijdmodel de afbraakbindingen extra snel verbroken doordat",
+    "correctly_spelled_text": "Tijdens het fijnstomen wordt op microniveau volgens het bestaande deeltijdmodel de afbraakbindingen extra snel verbroken doordat",
+    "spelling_corrections": [
+        {
+            "original": "of",
+            "changes": "op"
+        }
+    ],
+    "tokens_used": 14504,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727734888,
+    "delta_time_s": 1.7334017753601074
+}

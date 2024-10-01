@@ -1,0 +1,41 @@
+{
+    "google_quiestion_number": "13",
+    "question_number": 13,
+    "raw_text": "de reactie van glucose is : -281600 J/mol",
+    "correctly_spelled_text": "De reactie van glucose is: -281600 J/mol",
+    "spelling_corrections": [
+        {
+            "original": "de",
+            "changes": "De"
+        },
+        {
+            "original": "reactie",
+            "changes": "reactie"
+        },
+        {
+            "original": "glucose",
+            "changes": "glucose"
+        },
+        {
+            "original": "is",
+            "changes": "is"
+        },
+        {
+            "original": ":",
+            "changes": ":"
+        },
+        {
+            "original": "-281600",
+            "changes": "-281600"
+        },
+        {
+            "original": "J/mol",
+            "changes": "J/mol"
+        }
+    ],
+    "tokens_used": 25868,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727735629,
+    "delta_time_s": 3.9539120197296143
+}

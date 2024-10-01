@@ -1,0 +1,33 @@
+{
+    "google_quiestion_number": "10",
+    "question_number": 16,
+    "raw_text": "C7H16S + H2O2  \u2192  ? CO2 + ? H2O + ? S2\nC = 7  \u2192  8\nH = 16  \u2192  18\nS = 1  \u2192  1\nO = 2  \u2192  2\n\n11. De katalysator versnelt het proces, omdat een katalysator de activeringsenergie verlaagt, waardoor de reactiesnelheid toeneemt.",
+    "correctly_spelled_text": "C7H16S + H2O2  \u2192  ? CO2 + ? H2O + ? S2\nC = 7  \u2192  8\nH = 16  \u2192  18\nS = 1  \u2192  1\nO = 2  \u2192  2\n\n11. De katalysator versnelt het proces, omdat een katalysator de activeringsenergie verlaagt, waardoor de reactiesnelheid toeneemt.",
+    "spelling_corrections": [
+        {
+            "original": "katalysator",
+            "changes": "katalysator"
+        },
+        {
+            "original": "versnelt",
+            "changes": "versnelt"
+        },
+        {
+            "original": "activeringsenergie",
+            "changes": "activeringsenergie"
+        },
+        {
+            "original": "verlaagt",
+            "changes": "verlaagt"
+        },
+        {
+            "original": "reactiesnelheid",
+            "changes": "reactiesnelheid"
+        }
+    ],
+    "tokens_used": 14710,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727739398,
+    "delta_time_s": 5.0598883628845215
+}

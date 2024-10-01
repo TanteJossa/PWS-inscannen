@@ -1,0 +1,37 @@
+{
+    "google_quiestion_number": "7Co8Q16",
+    "question_number": 8,
+    "raw_text": "Hoe bager de concentratie van de pinda-moleculen hoe makkeliker het is om de pinola te scheiden omdat er meer ruimte zit om te scheiden\n\nUit de reactievergelijking blijkt dat er geen massa verben, gaat omdat er evenveel van alles zowel aan de linker kant staat als aan de rechter.",
+    "correctly_spelled_text": "Hoe hoger de concentratie van de pinda-moleculen, hoe makkelijker het is om de pinolen te scheiden, omdat er meer ruimte zit om te scheiden.\n\nUit de reactievergelijking blijkt dat er geen massa verloren gaat, omdat er evenveel van alles zowel aan de linker kant staat als aan de rechter.",
+    "spelling_corrections": [
+        {
+            "original": "bager",
+            "changes": "hoger"
+        },
+        {
+            "original": "makkeliker",
+            "changes": "makkelijker"
+        },
+        {
+            "original": "pinola",
+            "changes": "pinolen"
+        },
+        {
+            "original": "verben",
+            "changes": "verloren"
+        },
+        {
+            "original": "gaat",
+            "changes": "gaat"
+        },
+        {
+            "original": "evenveel van alles",
+            "changes": "evenveel van alles"
+        }
+    ],
+    "tokens_used": 14651,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727739874,
+    "delta_time_s": 4.698853015899658
+}

@@ -1,0 +1,41 @@
+{
+    "google_quiestion_number": "1",
+    "question_number": 3,
+    "raw_text": "Door het de pinnen's fijn te stampen, wordt er redelijk regelingsproef gedaan en dus ook het controlepunt voor de pinnen. Het grootste de het controlepunt controleerbare zijn alle de helderheid. Om dit microscopisch te realiseren, kan je het bestaande deeltechnisch gebruiken. Doordat de sterren en het controlepunt hebben moeten ze w\u00e9lke e. horde, tegen elkaar con. Daardoor ze strade boten zijn er ook meer effecfieve en effectieve hoorzingen.",
+    "correctly_spelled_text": "Door het de pinnen fijn te stampen, wordt er redelijk regelingsproef gedaan en dus ook het controlepunt voor de pinnen. Het grootste van het controlepunt controleerbare zijn alle de helderheid. Om dit microscopisch te realiseren, kan je het bestaande deeltechnisch gebruiken. Doordat de sterren en het controlepunt hebben moeten ze welke e. horde, tegen elkaar con. Daardoor zijn de strade boten er ook meer effectieve en effectieve hoorzingen.",
+    "spelling_corrections": [
+        {
+            "original": "pinnen's",
+            "changes": "pinnen"
+        },
+        {
+            "original": "de het",
+            "changes": "van het"
+        },
+        {
+            "original": "controleerbare",
+            "changes": "controleerbare"
+        },
+        {
+            "original": "de helderheid",
+            "changes": "de helderheid."
+        },
+        {
+            "original": "microscopisch",
+            "changes": "microscopisch."
+        },
+        {
+            "original": "de sterren en het controlepunt hebben moeten ze w\u00e9lke e. horde",
+            "changes": "de sterren en het controlepunt hebben moeten ze welke e. horde"
+        },
+        {
+            "original": "ze strade boten zijn er ook meer effecfieve",
+            "changes": "zijn de strade boten er ook meer effectieve"
+        }
+    ],
+    "tokens_used": 14774,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727739410,
+    "delta_time_s": 5.977177858352661
+}

@@ -1,0 +1,29 @@
+{
+    "google_quiestion_number": "1",
+    "question_number": 4,
+    "raw_text": "Volgens de wet van massabehoud gaat er nooit massa verloren. Dat kon je hier zien aan het feit dat er van elke stof evenveel voor en na de reactie staan. Namelijk 2 x C\u2081, 1 x C\u2082, 5 x O en 2 x H.",
+    "correctly_spelled_text": "Volgens de wet van massabehoud gaat er nooit massa verloren. Dat kon je hier zien aan het feit dat er van elke stof evenveel voor en na de reactie staan. Namelijk 2 x C\u2081, 1 x C\u2082, 5 x O en 2 x H.",
+    "spelling_corrections": [
+        {
+            "original": "nooit",
+            "changes": "nooit"
+        },
+        {
+            "original": "hier",
+            "changes": "hier"
+        },
+        {
+            "original": "evenveel",
+            "changes": "evenveel"
+        },
+        {
+            "original": "na de reactie",
+            "changes": "na de reactie"
+        }
+    ],
+    "tokens_used": 14604,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727738069,
+    "delta_time_s": 4.1958327293396
+}

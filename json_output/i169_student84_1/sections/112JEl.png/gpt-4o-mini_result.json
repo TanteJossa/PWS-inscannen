@@ -1,0 +1,33 @@
+{
+    "google_quiestion_number": "112JEl",
+    "question_number": 1,
+    "raw_text": "de klsblnts quttion anste nolle dor de dltisditietiten.",
+    "correctly_spelled_text": "de klassen vragen aan de leerlingen.",
+    "spelling_corrections": [
+        {
+            "original": "klsblnts",
+            "changes": "klassen"
+        },
+        {
+            "original": "quttion",
+            "changes": "vragen"
+        },
+        {
+            "original": "anste",
+            "changes": "aan"
+        },
+        {
+            "original": "nolle",
+            "changes": "de"
+        },
+        {
+            "original": "dltisditietiten",
+            "changes": "leerlingen"
+        }
+    ],
+    "tokens_used": 14527,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727736721,
+    "delta_time_s": 3.1887223720550537
+}

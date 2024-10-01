@@ -1,0 +1,41 @@
+{
+    "google_quiestion_number": "6",
+    "question_number": 6,
+    "raw_text": "\nHulp\nVormen\n\ngeef een\n\nverzenden\n\nopgeslagen\n\nverwerken\n\nverzenden\n\nStuur naar\n\nVIA de alpha\n",
+    "correctly_spelled_text": "\nHulp\nVormen\n\ngeef een\n\nverzenden\n\nopgeslagen\n\nverwerken\n\nverzenden\n\nStuur naar\n\nVIA de alpha\n",
+    "spelling_corrections": [
+        {
+            "original": "geef een",
+            "changes": "geef een"
+        },
+        {
+            "original": "verzenden",
+            "changes": "verzenden"
+        },
+        {
+            "original": "opgeslagen",
+            "changes": "opgeslagen"
+        },
+        {
+            "original": "verwerken",
+            "changes": "verwerken"
+        },
+        {
+            "original": "verzenden",
+            "changes": "verzenden"
+        },
+        {
+            "original": "Stuur naar",
+            "changes": "Stuur naar"
+        },
+        {
+            "original": "VIA de alpha",
+            "changes": "VIA de alpha"
+        }
+    ],
+    "tokens_used": 14616,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727739694,
+    "delta_time_s": 4.183618068695068
+}

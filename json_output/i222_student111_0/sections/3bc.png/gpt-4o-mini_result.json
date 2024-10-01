@@ -1,0 +1,17 @@
+{
+    "google_quiestion_number": "3bc",
+    "question_number": 1,
+    "raw_text": "3 jaar een katalysator is de act vermindert",
+    "correctly_spelled_text": "3 jaar een katalysator is de act vermindert",
+    "spelling_corrections": [
+        {
+            "original": "act",
+            "changes": "aantal"
+        }
+    ],
+    "tokens_used": 14477,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727738228,
+    "delta_time_s": 2.3220648765563965
+}

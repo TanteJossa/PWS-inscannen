@@ -1,0 +1,17 @@
+{
+    "google_quiestion_number": "4",
+    "question_number": 4,
+    "raw_text": "4. links van de pijl zijn 2 Cl- moleculen,  (FE) moleculen en 2 H-moleculen. \n - rechts van de pijl zijn ook 2 Cl- moleculen, 1 Fe-molecuul, 50 moleculen en 2 H-moleculen. Dit betekent dat voor en na de reactie evenveel moleculen zijn en dus ook een zelfde zijn.",
+    "correctly_spelled_text": "4. links van de pijl zijn 2 Cl- moleculen, (Fe) moleculen en 2 H-moleculen. \n - rechts van de pijl zijn ook 2 Cl- moleculen, 1 Fe-molecuul, 50 moleculen en 2 H-moleculen. Dit betekent dat voor en na de reactie evenveel moleculen zijn en dus ook een zelfde zijn.",
+    "spelling_corrections": [
+        {
+            "original": "(FE)",
+            "changes": "(Fe)"
+        }
+    ],
+    "tokens_used": 14643,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727739445,
+    "delta_time_s": 3.4386637210845947
+}

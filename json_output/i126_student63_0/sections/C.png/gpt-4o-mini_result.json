@@ -1,0 +1,12 @@
+{
+    "google_quiestion_number": "C",
+    "question_number": 10,
+    "raw_text": "C7H16S + O2 \u2192 CO2 + H2O + SO2\nC7H16S + O2 \u2192 7 CO2 + 8 H2O + SO2\nC7H16S(l) + 12 O2(g) \u2192 7 CO2(g) + 8 H2O(g) + SO2(g)",
+    "correctly_spelled_text": "C7H16S + O2 \u2192 CO2 + H2O + SO2\nC7H16S + O2 \u2192 7 CO2 + 8 H2O + SO2\nC7H16S(l) + 12 O2(g) \u2192 7 CO2(g) + 8 H2O(g) + SO2(g)",
+    "spelling_corrections": [],
+    "tokens_used": 14597,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727735595,
+    "delta_time_s": 4.345422983169556
+}

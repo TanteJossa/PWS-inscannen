@@ -1,0 +1,21 @@
+{
+    "google_quiestion_number": "NN",
+    "question_number": 1,
+    "raw_text": "Zij, \n of alken is de abnormaal verdelingen en \n of nieuw moleskine, verond.",
+    "correctly_spelled_text": "Zij, \n of alken is de abnormale verdelingen en \n of nieuwe moleskine, verond.",
+    "spelling_corrections": [
+        {
+            "original": "abnormaal",
+            "changes": "abnormale"
+        },
+        {
+            "original": "nieuw",
+            "changes": "nieuwe"
+        }
+    ],
+    "tokens_used": 14521,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727737442,
+    "delta_time_s": 2.666189193725586
+}

@@ -1,0 +1,17 @@
+{
+    "google_quiestion_number": "g",
+    "question_number": 9,
+    "raw_text": "g\nEr zijn aan beide kanten van de pijl evenveel van atomen.\nC links = H2, rechts = H2\n",
+    "correctly_spelled_text": "g\nEr zijn aan beide kanten van de pijl evenveel van atomen.\nC links = H2, rechts = H2\n",
+    "spelling_corrections": [
+        {
+            "original": "evenveel van atomen.",
+            "changes": "evenveel atomen."
+        }
+    ],
+    "tokens_used": 14520,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727739353,
+    "delta_time_s": 2.010723352432251
+}

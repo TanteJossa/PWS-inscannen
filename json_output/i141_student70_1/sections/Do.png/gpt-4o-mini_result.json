@@ -1,0 +1,29 @@
+{
+    "google_quiestion_number": "Do",
+    "question_number": 8,
+    "raw_text": "Het is een exotherm proces, omdat de energie die er vrijkomt er uitkomt in warmte en dat voel je.\n\nHet is een endotherm proces, want je moet er energie in stoppen om het proces op gang te laten lopen. En er is energie nodig om de energie te verbranden.\n\nG2H6S + 4O2 \u2192 8CO2 + 8H2O + 5\n2C2H6 + 3O2 \u2192 8CO2 + 16H2O + 25\n\nDoor een katalysator te gebruiken, heb je...",
+    "correctly_spelled_text": "Het is een exotherm proces, omdat de energie die er vrijkomt er uitkomt in warmte en dat voel je.\n\nHet is een endotherm proces, want je moet er energie in stoppen om het proces op gang te laten lopen. En er is energie nodig om de energie te verbranden.\n\nG2H6S + 4O2 \u2192 8CO2 + 8H2O + 5\n2C2H6 + 3O2 \u2192 8CO2 + 16H2O + 25\n\nDoor een katalysator te gebruiken, heb je...",
+    "spelling_corrections": [
+        {
+            "original": "exotherm",
+            "changes": "exotherm"
+        },
+        {
+            "original": "endotherm",
+            "changes": "endotherm"
+        },
+        {
+            "original": "G2H6S",
+            "changes": "C2H6S"
+        },
+        {
+            "original": "C2H6",
+            "changes": "C2H6"
+        }
+    ],
+    "tokens_used": 14756,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727735923,
+    "delta_time_s": 7.443889141082764
+}

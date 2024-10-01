@@ -1,0 +1,21 @@
+{
+    "google_quiestion_number": "ale",
+    "question_number": 1,
+    "raw_text": "er zijn even veel atomen als links van de pijl\nals en rechts van de pijl zijn.",
+    "correctly_spelled_text": "er zijn evenveel atomen als links van de pijl\nals er rechts van de pijl zijn.",
+    "spelling_corrections": [
+        {
+            "original": "even veel",
+            "changes": "evenveel"
+        },
+        {
+            "original": "en",
+            "changes": "er"
+        }
+    ],
+    "tokens_used": 14506,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727738925,
+    "delta_time_s": 2.261997938156128
+}

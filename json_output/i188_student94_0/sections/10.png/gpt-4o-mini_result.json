@@ -1,0 +1,21 @@
+{
+    "google_quiestion_number": "10",
+    "question_number": 1,
+    "raw_text": "De verst(h)anding van zwaa(i)gheid is",
+    "correctly_spelled_text": "De verstand van zwaaigheid is",
+    "spelling_corrections": [
+        {
+            "original": "verst(h)anding",
+            "changes": "verstand"
+        },
+        {
+            "original": "zwaa(i)gheid",
+            "changes": "zwaaigheid"
+        }
+    ],
+    "tokens_used": 14494,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727737375,
+    "delta_time_s": 2.396972179412842
+}

@@ -1,0 +1,17 @@
+{
+    "google_quiestion_number": "10",
+    "question_number": 10,
+    "raw_text": "Det wordt lastig, omdat er ook stoffen van buiten het open veld in kunnen.",
+    "correctly_spelled_text": "Het wordt lastig, omdat er ook stoffen van buiten het open veld in kunnen.",
+    "spelling_corrections": [
+        {
+            "original": "Det",
+            "changes": "Het"
+        }
+    ],
+    "tokens_used": 14484,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727739865,
+    "delta_time_s": 2.357182741165161
+}

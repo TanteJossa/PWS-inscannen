@@ -1,0 +1,45 @@
+{
+    "google_quiestion_number": "21Nb8",
+    "question_number": 8,
+    "raw_text": "Het opstellen kristaliseren de plaats, in de natuurkunde is exotherm. je hoeft namelijk maar een haar snel te plakken. Activatie energie behouden. En daarna komt er geen energie vrij om de reactie zelf verder te laten verlopen. Er komt dus energie uit de reactie exotherm.\n\nexotherm, je hoeft de benzine 1x aan te steken en dan komt er genoeg Energie uit om verder te verbranden.\n\nC3H8 + 5O2 \u2194 3CO2 + 4H2O\n\nC7H16 + O2 \u2192 C7H16 + 5O2\n\neen katalysator is een stof die in een reactie wel wordt gebruikt maar niet wordt verbruikt. De katalysator zorgt ervoor dat de reactie sneller verloopt.",
+    "correctly_spelled_text": "Het opstellen kristaliseren de plaats, in de natuurkunde is exotherm. Je hoeft namelijk maar een haar snel te plakken. Activatie-energie behouden. En daarna komt er geen energie vrij om de reactie zelf verder te laten verlopen. Er komt dus energie uit de reactie exotherm.\n\nExotherm, je hoeft de benzine 1x aan te steken en dan komt er genoeg energie uit om verder te verbranden.\n\nC3H8 + 5O2 \u2194 3CO2 + 4H2O\n\nC7H16 + O2 \u2192 C7H16 + 5O2\n\neen katalysator is een stof die in een reactie wel wordt gebruikt maar niet wordt verbruikt. De katalysator zorgt ervoor dat de reactie sneller verloopt.",
+    "spelling_corrections": [
+        {
+            "original": "je",
+            "changes": "Je"
+        },
+        {
+            "original": "Activatie energie",
+            "changes": "Activatie-energie"
+        },
+        {
+            "original": "Energie",
+            "changes": "energie"
+        },
+        {
+            "original": "exotherm, je",
+            "changes": "Exotherm, je"
+        },
+        {
+            "original": "verbranden.",
+            "changes": "verbranden.\n"
+        },
+        {
+            "original": "een",
+            "changes": "een"
+        },
+        {
+            "original": "verbruikt. De",
+            "changes": "verbruikt. De"
+        },
+        {
+            "original": "smeller",
+            "changes": "sneller"
+        }
+    ],
+    "tokens_used": 26211,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727740555,
+    "delta_time_s": 8.258899927139282
+}

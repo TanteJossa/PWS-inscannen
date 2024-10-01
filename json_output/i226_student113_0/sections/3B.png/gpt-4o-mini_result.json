@@ -1,0 +1,17 @@
+{
+    "google_quiestion_number": "3B",
+    "question_number": 3,
+    "raw_text": "3/4. Met het baisende deeltjesmodel kan je dit.",
+    "correctly_spelled_text": "3/4. Met het baserende deeltjesmodel kan je dit.",
+    "spelling_corrections": [
+        {
+            "original": "baisende",
+            "changes": "baserende"
+        }
+    ],
+    "tokens_used": 14486,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727738361,
+    "delta_time_s": 1.9627461433410645
+}

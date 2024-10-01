@@ -1,0 +1,21 @@
+{
+    "google_quiestion_number": "g",
+    "question_number": 1,
+    "raw_text": "g er zijn evenveel atomen aan de linkerzijde van de reactievergelijking als het aantal atomen aan de rechterzijde. Dus er kan geen massa verloren gaan en er kan geen massa bij komen.",
+    "correctly_spelled_text": "Er zijn evenveel atomen aan de linkerzijde van de reactievergelijking als het aantal atomen aan de rechterzijde. Dus er kan geen massa verloren gaan en er kan geen massa bij komen.",
+    "spelling_corrections": [
+        {
+            "original": "g er",
+            "changes": "Er"
+        },
+        {
+            "original": "reactievergelijking",
+            "changes": "reactievergelijking"
+        }
+    ],
+    "tokens_used": 14554,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727738315,
+    "delta_time_s": 2.921977996826172
+}

@@ -1,0 +1,25 @@
+{
+    "google_quiestion_number": "13",
+    "question_number": 13,
+    "raw_text": "Het uiteindelijke kristallisatieproces in de henwarmte is een exotherm proces, omdat er minder energie in gaat dan dat er vrijkomt.",
+    "correctly_spelled_text": "Het uiteindelijke kristallisatieproces in de henwarmte is een exotherm proces, omdat er minder energie in gaat dan dat er vrijkomt.",
+    "spelling_corrections": [
+        {
+            "original": "uitledende",
+            "changes": "uiteindelijke"
+        },
+        {
+            "original": "exotherm",
+            "changes": "exotherm"
+        },
+        {
+            "original": "procesgondt",
+            "changes": "proces, omdat"
+        }
+    ],
+    "tokens_used": 14547,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727737485,
+    "delta_time_s": 4.002451658248901
+}

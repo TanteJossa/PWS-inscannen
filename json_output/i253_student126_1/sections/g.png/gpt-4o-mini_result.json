@@ -1,0 +1,29 @@
+{
+    "google_quiestion_number": "g",
+    "question_number": 9,
+    "raw_text": "Er zijn d er een veel moleculen aan de linkerkant ab de rechterkant.\nMoleculen kunnen ook niet van Massa veranderen dus blijft de massa het zelfde.\n10 Het is moeilijk, want de meeste gassen ontsnappen zoals CO2, doordat het open is.\n11 66-13= 47 gram",
+    "correctly_spelled_text": "Er zijn er een veel moleculen aan de linkerkant en de rechterkant.\nMoleculen kunnen ook niet van massa veranderen, dus blijft de massa het zelfde.\n10 Het is moeilijk, want de meeste gassen ontsnappen zoals CO2, doordat het open is.\n11 66-13= 47 gram",
+    "spelling_corrections": [
+        {
+            "original": "d er",
+            "changes": "er"
+        },
+        {
+            "original": "ab",
+            "changes": "en"
+        },
+        {
+            "original": "Massa",
+            "changes": "massa"
+        },
+        {
+            "original": "dus blijft de massa het zelfde.",
+            "changes": "dus blijft de massa hetzelfde."
+        }
+    ],
+    "tokens_used": 14633,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727739086,
+    "delta_time_s": 4.306238651275635
+}

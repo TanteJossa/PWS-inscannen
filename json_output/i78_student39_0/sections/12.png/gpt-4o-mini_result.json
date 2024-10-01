@@ -1,0 +1,49 @@
+{
+    "google_quiestion_number": "12",
+    "question_number": 72,
+    "raw_text": "\nE chem\n\ngestuurde\ntoestand\n\nI act\n\n\u0394E < 0\nresulterend\nproduct\n\nb\nbeginstof\n\nx",
+    "correctly_spelled_text": "\nE chem\n\ngestuurde\ntoestand\n\nI act\n\n\u0394E < 0\nresulterend\nproduct\n\nb\nbeginstof\n\nx",
+    "spelling_corrections": [
+        {
+            "original": "gestuurde",
+            "changes": "gestuurde"
+        },
+        {
+            "original": "toestand",
+            "changes": "toestand"
+        },
+        {
+            "original": "I act",
+            "changes": "I act"
+        },
+        {
+            "original": "\u0394E < 0",
+            "changes": "\u0394E < 0"
+        },
+        {
+            "original": "resulterend",
+            "changes": "resulterend"
+        },
+        {
+            "original": "product",
+            "changes": "product"
+        },
+        {
+            "original": "b",
+            "changes": "b"
+        },
+        {
+            "original": "beginstof",
+            "changes": "beginstof"
+        },
+        {
+            "original": "x",
+            "changes": "x"
+        }
+    ],
+    "tokens_used": 25952,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727740430,
+    "delta_time_s": 6.2092437744140625
+}

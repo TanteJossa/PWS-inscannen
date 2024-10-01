@@ -1,0 +1,25 @@
+{
+    "google_quiestion_number": "8",
+    "question_number": 8,
+    "raw_text": "8 Doordat het is gefragmenteerd is het candacte openblite jrieter hierdoor kunnen de moleculen gemakkelijker tegen elkaar aan binden en zo de vreselijke dingen die dit met zich meebrengt te verminderen.",
+    "correctly_spelled_text": "8 Doordat het is gefragmenteerd is het candacte openblite jrieter hierdoor kunnen de moleculen gemakkelijker tegen elkaar aan binden en zo de vreselijke dingen die dit met zich meebrengt te verminderen.",
+    "spelling_corrections": [
+        {
+            "original": "candacte",
+            "changes": "candacte -> conductieve"
+        },
+        {
+            "original": "openblite",
+            "changes": "openblite -> openblijf"
+        },
+        {
+            "original": "jrieter",
+            "changes": "jrieter -> eerder"
+        }
+    ],
+    "tokens_used": 14587,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727735174,
+    "delta_time_s": 3.1101233959198
+}

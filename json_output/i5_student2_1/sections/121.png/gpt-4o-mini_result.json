@@ -1,0 +1,17 @@
+{
+    "google_quiestion_number": "121",
+    "question_number": 2,
+    "raw_text": "hele pinda's  \nvermalen  \ngemalen pinda's  \ndestilleren  \nopgelost vet met stijfjes pinda  \neryteren  \nfilteren  \nstijfjes pinda  \nopgelost vet  \nve6",
+    "correctly_spelled_text": "hele pinda's  \nvermalen  \ngemalen pinda's  \ndestilleren  \nopgelost vet met stijfjes pinda  \neryteren  \nfilteren  \nstijfjes pinda  \nopgelost vet  \nve6",
+    "spelling_corrections": [
+        {
+            "original": "eryteren",
+            "changes": "erthareren"
+        }
+    ],
+    "tokens_used": 25922,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727739937,
+    "delta_time_s": 3.6615476608276367
+}

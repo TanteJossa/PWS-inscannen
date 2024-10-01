@@ -1,0 +1,21 @@
+{
+    "google_quiestion_number": "1",
+    "question_number": 1,
+    "raw_text": "de bibliotheek moet een zate melle van de daltensditeit zijn.\ngeschreven",
+    "correctly_spelled_text": "de bibliotheek moet een zate melle van de daltonditeit zijn.\ngeschreven",
+    "spelling_corrections": [
+        {
+            "original": "zate",
+            "changes": "zate -> zate"
+        },
+        {
+            "original": "daltensditeit",
+            "changes": "daltensditeit -> daltonditeit"
+        }
+    ],
+    "tokens_used": 14521,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727736717,
+    "delta_time_s": 4.254703760147095
+}

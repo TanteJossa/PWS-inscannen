@@ -1,0 +1,17 @@
+{
+    "google_quiestion_number": "NOT_VALID_QUESTION_ID",
+    "question_number": 9,
+    "raw_text": "extraheer, omdat er energie verliest.",
+    "correctly_spelled_text": "extraheer, omdat er energie verliest.",
+    "spelling_corrections": [
+        {
+            "original": "extraheer, omdat er energie verwijdert.",
+            "changes": "verliest"
+        }
+    ],
+    "tokens_used": 14478,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727739452,
+    "delta_time_s": 1.9943923950195312
+}

@@ -1,0 +1,49 @@
+{
+    "google_quiestion_number": "0ne2",
+    "question_number": 9,
+    "raw_text": "Zuurstof binding en cloridion kan he prijs worden verswikt. Het buitenste-deeltjessmodel zegt niet de mogelijkheden om de bindals sterker tegen elkaar aan te binden en effectiever, wat kan leiden to een effectieve binding.\nIn ciele sectie is er spaken van de wet",
+    "correctly_spelled_text": "Zuurstofbinding en chloride kan het prijs worden verswikt. Het buitenste-deeltjessmodel zegt niet de mogelijkheden om de binding sterker tegen elkaar aan te binden en effectiever, wat kan leiden tot een effectieve binding.\nIn deze sectie is er sprake van de wet",
+    "spelling_corrections": [
+        {
+            "original": "Zuurstof binding",
+            "changes": "Zuurstofbinding"
+        },
+        {
+            "original": "cloridion",
+            "changes": "chloride"
+        },
+        {
+            "original": "he prijs",
+            "changes": "het prijs"
+        },
+        {
+            "original": "deeltjessmodel",
+            "changes": "deeltjessmodel"
+        },
+        {
+            "original": "bindals",
+            "changes": "binding"
+        },
+        {
+            "original": "to",
+            "changes": "tot"
+        },
+        {
+            "original": "ciele",
+            "changes": "deze"
+        },
+        {
+            "original": "sectie",
+            "changes": "sectie"
+        },
+        {
+            "original": "spaken",
+            "changes": "sprake"
+        }
+    ],
+    "tokens_used": 14669,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727736742,
+    "delta_time_s": 5.266414165496826
+}

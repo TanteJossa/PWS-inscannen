@@ -1,0 +1,17 @@
+{
+    "google_quiestion_number": "NOT_VALID_QUESTION_ID",
+    "question_number": 1,
+    "raw_text": "1  chemische energie -> warmte energie  \n2  dit is een endotherm proces  \n3  de verbinding van zuiverheid benzine is exotherm  \n4  ",
+    "correctly_spelled_text": "1  chemische energie -> warmte-energie  \n2  dit is een endotherm proces  \n3  de verbinding van zuiverheid benzine is exotherm  \n4  ",
+    "spelling_corrections": [
+        {
+            "original": "warmte energie",
+            "changes": "warmte-energie"
+        }
+    ],
+    "tokens_used": 14544,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727735606,
+    "delta_time_s": 2.492668390274048
+}

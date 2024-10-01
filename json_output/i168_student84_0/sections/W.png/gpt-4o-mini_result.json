@@ -1,0 +1,21 @@
+{
+    "google_quiestion_number": "W",
+    "question_number": 7,
+    "raw_text": "Chimiek hezy = waarnte.",
+    "correctly_spelled_text": "Chemie is = waarnte.",
+    "spelling_corrections": [
+        {
+            "original": "Chimiek",
+            "changes": "Chemie"
+        },
+        {
+            "original": "hezy",
+            "changes": "is"
+        }
+    ],
+    "tokens_used": 14482,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727736713,
+    "delta_time_s": 2.1920883655548096
+}

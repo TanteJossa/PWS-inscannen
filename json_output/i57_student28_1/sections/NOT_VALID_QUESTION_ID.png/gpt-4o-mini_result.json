@@ -1,0 +1,17 @@
+{
+    "google_quiestion_number": "NOT_VALID_QUESTION_ID",
+    "question_number": 6,
+    "raw_text": "C\u2082H\u2082 + CO\u2082(g) \u2192 2CaO(s) + CO(g) + H\u2082O(g)\n65g \u2192 2CaO + 13g + 5g\n65g \u2192 2CaO + 18g\n65 - 18 = 47g\nEr is 27 gram koper(II)oxide ontstaan.",
+    "correctly_spelled_text": "C\u2082H\u2082 + CO\u2082(g) \u2192 2CaO(s) + CO(g) + H\u2082O(g)\n65g \u2192 2CaO + 13g + 5g\n65g \u2192 2CaO + 18g\n65 - 18 = 47g\nEr is 27 gram koper(II)oxide ontstaan.",
+    "spelling_corrections": [
+        {
+            "original": "Er is 27 gram koper(II)oxide ontstaan.",
+            "changes": "Er is 27 gram koper(II)oxide ontstaan."
+        }
+    ],
+    "tokens_used": 14625,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727739926,
+    "delta_time_s": 5.109249830245972
+}

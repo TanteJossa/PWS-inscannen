@@ -1,0 +1,33 @@
+{
+    "google_quiestion_number": "7N2.3.",
+    "question_number": 1,
+    "raw_text": "hele pindar\nverscheiden\n\nStukje Pindar\nextraheren\n\ndestilleren\n\nvermalen\nfilteren\n\nalcohol\n\nalcohol\n",
+    "correctly_spelled_text": "hele pindar\nverscheiden\n\nStukje Pindar\nextraheren\n\ndestilleren\n\nvermalen\nfilteren\n\nalcohol\n\nalcohol\n",
+    "spelling_corrections": [
+        {
+            "original": "pindar",
+            "changes": "pinda"
+        },
+        {
+            "original": "Stukje Pindar",
+            "changes": "Stukje pinda"
+        },
+        {
+            "original": "vermalen",
+            "changes": "vermalen"
+        },
+        {
+            "original": "filteren",
+            "changes": "filteren"
+        },
+        {
+            "original": "alcohol",
+            "changes": "alcohol"
+        }
+    ],
+    "tokens_used": 14588,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727735834,
+    "delta_time_s": 5.2813239097595215
+}

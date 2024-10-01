@@ -1,0 +1,17 @@
+{
+    "google_quiestion_number": "5",
+    "question_number": 5,
+    "raw_text": "de reactiewoord is de waarne die vrij komt bij en reactie",
+    "correctly_spelled_text": "de reactiewoord is de waarne die vrij komt bij een reactie",
+    "spelling_corrections": [
+        {
+            "original": "waarne",
+            "changes": "waarne -> waarne"
+        }
+    ],
+    "tokens_used": 14487,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727739805,
+    "delta_time_s": 1.8310160636901855
+}

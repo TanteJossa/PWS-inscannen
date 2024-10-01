@@ -1,0 +1,21 @@
+{
+    "google_quiestion_number": "D",
+    "question_number": 1,
+    "raw_text": "1) Dat is een exotherme reactie. Er wordt chemische energie ingezet voor een verbranding, welke bewegingsenergie en warmte voor b.v. auto's.\n\n2) C\u2083H\u2081\u2088 + S \u2192 CH\u2084 2 later op toets",
+    "correctly_spelled_text": "1) Dat is een exotherme reactie. Er wordt chemische energie ingezet voor een verbranding, welke bewegingsenergie en warmte voor b.v. auto's.\n\n2) C\u2083H\u2081\u2088 + S \u2192 CH\u2084 2 later op toets",
+    "spelling_corrections": [
+        {
+            "original": "b.v.",
+            "changes": "b.v."
+        },
+        {
+            "original": "later op toets",
+            "changes": "later op toets"
+        }
+    ],
+    "tokens_used": 14581,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727739684,
+    "delta_time_s": 4.0851757526397705
+}

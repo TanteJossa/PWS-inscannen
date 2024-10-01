@@ -1,0 +1,21 @@
+{
+    "google_quiestion_number": "Z",
+    "question_number": 7,
+    "raw_text": "chem.ise energie. \u2192 wanne energie\nna opdzacht 11",
+    "correctly_spelled_text": "chem.ise energie. \u2192 welke energie\nna opzicht 11",
+    "spelling_corrections": [
+        {
+            "original": "wanne",
+            "changes": "welke"
+        },
+        {
+            "original": "opdzacht",
+            "changes": "opzicht"
+        }
+    ],
+    "tokens_used": 14497,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727740927,
+    "delta_time_s": 2.1347053050994873
+}

@@ -1,0 +1,17 @@
+{
+    "google_quiestion_number": "5.6.7.8005To",
+    "question_number": 6,
+    "raw_text": "het panda\nvermelden\ngeef een panda\nalcohol\nopgelost niet\nopgelost panda\nstap 3 panda\n\nwet alcohol\nalcohol wet",
+    "correctly_spelled_text": "het panda\nvermelden\ngive een panda\nalcohol\nopgelost niet\nopgelost panda\nstap 3 panda\n\nwet alcohol\nalcohol wet",
+    "spelling_corrections": [
+        {
+            "original": "geef een panda",
+            "changes": "give een panda"
+        }
+    ],
+    "tokens_used": 14533,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727734957,
+    "delta_time_s": 3.336733102798462
+}

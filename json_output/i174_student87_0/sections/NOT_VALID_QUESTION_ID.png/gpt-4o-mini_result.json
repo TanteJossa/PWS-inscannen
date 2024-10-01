@@ -1,0 +1,29 @@
+{
+    "google_quiestion_number": "NOT_VALID_QUESTION_ID",
+    "question_number": 2,
+    "raw_text": "2\n2C7H16 + 11O2 \u2192 7CO2 + 8H2O + S2\n\n3 De katalysator zorgt ervoor dat de reactie sneller verloopt door als het de juiste stof is de activeringsenergie te verlagen waardoor de reactie sneller kan reageren en verlopen.",
+    "correctly_spelled_text": "2\n2C7H16 + 11O2 \u2192 7CO2 + 8H2O + S2\n\n3 De katalysator zorgt ervoor dat de reactie sneller verloopt door als het de juiste stof is de activeringsenergie te verlagen waardoor de reactie sneller kan reageren en verlopen.",
+    "spelling_corrections": [
+        {
+            "original": "katalysator",
+            "changes": "katalysator"
+        },
+        {
+            "original": "betrokken",
+            "changes": "betrokken"
+        },
+        {
+            "original": "activerings",
+            "changes": "activerings"
+        },
+        {
+            "original": "sneller",
+            "changes": "sneller"
+        }
+    ],
+    "tokens_used": 14620,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727736991,
+    "delta_time_s": 4.637692213058472
+}

@@ -1,0 +1,33 @@
+{
+    "google_quiestion_number": "b",
+    "question_number": 1,
+    "raw_text": "borden  gelyk aan  b2o  kay, omdat de  deeltjes  beter  tegen  elkaar  kunnen  botsen.  Maar  zorgt  voor  een  betere  effectieve  botsing.  Die  zorgt  voor  een",
+    "correctly_spelled_text": "borden gelijk aan b2o kay, omdat de deeltjes beter tegen elkaar kunnen botsen. Maar zorgt voor een betere effectieve botsing. Die zorgt voor een",
+    "spelling_corrections": [
+        {
+            "original": "gelyk",
+            "changes": "gelijk"
+        },
+        {
+            "original": "de  deeltjes",
+            "changes": "de deeltjes"
+        },
+        {
+            "original": "beter  tegen",
+            "changes": "beter tegen"
+        },
+        {
+            "original": "botsen.  Maar",
+            "changes": "botsen. Maar"
+        },
+        {
+            "original": "betere  effectieve",
+            "changes": "betere effectieve"
+        }
+    ],
+    "tokens_used": 14599,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727738797,
+    "delta_time_s": 3.924675941467285
+}

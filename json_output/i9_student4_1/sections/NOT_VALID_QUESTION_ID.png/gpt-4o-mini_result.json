@@ -1,0 +1,21 @@
+{
+    "google_quiestion_number": "NOT_VALID_QUESTION_ID",
+    "question_number": 1,
+    "raw_text": "Dat zie je aan dat er aan de inverwant van de py evenveel atomen zijn als aan de rechternant!",
+    "correctly_spelled_text": "Dat zie je aan dat er aan de invariant van de py evenveel atomen zijn als aan de rechternant!",
+    "spelling_corrections": [
+        {
+            "original": "inverwant",
+            "changes": "invariant"
+        },
+        {
+            "original": "rechternant",
+            "changes": "rechternant"
+        }
+    ],
+    "tokens_used": 14519,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727740935,
+    "delta_time_s": 2.058530807495117
+}

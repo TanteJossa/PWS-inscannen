@@ -1,0 +1,37 @@
+{
+    "google_quiestion_number": "3",
+    "question_number": 3,
+    "raw_text": "3 Doordat de stulijes pinda nu 'bel klein zijn kunnen ze heel snel beweg waardoor er meer hans is dat de deelt jes elkaar ralen.",
+    "correctly_spelled_text": "3 Doordat de stuifjes pinda nu klein zijn kunnen ze heel snel bewegen waardoor er meer kans is dat de deeltjes elkaar raken.",
+    "spelling_corrections": [
+        {
+            "original": "stulijes",
+            "changes": "stuifjes"
+        },
+        {
+            "original": "'bel",
+            "changes": "klein"
+        },
+        {
+            "original": "beweg",
+            "changes": "bewegen"
+        },
+        {
+            "original": "hans",
+            "changes": "kans"
+        },
+        {
+            "original": "deelt jes",
+            "changes": "deeltjes"
+        },
+        {
+            "original": "ralen",
+            "changes": "raken"
+        }
+    ],
+    "tokens_used": 14571,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727737581,
+    "delta_time_s": 4.366985559463501
+}

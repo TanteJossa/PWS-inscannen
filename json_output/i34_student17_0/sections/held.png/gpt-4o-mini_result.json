@@ -1,0 +1,17 @@
+{
+    "google_quiestion_number": "held",
+    "question_number": 1,
+    "raw_text": "helpmu 3",
+    "correctly_spelled_text": "helpmu 3",
+    "spelling_corrections": [
+        {
+            "original": "helpmu",
+            "changes": "helpmu"
+        }
+    ],
+    "tokens_used": 14468,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727739419,
+    "delta_time_s": 1.8932409286499023
+}

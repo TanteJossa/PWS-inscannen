@@ -1,0 +1,21 @@
+{
+    "google_quiestion_number": "2",
+    "question_number": 2,
+    "raw_text": "2. Fen dert ze vales een etfectieve botsing.\nWierzelijk en blijk dat ze later kan worden.",
+    "correctly_spelled_text": "2. Een derd ze vales een effectieve botsing.\nWerkelijk en blijkt dat ze later kan worden.",
+    "spelling_corrections": [
+        {
+            "original": "Fen dert ze vales een etfectieve botsing.",
+            "changes": "Een derd ze vales een effectieve botsing."
+        },
+        {
+            "original": "Wierzelijk en blijk dat ze later kan worden.",
+            "changes": "Werkelijk en blijkt dat ze later kan worden."
+        }
+    ],
+    "tokens_used": 14554,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727737871,
+    "delta_time_s": 3.35048246383667
+}

@@ -1,0 +1,53 @@
+{
+    "google_quiestion_number": "subje",
+    "question_number": 1,
+    "raw_text": "met punten 3\nstap 1: \nvermelden\ngevonden punten\nstap 2: \nextractie\nopgesteld met juiste punten\nstap 3: \ngeven\nniet vergeten!\nstap 4: \ndistributie\ndelen\n\nelektrol\nrecirculatie",
+    "correctly_spelled_text": "met punten 3\nstap 1: \nvermelden\ngevonden punten\nstap 2: \nextractie\nopgesteld met juiste punten\nstap 3: \ngeven\nniet vergeten!\nstap 4: \ndistributie\ndelen\n\nelektrol\nrecirculatie",
+    "spelling_corrections": [
+        {
+            "original": "vermelden",
+            "changes": ""
+        },
+        {
+            "original": "gevonden punten",
+            "changes": ""
+        },
+        {
+            "original": "extractie",
+            "changes": ""
+        },
+        {
+            "original": "opgesteld met juiste punten",
+            "changes": ""
+        },
+        {
+            "original": "geven",
+            "changes": ""
+        },
+        {
+            "original": "niet vergeten!",
+            "changes": ""
+        },
+        {
+            "original": "distributie",
+            "changes": ""
+        },
+        {
+            "original": "delen",
+            "changes": ""
+        },
+        {
+            "original": "elektrol",
+            "changes": ""
+        },
+        {
+            "original": "recirculatie",
+            "changes": ""
+        }
+    ],
+    "tokens_used": 14683,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727739442,
+    "delta_time_s": 2.961022138595581
+}

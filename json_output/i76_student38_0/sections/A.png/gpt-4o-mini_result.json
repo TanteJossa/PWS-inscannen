@@ -1,0 +1,21 @@
+{
+    "google_quiestion_number": "A",
+    "question_number": 3,
+    "raw_text": "AIs je de pinda's fijnstampt is de verhoudingsgraad",
+    "correctly_spelled_text": "Als je de pinda's fijnstampt is de verhoudingsgraad",
+    "spelling_corrections": [
+        {
+            "original": "AIs",
+            "changes": "Als"
+        },
+        {
+            "original": "verhoudingsgraad",
+            "changes": "verhoudingsgraad"
+        }
+    ],
+    "tokens_used": 14506,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727740389,
+    "delta_time_s": 2.2329325675964355
+}

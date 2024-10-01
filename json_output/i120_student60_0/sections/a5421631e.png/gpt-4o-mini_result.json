@@ -1,0 +1,17 @@
+{
+    "google_quiestion_number": "a5421631e",
+    "question_number": 1,
+    "raw_text": "1. exotherm, want er komt warmte vrij en je ziet licht\n2. 2C7H16(S) + 24O2(g) \u2192 14CO2(g) + 16H2O(l) + 2SO2(g)\n3. De katalysator wordt gebruikt in de reactie, maar komt uit de reactie hetzelfde uit\n4. E\n   (j)\n   geactiveerd\n   begin\n   E=Q\n   \n   reactieWarmte\n   verloop reactie\n5. De reactiewarmte is E=0, want door glucose te verbranden worden we warm en kunnen mee bewegen dus de energie gaat eruit\n   alcohol\n   opgestart",
+    "correctly_spelled_text": "1. exotherm, want er komt warmte vrij en je ziet licht\n2. 2C7H16(S) + 24O2(g) \u2192 14CO2(g) + 16H2O(l) + 2SO2(g)\n3. De katalysator wordt gebruikt in de reactie, maar komt uit de reactie hetzelfde uit\n4. E\n   (j)\n   geactiveerd\n   begin\n   E=Q\n   \n   reactieWarmte\n   verloop reactie\n5. De reactiewarmte is E=0, want door glucose te verbranden worden we warm en kunnen bewegen dus de energie gaat eruit\n   alcohol\n   opgestart",
+    "spelling_corrections": [
+        {
+            "original": "verbranden worden we warm en kunnen mee bewegen dus de energie gaat eruit",
+            "changes": "verbranden worden we warm en kunnen bewegen dus de energie gaat eruit"
+        }
+    ],
+    "tokens_used": 26108,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727735473,
+    "delta_time_s": 7.854643106460571
+}

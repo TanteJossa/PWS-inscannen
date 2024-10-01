@@ -1,0 +1,17 @@
+{
+    "google_quiestion_number": "NOT_VALID_QUESTION_ID",
+    "question_number": 12,
+    "raw_text": "geactiveerde toestand\nbeginstof\nEnd\nreactieproduct\nAE\nverloop reactie",
+    "correctly_spelled_text": "geactiveerde toestand\nbeginstof\nEind\nreactieproduct\nAE\nverloop reactie",
+    "spelling_corrections": [
+        {
+            "original": "End",
+            "changes": "Eind"
+        }
+    ],
+    "tokens_used": 14494,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727735751,
+    "delta_time_s": 2.535724401473999
+}

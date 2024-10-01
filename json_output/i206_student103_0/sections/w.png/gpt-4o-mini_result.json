@@ -1,0 +1,21 @@
+{
+    "google_quiestion_number": "w",
+    "question_number": 1,
+    "raw_text": "uitome, han gewichten. links en rechts, is even",
+    "correctly_spelled_text": "uitkomst, han gewichten. links en rechts, is even",
+    "spelling_corrections": [
+        {
+            "original": "uitome",
+            "changes": "uitkomst"
+        },
+        {
+            "original": "han",
+            "changes": "en"
+        }
+    ],
+    "tokens_used": 14490,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727737889,
+    "delta_time_s": 1.8247489929199219
+}

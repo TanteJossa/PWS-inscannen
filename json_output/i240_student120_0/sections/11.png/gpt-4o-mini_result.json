@@ -1,0 +1,33 @@
+{
+    "google_quiestion_number": "11",
+    "question_number": 1,
+    "raw_text": "1. malachiet = 65 g\nCO2 = 13 g , H2O = 5 g\n65 - 13 - 5 = 47 g\ndus: 47 gram koperoxide.",
+    "correctly_spelled_text": "1. malachiet = 65 g\nCO2 = 13 g , H2O = 5 g\n65 - 13 - 5 = 47 g\ndus: 47 gram koperoxide.",
+    "spelling_corrections": [
+        {
+            "original": "malachiet",
+            "changes": "malachiet"
+        },
+        {
+            "original": "CO2",
+            "changes": "CO2"
+        },
+        {
+            "original": "H2O",
+            "changes": "H2O"
+        },
+        {
+            "original": "gram",
+            "changes": "gram"
+        },
+        {
+            "original": "koperoxide",
+            "changes": "koperoxide"
+        }
+    ],
+    "tokens_used": 14588,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727738706,
+    "delta_time_s": 3.098403215408325
+}

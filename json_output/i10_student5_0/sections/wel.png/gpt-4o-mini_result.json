@@ -1,0 +1,21 @@
+{
+    "google_quiestion_number": "wel",
+    "question_number": 1,
+    "raw_text": "deze wel goed.\nbenzine is een \nontvlammend proces\nwant er wordt energie aan toegevoerd\naan die benzine zodat het verbrand\nkan worden.",
+    "correctly_spelled_text": "deze wel goed.\nbenzine is een \nontvlammend proces\nwant er wordt energie aan toegevoerd\naan die benzine zodat het verbrand\nkan worden.",
+    "spelling_corrections": [
+        {
+            "original": "ontvlammend",
+            "changes": "ontvlammend"
+        },
+        {
+            "original": "verbrand",
+            "changes": "verbrand"
+        }
+    ],
+    "tokens_used": 14544,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727735073,
+    "delta_time_s": 3.7396459579467773
+}

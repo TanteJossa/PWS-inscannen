@@ -1,0 +1,21 @@
+{
+    "google_quiestion_number": "J",
+    "question_number": 9,
+    "raw_text": "in meer contact hebbe met het botsende deeltjes model.\nEr is een massa verloren gegaan en voor.",
+    "correctly_spelled_text": "in meer contact hebben met het botsende deeltjesmodel.\nEr is een massa verloren gegaan en voor.",
+    "spelling_corrections": [
+        {
+            "original": "hebbe",
+            "changes": "hebben"
+        },
+        {
+            "original": "deeltjes model",
+            "changes": "deeltjesmodel"
+        }
+    ],
+    "tokens_used": 14511,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727736310,
+    "delta_time_s": 2.8545050621032715
+}

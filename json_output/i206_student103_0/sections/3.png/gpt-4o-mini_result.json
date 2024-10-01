@@ -1,0 +1,21 @@
+{
+    "google_quiestion_number": "3",
+    "question_number": 1,
+    "raw_text": "van de p... les loopt\nde reactie shellers,\nwant er is meer oppe vlai om te reageren.\nDe microniveau's zijn er meer effectieve\nbotsingen. En het botsen de deeltjes model laat",
+    "correctly_spelled_text": "van de p... les loopt\nde reactie shellers,\nwant er is meer oppervlakte om te reageren.\nDe microniveau's zijn er meer effectieve\nbotsingen. En het botsen van de deeltjesmodel laat",
+    "spelling_corrections": [
+        {
+            "original": "oppe vlai",
+            "changes": "oppervlakte"
+        },
+        {
+            "original": "de deeltjes model",
+            "changes": "van de deeltjesmodel"
+        }
+    ],
+    "tokens_used": 14566,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727737874,
+    "delta_time_s": 2.938854694366455
+}

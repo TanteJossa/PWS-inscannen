@@ -1,0 +1,202 @@
+{
+  "analyzeResult": {
+    "modelVersion": "2022-04-30",
+    "readResults": [
+      {
+        "angle": 0,
+        "height": 845,
+        "lines": [
+          {
+            "appearance": {
+              "style": {
+                "confidence": 1,
+                "name": "handwriting"
+              }
+            },
+            "boundingBox": [
+              10,
+              81,
+              101,
+              80,
+              102,
+              97,
+              10,
+              99
+            ],
+            "text": "hele pindas >",
+            "words": [
+              {
+                "boundingBox": [
+                  12,
+                  82,
+                  37,
+                  81,
+                  36,
+                  98,
+                  11,
+                  100
+                ],
+                "confidence": 0.755,
+                "text": "hele"
+              },
+              {
+                "boundingBox": [
+                  41,
+                  81,
+                  85,
+                  81,
+                  86,
+                  97,
+                  41,
+                  98
+                ],
+                "confidence": 0.74,
+                "text": "pindas"
+              },
+              {
+                "boundingBox": [
+                  90,
+                  81,
+                  101,
+                  81,
+                  102,
+                  98,
+                  91,
+                  98
+                ],
+                "confidence": 0.059,
+                "text": ">"
+              }
+            ]
+          },
+          {
+            "appearance": {
+              "style": {
+                "confidence": 0.764,
+                "name": "handwriting"
+              }
+            },
+            "boundingBox": [
+              35,
+              244,
+              102,
+              239,
+              103,
+              252,
+              36,
+              258
+            ],
+            "text": "Lefe pindas",
+            "words": [
+              {
+                "boundingBox": [
+                  36,
+                  244,
+                  59,
+                  243,
+                  60,
+                  257,
+                  36,
+                  259
+                ],
+                "confidence": 0.728,
+                "text": "Lefe"
+              },
+              {
+                "boundingBox": [
+                  65,
+                  242,
+                  102,
+                  240,
+                  103,
+                  253,
+                  65,
+                  256
+                ],
+                "confidence": 0.881,
+                "text": "pindas"
+              }
+            ]
+          },
+          {
+            "appearance": {
+              "style": {
+                "confidence": 0.982,
+                "name": "handwriting"
+              }
+            },
+            "boundingBox": [
+              67,
+              256,
+              86,
+              256,
+              86,
+              277,
+              67,
+              277
+            ],
+            "text": "7",
+            "words": [
+              {
+                "boundingBox": [
+                  73,
+                  256,
+                  84,
+                  256,
+                  84,
+                  277,
+                  73,
+                  277
+                ],
+                "confidence": 0.626,
+                "text": "7"
+              }
+            ]
+          },
+          {
+            "appearance": {
+              "style": {
+                "confidence": 0.68,
+                "name": "handwriting"
+              }
+            },
+            "boundingBox": [
+              77,
+              734,
+              87,
+              734,
+              87,
+              742,
+              77,
+              741
+            ],
+            "text": "1-",
+            "words": [
+              {
+                "boundingBox": [
+                  77,
+                  734,
+                  86,
+                  734,
+                  85,
+                  742,
+                  77,
+                  741
+                ],
+                "confidence": 0.721,
+                "text": "1-"
+              }
+            ]
+          }
+        ],
+        "page": 1,
+        "unit": "pixel",
+        "width": 105
+      }
+    ],
+    "version": "3.2.0"
+  },
+  "createdDateTime": "2024-09-30T22:06:56Z",
+  "lastUpdatedDateTime": "2024-09-30T22:06:57Z",
+  "status": "succeeded"
+}

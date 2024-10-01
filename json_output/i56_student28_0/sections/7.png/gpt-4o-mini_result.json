@@ -1,0 +1,21 @@
+{
+    "google_quiestion_number": "7",
+    "question_number": 1,
+    "raw_text": "hele pinda's\nvermalen\nge malen pinda's\nextraheren\noplossing uit het stijfjes pinda\nfilteren\ngefilterd\nvet\nalcohol",
+    "correctly_spelled_text": "hele pinda's\nvermalen\ngemalen pinda's\nextraheren\noplossing uit het stijfsel van pinda\nfilteren\ngefilterd\nvet\nalcohol",
+    "spelling_corrections": [
+        {
+            "original": "ge malen pinda's",
+            "changes": "gemalen pinda's"
+        },
+        {
+            "original": "oplossing uit het stijfjes pinda",
+            "changes": "oplossing uit het stijfsel van pinda"
+        }
+    ],
+    "tokens_used": 14573,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727739896,
+    "delta_time_s": 3.963358163833618
+}

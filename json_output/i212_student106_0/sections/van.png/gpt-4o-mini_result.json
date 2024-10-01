@@ -1,0 +1,17 @@
+{
+    "google_quiestion_number": "van",
+    "question_number": 1,
+    "raw_text": "gevolg van een extreme reactie",
+    "correctly_spelled_text": "gevolg van een extreme reactie",
+    "spelling_corrections": [
+        {
+            "original": "extreme_reactie",
+            "changes": "extreme reactie"
+        }
+    ],
+    "tokens_used": 25807,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727738062,
+    "delta_time_s": 2.580087900161743
+}

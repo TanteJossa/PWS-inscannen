@@ -1,0 +1,300 @@
+{
+  "analyzeResult": {
+    "modelVersion": "2022-04-30",
+    "readResults": [
+      {
+        "angle": 3.2731,
+        "height": 845,
+        "lines": [
+          {
+            "appearance": {
+              "style": {
+                "confidence": 0.911,
+                "name": "handwriting"
+              }
+            },
+            "boundingBox": [
+              76,
+              53,
+              102,
+              52,
+              102,
+              67,
+              77,
+              68
+            ],
+            "text": "17:",
+            "words": [
+              {
+                "boundingBox": [
+                  80,
+                  53,
+                  101,
+                  52,
+                  102,
+                  67,
+                  80,
+                  68
+                ],
+                "confidence": 0.667,
+                "text": "17:"
+              }
+            ]
+          },
+          {
+            "appearance": {
+              "style": {
+                "confidence": 0.856,
+                "name": "handwriting"
+              }
+            },
+            "boundingBox": [
+              85,
+              399,
+              102,
+              400,
+              103,
+              413,
+              85,
+              412
+            ],
+            "text": "13,",
+            "words": [
+              {
+                "boundingBox": [
+                  87,
+                  399,
+                  102,
+                  400,
+                  102,
+                  413,
+                  86,
+                  412
+                ],
+                "confidence": 0.433,
+                "text": "13,"
+              }
+            ]
+          },
+          {
+            "appearance": {
+              "style": {
+                "confidence": 1,
+                "name": "handwriting"
+              }
+            },
+            "boundingBox": [
+              80,
+              476,
+              100,
+              476,
+              101,
+              498,
+              80,
+              499
+            ],
+            "text": "1:",
+            "words": [
+              {
+                "boundingBox": [
+                  80,
+                  476,
+                  98,
+                  476,
+                  98,
+                  499,
+                  80,
+                  499
+                ],
+                "confidence": 0.212,
+                "text": "1:"
+              }
+            ]
+          },
+          {
+            "appearance": {
+              "style": {
+                "confidence": 0.946,
+                "name": "handwriting"
+              }
+            },
+            "boundingBox": [
+              21,
+              605,
+              96,
+              604,
+              97,
+              619,
+              21,
+              620
+            ],
+            "text": "Opgetor tico .",
+            "words": [
+              {
+                "boundingBox": [
+                  22,
+                  605,
+                  62,
+                  604,
+                  63,
+                  620,
+                  22,
+                  621
+                ],
+                "confidence": 0.222,
+                "text": "Opgetor"
+              },
+              {
+                "boundingBox": [
+                  66,
+                  604,
+                  83,
+                  604,
+                  83,
+                  620,
+                  66,
+                  620
+                ],
+                "confidence": 0.51,
+                "text": "tico"
+              },
+              {
+                "boundingBox": [
+                  86,
+                  604,
+                  96,
+                  604,
+                  97,
+                  619,
+                  87,
+                  620
+                ],
+                "confidence": 0.991,
+                "text": "."
+              }
+            ]
+          },
+          {
+            "appearance": {
+              "style": {
+                "confidence": 1,
+                "name": "handwriting"
+              }
+            },
+            "boundingBox": [
+              27,
+              625,
+              98,
+              632,
+              97,
+              647,
+              27,
+              638
+            ],
+            "text": "met 564 4109",
+            "words": [
+              {
+                "boundingBox": [
+                  28,
+                  625,
+                  54,
+                  628,
+                  54,
+                  642,
+                  28,
+                  639
+                ],
+                "confidence": 0.6,
+                "text": "met"
+              },
+              {
+                "boundingBox": [
+                  58,
+                  629,
+                  70,
+                  630,
+                  70,
+                  645,
+                  58,
+                  643
+                ],
+                "confidence": 0.412,
+                "text": "564"
+              },
+              {
+                "boundingBox": [
+                  73,
+                  630,
+                  97,
+                  632,
+                  97,
+                  648,
+                  72,
+                  645
+                ],
+                "confidence": 0.065,
+                "text": "4109"
+              }
+            ]
+          },
+          {
+            "appearance": {
+              "style": {
+                "confidence": 1,
+                "name": "handwriting"
+              }
+            },
+            "boundingBox": [
+              28,
+              646,
+              61,
+              649,
+              60,
+              661,
+              27,
+              660
+            ],
+            "text": "find a",
+            "words": [
+              {
+                "boundingBox": [
+                  27,
+                  646,
+                  49,
+                  647,
+                  48,
+                  661,
+                  27,
+                  660
+                ],
+                "confidence": 0.647,
+                "text": "find"
+              },
+              {
+                "boundingBox": [
+                  51,
+                  647,
+                  61,
+                  648,
+                  60,
+                  662,
+                  51,
+                  661
+                ],
+                "confidence": 0.762,
+                "text": "a"
+              }
+            ]
+          }
+        ],
+        "page": 1,
+        "unit": "pixel",
+        "width": 105
+      }
+    ],
+    "version": "3.2.0"
+  },
+  "createdDateTime": "2024-09-30T22:10:16Z",
+  "lastUpdatedDateTime": "2024-09-30T22:10:17Z",
+  "status": "succeeded"
+}

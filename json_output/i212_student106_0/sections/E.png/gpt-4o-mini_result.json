@@ -1,0 +1,17 @@
+{
+    "google_quiestion_number": "E",
+    "question_number": 31,
+    "raw_text": "Het is een exotherme reactie, want het is een reactie dat energie uit geeft... De temperatuur wordt boven de 50\u00b0C en dat is dus een",
+    "correctly_spelled_text": "Het is een exotherme reactie, want het is een reactie die energie uit geeft... De temperatuur wordt boven de 50\u00b0C en dat is dus een",
+    "spelling_corrections": [
+        {
+            "original": "dat",
+            "changes": "die"
+        }
+    ],
+    "tokens_used": 14516,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727738054,
+    "delta_time_s": 3.0485646724700928
+}

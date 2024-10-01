@@ -1,0 +1,17 @@
+{
+    "google_quiestion_number": "2",
+    "question_number": 7,
+    "raw_text": "(chemische energie -> warmte energie\n8. heb ik een exotherme reactie omdat er energie vrijkomt, waardoor het ook warmte verliest.",
+    "correctly_spelled_text": "(chemische energie -> warmte-energie\n8. heb ik een exotherme reactie omdat er energie vrijkomt, waardoor het ook warmte verliest.",
+    "spelling_corrections": [
+        {
+            "original": "warmte energie",
+            "changes": "warmte-energie"
+        }
+    ],
+    "tokens_used": 14520,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727738901,
+    "delta_time_s": 4.2800281047821045
+}

@@ -1,0 +1,17 @@
+{
+    "google_quiestion_number": "hele",
+    "question_number": 1,
+    "raw_text": "hele pinda's\nvermalen\ngefilteren\nstudies pinda\n\nvet\ndecilleren\nalcohol\nvet",
+    "correctly_spelled_text": "hele pinda's\nvermalen\ngefilteren\nstudies pinda\n\nvet\ndecilleren\nalcohol\nvet",
+    "spelling_corrections": [
+        {
+            "original": "decilleren",
+            "changes": "decilleren"
+        }
+    ],
+    "tokens_used": 14517,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727737588,
+    "delta_time_s": 2.745692491531372
+}

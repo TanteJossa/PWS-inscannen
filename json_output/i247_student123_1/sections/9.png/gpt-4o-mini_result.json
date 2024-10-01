@@ -1,0 +1,17 @@
+{
+    "google_quiestion_number": "9",
+    "question_number": 6,
+    "raw_text": "\n6 hoe \npindas \nvermalen \n \ngemalen \nmet \nsterkes \npindas \n \nalcohol \n \nfiltreren \n \nDestilleren \n \nVet \n \nOpgelost Vet \n \nStrukjes pindas \n",
+    "correctly_spelled_text": "\n6 hoe \npindas \nvermalen \n \ngemalen \nmet \nsterke \npindas \n \nalcohol \n \nfiltreren \n \nDestilleren \n \nVet \n \nOpgelost Vet \n \nStrukjes pindas \n",
+    "spelling_corrections": [
+        {
+            "original": "sterkes",
+            "changes": "sterke"
+        }
+    ],
+    "tokens_used": 14604,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727738859,
+    "delta_time_s": 18.868883848190308
+}

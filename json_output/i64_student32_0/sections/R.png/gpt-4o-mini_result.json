@@ -1,0 +1,21 @@
+{
+    "google_quiestion_number": "R",
+    "question_number": 1,
+    "raw_text": "reactiesnelheid. Dat dor hij daar de achievings",
+    "correctly_spelled_text": "reactiesnelheid. Dat doet hij daar de achievements",
+    "spelling_corrections": [
+        {
+            "original": "dor",
+            "changes": "doet"
+        },
+        {
+            "original": "achievings",
+            "changes": "achievements"
+        }
+    ],
+    "tokens_used": 14490,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727740041,
+    "delta_time_s": 1.8030593395233154
+}

@@ -1,0 +1,21 @@
+{
+    "google_quiestion_number": "S",
+    "question_number": 1,
+    "raw_text": "steltijd en op de juiste plek met eucaar",
+    "correctly_spelled_text": "steltijd en op de juiste plek met eucaar",
+    "spelling_corrections": [
+        {
+            "original": "steltijd",
+            "changes": "steltijd"
+        },
+        {
+            "original": "eucaar",
+            "changes": "eucaar"
+        }
+    ],
+    "tokens_used": 14494,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727740068,
+    "delta_time_s": 2.293201446533203
+}

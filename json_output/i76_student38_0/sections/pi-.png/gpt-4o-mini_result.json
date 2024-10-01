@@ -1,0 +1,21 @@
+{
+    "google_quiestion_number": "pi-",
+    "question_number": 1,
+    "raw_text": "het pinda's\nvermalen\nvermalen pinda's\ngemalen pinda's\nstanden\nextraheren\nepslosen met stukjes pinda\nfilteren\nslijpen pinda's\n\n2\n\nhet pinda's\ngemalen pinda's\nextra heren\nepslosen vet met stukjes pinda\nfilteren\nslijpen\nalcohol",
+    "correctly_spelled_text": "het pinda's\nvermalen\nvermalen pinda's\ngemalen pinda's\nstanden\nextraheren\nepslosen met stukjes pinda\nfilteren\nslijpen pinda's\n\n2\n\nhet pinda's\ngemalen pinda's\nextra heren\nepslosen vet met stukjes pinda\nfilteren\nslijpen\nalcohol",
+    "spelling_corrections": [
+        {
+            "original": "epslosen",
+            "changes": "oplossen"
+        },
+        {
+            "original": "extra heren",
+            "changes": "extra\u00ebren"
+        }
+    ],
+    "tokens_used": 14643,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727740399,
+    "delta_time_s": 4.597775936126709
+}

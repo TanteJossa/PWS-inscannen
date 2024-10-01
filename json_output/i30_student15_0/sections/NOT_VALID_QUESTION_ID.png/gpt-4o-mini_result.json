@@ -1,0 +1,21 @@
+{
+    "google_quiestion_number": "NOT_VALID_QUESTION_ID",
+    "question_number": 3,
+    "raw_text": "Schrijf punten gaat stellen in een practiek zodat de verdelingen verdeling gaan: is groter de Dijk de steller De.",
+    "correctly_spelled_text": "Schrijf punten gaat stellen in een praktijk zodat de verdelingen verdeling gaan: is groter de Dijk de steller De.",
+    "spelling_corrections": [
+        {
+            "original": "practiek",
+            "changes": "praktijk"
+        },
+        {
+            "original": "verdelingen verdeling",
+            "changes": "verdelingen gaan"
+        }
+    ],
+    "tokens_used": 14521,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727739392,
+    "delta_time_s": 3.344424247741699
+}

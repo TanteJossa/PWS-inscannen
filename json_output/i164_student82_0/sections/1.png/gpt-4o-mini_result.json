@@ -1,0 +1,25 @@
+{
+    "google_quiestion_number": "1",
+    "question_number": 1,
+    "raw_text": "het is een extraheer de PROCS waar het komt\nenige van de versameling\ner moet steeds een goede bij",
+    "correctly_spelled_text": "het is een extraheer de PROCES waar het komt\neentje van de verzameling\ner moet steeds een goede bij",
+    "spelling_corrections": [
+        {
+            "original": "extraheer",
+            "changes": "extraheer -> extraheer"
+        },
+        {
+            "original": "PROCS",
+            "changes": "PROCS -> PROCES"
+        },
+        {
+            "original": "versameling",
+            "changes": "versameling -> verzameling"
+        }
+    ],
+    "tokens_used": 14538,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727736496,
+    "delta_time_s": 2.4932875633239746
+}

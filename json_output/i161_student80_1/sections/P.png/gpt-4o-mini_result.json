@@ -1,0 +1,21 @@
+{
+    "google_quiestion_number": "P",
+    "question_number": 7,
+    "raw_text": "zie vraag 6\n\nHierdoor zijn de pindas figuren verdeeld en hebben ze dus een groter OPP waardoor er sneller modellen langs elkaar kunnen bewegen dit heet het balancerende duwtjes model.\n\nUiteindelijk da wet van behoud kan er nooit massa verloren gaan of bijkomen wanneer je het in dit geval verhit.",
+    "correctly_spelled_text": "zie vraag 6\n\nHierdoor zijn de pindas figuren verdeeld en hebben ze dus een groter OPP waardoor er sneller modellen langs elkaar kunnen bewegen dit heet het balancerende duwtjesmodel.\n\nUiteindelijk de wet van behoud kan er nooit massa verloren gaan of bijkomen wanneer je het in dit geval verhit.",
+    "spelling_corrections": [
+        {
+            "original": "duwtjes model",
+            "changes": "duwtjesmodel"
+        },
+        {
+            "original": "da wet van",
+            "changes": "de wet van"
+        }
+    ],
+    "tokens_used": 14606,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727736440,
+    "delta_time_s": 4.062943458557129
+}

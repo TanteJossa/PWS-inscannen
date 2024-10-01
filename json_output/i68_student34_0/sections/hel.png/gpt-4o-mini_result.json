@@ -1,0 +1,25 @@
+{
+    "google_quiestion_number": "hel",
+    "question_number": 1,
+    "raw_text": "hele\nvermalen\ngaren\nPinda\nEXTRA\nmet\nstukje\nSilicium\nbestemming",
+    "correctly_spelled_text": "hele\nvermalen\ngaren\npinda\nextra\nmet\nstukje\nsilicium\nbestemming",
+    "spelling_corrections": [
+        {
+            "original": "Pinda",
+            "changes": "pinda"
+        },
+        {
+            "original": "EXTRA",
+            "changes": "extra"
+        },
+        {
+            "original": "Silicium",
+            "changes": "silicium"
+        }
+    ],
+    "tokens_used": 14528,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727740090,
+    "delta_time_s": 2.7651565074920654
+}

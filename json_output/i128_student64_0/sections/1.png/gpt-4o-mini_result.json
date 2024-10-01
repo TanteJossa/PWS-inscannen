@@ -1,0 +1,21 @@
+{
+    "google_quiestion_number": "1",
+    "question_number": 1,
+    "raw_text": "De verbanding is een exotherme proces, omdat de chemische energie woelt omgezet in andere energie (warmte).\n2 C7H16 + 120 -> C2 + H2O + S2",
+    "correctly_spelled_text": "De verbranding is een exotherme proces, omdat de chemische energie wordt omgezet in andere energie (warmte).\n2 C7H16 + 120 -> C2 + H2O + S2",
+    "spelling_corrections": [
+        {
+            "original": "verbanding",
+            "changes": "verbranding"
+        },
+        {
+            "original": "woelt",
+            "changes": "wordt"
+        }
+    ],
+    "tokens_used": 14555,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727735662,
+    "delta_time_s": 3.2924280166625977
+}

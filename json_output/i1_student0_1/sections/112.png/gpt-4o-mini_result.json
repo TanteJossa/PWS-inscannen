@@ -1,0 +1,17 @@
+{
+    "google_quiestion_number": "112",
+    "question_number": 1,
+    "raw_text": "(1): 65S - 13S = 47 gram hopen C(12) oxide",
+    "correctly_spelled_text": "(1): 65S - 13S = 47 gram hopen C(12) oxide",
+    "spelling_corrections": [
+        {
+            "original": "hopen",
+            "changes": "hopen"
+        }
+    ],
+    "tokens_used": 14496,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727737764,
+    "delta_time_s": 3.6713762283325195
+}

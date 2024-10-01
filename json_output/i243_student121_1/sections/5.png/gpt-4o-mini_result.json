@@ -1,0 +1,29 @@
+{
+    "google_quiestion_number": "5",
+    "question_number": 5,
+    "raw_text": "De focussynthese van glucose is een endotherm proces, \nbinden en de afbraak er gaat meer energie in dan dat eruit gaat. Daar die energie die \nwordt gebruikt en de atoombinding in de moleculen \nvand de beginstoffen te verbreken is meer dan het \nde vorming van nieuwe atoombindingen in de \neindproducten. Daarom is de reactie warmte groter \ndan O. E->O",
+    "correctly_spelled_text": "De fotosynthese van glucose is een endotherm proces, \nbinden en de afbraak er gaat meer energie in dan dat eruit gaat. Daar die energie die \nwordt gebruikt en de atoombinding in de moleculen \nvand de beginstoffen te verbreken is meer dan het \nde vorming van nieuwe atoombindingen in de \neindproducten. Daarom is de reactie warmte groter \ndan O. E->O",
+    "spelling_corrections": [
+        {
+            "original": "focussynthese",
+            "changes": "fotosynthese"
+        },
+        {
+            "original": "endotherm",
+            "changes": "endotherm proces, binden en de afbraak er gaat meer energie in dan dat eruit gaat. Daar die energie die"
+        },
+        {
+            "original": "vand",
+            "changes": "van"
+        },
+        {
+            "original": "eindproducten",
+            "changes": "eindproducten. Daarom is de reactie warmte groter"
+        }
+    ],
+    "tokens_used": 26041,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727738778,
+    "delta_time_s": 4.393915176391602
+}

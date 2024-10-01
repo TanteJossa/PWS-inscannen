@@ -1,0 +1,29 @@
+{
+    "google_quiestion_number": "3",
+    "question_number": 3,
+    "raw_text": "De invloed van het # hijstempijn vande pinda's op de snelheid van de scheiding is dat je het oppervlakte vergroot en de de reactiesnelheid versnelt, want op microniveau is er een grotere kans op een effectieve botsing, omdat de deeltjes los van elkaar bewegen en omdat het oppervlakte is verhoogd is de kans op botsing ook groter",
+    "correctly_spelled_text": "De invloed van het hijstempijn van de pinda's op de snelheid van de scheiding is dat je het oppervlakte vergroot en de reactiesnelheid versnelt, want op microniveau is er een grotere kans op een effectieve botsing, omdat de deeltjes los van elkaar bewegen en omdat het oppervlakte is verhoogd, is de kans op botsing ook groter",
+    "spelling_corrections": [
+        {
+            "original": "# hijstempijn vande",
+            "changes": "hijstempijn van de"
+        },
+        {
+            "original": "de de reactiesnelheid",
+            "changes": "de reactiesnelheid"
+        },
+        {
+            "original": "de deeltjes",
+            "changes": "de deeltjes"
+        },
+        {
+            "original": "is de kans op botsing ook groter",
+            "changes": "is de kans op botsing ook groter"
+        }
+    ],
+    "tokens_used": 14664,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727736144,
+    "delta_time_s": 7.089458227157593
+}

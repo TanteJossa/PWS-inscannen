@@ -1,0 +1,21 @@
+{
+    "google_quiestion_number": "er",
+    "question_number": 5,
+    "raw_text": "energie 'inlaad wordt & de reactie snelit gaat.\n\n\neu\n\ngeactiveerd\n\nbeginstof\n\ngeco\n\nreactieproduct\n\nde reactie warmte is de hoeveelheid energie verbruikt wordt en hoeveel er vrijkomt. zonlicht wordt aangeleverd in zuurstof.",
+    "correctly_spelled_text": "energie 'inlaad wordt & de reactie snel gaat.\n\n\neu\n\ngeactiveerd\n\nbeginstof\n\ngeco\n\nreactieproduct\n\nde reactie warmte is de hoeveelheid energie verbruikt wordt en hoeveel er vrijkomt. zonlicht wordt aangeleverd in zuurstof.",
+    "spelling_corrections": [
+        {
+            "original": "snelit",
+            "changes": "snel"
+        },
+        {
+            "original": "verbruikt wordt",
+            "changes": "verbruikt wordt"
+        }
+    ],
+    "tokens_used": 14598,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727738457,
+    "delta_time_s": 3.66546368598938
+}

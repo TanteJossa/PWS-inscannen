@@ -1,0 +1,33 @@
+{
+    "google_quiestion_number": "5",
+    "question_number": 1,
+    "raw_text": "omfet de reactos open t komen de deeltjes die gas vormig woden de lucht ingaan en dus niet gewegt worden.",
+    "correctly_spelled_text": "om het de reactos open te komen de deeltjes die gasvormig worden de lucht ingaan en dus niet gewogen worden.",
+    "spelling_corrections": [
+        {
+            "original": "omfet",
+            "changes": "om het"
+        },
+        {
+            "original": "reactos",
+            "changes": "reactors"
+        },
+        {
+            "original": "open t",
+            "changes": "open te"
+        },
+        {
+            "original": "deeltjes die gas vormig woden",
+            "changes": "deeltjes die gasvormig worden"
+        },
+        {
+            "original": "gewegt",
+            "changes": "gewogen"
+        }
+    ],
+    "tokens_used": 14560,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727740088,
+    "delta_time_s": 3.7003014087677
+}

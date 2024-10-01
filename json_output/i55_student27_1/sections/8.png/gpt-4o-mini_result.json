@@ -1,0 +1,25 @@
+{
+    "google_quiestion_number": "8",
+    "question_number": 8,
+    "raw_text": "Hoe bager de concentratie van de pinak-moleculen hoe makeliker het is om de pinola te scheiden omdat er meer ruimte zit om te scheiden",
+    "correctly_spelled_text": "Hoe lager de concentratie van de pinak-moleculen, hoe makkelijker het is om de pinola te scheiden, omdat er meer ruimte zit om te scheiden",
+    "spelling_corrections": [
+        {
+            "original": "bager",
+            "changes": "lager"
+        },
+        {
+            "original": "makeliker",
+            "changes": "makkelijker"
+        },
+        {
+            "original": "zit",
+            "changes": "zit"
+        }
+    ],
+    "tokens_used": 14546,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727739878,
+    "delta_time_s": 3.238054037094116
+}

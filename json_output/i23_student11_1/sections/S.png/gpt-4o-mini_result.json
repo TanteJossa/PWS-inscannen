@@ -1,0 +1,37 @@
+{
+    "google_quiestion_number": "S",
+    "question_number": 2,
+    "raw_text": "exotherm, omdat er eenmaal energie is tegenwoord dan blijft de reactie lopen, tel daarbij so. En omdat de chemische energie na de lihl wordt omgezet in warmte, en bij een exotherme reactie wordt chemisch energie in een andere soort energie omgezet.\n\nEndotherm, want \u0394E70 er wordt gezegd dat er door een verbranding van het tuwelgild veel minder zuurstof zal ontstaan.",
+    "correctly_spelled_text": "exotherm, omdat er eenmaal energie is tegenwoord dan blijft de reactie lopen, tel daarbij zo. En omdat de chemische energie na de lihl wordt omgezet in warmte, en bij een exotherme reactie wordt chemische energie in een andere soort energie omgezet.\n\nEndotherm, want \u0394E70 er wordt gezegd dat er door een verbranding van het tuwelgild veel minder zuurstof zal ontstaan.",
+    "spelling_corrections": [
+        {
+            "original": "eenmaal",
+            "changes": "eenmaal"
+        },
+        {
+            "original": "so.",
+            "changes": "zo."
+        },
+        {
+            "original": "chemisch",
+            "changes": "chemische"
+        },
+        {
+            "original": "energie",
+            "changes": "energie"
+        },
+        {
+            "original": "enz.",
+            "changes": "enz."
+        },
+        {
+            "original": "zowel",
+            "changes": "zuurstof"
+        }
+    ],
+    "tokens_used": 14678,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727738698,
+    "delta_time_s": 4.664217233657837
+}

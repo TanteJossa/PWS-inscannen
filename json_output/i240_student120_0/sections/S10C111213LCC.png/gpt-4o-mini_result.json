@@ -1,0 +1,17 @@
+{
+    "google_quiestion_number": "S10C111213LCC",
+    "question_number": 1,
+    "raw_text": "soortnis minder voor de pyl geuyt aan na de pyl.",
+    "correctly_spelled_text": "soortnis minder voor de pyl gegeven aan na de pyl.",
+    "spelling_corrections": [
+        {
+            "original": "geuyt",
+            "changes": "gegeven"
+        }
+    ],
+    "tokens_used": 14482,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727738738,
+    "delta_time_s": 2.446470260620117
+}

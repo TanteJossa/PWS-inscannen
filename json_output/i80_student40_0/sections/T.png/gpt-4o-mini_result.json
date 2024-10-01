@@ -1,0 +1,17 @@
+{
+    "google_quiestion_number": "T",
+    "question_number": 1,
+    "raw_text": "exotherm ,want bij verbrande van benzine komt energie urj",
+    "correctly_spelled_text": "exotherm, want bij verbranding van benzine komt energie vrij",
+    "spelling_corrections": [
+        {
+            "original": "exotherm ,want bij verbrande van benzine komt energie urj",
+            "changes": "exotherm, want bij verbranding van benzine komt energie vrij"
+        }
+    ],
+    "tokens_used": 14510,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727740442,
+    "delta_time_s": 3.724976062774658
+}

@@ -1,0 +1,17 @@
+{
+    "google_quiestion_number": "E",
+    "question_number": 6,
+    "raw_text": "6) CaCl2 (s) is 6 gram rects van de pijp gemaakt en dat is 15-13-5-2 gram koper (II)oxide",
+    "correctly_spelled_text": "6) CaCl2 (s) is 6 gram recht van de pijp gemaakt en dat is 15-13-5-2 gram koper (II)oxide",
+    "spelling_corrections": [
+        {
+            "original": "rects",
+            "changes": "recht"
+        }
+    ],
+    "tokens_used": 14526,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727738932,
+    "delta_time_s": 2.860034942626953
+}

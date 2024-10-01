@@ -1,0 +1,21 @@
+{
+    "google_quiestion_number": "NOT_VALID_QUESTION_ID",
+    "question_number": 13,
+    "raw_text": "exotherm\nexotherm, ja krijg energie",
+    "correctly_spelled_text": "exotherm\nexotherm, ja krijg energie",
+    "spelling_corrections": [
+        {
+            "original": "exotherm",
+            "changes": ""
+        },
+        {
+            "original": "exotherm, ja krijg energie",
+            "changes": ""
+        }
+    ],
+    "tokens_used": 14492,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727738359,
+    "delta_time_s": 3.2446415424346924
+}

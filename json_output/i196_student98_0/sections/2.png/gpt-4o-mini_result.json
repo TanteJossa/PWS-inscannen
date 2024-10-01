@@ -1,0 +1,17 @@
+{
+    "google_quiestion_number": "2",
+    "question_number": 2,
+    "raw_text": "De dondelion is een plant die in de natuur groeit.",
+    "correctly_spelled_text": "De dandelion is een plant die in de natuur groeit.",
+    "spelling_corrections": [
+        {
+            "original": "dondelion",
+            "changes": "dandelion"
+        }
+    ],
+    "tokens_used": 14484,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727737577,
+    "delta_time_s": 1.7275025844573975
+}

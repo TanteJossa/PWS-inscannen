@@ -1,0 +1,21 @@
+{
+    "google_quiestion_number": "4",
+    "question_number": 4,
+    "raw_text": "Er zijn links en rechts van de pijl even veel atomen van elke STOF, alleen de bindingen zijn veranderd in de moleculen.",
+    "correctly_spelled_text": "Er zijn links en rechts van de pijl even veel atomen van elke STOF, alleen de bindingen zijn veranderd in de moleculen.",
+    "spelling_corrections": [
+        {
+            "original": "aromen",
+            "changes": "atomen"
+        },
+        {
+            "original": "bijdigen",
+            "changes": "bindingen"
+        }
+    ],
+    "tokens_used": 14525,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727735842,
+    "delta_time_s": 3.1352925300598145
+}

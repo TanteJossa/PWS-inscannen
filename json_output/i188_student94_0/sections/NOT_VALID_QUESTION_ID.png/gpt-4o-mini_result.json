@@ -1,0 +1,25 @@
+{
+    "google_quiestion_number": "NOT_VALID_QUESTION_ID",
+    "question_number": 1,
+    "raw_text": "1) De vastluid van zwavelzuur bevat is een exotherm proces, omdat verbrandingen altijd exotherm zijn.\n\n2) C2H16 + S(1) + O2(3) -> 2CS2 + 2H2O\n\nC  7  C  7\nH  16  H  16\nS  2  S  2\nO  2  O  1\n\n3) De katalysator be\u00efnvloedt de reactiesnelheid door aanwezig te zijn en niet volledig te raken.\n\n4) \n\nFact\n\n(reactie)",
+    "correctly_spelled_text": "1) De vastluid van zwavelzuur bevat is een exotherm proces, omdat verbrandingen altijd exotherm zijn.\n\n2) C2H16 + S(1) + O2(3) -> 2CS2 + 2H2O\n\nC  7  C  7\nH  16  H  16\nS  2  S  2\nO  2  O  1\n\n3) De katalysator be\u00efnvloedt de reactiesnelheid door aanwezig te zijn en niet volledig te raken.\n\n4) \n\nFact\n\n(reactie)",
+    "spelling_corrections": [
+        {
+            "original": "vastluid",
+            "changes": "vastluid"
+        },
+        {
+            "original": "verbrandingen",
+            "changes": "verbrandingen"
+        },
+        {
+            "original": "be\u00efnvloedt",
+            "changes": "be\u00efnvloedt"
+        }
+    ],
+    "tokens_used": 26096,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727737392,
+    "delta_time_s": 7.372730493545532
+}

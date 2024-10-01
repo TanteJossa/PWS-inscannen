@@ -1,0 +1,17 @@
+{
+    "google_quiestion_number": "51",
+    "question_number": 5,
+    "raw_text": "- Bij thermolyse komt er warmte vrij die warmte gaat vervolgens naar alle kanten op dus is het moeilijk om die warmte te meten",
+    "correctly_spelled_text": "- Bij thermolyse komt er warmte vrij die warmte gaat vervolgens naar alle kanten op, dus is het moeilijk om die warmte te meten",
+    "spelling_corrections": [
+        {
+            "original": "op dus",
+            "changes": "op, dus"
+        }
+    ],
+    "tokens_used": 14510,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727739521,
+    "delta_time_s": 2.2428479194641113
+}

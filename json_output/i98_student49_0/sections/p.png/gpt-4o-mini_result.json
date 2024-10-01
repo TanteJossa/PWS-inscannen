@@ -1,0 +1,61 @@
+{
+    "google_quiestion_number": "p",
+    "question_number": 1,
+    "raw_text": "hele pad\nvermelda\nex\nthuren\nexplosie\nstages pad\n\nde\nstijlen\nwet\n\nBetere\nbesluiten\n\nlie? \n\nstijges pad",
+    "correctly_spelled_text": "hele pad\nvermelda\nex\nthuren\nexplosie\nstages pad\n\nde\nstijlen\nwet\n\nBetere\nbesluiten\n\nlie?\n\nstijges pad",
+    "spelling_corrections": [
+        {
+            "original": "vermelda",
+            "changes": "vermelda"
+        },
+        {
+            "original": "ex",
+            "changes": "ex"
+        },
+        {
+            "original": "thuren",
+            "changes": "thuren"
+        },
+        {
+            "original": "explosie",
+            "changes": "explosie"
+        },
+        {
+            "original": "stages pad",
+            "changes": "stages pad"
+        },
+        {
+            "original": "de",
+            "changes": "de"
+        },
+        {
+            "original": "stijlen",
+            "changes": "stijlen"
+        },
+        {
+            "original": "wet",
+            "changes": "wet"
+        },
+        {
+            "original": "Betere",
+            "changes": "Betere"
+        },
+        {
+            "original": "besluiten",
+            "changes": "besluiten"
+        },
+        {
+            "original": "lie?",
+            "changes": "lie?"
+        },
+        {
+            "original": "stijges pad",
+            "changes": "stijges pad"
+        }
+    ],
+    "tokens_used": 14663,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727740905,
+    "delta_time_s": 5.4558093547821045
+}

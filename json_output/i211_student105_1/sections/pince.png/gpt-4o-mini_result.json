@@ -1,0 +1,33 @@
+{
+    "google_quiestion_number": "pince",
+    "question_number": 11,
+    "raw_text": "\n1) Ik heb de recirculatie toegespitst! \n\n2) Het borende deeltemiddel gaat even uit de moleculen bewegen en tegen elkaar botsen. Als de moleculen met de juiste snelheid op elkaar tegen elkaar aan botsen een chemische reactie aan. Het afknappen van de producten is zorg voor een snellere reactie want als de verbranding plaats \n\n(hoe fjn spek is verbrand) hoog is, is er een hoge grad. contact op hierdoor \n\nkunnen de moleculen op microscopische schaal met elkaar botsen en \n\nmeer kans op een \u2018echte\u2019 reactie. De reactiesnelheid \n\n(wat nu kan ook de intentie hebben) \n\n3) Links van de pijl zijn de deeltjes atomen, als rechts van de pijl. Atomen \n\nzijn geen net weg, de massa van een atoom verhoudt zich die met een \n\natoom \n\n(terwijl hebben massa) \n\n4) De thermolyse wordt geschud in een open val. Er zou zuiverstof in \n\nkunnen komen of andere stoffen, wanneer het ie open. Dus er zou andere massa \n\nbij kunnen komen. Daarom, is het redelijk lastig om de wet van behoud \n\nvan massa aan te tonen. \n\n5) 65g + 18g = 67g \n\n67g = 18g + 49g, wat is 47 graden? voor oxide onsuur \n\n+ 18",
+    "correctly_spelled_text": "\n1) Ik heb de recirculatie toegespitst! \n\n2) Het borende deeltemiddel gaat even uit de moleculen bewegen en tegen elkaar botsen. Als de moleculen met de juiste snelheid op elkaar tegen elkaar aan botsen, ontstaat er een chemische reactie. Het afknappen van de producten is zorg voor een snellere reactie, want als de verbranding plaats \n\n(hoe fijn spek is verbrand) hoog is, is er een hoge graad contact op hierdoor \n\nkunnen de moleculen op microscopische schaal met elkaar botsen en \n\nmeer kans op een \u2018echte\u2019 reactie. De reactiesnelheid \n\n(wat nu kan ook de intentie hebben) \n\n3) Links van de pijl zijn de deeltjes atomen, als rechts van de pijl. Atomen \n\nzijn geen net weg, de massa van een atoom verhoudt zich die met een \n\natoom \n\n(terwijl hebben massa) \n\n4) De thermolyse wordt geschud in een open val. Er zou zuurstof in \n\nkunnen komen of andere stoffen, wanneer het ie open. Dus er zou andere massa \n\nbij kunnen komen. Daarom is het redelijk lastig om de wet van behoud \n\nvan massa aan te tonen. \n\n5) 65g + 18g = 67g \n\n67g = 18g + 49g, wat is 47 graden? voor oxide onsuur \n\n+ 18",
+    "spelling_corrections": [
+        {
+            "original": "fjn",
+            "changes": "fijn"
+        },
+        {
+            "original": "grad",
+            "changes": "graad"
+        },
+        {
+            "original": "zuurstof",
+            "changes": "zuiverstof"
+        },
+        {
+            "original": "makkelijk",
+            "changes": "redelijk"
+        },
+        {
+            "original": "makkelijk",
+            "changes": "redelijk"
+        }
+    ],
+    "tokens_used": 26499,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727738048,
+    "delta_time_s": 27.553115606307983
+}

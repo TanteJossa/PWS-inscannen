@@ -1,0 +1,29 @@
+{
+    "google_quiestion_number": "e",
+    "question_number": 11,
+    "raw_text": "65g - 13g - 5g = 47g koper (II) oxide",
+    "correctly_spelled_text": "65 g - 13 g - 5 g = 47 g koper (II) oxide",
+    "spelling_corrections": [
+        {
+            "original": "65g",
+            "changes": "65 g"
+        },
+        {
+            "original": "13g",
+            "changes": "13 g"
+        },
+        {
+            "original": "5g",
+            "changes": "5 g"
+        },
+        {
+            "original": "47g",
+            "changes": "47 g"
+        }
+    ],
+    "tokens_used": 14524,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727738878,
+    "delta_time_s": 2.860895872116089
+}

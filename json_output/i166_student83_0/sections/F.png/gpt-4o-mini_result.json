@@ -1,0 +1,17 @@
+{
+    "google_quiestion_number": "F",
+    "question_number": 12,
+    "raw_text": "12 chemische energie -> warmte\n13 elektriciteit proces net zelf energie uit",
+    "correctly_spelled_text": "12 chemische energie -> warmte\n13 elektriciteitsproces net zelf energie uit",
+    "spelling_corrections": [
+        {
+            "original": "elektriciteit proces",
+            "changes": "elektriciteitsproces"
+        }
+    ],
+    "tokens_used": 14492,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727736678,
+    "delta_time_s": 3.1982784271240234
+}

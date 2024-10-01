@@ -1,0 +1,21 @@
+{
+    "google_quiestion_number": "d",
+    "question_number": 1,
+    "raw_text": "maak een gemoedelijke sfeer te cre\u00ebren door de verdeling van luxe. e.g. microven.",
+    "correctly_spelled_text": "maak een gemoedelijke sfeer te cre\u00ebren door de verdeling van luxe. e.g. microven.",
+    "spelling_corrections": [
+        {
+            "original": "gemoedelijke",
+            "changes": "gemoedelijke"
+        },
+        {
+            "original": "verdelen",
+            "changes": "verdelen"
+        }
+    ],
+    "tokens_used": 14512,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727739106,
+    "delta_time_s": 4.244527339935303
+}

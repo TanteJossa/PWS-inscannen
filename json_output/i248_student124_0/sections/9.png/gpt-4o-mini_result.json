@@ -1,0 +1,25 @@
+{
+    "google_quiestion_number": "9",
+    "question_number": 9,
+    "raw_text": "Er gaar geen massa verliezen bij de bovenstran de vergelijking, omdat hij kloop.",
+    "correctly_spelled_text": "Er gaat geen massa verliezen bij de bovenstaan de vergelijking, omdat hij klopt.",
+    "spelling_corrections": [
+        {
+            "original": "gaar",
+            "changes": "gaat"
+        },
+        {
+            "original": "bovenstran",
+            "changes": "bovenstaan"
+        },
+        {
+            "original": "kloop",
+            "changes": "klopt"
+        }
+    ],
+    "tokens_used": 14509,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727738875,
+    "delta_time_s": 1.928877592086792
+}

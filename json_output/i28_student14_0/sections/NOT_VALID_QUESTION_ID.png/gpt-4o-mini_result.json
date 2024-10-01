@@ -1,0 +1,17 @@
+{
+    "google_quiestion_number": "NOT_VALID_QUESTION_ID",
+    "question_number": 13,
+    "raw_text": "Een exotherm proces , uit chemische energie wordt",
+    "correctly_spelled_text": "Een exotherm proces, uit chemische energie wordt",
+    "spelling_corrections": [
+        {
+            "original": "Een exotherm proces , uit chemische energie wordt",
+            "changes": "Een exotherm proces, uit chemische energie wordt"
+        }
+    ],
+    "tokens_used": 14496,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727739376,
+    "delta_time_s": 2.1520543098449707
+}

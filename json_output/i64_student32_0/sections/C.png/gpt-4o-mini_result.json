@@ -1,0 +1,21 @@
+{
+    "google_quiestion_number": "C",
+    "question_number": 2,
+    "raw_text": "chemische energie wordt omgezet naar andere energievormen. Zoals bijvoorbeeld warmte.\n\nC\u2088H\u2081\u2088 + 12 O\u2082 \u2192 7 CO\u2082 + 8 H\u2082O + S\u2088\n\nEen katalysator zorgt voor een hogere reactietemperatuur. De reactie verloopt sneller.",
+    "correctly_spelled_text": "chemische energie wordt omgezet naar andere energievormen. Zoals bijvoorbeeld warmte.\n\nC\u2088H\u2081\u2088 + 12 O\u2082 \u2192 7 CO\u2082 + 8 H\u2082O + S\u2088\n\nEen katalysator zorgt voor een hogere reactietemperatuur. De reactie verloopt sneller.",
+    "spelling_corrections": [
+        {
+            "original": "Zals",
+            "changes": "Zoals"
+        },
+        {
+            "original": "S\u2088",
+            "changes": "S\u2088"
+        }
+    ],
+    "tokens_used": 14600,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727740032,
+    "delta_time_s": 3.841512441635132
+}

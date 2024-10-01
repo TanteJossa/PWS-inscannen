@@ -1,0 +1,17 @@
+{
+    "google_quiestion_number": "8",
+    "question_number": 8,
+    "raw_text": "Dit is een a exotherm proces, omdat het van chemische energie naar andere energie\u00ebn gaat.",
+    "correctly_spelled_text": "Dit is een exotherm proces, omdat het van chemische energie naar andere energie\u00ebn gaat.",
+    "spelling_corrections": [
+        {
+            "original": "a exotherm",
+            "changes": "exotherm"
+        }
+    ],
+    "tokens_used": 14498,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727739448,
+    "delta_time_s": 2.2077555656433105
+}

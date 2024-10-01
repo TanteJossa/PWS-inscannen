@@ -1,0 +1,17 @@
+{
+    "google_quiestion_number": "7",
+    "question_number": 7,
+    "raw_text": "7 chemische energie = warmte energie\n8 En exotherm proces, want het klikken is de activatien",
+    "correctly_spelled_text": "7 chemische energie = warmte energie\n8 En exotherm proces, want het klikken is de activatie",
+    "spelling_corrections": [
+        {
+            "original": "activitien",
+            "changes": "activatie"
+        }
+    ],
+    "tokens_used": 14502,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727739240,
+    "delta_time_s": 2.2350831031799316
+}

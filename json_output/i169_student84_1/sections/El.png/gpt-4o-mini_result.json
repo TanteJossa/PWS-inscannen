@@ -1,0 +1,17 @@
+{
+    "google_quiestion_number": "El",
+    "question_number": 1,
+    "raw_text": "13-28.16.97/mf, ontlet het zelfde als volledige verslag.",
+    "correctly_spelled_text": "13-28.16.97/mf, ontlet hetzelfde als volledige verslag.",
+    "spelling_corrections": [
+        {
+            "original": "ontlet het zelfde",
+            "changes": "ontlet hetzelfde"
+        }
+    ],
+    "tokens_used": 14496,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727736730,
+    "delta_time_s": 2.5332839488983154
+}

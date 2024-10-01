@@ -1,0 +1,37 @@
+{
+    "google_quiestion_number": "1",
+    "question_number": 1,
+    "raw_text": "1 exotherm is dat den berline gelyk vertora den houwt er enegie weg en daardoor loopt de motor",
+    "correctly_spelled_text": "1 Exotherm is dat de berline gelijk vertrokken. Dan houdt er energie weg en daardoor loopt de motor.",
+    "spelling_corrections": [
+        {
+            "original": "berline",
+            "changes": "berline"
+        },
+        {
+            "original": "gelyk",
+            "changes": "gelijk"
+        },
+        {
+            "original": "vertora",
+            "changes": "vertrokken"
+        },
+        {
+            "original": "den",
+            "changes": "de"
+        },
+        {
+            "original": "houwt",
+            "changes": "houdt"
+        },
+        {
+            "original": "enegie",
+            "changes": "energie"
+        }
+    ],
+    "tokens_used": 14557,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727736019,
+    "delta_time_s": 3.476468563079834
+}

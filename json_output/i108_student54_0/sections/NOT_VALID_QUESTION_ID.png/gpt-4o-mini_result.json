@@ -1,0 +1,17 @@
+{
+    "google_quiestion_number": "NOT_VALID_QUESTION_ID",
+    "question_number": 1,
+    "raw_text": "mid onder gnat of gewond aan het",
+    "correctly_spelled_text": "met ondergaat of gewond aan het",
+    "spelling_corrections": [
+        {
+            "original": "gnat",
+            "changes": "gaat"
+        }
+    ],
+    "tokens_used": 14472,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727735040,
+    "delta_time_s": 1.6393277645111084
+}

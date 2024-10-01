@@ -1,0 +1,25 @@
+{
+    "google_quiestion_number": "12",
+    "question_number": 1,
+    "raw_text": "alcohol\nofficieel\nhet is\n",
+    "correctly_spelled_text": "alcohol\nofficieel\nhet is\n",
+    "spelling_corrections": [
+        {
+            "original": "alcohol",
+            "changes": ""
+        },
+        {
+            "original": "officieel",
+            "changes": ""
+        },
+        {
+            "original": "het is",
+            "changes": ""
+        }
+    ],
+    "tokens_used": 14494,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727738410,
+    "delta_time_s": 2.247270107269287
+}

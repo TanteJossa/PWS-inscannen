@@ -1,0 +1,17 @@
+{
+    "google_quiestion_number": "10",
+    "question_number": 6,
+    "raw_text": "hele producten\nVERMALEN\ngemalen producten\nFILTEREN\nopgelost vet\nSTOFFEN PINGO'S\nEXTRAHEREN\nvet\nALCOHOL\nRECTIFICEREN\nALCOHOL\nopgelost vet + gemalen producten\nDECILIEREN",
+    "correctly_spelled_text": "hele producten\nVERMALEN\ngemalen producten\nFILTEREN\nopgelost vet\nSTOFFEN PINGO'S\nEXTRAHEREN\nvet\nALCOHOL\nRECTIFICEREN\nALCOHOL\nopgelost vet + gemalen producten\nDECILIEREN",
+    "spelling_corrections": [
+        {
+            "original": "STOFFEN PINGO'S",
+            "changes": "Stoffen Pingo's"
+        }
+    ],
+    "tokens_used": 14588,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727736994,
+    "delta_time_s": 2.979041814804077
+}

@@ -1,0 +1,53 @@
+{
+    "google_quiestion_number": "9",
+    "question_number": 9,
+    "raw_text": "Er is geen massa verloren omdat er voor de pijl evenveel protonen zijn als na de pijl en dus een blijft dat het massabalans het zelfde",
+    "correctly_spelled_text": "Er is geen massa verloren omdat er voor de pijl evenveel protonen zijn als na de pijl en dus blijft dat het massabalans het zelfde",
+    "spelling_corrections": [
+        {
+            "original": "geen",
+            "changes": "geen"
+        },
+        {
+            "original": "verloren",
+            "changes": "verloren"
+        },
+        {
+            "original": "omdat",
+            "changes": "omdat"
+        },
+        {
+            "original": "evenveel",
+            "changes": "evenveel"
+        },
+        {
+            "original": "protonen",
+            "changes": "protonen"
+        },
+        {
+            "original": "blijft",
+            "changes": "blijft"
+        },
+        {
+            "original": "dat",
+            "changes": "dat"
+        },
+        {
+            "original": "massabalans",
+            "changes": "massabalans"
+        },
+        {
+            "original": "het",
+            "changes": "het"
+        },
+        {
+            "original": "zelfde",
+            "changes": "zelfde"
+        }
+    ],
+    "tokens_used": 14610,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727736307,
+    "delta_time_s": 3.0295052528381348
+}

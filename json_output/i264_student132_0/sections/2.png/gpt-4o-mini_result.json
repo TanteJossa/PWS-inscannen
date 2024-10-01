@@ -1,0 +1,25 @@
+{
+    "google_quiestion_number": "2",
+    "question_number": 2,
+    "raw_text": "Die lijn heb ik met potlood getekend.De aitchal die dan eerst eraf word gevolgd vervalt dan.",
+    "correctly_spelled_text": "Die lijn heb ik met potlood getekend. De aitchal die dan eerst eraf wordt gevolgd vervalt dan.",
+    "spelling_corrections": [
+        {
+            "original": "potlood",
+            "changes": "potlood"
+        },
+        {
+            "original": "aitchal",
+            "changes": "aantal"
+        },
+        {
+            "original": "word",
+            "changes": "wordt"
+        }
+    ],
+    "tokens_used": 14525,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727739264,
+    "delta_time_s": 2.865774154663086
+}

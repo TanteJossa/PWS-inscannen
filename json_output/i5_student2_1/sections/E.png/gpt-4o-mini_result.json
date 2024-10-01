@@ -1,0 +1,21 @@
+{
+    "google_quiestion_number": "E",
+    "question_number": 1,
+    "raw_text": "- De katalysator zorgt ervoor dat de activerings-energie om het goed daardoor kan een reactie sneller beginnen dat stelt het niet zo lang duurt om naar\nomdat de geactiveerde toestand te gaan",
+    "correctly_spelled_text": "- De katalysator zorgt ervoor dat de activeringsenergie om het goed daardoor kan een reactie sneller beginnen, dat stelt het niet zo lang duurt om naar\nomdat de geactiveerde toestand te gaan",
+    "spelling_corrections": [
+        {
+            "original": "activerings-energie",
+            "changes": "activeringsenergie"
+        },
+        {
+            "original": "kan een reactie sneller beginnen dat stelt het niet zo lang duurt om naar",
+            "changes": "kan een reactie sneller beginnen, dat stelt het niet zo lang duurt om naar"
+        }
+    ],
+    "tokens_used": 14580,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727739942,
+    "delta_time_s": 4.412827730178833
+}

@@ -1,0 +1,21 @@
+{
+    "google_quiestion_number": "13",
+    "question_number": 13,
+    "raw_text": "Exotherm Het is een Exotherm proces, want er komt energie bij vrij",
+    "correctly_spelled_text": "Exotherm Het is een exotherm proces, want er komt energie bij vrij",
+    "spelling_corrections": [
+        {
+            "original": "Exotherm",
+            "changes": "exotherm"
+        },
+        {
+            "original": "proces,",
+            "changes": "proces,"
+        }
+    ],
+    "tokens_used": 25836,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727739091,
+    "delta_time_s": 3.04388165473938
+}

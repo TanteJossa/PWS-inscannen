@@ -1,0 +1,25 @@
+{
+    "google_quiestion_number": "20",
+    "question_number": 1,
+    "raw_text": "zorgt ervoor dat de activiteitsgraad de it en te stelt,\nBette maken een effectieve basisjongen der lessen, verknopt het\nmeer vaardigheden",
+    "correctly_spelled_text": "zorgt ervoor dat de activiteitsgraad de it en te stelt,\nBette maken een effectieve basisjongen der lessen, verknopt het\nmeer vaardigheden",
+    "spelling_corrections": [
+        {
+            "original": "activiteitsgraad",
+            "changes": "activiteitsgraad"
+        },
+        {
+            "original": "Bette",
+            "changes": "Bette"
+        },
+        {
+            "original": "basisjongen",
+            "changes": "basisjongen"
+        }
+    ],
+    "tokens_used": 14550,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727739400,
+    "delta_time_s": 2.886896848678589
+}

@@ -1,0 +1,17 @@
+{
+    "google_quiestion_number": "8",
+    "question_number": 8,
+    "raw_text": "De schading duurt langer omdat het veel meer kleine deeltjes zijn gewordn die op microscopisch\nniveau met elkaar hebben samengewerkt.",
+    "correctly_spelled_text": "De schading duurt langer omdat het veel meer kleine deeltjes zijn geworden die op microscopisch\nniveau met elkaar hebben samengewerkt.",
+    "spelling_corrections": [
+        {
+            "original": "gewor dn",
+            "changes": "geworden"
+        }
+    ],
+    "tokens_used": 14513,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727736304,
+    "delta_time_s": 2.0421953201293945
+}

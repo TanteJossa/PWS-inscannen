@@ -1,0 +1,29 @@
+{
+    "google_quiestion_number": "3",
+    "question_number": 1,
+    "raw_text": "wordt Op microniveau kan je dat uitleggen met het botsend deeltjesmodel. Als de pinda's gemalen worden krijgen de stukjes een groter contact opper-",
+    "correctly_spelled_text": "wordt. Op microniveau kan je dat uitleggen met het botsend deeltjesmodel. Als de pinda's gemalen worden, krijgen de stukjes een groter contactopper-",
+    "spelling_corrections": [
+        {
+            "original": "wordt Op microniveau",
+            "changes": "wordt. Op microniveau"
+        },
+        {
+            "original": "pindals",
+            "changes": "pinda's"
+        },
+        {
+            "original": "krijgen de stukjes",
+            "changes": "krijgen de stukjes,"
+        },
+        {
+            "original": "contact opper-",
+            "changes": "contactopper-"
+        }
+    ],
+    "tokens_used": 14578,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727739892,
+    "delta_time_s": 4.05889368057251
+}

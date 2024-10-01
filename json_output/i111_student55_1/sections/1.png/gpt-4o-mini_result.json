@@ -1,0 +1,21 @@
+{
+    "google_quiestion_number": "1",
+    "question_number": 1,
+    "raw_text": "11 Wet van massa behoud:\n65-13-5 = 47 g hopen(1) exd",
+    "correctly_spelled_text": "11 Wet van massa behoud:\n65 - 13 - 5 = 47 g hopen(1) exd",
+    "spelling_corrections": [
+        {
+            "original": "Wet van massa behoud:",
+            "changes": "Wet van massa behoud:"
+        },
+        {
+            "original": "65-13-5 = 47 g hopen(1) exd",
+            "changes": "65 - 13 - 5 = 47 g hopen(1) exd"
+        }
+    ],
+    "tokens_used": 14546,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727735223,
+    "delta_time_s": 3.2041070461273193
+}

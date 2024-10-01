@@ -1,0 +1,17 @@
+{
+    "google_quiestion_number": "er",
+    "question_number": 3,
+    "raw_text": "er kan ideal energie ed (warmte) bij uit;\n\nC7H16S + 14O2 \u2192 7CO2 + 8H2O + 1SO2",
+    "correctly_spelled_text": "er kan ideale energie ed (warmte) bij uit;\n\nC7H16S + 14O2 \u2192 7CO2 + 8H2O + 1SO2",
+    "spelling_corrections": [
+        {
+            "original": "ideal",
+            "changes": "ideale"
+        }
+    ],
+    "tokens_used": 14535,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727737940,
+    "delta_time_s": 3.314417839050293
+}

@@ -1,0 +1,17 @@
+{
+    "google_quiestion_number": "1",
+    "question_number": 1,
+    "raw_text": "exo therm\n\nblablater, omdat het verband en er dus uit\nkomt!",
+    "correctly_spelled_text": "exotherm\n\nblablater, omdat het verband en er dus uit\nkomt!",
+    "spelling_corrections": [
+        {
+            "original": "exo therm",
+            "changes": "exotherm"
+        }
+    ],
+    "tokens_used": 14494,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727736249,
+    "delta_time_s": 2.3817389011383057
+}

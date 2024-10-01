@@ -1,0 +1,17 @@
+{
+    "google_quiestion_number": "13",
+    "question_number": 13,
+    "raw_text": "We hoefden geen ma te leren.\n",
+    "correctly_spelled_text": "We hoefden geen maar te leren.\n",
+    "spelling_corrections": [
+        {
+            "original": "ma",
+            "changes": "maar"
+        }
+    ],
+    "tokens_used": 14472,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727736194,
+    "delta_time_s": 2.504281997680664
+}

@@ -1,0 +1,29 @@
+{
+    "google_quiestion_number": "5",
+    "question_number": 5,
+    "raw_text": "Omduit het water en koolstofdioxide metern verdwijzen, die zie je dus niet om en ookal hebben ze wel moeten, zie je het niet. Het lijkt alsof je allen logers (CO2) overhaalt.",
+    "correctly_spelled_text": "Omdat het water en koolstofdioxide metern verdwijnen, die zie je dus niet om en ook al hebben ze wel moeten, zie je het niet. Het lijkt alsof je alleen logers (CO2) overhaalt.",
+    "spelling_corrections": [
+        {
+            "original": "Omduit",
+            "changes": "Omdat"
+        },
+        {
+            "original": "metern",
+            "changes": "verdwijnen"
+        },
+        {
+            "original": "ookal",
+            "changes": "ook al"
+        },
+        {
+            "original": "allen",
+            "changes": "alleen"
+        }
+    ],
+    "tokens_used": 14578,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727739208,
+    "delta_time_s": 3.32300066947937
+}

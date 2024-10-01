@@ -1,0 +1,53 @@
+{
+    "google_quiestion_number": "69ShJ",
+    "question_number": 4,
+    "raw_text": "Bij deze reachtievergelijking gaat er geen massa verloren, omdat er aan beide kanten van de pijl van alle materialen evenveel is. Het is een kloppende reachtievergelijking.\nAls het om een reactie gaat.\nAls er een reactie plaatsvindt in een open reageerbuis, dan komen er allemaal stoffen of gassen van buiten. Er worden allemaal stoffen gemengd.\n65 . 13 x 5 =  85 g\nchemische energie  \u2192  warme energie\nexotherm, omdat er bij het open enken klieren van de handwarmers allemaal energie vrijkomt! Daardoor et energie vrijkomt worden de handwarmers warm.\nendotherm, het er kan alleen een",
+    "correctly_spelled_text": "Bij deze reactievergelijking gaat er geen massa verloren, omdat er aan beide kanten van de pijl van alle materialen evenveel is. Het is een kloppende reactievergelijking.\nAls het om een reactie gaat.\nAls er een reactie plaatsvindt in een open reageerbuis, dan komen er allemaal stoffen of gassen van buiten. Er worden allemaal stoffen gemengd.\n65 . 13 x 5 =  85 g\nchemische energie  \u2192  warme energie\nexotherm, omdat er bij het open enken klieren van de handwarmers allemaal energie vrijkomt! Daardoor komt de energie vrij, waardoor de handwarmers warm worden.\nendotherm, het er kan alleen een",
+    "spelling_corrections": [
+        {
+            "original": "reachtievergelijking",
+            "changes": "reactievergelijking"
+        },
+        {
+            "original": "reachtievergelijking",
+            "changes": "reactievergelijking"
+        },
+        {
+            "original": "reactie gaat.",
+            "changes": "reactie gaat."
+        },
+        {
+            "original": "reageerbuis,",
+            "changes": "reageerbuis,"
+        },
+        {
+            "original": "stoffen gemengd.",
+            "changes": "stoffen gemengd."
+        },
+        {
+            "original": "exotherm,",
+            "changes": "exotherm,"
+        },
+        {
+            "original": "enken",
+            "changes": "enken"
+        },
+        {
+            "original": "et energie",
+            "changes": "de energie"
+        },
+        {
+            "original": "vrijkomt worden",
+            "changes": "vrij komt worden."
+        },
+        {
+            "original": "endotherm, het er kan",
+            "changes": "endotherm, het kan"
+        }
+    ],
+    "tokens_used": 26228,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727737530,
+    "delta_time_s": 7.769034147262573
+}

@@ -1,0 +1,49 @@
+{
+    "google_quiestion_number": "31",
+    "question_number": 1,
+    "raw_text": "doodat je de pinda's stampel woaldt het oppervalkte gloeve en de concentricie waardoet je op het bolsendde deeltjes model kun zien dat de moleculen maillijk tegen elkaar kunnen balzen,",
+    "correctly_spelled_text": "doordat je de pinda's stampel wilt het oppervlakte gloei en de concentratie waardoor je op het bolzende deeltjes model kunt zien dat de moleculen makkelijk tegen elkaar kunnen balzen,\n",
+    "spelling_corrections": [
+        {
+            "original": "doodat",
+            "changes": "doordat"
+        },
+        {
+            "original": "woaldt",
+            "changes": "wilt"
+        },
+        {
+            "original": "oppervalkte",
+            "changes": "oppervlakte"
+        },
+        {
+            "original": "gloeve",
+            "changes": "gloei"
+        },
+        {
+            "original": "concentricie",
+            "changes": "concentratie"
+        },
+        {
+            "original": "waardoet",
+            "changes": "waardoor"
+        },
+        {
+            "original": "bolsendde",
+            "changes": "bolzende"
+        },
+        {
+            "original": "kun",
+            "changes": "kunt"
+        },
+        {
+            "original": "maillijk",
+            "changes": "makkelijk"
+        }
+    ],
+    "tokens_used": 14641,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727739516,
+    "delta_time_s": 4.987504959106445
+}

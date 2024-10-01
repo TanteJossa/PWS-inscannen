@@ -1,0 +1,17 @@
+{
+    "google_quiestion_number": "12",
+    "question_number": 12,
+    "raw_text": "E\nFleqain\nFact",
+    "correctly_spelled_text": "E\nFleqain\nFact",
+    "spelling_corrections": [
+        {
+            "original": "Fleqain",
+            "changes": "Fleqain"
+        }
+    ],
+    "tokens_used": 14476,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727739980,
+    "delta_time_s": 1.954634666442871
+}

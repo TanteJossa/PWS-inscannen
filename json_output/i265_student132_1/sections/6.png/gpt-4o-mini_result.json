@@ -1,0 +1,25 @@
+{
+    "google_quiestion_number": "6",
+    "question_number": 6,
+    "raw_text": "6. er geldt: Cu2CO3.H2O(s) \u2192 2 CuO(s) + CO2(g) + H2O(l)\nze bij de ontleding van malachiet ontstaat dus waterstofdioxide, water en koperoxide.\n65 g malachiet = 13 g CO2 + 5 g H2O + ... CuO\n65*13-5 = 47, dus is dit 47 g koperoxide ontstaan",
+    "correctly_spelled_text": "6. Er geldt: Cu2CO3.H2O(s) \u2192 2 CuO(s) + CO2(g) + H2O(l)\nZij bij de ontleding van malachiet ontstaat dus waterstofdioxide, water en koperoxide.\n65 g malachiet = 13 g CO2 + 5 g H2O + ... CuO\n65*13-5 = 47, dus is dit 47 g koperoxide ontstaan",
+    "spelling_corrections": [
+        {
+            "original": "er geldt:",
+            "changes": "Er geldt:"
+        },
+        {
+            "original": "ze bij de ontleding van malachiet ontstaat dus waterstofdioxide, water en koperoxide.",
+            "changes": "Zij bij de ontleding van malachiet ontstaat dus waterstofdioxide, water en koperoxide."
+        },
+        {
+            "original": "dus is dit 47 g koperoxide ontstaan",
+            "changes": "dus is dit 47 g koperoxide ontstaan"
+        }
+    ],
+    "tokens_used": 14723,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727739297,
+    "delta_time_s": 7.599576473236084
+}

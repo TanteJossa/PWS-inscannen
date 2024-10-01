@@ -1,0 +1,21 @@
+{
+    "google_quiestion_number": "a",
+    "question_number": 1,
+    "raw_text": "extraheer\n\nsuikse\n\nalcohol",
+    "correctly_spelled_text": "extraheer\n\nsuikse\n\nalcohol",
+    "spelling_corrections": [
+        {
+            "original": "extraheer",
+            "changes": ""
+        },
+        {
+            "original": "suikse",
+            "changes": "suikse"
+        }
+    ],
+    "tokens_used": 14489,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727738967,
+    "delta_time_s": 2.6967155933380127
+}

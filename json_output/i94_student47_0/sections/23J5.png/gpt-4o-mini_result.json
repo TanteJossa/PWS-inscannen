@@ -1,0 +1,17 @@
+{
+    "google_quiestion_number": "23J5",
+    "question_number": 2,
+    "raw_text": "andere vorm van energie. En er komt energie vrij.\nC7H16 + 1202 \u2192 7O2 + 8H2O + SO2",
+    "correctly_spelled_text": "andere vorm van energie. En er komt energie vrij.\nC7H16 + 12O2 \u2192 7O2 + 8H2O + SO2",
+    "spelling_corrections": [
+        {
+            "original": "1202",
+            "changes": "12O2"
+        }
+    ],
+    "tokens_used": 14528,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727740802,
+    "delta_time_s": 2.3080151081085205
+}

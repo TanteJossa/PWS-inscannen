@@ -1,0 +1,21 @@
+{
+    "google_quiestion_number": "6",
+    "question_number": 6,
+    "raw_text": "65-13-s= 47\ndus er is 47 g koper(1)oxide ontstaan.",
+    "correctly_spelled_text": "65-13-s = 47\ndus er is 47 g koper(1)oxide ontstaan.",
+    "spelling_corrections": [
+        {
+            "original": "65-13-s= 47",
+            "changes": "65-13-s = 47"
+        },
+        {
+            "original": "dus er is 47 g koper(1)oxide ontstaan.",
+            "changes": "dus er is 47 g koper(1)oxide ontstaan."
+        }
+    ],
+    "tokens_used": 14539,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727740251,
+    "delta_time_s": 3.2397279739379883
+}
