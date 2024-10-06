@@ -1,0 +1,33 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 1,
+    "raw_text": "1.  dat is het probleem want er komt energie vrij, \n  dat is het probleem want er komt energie in dit geval uit de therm.",
+    "correctly_spelled_text": "1.  dat is het probleem want er komt energie vrij, \n  dat is het probleem want er komt energie in dit geval uit de therm.",
+    "spelling_corrections": [
+        {
+            "original": "extraheer",
+            "changes": "extraheer"
+        },
+        {
+            "original": "probleem",
+            "changes": "probleem"
+        },
+        {
+            "original": "energie",
+            "changes": "energie"
+        },
+        {
+            "original": "energie",
+            "changes": "energie"
+        },
+        {
+            "original": "therm",
+            "changes": "therm"
+        }
+    ],
+    "tokens_used": 25937,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728213166,
+    "delta_time_s": 5.321527004241943
+}

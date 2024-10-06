@@ -1,0 +1,12 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 2,
+    "raw_text": "C7H16S(10+5O2(g)) \u2192 4C3H8O(l) + 8H2O(g) + 7O2(g) - 5(5)\n\nC 7\nH 16\nS 1\nO 2 10 22\n\nC 7\nH 2 16\nS 1\nO 3 10 22",
+    "correctly_spelled_text": "C7H16S(10+5O2(g)) \u2192 4C3H8O(l) + 8H2O(g) + 7O2(g) - 5(5)\n\nC 7\nH 16\nS 1\nO 2 10 22\n\nC 7\nH 2 16\nS 1\nO 3 10 22",
+    "spelling_corrections": [],
+    "tokens_used": 14672,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728213433,
+    "delta_time_s": 3.5159108638763428
+}

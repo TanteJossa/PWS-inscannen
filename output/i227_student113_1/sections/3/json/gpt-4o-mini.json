@@ -1,0 +1,17 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 1,
+    "raw_text": "energie naar een ander soort energie (warme)",
+    "correctly_spelled_text": "energie naar een ander soort energie (warmte)",
+    "spelling_corrections": [
+        {
+            "original": "warme",
+            "changes": "warmte"
+        }
+    ],
+    "tokens_used": 14527,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728214794,
+    "delta_time_s": 1.6060686111450195
+}

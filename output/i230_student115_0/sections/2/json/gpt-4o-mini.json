@@ -1,0 +1,25 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 3,
+    "raw_text": "het be\u00efnvloed de reactie snelheid doordat het een stof is die wordt toegevoegd waardoor de activerings-energie 'uitgaand' wordt & de reactie sneller gaat.",
+    "correctly_spelled_text": "het be\u00efnvloedt de reactiesnelheid doordat het een stof is die wordt toegevoegd waardoor de activeringsenergie 'uitgaand' wordt & de reactie sneller gaat.",
+    "spelling_corrections": [
+        {
+            "original": "be\u00efnvloed",
+            "changes": "be\u00efnvloedt"
+        },
+        {
+            "original": "reactie snelheid",
+            "changes": "reactiesnelheid"
+        },
+        {
+            "original": "activerings-energie",
+            "changes": "activeringsenergie"
+        }
+    ],
+    "tokens_used": 14601,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728214842,
+    "delta_time_s": 3.4273481369018555
+}

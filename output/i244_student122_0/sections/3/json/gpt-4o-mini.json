@@ -1,0 +1,17 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 1,
+    "raw_text": "gAls Aan de linker kant van de pijl zie je evenveel aarmen als aan de rechterkant van de pijl. Zo kun je bewijzen dat er geen massa verloren gaat.",
+    "correctly_spelled_text": "Als aan de linker kant van de pijl zie je evenveel aarmen als aan de rechterkant van de pijl. Zo kun je bewijzen dat er geen massa verloren gaat.",
+    "spelling_corrections": [
+        {
+            "original": "gAls",
+            "changes": "g -> (verwijderd)"
+        }
+    ],
+    "tokens_used": 14585,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728215004,
+    "delta_time_s": 3.3112525939941406
+}

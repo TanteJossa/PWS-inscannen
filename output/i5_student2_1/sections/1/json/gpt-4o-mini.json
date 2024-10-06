@@ -1,0 +1,25 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 2,
+    "raw_text": "hek pinda's\nvermalen\ngeemalen pinda's\ndesilleren\nopgelost vet met stukjes pinda\nfilteren\nstukjes pinda\nopgelost vet\nvet",
+    "correctly_spelled_text": "hek pinda's\nvermalen\ngemalen pinda's\ndesilleren\nopgelost vet met stukjes pinda\nfilteren\nstukjes pinda\nopgelost vet\nvet",
+    "spelling_corrections": [
+        {
+            "original": "geemalen",
+            "changes": "gemalen"
+        },
+        {
+            "original": "stukjes pinda",
+            "changes": "stukjes pinda"
+        },
+        {
+            "original": "opgelost vet",
+            "changes": "opgelost vet"
+        }
+    ],
+    "tokens_used": 14625,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728215868,
+    "delta_time_s": 6.1974945068359375
+}

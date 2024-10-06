@@ -1,0 +1,17 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 7,
+    "raw_text": "Een exotherme reacie\n4 NaCH\u2083COO(s) \u21cc 2 Na(g) + CO\u2082(g) + H\u2082O(l)\n2 NaCH\u2083COO(s) \u21cc 2 Na(g) + 8 CO\u2082(g) + 3 H\u2082O(l)\n4 NaCH\u2083COO(s) \u21cc 4 Na(g) + 8 CO\u2082(g) + 6 H\u2082O(g)",
+    "correctly_spelled_text": "Een exotherme reactie\n4 NaCH\u2083COO(s) \u21cc 2 Na(g) + CO\u2082(g) + H\u2082O(l)\n2 NaCH\u2083COO(s) \u21cc 2 Na(g) + 8 CO\u2082(g) + 3 H\u2082O(l)\n4 NaCH\u2083COO(s) \u21cc 4 Na(g) + 8 CO\u2082(g) + 6 H\u2082O(g)",
+    "spelling_corrections": [
+        {
+            "original": "reacie",
+            "changes": "reactie"
+        }
+    ],
+    "tokens_used": 14702,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728213030,
+    "delta_time_s": 6.103355169296265
+}

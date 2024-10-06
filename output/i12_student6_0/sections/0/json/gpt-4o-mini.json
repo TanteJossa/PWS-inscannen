@@ -1,0 +1,17 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 12,
+    "raw_text": "\n\ngemotiveerde toestond\n\nbeginstof\n\nverloop reactie\n\nreactieproduct\n\nE\n\nAE\n",
+    "correctly_spelled_text": "\n\ngemotiveerde toestand\n\nbeginstof\n\nverloop reactie\n\nreactieproduct\n\nE\n\nAE\n",
+    "spelling_corrections": [
+        {
+            "original": "toestond",
+            "changes": "toestand"
+        }
+    ],
+    "tokens_used": 14567,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728212871,
+    "delta_time_s": 3.601510763168335
+}

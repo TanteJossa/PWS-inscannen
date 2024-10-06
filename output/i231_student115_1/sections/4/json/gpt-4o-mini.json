@@ -1,0 +1,17 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 10,
+    "raw_text": "Het wordt lastiger want als het een open re- actievat is weet je niet zeker of er andere stoffen bij komen die niet bij de reactie horen, waardoor de massa zwaarder wordt.",
+    "correctly_spelled_text": "Het wordt lastiger want als het een open reactievat is weet je niet zeker of er andere stoffen bij komen die niet bij de reactie horen, waardoor de massa zwaarder wordt.",
+    "spelling_corrections": [
+        {
+            "original": "re- actievat",
+            "changes": "reactievat"
+        }
+    ],
+    "tokens_used": 14587,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728214865,
+    "delta_time_s": 3.180889368057251
+}

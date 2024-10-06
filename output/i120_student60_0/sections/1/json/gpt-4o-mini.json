@@ -1,0 +1,17 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 3,
+    "raw_text": "De katalysator wordt gebruikt in de reactie, maar komt uit de reactie hetzelfde uit.",
+    "correctly_spelled_text": "De katalysator wordt gebruikt in de reactie, maar komt uit de reactie hetzelfde uit.",
+    "spelling_corrections": [
+        {
+            "original": "reacte",
+            "changes": "reactie"
+        }
+    ],
+    "tokens_used": 14541,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728212590,
+    "delta_time_s": 2.046077013015747
+}

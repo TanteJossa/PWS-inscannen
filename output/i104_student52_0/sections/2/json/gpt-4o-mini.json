@@ -1,0 +1,17 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 3,
+    "raw_text": "Een katalysator is een stof die ervoor zorgt dat de chemische reactie sneller verloopt. Doordat de op micro niveau meer effectieve oplossingen zijn ligt op macro niveau de reactietijd.",
+    "correctly_spelled_text": "Een katalysator is een stof die ervoor zorgt dat de chemische reactie sneller verloopt. Doordat er op micro niveau meer effectieve oplossingen zijn ligt op macro niveau de reactietijd.",
+    "spelling_corrections": [
+        {
+            "original": "de op micro niveau",
+            "changes": "er op micro niveau"
+        }
+    ],
+    "tokens_used": 14585,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728212334,
+    "delta_time_s": 4.72999119758606
+}

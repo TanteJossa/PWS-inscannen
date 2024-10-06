@@ -1,0 +1,45 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 1,
+    "raw_text": "deze tekst is een voorbeeld van een toetsantwoord. het is belangrijk om goed te lezen en te begrijpen wat er gevraagd wordt. als je twijfelt, vraag dan om hulp. \n\n1.a dit is een voorbeeld van een vraag. \n1.b hier is een antwoord op die vraag. \n\nlet op de spelling en grammatica. \n\n2.a dit is een tweede vraag. \n2.b en hier is het antwoord daarop.",
+    "correctly_spelled_text": "deze tekst is een voorbeeld van een toetsantwoord. het is belangrijk om goed te lezen en te begrijpen wat er gevraagd wordt. als je twijfelt, vraag dan om hulp. \n\n1.a dit is een voorbeeld van een vraag. \n1.b hier is een antwoord op die vraag. \n\nlet op de spelling en grammatica. \n\n2.a dit is een tweede vraag. \n2.b en hier is het antwoord daarop.",
+    "spelling_corrections": [
+        {
+            "original": "toetsantwoord",
+            "changes": "toets antwoord"
+        },
+        {
+            "original": "belangrijk",
+            "changes": "belangrijk"
+        },
+        {
+            "original": "vraag dan om hulp",
+            "changes": "vraag dan om hulp"
+        },
+        {
+            "original": "voorbeeld van een vraag",
+            "changes": "voorbeeld van een vraag"
+        },
+        {
+            "original": "antwoord op die vraag",
+            "changes": "antwoord op die vraag"
+        },
+        {
+            "original": "let op de spelling en grammatica",
+            "changes": "let op de spelling en grammatica"
+        },
+        {
+            "original": "tweede vraag",
+            "changes": "tweede vraag"
+        },
+        {
+            "original": "antwoord daarop",
+            "changes": "antwoord daarop"
+        }
+    ],
+    "tokens_used": 14791,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728213555,
+    "delta_time_s": 5.150976657867432
+}

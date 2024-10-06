@@ -1,0 +1,21 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 3,
+    "raw_text": "de pinda's hebben daardoor een groter contact oppervlakte en daardoor kunnen er meer botsingen plaats vinden. Door meer effectieve botsingen gaat het de reactie sneller.",
+    "correctly_spelled_text": "de pinda's hebben daardoor een groter contactoppervlak en daardoor kunnen er meer botsingen plaatsvinden. Door meer effectieve botsingen gaat de reactie sneller.",
+    "spelling_corrections": [
+        {
+            "original": "oppervlakte",
+            "changes": "oppervlak"
+        },
+        {
+            "original": "plaats vinden",
+            "changes": "plaatsvinden"
+        }
+    ],
+    "tokens_used": 14577,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728213015,
+    "delta_time_s": 5.009475946426392
+}

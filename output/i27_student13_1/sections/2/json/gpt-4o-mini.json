@@ -1,0 +1,33 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 8,
+    "raw_text": "Het botsende deeltjes model verklaart hoe groter het raakvlak hoe hoe groter de kans op een effectieve botsing. Als je de pindas' fijnste punt krijgen ze op microniveau meer raakoppervlak.\n9. Er zijn aan beide kanten van de pij evenveel van atomen.. c links = H2 , rechts = H2",
+    "correctly_spelled_text": "Het botsende deeltjesmodel verklaart hoe groter het raakvlak, hoe groter de kans op een effectieve botsing. Als je de pindas' fijnste punt krijgt, hebben ze op microniveau meer raakoppervlak.\n9. Er zijn aan beide kanten van de pij evenveel atomen. c links = H2, rechts = H2",
+    "spelling_corrections": [
+        {
+            "original": "deeltjes model",
+            "changes": "deeltjesmodel"
+        },
+        {
+            "original": "hoe hoe",
+            "changes": "hoe"
+        },
+        {
+            "original": "krijgen ze",
+            "changes": "krijgt, hebben ze"
+        },
+        {
+            "original": "van atomen..",
+            "changes": "atomen."
+        },
+        {
+            "original": "c links = H2 ,",
+            "changes": "c links = H2,"
+        }
+    ],
+    "tokens_used": 14706,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728215463,
+    "delta_time_s": 3.6223092079162598
+}

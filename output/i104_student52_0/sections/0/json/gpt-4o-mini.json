@@ -1,0 +1,25 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 1,
+    "raw_text": "Het verbrandn is een endotherm proces. Dit kunt dekt er een energie moet worden toegeveegd om de benzine te verbranden. De temperatuur van de benzine moet boven de ontbrandingstemperatuur zijn (door energie toe te voegen) (waardom) om de benzine te verbranden.",
+    "correctly_spelled_text": "Het verbranden is een endotherm proces. Dit komt doordat er een energie moet worden toegeveegd om de benzine te verbranden. De temperatuur van de benzine moet boven de ontbrandingstemperatuur zijn (door energie toe te voegen) (waarom) om de benzine te verbranden.",
+    "spelling_corrections": [
+        {
+            "original": "verbrandn",
+            "changes": "verbranden"
+        },
+        {
+            "original": "dekt",
+            "changes": "komt"
+        },
+        {
+            "original": "waardom",
+            "changes": "waarom"
+        }
+    ],
+    "tokens_used": 14654,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728212326,
+    "delta_time_s": 4.441920280456543
+}

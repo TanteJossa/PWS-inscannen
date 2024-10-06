@@ -1,0 +1,21 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 1,
+    "raw_text": "chem E\nO2 + (g) (stof) \nbeginsstoffen\n\nEact\n\n\u0394E<0\n\nreactieproducten\n\nverloop reactie",
+    "correctly_spelled_text": "chem E\nO2 + (g) (stof) \nbeginsstoffen\n\nEact\n\n\u0394E<0\n\nreactieproducten\n\nverloop reactie",
+    "spelling_corrections": [
+        {
+            "original": "stof",
+            "changes": "stof"
+        },
+        {
+            "original": "reactieproducten",
+            "changes": "reactieproducten"
+        }
+    ],
+    "tokens_used": 14592,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728213214,
+    "delta_time_s": 2.4523472785949707
+}

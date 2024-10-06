@@ -1,0 +1,104 @@
+{
+  "analyzeResult": {
+    "modelVersion": "2022-04-30",
+    "readResults": [
+      {
+        "angle": 0,
+        "height": 845,
+        "lines": [
+          {
+            "appearance": {
+              "style": {
+                "confidence": 0.428,
+                "name": "handwriting"
+              }
+            },
+            "boundingBox": [
+              64,
+              188,
+              62,
+              215,
+              56,
+              215,
+              58,
+              188
+            ],
+            "text": "- -.",
+            "words": [
+              {
+                "boundingBox": [
+                  64,
+                  190,
+                  63,
+                  194,
+                  58,
+                  194,
+                  59,
+                  190
+                ],
+                "confidence": 0.75,
+                "text": "-"
+              },
+              {
+                "boundingBox": [
+                  63,
+                  202,
+                  63,
+                  214,
+                  57,
+                  214,
+                  58,
+                  202
+                ],
+                "confidence": 0.693,
+                "text": "-."
+              }
+            ]
+          },
+          {
+            "appearance": {
+              "style": {
+                "confidence": 0.428,
+                "name": "handwriting"
+              }
+            },
+            "boundingBox": [
+              78,
+              250,
+              94,
+              250,
+              94,
+              263,
+              78,
+              263
+            ],
+            "text": "13",
+            "words": [
+              {
+                "boundingBox": [
+                  80,
+                  250,
+                  94,
+                  250,
+                  94,
+                  263,
+                  80,
+                  263
+                ],
+                "confidence": 0.54,
+                "text": "13"
+              }
+            ]
+          }
+        ],
+        "page": 1,
+        "unit": "pixel",
+        "width": 105
+      }
+    ],
+    "version": "3.2.0"
+  },
+  "createdDateTime": "2024-10-06T09:19:31Z",
+  "lastUpdatedDateTime": "2024-10-06T09:19:31Z",
+  "status": "succeeded"
+}

@@ -1,0 +1,33 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 1,
+    "raw_text": "u Ondet elle droom evenveel woortkant voor de eijl als na de eijl dus gaat er tHagen droom en",
+    "correctly_spelled_text": "u Omdat elke droom evenveel voortkomt voor de eijl als na de eijl dus gaat er dingen dromen",
+    "spelling_corrections": [
+        {
+            "original": "Ondet",
+            "changes": "Omdat"
+        },
+        {
+            "original": "elle",
+            "changes": "elke"
+        },
+        {
+            "original": "woortkant",
+            "changes": "voorkomt"
+        },
+        {
+            "original": "de eijl",
+            "changes": "de eijl"
+        },
+        {
+            "original": "tHagen",
+            "changes": "dingen"
+        }
+    ],
+    "tokens_used": 14599,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728212302,
+    "delta_time_s": 3.077322483062744
+}

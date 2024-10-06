@@ -1,0 +1,21 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 5,
+    "raw_text": "\u0394E>0 .het is namelijk een endotherme reactie;waarbij warmte gebruikt wordt om chemische energie te vormen.",
+    "correctly_spelled_text": "\u0394E>0. Het is namelijk een endotherme reactie; waarbij warmte gebruikt wordt om chemische energie te vormen.",
+    "spelling_corrections": [
+        {
+            "original": "\u0394E>0 .het",
+            "changes": "\u0394E>0. Het"
+        },
+        {
+            "original": "reactie;waarbij",
+            "changes": "reactie; waarbij"
+        }
+    ],
+    "tokens_used": 14579,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728215452,
+    "delta_time_s": 12.477362394332886
+}

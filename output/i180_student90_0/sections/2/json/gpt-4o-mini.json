@@ -1,0 +1,25 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 4,
+    "raw_text": "Je zie dat er voor de peil en de post peil exacte etzetera, hoe het een jester corm is.",
+    "correctly_spelled_text": "Je ziet dat er voor de peil en de post peil exacte et cetera, hoe het een jester krom is.",
+    "spelling_corrections": [
+        {
+            "original": "zie",
+            "changes": "ziet"
+        },
+        {
+            "original": "etzetera",
+            "changes": "et cetera"
+        },
+        {
+            "original": "corm",
+            "changes": "krom"
+        }
+    ],
+    "tokens_used": 14578,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728213906,
+    "delta_time_s": 2.3400328159332275
+}

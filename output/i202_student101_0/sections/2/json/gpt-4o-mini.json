@@ -1,0 +1,33 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 3,
+    "raw_text": "Een katalysator zorgu ervoor dat een reactietiemheid voor een snellere hogere reactietiemheid door ervoor te zorgen dat de geactiveerde toestand sneller wordt bereikt. Hierdoor verloopt een reactietiem sneller.",
+    "correctly_spelled_text": "Een katalysator zorgt ervoor dat een reactietijd voor een snellere hogere reactietijd door ervoor te zorgen dat de geactiveerde toestand sneller wordt bereikt. Hierdoor verloopt een reactietijd sneller.",
+    "spelling_corrections": [
+        {
+            "original": "zorgu",
+            "changes": "zorgt"
+        },
+        {
+            "original": "reactietiemheid",
+            "changes": "reactietijd"
+        },
+        {
+            "original": "reactietiemheid",
+            "changes": "reactietijd"
+        },
+        {
+            "original": "bereidt",
+            "changes": "bereikt"
+        },
+        {
+            "original": "reactietiem",
+            "changes": "reactietijd"
+        }
+    ],
+    "tokens_used": 14642,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728214441,
+    "delta_time_s": 2.7602767944335938
+}

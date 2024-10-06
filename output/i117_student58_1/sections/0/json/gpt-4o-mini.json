@@ -1,0 +1,21 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 2,
+    "raw_text": "2. Varkens aan het woord. De pindas hebben dan een grote, sprekende, maar anders zijn is dus dan kan er meer van uit dan als je beide pindas zou gebruiken, omdat je gewoon bij meer kan komen.",
+    "correctly_spelled_text": "2. Varkens aan het woord. De pindas hebben dan een grote, sprekende, maar anders zijn is dus dan kan er meer van uit dan als je beide pindas zou gebruiken, omdat je gewoon bij meer kan komen.",
+    "spelling_corrections": [
+        {
+            "original": "pindas",
+            "changes": "pinda's"
+        },
+        {
+            "original": "spreken, maar",
+            "changes": "sprekende, maar"
+        }
+    ],
+    "tokens_used": 14619,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728212576,
+    "delta_time_s": 3.9503848552703857
+}

@@ -1,0 +1,17 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 7,
+    "raw_text": "7\nkristische\nergie\nwarmte\na\nkristallisatie\nvan\nde\nklik\n\nergie\nvan\nde\nklik\n\u2192\nkristallisatie\u2192warmte",
+    "correctly_spelled_text": "7\nkristische\nergie\nwarmte\na\nkristallisatie\nvan\nde\nklik\n\nergie\nvan\nde\nklik\n\u2192\nkristallisatie\u2192warmte",
+    "spelling_corrections": [
+        {
+            "original": "kristische",
+            "changes": "kristallisatie"
+        }
+    ],
+    "tokens_used": 14594,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728216067,
+    "delta_time_s": 3.0442938804626465
+}

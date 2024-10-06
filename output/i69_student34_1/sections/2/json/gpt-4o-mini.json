@@ -1,0 +1,17 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 8,
+    "raw_text": "8 exotherm want er komt genoeg energie bij vrij om de reactie op nieuw te laten gebeuren",
+    "correctly_spelled_text": "8 exotherm want er komt genoeg energie bij vrij om de reactie opnieuw te laten gebeuren",
+    "spelling_corrections": [
+        {
+            "original": "nieuw",
+            "changes": "opnieuw"
+        }
+    ],
+    "tokens_used": 14543,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728216071,
+    "delta_time_s": 4.077249765396118
+}

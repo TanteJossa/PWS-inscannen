@@ -1,0 +1,33 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 11,
+    "raw_text": "door de katalysator is een van de 4 dingen die je kan doen om een reactie sneller te laten verlopen, de katalysator is hier zuurstof. Het wordt be\u00efnvloed door",
+    "correctly_spelled_text": "door de katalysator is een van de 4 dingen die je kan doen om een reactie sneller te laten verlopen, de katalysator is hier zuurstof. Het wordt be\u00efnvloed door",
+    "spelling_corrections": [
+        {
+            "original": "4",
+            "changes": "4"
+        },
+        {
+            "original": "kan",
+            "changes": "kan"
+        },
+        {
+            "original": "verlopen,",
+            "changes": "verlopen,"
+        },
+        {
+            "original": "is",
+            "changes": "is"
+        },
+        {
+            "original": "be\u00efnvloed",
+            "changes": "be\u00efnvloed"
+        }
+    ],
+    "tokens_used": 14621,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728213728,
+    "delta_time_s": 6.069892883300781
+}

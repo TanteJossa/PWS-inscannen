@@ -1,0 +1,41 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 3,
+    "raw_text": "door de puids tu saam fynstompe\nverdeel je z in meerdere stulken\nwaardor gontactop.\ner meer contactoppervlakt is en de uitkomst van\nde puids waardoor meerdere deeltjes\nmet elkaar kunnen reageren en\reactiesnelheid toe neemt.",
+    "correctly_spelled_text": "door de puids te samen fynstompen\nverdeel je ze in meerdere stukken\nwaardoor contact op.\ner meer contactoppervlakte is en de uitkomst van\nde puids waardoor meerdere deeltjes\nmet elkaar kunnen reageren en\reactiesnelheid toeneemt.",
+    "spelling_corrections": [
+        {
+            "original": "saam fynstompe",
+            "changes": "samen fynstompen"
+        },
+        {
+            "original": "z",
+            "changes": "ze"
+        },
+        {
+            "original": "stulken",
+            "changes": "stukken"
+        },
+        {
+            "original": "waardor gontactop.",
+            "changes": "waardoor contact op."
+        },
+        {
+            "original": "oppervlakt",
+            "changes": "oppervlakte"
+        },
+        {
+            "original": "deeltjes met",
+            "changes": "deeltjes met"
+        },
+        {
+            "original": "reactiesnelheid toe neemt.",
+            "changes": "reactiesnelheid toeneemt."
+        }
+    ],
+    "tokens_used": 14717,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728215587,
+    "delta_time_s": 4.666881084442139
+}

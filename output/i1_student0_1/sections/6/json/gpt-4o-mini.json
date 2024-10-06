@@ -1,0 +1,53 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 1,
+    "raw_text": "Heep elkan bosten de beside lehtig model\nwan dan da Amand Snol had een lath.",
+    "correctly_spelled_text": "Heb elkan bosten de beste lichting model\nwan dan de Amand Snol had een lat.",
+    "spelling_corrections": [
+        {
+            "original": "Heep",
+            "changes": "Heb"
+        },
+        {
+            "original": "elkan",
+            "changes": "elkan"
+        },
+        {
+            "original": "bosten",
+            "changes": "bosten"
+        },
+        {
+            "original": "beside",
+            "changes": "beste"
+        },
+        {
+            "original": "lehtig",
+            "changes": "lichting"
+        },
+        {
+            "original": "wan",
+            "changes": "wan"
+        },
+        {
+            "original": "da",
+            "changes": "de"
+        },
+        {
+            "original": "Amand",
+            "changes": "Amand"
+        },
+        {
+            "original": "Snol",
+            "changes": "Snol"
+        },
+        {
+            "original": "lath",
+            "changes": "lat."
+        }
+    ],
+    "tokens_used": 14637,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728214427,
+    "delta_time_s": 3.324856996536255
+}

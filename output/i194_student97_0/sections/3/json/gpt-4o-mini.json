@@ -1,0 +1,17 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 13,
+    "raw_text": "Er is don energie nodig",
+    "correctly_spelled_text": "Er is dan energie nodig",
+    "spelling_corrections": [
+        {
+            "original": "don",
+            "changes": "dan"
+        }
+    ],
+    "tokens_used": 14515,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728214177,
+    "delta_time_s": 1.5731043815612793
+}

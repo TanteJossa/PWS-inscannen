@@ -1,0 +1,29 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 9,
+    "raw_text": "g Cln (CO3)2Hn (s) -> 2 Ca (s) + CO2 (g) + H2O (l)\ndezelfde aantal atomen blijft na de reactie bestaan maar de alleen de moleculen zijn veranderd dus omdat er een atomen verdwijnen blijft de massa het zelfde",
+    "correctly_spelled_text": "g Cln (CO3)2Hn (s) -> 2 Ca (s) + CO2 (g) + H2O (l)\ndezelfde aantal atomen blijft na de reactie bestaan maar alleen de moleculen zijn veranderd dus omdat er atomen verdwijnen blijft de massa hetzelfde",
+    "spelling_corrections": [
+        {
+            "original": "dezelfde",
+            "changes": "dezelfde"
+        },
+        {
+            "original": "de",
+            "changes": "alleen"
+        },
+        {
+            "original": "de",
+            "changes": "atomen"
+        },
+        {
+            "original": "het zelfde",
+            "changes": "hetzelfde"
+        }
+    ],
+    "tokens_used": 14662,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728213617,
+    "delta_time_s": 3.8074607849121094
+}

@@ -1,0 +1,25 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 3,
+    "raw_text": "Door het ingrijpen van de atomen loopt de reactie sneller, want er is meer oppervlakte om te reageren. De micro-niveaus zijn er meer effectieve botsingen. En het botsen de deeltjes model laat zien dat als er meer moleculen aan de huid oppervlakte zitten dat ze vaker een effectieve botsing veroorzaken, waardoor ze het andere molecuul op de juiste plek.",
+    "correctly_spelled_text": "Door het ingrijpen van de atomen loopt de reactie sneller, want er is meer oppervlakte om te reageren. De micro-niveaus zijn er meer effectieve botsingen. En het botsen van de deeltjesmodel laat zien dat als er meer moleculen aan de huidoppervlakte zitten dat ze vaker een effectieve botsing veroorzaken, waardoor ze het andere molecuul op de juiste plek.",
+    "spelling_corrections": [
+        {
+            "original": "ingrijpen",
+            "changes": "ingrijpen"
+        },
+        {
+            "original": "de deeltjes model",
+            "changes": "van de deeltjesmodel"
+        },
+        {
+            "original": "huid oppervlakte",
+            "changes": "huidoppervlakte"
+        }
+    ],
+    "tokens_used": 26029,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728214535,
+    "delta_time_s": 4.193511962890625
+}

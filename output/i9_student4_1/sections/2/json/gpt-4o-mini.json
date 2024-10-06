@@ -1,0 +1,25 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 5,
+    "raw_text": "in een open reactievat van er energie verliezen gaan. En in de wet van behoud van massa, gaat er geen atomen verloren.",
+    "correctly_spelled_text": "in een open reactievat van er energie verliezen gaan. En in de wet van behoud van massa, gaat er geen atomen verloren.",
+    "spelling_corrections": [
+        {
+            "original": "reactievat",
+            "changes": "reactievat"
+        },
+        {
+            "original": "verliezen",
+            "changes": "verliezen"
+        },
+        {
+            "original": "atomen",
+            "changes": "atomen"
+        }
+    ],
+    "tokens_used": 14585,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728216526,
+    "delta_time_s": 4.803720712661743
+}

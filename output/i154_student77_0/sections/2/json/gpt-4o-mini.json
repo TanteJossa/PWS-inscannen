@@ -1,0 +1,21 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 3,
+    "raw_text": "De katalysator laat het be\u00efnvloeden de reactiesnelheid doordat het in de auto a moet reageren, in een kleinere ruimte dus zitten de moleculen dichter op elkaar en is er een grotere kans dat de moleculen elkaar eerder aanraaken en dus de reactie sneller gaat!",
+    "correctly_spelled_text": "De katalysator laat het be\u00efnvloeden de reactiesnelheid doordat het in de auto moet reageren, in een kleinere ruimte dus zitten de moleculen dichter op elkaar en is er een grotere kans dat de moleculen elkaar eerder aanraken en dus de reactie sneller gaat!",
+    "spelling_corrections": [
+        {
+            "original": "a",
+            "changes": "moet"
+        },
+        {
+            "original": "aanraaken",
+            "changes": "aanraken"
+        }
+    ],
+    "tokens_used": 14630,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728213255,
+    "delta_time_s": 3.335432529449463
+}

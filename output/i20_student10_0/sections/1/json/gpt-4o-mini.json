@@ -1,0 +1,17 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 2,
+    "raw_text": "\nwarmte\nbewegingenergie \u2192 warmte-energie",
+    "correctly_spelled_text": "\nwarmte\nbewegingenergie \u2192 warmte-energie",
+    "spelling_corrections": [
+        {
+            "original": "bewegingenergie",
+            "changes": "beweging-energie"
+        }
+    ],
+    "tokens_used": 14534,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728214557,
+    "delta_time_s": 2.1162235736846924
+}

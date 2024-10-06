@@ -1,0 +1,33 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 1,
+    "raw_text": "hele stuges pinda's -> gemalen pinda's\nopgelost vet\nexaheren\n\nstuges pinda\n\nfilteren\n\ngedaan * ( Recyclatie van Pijl van opgelost vet met stuges pinda -> gemalen pinda)\n\n3\nHet fijntstompen noem je verdelingsgraad. Dat houdt in dat de pinda's meer contactoppervlak heeft met de grond. Er zitten allemaal moleculen in de gemalen pinda's, die tegen elkaar er is dan icon op een effectieve botsing. Dat behoort bij de botsende deeltjesmodel. Bij een effectieve botsing net de reachtensnelheid toe, omdat er een botsing op treedt met een juridische snelheid en de juiste plek. Dit is op microniveau uitgelegd.",
+    "correctly_spelled_text": "hele stuges pinda's -> gemalen pinda's\nopgelost vet\nexaheren\n\nstuges pinda\n\nfilteren\n\ngedaan * (Recyclatie van Pijl van opgelost vet met stuges pinda -> gemalen pinda)\n\n3\nHet fijntstompen noem je verdelingsgraad. Dat houdt in dat de pinda's meer contactoppervlak heeft met de grond. Er zitten allemaal moleculen in de gemalen pinda's, die tegen elkaar er is dan icon op een effectieve botsing. Dat behoort bij het botsende deeltjesmodel. Bij een effectieve botsing net de reachtensnelheid toe, omdat er een botsing optreedt met een juridische snelheid en de juiste plek. Dit is op microniveau uitgelegd.",
+    "spelling_corrections": [
+        {
+            "original": "stuges",
+            "changes": "stugge"
+        },
+        {
+            "original": "exaheren",
+            "changes": "exaheren"
+        },
+        {
+            "original": "fijntstompen",
+            "changes": "fijnstampen"
+        },
+        {
+            "original": "reachtensnelheid",
+            "changes": "reactiesnelheid"
+        },
+        {
+            "original": "op treedt",
+            "changes": "optreedt"
+        }
+    ],
+    "tokens_used": 26239,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728214148,
+    "delta_time_s": 6.04288387298584
+}

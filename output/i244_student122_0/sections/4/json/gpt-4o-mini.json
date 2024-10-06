@@ -1,0 +1,21 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 10,
+    "raw_text": "Doordat het in een open reactie vat wordt uitgevoerd kan het kwijt raken in de lucht. De zuurstofdeeltjes nemen het op. Daardoor zal aan het eind van de thermolyse deeltjes te minder massa zijn dan aan het begin",
+    "correctly_spelled_text": "Doordat het in een open reactie vat wordt uitgevoerd kan het kwijt raken in de lucht. De zuurstofdeeltjes nemen het op. Daardoor zal aan het eind van de thermolyse deeltjes minder massa zijn dan aan het begin",
+    "spelling_corrections": [
+        {
+            "original": "uitgevoerd",
+            "changes": "uitgevoerd"
+        },
+        {
+            "original": "te minder",
+            "changes": "minder"
+        }
+    ],
+    "tokens_used": 14613,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728215010,
+    "delta_time_s": 6.590843915939331
+}

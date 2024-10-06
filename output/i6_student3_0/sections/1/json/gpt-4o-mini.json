@@ -1,0 +1,29 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 13,
+    "raw_text": "de reactie warmte is positief, omdat bij fotosynthese komt er licht bij, alleen dan is de reactie mge- Lsenergie\nlijk das Ld. dat is het endotherm en dat is de reactie warmte positief.",
+    "correctly_spelled_text": "de reactie warmte is positief, omdat bij fotosynthese komt er licht bij, alleen dan is de reactie met de energie\nlicht dat dat is het endotherm en dat is de reactie warmte positief.",
+    "spelling_corrections": [
+        {
+            "original": "mge-",
+            "changes": "met"
+        },
+        {
+            "original": "Lsenergie",
+            "changes": "de energie"
+        },
+        {
+            "original": "das",
+            "changes": "dat"
+        },
+        {
+            "original": "Ld.",
+            "changes": "dat."
+        }
+    ],
+    "tokens_used": 14620,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728216084,
+    "delta_time_s": 5.083106994628906
+}

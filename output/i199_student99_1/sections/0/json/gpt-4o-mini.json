@@ -1,0 +1,17 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 1,
+    "raw_text": "65 - 13 - 5 = 47 g, dus er ontstaat 47 g hoop(rl)xcde.",
+    "correctly_spelled_text": "65 - 13 - 5 = 47 g, dus er ontstaat 47 g hoop(rl)xcde.",
+    "spelling_corrections": [
+        {
+            "original": "hoop(rl)xcde",
+            "changes": "hoop(rl)xcde"
+        }
+    ],
+    "tokens_used": 14565,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728214361,
+    "delta_time_s": 2.3890459537506104
+}

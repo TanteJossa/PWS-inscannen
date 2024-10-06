@@ -1,0 +1,25 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 10,
+    "raw_text": "Gmdat het een open vad is dus\n2) as er een afwas is dan mag ik het doen",
+    "correctly_spelled_text": "Omdat het een open vat is dus\n2) Als er een afwas is dan mag ik het doen",
+    "spelling_corrections": [
+        {
+            "original": "Gmdat",
+            "changes": "Omdat"
+        },
+        {
+            "original": "vad",
+            "changes": "vat"
+        },
+        {
+            "original": "as",
+            "changes": "Als"
+        }
+    ],
+    "tokens_used": 14565,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728216448,
+    "delta_time_s": 2.0488393306732178
+}

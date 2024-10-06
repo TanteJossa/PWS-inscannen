@@ -1,0 +1,21 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 8,
+    "raw_text": "ex\u00f3theren proces ordi\u00ebel bij een eud e chern pro ces gemene eijz",
+    "correctly_spelled_text": "extraheren procesueel bij een eud e chern pro ces gemene eijz",
+    "spelling_corrections": [
+        {
+            "original": "ex\u00f3theren",
+            "changes": "extraheren"
+        },
+        {
+            "original": "ordi\u00ebel",
+            "changes": "procesueel"
+        }
+    ],
+    "tokens_used": 14563,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728216515,
+    "delta_time_s": 2.1259925365448
+}

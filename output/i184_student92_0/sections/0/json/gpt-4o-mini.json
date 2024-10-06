@@ -1,0 +1,29 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 1,
+    "raw_text": "hele pindas\u2192 vermalen\ngemalen pindas\nalcohol\ndekaleren\noplossen vet\nextracten\nopgelost vet",
+    "correctly_spelled_text": "hele pinda's \u2192 vermalen\ngemalen pinda's\nalcohol\ndestilleren\noplossen vet\nextracten\nopgelost vet",
+    "spelling_corrections": [
+        {
+            "original": "pindas",
+            "changes": "pinda's"
+        },
+        {
+            "original": "dekaleren",
+            "changes": "destilleren"
+        },
+        {
+            "original": "pindas",
+            "changes": "pinda's"
+        },
+        {
+            "original": "opgelost",
+            "changes": "opgelost"
+        }
+    ],
+    "tokens_used": 14610,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728213973,
+    "delta_time_s": 4.458605051040649
+}

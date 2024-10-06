@@ -1,0 +1,21 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 8,
+    "raw_text": "Een exobronwater, waar er kant energie vrij is & Bogen.\n",
+    "correctly_spelled_text": "Een exobronwater, waar er kant energie vrij is & Bogen.\n",
+    "spelling_corrections": [
+        {
+            "original": "exobronwater",
+            "changes": "exobronwater"
+        },
+        {
+            "original": "kant",
+            "changes": "kant"
+        }
+    ],
+    "tokens_used": 14553,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728215565,
+    "delta_time_s": 1.9578588008880615
+}

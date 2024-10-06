@@ -1,0 +1,17 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 6,
+    "raw_text": "Vormelen\ndeciteren\n\nalcohol\n\n\n\n",
+    "correctly_spelled_text": "Vormelen\ndecideren\n\nalcohol\n\n\n\n",
+    "spelling_corrections": [
+        {
+            "original": "deciteren",
+            "changes": "decideren"
+        }
+    ],
+    "tokens_used": 14539,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728213413,
+    "delta_time_s": 31.305092811584473
+}

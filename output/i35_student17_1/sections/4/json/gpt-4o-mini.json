@@ -1,0 +1,17 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 8,
+    "raw_text": "Dit is een exotherme reactie proces, omdat het van chemische energie naar andere energie\u00ebn gaat.",
+    "correctly_spelled_text": "Dit is een exotherme reactieproces, omdat het van chemische energie naar andere energie\u00ebn gaat.",
+    "spelling_corrections": [
+        {
+            "original": "exotherme reactie proces",
+            "changes": "exotherme reactieproces"
+        }
+    ],
+    "tokens_used": 14553,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728215521,
+    "delta_time_s": 4.6104466915130615
+}

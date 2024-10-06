@@ -1,0 +1,25 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 3,
+    "raw_text": "3. Doordat de pinda's dan kleiner zijn is op microscopisch niveau het contactoppervlak groter geworden en daardoor geldt: hoe groter het contactoppervlak, hoe meer kans op botsingen (die effectiever zijn). In het botsende deeltjes model staat dat hoe meer effectieve botsingen er zijn, hoe sneller de reactie verloopt.",
+    "correctly_spelled_text": "3. Doordat de pinda's dan kleiner zijn, is op microscopisch niveau het contactoppervlak groter geworden en daardoor geldt: hoe groter het contactoppervlak, hoe meer kans op botsingen (die effectiever zijn). In het botsende deeltjesmodel staat dat hoe meer effectieve botsingen er zijn, hoe sneller de reactie verloopt.",
+    "spelling_corrections": [
+        {
+            "original": "is op microscopisch niveau het contactoppervlak groter geworden",
+            "changes": "is op microscopisch niveau het contactoppervlak groter geworden"
+        },
+        {
+            "original": "hoe meer kans op botsingen (die effectiever zijn)",
+            "changes": "hoe meer kans op botsingen (die effectiever zijn)."
+        },
+        {
+            "original": "In het botsende deeltjes model staat dat hoe meer effectieve botsingen er zijn, hoe sneller de reactie verloopt.",
+            "changes": "In het botsende deeltjesmodel staat dat hoe meer effectieve botsingen er zijn, hoe sneller de reactie verloopt."
+        }
+    ],
+    "tokens_used": 14749,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728215339,
+    "delta_time_s": 4.696399927139282
+}

@@ -1,0 +1,12 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 2,
+    "raw_text": "C?H16S + 12O2 -> CO2 + H2O + SO2\nC = 7\nH = 16\nS = 1\nO = 2\n\nC = x\nH = 2x\nS = 1\nO = 3x + 24\n\nC7H16S + 12O2 -> 7CO2 + 8H2O + SO2",
+    "correctly_spelled_text": "C?H16S + 12O2 -> CO2 + H2O + SO2\nC = 7\nH = 16\nS = 1\nO = 2\n\nC = x\nH = 2x\nS = 1\nO = 3x + 24\n\nC7H16S + 12O2 -> 7CO2 + 8H2O + SO2",
+    "spelling_corrections": [],
+    "tokens_used": 14678,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728213203,
+    "delta_time_s": 6.914675712585449
+}

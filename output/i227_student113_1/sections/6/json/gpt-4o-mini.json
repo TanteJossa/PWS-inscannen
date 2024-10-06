@@ -1,0 +1,21 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 11,
+    "raw_text": "de katalysator kan de reactiet snelheid be\u00efnvloeden, \nwant door de katalysator is er minder energie nodig \nom tot de geactiveerde toestand te komen. Dus de \nreactie verloopt sneller, en de reactiet snelheid wordt \ndan ook verhoogd.",
+    "correctly_spelled_text": "de katalysator kan de reactiesnelheid be\u00efnvloeden, \nwant door de katalysator is er minder energie nodig \nom tot de geactiveerde toestand te komen. Dus de \nreactie verloopt sneller, en de reactiesnelheid wordt \ndan ook verhoogd.",
+    "spelling_corrections": [
+        {
+            "original": "reactiet snelheid",
+            "changes": "reactiesnelheid"
+        },
+        {
+            "original": "reactiet snelheid",
+            "changes": "reactiesnelheid"
+        }
+    ],
+    "tokens_used": 14639,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728214806,
+    "delta_time_s": 4.041785001754761
+}

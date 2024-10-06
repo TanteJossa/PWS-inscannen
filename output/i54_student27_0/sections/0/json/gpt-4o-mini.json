@@ -1,0 +1,21 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 1,
+    "raw_text": "De verbranding van zuwelhoudende benzine is een exotherm proces, omdat er weinig energie in gaat, de chemische energie om de benzine te verbranden, en er vi. energie uit komt, de bewegingsenergie.",
+    "correctly_spelled_text": "De verbranding van zwavelhoudende benzine is een exotherm proces, omdat er weinig energie in gaat, de chemische energie om de benzine te verbranden, en er via energie uit komt, de bewegingsenergie.",
+    "spelling_corrections": [
+        {
+            "original": "zuwelhoudende",
+            "changes": "zwavelhoudende"
+        },
+        {
+            "original": "vi.",
+            "changes": "via"
+        }
+    ],
+    "tokens_used": 14615,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728215768,
+    "delta_time_s": 3.948326587677002
+}

@@ -1,0 +1,25 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 11,
+    "raw_text": "De katalysator versneld de ieactie, omdat de geactiveerde toestand wordt verlaagd, waardoor de en reactie sneller verloopt.",
+    "correctly_spelled_text": "De katalysator versnelt de reactie, omdat de geactiveerde toestand wordt verlaagd, waardoor de reactie sneller verloopt.",
+    "spelling_corrections": [
+        {
+            "original": "versneld",
+            "changes": "versnelt"
+        },
+        {
+            "original": "ieactie",
+            "changes": "reactie"
+        },
+        {
+            "original": "de en",
+            "changes": "de reactie"
+        }
+    ],
+    "tokens_used": 14582,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728214174,
+    "delta_time_s": 2.6493470668792725
+}

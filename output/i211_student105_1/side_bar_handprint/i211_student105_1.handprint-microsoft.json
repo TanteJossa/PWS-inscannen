@@ -1,0 +1,118 @@
+{
+  "analyzeResult": {
+    "modelVersion": "2022-04-30",
+    "readResults": [
+      {
+        "angle": -0.5616,
+        "height": 845,
+        "lines": [
+          {
+            "appearance": {
+              "style": {
+                "confidence": 0.972,
+                "name": "other"
+              }
+            },
+            "boundingBox": [
+              53,
+              124,
+              104,
+              123,
+              104,
+              133,
+              53,
+              133
+            ],
+            "text": "hele pur",
+            "words": [
+              {
+                "boundingBox": [
+                  54,
+                  124,
+                  78,
+                  124,
+                  78,
+                  134,
+                  54,
+                  134
+                ],
+                "confidence": 0.917,
+                "text": "hele"
+              },
+              {
+                "boundingBox": [
+                  85,
+                  124,
+                  102,
+                  124,
+                  102,
+                  133,
+                  85,
+                  134
+                ],
+                "confidence": 0.128,
+                "text": "pur"
+              }
+            ]
+          },
+          {
+            "appearance": {
+              "style": {
+                "confidence": 0.856,
+                "name": "handwriting"
+              }
+            },
+            "boundingBox": [
+              83,
+              423,
+              103,
+              422,
+              104,
+              432,
+              83,
+              433
+            ],
+            "text": "is e",
+            "words": [
+              {
+                "boundingBox": [
+                  83,
+                  422,
+                  94,
+                  422,
+                  94,
+                  432,
+                  83,
+                  433
+                ],
+                "confidence": 0.067,
+                "text": "is"
+              },
+              {
+                "boundingBox": [
+                  96,
+                  422,
+                  103,
+                  422,
+                  103,
+                  432,
+                  96,
+                  432
+                ],
+                "confidence": 0.925,
+                "text": "e"
+              }
+            ]
+          }
+        ],
+        "page": 1,
+        "unit": "pixel",
+        "width": 105
+      }
+    ],
+    "version": "3.2.0"
+  },
+  "createdDateTime": "2024-10-06T09:29:32Z",
+  "lastUpdatedDateTime": "2024-10-06T09:29:32Z",
+  "status": "succeeded"
+}

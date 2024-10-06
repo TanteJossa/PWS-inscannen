@@ -1,0 +1,17 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 5,
+    "raw_text": "5 Omdat er dan tijdens de root andere stoffen bij kunnen komen.\n",
+    "correctly_spelled_text": "5 Omdat er dan tijdens de roet andere stoffen bij kunnen komen.\n",
+    "spelling_corrections": [
+        {
+            "original": "root",
+            "changes": "roet"
+        }
+    ],
+    "tokens_used": 14535,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728215879,
+    "delta_time_s": 1.6324985027313232
+}

@@ -1,0 +1,21 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 9,
+    "raw_text": "\n9) Hier is een massa en daar is een gewicht. Als de stof gelijk blijft, dan van de massa afhangt, dan kan je zeggen dat de massa en het gewicht gelijk zijn.\nJe kunt zien dat er geen massa verloren gaat omdat er nog steeds het zelfde aantal van elke stof is. Bijvoorbeeld links zijn er misschien 5 O types en rechts ook.\n",
+    "correctly_spelled_text": "\n9) Hier is een massa en daar is een gewicht. Als de stof gelijk blijft, dan hangt de massa af, dan kan je zeggen dat de massa en het gewicht gelijk zijn.\nJe kunt zien dat er geen massa verloren gaat omdat er nog steeds het zelfde aantal van elke stof is. Bijvoorbeeld links zijn er misschien 5 O-types en rechts ook.\n",
+    "spelling_corrections": [
+        {
+            "original": "afhangt",
+            "changes": "af hangt"
+        },
+        {
+            "original": "O types",
+            "changes": "O-types"
+        }
+    ],
+    "tokens_used": 14672,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728212580,
+    "delta_time_s": 4.1548237800598145
+}

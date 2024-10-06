@@ -1,0 +1,21 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 20,
+    "raw_text": "Een katalysator laat de rendtiesnelheid smaller verlopen, een katalysator is niet aanwezig tijdens de reactie maar wel aanwezig tijdens het eind van de reactie.\n\n1.a\n\nE\nC\nD\n\nreactiewarmte\n\nactivatie-energie.\n\nproces ->",
+    "correctly_spelled_text": "Een katalysator laat de reactiesnelheid smaller verlopen, een katalysator is niet aanwezig tijdens de reactie maar wel aanwezig tijdens het eind van de reactie.\n\n1.a\n\nE\nC\nD\n\nreactiewarmte\n\nactivatie-energie.\n\nproces ->",
+    "spelling_corrections": [
+        {
+            "original": "rendtiesnelheid",
+            "changes": "reactiesnelheid"
+        },
+        {
+            "original": "activieringenergie",
+            "changes": "activatie-energie"
+        }
+    ],
+    "tokens_used": 14645,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728212534,
+    "delta_time_s": 3.0257935523986816
+}

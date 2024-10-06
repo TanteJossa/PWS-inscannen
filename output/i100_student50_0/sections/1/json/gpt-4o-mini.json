@@ -1,0 +1,17 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 10,
+    "raw_text": "C7H16S + O2 \u2192 CO2 + H2O + S\nC7H16S + 16 O2 \u2192 7 CO2 + 8 H2O + 5 S O2",
+    "correctly_spelled_text": "C7H16S + O2 \u2192 CO2 + H2O + S\nC7H16S + 16 O2 \u2192 7 CO2 + 8 H2O + 5 SO2",
+    "spelling_corrections": [
+        {
+            "original": "S O2",
+            "changes": "SO2"
+        }
+    ],
+    "tokens_used": 14597,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728212278,
+    "delta_time_s": 3.319824457168579
+}

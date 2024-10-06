@@ -1,0 +1,21 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 8,
+    "raw_text": "Het fijnden van pindas geeft de pindas een groter oppervlak, dat je mooi zien op microniveau waar de buitenste deeltjes meer kans hebben om te breken, met daarbinnen waar er buiten 'is en 'is de kans op.",
+    "correctly_spelled_text": "Het vinden van pindas geeft de pindas een groter oppervlak, dat je mooi ziet op microniveau waar de buitenste deeltjes meer kans hebben om te breken, met daarbinnen waar er buiten 'is en 'is de kans op.",
+    "spelling_corrections": [
+        {
+            "original": "fijnden",
+            "changes": "vinden"
+        },
+        {
+            "original": "zien",
+            "changes": "ziet"
+        }
+    ],
+    "tokens_used": 14617,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728215045,
+    "delta_time_s": 3.787515163421631
+}

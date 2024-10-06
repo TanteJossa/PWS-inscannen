@@ -1,0 +1,37 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 1,
+    "raw_text": "\nI exothen onde of Mar enegie\nwij hun dan c in de sunvel\ngeeft en mag en rede ez\nhoofd met constert enegie giychen\nte worden\n",
+    "correctly_spelled_text": "\nIk extraheer onder de Mar energie\nwij hun dan c in de tunnel\ngeeft en mag een reden\nhoofd met constant energie geven\nte worden\n",
+    "spelling_corrections": [
+        {
+            "original": "exothen",
+            "changes": "extraheer"
+        },
+        {
+            "original": "enegie",
+            "changes": "energie"
+        },
+        {
+            "original": "sunvel",
+            "changes": "tunnel"
+        },
+        {
+            "original": "ez",
+            "changes": "reden"
+        },
+        {
+            "original": "constert",
+            "changes": "constant"
+        },
+        {
+            "original": "giychen",
+            "changes": "geven"
+        }
+    ],
+    "tokens_used": 14636,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728212274,
+    "delta_time_s": 3.5979666709899902
+}

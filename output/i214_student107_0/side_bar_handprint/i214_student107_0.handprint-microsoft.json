@@ -1,0 +1,223 @@
+{
+  "analyzeResult": {
+    "modelVersion": "2022-04-30",
+    "readResults": [
+      {
+        "angle": 2.1818,
+        "height": 845,
+        "lines": [
+          {
+            "appearance": {
+              "style": {
+                "confidence": 1,
+                "name": "handwriting"
+              }
+            },
+            "boundingBox": [
+              74,
+              339,
+              104,
+              339,
+              104,
+              358,
+              74,
+              357
+            ],
+            "text": "1 /2",
+            "words": [
+              {
+                "boundingBox": [
+                  74,
+                  339,
+                  78,
+                  339,
+                  78,
+                  358,
+                  74,
+                  357
+                ],
+                "confidence": 0.983,
+                "text": "1"
+              },
+              {
+                "boundingBox": [
+                  82,
+                  339,
+                  102,
+                  339,
+                  102,
+                  358,
+                  82,
+                  358
+                ],
+                "confidence": 0.626,
+                "text": "/2"
+              }
+            ]
+          },
+          {
+            "appearance": {
+              "style": {
+                "confidence": 1,
+                "name": "handwriting"
+              }
+            },
+            "boundingBox": [
+              51,
+              385,
+              104,
+              387,
+              103,
+              404,
+              51,
+              402
+            ],
+            "text": "hele pir",
+            "words": [
+              {
+                "boundingBox": [
+                  53,
+                  386,
+                  80,
+                  387,
+                  79,
+                  404,
+                  51,
+                  401
+                ],
+                "confidence": 0.919,
+                "text": "hele"
+              },
+              {
+                "boundingBox": [
+                  86,
+                  387,
+                  103,
+                  388,
+                  102,
+                  403,
+                  86,
+                  404
+                ],
+                "confidence": 0.742,
+                "text": "pir"
+              }
+            ]
+          },
+          {
+            "appearance": {
+              "style": {
+                "confidence": 1,
+                "name": "handwriting"
+              }
+            },
+            "boundingBox": [
+              48,
+              467,
+              57,
+              467,
+              57,
+              473,
+              48,
+              473
+            ],
+            "text": "-",
+            "words": [
+              {
+                "boundingBox": [
+                  51,
+                  467,
+                  55,
+                  467,
+                  55,
+                  473,
+                  51,
+                  473
+                ],
+                "confidence": 0.716,
+                "text": "-"
+              }
+            ]
+          },
+          {
+            "appearance": {
+              "style": {
+                "confidence": 1,
+                "name": "handwriting"
+              }
+            },
+            "boundingBox": [
+              71,
+              485,
+              84,
+              485,
+              84,
+              502,
+              72,
+              501
+            ],
+            "text": "3",
+            "words": [
+              {
+                "boundingBox": [
+                  71,
+                  485,
+                  82,
+                  485,
+                  82,
+                  502,
+                  71,
+                  501
+                ],
+                "confidence": 0.995,
+                "text": "3"
+              }
+            ]
+          },
+          {
+            "appearance": {
+              "style": {
+                "confidence": 1,
+                "name": "handwriting"
+              }
+            },
+            "boundingBox": [
+              76,
+              711,
+              91,
+              712,
+              89,
+              730,
+              74,
+              728
+            ],
+            "text": "4",
+            "words": [
+              {
+                "boundingBox": [
+                  78,
+                  711,
+                  89,
+                  712,
+                  88,
+                  730,
+                  76,
+                  728
+                ],
+                "confidence": 0.907,
+                "text": "4"
+              }
+            ]
+          }
+        ],
+        "page": 1,
+        "unit": "pixel",
+        "width": 105
+      }
+    ],
+    "version": "3.2.0"
+  },
+  "createdDateTime": "2024-10-06T09:29:49Z",
+  "lastUpdatedDateTime": "2024-10-06T09:29:50Z",
+  "status": "succeeded"
+}

@@ -1,0 +1,21 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 1,
+    "raw_text": "I de verbinding van zuivelwater benzine is excellent.",
+    "correctly_spelled_text": "De verbinding van zuivelwater en benzine is excellent.",
+    "spelling_corrections": [
+        {
+            "original": "I",
+            "changes": "De"
+        },
+        {
+            "original": "en",
+            "changes": "en"
+        }
+    ],
+    "tokens_used": 14535,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728212744,
+    "delta_time_s": 2.605135440826416
+}

@@ -1,0 +1,17 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 3,
+    "raw_text": "3.  \nDoor de pintos te malen wordt de werkzaamheid goed hoger wat er voor zorgt dat er.",
+    "correctly_spelled_text": "3.  \nDoor de pintos te malen wordt de werkzaamheid goed hoger wat er voor zorgt dat er.",
+    "spelling_corrections": [
+        {
+            "original": "pintos",
+            "changes": "pinto's"
+        }
+    ],
+    "tokens_used": 14554,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728213222,
+    "delta_time_s": 2.7786905765533447
+}

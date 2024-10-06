@@ -1,0 +1,21 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 8,
+    "raw_text": "Het funstammen van de pindas zorgt ervoor dat op microniveau de moleculen bij elkaar meer oppervlakte hebben waardoor kunnen ze in het bosende deel sneller bollen en meer effectievere bosten hebben.",
+    "correctly_spelled_text": "Het functioneren van de pindas zorgt ervoor dat op microniveau de moleculen bij elkaar meer oppervlakte hebben waardoor ze in het bosende deel sneller bollen en meer effectievere bosten hebben.",
+    "spelling_corrections": [
+        {
+            "original": "funstammen",
+            "changes": "functioneren"
+        },
+        {
+            "original": "effectievere",
+            "changes": "effectievere"
+        }
+    ],
+    "tokens_used": 14601,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728213763,
+    "delta_time_s": 3.471522092819214
+}

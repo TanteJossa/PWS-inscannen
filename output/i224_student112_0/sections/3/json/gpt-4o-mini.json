@@ -1,0 +1,21 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 13,
+    "raw_text": "exotherm\nexotherm ja verhoogt energie",
+    "correctly_spelled_text": "exotherm\nexotherm ja verhoogt energie",
+    "spelling_corrections": [
+        {
+            "original": "extraheer",
+            "changes": "exotherm"
+        },
+        {
+            "original": "hij",
+            "changes": "ja"
+        }
+    ],
+    "tokens_used": 14539,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728214764,
+    "delta_time_s": 3.6039927005767822
+}

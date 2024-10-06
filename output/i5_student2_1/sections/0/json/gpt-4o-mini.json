@@ -1,0 +1,29 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 11,
+    "raw_text": "- De katalysator zorgt ervoor dat de activerings-energie omlaag gaat daardoor kan een reactie sneller beginnen daardoor het niet zo lang duurt om naar de geactiveerde toestand te gaan\n\n121\n\nactive\n\nalcohol!",
+    "correctly_spelled_text": "- De katalysator zorgt ervoor dat de activeringsenergie omlaag gaat, daardoor kan een reactie sneller beginnen, doordat het niet zo lang duurt om naar de geactiveerde toestand te gaan\n\n121\n\nactive\n\nalcohol!",
+    "spelling_corrections": [
+        {
+            "original": "activerings-energie",
+            "changes": "activeringsenergie"
+        },
+        {
+            "original": "gaat daardoor",
+            "changes": "gaat, daardoor"
+        },
+        {
+            "original": "beginnen daardoor",
+            "changes": "beginnen, doordat"
+        },
+        {
+            "original": "duurt om naar",
+            "changes": "duurt om naar"
+        }
+    ],
+    "tokens_used": 14651,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728215862,
+    "delta_time_s": 3.100386142730713
+}

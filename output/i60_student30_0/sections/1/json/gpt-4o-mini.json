@@ -1,0 +1,25 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 1,
+    "raw_text": "Nieu Pined\nSpeelletj es van D-jes Pined\nS- tjes\nOpmus t\n",
+    "correctly_spelled_text": "Nieuwe Pined\nSpeelletjes van D-jes Pined\nS-tjes\nOpmus t\n",
+    "spelling_corrections": [
+        {
+            "original": "Nieu Pined",
+            "changes": "Nieuwe Pined"
+        },
+        {
+            "original": "Speelletj es",
+            "changes": "Speelletjes"
+        },
+        {
+            "original": "S- tjes",
+            "changes": "S-tjes"
+        }
+    ],
+    "tokens_used": 14587,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728215873,
+    "delta_time_s": 2.9194700717926025
+}

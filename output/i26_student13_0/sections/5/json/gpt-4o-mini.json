@@ -1,0 +1,17 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 1,
+    "raw_text": "\nE\n\ngeactiveerde toestand\n\nbeginstoffen\n\n\u0394E\n\nreactie product\n",
+    "correctly_spelled_text": "\nE\n\ngeactiveerde toestand\n\nbeginstoffen\n\n\u0394E\n\nreactieproduct\n",
+    "spelling_corrections": [
+        {
+            "original": "reactie product",
+            "changes": "reactieproduct"
+        }
+    ],
+    "tokens_used": 14555,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728215440,
+    "delta_time_s": 16.43594264984131
+}

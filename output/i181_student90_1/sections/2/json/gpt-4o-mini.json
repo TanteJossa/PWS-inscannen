@@ -1,0 +1,57 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 6,
+    "raw_text": "Die is een  **extraheer**  proces,  **gande**  de  **causie**  van  **chemisch**  **niet**  **creatie**  **geef**  **chemisch**  **naar**  **loden**  **gade**.",
+    "correctly_spelled_text": "Dit is een  **extractie**  proces,  **gaande**  de  **oorzaak**  van  **chemisch**  **niet**  **cre\u00ebren**  **geef**  **chemisch**  **naar**  **loden**  **gade**.",
+    "spelling_corrections": [
+        {
+            "original": "extraheer",
+            "changes": "extractie"
+        },
+        {
+            "original": "gande",
+            "changes": "gaande"
+        },
+        {
+            "original": "causie",
+            "changes": "oorzaak"
+        },
+        {
+            "original": "chemisch",
+            "changes": "chemisch"
+        },
+        {
+            "original": "niet",
+            "changes": "niet"
+        },
+        {
+            "original": "creatie",
+            "changes": "cre\u00ebren"
+        },
+        {
+            "original": "geef",
+            "changes": "geef"
+        },
+        {
+            "original": "chemisch",
+            "changes": "chemisch"
+        },
+        {
+            "original": "naar",
+            "changes": "naar"
+        },
+        {
+            "original": "loden",
+            "changes": "loden"
+        },
+        {
+            "original": "gade",
+            "changes": "gade"
+        }
+    ],
+    "tokens_used": 14729,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728213918,
+    "delta_time_s": 5.737757205963135
+}

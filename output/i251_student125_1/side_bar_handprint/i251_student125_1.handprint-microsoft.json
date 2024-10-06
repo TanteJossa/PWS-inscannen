@@ -1,0 +1,286 @@
+{
+  "analyzeResult": {
+    "modelVersion": "2022-04-30",
+    "readResults": [
+      {
+        "angle": 1.6832,
+        "height": 845,
+        "lines": [
+          {
+            "appearance": {
+              "style": {
+                "confidence": 0.902,
+                "name": "handwriting"
+              }
+            },
+            "boundingBox": [
+              76,
+              53,
+              102,
+              52,
+              101,
+              67,
+              77,
+              68
+            ],
+            "text": "17:",
+            "words": [
+              {
+                "boundingBox": [
+                  80,
+                  53,
+                  101,
+                  52,
+                  102,
+                  67,
+                  80,
+                  68
+                ],
+                "confidence": 0.653,
+                "text": "17:"
+              }
+            ]
+          },
+          {
+            "appearance": {
+              "style": {
+                "confidence": 0.856,
+                "name": "handwriting"
+              }
+            },
+            "boundingBox": [
+              85,
+              399,
+              102,
+              400,
+              103,
+              413,
+              85,
+              413
+            ],
+            "text": "13,",
+            "words": [
+              {
+                "boundingBox": [
+                  87,
+                  399,
+                  102,
+                  399,
+                  101,
+                  413,
+                  87,
+                  412
+                ],
+                "confidence": 0.81,
+                "text": "13,"
+              }
+            ]
+          },
+          {
+            "appearance": {
+              "style": {
+                "confidence": 0.982,
+                "name": "handwriting"
+              }
+            },
+            "boundingBox": [
+              79,
+              476,
+              101,
+              475,
+              101,
+              498,
+              79,
+              499
+            ],
+            "text": "1:",
+            "words": [
+              {
+                "boundingBox": [
+                  79,
+                  476,
+                  98,
+                  475,
+                  99,
+                  497,
+                  79,
+                  498
+                ],
+                "confidence": 0.605,
+                "text": "1:"
+              }
+            ]
+          },
+          {
+            "appearance": {
+              "style": {
+                "confidence": 0.966,
+                "name": "handwriting"
+              }
+            },
+            "boundingBox": [
+              21,
+              604,
+              97,
+              604,
+              97,
+              619,
+              21,
+              620
+            ],
+            "text": "Opgefor ties.",
+            "words": [
+              {
+                "boundingBox": [
+                  22,
+                  605,
+                  62,
+                  605,
+                  62,
+                  620,
+                  22,
+                  621
+                ],
+                "confidence": 0.139,
+                "text": "Opgefor"
+              },
+              {
+                "boundingBox": [
+                  65,
+                  604,
+                  95,
+                  604,
+                  96,
+                  619,
+                  65,
+                  620
+                ],
+                "confidence": 0.498,
+                "text": "ties."
+              }
+            ]
+          },
+          {
+            "appearance": {
+              "style": {
+                "confidence": 1,
+                "name": "handwriting"
+              }
+            },
+            "boundingBox": [
+              26,
+              625,
+              95,
+              633,
+              94,
+              647,
+              26,
+              637
+            ],
+            "text": "met 564 419)",
+            "words": [
+              {
+                "boundingBox": [
+                  28,
+                  625,
+                  53,
+                  628,
+                  54,
+                  642,
+                  29,
+                  638
+                ],
+                "confidence": 0.685,
+                "text": "met"
+              },
+              {
+                "boundingBox": [
+                  57,
+                  629,
+                  71,
+                  630,
+                  71,
+                  644,
+                  57,
+                  642
+                ],
+                "confidence": 0.164,
+                "text": "564"
+              },
+              {
+                "boundingBox": [
+                  74,
+                  631,
+                  93,
+                  633,
+                  93,
+                  648,
+                  74,
+                  645
+                ],
+                "confidence": 0.068,
+                "text": "419)"
+              }
+            ]
+          },
+          {
+            "appearance": {
+              "style": {
+                "confidence": 0.982,
+                "name": "handwriting"
+              }
+            },
+            "boundingBox": [
+              28,
+              646,
+              61,
+              648,
+              60,
+              661,
+              28,
+              660
+            ],
+            "text": "find a",
+            "words": [
+              {
+                "boundingBox": [
+                  28,
+                  646,
+                  48,
+                  646,
+                  47,
+                  660,
+                  28,
+                  659
+                ],
+                "confidence": 0.605,
+                "text": "find"
+              },
+              {
+                "boundingBox": [
+                  51,
+                  646,
+                  60,
+                  647,
+                  59,
+                  661,
+                  50,
+                  660
+                ],
+                "confidence": 0.767,
+                "text": "a"
+              }
+            ]
+          }
+        ],
+        "page": 1,
+        "unit": "pixel",
+        "width": 105
+      }
+    ],
+    "version": "3.2.0"
+  },
+  "createdDateTime": "2024-10-06T09:33:46Z",
+  "lastUpdatedDateTime": "2024-10-06T09:33:47Z",
+  "status": "succeeded"
+}

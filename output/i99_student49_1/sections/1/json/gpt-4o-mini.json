@@ -1,0 +1,21 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 5,
+    "raw_text": "Con eis gas is en gassen reachtig in een soort gas en gassen gaan al heel snel weg de lucht in waardoor de massa lichter te maken is je kan dat al doen als je de gassen in een vacuum maakt.",
+    "correctly_spelled_text": "Con eise gas is en gassen re\u00ebelachtig in een soort gas en gassen gaan al heel snel weg de lucht in waardoor de massa lichter te maken is je kan dat al doen als je de gassen in een vacuum maakt.",
+    "spelling_corrections": [
+        {
+            "original": "eis",
+            "changes": "eise"
+        },
+        {
+            "original": "reachtig",
+            "changes": "re\u00ebelachtig"
+        }
+    ],
+    "tokens_used": 14614,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728216508,
+    "delta_time_s": 5.260535717010498
+}

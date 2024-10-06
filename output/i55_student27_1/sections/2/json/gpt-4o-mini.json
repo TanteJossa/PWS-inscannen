@@ -1,0 +1,17 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 9,
+    "raw_text": "Uit de reactievergelijking blijkt dat er geen massa verloren gaat omdat er even veel van alles zowel aan de linker kant staat als aan de rechter.",
+    "correctly_spelled_text": "Uit de reactievergelijking blijkt dat er geen massa verloren gaat omdat er evenveel van alles zowel aan de linker kant staat als aan de rechter.",
+    "spelling_corrections": [
+        {
+            "original": "even veel",
+            "changes": "evenveel"
+        }
+    ],
+    "tokens_used": 14567,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728215794,
+    "delta_time_s": 3.3068230152130127
+}

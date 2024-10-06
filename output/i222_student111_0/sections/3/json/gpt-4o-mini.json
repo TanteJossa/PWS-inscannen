@@ -1,0 +1,29 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 3,
+    "raw_text": "3door een katalysator is de act vermindert de activerings energie wat in een energiediagram betekenen dat de piek top lager is, wat betekent dat het sneller gaat.",
+    "correctly_spelled_text": "3 door een katalysator is de act vermindert de activeringsenergie wat in een energiediagram betekent dat de piektop lager is, wat betekent dat het sneller gaat.",
+    "spelling_corrections": [
+        {
+            "original": "3door",
+            "changes": "3 door"
+        },
+        {
+            "original": "activerings energie",
+            "changes": "activeringsenergie"
+        },
+        {
+            "original": "betekken",
+            "changes": "betekent"
+        },
+        {
+            "original": "piek top",
+            "changes": "piektop"
+        }
+    ],
+    "tokens_used": 14619,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728214702,
+    "delta_time_s": 2.5974531173706055
+}

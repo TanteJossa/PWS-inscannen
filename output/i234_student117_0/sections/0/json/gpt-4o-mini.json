@@ -1,0 +1,25 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 1,
+    "raw_text": "hute pin's\nvermalen\ngemalen pijs\nextracten\nmet pin's\nniet reren\ndestilleren\n\nsijge\nsyrup\npijn\nalcohol",
+    "correctly_spelled_text": "hute pinnen\nvermalen\ngemalen pijs\nextracten\nmet pinnen\nniet roeren\ndestilleren\n\nsijge\nsiroop\npijn\nalcohol",
+    "spelling_corrections": [
+        {
+            "original": "pin's",
+            "changes": "pinnen"
+        },
+        {
+            "original": "reren",
+            "changes": "roeren"
+        },
+        {
+            "original": "syrup",
+            "changes": "siroop"
+        }
+    ],
+    "tokens_used": 14619,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728214876,
+    "delta_time_s": 2.584160327911377
+}

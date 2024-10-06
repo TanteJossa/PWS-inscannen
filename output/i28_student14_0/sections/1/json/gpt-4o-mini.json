@@ -1,0 +1,21 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 13,
+    "raw_text": "Een exotherm proces , uit chemische energie wordt an andere soort energie gemaakt",
+    "correctly_spelled_text": "Een exotherm proces, uit chemische energie wordt een andere soort energie gemaakt",
+    "spelling_corrections": [
+        {
+            "original": "an",
+            "changes": "een"
+        },
+        {
+            "original": " ,",
+            "changes": ""
+        }
+    ],
+    "tokens_used": 25879,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728215476,
+    "delta_time_s": 3.488379716873169
+}

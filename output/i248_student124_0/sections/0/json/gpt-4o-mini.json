@@ -1,0 +1,21 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 9,
+    "raw_text": "Er gaar geen massa verliezen bij de bovenstran de vergelijking, omdat hij klopt.",
+    "correctly_spelled_text": "Er gaat geen massa verliezen bij de bovenstaan de vergelijking, omdat hij klopt.",
+    "spelling_corrections": [
+        {
+            "original": "gaar",
+            "changes": "gaat"
+        },
+        {
+            "original": "bovenstran",
+            "changes": "bovenstaan"
+        }
+    ],
+    "tokens_used": 14549,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728215048,
+    "delta_time_s": 2.5728840827941895
+}

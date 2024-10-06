@@ -1,0 +1,21 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 5,
+    "raw_text": "de receptiewoordt is de warente die vrij komt bij een reactie",
+    "correctly_spelled_text": "de receptiewoord is de waarde die vrij komt bij een reactie",
+    "spelling_corrections": [
+        {
+            "original": "receptiewoordt",
+            "changes": "receptiewoord"
+        },
+        {
+            "original": "warente",
+            "changes": "waarde"
+        }
+    ],
+    "tokens_used": 14549,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728215764,
+    "delta_time_s": 2.9238381385803223
+}

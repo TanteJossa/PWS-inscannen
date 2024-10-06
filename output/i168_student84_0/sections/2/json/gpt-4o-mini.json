@@ -1,0 +1,21 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 4,
+    "raw_text": "In microoven zie je dat er geen massa verloren gaat uit en dezelfde elementen voor als je het putje.",
+    "correctly_spelled_text": "In de microoven zie je dat er geen massa verloren gaat uit en dezelfde elementen voor als je het putje.",
+    "spelling_corrections": [
+        {
+            "original": "microoven",
+            "changes": "de microoven"
+        },
+        {
+            "original": "uit",
+            "changes": "uit"
+        }
+    ],
+    "tokens_used": 14559,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728213642,
+    "delta_time_s": 2.121419906616211
+}

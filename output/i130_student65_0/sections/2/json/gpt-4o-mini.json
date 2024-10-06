@@ -1,0 +1,17 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 11,
+    "raw_text": "11 er is 65 - 13 - S = 47 g. koper (II) oxide\nconstaan",
+    "correctly_spelled_text": "11 er is 65 - 13 - S = 47 g. koper (II) oxide\nconstant",
+    "spelling_corrections": [
+        {
+            "original": "constaan",
+            "changes": "constant"
+        }
+    ],
+    "tokens_used": 14551,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728212884,
+    "delta_time_s": 2.3696532249450684
+}

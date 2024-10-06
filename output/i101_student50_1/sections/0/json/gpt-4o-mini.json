@@ -1,0 +1,45 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 13,
+    "raw_text": "door de wet van energie behoud\nhun energie met inhouden geven\nof meer energiek gemaakt worden.\nHierdoor kan er met max of\nminder energie vij handen bij\neen fotosynthese dan van glucose\ndan bij de verbinding van glucose\ndag is het\nuitwoord = 2,0.10^5 \n\u03bcmol",
+    "correctly_spelled_text": "door de wet van energiebehoud\nhun energie met inhouden geven\nof meer energiek gemaakt worden.\nHierdoor kan er met max of\nminder energie vij handen bij\neen fotosynthese dan van glucose\ndan bij de verbinding van glucose\ndag is het\nuitwoord = 2,0 \u00d7 10^5 \n\u03bcmol",
+    "spelling_corrections": [
+        {
+            "original": "energie behoud",
+            "changes": "energiebehoud"
+        },
+        {
+            "original": "energiek",
+            "changes": "energiek"
+        },
+        {
+            "original": "Hierdoor",
+            "changes": "Hierdoor"
+        },
+        {
+            "original": "vij",
+            "changes": "bij"
+        },
+        {
+            "original": "fotosynthese",
+            "changes": "fotosynthese"
+        },
+        {
+            "original": "glucose dag",
+            "changes": "glucose"
+        },
+        {
+            "original": "uitwoord",
+            "changes": "uitwoord"
+        },
+        {
+            "original": "2,0.10^5",
+            "changes": "2,0 \u00d7 10^5"
+        }
+    ],
+    "tokens_used": 14741,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728212288,
+    "delta_time_s": 4.681462049484253
+}

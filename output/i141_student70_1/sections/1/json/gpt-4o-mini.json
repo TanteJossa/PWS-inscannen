@@ -1,0 +1,21 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 9,
+    "raw_text": "Het is een endotherm proces, want je moet el energie inslappen om het proces op gang te laten lopen. En er is energie nodig on de energie te verbranden.",
+    "correctly_spelled_text": "Het is een endotherm proces, want je moet er energie inslappen om het proces op gang te laten lopen. En er is energie nodig om de energie te verbranden.",
+    "spelling_corrections": [
+        {
+            "original": "el",
+            "changes": "er"
+        },
+        {
+            "original": "on",
+            "changes": "om"
+        }
+    ],
+    "tokens_used": 14585,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728213033,
+    "delta_time_s": 3.7447457313537598
+}

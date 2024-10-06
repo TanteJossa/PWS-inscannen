@@ -1,0 +1,21 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 5,
+    "raw_text": "Daf er geen massa verloren gaat is altijd lastig aan te tonen maar bij een kloppende reactie gaat er nooit massa verloren.",
+    "correctly_spelled_text": "Dat er geen massa verloren gaat is altijd lastig aan te tonen maar bij een kloppende reactie gaat er nooit massa verloren.",
+    "spelling_corrections": [
+        {
+            "original": "Daf",
+            "changes": "Dat"
+        },
+        {
+            "original": "moet",
+            "changes": "maar"
+        }
+    ],
+    "tokens_used": 14564,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728215810,
+    "delta_time_s": 2.038351535797119
+}

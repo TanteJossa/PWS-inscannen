@@ -1,0 +1,21 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 6,
+    "raw_text": "Enstoren. Want je moet de bij dit proces energie blijven toveren, en dat is moeilijk. \nAnders, vind je er een verbranding plaats, bijv. C6H12O6 + 6O2 -> 6CO2 + 6H2O.\n\n(11) De katalysator zorgt ervoor dat de reactiesnelheid sneller is, wat een eigenschap de katalysator is en zodat zorgen voor de reactiesnelheid verhoogd. \nZonder de katalysator zou de reactie veel te langzaam zijn, wat de levensduur kleiner wordt.",
+    "correctly_spelled_text": "Enstoren. Want je moet de bij dit proces energie blijven toveren, en dat is moeilijk. \nAnders, vind je er een verbranding plaats, bijv. C6H12O6 + 6O2 -> 6CO2 + 6H2O.\n\n(11) De katalysator zorgt ervoor dat de reactiesnelheid sneller is, wat een eigenschap van de katalysator is en zodat de reactiesnelheid verhoogd. \nZonder de katalysator zou de reactie veel te langzaam zijn, wat de levensduur kleiner maakt.",
+    "spelling_corrections": [
+        {
+            "original": "katalysator is en zodat zorgen voor de reactiesnelheid verhoogd.",
+            "changes": "katalysator is en zodat de reactiesnelheid verhoogd."
+        },
+        {
+            "original": "wat de levensduur kleiner wordt.",
+            "changes": "wat de levensduur kleiner maakt."
+        }
+    ],
+    "tokens_used": 14792,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728215569,
+    "delta_time_s": 4.39530348777771
+}

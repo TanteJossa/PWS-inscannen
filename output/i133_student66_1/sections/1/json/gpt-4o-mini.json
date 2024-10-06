@@ -1,0 +1,21 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 1,
+    "raw_text": "rechte van blijft zitten, das daar wordt niet meer gezevend.",
+    "correctly_spelled_text": "rechte van blijft zitten, dat daar wordt niet meer genoemd.",
+    "spelling_corrections": [
+        {
+            "original": "das",
+            "changes": "dat"
+        },
+        {
+            "original": "gezevend",
+            "changes": "genoemd"
+        }
+    ],
+    "tokens_used": 14540,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728212905,
+    "delta_time_s": 1.8020336627960205
+}

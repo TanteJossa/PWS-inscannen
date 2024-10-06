@@ -1,0 +1,21 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 10,
+    "raw_text": "Omdat het (bij opwarmt) niet kan zien meer lucht in de lucht zit\n\n1. 2CuO(S) + O2(g) -> 2Cu(S) + H2O(g)\nKoper(II)oxide  luchtstofwisseling  water\n65 - 13 - S = 67 gram\nDas Das is er 67 gram Koper(II)oxide ontstaan chemisch reactie.",
+    "correctly_spelled_text": "Omdat het (bij opwarmt) niet kan zien meer lucht in de lucht zit\n\n1. 2CuO(S) + O2(g) -> 2Cu(S) + H2O(g)\nKoper(II)oxide  luchtstofwisseling  water\n65 - 13 - S = 67 gram\nDat is er 67 gram Koper(II)oxide ontstaan chemisch reactie.",
+    "spelling_corrections": [
+        {
+            "original": "Das Das",
+            "changes": "Dat"
+        },
+        {
+            "original": "luchtstofwisseling",
+            "changes": "luchtstofwisseling"
+        }
+    ],
+    "tokens_used": 14689,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728213501,
+    "delta_time_s": 6.37401819229126
+}

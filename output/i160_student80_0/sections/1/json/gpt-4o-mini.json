@@ -1,0 +1,21 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 3,
+    "raw_text": "de De katalysator be\u00efnvloedt de reactiesnelheid door het proces sneller te laten verlopen of moleculen bij elkaar te zetten en snel te laten bewegen.",
+    "correctly_spelled_text": "De katalysator be\u00efnvloedt de reactiesnelheid door het proces sneller te laten verlopen of moleculen bij elkaar te zetten en snel te laten bewegen.",
+    "spelling_corrections": [
+        {
+            "original": "de De",
+            "changes": "De"
+        },
+        {
+            "original": "be\u00efnvloedt",
+            "changes": "be\u00efnvloedt"
+        }
+    ],
+    "tokens_used": 14583,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728213436,
+    "delta_time_s": 2.5028488636016846
+}

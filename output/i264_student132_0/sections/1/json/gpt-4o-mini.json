@@ -1,0 +1,17 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 2,
+    "raw_text": "Die lijn heb ik met potlood getekend. De aitchal die dan eerst eraf werd toegesegd vervalt dan.",
+    "correctly_spelled_text": "Die lijn heb ik met potlood getekend. De aitchal die dan eerst eraf werd toegewezen vervalt dan.",
+    "spelling_corrections": [
+        {
+            "original": "toegesegd",
+            "changes": "toegewezen"
+        }
+    ],
+    "tokens_used": 14563,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728215334,
+    "delta_time_s": 2.3182201385498047
+}

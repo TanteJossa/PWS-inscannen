@@ -1,0 +1,21 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 3,
+    "raw_text": "De invloed van het # fysiekstappen van de pinda's op de snelheid van de scheiding is dat je het oppervlakte vergroot en de de reactiesnelheid verhoogt, want op microniveau is er een grotere kans op een effectieve botsing, omdat deeltjes los van elkaar bewegen en omdat het oppervlakte is verhoogd is de kans op botsing ook groter.",
+    "correctly_spelled_text": "De invloed van het fysiekstappen van de pinda's op de snelheid van de scheiding is dat je het oppervlakte vergroot en de reactiesnelheid verhoogt, want op microniveau is er een grotere kans op een effectieve botsing, omdat deeltjes los van elkaar bewegen en omdat het oppervlakte is verhoogd is de kans op botsing ook groter.",
+    "spelling_corrections": [
+        {
+            "original": "# fysiekstappen",
+            "changes": "fysiekstappen"
+        },
+        {
+            "original": "de de",
+            "changes": "de"
+        }
+    ],
+    "tokens_used": 14668,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728213175,
+    "delta_time_s": 3.4272799491882324
+}

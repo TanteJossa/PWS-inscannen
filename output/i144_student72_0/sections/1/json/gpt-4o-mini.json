@@ -1,0 +1,25 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 2,
+    "raw_text": "2  67 MgS + O2 =  67 MgO2",
+    "correctly_spelled_text": "2 67 MgS + O2 = 2 67 MgO2",
+    "spelling_corrections": [
+        {
+            "original": "67 MgS",
+            "changes": "none"
+        },
+        {
+            "original": "O2",
+            "changes": "none"
+        },
+        {
+            "original": "67 MgO2",
+            "changes": "none"
+        }
+    ],
+    "tokens_used": 14559,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728213104,
+    "delta_time_s": 2.128645181655884
+}

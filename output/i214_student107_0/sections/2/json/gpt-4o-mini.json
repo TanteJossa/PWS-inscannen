@@ -1,0 +1,17 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 1,
+    "raw_text": "Dit is een voorbeeld tekst met een paar spelfouten.",
+    "correctly_spelled_text": "Dit is een voorbeeldtekst met een paar spelfouten.",
+    "spelling_corrections": [
+        {
+            "original": "voorbeeld tekst",
+            "changes": "voorbeeldtekst"
+        }
+    ],
+    "tokens_used": 14529,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728214607,
+    "delta_time_s": 1.575685739517212
+}

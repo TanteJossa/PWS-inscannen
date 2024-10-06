@@ -1,0 +1,25 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 1,
+    "raw_text": "\n1) \n\nop microniveau is het beter om een sterke ver\n\nzelfstandraad te hebben dan een zwakke. De eerste\n\nmoeten derhalve hebben, en hogere verhoudingsfa\n\nn dan de het eindig. Een hogere verhouding kan bij\n\nzen resulteren in een betere deeltjesmodel.\n\n\n\n2) \n\nEr blijkt uit deze reactieontwikkeling dat er\n\ngeen massa verloren gaat door een reactie. Dit\n\nzult zo zijn, er zijn er nieuwe massa's gevormd.",
+    "correctly_spelled_text": "\n1) \n\nOp microniveau is het beter om een sterke ver\n\nzelfstandraad te hebben dan een zwakke. De eerste\n\nmoeten derhalve hebben, en hogere verhoudingsfa\n\nn dan het eindig. Een hogere verhouding kan bij\n\nzen resulteren in een beter deeltjesmodel.\n\n\n\n2) \n\nEr blijkt uit deze reactieontwikkeling dat er\n\ngeen massa verloren gaat door een reactie. Dit\n\nzult zo zijn, er zijn er nieuwe massa's gevormd.",
+    "spelling_corrections": [
+        {
+            "original": "op microniveau",
+            "changes": "Op microniveau"
+        },
+        {
+            "original": "de het eindig",
+            "changes": "het eindig"
+        },
+        {
+            "original": "de betere deeltjesmodel",
+            "changes": "een beter deeltjesmodel"
+        }
+    ],
+    "tokens_used": 26101,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728214038,
+    "delta_time_s": 20.056575298309326
+}
