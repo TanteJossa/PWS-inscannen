@@ -1,0 +1,17 @@
+{
+    "question_number": 1,
+    "raw_text": "authwoord 1.1",
+    "correctly_spelled_text": "authwoord 1.1",
+    "spelling_corrections": [
+        {
+            "original": "authwoord",
+            "changes": "authwoord"
+        }
+    ],
+    "tokens_used": 14519,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728423320,
+    "delta_time_s": 2.0083653926849365,
+    "question_id": "1n"
+}
