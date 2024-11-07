@@ -1,6 +1,9 @@
 import os
 import time
-from flask import Flask, request
+import shutil
+from flask import Flask, request, jsonify, Response
+from firebase_functions import https_fn
+from firebase_admin import initialize_app, db
 
 from helpers import (
     png_to_base64, 
@@ -19,44 +22,66 @@ from scan_module import (
     transcribe_answer
 )
 
-app = Flask(__name__)
+def create_app():
+  app = Flask("internal")
+  # Error 404 handler
+  @app.errorhandler(404)
+  def resource_not_found(e):
+    return jsonify(error=str(e)), 404
+  # Error 405 handler
+  @app.errorhandler(405)
+  def resource_not_found(e):
+    return jsonify(error=str(e)), 405
+  # Error 401 handler
+  @app.errorhandler(401)
+  def custom_401(error):
+    return Response("API Key required.", 401)
+  
+  @app.route("/ping")
+  def pong():
+     return "pong"
+  
+  return app
+
+app = create_app()
 
 def cleanup_files(id):
     # input
     try:
-        os.rmdir(input_dir+id)
+        shutil.rmtree(input_dir+id)
     except: 
         pass
     try:
-        os.rmdir(input_dir+id+'.png')
+        os.remove(input_dir+id+'.png')
     except: 
         pass
     
     # output
     try:
-        os.rmdir(output_dir+id)
+        shutil.rmtree(output_dir+id)
     except: 
         pass
     try:
-        os.rmdir(output_dir+id+'.png')
+        os.remove(output_dir+id+'.png')
     except: 
         pass
+    
 @app.route("/")
 def hello_world():
     """Example Hello World route."""
     name = os.environ.get("NAME", "World")
     return f"Hello {name}!"
 
-@app.route("/crop")
+@app.route("/crop", methods = ['GET', 'POST'])
 def crop_page():
     try:
         start_time = time.time()
-        if ("id" in request.args):
-            id = request.args.get("id")
+        if ("id" in request.json):
+            id = request.json.get("id")
         else:
             id = "No ID found"
         process_id = get_random_id()
-        image_string = request.args.get("Base64Image")
+        image_string = request.json.get("Base64Image")
         base64_to_png(image_string, input_dir+process_id+'.png')
         
         # crop()
@@ -75,18 +100,18 @@ def crop_page():
             "output": output_string,
         }
     except Exception as e:    
-        return {"error": e}
+        return {"error": str(e)}
 
-@app.route("/extract_red_pen")
+@app.route("/extract_red_pen", methods = ['GET', 'POST'])
 def colcor_page():
     try:
         start_time = time.time()
-        if ("id" in request.args):
-            id = request.args.get("id")
+        if ("id" in request.json):
+            id = request.json.get("id")
         else:
             id = "No ID found"
         process_id = get_random_id()
-        image_string = request.args.get("Base64Image")
+        image_string = request.json.get("Base64Image")
         base64_to_png(image_string, input_dir+process_id+'.png')
         
         extract_red_pen(process_id)
@@ -111,22 +136,22 @@ def colcor_page():
             }
         }
     except Exception as e:    
-        return {"error": e}
+        return {"error": str(e)}
 
 
-@app.route("/detect_squares")
+@app.route("/detect_squares", methods = ['GET', 'POST'])
 def detect_squares_on_page():
     try:
         start_time = time.time()
-        if ("id" in request.args):
-            id = request.args.get("id")
+        if ("id" in request.json):
+            id = request.json.get("id")
         else:
             id = "No ID found"
         process_id = get_random_id()
-        image_string = request.args.get("Base64Image")
+        image_string = request.json.get("Base64Image")
         base64_to_png(image_string, input_dir+process_id+'.png')
         
-        square_data = request.args.get("square_data")
+        square_data = request.json.get("square_data")
         
         data = detect_squares(process_id, square_data)
                 
@@ -148,22 +173,22 @@ def detect_squares_on_page():
             }
         }
     except Exception as e:    
-        return {"error": e}
+        return {"error": str(e)}
 
 
-@app.route("/extract_sections")
+@app.route("/extract_sections", methods = ['GET', 'POST'])
 def sectionize_page():
     try:
         start_time = time.time()
-        if ("id" in request.args):
-            id = request.args.get("id")
+        if ("id" in request.json):
+            id = request.json.get("id")
         else:
             id = "No ID found"
         process_id = get_random_id()
-        image_string = request.args.get("Base64Image")
+        image_string = request.json.get("Base64Image")
         base64_to_png(image_string, input_dir+process_id+'.png')
         
-        square_data = request.args.get("square_data")
+        square_data = request.json.get("square_data")
         
         sectionize(process_id, square_data)
         
@@ -189,18 +214,18 @@ def sectionize_page():
             "output": sections
         }
     except Exception as e:    
-        return {"error": e}
+        return {"error": str(e)}
 
-@app.route('/question_selector_info')
+@app.route('/question_selector_info', methods = ['GET', 'POST'])
 def question_section_from_question_selector():
     try:
         start_time = time.time()
-        if ("id" in request.args):
-            id = request.args.get("id")
+        if ("id" in request.json):
+            id = request.json.get("id")
         else:
             id = "No ID found"
         process_id = get_random_id()
-        image_string = request.args.get("Base64Image")
+        image_string = request.json.get("Base64Image")
         base64_to_png(image_string, input_dir+process_id+'.png')
                 
         data = question_selector_info(id)
@@ -216,18 +241,18 @@ def question_section_from_question_selector():
             "output": data
         }
     except Exception as e:    
-        return {"error": e}
+        return {"error": str(e)}
 
-@app.route('/link_answer_sections')
+@app.route('/link_answer_sections', methods = ['GET', 'POST'])
 def link_answer_sections():
     try:
         start_time = time.time()
-        if ("id" in request.args):
-            id = request.args.get("id")
+        if ("id" in request.json):
+            id = request.json.get("id")
         else:
             id = "No ID found"
         process_id = get_random_id()
-        image_strings = request.args.get("sections")
+        image_strings = request.json.get("sections")
         try:
             os.makedirs(input_dir+process_id)
         except:
@@ -251,18 +276,18 @@ def link_answer_sections():
             "output": output_image
         }
     except Exception as e:    
-        return {"error": e}
+        return {"error": str(e)}
 
-@app.route('/extract_text')
+@app.route('/extract_text', methods = ['GET', 'POST'])
 def extract_text_from_answer():
     try:
         start_time = time.time()
-        if ("id" in request.args):
-            id = request.args.get("id")
+        if ("id" in request.json):
+            id = request.json.get("id")
         else:
             id = "No ID found"
         process_id = get_random_id()
-        image_string = request.args.get("Base64Image")
+        image_string = request.json.get("Base64Image")
         base64_to_png(image_string, input_dir+process_id+'.png')
                 
         data = transcribe_answer(id)
@@ -278,8 +303,28 @@ def extract_text_from_answer():
             "output": data
         }
     except Exception as e:    
-        return {"error": e}
+        return {"error": str(e)}
 
 
+def httpsflask_spa(request):
+    #Create a new app context for the internal app
+    # internal_ctx = app.test_request_context(path=request.full_path,
+    #                                         method=request.method)
+    
+    # #Copy main request data from original request
+    # #According to your context, parts can be missing. Adapt here!
+    # internal_ctx.request.data = request.data
+    # internal_ctx.request.headers = request.headers
+    
+    #Activate the context
+    # internal_ctx.push()
+    #Dispatch the request to the internal app and get the result 
+    return_value = {"data": jsonify(app.full_dispatch_request())}
+    #Offload the context
+    # internal_ctx.pop()
+    
+    #Return the result of the internal app routing and processing      
+    return return_value
+        
 if __name__ == "__main__":
     app.run(debug=True, host="0.0.0.0", port=int(os.environ.get("PORT", 8080)))

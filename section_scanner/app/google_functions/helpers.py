@@ -22,11 +22,9 @@ def png_to_base64(file_path, quality=1):
         buffered = BytesIO()
         resized_image.save(buffered, format="PNG")
         base64_string = base64.b64encode(buffered.getvalue()).decode('utf-8')
-
     else:
         with open(file_path, "rb") as image_file:
             base64_string = base64.b64encode(image_file.read()).decode("utf-8")
-    
     return base64_string
 
 def base64_to_png(base64_string, output_path):
@@ -37,7 +35,7 @@ def base64_to_png(base64_string, output_path):
         output_file.write(image_data)
 
 def get_random_id():
-    return uuid.uuid4()
+    return str(uuid.uuid4())
 
 
 
