@@ -2,10 +2,19 @@ from PIL import Image, ImageEnhance, ImageFont, ImageDraw
 import sys
 import os
 import copy
+import json
+from pydantic import BaseModel
 
 from helpers import (
     clamp,
     get_black_square_data,
+    png_to_base64,
+    stack_images_vertically,
+)
+
+from open_ai_wrapper import (
+    num_tokens_from_messages,
+    single_request
 )
 
 input_dir = "temp_image/"
@@ -139,12 +148,7 @@ def sectionize(id,square_data):
         if (next_y < y or next_y - y < 30):
             continue
         
-        # kantlijn, boven, einde van pagina, beneden grens
-        crop = (0, y, image.width, next_y)
-        
-        section_image = image.copy()
-        
-        cropped = section_image.crop(crop)        
+
 
         # section_image.show()
         # section_file_name = filenameify(h_break["description"])+".png"
@@ -155,10 +159,228 @@ def sectionize(id,square_data):
         except:
             pass
         
-        section_name = id+"_"+str(index)
-        cropped.save(sections_output_dir+section_name+'.png')
+        section_output_dir = sections_output_dir + str(index) + '/'
+        try:
+            os.makedirs(section_output_dir)
+        except:
+            pass
+        
+        # kantlijn, boven, einde van pagina, beneden grens
+        crop = (0, y, image.width, next_y)
+        
+        section_image = image.copy()
+        
+        full = section_image.crop(crop)        
 
-def section_question(id):
-    image = Image.open(input_dir+id+ '.png')
+        section_name = "full"
+        full.save(section_output_dir+'full.png')
+        
+        section_finder_end = int(full.width * (2/21))
 
-    pass
+        section_finder_crop = (0, 0, section_finder_end, full.height)
+        section_finder_image = full.copy().crop(section_finder_crop)
+        section_finder_image.save(section_output_dir+'section_finder.png')
+
+        question_selector_end = int(full.width * (3/21))
+
+        question_selector_crop = (section_finder_end, 0, question_selector_end, full.height)
+        question_selector_image = full.copy().crop(question_selector_crop)
+        question_selector_image.save(section_output_dir+'question_selector.png')
+        
+        answer_crop = (question_selector_end, 0, full.width, full.height)
+        answer_image = full.copy().crop(answer_crop)
+        answer_image.save(section_output_dir+'answer.png')
+
+# first tried microsoft azure, but chapGPT worked better
+# from azure.core.credentials import AzureKeyCredential
+# from azure.ai.formrecognizer import DocumentAnalysisClient
+
+# with open("creds/microsoft.json", "r") as f:
+#     data = json.load(f)
+#     azure_endpoint = data["endpoint"]
+#     azure_credential = AzureKeyCredential(data["subscription_key"])
+#     azure_document_intelligence_client = DocumentAnalysisClient(endpoint, credential)
+
+# def question_selector_info(id):
+
+#     with open(input_dir+id+'.png', 'rb') as f:
+
+#         poller = document_intelligence_client.begin_analyze_document(model_id="prebuilt-document", document=f)
+
+#     result = poller.result().to_dict()
+#     return result
+class Checkbox(BaseModel):
+    number: int
+    checked_chance: float
+
+class CheckboxSelection(BaseModel):
+    checkboxes: list[Checkbox]
+    most_certain_checked_number: int
+
+def question_selector_info(id):
+    base64_image = png_to_base64(input_dir+id+ '.png')
+
+    messages = [
+        {
+            "role": "system",
+            "content": [
+                {
+                    "type": "text",
+                    "text": """You'll get a picture of checkboxes
+                            your job is to see which check box is most likly the one to be ment to be checked
+                            only 1 can be chosen
+                                """
+                                # de vraagnummers moeten getallen zijn
+                                # als een vraagnummer een letter heeft, bijvoorbeeld 1a of 2c
+                                # noteer dat dan al volgt: 1.a en 2.c dus, {getal}.{letter}
+                },
+                {
+                    "type": "text",
+                    "text": "Give you result in JSON like in the given schema"    
+                },
+            ]
+        },
+        {
+            "role": "user",
+            "content": [
+                {
+                    "type": "text",
+                    "text": "extract checked checkbox number"    
+                },
+                {
+                    "type": "image_url",
+                    "image_url": {
+                        "url": f"data:image/png;base64,{base64_image}"
+                    }
+                }
+            ]
+        }
+    ]
+    
+    result = single_request(messages, CheckboxSelection)
+    result_data = result["result_data"]
+    request_data = result["request_data"]
+
+    response = {
+        "checkboxes": result_data["checkboxes"],
+        "selected_question": result_data["most_certain_checked_number"],
+
+        "tokens_used": request_data["total_tokens"],
+
+        "model_used": result["gpt_model"],
+        "model_version": result["model_version"],
+        
+        "timestamp":  result["timestamp"],
+        "delta_time_s":  result["delta_time_s"],
+    }
+    
+    return response
+    
+    
+def stack_answer_sections(id, images: list[str]):
+    input_path = input_dir+id+'/'
+    
+    sections_output_dir = output_dir + id + '/'
+    try:
+        os.makedirs(sections_output_dir)
+    except:
+        pass
+    
+    
+    image = Image.open(input_path + images[0] + '.png')
+    output_image_path = output_dir+id+'.png'
+    image.save(output_image_path)
+    
+    for image_id in images[1::]:
+        image = Image.open(output_image_path)
+        new_image = Image.open(input_path+image_id+'.png')
+
+        stacked_image = stack_images_vertically(image, new_image)
+        stacked_image.save(output_image_path)
+        
+    
+
+
+# schema classes
+class SpellingCorrection(BaseModel):
+    original: str
+    changes: str
+
+# answer class schema
+class QuestionAnswer(BaseModel):
+    # let openai reasses the question number (they are better than google )
+    certainty: float 
+    student_handwriting_percent: float
+    # get the unchanged raw tekst
+    raw_text: str
+    # get the spel corrected tekst that should be graded
+    correctly_spelled_text: str
+    # get the spelling changes the model made
+    spelling_corrections: list[SpellingCorrection]
+    
+def transcribe_answer(id):
+    base64_image = png_to_base64(input_dir+id+ '.png')
+
+    messages = [
+        {
+            "role": "system",
+            "content": [
+                {
+                    "type": "text",
+                    "text": """Je krijgt een foto van een Nederlandse toetsantwoord. 
+                                Je moet deze omzetten in tekst. 
+                                Deze toets moet nog worden nagekeken je. 
+                                Verander niets aan de inhoud. 
+                                Bedenk geen nieuwe woorden of woordonderdelen. 
+                                Verander alleen kleine spelfoutjes.
+                                houd in het antwoord ook rekening met meerdere regels en geeft die aan met een '\\n'
+                                """
+                                # de vraagnummers moeten getallen zijn
+                                # als een vraagnummer een letter heeft, bijvoorbeeld 1a of 2c
+                                # noteer dat dan al volgt: 1.a en 2.c dus, {getal}.{letter}
+                },
+                {
+                    "type": "text",
+                    "text": "Geef antwoord in JSON zoals in een aangegeven schema staat"    
+                },
+            ]
+        },
+        {
+            "role": "user",
+            "content": [
+                {
+                    "type": "text",
+                    "text": "extraheer de tekst"    
+                },
+                {
+                    "type": "image_url",
+                    "image_url": {
+                        "url": f"data:image/png;base64,{base64_image}"
+                    }
+                }
+            ]
+        }
+    ]
+    
+    result = single_request(messages, QuestionAnswer)
+    result_data = result["result_data"]
+    request_data = result["request_data"]
+
+    response = {
+        "question_number": result_data["question_number"],
+        "raw_text": result_data["raw_text"],
+        "correctly_spelled_text": result_data["correctly_spelled_text"],
+        "spelling_corrections": result_data["spelling_corrections"],
+        
+        "tokens_used": request_data["total_tokens"],
+
+        "model_used": result["gpt_model"],
+        "model_version": result["model_version"],
+        
+        "timestamp":  result["timestamp"],
+        "delta_time_s":  result["delta_time_s"],
+    }
+    
+    return response
+
+    

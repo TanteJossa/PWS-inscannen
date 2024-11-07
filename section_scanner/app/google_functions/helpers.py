@@ -4,13 +4,29 @@ import json
 from PIL import Image, ImageDraw, ImageFont
 import os 
 import numpy as np
+from io import BytesIO
 import cv2
 
-def png_to_base64(file_path):
+def png_to_base64(file_path, quality=1):
     if not file_path.endswith('.png'):
         raise ValueError("Input file must be a PNG image.")
-    with open(file_path, "rb") as image_file:
-        base64_string = base64.b64encode(image_file.read()).decode("utf-8")
+    if quality != 1:
+        # https://platform.openai.com/docs/guides/vision 
+
+        pillow_image = Image.open(file_path)
+        
+        new_width = int(pillow_image.width * quality)
+        new_height = int(float(pillow_image.size[1]) * quality)
+        
+        resized_image = pillow_image.resize((new_width, new_height))
+        buffered = BytesIO()
+        resized_image.save(buffered, format="PNG")
+        base64_string = base64.b64encode(buffered.getvalue()).decode('utf-8')
+
+    else:
+        with open(file_path, "rb") as image_file:
+            base64_string = base64.b64encode(image_file.read()).decode("utf-8")
+    
     return base64_string
 
 def base64_to_png(base64_string, output_path):
@@ -22,6 +38,8 @@ def base64_to_png(base64_string, output_path):
 
 def get_random_id():
     return uuid.uuid4()
+
+
 
 def clamp(n, min, max): 
     if n < min: 
@@ -75,3 +93,26 @@ def get_black_square_data(image,  min_size=15):
     
     
     return rectangles, gray_img, contour_image
+
+
+def stack_images_vertically(img1, img2):
+
+    # Get the dimensions of both images
+    width1, height1 = img1.size
+    width2, height2 = img2.size
+
+    # Calculate the dimensions for the new image
+    new_width = max(width1, width2)
+    new_height = height1 + height2
+
+    # Create a new blank image with the calculated dimensions
+    new_image = Image.new('RGB', (new_width, new_height))
+
+    # Paste the first image at the top
+    new_image.paste(img1, (0, 0))
+
+    # Paste the second image below the first image
+    new_image.paste(img2, (0, height1))
+    
+    return new_image
+
