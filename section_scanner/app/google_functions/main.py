@@ -2,8 +2,8 @@ import os
 import time
 import shutil
 from flask import Flask, request, jsonify, Response
-from firebase_functions import https_fn
-from firebase_admin import initialize_app, db
+# from firebase_functions import https_fn
+# from firebase_admin import initialize_app, db
 
 from helpers import (
     png_to_base64, 
@@ -43,7 +43,7 @@ def create_app():
   
   return app
 
-app = create_app()
+app = Flask(__name__) #create_app()
 
 def cleanup_files(id):
     # input
