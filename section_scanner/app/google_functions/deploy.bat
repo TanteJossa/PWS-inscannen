@@ -1,1 +1,1 @@
-gcloud functions deploy toetspws-function --region europe-west4 --allow-unauthenticated --memory 1GB --runtime python310 --timeout 300 --min-instances 0 --max-instances 5 --trigger-http --service-account toetspws@appspot.gserviceaccount.com 
+gcloud run deploy toetspws-function --source . --region europe-west4 --allow-unauthenticated --memory 2G --timeout 300 --min-instances 0 --max-instances 5 --service-account toetspws@appspot.gserviceaccount.com 

@@ -57,10 +57,10 @@ def get_black_square_data(image,  min_size=15):
     gray_img.point(lambda x: 0 if x < 128 else 255, '1')
     
     # Convert the PIL image to a NumPy array
-    binary_image = np.array(gray_img.copy())
+    arr_image = np.array(gray_img.copy())
 
     # Threshold the array to ensure it's binary
-    binary_image = (binary_image < 128).astype(int)  # Assuming black is below 128
+    binary_image = (arr_image < 128).astype(int)  # Assuming black is below 128
     
     # Ensure the binary image is in the correct format
     if binary_image.dtype != np.uint8:
@@ -77,6 +77,17 @@ def get_black_square_data(image,  min_size=15):
     for contour in contours:
         # Get the bounding box for each contour
         x, y, w, h = cv2.boundingRect(contour)
+        
+        # oly select filled boxes on the right
+        if (x > int(2/21 * image.width)):
+            continue
+        
+        # only if black squares
+        average_color = np.mean(arr_image[ y:y+h, x:x+w])
+
+        if (average_color > 120):
+            continue
+        
         
         # Check if the bounding box is a square and larger than 15x15
         if w >= min_size and h >= min_size and abs(w - h) <= 2:  # Allow a small tolerance for non-perfect squares

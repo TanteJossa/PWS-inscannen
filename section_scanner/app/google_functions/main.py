@@ -23,7 +23,7 @@ from scan_module import (
 )
 
 def create_app():
-  app = Flask("internal")
+  app = Flask(__name__)
   # Error 404 handler
   @app.errorhandler(404)
   def resource_not_found(e):
@@ -150,10 +150,8 @@ def detect_squares_on_page():
         process_id = get_random_id()
         image_string = request.json.get("Base64Image")
         base64_to_png(image_string, input_dir+process_id+'.png')
-        
-        square_data = request.json.get("square_data")
-        
-        data = detect_squares(process_id, square_data)
+                
+        data = detect_squares(process_id)
                 
         output_image = png_to_base64(output_dir+process_id+'.png')
         
@@ -197,9 +195,12 @@ def sectionize_page():
         for name in os.listdir(output_dir+process_id):
             section_data = {}
             for section_name in os.listdir(output_dir+process_id+'/'+name):
+                # 'full' | 'section_finder' | 'question_selector' | 'answer'
                 section_name:str
+                
                 section_data[section_name.replace('.png', '')] = png_to_base64(output_dir+process_id+'/'+name+'/'+section_name)
-                sections.append(section_data)
+            
+            sections.append(section_data)
         
         cleanup_files(process_id)
         end_time = time.time()
@@ -211,7 +212,9 @@ def sectionize_page():
             "process_id": process_id,
             "start_time": start_time,
             "end_time": end_time,
-            "output": sections
+            "output": {
+                "sections": sections
+            }
         }
     except Exception as e:    
         return {"error": str(e)}
@@ -228,7 +231,7 @@ def question_section_from_question_selector():
         image_string = request.json.get("Base64Image")
         base64_to_png(image_string, input_dir+process_id+'.png')
                 
-        data = question_selector_info(id)
+        data = question_selector_info(process_id)
 
         cleanup_files(process_id)
         end_time = time.time()
@@ -257,11 +260,13 @@ def link_answer_sections():
             os.makedirs(input_dir+process_id)
         except:
             pass
+        image_ids = []
         for image_string in image_strings:
             image_id = get_random_id()
+            image_ids.append(image_id)
             base64_to_png(image_string, input_dir+process_id+'/'+image_id+'.png')
                 
-        stack_answer_sections(id)
+        stack_answer_sections(process_id, image_ids)
 
         output_image = png_to_base64(output_dir+process_id+'.png')
         
@@ -290,7 +295,7 @@ def extract_text_from_answer():
         image_string = request.json.get("Base64Image")
         base64_to_png(image_string, input_dir+process_id+'.png')
                 
-        data = transcribe_answer(id)
+        data = transcribe_answer(process_id)
 
         cleanup_files(process_id)
         end_time = time.time()
@@ -306,25 +311,6 @@ def extract_text_from_answer():
         return {"error": str(e)}
 
 
-def httpsflask_spa(request):
-    #Create a new app context for the internal app
-    # internal_ctx = app.test_request_context(path=request.full_path,
-    #                                         method=request.method)
-    
-    # #Copy main request data from original request
-    # #According to your context, parts can be missing. Adapt here!
-    # internal_ctx.request.data = request.data
-    # internal_ctx.request.headers = request.headers
-    
-    #Activate the context
-    # internal_ctx.push()
-    #Dispatch the request to the internal app and get the result 
-    return_value = {"data": jsonify(app.full_dispatch_request())}
-    #Offload the context
-    # internal_ctx.pop()
-    
-    #Return the result of the internal app routing and processing      
-    return return_value
         
 if __name__ == "__main__":
     app.run(debug=True, host="0.0.0.0", port=int(os.environ.get("PORT", 8080)))

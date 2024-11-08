@@ -175,19 +175,19 @@ def sectionize(id,square_data):
         section_name = "full"
         full.save(section_output_dir+'full.png')
         
-        section_finder_end = int(full.width * (2/21))
+        section_finder_end = int(full.width * (1.45/21))
 
-        section_finder_crop = (0, 0, section_finder_end, full.height)
+        section_finder_crop = (0, 0, section_finder_end+5, full.height)
         section_finder_image = full.copy().crop(section_finder_crop)
         section_finder_image.save(section_output_dir+'section_finder.png')
 
-        question_selector_end = int(full.width * (3/21))
+        question_selector_end = int(full.width * (2.8/21))
 
         question_selector_crop = (section_finder_end, 0, question_selector_end, full.height)
         question_selector_image = full.copy().crop(question_selector_crop)
         question_selector_image.save(section_output_dir+'question_selector.png')
         
-        answer_crop = (question_selector_end, 0, full.width, full.height)
+        answer_crop = (question_selector_end-5, 0, full.width, full.height)
         answer_image = full.copy().crop(answer_crop)
         answer_image.save(section_output_dir+'answer.png')
 
@@ -267,7 +267,7 @@ def question_selector_info(id):
 
         "tokens_used": request_data["total_tokens"],
 
-        "model_used": result["gpt_model"],
+        "model_used": result["model_used"],
         "model_version": result["model_version"],
         
         "timestamp":  result["timestamp"],
@@ -365,16 +365,14 @@ def transcribe_answer(id):
     result = single_request(messages, QuestionAnswer)
     result_data = result["result_data"]
     request_data = result["request_data"]
-
     response = {
-        "question_number": result_data["question_number"],
         "raw_text": result_data["raw_text"],
         "correctly_spelled_text": result_data["correctly_spelled_text"],
         "spelling_corrections": result_data["spelling_corrections"],
         
         "tokens_used": request_data["total_tokens"],
 
-        "model_used": result["gpt_model"],
+        "model_used": result["model_used"],
         "model_version": result["model_version"],
         
         "timestamp":  result["timestamp"],
