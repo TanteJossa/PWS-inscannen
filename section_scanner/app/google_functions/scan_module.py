@@ -17,9 +17,16 @@ from open_ai_wrapper import (
     single_request
 )
 
+from Cropper.process_image import process_image
+
 input_dir = "temp_image/"
 output_dir = "temp_image_output/"
 
+
+def crop(id):
+    current_dir = os.getcwd()
+    process_image(current_dir+'/'+input_dir+id+'.png', current_dir+'/'+output_dir+id+'.png')
+    
 
 def extract_red_pen(id):
     # remove .png
@@ -71,12 +78,6 @@ def extract_red_pen(id):
     img.save(output_dir + id +'/original.png')
 
     red_pen_image.save(output_dir+id+'/red_pen.png')
-
-
-
-
-
-
 
 def detect_squares(id):
 
@@ -229,6 +230,7 @@ def question_selector_info(id):
                     "text": """You'll get a picture of checkboxes
                             your job is to see which check box is most likly the one to be ment to be checked
                             only 1 can be chosen
+                            pick -1 if no boxes are ticked
                                 """
                                 # de vraagnummers moeten getallen zijn
                                 # als een vraagnummer een letter heeft, bijvoorbeeld 1a of 2c
@@ -250,7 +252,7 @@ def question_selector_info(id):
                 {
                     "type": "image_url",
                     "image_url": {
-                        "url": f"data:image/png;base64,{base64_image}"
+                        "url": f"{base64_image}"
                     }
                 }
             ]
@@ -355,7 +357,7 @@ def transcribe_answer(id):
                 {
                     "type": "image_url",
                     "image_url": {
-                        "url": f"data:image/png;base64,{base64_image}"
+                        "url": f"{base64_image}"
                     }
                 }
             ]

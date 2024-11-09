@@ -25,12 +25,12 @@ def png_to_base64(file_path, quality=1):
     else:
         with open(file_path, "rb") as image_file:
             base64_string = base64.b64encode(image_file.read()).decode("utf-8")
-    return base64_string
+    return "data:image/png;base64,"+base64_string
 
 def base64_to_png(base64_string, output_path):
     if not output_path.endswith('.png'):
         raise ValueError("Output file must have a .png extension.")
-    image_data = base64.b64decode(base64_string)
+    image_data = base64.b64decode(base64_string.replace('data:image/png;base64,', ''))
     with open(output_path, "wb") as output_file:
         output_file.write(image_data)
 

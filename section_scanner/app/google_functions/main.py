@@ -2,6 +2,8 @@ import os
 import time
 import shutil
 from flask import Flask, request, jsonify, Response
+from flask_cors import CORS, cross_origin
+
 # from firebase_functions import https_fn
 # from firebase_admin import initialize_app, db
 
@@ -14,6 +16,7 @@ from scan_module import (
     input_dir,
     output_dir,
     
+    crop,
     extract_red_pen,
     detect_squares,
     sectionize,
@@ -44,7 +47,7 @@ def create_app():
   return app
 
 app = Flask(__name__) #create_app()
-
+CORS(app, resources={r"/*": {"origins": "http://localhost:3000"}})
 def cleanup_files(id):
     # input
     try:
@@ -84,7 +87,7 @@ def crop_page():
         image_string = request.json.get("Base64Image")
         base64_to_png(image_string, input_dir+process_id+'.png')
         
-        # crop()
+        crop(process_id)
         
         output_string = png_to_base64(output_dir+process_id+'.png')
         

@@ -95,8 +95,9 @@ def single_request(messages, response_format):
             # max_tokens=30_000, #test image was 15k tokens
             timeout=14
         )
-    except:
+    except Exception as e:
         print("GPT request... ERROR")
+        raise Exception(str(e))
         return False
     print("GPT request... Done")
 
