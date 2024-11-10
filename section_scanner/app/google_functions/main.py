@@ -47,7 +47,7 @@ def create_app():
   return app
 
 app = Flask(__name__) #create_app()
-CORS(app, resources={r"/*": {"origins": "http://localhost:3000"}})
+CORS(app, resources={r"/*": {"origins": "*"}})
 def cleanup_files(id):
     # input
     try:

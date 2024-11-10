@@ -1,22 +1,16 @@
+# syntax=docker/dockerfile:1
 
-# Use the official Python image from the Docker Hub
-FROM python:3.10-slim
+FROM python:3.10-slim-buster
 
-# Set the working directory in the container
-WORKDIR /
+WORKDIR /pws-scanner
 
-# Copy the current directory contents into the container at /app
-COPY . /
+COPY requirements.txt requirements.txt
+# COPY --from=pws-base /usr/local/lib/python3.10/site-packages /usr/local/lib/python3.10/site-packages
+# COPY --from=pws-base /usr/local/bin /usr/local/bin
+RUN pip3 install -r requirements.txt
 
-# Install the required dependencies
-RUN pip install --no-cache-dir -r requirements.txt
-RUN apt-get update && apt-get install -y libgl1-mesa-glx
+RUN apt-get update && apt-get install ffmpeg libsm6 libxext6  -y
 
-# Make port 8080 available to the world outside this container
-EXPOSE 8080
+COPY . .
 
-# Define environment variable
-ENV NAME World
-
-# Run app.py when the container launches
-CMD ["python", "main.py"]
+CMD [ "python", "main.py"]

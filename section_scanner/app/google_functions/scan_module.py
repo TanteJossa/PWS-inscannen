@@ -213,10 +213,15 @@ def sectionize(id,square_data):
 class Checkbox(BaseModel):
     number: int
     checked_chance: float
+    percentage_filled: float
+    certainty: float
+
 
 class CheckboxSelection(BaseModel):
     checkboxes: list[Checkbox]
     most_certain_checked_number: int
+    certainty: float
+
 
 def question_selector_info(id):
     base64_image = png_to_base64(input_dir+id+ '.png')
@@ -230,7 +235,7 @@ def question_selector_info(id):
                     "text": """You'll get a picture of checkboxes
                             your job is to see which check box is most likly the one to be ment to be checked
                             only 1 can be chosen
-                            pick -1 if no boxes are ticked
+                            pick zero if no boxes are checked 
                                 """
                                 # de vraagnummers moeten getallen zijn
                                 # als een vraagnummer een letter heeft, bijvoorbeeld 1a of 2c
@@ -247,7 +252,7 @@ def question_selector_info(id):
             "content": [
                 {
                     "type": "text",
-                    "text": "extract checked checkbox number"    
+                    "text": "extract checked checkbox number. pick zero if no boxes are checked "    
                 },
                 {
                     "type": "image_url",

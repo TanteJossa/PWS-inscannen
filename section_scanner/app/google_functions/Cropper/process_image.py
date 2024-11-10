@@ -20,7 +20,6 @@ def process_image(file_path: str, output_path: str) -> bool:
 
         # if org == None:
         #     success = False
-        print('hi')
         paper = EnhancePaper(paper)
 
         # save_path = pathlib.Path(os.path.join(image_path.parent, "Resaults")); save_path.mkdir(exist_ok = True)
