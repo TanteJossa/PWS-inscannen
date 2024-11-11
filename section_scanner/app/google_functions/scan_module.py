@@ -2,6 +2,7 @@ from PIL import Image, ImageEnhance, ImageFont, ImageDraw
 import sys
 import os
 import copy
+import cv2
 import json
 from pydantic import BaseModel
 
@@ -18,15 +19,22 @@ from open_ai_wrapper import (
 )
 
 from Cropper.process_image import process_image
+from Cropper.other import scan
 
 input_dir = "temp_image/"
 output_dir = "temp_image_output/"
 
 
+# def crop(id):
+#     current_dir = os.getcwd()
+#     process_image(current_dir+'/'+input_dir+id+'.png', current_dir+'/'+output_dir+id+'.png')
+
 def crop(id):
-    current_dir = os.getcwd()
-    process_image(current_dir+'/'+input_dir+id+'.png', current_dir+'/'+output_dir+id+'.png')
-    
+    image = cv2.imread(input_dir+id+'.png')
+    image = scan(image)
+    cv2.imwrite(output_dir+id+'.png', image)
+
+
 
 def extract_red_pen(id):
     # remove .png
@@ -58,11 +66,13 @@ def extract_red_pen(id):
 
                 for i in range(2*radius):
                     for j in range(2*radius):
-                        red_pen_pixdata[x + i - radius, y + j - radius] = clean_pixdata2[x + i - radius, y + j - radius]
+                        try:
+                            red_pen_pixdata[x + i - radius, y + j - radius] = clean_pixdata2[x + i - radius, y + j - radius]
 
-                        # copy the old red pen values
-                        clean_pixdata[x + i - radius, y + j - radius] = (255, 255, 255)
-                
+                            # copy the old red pen values
+                            clean_pixdata[x + i - radius, y + j - radius] = (255, 255, 255)
+                        except:
+                            pass
 
     # img.convert("L")
 

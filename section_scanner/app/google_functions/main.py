@@ -25,6 +25,8 @@ from scan_module import (
     transcribe_answer
 )
 
+
+
 def create_app():
   app = Flask(__name__)
   # Error 404 handler

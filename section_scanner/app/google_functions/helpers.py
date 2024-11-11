@@ -52,6 +52,7 @@ def clamp(n, min, max):
 # Example usage with the provided squares and a new output path
 
 def get_black_square_data(image,  min_size=15):
+
     # Convert the image to grayscale to help detect the black squares
     gray_img = image.convert('L')
     gray_img.point(lambda x: 0 if x < 128 else 255, '1')
@@ -60,15 +61,29 @@ def get_black_square_data(image,  min_size=15):
     arr_image = np.array(gray_img.copy())
 
     # Threshold the array to ensure it's binary
-    binary_image = (arr_image < 128).astype(int)  # Assuming black is below 128
+    binary_image = (arr_image < 150).astype(int)  # Assuming black is below 128
+
+    arr_binary_image = np.array(binary_image.copy())
     
     # Ensure the binary image is in the correct format
     if binary_image.dtype != np.uint8:
         binary_image = binary_image.astype(np.uint8)
 
+    # cv2.imwrite('./tempshow/binary.png', binary_image*255)
+    
     # Find contours in the binary image
     contours, _ = cv2.findContours(binary_image, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
     contour_image =  image.copy()
+    
+    # temp = image.copy()
+    
+
+    # for contour in contours:
+    #     draw = ImageDraw.Draw(temp)
+    #     contour_points = [(int(point[0][0]), int(point[0][1])) for point in contour]
+    #     draw.polygon(contour_points, outline=(0, 255, 0), width=2)
+
+    
 
     # List to store rectangle properties
     rectangles = []
@@ -79,25 +94,37 @@ def get_black_square_data(image,  min_size=15):
         x, y, w, h = cv2.boundingRect(contour)
         
         # oly select filled boxes on the right
-        if (x > int(2/21 * image.width)):
+        if (x > int(1.7/21 * image.width)):
             continue
         
-        # only if black squares
-        average_color = np.mean(arr_image[ y:y+h, x:x+w])
 
-        if (average_color > 120):
+        # only if black squares
+        average_color = np.mean(arr_binary_image[ y:y+h, x:x+w])
+        
+        if (average_color < 0.7):
             continue
         
+        # draw_temp = ImageDraw.Draw(contour_image)
+        # contour_points = [(int(point[0][0]), int(point[0][1])) for point in contour]
+        
+
         
         # Check if the bounding box is a square and larger than 15x15
-        if w >= min_size and h >= min_size and abs(w - h) <= 2:  # Allow a small tolerance for non-perfect squares
+        if w >= min_size and h >= min_size:  # Allow a small tolerance for non-perfect squares
             # Append the rectangle properties: (start_height, height, x_min, x_max)
             rectangles.append((y, h, x, x + w))
             
             draw = ImageDraw.Draw(contour_image)
             contour_points = [(int(point[0][0]), int(point[0][1])) for point in contour]
             draw.polygon(contour_points, outline=(0, 255, 0), width=2)
+            
+            # id = get_random_id()
+            # cv2.imwrite('./tempshow/'+str(int(average_color*100))+'.png', arr_binary_image[ y:y+h, x:x+w] * 255)
+
+            # draw_temp.polygon(contour_points, outline=(0, 255, 0), width=2)
+
             # contour_image = draw.polygon(contour, fill=(0,255,0))
+            
 
     
     
