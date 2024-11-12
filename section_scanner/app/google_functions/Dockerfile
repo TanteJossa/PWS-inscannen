@@ -9,7 +9,8 @@ COPY requirements.txt requirements.txt
 # COPY --from=pws-base /usr/local/bin /usr/local/bin
 RUN pip3 install -r requirements.txt
 
-RUN apt-get update && apt-get install ffmpeg libsm6 libxext6  -y
+RUN apt-get update && \
+    apt-get install ffmpeg libsm6 libxext6 zbar-tools -y
 
 COPY . .
 
