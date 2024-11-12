@@ -8,7 +8,31 @@ from helpers import (
 )
 import json
 
-print(png_to_base64('./test_input/crop_input.png')[0:200])
+# print(png_to_base64('./test_input/crop_input.png')[0:200])
+
+
+if True:
+    response:requests.Response = requests.post(
+        'http://localhost:8080/create_qr_section', 
+        
+        json={
+            'Base64Image': png_to_base64('./test_input/qr_section_input.png'),
+            'data': 'test_text'
+        },
+        headers={
+            "Content-Type": 'application/json'
+        }
+    )
+    result = response.json()
+    if ("error" in result):
+        print(result)
+        exit()
+    result = result["output"]
+        
+    base_64_data = result
+    base64_to_png(base_64_data, './test_output/qr_section_output.png')
+    
+    pass
 
 if True:
     # response:requests.Response = requests.post(
@@ -58,6 +82,28 @@ if True:
     # )
     # base_64_data = response.json()["output"]["clean"]
     # base64_to_png(base_64_data, 'test_output.png')
+    pass
+
+if True:
+    # response:requests.Response = requests.post(
+    #     'http://localhost:8080/get_qr_sections', 
+        
+    #     json={
+    #         'Base64Image': png_to_base64('./test_input/qr_section_input.png')
+    #     },
+    #     headers={
+    #         "Content-Type": 'application/json'
+    #     }
+    # )
+    # result = response.json()
+    # if ("error" in result):
+    #     print(result)
+    #     exit()
+    # result = result["output"]
+        
+    # base_64_data = result["image"]
+    # print(result["sections"])
+    # base64_to_png(base_64_data, './test_output/qr_section_output.png')
     pass
 
 if True:
@@ -117,22 +163,22 @@ if True:
     pass
 
 if True:
-    response:requests.Response = requests.post(
-        'http://localhost:8080/question_selector_info', 
+    # response:requests.Response = requests.post(
+    #     'http://localhost:8080/question_selector_info', 
         
-        json={
-            'Base64Image': png_to_base64('./test_input/section_selection_input.png')
-        },
-        headers={
-            "Content-Type": 'application/json'
-        }
-    )
-    result = response.json()
-    if ("error" in result):
-        print(result)
-        exit()
-    result = result["output"]
-    print(result)
+    #     json={
+    #         'Base64Image': png_to_base64('./test_input/section_selection_input.png')
+    #     },
+    #     headers={
+    #         "Content-Type": 'application/json'
+    #     }
+    # )
+    # result = response.json()
+    # if ("error" in result):
+    #     print(result)
+    #     exit()
+    # result = result["output"]
+    # print(result)
     pass
 
 if True:

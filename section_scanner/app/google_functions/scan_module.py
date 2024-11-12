@@ -7,10 +7,13 @@ import json
 from pydantic import BaseModel
 
 from helpers import (
+    cm_to_px, 
     clamp,
+    scan_qrcode_from_image,
     get_black_square_data,
     png_to_base64,
     stack_images_vertically,
+    create_qr
 )
 
 from open_ai_wrapper import (
@@ -18,7 +21,7 @@ from open_ai_wrapper import (
     single_request
 )
 
-from Cropper.process_image import process_image
+# from Cropper.process_image import process_image
 from Cropper.other import scan
 
 input_dir = "temp_image/"
@@ -28,6 +31,37 @@ output_dir = "temp_image_output/"
 # def crop(id):
 #     current_dir = os.getcwd()
 #     process_image(current_dir+'/'+input_dir+id+'.png', current_dir+'/'+output_dir+id+'.png')
+
+
+def create_qr_section(id, data, width=cm_to_px(19), height=cm_to_px(8)):
+    margin = 5
+    
+    
+    qr_code = create_qr(data, 1)
+    qr_size = cm_to_px(1.5)
+
+    img = Image.new("RGB", (width, height), color='white')
+    
+    p1 = margin, margin
+    p1_rect = qr_size + 2*margin, margin
+    p2 = img.size[0] - qr_size - margin , height - qr_size - margin
+    p2_rect = img.size[0] - qr_size - 2*margin, height - margin
+
+    qr_code = qr_code.resize((qr_size, qr_size))
+
+    img.paste(qr_code, p1)
+    img.paste(qr_code, p2)
+    
+    draw = ImageDraw.Draw(img)
+    draw.rectangle([p1_rect, p2_rect], width=5, outline='black')
+    
+    img.save(output_dir+id+'.png')
+    base_64_image = png_to_base64(output_dir+id+'.png')
+    
+    return base_64_image
+    
+
+
 
 def crop(id):
     image = cv2.imread(input_dir+id+'.png')
@@ -88,6 +122,43 @@ def extract_red_pen(id):
     img.save(output_dir + id +'/original.png')
 
     red_pen_image.save(output_dir+id+'/red_pen.png')
+
+def get_qr_sections(id):
+    img = Image.open(input_dir + id + '.png')
+    cv2_img = cv2.imread(input_dir + id + '.png')
+
+    data, scanned_image = scan_qrcode_from_image(img.copy())
+    
+    try:
+        os.mkdir(output_dir+id)
+    except:
+        pass
+    
+    scanned_image.save(output_dir+id+'/scanned.png')
+    
+    base64_full = png_to_base64(output_dir+id+'/scanned.png')
+    
+    sections = []
+    
+    for index, qr_data in enumerate(data):
+        top_left, bottom_right = qr_data["coords"]
+        
+        section_img = cv2_img[top_left[1]:bottom_right[1] , top_left[0]:bottom_right[0]]
+        cv2.imwrite(output_dir+id+'/'+str(index)+'.png', section_img)
+        
+        base64_section = png_to_base64(output_dir+id+'/'+str(index)+'.png')
+        
+        sections.append({
+            "section_image": base64_section,
+            "data": qr_data["data"]
+        })
+    
+    return {
+        "image": base64_full,
+        "sections": sections
+    }
+        
+        
 
 def detect_squares(id):
 

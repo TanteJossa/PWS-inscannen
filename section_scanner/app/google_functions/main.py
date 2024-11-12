@@ -16,8 +16,11 @@ from scan_module import (
     input_dir,
     output_dir,
     
+    create_qr_section,
+    
     crop,
     extract_red_pen,
+    get_qr_sections,
     detect_squares,
     sectionize,
     question_selector_info,
@@ -76,6 +79,37 @@ def hello_world():
     """Example Hello World route."""
     name = os.environ.get("NAME", "World")
     return f"Hello {name}!"
+
+@app.route("/create_qr_section", methods = ['GET', 'POST'])
+def get_qr_section():
+    try:
+        start_time = time.time()
+        if ("id" in request.json):
+            id = request.json.get("id")
+        else:
+            id = "No ID found"
+        process_id = get_random_id()
+        image_string = request.json.get("Base64Image")
+        data = request.json.get("data")
+        base64_to_png(image_string, input_dir+process_id+'.png')
+                
+        base64_image = create_qr_section(process_id, data)
+                        
+        cleanup_files(process_id)
+        end_time = time.time()
+
+
+
+        return {
+            "id": id,
+            "process_id": process_id,
+            "start_time": start_time,
+            "end_time": end_time,
+            "output": base64_image
+        }
+    except Exception as e:    
+        return {"error": str(e)}
+
 
 @app.route("/crop", methods = ['GET', 'POST'])
 def crop_page():
@@ -143,6 +177,35 @@ def colcor_page():
     except Exception as e:    
         return {"error": str(e)}
 
+@app.route("/get_qr_sections", methods = ['GET', 'POST'])
+def cut_qr_sections():
+    try:
+        start_time = time.time()
+        if ("id" in request.json):
+            id = request.json.get("id")
+        else:
+            id = "No ID found"
+        process_id = get_random_id()
+        image_string = request.json.get("Base64Image")
+        base64_to_png(image_string, input_dir+process_id+'.png')
+                
+        data = get_qr_sections(process_id)
+                
+        
+        cleanup_files(process_id)
+        end_time = time.time()
+
+
+
+        return {
+            "id": id,
+            "process_id": process_id,
+            "start_time": start_time,
+            "end_time": end_time,
+            "output": data
+        }
+    except Exception as e:    
+        return {"error": str(e)}
 
 @app.route("/detect_squares", methods = ['GET', 'POST'])
 def detect_squares_on_page():

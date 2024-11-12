@@ -6,6 +6,15 @@ import os
 import numpy as np
 from io import BytesIO
 import cv2
+from pyzbar.pyzbar import decode
+import io
+import segno
+from collections import defaultdict
+
+ppi = 200
+inch_per_cm = 0.393701
+
+cm_to_px = lambda x: int(x*ppi*inch_per_cm)
 
 def png_to_base64(file_path, quality=1):
     if not file_path.endswith('.png'):
@@ -48,7 +57,63 @@ def clamp(n, min, max):
         return n 
 
 
+def scan_qrcode_from_image(pillow_image):    
 
+    # Ensure the image is in RGB mode (in case it's RGBA or grayscale)
+    if pillow_image.mode != 'RGB':
+        pillow_image = pillow_image.convert('RGB')
+    
+    # Convert Pillow image to OpenCV format (numpy array)
+    open_cv_image = np.array(pillow_image)
+
+    # Convert RGB to BGR (OpenCV uses BGR format)
+    open_cv_image = open_cv_image[:, :, ::-1]
+
+    # Decode QR codes
+    qr_codes = decode(open_cv_image)
+
+    # Create a drawing context
+    draw = ImageDraw.Draw(pillow_image)
+
+    qr_code_coords = []
+
+    # Iterate through detected QR codes
+    for qr1, qr2 in pair_same_output(qr_codes, lambda x: x.data):
+                
+        # Get the data from the QR code
+        qr1_data = qr1.data.decode('utf-8')
+        qr2_data = qr2.data.decode('utf-8')
+
+        # Get the bounding box (rectangle)
+        rect1_points = qr1.rect  # This is a tuple (x, y, width, height)
+        rect2_points = qr2.rect  # This is a tuple (x, y, width, height)
+
+        p1 = (rect1_points[0] , rect1_points[1] + rect2_points[3])
+        p2 = (rect2_points[0]+ rect1_points[2], rect2_points[1])
+
+        if (rect1_points[0] < rect2_points[0]):
+            top_left = p1
+            bottom_right = p2
+        else:
+            top_left = p2
+            bottom_right = p1
+        
+
+        qr_code_coords.append({
+            "coords": [top_left, bottom_right],
+            "data": qr1_data
+        })
+        
+        # Draw the rectangle (color: green, thicknessp: 3)
+        draw.rectangle([top_left, bottom_right], outline="green", width=10)
+        
+        # Display the decoded QR code data on the image
+        font = ImageFont.load_default(size=15)
+        text_position = (top_left[0], top_left[1] - 10)  # Place text above the rectangle
+        draw.text(text_position, qr1_data, fill="green", font=font)
+
+
+    return qr_code_coords, pillow_image
 # Example usage with the provided squares and a new output path
 
 def get_black_square_data(image,  min_size=15):
@@ -152,3 +217,30 @@ def stack_images_vertically(img1, img2):
     
     return new_image
 
+def create_qr(data, height=1):
+    qrcode = segno.make(data, boost_error=False, micro=False)
+    out = io.BytesIO()
+    qrcode.save(out, scale=height, border=0, kind='png')
+    out.seek(0)
+    local_img = Image.open(out)
+
+    return local_img
+
+def consecutive_pairs(lst):
+    # Create pairs by zipping the list with itself offset by one element
+    return [(lst[i], lst[i + 1]) for i in range(0, len(lst) - 1, 2)]
+
+def pair_same_output(lst, func):
+    # Create a dictionary to group elements by their transformed values
+    grouped = defaultdict(list)
+    for item in lst:
+        key = func(item)
+        grouped[key].append(item)
+
+    # Generate pairs from the grouped values
+    pairs = []
+    for items in grouped.values():
+        # Add pairs only if there are at least two items with the same output
+        pairs.extend((items[i], items[i + 1]) for i in range(0, len(items) - 1, 2))
+    
+    return pairs
