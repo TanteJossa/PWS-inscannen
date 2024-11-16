@@ -12,25 +12,25 @@ import json
 
 
 if True:
-    response:requests.Response = requests.post(
-        'http://localhost:8080/create_qr_section', 
+    # response:requests.Response = requests.post(
+    #     'http://localhost:8080/create_qr_section', 
         
-        json={
-            'Base64Image': png_to_base64('./test_input/qr_section_input.png'),
-            'data': 'test_text'
-        },
-        headers={
-            "Content-Type": 'application/json'
-        }
-    )
-    result = response.json()
-    if ("error" in result):
-        print(result)
-        exit()
-    result = result["output"]
+    #     json={
+    #         'Base64Image': png_to_base64('./test_input/qr_section_input.png'),
+    #         'data': 'test_text'
+    #     },
+    #     headers={
+    #         "Content-Type": 'application/json'
+    #     }
+    # )
+    # result = response.json()
+    # if ("error" in result):
+    #     print(result)
+    #     exit()
+    # result = result["output"]
         
-    base_64_data = result
-    base64_to_png(base_64_data, './test_output/qr_section_output.png')
+    # base_64_data = result
+    # base64_to_png(base_64_data, './test_output/qr_section_output.png')
     
     pass
 
@@ -67,6 +67,27 @@ if True:
     # )
     # base_64_data = response.json()["output"]["clean"]
     # base64_to_png(base_64_data, 'test_output.png')
+    pass
+
+if True:
+    response:requests.Response = requests.post(
+        'http://localhost:8080/get_student_id', 
+        
+        json={
+            'Base64Image': png_to_base64('./test_input/input.png'),
+        },
+        headers={
+            "Content-Type": 'application/json'
+        }
+    )
+    result = response.json()
+    if ("error" in result):
+        print(result)
+        exit()
+    result = result["output"]
+        
+    print(result)
+    
     pass
 
 if True:

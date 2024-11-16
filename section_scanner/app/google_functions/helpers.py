@@ -244,3 +244,4 @@ def pair_same_output(lst, func):
         pairs.extend((items[i], items[i + 1]) for i in range(0, len(items) - 1, 2))
     
     return pairs
+

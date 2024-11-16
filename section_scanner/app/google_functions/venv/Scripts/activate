@@ -38,7 +38,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="C:\Users\joost\AppData\Local\Temp\New folder\venv"
+VIRTUAL_ENV="D:\GitHub\PWS-inscannen\section_scanner\app\google_functions\venv"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"

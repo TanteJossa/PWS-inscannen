@@ -20,6 +20,7 @@ from scan_module import (
     
     crop,
     extract_red_pen,
+    get_student_id,
     get_qr_sections,
     detect_squares,
     sectionize,
@@ -89,9 +90,7 @@ def get_qr_section():
         else:
             id = "No ID found"
         process_id = get_random_id()
-        image_string = request.json.get("Base64Image")
         data = request.json.get("data")
-        base64_to_png(image_string, input_dir+process_id+'.png')
                 
         base64_image = create_qr_section(process_id, data)
                         
@@ -173,6 +172,37 @@ def colcor_page():
                 "clean": clean_output_string,
                 "red_pen": red_pen_output_string,
             }
+        }
+    except Exception as e:    
+        return {"error": str(e)}
+
+
+@app.route("/get_student_id", methods = ['GET', 'POST'])
+def extract_student_id():
+    try:
+        start_time = time.time()
+        if ("id" in request.json):
+            id = request.json.get("id")
+        else:
+            id = "No ID found"
+        process_id = get_random_id()
+        image_string = request.json.get("Base64Image")
+        base64_to_png(image_string, input_dir+process_id+'.png')
+                
+        data = get_student_id(process_id)
+                
+        
+        cleanup_files(process_id)
+        end_time = time.time()
+
+
+
+        return {
+            "id": id,
+            "process_id": process_id,
+            "start_time": start_time,
+            "end_time": end_time,
+            "output": data
         }
     except Exception as e:    
         return {"error": str(e)}

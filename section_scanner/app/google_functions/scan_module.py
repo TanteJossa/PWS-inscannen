@@ -13,7 +13,7 @@ from helpers import (
     get_black_square_data,
     png_to_base64,
     stack_images_vertically,
-    create_qr
+    create_qr,
 )
 
 from open_ai_wrapper import (
@@ -122,6 +122,75 @@ def extract_red_pen(id):
     img.save(output_dir + id +'/original.png')
 
     red_pen_image.save(output_dir+id+'/red_pen.png')
+
+class TekstInBox(BaseModel):
+    tekst: str
+    other_possibility: str
+
+def get_student_id(id):
+    img = Image.open(input_dir + id + '.png')
+    
+    # student id in topleft section
+    crop = (0,0, int(img.width * (5/21)), int(img.height * (5/29.5)))
+    
+    cropped = img.crop(crop)
+    
+    cropped.save(output_dir+id+'.png')
+    
+    base64_image = png_to_base64(output_dir+id+'.png')
+    
+    
+    messages = [
+        {
+            "role": "system",
+            "content": [
+                {
+                    "type": "text",
+                    "text": """Your job is to recognize the number in the black box next to the words Leerling ID and 'schrijf NETJES!'
+                        return -1 if the box is empty
+                    """,
+                    
+                                # de vraagnummers moeten getallen zijn
+                                # als een vraagnummer een letter heeft, bijvoorbeeld 1a of 2c
+                                # noteer dat dan al volgt: 1.a en 2.c dus, {getal}.{letter}
+                },
+                {
+                    "type": "text",
+                    "text": "Give you result in JSON like in the given schema"    
+                },
+            ]
+        },
+        {
+            "role": "user",
+            "content": [
+                {
+                    "type": "image_url",
+                    "image_url": {
+                        "url": f"{base64_image}"
+                    }
+                }
+            ]
+        }
+    ]
+    
+    result = single_request(messages, TekstInBox)
+    result_data = result["result_data"]
+    request_data = result["request_data"]
+
+    response = {
+        "student_id": result_data["tekst"],
+        "other_possibility": result_data["other_possibility"],
+
+        "tokens_used": request_data["total_tokens"],
+
+        "model_used": result["model_used"],
+        "model_version": result["model_version"],
+        
+        "timestamp":  result["timestamp"],
+        "delta_time_s":  result["delta_time_s"],
+    }
+    
+    return response["student_id"]
 
 def get_qr_sections(id):
     img = Image.open(input_dir + id + '.png')
@@ -313,10 +382,12 @@ def question_selector_info(id):
             "content": [
                 {
                     "type": "text",
-                    "text": """You'll get a picture of checkboxes
+                    "text": """
+                            You'll get a picture of checkboxes that a student used to select an answer
                             your job is to see which check box is most likly the one to be ment to be checked
                             only 1 can be chosen
                             pick zero if no boxes are checked 
+                            take into account the arrows that point to a chosen box, or crossed out boxes
                                 """
                                 # de vraagnummers moeten getallen zijn
                                 # als een vraagnummer een letter heeft, bijvoorbeeld 1a of 2c
@@ -422,6 +493,8 @@ def transcribe_answer(id):
                                 Bedenk geen nieuwe woorden of woordonderdelen. 
                                 Verander alleen kleine spelfoutjes.
                                 houd in het antwoord ook rekening met meerdere regels en geeft die aan met een '\\n'
+                                probeer zo veel mogelijk tekst te extraheren 
+                                negeer uitgekrasde letters of woorden
                                 """
                                 # de vraagnummers moeten getallen zijn
                                 # als een vraagnummer een letter heeft, bijvoorbeeld 1a of 2c

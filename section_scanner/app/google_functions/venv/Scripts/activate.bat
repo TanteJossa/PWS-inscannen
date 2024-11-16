@@ -8,7 +8,7 @@ if defined _OLD_CODEPAGE (
     "%SystemRoot%\System32\chcp.com" 65001 > nul
 )
 
-set VIRTUAL_ENV=C:\Users\joost\AppData\Local\Temp\New folder\venv
+set VIRTUAL_ENV=D:\GitHub\PWS-inscannen\section_scanner\app\google_functions\venv
 
 if not defined PROMPT set PROMPT=$P$G
 
