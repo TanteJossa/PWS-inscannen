@@ -5,6 +5,8 @@ import copy
 import cv2
 import json
 from pydantic import BaseModel
+import typing_extensions as typing
+
 
 from helpers import (
     cm_to_px, 
@@ -15,6 +17,8 @@ from helpers import (
     stack_images_vertically,
     create_qr,
 )
+
+from gemini_wrapper import google_single_image_request
 
 from open_ai_wrapper import (
     num_tokens_from_messages,
@@ -477,68 +481,113 @@ class QuestionAnswer(BaseModel):
     # get the spelling changes the model made
     spelling_corrections: list[SpellingCorrection]
     
-def transcribe_answer(id):
+# schema classes
+class GoogleSpellingCorrection(typing.TypedDict):
+    original: str
+    changes: str
+
+# answer class schema
+class GoogleQuestionAnswer(typing.TypedDict):
+    # let openai reasses the question number (they are better than google )
+    certainty: float 
+    student_handwriting_percent: float
+    # get the unchanged raw tekst
+    raw_text: str
+    # get the spel corrected tekst that should be graded
+    correctly_spelled_text: str
+    # get the spelling changes the model made
+    spelling_corrections: list[SpellingCorrection]
+    
+
+def transcribe_answer(id, api="google"):
+    
     base64_image = png_to_base64(input_dir+id+ '.png')
 
-    messages = [
-        {
-            "role": "system",
-            "content": [
-                {
-                    "type": "text",
-                    "text": """Je krijgt een foto van een Nederlandse toetsantwoord. 
-                                Je moet deze omzetten in tekst. 
-                                Deze toets moet nog worden nagekeken je. 
-                                Verander niets aan de inhoud. 
-                                Bedenk geen nieuwe woorden of woordonderdelen. 
-                                Verander alleen kleine spelfoutjes.
-                                houd in het antwoord ook rekening met meerdere regels en geeft die aan met een '\\n'
-                                probeer zo veel mogelijk tekst te extraheren 
-                                negeer uitgekrasde letters of woorden
-                                """
-                                # de vraagnummers moeten getallen zijn
-                                # als een vraagnummer een letter heeft, bijvoorbeeld 1a of 2c
-                                # noteer dat dan al volgt: 1.a en 2.c dus, {getal}.{letter}
-                },
-                {
-                    "type": "text",
-                    "text": "Geef antwoord in JSON zoals in een aangegeven schema staat"    
-                },
-            ]
-        },
-        {
-            "role": "user",
-            "content": [
-                {
-                    "type": "text",
-                    "text": "extraheer de tekst"    
-                },
-                {
-                    "type": "image_url",
-                    "image_url": {
-                        "url": f"{base64_image}"
-                    }
-                }
-            ]
-        }
-    ]
-    
-    result = single_request(messages, QuestionAnswer)
-    result_data = result["result_data"]
-    request_data = result["request_data"]
-    response = {
-        "raw_text": result_data["raw_text"],
-        "correctly_spelled_text": result_data["correctly_spelled_text"],
-        "spelling_corrections": result_data["spelling_corrections"],
-        
-        "tokens_used": request_data["total_tokens"],
+    request_text = """Je krijgt een foto van een Nederlandse toetsantwoord. 
+                    Je moet deze omzetten in tekst. 
+                    Deze toets moet nog worden nagekeken je. 
+                    Verander niets aan de inhoud. 
+                    Bedenk geen nieuwe woorden of woordonderdelen. 
+                    Verander alleen kleine spelfoutjes.
+                    houd in het antwoord ook rekening met meerdere regels en geeft die aan met een '\\n'
+                    probeer zo veel mogelijk tekst te extraheren 
+                    negeer uitgekrasde letters of woorden
+                    """
 
-        "model_used": result["model_used"],
-        "model_version": result["model_version"],
+    if api=="openai":
+        messages = [
+            {
+                "role": "system",
+                "content": [
+                    {
+                        "type": "text",
+                        "text": request_text
+                                    # de vraagnummers moeten getallen zijn
+                                    # als een vraagnummer een letter heeft, bijvoorbeeld 1a of 2c
+                                    # noteer dat dan al volgt: 1.a en 2.c dus, {getal}.{letter}
+                    },
+                    {
+                        "type": "text",
+                        "text": "Geef antwoord in JSON zoals in een aangegeven schema staat"    
+                    },
+                ]
+            },
+            {
+                "role": "user",
+                "content": [
+                    {
+                        "type": "text",
+                        "text": "extraheer de tekst"    
+                    },
+                    {
+                        "type": "image_url",
+                        "image_url": {
+                            "url": f"{base64_image}"
+                        }
+                    }
+                ]
+            }
+        ]
         
-        "timestamp":  result["timestamp"],
-        "delta_time_s":  result["delta_time_s"],
-    }
+        result = single_request(messages, QuestionAnswer)
+        result_data = result["result_data"]
+        request_data = result["request_data"]
+        response = {
+            "raw_text": result_data["raw_text"],
+            "correctly_spelled_text": result_data["correctly_spelled_text"],
+            "spelling_corrections": result_data["spelling_corrections"],
+            
+            "tokens_used": request_data["total_tokens"],
+
+            "model_used": result["model_used"],
+            "model_version": result["model_version"],
+            
+            "timestamp":  result["timestamp"],
+            "delta_time_s":  result["delta_time_s"],
+        }
+    if api=="google":
+        google_model = "gemini-1.5-flash"
+        result = google_single_image_request(
+            tekst=request_text,
+            base64_image=base64_image,
+            model=google_model,
+            id=id,
+            response_format=GoogleQuestionAnswer
+        )
+        result_data = json.loads(result.text)
+        response = {
+            "raw_text": result_data["raw_text"],
+            "correctly_spelled_text": result_data["correctly_spelled_text"],
+            "spelling_corrections": result_data["spelling_corrections"],
+            
+            "tokens_used": request_data.safety_attributes[0].quota_information.tokens_used,
+
+            "model_used": google_model,
+            "model_version": google_model,
+            
+            "timestamp":  0,
+            "delta_time_s":  0,
+        }
     
     return response
 
