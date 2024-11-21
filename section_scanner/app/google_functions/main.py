@@ -3,6 +3,7 @@ import time
 import shutil
 from flask import Flask, request, jsonify, Response
 from flask_cors import CORS, cross_origin
+from multiprocessing import Pool
 
 # from firebase_functions import https_fn
 # from firebase_admin import initialize_app, db
@@ -109,7 +110,89 @@ def get_qr_section():
     except Exception as e:    
         return {"error": str(e)}
 
+@app.route("/scan_page", methods = ['GET', 'POST'])
+def scan_page():
+    try:
+        start_time = time.time()
+        if ("id" in request.json):
+            id = request.json.get("id")
+        else:
+            id = "No ID found"
+        process_id = get_random_id()
+        
+        image_string = request.json.get("Base64Image")
+        # CROP
+        # base64_to_png(image_string, input_dir+process_id+'.png')
+        crop_output_string = crop(process_id, image_string)
+        
+        # crop_output_string = png_to_base64(output_dir+process_id+'.png')
 
+        # COL COR
+        # base64_to_png(crop_output_string, input_dir+process_id+'.png')
+        color_correction_result = extract_red_pen(process_id, crop_output_string)
+        
+        
+        clean_output_string = color_correction_result["original"] #png_to_base64(output_dir+process_id+'/original.png')
+        red_pen_output_string = color_correction_result["red_pen"] #png_to_base64(output_dir+process_id+'/red_pen.png')
+        
+
+        # STUDENT ID
+        # base64_to_png(clean_output_string, input_dir+process_id+'.png')
+        student_id_data = get_student_id(process_id, clean_output_string)
+                
+        
+        # DETECT SQUARES
+        square_data = detect_squares(process_id, clean_output_string)
+        
+        # SECTIONIZE        
+        sections = sectionize(process_id, square_data, clean_output_string)
+        
+        sections_width_data = []
+                      
+        for index, section in enumerate(sections):
+            question_selector_info_result = question_selector_info(process_id, section["question_selector"])
+
+            question_id = question_selector_info_result["selected_question"]
+
+            sections[index]["question_id"] = question_id
+
+        unique_questions = list(set(map(lambda x: x["question_id"], sections)))
+        
+        questions = []
+        
+        for unique_question_id in unique_questions:
+            sections = list(filter(lambda x: x["question_id"] == unique_question_id, sections))
+
+            linked_image = stack_answer_sections(process_id, list(map(lambda x: x["answer"], sections)))
+
+            extracted_text_result = transcribe_answer(process_id, linked_image)
+
+            questions.append({
+                "image": linked_image,
+                "question_id": unique_question_id,
+                "text_result": extracted_text_result
+            })
+
+
+
+        
+        # cleanup_files(process_id)
+        end_time = time.time()
+
+        return {
+            "id": id,
+            "process_id": process_id,
+            "start_time": start_time,
+            "end_time": end_time,
+            "output": {
+                "cropped_base64": crop_output_string,
+                "red_pen_base64": red_pen_output_string,
+                "student_id_data": student_id_data,
+                "questions": questions,
+            },
+        }
+    except Exception as e:    
+        return {"error": str(e)}
 @app.route("/crop", methods = ['GET', 'POST'])
 def crop_page():
     try:
@@ -120,14 +203,13 @@ def crop_page():
             id = "No ID found"
         process_id = get_random_id()
         image_string = request.json.get("Base64Image")
-        base64_to_png(image_string, input_dir+process_id+'.png')
+        # base64_to_png(image_string, input_dir+process_id+'.png')
         
-        crop(process_id)
+        output_string = crop(process_id, image_string)
+        # output_string = png_to_base64(output_dir+process_id+'.png')
         
-        output_string = png_to_base64(output_dir+process_id+'.png')
         
-        
-        cleanup_files(process_id)
+        # cleanup_files(process_id)
         end_time = time.time()
 
         return {
@@ -150,15 +232,15 @@ def colcor_page():
             id = "No ID found"
         process_id = get_random_id()
         image_string = request.json.get("Base64Image")
-        base64_to_png(image_string, input_dir+process_id+'.png')
+        # base64_to_png(image_string, input_dir+process_id+'.png')
         
-        extract_red_pen(process_id)
+        color_correction_result = extract_red_pen(process_id, image_string)
         
-        clean_output_string = png_to_base64(output_dir+process_id+'/original.png')
-        red_pen_output_string = png_to_base64(output_dir+process_id+'/red_pen.png')
+        clean_output_string = color_correction_result["original"] #png_to_base64(output_dir+process_id+'/original.png')
+        red_pen_output_string = color_correction_result["red_pen"] #png_to_base64(output_dir+process_id+'/red_pen.png')
         
         
-        cleanup_files(process_id)
+        # cleanup_files(process_id)
         end_time = time.time()
 
 
@@ -187,12 +269,12 @@ def extract_student_id():
             id = "No ID found"
         process_id = get_random_id()
         image_string = request.json.get("Base64Image")
-        base64_to_png(image_string, input_dir+process_id+'.png')
+        # base64_to_png(image_string, input_dir+process_id+'.png')
                 
-        data = get_student_id(process_id)
+        data = get_student_id(process_id, image_string)
                 
         
-        cleanup_files(process_id)
+        # cleanup_files(process_id)
         end_time = time.time()
 
 
@@ -217,12 +299,12 @@ def cut_qr_sections():
             id = "No ID found"
         process_id = get_random_id()
         image_string = request.json.get("Base64Image")
-        base64_to_png(image_string, input_dir+process_id+'.png')
+        # base64_to_png(image_string, input_dir+process_id+'.png')
                 
-        data = get_qr_sections(process_id)
+        data = get_qr_sections(process_id, image_string)
                 
         
-        cleanup_files(process_id)
+        # cleanup_files(process_id)
         end_time = time.time()
 
 
@@ -247,13 +329,13 @@ def detect_squares_on_page():
             id = "No ID found"
         process_id = get_random_id()
         image_string = request.json.get("Base64Image")
-        base64_to_png(image_string, input_dir+process_id+'.png')
+        # base64_to_png(image_string, input_dir+process_id+'.png')
                 
-        data = detect_squares(process_id)
+        data = detect_squares(process_id, image_string)
                 
         output_image = png_to_base64(output_dir+process_id+'.png')
         
-        cleanup_files(process_id)
+        # cleanup_files(process_id)
         end_time = time.time()
 
 
@@ -282,25 +364,25 @@ def sectionize_page():
             id = "No ID found"
         process_id = get_random_id()
         image_string = request.json.get("Base64Image")
-        base64_to_png(image_string, input_dir+process_id+'.png')
+        # base64_to_png(image_string, input_dir+process_id+'.png')
         
         square_data = request.json.get("square_data")
         
-        sectionize(process_id, square_data)
+        base64_sections = sectionize(process_id, square_data, image_string)
         
-        sections = []
+        # sections = []
         
-        for name in os.listdir(output_dir+process_id):
-            section_data = {}
-            for section_name in os.listdir(output_dir+process_id+'/'+name):
-                # 'full' | 'section_finder' | 'question_selector' | 'answer'
-                section_name:str
+        # for name in os.listdir(output_dir+process_id):
+        #     section_data = {}
+        #     for section_name in os.listdir(output_dir+process_id+'/'+name):
+        #         # 'full' | 'section_finder' | 'question_selector' | 'answer'
+        #         section_name:str
                 
-                section_data[section_name.replace('.png', '')] = png_to_base64(output_dir+process_id+'/'+name+'/'+section_name)
+        #         section_data[section_name.replace('.png', '')] = png_to_base64(output_dir+process_id+'/'+name+'/'+section_name)
             
-            sections.append(section_data)
+        #     sections.append(section_data)
         
-        cleanup_files(process_id)
+        # cleanup_files(process_id)
         end_time = time.time()
 
 
@@ -311,7 +393,7 @@ def sectionize_page():
             "start_time": start_time,
             "end_time": end_time,
             "output": {
-                "sections": sections
+                "sections": base64_sections
             }
         }
     except Exception as e:    
@@ -354,21 +436,21 @@ def link_answer_sections():
             id = "No ID found"
         process_id = get_random_id()
         image_strings = request.json.get("sections")
-        try:
-            os.makedirs(input_dir+process_id)
-        except:
-            pass
-        image_ids = []
-        for image_string in image_strings:
-            image_id = get_random_id()
-            image_ids.append(image_id)
-            base64_to_png(image_string, input_dir+process_id+'/'+image_id+'.png')
+        # try:
+        #     os.makedirs(input_dir+process_id)
+        # except:
+        #     pass
+        # image_ids = []
+        # for image_string in image_strings:
+        #     image_id = get_random_id()
+        #     image_ids.append(image_id)
+        #     base64_to_png(image_string, input_dir+process_id+'/'+image_id+'.png')
                 
-        stack_answer_sections(process_id, image_ids)
+        output_image = stack_answer_sections(process_id, image_strings)
 
-        output_image = png_to_base64(output_dir+process_id+'.png')
+        # output_image = png_to_base64(output_dir+process_id+'.png')
         
-        cleanup_files(process_id)
+        # cleanup_files(process_id)
         end_time = time.time()
 
         return {
@@ -391,11 +473,11 @@ def extract_text_from_answer():
             id = "No ID found"
         process_id = get_random_id()
         image_string = request.json.get("Base64Image")
-        base64_to_png(image_string, input_dir+process_id+'.png')
+        # base64_to_png(image_string, input_dir+process_id+'.png')
                 
-        data = transcribe_answer(process_id)
+        data = transcribe_answer(process_id, image_string)
 
-        cleanup_files(process_id)
+        # cleanup_files(process_id)
         end_time = time.time()
 
         return {

@@ -35,23 +35,23 @@ if True:
     pass
 
 if True:
-    # response:requests.Response = requests.post(
-    #     'http://localhost:8080/crop', 
+    response:requests.Response = requests.post(
+        'http://localhost:8080/crop', 
         
-    #     json={
-    #         'Base64Image': png_to_base64('./test_input/crop_input.png')
-    #     },
-    #     headers={
-    #         "Content-Type": 'application/json'
-    #     }
-    # )
-    # result = response.json()
-    # if ("error" in result):
-    #     print(result)
-    #     exit()
-    # result = result["output"]
-    # base_64_data = result
-    # base64_to_png(base_64_data, './test_output/crop_output.png')
+        json={
+            'Base64Image': png_to_base64('./test_input/crop_input.png')
+        },
+        headers={
+            "Content-Type": 'application/json'
+        }
+    )
+    result = response.json()
+    if ("error" in result):
+        print(result)
+        exit()
+    result = result["output"]
+    base_64_data = result
+    base64_to_png(base_64_data, './test_output/crop_output.png')
     pass
 
 if True:
@@ -226,20 +226,20 @@ if True:
     pass
 
 if True:
-    response:requests.Response = requests.post(
-        'http://localhost:8080/extract_text', 
+    # response:requests.Response = requests.post(
+    #     'http://localhost:8080/extract_text', 
         
-        json={
-            'Base64Image': png_to_base64('./test_input/test_extract_input.png')
-        },
-        headers={
-            "Content-Type": 'application/json'
-        }
-    )
-    result = response.json()
-    if ("error" in result):
-        print(result)
-        exit()
-    result = result["output"]
-    print(result)
+    #     json={
+    #         'Base64Image': png_to_base64('./test_input/test_extract_input.png')
+    #     },
+    #     headers={
+    #         "Content-Type": 'application/json'
+    #     }
+    # )
+    # result = response.json()
+    # if ("error" in result):
+    #     print(result)
+    #     exit()
+    # result = result["output"]
+    # print(result)
     pass

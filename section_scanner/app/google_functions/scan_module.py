@@ -16,6 +16,10 @@ from helpers import (
     png_to_base64,
     stack_images_vertically,
     create_qr,
+    pillow_to_base64,
+    cv2_to_base64,
+    base64_to_pillow,
+    base64_to_cv2,
 )
 
 from gemini_wrapper import google_single_image_request
@@ -59,25 +63,29 @@ def create_qr_section(id, data, width=cm_to_px(19), height=cm_to_px(8)):
     draw = ImageDraw.Draw(img)
     draw.rectangle([p1_rect, p2_rect], width=5, outline='black')
     
-    img.save(output_dir+id+'.png')
-    base_64_image = png_to_base64(output_dir+id+'.png')
+    # img.save(output_dir+id+'.png')
+    # base_64_image = png_to_base64(output_dir+id+'.png')
     
-    return base_64_image
+    return pillow_to_base64(img)
     
 
 
 
-def crop(id):
-    image = cv2.imread(input_dir+id+'.png')
+def crop(id, base64_image):
+    image = base64_to_cv2(base64_image)
+    # image =) cv2.imread(input_dir+id+'.png')
     image = scan(image)
-    cv2.imwrite(output_dir+id+'.png', image)
+    # cv2.imwrite(output_dir+id+'.png', image)
+    return cv2_to_base64(image)
 
 
 
-def extract_red_pen(id):
+
+def extract_red_pen(id, base64_image):
     # remove .png
     
-    img = Image.open(input_dir + id + '.png')
+    img = base64_to_pillow(base64_image)
+    # img = Image.open(input_dir + id + '.png')
     img = img.convert("RGBA")
 
 
@@ -115,33 +123,40 @@ def extract_red_pen(id):
     # img.convert("L")
 
     # SHARPEN
-    enhancer = ImageEnhance.Sharpness(img)
-    img = enhancer.enhance(10)
+    # enhancer = ImageEnhance.Sharpness(img)
+    # img = enhancer.enhance(10)
 
-    try:
-        os.makedirs(output_dir+id)
-    except:
-        pass
+    # try:
+    #     os.makedirs(output_dir+id)
+    # except:
+    #     pass
 
-    img.save(output_dir + id +'/original.png')
+    # img.save(output_dir + id +'/original.png')
 
-    red_pen_image.save(output_dir+id+'/red_pen.png')
+    # red_pen_image.save(output_dir+id+'/red_pen.png')
+    
+    return {
+        "original": pillow_to_base64(img),
+        "red_pen": pillow_to_base64(red_pen_image)
+    }
 
 class TekstInBox(BaseModel):
     tekst: str
     other_possibility: str
 
-def get_student_id(id):
-    img = Image.open(input_dir + id + '.png')
+def get_student_id(id, base64_image):
+    
+    img = base64_to_pillow(base64_image)
+    # img = Image.open(input_dir + id + '.png')
     
     # student id in topleft section
     crop = (0,0, int(img.width * (5/21)), int(img.height * (5/29.5)))
     
     cropped = img.crop(crop)
     
-    cropped.save(output_dir+id+'.png')
+    # cropped.save(output_dir+id+'.png')
     
-    base64_image = png_to_base64(output_dir+id+'.png')
+    base64_image = pillow_to_base64(cropped)
     
     
     messages = [
@@ -196,20 +211,21 @@ def get_student_id(id):
     
     return response["student_id"]
 
-def get_qr_sections(id):
-    img = Image.open(input_dir + id + '.png')
+def get_qr_sections(id, base64_image):
+    img = base64_to_pillow(base64_image)
+    # img = Image.open(input_dir + id + '.png')
     cv2_img = cv2.imread(input_dir + id + '.png')
 
     data, scanned_image = scan_qrcode_from_image(img.copy())
     
-    try:
-        os.mkdir(output_dir+id)
-    except:
-        pass
+    # try:
+    #     os.mkdir(output_dir+id)
+    # except:
+    #     pass
     
-    scanned_image.save(output_dir+id+'/scanned.png')
+    # scanned_image.save(output_dir+id+'/scanned.png')
     
-    base64_full = png_to_base64(output_dir+id+'/scanned.png')
+    base64_full = pillow_to_base64(scanned_image) 
     
     sections = []
     
@@ -217,9 +233,10 @@ def get_qr_sections(id):
         top_left, bottom_right = qr_data["coords"]
         
         section_img = cv2_img[top_left[1]:bottom_right[1] , top_left[0]:bottom_right[0]]
-        cv2.imwrite(output_dir+id+'/'+str(index)+'.png', section_img)
+        # cv2.imwrite(output_dir+id+'/'+str(index)+'.png', section_img)
         
-        base64_section = png_to_base64(output_dir+id+'/'+str(index)+'.png')
+        base64_section = cv2_to_base64(section_img)
+        # png_to_base64(output_dir+id+'/'+str(index)+'.png')
         
         sections.append({
             "section_image": base64_section,
@@ -233,9 +250,10 @@ def get_qr_sections(id):
         
         
 
-def detect_squares(id):
+def detect_squares(id, base64_image):
 
-    img = Image.open(input_dir + id + '.png')
+    img = base64_to_pillow(base64_image)
+    # img = Image.open(input_dir + id + '.png')
 
 
     # Get the heights and start positions of the black squares
@@ -277,19 +295,26 @@ def detect_squares(id):
         draw.text((img_width - 50, start - 15), f"{start}px", fill=text_color, font=font)
     
     # Save the resulting image
-    img.save(output_dir+id+'.png')
+    base64_detector_image = pillow_to_base64(img)
     
-    return black_square_info
-
-
-
-def sectionize(id,square_data):
     
-    image = Image.open(input_dir+id+ '.png')
+    return {
+        "black_square_info": black_square_info,
+        "image": base64_detector_image
+    }
+
+
+
+def sectionize(id,square_data, base64_image):
+    
+    image = base64_to_pillow(base64_image)
+    # image = Image.open(input_dir+id+ '.png')
     
     square_heights = [square[0] for square in square_data]
     square_x_max = [square[3] for square in square_data]
     square_heights.append(image.height)
+
+    base64_sections = []
 
     for index, h_break in enumerate(square_heights):
         
@@ -308,17 +333,17 @@ def sectionize(id,square_data):
         # section_image.show()
         # section_file_name = filenameify(h_break["description"])+".png"
         
-        sections_output_dir = output_dir + id + '/'
-        try:
-            os.makedirs(sections_output_dir)
-        except:
-            pass
+        # sections_output_dir = output_dir + id + '/'
+        # try:
+        #     os.makedirs(sections_output_dir)
+        # except:
+        #     pass
         
-        section_output_dir = sections_output_dir + str(index) + '/'
-        try:
-            os.makedirs(section_output_dir)
-        except:
-            pass
+        # section_output_dir = sections_output_dir + str(index) + '/'
+        # try:
+        #     os.makedirs(section_output_dir)
+        # except:
+        #     pass
         
         # kantlijn, boven, einde van pagina, beneden grens
         crop = (0, y, image.width, next_y)
@@ -328,23 +353,35 @@ def sectionize(id,square_data):
         full = section_image.crop(crop)        
 
         section_name = "full"
-        full.save(section_output_dir+'full.png')
+        # full.save(section_output_dir+'full.png')
         
         section_finder_end = int(full.width * (1.45/21))
 
         section_finder_crop = (0, 0, section_finder_end+5, full.height)
         section_finder_image = full.copy().crop(section_finder_crop)
-        section_finder_image.save(section_output_dir+'section_finder.png')
+        # section_finder_image.save(section_output_dir+'section_finder.png')
 
         question_selector_end = int(full.width * (2.8/21))
 
         question_selector_crop = (section_finder_end, 0, question_selector_end, full.height)
         question_selector_image = full.copy().crop(question_selector_crop)
-        question_selector_image.save(section_output_dir+'question_selector.png')
+        # question_selector_image.save(section_output_dir+'question_selector.png')
         
         answer_crop = (question_selector_end-5, 0, full.width, full.height)
         answer_image = full.copy().crop(answer_crop)
-        answer_image.save(section_output_dir+'answer.png')
+        # answer_image.save(section_output_dir+'answer.png')
+        
+        base64_sections.append({
+            "full": pillow_to_base64(full),
+            "section_finder": pillow_to_base64(section_finder_image),
+            "question_selector": pillow_to_base64(question_selector_image),
+            "answer": pillow_to_base64(answer_image),
+        })
+    
+    return base64_sections
+        
+        
+        
 
 # first tried microsoft azure, but chapGPT worked better
 # from azure.core.credentials import AzureKeyCredential
@@ -377,8 +414,9 @@ class CheckboxSelection(BaseModel):
     certainty: float
 
 
-def question_selector_info(id):
-    base64_image = png_to_base64(input_dir+id+ '.png')
+def question_selector_info(id, base64_image):
+    base64_image = base64_to_pillow(base64_image)
+    # base64_image = png_to_base64(input_dir+id+ '.png')
 
     messages = [
         {
@@ -441,26 +479,30 @@ def question_selector_info(id):
     
     
 def stack_answer_sections(id, images: list[str]):
-    input_path = input_dir+id+'/'
+    # input_path = input_dir+id+'/'
     
-    sections_output_dir = output_dir + id + '/'
-    try:
-        os.makedirs(sections_output_dir)
-    except:
-        pass
+    # sections_output_dir = output_dir + id + '/'
+    # try:
+    #     os.makedirs(sections_output_dir)
+    # except:
+    #     pass
     
     
-    image = Image.open(input_path + images[0] + '.png')
-    output_image_path = output_dir+id+'.png'
-    image.save(output_image_path)
+    image = base64_to_pillow(images[0])
+    # image =) Image.open(input_path + images[0] + '.png')
+    # output_image_path = output_dir+id+'.png'
+    # image.save(output_image_path)
     
-    for image_id in images[1::]:
-        image = Image.open(output_image_path)
-        new_image = Image.open(input_path+image_id+'.png')
+    for base_64_image in images[1::]:
+        # image = base64_to_pillow(base)
+        new_image = base64_to_pillow(base_64_image)
+        # new_image = Image.open(input_path+image_id+'.png')
 
-        stacked_image = stack_images_vertically(image, new_image)
-        stacked_image.save(output_image_path)
+        image = stack_images_vertically(image, new_image)
         
+    return pillow_to_base64(image)
+    
+    
     
 
 
@@ -499,9 +541,8 @@ class GoogleQuestionAnswer(typing.TypedDict):
     spelling_corrections: list[SpellingCorrection]
     
 
-def transcribe_answer(id, api="google"):
+def transcribe_answer(id, base64_image, api="openai"):
     
-    base64_image = png_to_base64(input_dir+id+ '.png')
 
     request_text = """Je krijgt een foto van een Nederlandse toetsantwoord. 
                     Je moet deze omzetten in tekst. 
@@ -578,7 +619,7 @@ def transcribe_answer(id, api="google"):
         response = {
             "raw_text": result_data["raw_text"],
             "correctly_spelled_text": result_data["correctly_spelled_text"],
-            "spelling_corrections": result_data["spelling_corrections"],
+            # "spelling_corrections": result_data["spelling_corrections"],
             
             "tokens_used": request_data.safety_attributes[0].quota_information.tokens_used,
 
@@ -588,6 +629,8 @@ def transcribe_answer(id, api="google"):
             "timestamp":  0,
             "delta_time_s":  0,
         }
+        
+    
     
     return response
 

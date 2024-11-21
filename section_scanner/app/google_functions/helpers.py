@@ -16,6 +16,72 @@ inch_per_cm = 0.393701
 
 cm_to_px = lambda x: int(x*ppi*inch_per_cm)
 
+def pillow_to_base64(pillow_image):
+    buffered = BytesIO()
+    pillow_image.save(buffered, format="PNG")
+    img_str = base64.b64encode(buffered.getvalue()).decode('utf-8')
+    return img_str
+
+def base64_to_pillow(base64_string):
+    # Remove the data URL prefix if present
+    if base64_string.startswith('data:image'):
+        base64_string = base64_string.split(',')[1]
+            
+
+    padding_needed = len(base64_string) % 4
+    if padding_needed:
+        base64_string += '=' * (4 - padding_needed)
+    
+    # Step 1: Decode the base64 string into bytes
+    image_data = base64.b64decode(base64_string)
+        
+    # Step 2: Use a BytesIO object to make the byte data readable by PIL
+    image_bytes = io.BytesIO(image_data)
+
+    # Step 3: Open the image using PIL
+    image = Image.open(image_bytes)
+
+    return image
+
+def cv2_to_base64(cv2_image):
+    
+    success, buffer = cv2.imencode('.png', cv2_image)
+
+    if success:
+        # Step 3: Convert the buffer to a base64 string
+        base64_string = base64.b64encode(buffer).decode('utf-8')
+        return base64_string
+    else:
+        return None
+    
+def base64_to_cv2(base64_string):
+    
+    # Remove the data URL prefix if present
+    if base64_string.startswith('data:image'):
+        base64_string = base64_string.split(',')[1]
+        
+    padding_needed = len(base64_string) % 4
+    if padding_needed:
+        base64_string += '=' * (4 - padding_needed)
+    
+    # Step 1: Decode the base64 string to bytes
+    image_data = base64.b64decode(base64_string)
+    
+    # Step 2: Convert the bytes to a NumPy array
+    np_array = np.frombuffer(image_data, np.uint8)
+    
+    # Step 3: Decode the NumPy array to an image using OpenCV
+    image = cv2.imdecode(np_array, cv2.IMREAD_COLOR)
+    
+    return image
+
+def pillow_to_cv2(pillow_image):
+    return cv2.cvtColor(np.array(pillow_image), cv2.COLOR_RGB2BGR)
+
+def cv2_to_pillow(cv2_image):
+    return Image.fromarray(cv2.cvtColor(cv2_image, cv2.COLOR_BGR2RGB))
+
+
 def png_to_base64(file_path, quality=1):
     if not file_path.endswith('.png'):
         raise ValueError("Input file must be a PNG image.")
@@ -34,12 +100,12 @@ def png_to_base64(file_path, quality=1):
     else:
         with open(file_path, "rb") as image_file:
             base64_string = base64.b64encode(image_file.read()).decode("utf-8")
-    return "data:image/png;base64,"+base64_string
+    return "data:image/png;base64,"+base64_string #
 
 def base64_to_png(base64_string, output_path):
     if not output_path.endswith('.png'):
         raise ValueError("Output file must have a .png extension.")
-    image_data = base64.b64decode(base64_string.replace('data:image/png;base64,', ''))
+    image_data = base64.b64decode(base64_string.replace("data:image/png;base64,",""))
     with open(output_path, "wb") as output_file:
         output_file.write(image_data)
 
