@@ -1,0 +1,25 @@
+{
+    "google_quiestion_number": "66",
+    "question_number": 36,
+    "raw_text": "Exotherme radie wanterkomt energievrij.",
+    "correctly_spelled_text": "Exotherme radi\u00eb wanterkomt energie vrij.",
+    "spelling_corrections": [
+        {
+            "original": "radie",
+            "changes": "radi\u00eb"
+        },
+        {
+            "original": "wanterkomt",
+            "changes": "wanter komt"
+        },
+        {
+            "original": "energievrij",
+            "changes": "energie vrij"
+        }
+    ],
+    "tokens_used": 25834,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727735322,
+    "delta_time_s": 3.029841661453247
+}

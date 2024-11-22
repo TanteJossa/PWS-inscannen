@@ -1,0 +1,41 @@
+{
+    "google_quiestion_number": "Foo",
+    "question_number": 8,
+    "raw_text": "De inloed van het ginstanpen van de pindas is dat je vergroot en er meer deeltjes zijn die kunnen botsen in de botsende deeltjes, wat de reatiesnelheid verkort.\n\nMassa gaat niet verloren omdat je uit de reactiviteitslijn ziet dat dezelfde moleculen er nog in zitten.\n\nHet zal lastig zijn om praktisch aan te tonen dat deze reactie voldoet aan de wet van massa, omdat het eruit ziet alsof het minder wordt.\n\n13 g Ca 5g H2O 2CaO + 5H2O = 283,5 47 g\ndus 67 gram = ijzer(II)oxide\n\nNaC2H3O2 (s) \u2192 NaC2H3O2 (s) + H2O (l)\n\nEen endotherme proces want er gaat minder energie in dan dat er uit komt.",
+    "correctly_spelled_text": "De invloed van het ginstanpen van de pindas is dat je vergroot en er meer deeltjes zijn die kunnen botsen in de botsende deeltjes, wat de reactiesnelheid verkort.\n\nMassa gaat niet verloren omdat je uit de reactiviteitslijn ziet dat dezelfde moleculen er nog in zitten.\n\nHet zal lastig zijn om praktisch aan te tonen dat deze reactie voldoet aan de wet van massa, omdat het eruit ziet alsof het minder wordt.\n\n13 g Ca 5 g H2O 2CaO + 5H2O = 283,5 47 g\ndus 67 gram = ijzer(II)oxide\n\nNaC2H3O2 (s) \u2192 NaC2H3O2 (s) + H2O (l)\n\nEen endotherm proces want er gaat minder energie in dan dat er uit komt.",
+    "spelling_corrections": [
+        {
+            "original": "inloed",
+            "changes": "invloed"
+        },
+        {
+            "original": "reatiesnelheid",
+            "changes": "reactiesnelheid"
+        },
+        {
+            "original": "verloren",
+            "changes": "verloren"
+        },
+        {
+            "original": "reductiviteit",
+            "changes": "reactiviteit"
+        },
+        {
+            "original": "lastig",
+            "changes": "lastig"
+        },
+        {
+            "original": "ijzer(II)oxide",
+            "changes": "ijzer(II)oxide"
+        },
+        {
+            "original": "endotherme",
+            "changes": "endotherm"
+        }
+    ],
+    "tokens_used": 26245,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727736380,
+    "delta_time_s": 11.671799659729004
+}

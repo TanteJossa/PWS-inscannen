@@ -1,0 +1,21 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 6,
+    "raw_text": "hele pinda's -> vermalen -> stijl pinda's\n\ngemalen pinda's -> extraheren -> opbuts vet met stijl pinda's\n\nfilteren -> opbuts vet -> desintegreren -> niet",
+    "correctly_spelled_text": "hele pinda's -> vermalen -> stijl pinda's\n\ngemalen pinda's -> extraheren -> opbuts vet met stijl pinda's\n\nfilteren -> opbuts vet -> desintegreren -> niet",
+    "spelling_corrections": [
+        {
+            "original": "opbuts",
+            "changes": "opbuts"
+        },
+        {
+            "original": "desintegreren",
+            "changes": "desintegreren"
+        }
+    ],
+    "tokens_used": 14619,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728213425,
+    "delta_time_s": 2.771780014038086
+}

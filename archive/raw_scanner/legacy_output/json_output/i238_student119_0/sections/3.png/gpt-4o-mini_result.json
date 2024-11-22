@@ -1,0 +1,17 @@
+{
+    "google_quiestion_number": "3",
+    "question_number": 3,
+    "raw_text": "De katalysator zorgt ervoor dat het proces de reactie sneller verloopt.\neen katalysator is een stof die ervoor zorgt dat een reactie sneller verloopt, daarom wordt dus de reactiesnelheid verhoogd.\n\nEactiverings\n\nreactieproducten",
+    "correctly_spelled_text": "De katalysator zorgt ervoor dat het proces de reactie sneller verloopt.\neen katalysator is een stof die ervoor zorgt dat een reactie sneller verloopt, daarom wordt dus de reactiesnelheid verhoogd.\n\nActivatie-energie\n\nreactieproducten",
+    "spelling_corrections": [
+        {
+            "original": "Eactiverings",
+            "changes": "Activatie-energie"
+        }
+    ],
+    "tokens_used": 14566,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727738657,
+    "delta_time_s": 2.940288782119751
+}

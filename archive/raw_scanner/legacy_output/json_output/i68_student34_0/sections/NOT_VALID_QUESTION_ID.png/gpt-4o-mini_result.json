@@ -1,0 +1,21 @@
+{
+    "google_quiestion_number": "NOT_VALID_QUESTION_ID",
+    "question_number": 1,
+    "raw_text": "ompet de reactor open is kunnen de deeltjes die gasvormig worden de lucht ingaan en dus niet verwijderd worden.",
+    "correctly_spelled_text": "om het de reactor open is kunnen de deeltjes die gasvormig worden de lucht ingaan en dus niet verwijderd worden.",
+    "spelling_corrections": [
+        {
+            "original": "ompet",
+            "changes": "om het"
+        },
+        {
+            "original": "de deeltjes",
+            "changes": "de deeltjes"
+        }
+    ],
+    "tokens_used": 14516,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727740098,
+    "delta_time_s": 3.0961923599243164
+}

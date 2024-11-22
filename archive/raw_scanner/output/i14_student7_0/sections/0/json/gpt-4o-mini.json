@@ -1,0 +1,25 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 1,
+    "raw_text": "Het nmen verbranden van zwavelhoudende benzine is een exothermen rea proces, omdat er energie vrijkomt dat wordt omgezet naar chemische energie, en dat wordt weer omgezet in een andere energievorm. In dit geval zwavelhoudende benzine.",
+    "correctly_spelled_text": "Het nemen verbranden van zwavelhoudende benzine is een exotherme reactie, omdat er energie vrijkomt die wordt omgezet naar chemische energie, en dat wordt weer omgezet in een andere energievorm. In dit geval zwavelhoudende benzine.",
+    "spelling_corrections": [
+        {
+            "original": "nmen",
+            "changes": "nemen"
+        },
+        {
+            "original": "rea",
+            "changes": "reactie"
+        },
+        {
+            "original": "dat",
+            "changes": "die"
+        }
+    ],
+    "tokens_used": 14635,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728213196,
+    "delta_time_s": 3.002686023712158
+}

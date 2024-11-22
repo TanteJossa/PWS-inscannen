@@ -1,0 +1,25 @@
+{
+    "google_quiestion_number": "91",
+    "question_number": 1,
+    "raw_text": "g Het aantal moleculen van de atom -",
+    "correctly_spelled_text": "Het aantal moleculen van de atom -",
+    "spelling_corrections": [
+        {
+            "original": "g",
+            "changes": "verwijderd"
+        },
+        {
+            "original": "aantal",
+            "changes": "aantal"
+        },
+        {
+            "original": "atom",
+            "changes": "atoom"
+        }
+    ],
+    "tokens_used": 14495,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727738721,
+    "delta_time_s": 2.341820001602173
+}

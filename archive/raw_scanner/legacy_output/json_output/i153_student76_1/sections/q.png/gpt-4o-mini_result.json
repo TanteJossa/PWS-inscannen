@@ -1,0 +1,21 @@
+{
+    "google_quiestion_number": "q",
+    "question_number": 1,
+    "raw_text": "1 Exotherm waar in de parinel zit chymistrie en die wordt meer vezondig uitgezet in een andere energie\u00ebn.",
+    "correctly_spelled_text": "1 Exotherm waar in de parinel zit chemistrie en die wordt meer vezondig uitgezet in een andere energie\u00ebn.",
+    "spelling_corrections": [
+        {
+            "original": "chymistrie",
+            "changes": "chemistrie"
+        },
+        {
+            "original": "vezondig",
+            "changes": "verzondig"
+        }
+    ],
+    "tokens_used": 14527,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727736247,
+    "delta_time_s": 2.8865127563476562
+}

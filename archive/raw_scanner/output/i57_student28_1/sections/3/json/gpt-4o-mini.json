@@ -1,0 +1,17 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 1,
+    "raw_text": "samenkomen en dat er genoeg energie is om uit zichzelf daaruit gaan. En er komt veel warmte uit.",
+    "correctly_spelled_text": "samenkomen en dat er genoeg energie is om uit zichzelf daaruit te gaan. En er komt veel warmte uit.",
+    "spelling_corrections": [
+        {
+            "original": "dat er genoeg energie is om uit zichzelf daaruit gaan.",
+            "changes": "dat er genoeg energie is om uit zichzelf daaruit te gaan."
+        }
+    ],
+    "tokens_used": 14572,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728215834,
+    "delta_time_s": 3.006026268005371
+}

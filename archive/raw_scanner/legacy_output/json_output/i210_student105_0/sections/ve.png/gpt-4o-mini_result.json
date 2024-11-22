@@ -1,0 +1,25 @@
+{
+    "google_quiestion_number": "ve",
+    "question_number": 1,
+    "raw_text": "verkopen Dr. gebeurt omdat door de katalysator de activiteitsenergie",
+    "correctly_spelled_text": "verkopen Dr. gebeurt omdat door de katalysator de activiteitsenergie",
+    "spelling_corrections": [
+        {
+            "original": "Dr.",
+            "changes": "Dr."
+        },
+        {
+            "original": "katalysator",
+            "changes": "katalysator"
+        },
+        {
+            "original": "activiteitsenergie",
+            "changes": "activiteitsenergie"
+        }
+    ],
+    "tokens_used": 14511,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727737986,
+    "delta_time_s": 1.9735467433929443
+}

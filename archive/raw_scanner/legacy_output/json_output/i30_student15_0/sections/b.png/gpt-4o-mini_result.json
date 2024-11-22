@@ -1,0 +1,25 @@
+{
+    "google_quiestion_number": "b",
+    "question_number": 1,
+    "raw_text": "b\u00f6ten van groten contactspelen. op micpobienen hebben\nin de letters, een en andere hier, plat de delftigs baten. De",
+    "correctly_spelled_text": "b\u00f6ten van grote contactspelen. op microben hebben\nin de letters, een en andere hier, plat de delftige baten. De",
+    "spelling_corrections": [
+        {
+            "original": "groten",
+            "changes": "grote"
+        },
+        {
+            "original": "micpobienen",
+            "changes": "microben"
+        },
+        {
+            "original": "delftigs",
+            "changes": "delftige"
+        }
+    ],
+    "tokens_used": 14548,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727739382,
+    "delta_time_s": 5.5588459968566895
+}

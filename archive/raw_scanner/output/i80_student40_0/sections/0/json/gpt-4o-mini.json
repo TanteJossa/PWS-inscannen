@@ -1,0 +1,21 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 1,
+    "raw_text": "exotherm ,want bij verbrande van benzine komt energie vrij.",
+    "correctly_spelled_text": "exotherm, want bij verbranding van benzine komt energie vrij.",
+    "spelling_corrections": [
+        {
+            "original": "verbrande",
+            "changes": "verbranding"
+        },
+        {
+            "original": "vrij.",
+            "changes": "vrij."
+        }
+    ],
+    "tokens_used": 14545,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728216246,
+    "delta_time_s": 2.036363363265991
+}

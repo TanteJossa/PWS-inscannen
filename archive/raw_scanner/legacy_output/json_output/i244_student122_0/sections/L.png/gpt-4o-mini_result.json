@@ -1,0 +1,21 @@
+{
+    "google_quiestion_number": "L",
+    "question_number": 8,
+    "raw_text": "Als de pinda's op microniveau gegrind zijn verdeeld dan is het makkelijker op om iets daarmee te mengen.",
+    "correctly_spelled_text": "Als de pinda's op microniveau gegrind zijn verdeeld, dan is het makkelijker om iets daarmee te mengen.",
+    "spelling_corrections": [
+        {
+            "original": "gegrind",
+            "changes": "gegrind"
+        },
+        {
+            "original": "op om",
+            "changes": "om"
+        }
+    ],
+    "tokens_used": 14513,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727738810,
+    "delta_time_s": 2.768650770187378
+}

@@ -1,0 +1,25 @@
+{
+    "google_quiestion_number": "NOT_VALID_QUESTION_ID",
+    "question_number": 1,
+    "raw_text": "en dit klopt, omdat fotosynthese en lichtreactie is\nNodig. Licht -> Chemische energie...",
+    "correctly_spelled_text": "en dit klopt, omdat fotosynthese en lichtreactie is\nNodig. Licht -> Chemische energie...",
+    "spelling_corrections": [
+        {
+            "original": "fotosynthese",
+            "changes": "fotosynthese"
+        },
+        {
+            "original": "lichtreactie",
+            "changes": "lichtreactie"
+        },
+        {
+            "original": "Nodig",
+            "changes": "Nodig"
+        }
+    ],
+    "tokens_used": 14532,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727738184,
+    "delta_time_s": 3.190784454345703
+}

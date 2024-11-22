@@ -1,0 +1,41 @@
+{
+    "google_quiestion_number": "13",
+    "question_number": 13,
+    "raw_text": "Er komt warmte vrij bij het verbroken van glucose!",
+    "correctly_spelled_text": "Er komt warmte vrij bij het verbroken van glucose!",
+    "spelling_corrections": [
+        {
+            "original": "komt",
+            "changes": "komt"
+        },
+        {
+            "original": "vrij",
+            "changes": "vrij"
+        },
+        {
+            "original": "bij",
+            "changes": "bij"
+        },
+        {
+            "original": "het",
+            "changes": "het"
+        },
+        {
+            "original": "verbonden",
+            "changes": "verbroken"
+        },
+        {
+            "original": "van",
+            "changes": "van"
+        },
+        {
+            "original": "glucose!",
+            "changes": "glucose!"
+        }
+    ],
+    "tokens_used": 25864,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727739658,
+    "delta_time_s": 3.367953062057495
+}

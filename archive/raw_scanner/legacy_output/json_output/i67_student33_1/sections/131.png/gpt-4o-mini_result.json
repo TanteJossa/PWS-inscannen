@@ -1,0 +1,25 @@
+{
+    "google_quiestion_number": "131",
+    "question_number": 3,
+    "raw_text": "fen \n\nenergie \n\nenergie \n\nomdat e \n\nenergie \n\nwordt \n\nomgezet \n\nin \n\nwarmte \n\n(een andere \n\nenergievorm).",
+    "correctly_spelled_text": "Een \netotum \n\nenergie \n\nenergie \n\nomdat er \n\nenergie \n\nwordt \n\nomgezet \n\nin \n\nwarmte \n\n(een andere \n\nenergievorm).",
+    "spelling_corrections": [
+        {
+            "original": "fen",
+            "changes": "Een"
+        },
+        {
+            "original": "e",
+            "changes": "er"
+        },
+        {
+            "original": "warmt",
+            "changes": "warmte"
+        }
+    ],
+    "tokens_used": 25910,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727740076,
+    "delta_time_s": 5.940716981887817
+}

@@ -1,0 +1,29 @@
+{
+    "google_quiestion_number": "3",
+    "question_number": 3,
+    "raw_text": "De katalysator zorgt ervoor dat de geactiveerde toestand naar beneden gaat waardoor het sneller verloopt.",
+    "correctly_spelled_text": "De katalysator zorgt ervoor dat de geactiveerde toestand naar beneden gaat waardoor het sneller verloopt.",
+    "spelling_corrections": [
+        {
+            "original": "katalysator",
+            "changes": "katalysator"
+        },
+        {
+            "original": "geactiveerde",
+            "changes": "geactiveerde"
+        },
+        {
+            "original": "beneden",
+            "changes": "beneden"
+        },
+        {
+            "original": "verloopt",
+            "changes": "verloopt"
+        }
+    ],
+    "tokens_used": 14532,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727737029,
+    "delta_time_s": 3.9591481685638428
+}

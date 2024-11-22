@@ -1,0 +1,21 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 6,
+    "raw_text": "6. 65 - 13 - 5 = 47 g. Ondertussen niet vergeten, groet.",
+    "correctly_spelled_text": "6. 65 - 13 - 5 = 47 g. Ondertussen niet vergeten, groet.",
+    "spelling_corrections": [
+        {
+            "original": "g.",
+            "changes": "g."
+        },
+        {
+            "original": "maas",
+            "changes": "maar"
+        }
+    ],
+    "tokens_used": 14561,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728215513,
+    "delta_time_s": 2.0960006713867188
+}

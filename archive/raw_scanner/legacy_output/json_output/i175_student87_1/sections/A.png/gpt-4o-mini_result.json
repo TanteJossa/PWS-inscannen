@@ -1,0 +1,21 @@
+{
+    "google_quiestion_number": "A",
+    "question_number": 10,
+    "raw_text": "Het zal praktisch lastig zijn om aan te tonen dat deze reactie volgt aan de wet van massa behoud, omdat als je malachiet verhit gaat de warme licht omdook en dan kan je veel makkelijker weten hoeveel massa van die malachiet in de lucht zit.",
+    "correctly_spelled_text": "Het zal praktisch lastig zijn om aan te tonen dat deze reactie volgt aan de wet van massa behoud, omdat als je malachiet verhit gaat de warme licht omdook en dan kan je veel makkelijker weten hoeveel massa van die malachiet in de lucht zit.",
+    "spelling_corrections": [
+        {
+            "original": "aan de wet van massa behoud",
+            "changes": "aan de wet van massabehoud"
+        },
+        {
+            "original": "omdook",
+            "changes": "omdoet"
+        }
+    ],
+    "tokens_used": 14583,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727737006,
+    "delta_time_s": 4.165437459945679
+}

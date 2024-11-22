@@ -1,0 +1,17 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 1,
+    "raw_text": "Exacteher, wanneer de reactie is gestart, heeft ie geen energie meer toe te voegen.\n2. Ca + S + O -> CaS + SO",
+    "correctly_spelled_text": "Exacteher, wanneer de reactie is gestart, heeft hij geen energie meer toe te voegen.\n2. Ca + S + O -> CaS + SO",
+    "spelling_corrections": [
+        {
+            "original": "ie",
+            "changes": "hij"
+        }
+    ],
+    "tokens_used": 14570,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728215899,
+    "delta_time_s": 3.1093149185180664
+}

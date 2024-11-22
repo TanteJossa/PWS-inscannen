@@ -1,0 +1,21 @@
+{
+    "google_quiestion_number": "g",
+    "question_number": 1,
+    "raw_text": "g exotherme reactie",
+    "correctly_spelled_text": "een exotherme reactie",
+    "spelling_corrections": [
+        {
+            "original": "g",
+            "changes": "een"
+        },
+        {
+            "original": "exotherme",
+            "changes": "exotherme"
+        }
+    ],
+    "tokens_used": 14476,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727737608,
+    "delta_time_s": 1.9196891784667969
+}

@@ -1,0 +1,17 @@
+{
+    "google_quiestion_number": "617",
+    "question_number": 617,
+    "raw_text": "hele pinda's\n\n  alcohol\n\n  verwarmd\n\n  oggester-verwarmd\n\n  gesterkt v.\n\n  (littekens)\n\n  stralings pinda's",
+    "correctly_spelled_text": "hele pinda's\n\n  alcohol\n\n  verwarmd\n\n  oggester-verwarmd\n\n  gesterkt v.\n\n  (littekens)\n\n  stralings pinda's",
+    "spelling_corrections": [
+        {
+            "original": "oggester-verwarmd",
+            "changes": "ogester-verwarmd"
+        }
+    ],
+    "tokens_used": 25894,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727737860,
+    "delta_time_s": 3.3812599182128906
+}

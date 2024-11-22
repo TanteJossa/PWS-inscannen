@@ -1,0 +1,21 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 9,
+    "raw_text": "9: heb ik een exotherm proces wanneer er geen energie vrij komt, waardoor het dus een endotherm proces is.\n\nbij de verbranding dan je nodig hebt bij het begin product\n\n10: 2H2 + O2 \u2192 2(H2O) + 572 kJ",
+    "correctly_spelled_text": "9: heb ik een exotherm proces wanneer er geen energie vrijkomt, waardoor het dus een endotherm proces is.\n\nbij de verbranding dan je nodig hebt bij het beginproduct\n\n10: 2H2 + O2 \u2192 2(H2O) + 572 kJ",
+    "spelling_corrections": [
+        {
+            "original": "vrij komt",
+            "changes": "vrijkomt"
+        },
+        {
+            "original": "begin product",
+            "changes": "beginproduct"
+        }
+    ],
+    "tokens_used": 14645,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728215082,
+    "delta_time_s": 5.60068941116333
+}

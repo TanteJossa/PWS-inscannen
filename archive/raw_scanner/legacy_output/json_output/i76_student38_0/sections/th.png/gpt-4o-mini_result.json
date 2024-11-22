@@ -1,0 +1,21 @@
+{
+    "google_quiestion_number": "th",
+    "question_number": 5,
+    "raw_text": "Als je de pH-waarde van de oplossing verhoogt, hoger op microscopisch niveau betekent dat dat volgens het basisch model de atomen in de sturing.",
+    "correctly_spelled_text": "Als je de pH-waarde van de oplossing verhoogt, hoger op microscopisch niveau betekent dat dat volgens het basisch model de atomen in de sturing.",
+    "spelling_corrections": [
+        {
+            "original": "graag",
+            "changes": "graad"
+        },
+        {
+            "original": "basend",
+            "changes": "basisch"
+        }
+    ],
+    "tokens_used": 14534,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727740402,
+    "delta_time_s": 2.9430243968963623
+}

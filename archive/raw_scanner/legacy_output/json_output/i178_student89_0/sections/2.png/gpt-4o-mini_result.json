@@ -1,0 +1,17 @@
+{
+    "google_quiestion_number": "2",
+    "question_number": 1,
+    "raw_text": "2 C7H16 + 5 O2 -> 7 CO2 + 8 H2O + S02\n\nDe reactie is een verbranding van een koolwaterstof.",
+    "correctly_spelled_text": "2 C7H16 + 5 O2 -> 7 CO2 + 8 H2O + SO2\n\nDe reactie is een verbranding van een koolwaterstof.",
+    "spelling_corrections": [
+        {
+            "original": "S02",
+            "changes": "SO2"
+        }
+    ],
+    "tokens_used": 14530,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727737025,
+    "delta_time_s": 3.668520927429199
+}

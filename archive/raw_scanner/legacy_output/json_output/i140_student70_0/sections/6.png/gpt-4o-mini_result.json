@@ -1,0 +1,17 @@
+{
+    "google_quiestion_number": "6",
+    "question_number": 1,
+    "raw_text": "snelelr.",
+    "correctly_spelled_text": "sneller.",
+    "spelling_corrections": [
+        {
+            "original": "snelelr.",
+            "changes": "sneller."
+        }
+    ],
+    "tokens_used": 14465,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727735887,
+    "delta_time_s": 1.5258994102478027
+}

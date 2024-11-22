@@ -1,0 +1,29 @@
+{
+    "google_quiestion_number": "42",
+    "question_number": 1,
+    "raw_text": "het is een exotherm proces omdat er meer energie vrijkomt dan er in de reactie gaat dus is het exotherm\nonder blud zijnde",
+    "correctly_spelled_text": "het is een exotherm proces omdat er meer energie vrijkomt dan er in de reactie gaat dus is het exotherm\nonder blud zijnde",
+    "spelling_corrections": [
+        {
+            "original": "exothem",
+            "changes": "exotherm"
+        },
+        {
+            "original": "meer energie",
+            "changes": "meer energie"
+        },
+        {
+            "original": "de reactie gaat",
+            "changes": "de reactie gaat"
+        },
+        {
+            "original": "onder blud zijnde",
+            "changes": "onder blud zijnde"
+        }
+    ],
+    "tokens_used": 14560,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727734848,
+    "delta_time_s": 3.0627963542938232
+}

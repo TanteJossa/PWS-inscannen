@@ -1,0 +1,25 @@
+{
+    "google_quiestion_number": "D610",
+    "question_number": 5,
+    "raw_text": "5 Omdat er een deel massa in het open reactiet valt blijft zitten, dus dat wordt niet meer gerekend.\n6 voor fidens een reactie variees, je een massa",
+    "correctly_spelled_text": "5 Omdat er een deel massa in het open reactiet valt blijft zitten, dus dat wordt niet meer gerekend.\n6 voor fidens een reactie varieert, je een massa",
+    "spelling_corrections": [
+        {
+            "original": "reactiet",
+            "changes": "reactie"
+        },
+        {
+            "original": "gerekend",
+            "changes": "gerekend"
+        },
+        {
+            "original": "varies",
+            "changes": "varieert"
+        }
+    ],
+    "tokens_used": 14549,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727735806,
+    "delta_time_s": 2.693103313446045
+}

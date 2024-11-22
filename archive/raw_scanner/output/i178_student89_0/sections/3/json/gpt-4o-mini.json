@@ -1,0 +1,17 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 6,
+    "raw_text": "examen\nbeleren\nclassificeren",
+    "correctly_spelled_text": "examen\nbeleggen\nclassificeren",
+    "spelling_corrections": [
+        {
+            "original": "beleren",
+            "changes": "beleggen"
+        }
+    ],
+    "tokens_used": 14525,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728213830,
+    "delta_time_s": 2.0066986083984375
+}

@@ -1,0 +1,41 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 8,
+    "raw_text": "ekthien , ontkt het van chamsch negie pare van nit gaad",
+    "correctly_spelled_text": "echter, omdat het van chamisch enige pare van niet gaat",
+    "spelling_corrections": [
+        {
+            "original": "ekthien",
+            "changes": "echter"
+        },
+        {
+            "original": "ontkt",
+            "changes": "omdat"
+        },
+        {
+            "original": "chamsch",
+            "changes": "chamisch"
+        },
+        {
+            "original": "negie",
+            "changes": "enige"
+        },
+        {
+            "original": "pare",
+            "changes": "pare"
+        },
+        {
+            "original": "nit",
+            "changes": "niet"
+        },
+        {
+            "original": "gaad",
+            "changes": "gaat"
+        }
+    ],
+    "tokens_used": 14596,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728213654,
+    "delta_time_s": 3.515479803085327
+}

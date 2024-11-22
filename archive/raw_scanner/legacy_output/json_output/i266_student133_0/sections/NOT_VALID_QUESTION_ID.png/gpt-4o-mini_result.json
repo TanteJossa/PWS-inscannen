@@ -1,0 +1,25 @@
+{
+    "google_quiestion_number": "NOT_VALID_QUESTION_ID",
+    "question_number": 12,
+    "raw_text": "E_out = activeringsenergie\nE_\u0394 = reactie warmte\n\n\nverloop reactie",
+    "correctly_spelled_text": "E_out = activeringsenergie\nE_\u0394 = reactie warmte\n\n\nverloop reactie",
+    "spelling_corrections": [
+        {
+            "original": "activeringsenergie",
+            "changes": "none"
+        },
+        {
+            "original": "reactie warmte",
+            "changes": "none"
+        },
+        {
+            "original": "verloop reactie",
+            "changes": "none"
+        }
+    ],
+    "tokens_used": 14517,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727739320,
+    "delta_time_s": 1.972362756729126
+}

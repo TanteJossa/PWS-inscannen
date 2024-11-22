@@ -1,0 +1,21 @@
+{
+    "google_quiestion_number": "A",
+    "question_number": 1,
+    "raw_text": "C7H16S + O2 \u2192 7 CO2 + 8 H2O\nC7H16S + 1/6 O2 \u2192 7 CO2 + 1/2 O + S O2",
+    "correctly_spelled_text": "C7H16S + O2 \u2192 7 CO2 + 8 H2O\nC7H16S + 1/6 O2 \u2192 7 CO2 + 1/2 O + SO2",
+    "spelling_corrections": [
+        {
+            "original": "1/6 O2",
+            "changes": "1/6 O2"
+        },
+        {
+            "original": "S O2",
+            "changes": "SO2"
+        }
+    ],
+    "tokens_used": 14566,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727734858,
+    "delta_time_s": 3.3128602504730225
+}

@@ -1,0 +1,21 @@
+{
+    "google_quiestion_number": "w",
+    "question_number": 2,
+    "raw_text": "2 C7H16S + O2 \u2192 CO2 + H2O + SO2\n\n1/2 C7H16S + 4 O2 \u2192 3 CO2 + 4 H2O + 1/2 SO2\n\n3 De katalysator be\u00efnvloed de reactiesnelheid, doordat de katalysator is geactiveerd is de reactievereenvoudigd.",
+    "correctly_spelled_text": "2 C7H16S + O2 \u2192 CO2 + H2O + SO2\n\n1/2 C7H16S + 4 O2 \u2192 3 CO2 + 4 H2O + 1/2 SO2\n\n3 De katalysator be\u00efnvloedt de reactiesnelheid, doordat de katalysator is geactiveerd is de reactie vereenvoudigd.",
+    "spelling_corrections": [
+        {
+            "original": "be\u00efnvloed",
+            "changes": "be\u00efnvloedt"
+        },
+        {
+            "original": "reactievereenvoudigd",
+            "changes": "reactie vereenvoudigd"
+        }
+    ],
+    "tokens_used": 14638,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727738774,
+    "delta_time_s": 4.872750282287598
+}

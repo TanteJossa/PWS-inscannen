@@ -1,0 +1,21 @@
+{
+    "google_quiestion_number": "9",
+    "question_number": 9,
+    "raw_text": "de verbranding van zuurstofhoudende\nstoffen is een exothermisch proces",
+    "correctly_spelled_text": "de verbranding van zuurstofhoudende\nstoffen is een exothermisch proces",
+    "spelling_corrections": [
+        {
+            "original": "zuurstofhoudende",
+            "changes": ""
+        },
+        {
+            "original": "exothermisch",
+            "changes": ""
+        }
+    ],
+    "tokens_used": 14503,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727735064,
+    "delta_time_s": 2.7473413944244385
+}

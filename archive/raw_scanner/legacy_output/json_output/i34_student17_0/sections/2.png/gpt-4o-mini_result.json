@@ -1,0 +1,17 @@
+{
+    "google_quiestion_number": "2",
+    "question_number": 2,
+    "raw_text": "extraheer de tekst",
+    "correctly_spelled_text": "extraheer de tekst",
+    "spelling_corrections": [
+        {
+            "original": "extraheer de tekst",
+            "changes": ""
+        }
+    ],
+    "tokens_used": 14465,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727739412,
+    "delta_time_s": 1.9566335678100586
+}

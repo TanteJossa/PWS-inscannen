@@ -1,0 +1,37 @@
+{
+    "google_quiestion_number": "J",
+    "question_number": 4,
+    "raw_text": "Bij deze reachtievergelijking gaat er geen massa verloren, omdat er aan beide kanten van de pijl van alle materialen evenveel is. Het is een kloppende reachtievergelijking.\n\nAls het aan een reactie denkt.\nAls er een reactie plaatsvindt in een open reactievat, dan komen er allemaal stoffen of gassen van buiten. Er worden allemaal stoffen gemengd.\n\n65 . 13 x 5 =  95 g\n\nchemische energie  \u2192  warme energie\n\nexotherm, omdat er bij het open enkt klitten van de handwarmers allemaal energie vrijkomt! Daardoor er energie vrijkomt worden de handwarmers warm.\n\nendotherm. Het er kan alleen een verbinding optreden als er energie  wordt  toegevoegd.",
+    "correctly_spelled_text": "Bij deze reactievergelijking gaat er geen massa verloren, omdat er aan beide kanten van de pijl van alle materialen evenveel is. Het is een kloppende reactievergelijking.\n\nAls het aan een reactie denkt.\nAls er een reactie plaatsvindt in een open reactievat, dan komen er allemaal stoffen of gassen van buiten. Er worden allemaal stoffen gemengd.\n\n65 . 13 x 5 =  95 g\n\nchemische energie  \u2192  warme energie\n\nexotherm, omdat er bij het open enkt klitten van de handwarmers allemaal energie vrijkomt! Daardoor er energie vrijkomt worden de handwarmers warm.\n\nendotherm. Het er kan alleen een verbinding optreden als er energie  wordt  toegevoegd.",
+    "spelling_corrections": [
+        {
+            "original": "reachtievergelijking",
+            "changes": "reactievergelijking"
+        },
+        {
+            "original": "reachtievergelijking",
+            "changes": "reactievergelijking"
+        },
+        {
+            "original": "reactievat",
+            "changes": "reactievat"
+        },
+        {
+            "original": "handwarmers",
+            "changes": "handwarmers"
+        },
+        {
+            "original": "handwarmers",
+            "changes": "handwarmers"
+        },
+        {
+            "original": "endotherm. Het er kan alleen een verbinding optreden als er energie  wordt  toegevoegd.",
+            "changes": "endotherm. Het kan alleen een verbinding optreden als er energie  wordt  toegevoegd."
+        }
+    ],
+    "tokens_used": 26224,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727737547,
+    "delta_time_s": 10.510595560073853
+}

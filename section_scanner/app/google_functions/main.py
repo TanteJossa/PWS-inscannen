@@ -3,7 +3,7 @@ import time
 import shutil
 from flask import Flask, request, jsonify, Response
 from flask_cors import CORS, cross_origin
-from multiprocessing import Pool
+import random
 
 # from firebase_functions import https_fn
 # from firebase_admin import initialize_app, db
@@ -145,25 +145,32 @@ def scan_page():
         square_data = detect_squares(process_id, clean_output_string)
         
         # SECTIONIZE        
-        sections = sectionize(process_id, square_data, clean_output_string)
-        
-        sections_width_data = []
+        image_sections = sectionize(process_id, square_data["black_square_info"], clean_output_string)
+
+        sections = []
                       
-        for index, section in enumerate(sections):
+        for section in image_sections:
             question_selector_info_result = question_selector_info(process_id, section["question_selector"])
 
             question_id = question_selector_info_result["selected_question"]
 
-            sections[index]["question_id"] = question_id
-
-        unique_questions = list(set(map(lambda x: x["question_id"], sections)))
+            section["question_id"] = question_id
+            sections.append(section)
         
+
+
+        unique_questions = []
+        [unique_questions.append(x["question_id"]) for x in sections if x["question_id"] not in unique_questions ]
+        # print(len(sections))
+        print('all: ',unique_questions, len(sections))
         questions = []
         
         for unique_question_id in unique_questions:
-            sections = list(filter(lambda x: x["question_id"] == unique_question_id, sections))
+            question_sections = [x for x in sections if x["question_id"] == unique_question_id]
 
-            linked_image = stack_answer_sections(process_id, list(map(lambda x: x["answer"], sections)))
+            if (len(question_sections) == 0):
+                continue
+            linked_image = stack_answer_sections(process_id, [x["answer"] for x in question_sections])
 
             extracted_text_result = transcribe_answer(process_id, linked_image)
 
@@ -332,8 +339,11 @@ def detect_squares_on_page():
         # base64_to_png(image_string, input_dir+process_id+'.png')
                 
         data = detect_squares(process_id, image_string)
+        
+        black_square_info = data["black_square_info"]
+        image = data["image"]
                 
-        output_image = png_to_base64(output_dir+process_id+'.png')
+        # output_image = png_to_base64(output_dir+process_id+'.png')
         
         # cleanup_files(process_id)
         end_time = time.time()
@@ -346,8 +356,8 @@ def detect_squares_on_page():
             "start_time": start_time,
             "end_time": end_time,
             "output": {
-                "image": output_image,
-                "data": data
+                "image": image,
+                "data": black_square_info
             }
         }
     except Exception as e:    
@@ -409,11 +419,11 @@ def question_section_from_question_selector():
             id = "No ID found"
         process_id = get_random_id()
         image_string = request.json.get("Base64Image")
-        base64_to_png(image_string, input_dir+process_id+'.png')
+        # base64_to_png(image_string, input_dir+process_id+'.png')
                 
-        data = question_selector_info(process_id)
+        data = question_selector_info(process_id, image_string)
 
-        cleanup_files(process_id)
+        # cleanup_files(process_id)
         end_time = time.time()
 
         return {

@@ -1,0 +1,25 @@
+{
+    "google_quiestion_number": "D",
+    "question_number": 6,
+    "raw_text": "van fidens een verlichte kwalis je geen massa\ndus 6T-12=6= 42\ndie er is 27 graden koper oxido ontstaan\n\n7 chemische energie -> warmte.\n\n8 exotherm, want er komt energie uit die je hand verwarmt.\n\n9 endotherm, want als je een machine moet gebruiken dan moet er eerst benzine in en komen er gassen uit dus er goede energie (benzine) in\n\n10 2C7H16 + 15O2 -> 14CO2 + 16H2O\n   2C8H18 + 22O2 -> 16CO2 + 18H2O + 5S2\n\n11 De katalysator be\u00efnvloed de reactiet snelheid\ndoor de activering energie te verlagen\ndaardoor de reactie eerder kan beginnen",
+    "correctly_spelled_text": "van fidens een verlichte kwalis je geen massa\n\ndus 6T-12=6= 42\ndie er is 27 graden koperoxide ontstaan\n\n7 chemische energie -> warmte.\n\n8 exotherm, want er komt energie uit die je hand verwarmt.\n\n9 endotherm, want als je een machine moet gebruiken dan moet er eerst benzine in en komen er gassen uit dus er goede energie (benzine) in\n\n10 2C7H16 + 15O2 -> 14CO2 + 16H2O\n   2C8H18 + 22O2 -> 16CO2 + 18H2O + 5S2\n\n11 De katalysator be\u00efnvloedt de reactiet snelheid\ndoor de activeringsenergie te verlagen\ndaardoor de reactie eerder kan beginnen",
+    "spelling_corrections": [
+        {
+            "original": "koper oxido",
+            "changes": "koperoxide"
+        },
+        {
+            "original": "be\u00efnvloed",
+            "changes": "be\u00efnvloedt"
+        },
+        {
+            "original": "activering energie",
+            "changes": "activeringsenergie"
+        }
+    ],
+    "tokens_used": 26189,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727735803,
+    "delta_time_s": 7.567717790603638
+}

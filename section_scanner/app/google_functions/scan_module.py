@@ -156,7 +156,7 @@ def get_student_id(id, base64_image):
     
     # cropped.save(output_dir+id+'.png')
     
-    base64_image = pillow_to_base64(cropped)
+    base64_image = "data:image/png;base64,"+pillow_to_base64(cropped)
     
     
     messages = [
@@ -209,12 +209,12 @@ def get_student_id(id, base64_image):
         "delta_time_s":  result["delta_time_s"],
     }
     
-    return response["student_id"]
+    return response
 
 def get_qr_sections(id, base64_image):
     img = base64_to_pillow(base64_image)
     # img = Image.open(input_dir + id + '.png')
-    cv2_img = cv2.imread(input_dir + id + '.png')
+    cv2_img = base64_to_cv2(base64_image)
 
     data, scanned_image = scan_qrcode_from_image(img.copy())
     
@@ -415,9 +415,12 @@ class CheckboxSelection(BaseModel):
 
 
 def question_selector_info(id, base64_image):
-    base64_image = base64_to_pillow(base64_image)
+    # base64_image = base64_to_pillow(base64_image)
     # base64_image = png_to_base64(input_dir+id+ '.png')
 
+    if not base64_image.startswith('data:image'):
+        base64_image = "data:image/png;base64,"+ base64_image
+    
     messages = [
         {
             "role": "system",
@@ -542,7 +545,9 @@ class GoogleQuestionAnswer(typing.TypedDict):
     
 
 def transcribe_answer(id, base64_image, api="openai"):
-    
+
+    if not base64_image.startswith('data:image'):
+        base64_image = "data:image/png;base64,"+ base64_image
 
     request_text = """Je krijgt een foto van een Nederlandse toetsantwoord. 
                     Je moet deze omzetten in tekst. 

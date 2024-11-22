@@ -1,0 +1,29 @@
+{
+    "google_quiestion_number": "w",
+    "question_number": 3,
+    "raw_text": "3 Als je de pinda's fijnstampft is het oppervlak groter en dan de deeltjes tijdens de reactie ergens tegen aan botsen.\n4 Omdat er dan elk element evenveel voor de reactie als na de reacti: zijn\n5 Omdat er dan tijdens de rood andere stoffen bij kunnen komen\n6 65g - 13g - 5g = 47g\n7 NaCl + CO2 ->\nChemische energie -> warmte energie",
+    "correctly_spelled_text": "3 Als je de pinda's fijnstampft is het oppervlak groter en dan de deeltjes tijdens de reactie ergens tegenaan botsen.\n4 Omdat er dan elk element evenveel voor de reactie als na de reactie zijn.\n5 Omdat er dan tijdens de reactie andere stoffen bij kunnen komen.\n6 65g - 13g - 5g = 47g\n7 NaCl + CO2 ->\nChemische energie -> warmte energie",
+    "spelling_corrections": [
+        {
+            "original": "de deeltjes",
+            "changes": "de deeltjes"
+        },
+        {
+            "original": "tegen aan",
+            "changes": "tegenaan"
+        },
+        {
+            "original": "de reacti:",
+            "changes": "de reactie"
+        },
+        {
+            "original": "de rood",
+            "changes": "de reactie"
+        }
+    ],
+    "tokens_used": 14676,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727739967,
+    "delta_time_s": 3.579395294189453
+}

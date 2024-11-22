@@ -1,0 +1,17 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 3,
+    "raw_text": "Hij verlaagd de activeringsenergie, waardoor de reactie sneller verloopt.",
+    "correctly_spelled_text": "Hij verlaagt de activeringsenergie, waardoor de reactie sneller verloopt.",
+    "spelling_corrections": [
+        {
+            "original": "verlaagd",
+            "changes": "verlaagt"
+        }
+    ],
+    "tokens_used": 14538,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728216464,
+    "delta_time_s": 1.7756597995758057
+}

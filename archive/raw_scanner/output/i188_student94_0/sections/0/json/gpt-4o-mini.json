@@ -1,0 +1,29 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 2,
+    "raw_text": "C7H16 + O2 \u2192 CO2 + H2O\nC  7  |  x 7\nH  16 |  2 16\nS  7  |  2 1\nO  \u2211 2U\n\nDe katalysator be\u00efnvloedt de reactiesnelheid door animeren te zien en niet volledig te raken.",
+    "correctly_spelled_text": "C7H16 + O2 \u2192 CO2 + H2O\nC  7  |  x 7\nH  16 |  2 16\nS  7  |  2 1\nO  \u2211 2U\n\nDe katalysator be\u00efnvloedt de reactiesnelheid door animeren te zien en niet volledig te raken.",
+    "spelling_corrections": [
+        {
+            "original": "katalysator",
+            "changes": "katalysator"
+        },
+        {
+            "original": "be\u00efnvloedt",
+            "changes": "be\u00efnvloedt"
+        },
+        {
+            "original": "reactiesnelheid",
+            "changes": "reactiesnelheid"
+        },
+        {
+            "original": "door animeren",
+            "changes": "door animeren"
+        }
+    ],
+    "tokens_used": 14713,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728214009,
+    "delta_time_s": 4.151262521743774
+}

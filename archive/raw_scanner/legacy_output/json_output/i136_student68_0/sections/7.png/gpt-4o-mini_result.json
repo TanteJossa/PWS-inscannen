@@ -1,0 +1,33 @@
+{
+    "google_quiestion_number": "7",
+    "question_number": 1,
+    "raw_text": "hele bhand\n\nstuckel pich\n\nextraperen\n\ndestilleren\n\nverhitting\n\nalcohol\n\ngeemil\n\nrindas",
+    "correctly_spelled_text": "hele band\n\nstukje pich\n\nextraheren\n\ndestilleren\n\nverhitten\n\nalcohol\n\ngemil\n\nrindas",
+    "spelling_corrections": [
+        {
+            "original": "bhand",
+            "changes": "band"
+        },
+        {
+            "original": "stuckel",
+            "changes": "stukje"
+        },
+        {
+            "original": "extraperen",
+            "changes": "extraheren"
+        },
+        {
+            "original": "verhitting",
+            "changes": "verhitten"
+        },
+        {
+            "original": "geemil",
+            "changes": "gemil"
+        }
+    ],
+    "tokens_used": 14578,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727735827,
+    "delta_time_s": 3.4738028049468994
+}

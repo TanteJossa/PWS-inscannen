@@ -1,0 +1,21 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 7,
+    "raw_text": "geefde meer uitleg dan de leraar zelf en meer deeltje goed weten, wat de restje verhaalt.",
+    "correctly_spelled_text": "geefde meer uitleg dan de leraar zelf en meer deeltjes goed weten, wat de restje verhaalt.",
+    "spelling_corrections": [
+        {
+            "original": "geefde",
+            "changes": "geefde -> gaf"
+        },
+        {
+            "original": "deeltje",
+            "changes": "deeltje -> deeltjes"
+        }
+    ],
+    "tokens_used": 14572,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728213225,
+    "delta_time_s": 2.749729871749878
+}

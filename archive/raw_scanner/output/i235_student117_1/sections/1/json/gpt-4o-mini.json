@@ -1,0 +1,21 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 8,
+    "raw_text": "Als het de geactiveerde toestand eenmaal bereikt is gaat de reactie door omdat het exotherm is en energie afgeeft, daarom komt er ook warmte vrij.",
+    "correctly_spelled_text": "Als het de geactiveerde toestand eenmaal bereikt is, gaat de reactie door omdat het exotherm is en energie afgeeft, daarom komt er ook warmte vrij.",
+    "spelling_corrections": [
+        {
+            "original": "geactiveerde",
+            "changes": "geactiveerde"
+        },
+        {
+            "original": "bereikt is gaat",
+            "changes": "bereikt is, gaat"
+        }
+    ],
+    "tokens_used": 14587,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728214890,
+    "delta_time_s": 2.4529671669006348
+}

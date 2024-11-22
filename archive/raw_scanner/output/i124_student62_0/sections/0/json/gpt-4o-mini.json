@@ -1,0 +1,21 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 9,
+    "raw_text": "Als de verbranding van benzine in een extreem reactie komt, de reactie automatisch neerkomt zonder ze de bedieningswijze legt.",
+    "correctly_spelled_text": "Als de verbranding van benzine in een extreem reactie komt, de reactie automatisch neerkomt zonder ze de bedieningswijze legt.",
+    "spelling_corrections": [
+        {
+            "original": "extreem reactie",
+            "changes": "extreme reactie"
+        },
+        {
+            "original": "neerkomt",
+            "changes": "neerkomt"
+        }
+    ],
+    "tokens_used": 14573,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728212641,
+    "delta_time_s": 3.5727379322052
+}

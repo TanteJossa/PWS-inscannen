@@ -1,0 +1,41 @@
+{
+    "google_quiestion_number": "hit",
+    "question_number": 1,
+    "raw_text": "hierboven dat er geen moleculen verloren gaan, de massa van elk deeltje blijft dus bestaan dus de massa, rechts en links van de eu is hetzelfde.",
+    "correctly_spelled_text": "hierboven dat er geen moleculen verloren gaan, de massa van elk deeltje blijft dus bestaan dus de massa, rechts en links van de eu is hetzelfde.",
+    "spelling_corrections": [
+        {
+            "original": "moleculen",
+            "changes": "moleculen"
+        },
+        {
+            "original": "deeltje",
+            "changes": "deeltje"
+        },
+        {
+            "original": "blijft",
+            "changes": "blijft"
+        },
+        {
+            "original": "massa",
+            "changes": "massa"
+        },
+        {
+            "original": "rechts",
+            "changes": "rechts"
+        },
+        {
+            "original": "links",
+            "changes": "links"
+        },
+        {
+            "original": "eu",
+            "changes": "EU"
+        }
+    ],
+    "tokens_used": 14576,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727738369,
+    "delta_time_s": 2.680561065673828
+}

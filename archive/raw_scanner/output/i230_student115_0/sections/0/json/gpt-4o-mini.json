@@ -1,0 +1,25 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 1,
+    "raw_text": "Dit is een exotherme reactie, want by de verbranding van eune wordt chemische energie omgezet in bewegingsenergie & een beetje warmte",
+    "correctly_spelled_text": "Dit is een exotherme reactie, want bij de verbranding van e\u00e9n wordt chemische energie omgezet in bewegingsenergie en een beetje warmte",
+    "spelling_corrections": [
+        {
+            "original": "by",
+            "changes": "bij"
+        },
+        {
+            "original": "eune",
+            "changes": "\u00e9\u00e9n"
+        },
+        {
+            "original": "&",
+            "changes": "en"
+        }
+    ],
+    "tokens_used": 14583,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728214836,
+    "delta_time_s": 3.2608113288879395
+}

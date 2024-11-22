@@ -1,0 +1,29 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 1,
+    "raw_text": "(g)  \nequilibrium  \nlegislaton  \n\nNa  \n\nreette  \nproef  \nengdolen  \n\nVer loop  \nelectric  \n\n\nDe verandering is: 2.21(602)/mol",
+    "correctly_spelled_text": "(g)  \nequilibrium  \nlegislaton  \n\nNa  \n\nrechte  \nproef  \ngedolen  \n\nVerloop  \nelectric  \n\n\nDe verandering is: 2.21(602)/mol",
+    "spelling_corrections": [
+        {
+            "original": "legislaton",
+            "changes": "legislaton -> legislatie"
+        },
+        {
+            "original": "reette",
+            "changes": "reette -> rechte"
+        },
+        {
+            "original": "engdolen",
+            "changes": "engdolen -> gedolen"
+        },
+        {
+            "original": "Ver loop",
+            "changes": "Ver loop -> Verloop"
+        }
+    ],
+    "tokens_used": 14680,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728212798,
+    "delta_time_s": 4.17545747756958
+}

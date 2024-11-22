@@ -1,0 +1,17 @@
+{
+    "google_quiestion_number": "30",
+    "question_number": 3,
+    "raw_text": "\nEen katalysator verhoogd dus de reactiesnelheid.\n\nVoor 2.0.2.\n\nDe reactiewarmte van fotosynthese van glucose",
+    "correctly_spelled_text": "\nEen katalysator verhoogt dus de reactiesnelheid.\n\nVoor 2.0.2.\n\nDe reactiewarmte van fotosynthese van glucose",
+    "spelling_corrections": [
+        {
+            "original": "verhoogd",
+            "changes": "verhoogt"
+        }
+    ],
+    "tokens_used": 14532,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727739663,
+    "delta_time_s": 2.9674181938171387
+}

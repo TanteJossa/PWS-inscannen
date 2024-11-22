@@ -1,0 +1,21 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 5,
+    "raw_text": "5. Het is moeilijk omdat het een open reactie vet is en er kunnen dus stoffen ontsnappen\n6",
+    "correctly_spelled_text": "5. Het is moeilijk omdat het een open reactie vet is en er kunnen dus stoffen ontsnappen\n6",
+    "spelling_corrections": [
+        {
+            "original": "moeilijk onder",
+            "changes": "moeilijk omdat"
+        },
+        {
+            "original": "reactie vet",
+            "changes": "reactie is"
+        }
+    ],
+    "tokens_used": 14567,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728214284,
+    "delta_time_s": 2.8572709560394287
+}

@@ -1,0 +1,21 @@
+{
+    "google_quiestion_number": "QS1012133S",
+    "question_number": 8,
+    "raw_text": "De verheldingsgraad is dan hoger, waardoor er meer helderheid zij; en volgens het bestaande deeltjesmodel dan ook meer effectieve botsingen.",
+    "correctly_spelled_text": "De verhelderingsgraad is dan hoger, waardoor er meer helderheid zij; en volgens het bestaande deeltjesmodel dan ook meer effectieve botsingen.",
+    "spelling_corrections": [
+        {
+            "original": "verheldingsgraad",
+            "changes": "verhelderingsgraad"
+        },
+        {
+            "original": "helderheid zij;",
+            "changes": "helderheid zijn;"
+        }
+    ],
+    "tokens_used": 14538,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727740012,
+    "delta_time_s": 2.741004467010498
+}

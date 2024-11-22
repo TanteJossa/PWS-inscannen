@@ -1,0 +1,17 @@
+{
+    "google_quiestion_number": "h",
+    "question_number": 9,
+    "raw_text": "heb ik een exotherm proces waar er komt energie vrij bij de verbranding dan je nodig hebt bij het begin product\n\n",
+    "correctly_spelled_text": "heb ik een exotherm proces waar er komt energie vrij bij de verbranding dan je nodig hebt bij het beginproduct\n\n",
+    "spelling_corrections": [
+        {
+            "original": "begin product",
+            "changes": "beginproduct"
+        }
+    ],
+    "tokens_used": 14508,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727738935,
+    "delta_time_s": 2.6428184509277344
+}

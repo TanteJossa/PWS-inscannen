@@ -1,0 +1,25 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 10,
+    "raw_text": "het zou moeilijk zijn om te horen dat de wet van wassen bevat er onder CO2 een gas is en H2O dat, dan raak je ze kwijt.",
+    "correctly_spelled_text": "het zou moeilijk zijn om te horen dat de wet van wassen bevat er onder CO2 een gas is en H2O dat, dan raak je ze kwijt.",
+    "spelling_corrections": [
+        {
+            "original": "moeilijk",
+            "changes": "moeilijk"
+        },
+        {
+            "original": "bevat",
+            "changes": "bevat"
+        },
+        {
+            "original": "H2O",
+            "changes": "H2O"
+        }
+    ],
+    "tokens_used": 14593,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728215051,
+    "delta_time_s": 2.567769765853882
+}

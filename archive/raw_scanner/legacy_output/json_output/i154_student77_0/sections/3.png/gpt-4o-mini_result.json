@@ -1,0 +1,25 @@
+{
+    "google_quiestion_number": "3",
+    "question_number": 3,
+    "raw_text": "De katalysator laat het reageren de reactiesnelheid doordat het in de auto a moet reageren, in een kleinere ruimte dus zitten de moleculen dichter op elkaar en is er een grotere kans dat de moleculen elkaar eerder aan raken en dus de reactie sneller gaat!",
+    "correctly_spelled_text": "De katalysator laat de reactiesnelheid toenemen doordat het in de auto moet reageren, in een kleinere ruimte dus zitten de moleculen dichter op elkaar en is er een grotere kans dat de moleculen elkaar eerder aanraken en dus de reactie sneller gaat!",
+    "spelling_corrections": [
+        {
+            "original": "laat het reageren de reactiesnelheid",
+            "changes": "laat de reactiesnelheid toenemen"
+        },
+        {
+            "original": "a moet",
+            "changes": "moet"
+        },
+        {
+            "original": "aan raken",
+            "changes": "aanraken"
+        }
+    ],
+    "tokens_used": 14596,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727736255,
+    "delta_time_s": 3.2745659351348877
+}

@@ -1,0 +1,41 @@
+{
+    "google_quiestion_number": "NOT_VALID_QUESTION_ID",
+    "question_number": 6,
+    "raw_text": "65 g malachiet ontstaat 33 g koolstofdioxide en 5 gram water dus!\n65 - 33 = 52 g\n52 - 5 = 47 g\nEr ontstaat dus 47 gram Koper(II) oxide\n7\nnatriumacetaat oplossing = warme energie",
+    "correctly_spelled_text": "65 g malachiet ontstaat 33 g koolstofdioxide en 5 gram water dus!\n65 - 33 = 52 g\n52 - 5 = 47 g\nEr ontstaat dus 47 gram Koper(II) oxide\n7\nnatriumacetaatoplossing = warme energie",
+    "spelling_corrections": [
+        {
+            "original": "malachiet",
+            "changes": "malachiet"
+        },
+        {
+            "original": "koolstofdioxide",
+            "changes": "koolstofdioxide"
+        },
+        {
+            "original": "gram",
+            "changes": "gram"
+        },
+        {
+            "original": "gram",
+            "changes": "gram"
+        },
+        {
+            "original": "Koper(II) oxide",
+            "changes": "Koper(II) oxide"
+        },
+        {
+            "original": "natriumacetaat",
+            "changes": "natriumacetaat"
+        },
+        {
+            "original": "oplossing",
+            "changes": "oplossing"
+        }
+    ],
+    "tokens_used": 14664,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727736879,
+    "delta_time_s": 8.301156997680664
+}

@@ -1,0 +1,17 @@
+{
+    "google_quiestion_number": "00",
+    "question_number": 8,
+    "raw_text": "Endotherme reactie. Je hebt eerste energie nodig om de reactie te laten verlopen, en bij deze reactie is de energie vuur om het water te koken tot niet het kookpunt.",
+    "correctly_spelled_text": "Endotherme reactie. Je hebt eerst energie nodig om de reactie te laten verlopen, en bij deze reactie is de energie vuur om het water te koken tot niet het kookpunt.",
+    "spelling_corrections": [
+        {
+            "original": "eerste",
+            "changes": "eerst"
+        }
+    ],
+    "tokens_used": 14526,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727736861,
+    "delta_time_s": 4.830890655517578
+}

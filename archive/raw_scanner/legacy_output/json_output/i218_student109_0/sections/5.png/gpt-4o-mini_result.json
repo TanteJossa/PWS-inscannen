@@ -1,0 +1,25 @@
+{
+    "google_quiestion_number": "5",
+    "question_number": 5,
+    "raw_text": "De reultwame van fotosynthese is gebraden die om de verwarming, en de purist dit bekent dat het een enbloma realtie, en dit klopt, maar het is onduidelijk en lastig te realiseren.",
+    "correctly_spelled_text": "De resultaat van fotosynthese is geboden die om de verwarming, en de purist dit bekent dat het een enbloma realtie, en dit klopt, maar het is onduidelijk en lastig te realiseren.",
+    "spelling_corrections": [
+        {
+            "original": "reultwame",
+            "changes": "resultaat"
+        },
+        {
+            "original": "gebraden",
+            "changes": "geboden"
+        },
+        {
+            "original": "enbloma",
+            "changes": "enbloma"
+        }
+    ],
+    "tokens_used": 14575,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727738178,
+    "delta_time_s": 3.9761743545532227
+}

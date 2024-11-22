@@ -1,0 +1,17 @@
+{
+    "google_quiestion_number": "13",
+    "question_number": 13,
+    "raw_text": "Endotherm, er is energie nodig om de reactie op gang te brengen.\nExotherm, er komt energie uit de reactie (warmte) en de chemische energie wordt omgezet in een andere energie-vorm.",
+    "correctly_spelled_text": "Endotherm, er is energie nodig om de reactie op gang te brengen.\nExotherm, er komt energie uit de reactie (warmte) en de chemische energie wordt omgezet in een andere energievorm.",
+    "spelling_corrections": [
+        {
+            "original": "energie-vorm",
+            "changes": "energievorm"
+        }
+    ],
+    "tokens_used": 14546,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727738711,
+    "delta_time_s": 3.0570645332336426
+}

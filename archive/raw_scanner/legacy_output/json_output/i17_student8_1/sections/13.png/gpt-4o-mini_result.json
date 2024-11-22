@@ -1,0 +1,17 @@
+{
+    "google_quiestion_number": "13",
+    "question_number": 13,
+    "raw_text": "Het kristallisatieproces in de handwarmer is een exotherm proces, omdat de \nchemische energie wordt omgezet in een andere energievorm, en uitgaand is \ndat el warmte.",
+    "correctly_spelled_text": "Het kristallisatieproces in de handwarmer is een exotherm proces, omdat de \nchemische energie wordt omgezet in een andere energievorm, en uitgaand is \ndat de warmte.",
+    "spelling_corrections": [
+        {
+            "original": "el",
+            "changes": "de"
+        }
+    ],
+    "tokens_used": 25874,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727737194,
+    "delta_time_s": 2.695896863937378
+}

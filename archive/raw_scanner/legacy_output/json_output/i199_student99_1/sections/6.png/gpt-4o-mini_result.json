@@ -1,0 +1,17 @@
+{
+    "google_quiestion_number": "6",
+    "question_number": 1,
+    "raw_text": "65 - 13 - 5 = 47 g, dus er ontstaat 47 g koper(II)oxide.\n\nchemische energie \u2192 warmte",
+    "correctly_spelled_text": "65 - 13 - 5 = 47 g, dus er ontstaat 47 g koper(II)oxide.\n\nchemische energie \u2192 warmte",
+    "spelling_corrections": [
+        {
+            "original": "koper(II)oxide",
+            "changes": "koper(II)oxide"
+        }
+    ],
+    "tokens_used": 14524,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727737692,
+    "delta_time_s": 2.9752039909362793
+}

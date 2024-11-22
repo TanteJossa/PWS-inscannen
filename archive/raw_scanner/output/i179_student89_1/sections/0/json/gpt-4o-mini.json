@@ -1,0 +1,21 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 8,
+    "raw_text": "Volgens het is brand deels model gebuert het volgende als je zo ijntempot. Er plant en lagere verdelingsgoed want",
+    "correctly_spelled_text": "Volgens het is brand deels model gebeurd het volgende als je zo ijntempot. Er plant en lagere verdelingsgoed want",
+    "spelling_corrections": [
+        {
+            "original": "gebuert",
+            "changes": "gebeurt"
+        },
+        {
+            "original": "ijntempot",
+            "changes": "ijntempot"
+        }
+    ],
+    "tokens_used": 14568,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728213875,
+    "delta_time_s": 2.0453479290008545
+}

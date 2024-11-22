@@ -1,0 +1,57 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 9,
+    "raw_text": "Het is exotherm, omdat het een verbinding is.\n\nb\nC7H16 + 12O2 \u2192 7CO2 + 8H2O + 2SO2\n\nc\nDe reactiesnelheid van ethanol is veel sneller dan die van methanol.",
+    "correctly_spelled_text": "Het is exotherm, omdat het een verbinding is.\n\nb\nC7H16 + 12O2 \u2192 7CO2 + 8H2O + 2SO2\n\nc\nDe reactiesnelheid van ethanol is veel sneller dan die van methanol.",
+    "spelling_corrections": [
+        {
+            "original": "exotherm",
+            "changes": "exotherm"
+        },
+        {
+            "original": "verbinding",
+            "changes": "verbinding"
+        },
+        {
+            "original": "C7H16",
+            "changes": "C7H16"
+        },
+        {
+            "original": "O2",
+            "changes": "O2"
+        },
+        {
+            "original": "CO2",
+            "changes": "CO2"
+        },
+        {
+            "original": "H2O",
+            "changes": "H2O"
+        },
+        {
+            "original": "SO2",
+            "changes": "SO2"
+        },
+        {
+            "original": "reactiesnelheid",
+            "changes": "reactiesnelheid"
+        },
+        {
+            "original": "ethanol",
+            "changes": "ethanol"
+        },
+        {
+            "original": "sneller",
+            "changes": "sneller"
+        },
+        {
+            "original": "methanol",
+            "changes": "methanol"
+        }
+    ],
+    "tokens_used": 14738,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728213995,
+    "delta_time_s": 4.659493923187256
+}

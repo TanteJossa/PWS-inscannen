@@ -1,0 +1,17 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 10,
+    "raw_text": "10 Je kan er niet in kijken omdat die vater heel hoog zijn.",
+    "correctly_spelled_text": "10 Je kan er niet in kijken omdat die vader heel hoog zijn.",
+    "spelling_corrections": [
+        {
+            "original": "vater",
+            "changes": "vader"
+        }
+    ],
+    "tokens_used": 14534,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728213883,
+    "delta_time_s": 3.025766611099243
+}

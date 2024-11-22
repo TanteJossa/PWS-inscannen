@@ -1,0 +1,17 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 7,
+    "raw_text": "chemische energie \u2192 warme",
+    "correctly_spelled_text": "chemische energie \u2192 warmte",
+    "spelling_corrections": [
+        {
+            "original": "warme",
+            "changes": "warmte"
+        }
+    ],
+    "tokens_used": 14517,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728214790,
+    "delta_time_s": 1.6592061519622803
+}

@@ -1,0 +1,21 @@
+{
+    "google_quiestion_number": "12",
+    "question_number": 1,
+    "raw_text": "hade pinda's\nvermalen\ngemalen pinda's\nextracten\nopgelost met pinda's\nniet remen\ndestilleren\n\nsijde\nsijde pinda's\nalcohol",
+    "correctly_spelled_text": "hade pinda's\nvermalen\ngemalen pinda's\nextracten\nopgelost met pinda's\nniet remmen\ndestilleren\n\nzijde\nzijde pinda's\nalcohol",
+    "spelling_corrections": [
+        {
+            "original": "remen",
+            "changes": "remmen"
+        },
+        {
+            "original": "sijde",
+            "changes": "zijde"
+        }
+    ],
+    "tokens_used": 14563,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727738573,
+    "delta_time_s": 3.9001646041870117
+}

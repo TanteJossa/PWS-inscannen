@@ -1,0 +1,17 @@
+{
+    "google_quiestion_number": "5",
+    "question_number": 1,
+    "raw_text": "g, De verbranding is een ___ exotherm proces, omdat bij een verbranding de reactie vanzelf doorgaat als er genoeg zuurstof in de ruimte is.",
+    "correctly_spelled_text": "g, De verbranding is een exotherm proces, omdat bij een verbranding de reactie vanzelf doorgaat als er genoeg zuurstof in de ruimte is.",
+    "spelling_corrections": [
+        {
+            "original": "___ exotherm",
+            "changes": "exotherm"
+        }
+    ],
+    "tokens_used": 14522,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727739917,
+    "delta_time_s": 3.3678488731384277
+}

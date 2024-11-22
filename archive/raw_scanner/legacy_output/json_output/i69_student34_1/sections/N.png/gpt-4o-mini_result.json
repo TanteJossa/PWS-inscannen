@@ -1,0 +1,21 @@
+{
+    "google_quiestion_number": "N",
+    "question_number": 7,
+    "raw_text": "7. Kristallisatie energie van de kik\n\n8. energie van de kik -> kristallisatie -> warmte\n\n9. exotherm want er komt genoeg energie bij vrij om de reactie op nieuw te laten gebeuren\n\n10. exotherm want er komt zo veel kleine bij af dat het weer ander enzym kan verstaanden\n\nC7H16 + O2(g) -> C7H14 + O2(g)",
+    "correctly_spelled_text": "7. Kristallisatie energie van de kik\n\n8. energie van de kik -> kristallisatie -> warmte\n\n9. exotherm want er komt genoeg energie bij vrij om de reactie opnieuw te laten gebeuren\n\n10. exotherm want er komt zo veel kleine bij af dat het weer een ander enzym kan verstaan\n\nC7H16 + O2(g) -> C7H14 + O2(g)",
+    "spelling_corrections": [
+        {
+            "original": "op nieuw",
+            "changes": "opnieuw"
+        },
+        {
+            "original": "verstaanden",
+            "changes": "verstaan"
+        }
+    ],
+    "tokens_used": 25979,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727740160,
+    "delta_time_s": 7.949477195739746
+}

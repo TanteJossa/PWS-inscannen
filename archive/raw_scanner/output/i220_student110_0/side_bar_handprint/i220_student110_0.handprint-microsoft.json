@@ -1,0 +1,90 @@
+{
+  "analyzeResult": {
+    "modelVersion": "2022-04-30",
+    "readResults": [
+      {
+        "angle": 1.5064,
+        "height": 845,
+        "lines": [
+          {
+            "appearance": {
+              "style": {
+                "confidence": 1,
+                "name": "handwriting"
+              }
+            },
+            "boundingBox": [
+              69,
+              141,
+              89,
+              141,
+              89,
+              159,
+              70,
+              158
+            ],
+            "text": "12.",
+            "words": [
+              {
+                "boundingBox": [
+                  69,
+                  141,
+                  88,
+                  141,
+                  88,
+                  159,
+                  69,
+                  158
+                ],
+                "confidence": 0.884,
+                "text": "12."
+              }
+            ]
+          },
+          {
+            "appearance": {
+              "style": {
+                "confidence": 0.946,
+                "name": "handwriting"
+              }
+            },
+            "boundingBox": [
+              76,
+              193,
+              96,
+              193,
+              96,
+              220,
+              76,
+              220
+            ],
+            "text": "13",
+            "words": [
+              {
+                "boundingBox": [
+                  76,
+                  193,
+                  94,
+                  193,
+                  94,
+                  220,
+                  76,
+                  220
+                ],
+                "confidence": 0.685,
+                "text": "13"
+              }
+            ]
+          }
+        ],
+        "page": 1,
+        "unit": "pixel",
+        "width": 105
+      }
+    ],
+    "version": "3.2.0"
+  },
+  "createdDateTime": "2024-10-06T09:30:29Z",
+  "lastUpdatedDateTime": "2024-10-06T09:30:29Z",
+  "status": "succeeded"
+}

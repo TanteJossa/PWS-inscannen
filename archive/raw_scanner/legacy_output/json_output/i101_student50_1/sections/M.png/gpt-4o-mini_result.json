@@ -1,0 +1,33 @@
+{
+    "google_quiestion_number": "M",
+    "question_number": 1,
+    "raw_text": "3 door het in stappen van te panden worden de panden een figuur ste en wat je hier voorstelt deel je model ons verteld is dat het eigen van de stp is en deze meer contact apprecieer en op micro niveau zegt die er dan dat men moeilijk tegen de priva medewin.",
+    "correctly_spelled_text": "3 door het in stappen van de panden worden de panden een figuur ste en wat je hier voorstelt deel je model ons vertelt is dat het eigen van de stap is en deze meer contact apprecieert en op micro niveau zegt die er dan dat men moeilijk tegen de private medewin.",
+    "spelling_corrections": [
+        {
+            "original": "stappen van te panden",
+            "changes": "stappen van de panden"
+        },
+        {
+            "original": "voorstelt deel je model ons verteld",
+            "changes": "voorstelt deel je model ons vertelt"
+        },
+        {
+            "original": "stp",
+            "changes": "stap"
+        },
+        {
+            "original": "apprecieer",
+            "changes": "apprecieert"
+        },
+        {
+            "original": "priva medewin",
+            "changes": "private medewin"
+        }
+    ],
+    "tokens_used": 14652,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727734882,
+    "delta_time_s": 4.786161661148071
+}

@@ -1,0 +1,17 @@
+{
+    "google_quiestion_number": "b",
+    "question_number": 1,
+    "raw_text": "benzine is een ektolern proces omdat",
+    "correctly_spelled_text": "benzine is een exotherm proces omdat",
+    "spelling_corrections": [
+        {
+            "original": "ektolern",
+            "changes": "exotherm"
+        }
+    ],
+    "tokens_used": 14477,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727740028,
+    "delta_time_s": 1.8852949142456055
+}

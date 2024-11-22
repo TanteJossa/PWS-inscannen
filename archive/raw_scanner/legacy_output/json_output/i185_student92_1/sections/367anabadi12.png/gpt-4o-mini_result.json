@@ -1,0 +1,29 @@
+{
+    "google_quiestion_number": "367anabadi12",
+    "question_number": 5,
+    "raw_text": "Een deel van de massa wordt gas en als het in de lucht zit is het moeilijker aan te geven hoeveel het is.",
+    "correctly_spelled_text": "Een deel van de massa wordt gas en als het in de lucht zit is het moeilijker aan te geven hoeveel het is.",
+    "spelling_corrections": [
+        {
+            "original": "massa wordt gas",
+            "changes": "massa wordt gas"
+        },
+        {
+            "original": "in de lucht zit",
+            "changes": "in de lucht zit"
+        },
+        {
+            "original": "moeilijker aan te geven",
+            "changes": "moeilijker aan te geven"
+        },
+        {
+            "original": "hoeveel het is",
+            "changes": "hoeveel het is"
+        }
+    ],
+    "tokens_used": 14554,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727737300,
+    "delta_time_s": 3.2126355171203613
+}

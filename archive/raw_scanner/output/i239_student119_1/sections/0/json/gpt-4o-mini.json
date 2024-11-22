@@ -1,0 +1,33 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 8,
+    "raw_text": "8 aus je de pindal's fyn gaat stampen worden de stoffen fyner verdeeld en tagg je dus hogere verzettingsgraad En dus ook een hoga contactoppervlak waardoor er meer botsingen ontstaan. Die botsingen worden effectiever en de reactietijd wordt verhooga.",
+    "correctly_spelled_text": "8 als je de pinda's fijn gaat stampen worden de stoffen fijner verdeeld en krijg je dus hogere verzettingsgraad. En dus ook een hoger contactoppervlak waardoor er meer botsingen ontstaan. Die botsingen worden effectiever en de reactietijd wordt verhoogd.",
+    "spelling_corrections": [
+        {
+            "original": "aus",
+            "changes": "als"
+        },
+        {
+            "original": "fyn",
+            "changes": "fijn"
+        },
+        {
+            "original": "tagg",
+            "changes": "krijg"
+        },
+        {
+            "original": "hoga",
+            "changes": "hoger"
+        },
+        {
+            "original": "verhooga",
+            "changes": "verhoogd"
+        }
+    ],
+    "tokens_used": 14663,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728214927,
+    "delta_time_s": 4.0075507164001465
+}

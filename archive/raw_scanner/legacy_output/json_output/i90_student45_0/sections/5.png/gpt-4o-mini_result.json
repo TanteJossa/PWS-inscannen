@@ -1,0 +1,17 @@
+{
+    "google_quiestion_number": "5",
+    "question_number": 5,
+    "raw_text": "5 \n endotherm \n defotosynthese \n betekent warmte op \n E > 0",
+    "correctly_spelled_text": "5 \n endotherm \n fotosynthese \n betekent warmte op \n E > 0",
+    "spelling_corrections": [
+        {
+            "original": "defotosynthese",
+            "changes": "fotosynthese"
+        }
+    ],
+    "tokens_used": 14505,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727740720,
+    "delta_time_s": 2.325556755065918
+}

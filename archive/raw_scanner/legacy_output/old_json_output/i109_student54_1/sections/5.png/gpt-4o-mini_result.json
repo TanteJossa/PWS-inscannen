@@ -1,0 +1,21 @@
+{
+    "google_quiestion_number": "5",
+    "question_number": 5,
+    "raw_text": "Door de verbanding van glucose in onze cellen komt er warmte of energy vrij. We ademen O2 in wat in de cellen dus als bijproduct wordt verbrand samen met glucose tot energie waar van vandaan komt.",
+    "correctly_spelled_text": "Door de verbranding van glucose in onze cellen komt er warmte of energie vrij. We ademen O2 in wat in de cellen dus als bijproduct wordt verbrand samen met glucose tot energie waar van vandaan komt.",
+    "spelling_corrections": [
+        {
+            "original": "verbanding",
+            "changes": "verbranding"
+        },
+        {
+            "original": "energy",
+            "changes": "energie"
+        }
+    ],
+    "tokens_used": 14552,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727729901,
+    "delta_time_s": 3.730534553527832
+}

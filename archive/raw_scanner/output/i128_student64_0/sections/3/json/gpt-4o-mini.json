@@ -1,0 +1,17 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 3,
+    "raw_text": "3 De katalysator be\u00efnvloed de reactiet snelheid door extra hulp te geven bij de reactie.",
+    "correctly_spelled_text": "3 De katalysator be\u00efnvloedt de reactiet snelheid door extra hulp te geven bij de reactie.",
+    "spelling_corrections": [
+        {
+            "original": "be\u00efnvloed",
+            "changes": "be\u00efnvloedt"
+        }
+    ],
+    "tokens_used": 14549,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728212813,
+    "delta_time_s": 1.862086534500122
+}

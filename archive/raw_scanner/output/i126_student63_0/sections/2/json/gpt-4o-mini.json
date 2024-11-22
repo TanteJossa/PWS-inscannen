@@ -1,0 +1,17 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 1,
+    "raw_text": "Dit kan niet verklaren omdat de wet van massa behoud zegt dat er geen massa verloren kan gaan.",
+    "correctly_spelled_text": "Dit kan niet verklaren omdat de wet van massa behoud zegt dat er geen massa verloren kan gaan.",
+    "spelling_corrections": [
+        {
+            "original": "verloren",
+            "changes": "verloren"
+        }
+    ],
+    "tokens_used": 14547,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728212737,
+    "delta_time_s": 1.8254835605621338
+}

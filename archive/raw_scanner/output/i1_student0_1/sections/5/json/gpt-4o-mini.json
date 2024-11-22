@@ -1,0 +1,21 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 5,
+    "raw_text": "5.- Dat is a wat en ontstaat dus zuurstof en glucose.\n6.- Opmerking: een de moleculen zitten te veel elkaars (de betere electron model)",
+    "correctly_spelled_text": "5.- Dat is een wat en ontstaat dus zuurstof en glucose.\n6.- Opmerking: een van de moleculen zitten te veel elkaars (de betere electron model)",
+    "spelling_corrections": [
+        {
+            "original": "a",
+            "changes": "een"
+        },
+        {
+            "original": "en",
+            "changes": "van"
+        }
+    ],
+    "tokens_used": 14588,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728214424,
+    "delta_time_s": 3.5430731773376465
+}

@@ -1,0 +1,17 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 1,
+    "raw_text": "Dat zie je aan dat er aan de inveruant van de pij evenveel atomen\nzijn als aan de rechternand.",
+    "correctly_spelled_text": "Dat zie je aan dat er aan de invariant van de pij evenveel atomen\nzijn als aan de rechternand.",
+    "spelling_corrections": [
+        {
+            "original": "inveruant",
+            "changes": "invariant"
+        }
+    ],
+    "tokens_used": 14558,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728216521,
+    "delta_time_s": 1.9322481155395508
+}

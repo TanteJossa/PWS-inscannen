@@ -1,0 +1,17 @@
+{
+    "google_quiestion_number": "3",
+    "question_number": 3,
+    "raw_text": "Hij verlengt de activeringsenergie, waardoor de reactie sneller verloopt.",
+    "correctly_spelled_text": "Hij verlengt de activeringsenergie, waardoor de reactie sneller verloopt.",
+    "spelling_corrections": [
+        {
+            "original": "verlagt",
+            "changes": "verlengd"
+        }
+    ],
+    "tokens_used": 14487,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727740805,
+    "delta_time_s": 2.364327907562256
+}

@@ -1,0 +1,21 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 3,
+    "raw_text": "De catalysten zorgen ervoor dat het proces",
+    "correctly_spelled_text": "De katalysator zorgt ervoor dat het proces",
+    "spelling_corrections": [
+        {
+            "original": "catalysten",
+            "changes": "katalysator"
+        },
+        {
+            "original": "zorgen",
+            "changes": "zorgt"
+        }
+    ],
+    "tokens_used": 14538,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728214914,
+    "delta_time_s": 3.018549680709839
+}

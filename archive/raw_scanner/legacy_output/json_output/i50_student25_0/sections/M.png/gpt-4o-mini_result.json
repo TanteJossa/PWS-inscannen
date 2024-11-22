@@ -1,0 +1,25 @@
+{
+    "google_quiestion_number": "M",
+    "question_number": 3,
+    "raw_text": "de statistiker veroorzaakt de waarde na selectie je begint altijd met een waarde als dat mee eindigt van de statistiker\n\nde statistiker voor verschilt de werkelijkheid door en je eindigt altijd met een waarde als dat je mee a begint",
+    "correctly_spelled_text": "de statisticus veroorzaakt de waarde na selectie je begint altijd met een waarde als dat mee eindigt van de statisticus\n\nde statisticus voor verschilt de werkelijkheid door en je eindigt altijd met een waarde als dat je mee aan begint",
+    "spelling_corrections": [
+        {
+            "original": "statistiker",
+            "changes": "statisticus"
+        },
+        {
+            "original": "statistiker",
+            "changes": "statisticus"
+        },
+        {
+            "original": "a",
+            "changes": "aan"
+        }
+    ],
+    "tokens_used": 14574,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727739775,
+    "delta_time_s": 4.1450066566467285
+}

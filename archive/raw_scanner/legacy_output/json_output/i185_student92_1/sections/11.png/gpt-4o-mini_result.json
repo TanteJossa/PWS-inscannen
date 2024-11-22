@@ -1,0 +1,21 @@
+{
+    "google_quiestion_number": "11",
+    "question_number": 11,
+    "raw_text": "De katalysator laat de stikstof- en zwavelverbindingen beter reageren! \n\n7 \n\nactiviteitsenergie,",
+    "correctly_spelled_text": "De katalysator laat de stikstof- en zwavelverbindingen beter reageren! \n\n7 \n\nactiviteitsenergie,",
+    "spelling_corrections": [
+        {
+            "original": "stikstof- en zwavelverbindingen",
+            "changes": "stikstof- en zwavelverbindingen"
+        },
+        {
+            "original": "activiteitsenergie,",
+            "changes": "activiteitsenergie,"
+        }
+    ],
+    "tokens_used": 14544,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727737294,
+    "delta_time_s": 3.6030263900756836
+}

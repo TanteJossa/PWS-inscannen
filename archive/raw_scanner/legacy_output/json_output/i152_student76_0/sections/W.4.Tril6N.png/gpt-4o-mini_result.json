@@ -1,0 +1,21 @@
+{
+    "google_quiestion_number": "W.4.Tril6N",
+    "question_number": 1,
+    "raw_text": "goed dat je hager wat er voor zorgt dat er meer deeltjes gaan bewegen, wat de negatieve warmte.",
+    "correctly_spelled_text": "goed dat je hager wat er voor zorgt dat er meer deeltjes gaan bewegen, wat de negatieve warmte.",
+    "spelling_corrections": [
+        {
+            "original": "hager",
+            "changes": "hoger"
+        },
+        {
+            "original": "deeltjes",
+            "changes": "deeltjes"
+        }
+    ],
+    "tokens_used": 14508,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727736225,
+    "delta_time_s": 2.889845609664917
+}

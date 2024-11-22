@@ -1,0 +1,17 @@
+{
+    "google_quiestion_number": "4",
+    "question_number": 4,
+    "raw_text": "\nE\n( )\n\ngedactiveerd\n\nbegin\nE=0\n\n1\n\nkactlieWarmte\n\nverloop reactie\n",
+    "correctly_spelled_text": "\nE\n( )\n\ngedactiveerd\n\nbegin\nE=0\n\n1\n\nkactiviteitWarmte\n\nverloop reactie\n",
+    "spelling_corrections": [
+        {
+            "original": "kactlieWarmte",
+            "changes": "kactiviteitWarmte"
+        }
+    ],
+    "tokens_used": 14534,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727735421,
+    "delta_time_s": 3.01774525642395
+}

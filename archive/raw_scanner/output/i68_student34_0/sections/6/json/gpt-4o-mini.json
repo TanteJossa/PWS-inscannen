@@ -1,0 +1,25 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 5,
+    "raw_text": "5 omfet de reactor open is kunnen de deeltjes die gas vormig worden de lucht ingaan en dus niet geweegd worden.",
+    "correctly_spelled_text": "5 om het de reactor open is kunnen de deeltjes die gasvormig worden de lucht ingaan en dus niet gewogen worden.",
+    "spelling_corrections": [
+        {
+            "original": "omfet",
+            "changes": "om het"
+        },
+        {
+            "original": "gas vormig",
+            "changes": "gasvormig"
+        },
+        {
+            "original": "geweegd",
+            "changes": "gewogen"
+        }
+    ],
+    "tokens_used": 14582,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728216062,
+    "delta_time_s": 3.5023481845855713
+}

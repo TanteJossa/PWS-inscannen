@@ -1,0 +1,17 @@
+{
+    "google_quiestion_number": "1423A",
+    "question_number": 1,
+    "raw_text": "1 hele pinda's\n(herhaal)\ngemalen\n\n- 200 ml alcohol\n\noploslos",
+    "correctly_spelled_text": "1 hele pinda's\n(herhaal)\ngemalen\n\n- 200 ml alcohol\n\noploss",
+    "spelling_corrections": [
+        {
+            "original": "oploslos",
+            "changes": "oploss"
+        }
+    ],
+    "tokens_used": 14506,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727740319,
+    "delta_time_s": 2.4771111011505127
+}

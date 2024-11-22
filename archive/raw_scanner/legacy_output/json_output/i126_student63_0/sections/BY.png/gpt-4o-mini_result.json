@@ -1,0 +1,21 @@
+{
+    "google_quiestion_number": "BY",
+    "question_number": 1,
+    "raw_text": "Dit kan niet verloren gaan omdat de wet van massa behoud zegt dat er geen massa verloren kan gaan",
+    "correctly_spelled_text": "Dit kan niet verloren gaan omdat de wet van massa behoud zegt dat er geen massa verloren kan gaan",
+    "spelling_corrections": [
+        {
+            "original": "verloren",
+            "changes": "verloren"
+        },
+        {
+            "original": "verloren",
+            "changes": "verloren"
+        }
+    ],
+    "tokens_used": 14508,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727735590,
+    "delta_time_s": 2.599518299102783
+}

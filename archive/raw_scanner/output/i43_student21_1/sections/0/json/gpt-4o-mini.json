@@ -1,0 +1,17 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 9,
+    "raw_text": "er is een deel te mrikelen van de linker kant als aan de rechter kant na de pyl",
+    "correctly_spelled_text": "er is een deel te merken van de linker kant als aan de rechter kant na de pyl",
+    "spelling_corrections": [
+        {
+            "original": "mrikelen",
+            "changes": "merken"
+        }
+    ],
+    "tokens_used": 14545,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728215591,
+    "delta_time_s": 4.135002374649048
+}

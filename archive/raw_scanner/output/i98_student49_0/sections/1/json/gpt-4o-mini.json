@@ -1,0 +1,25 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 3,
+    "raw_text": "door het zijn maken van de stof is het echt op een leuke van de panda's voorbloeien en de paulus modellen dat je van de panda's snellen\n\n3 door het vijntstempers van panda's de panda's worden het com de panda's en eigen stag binnen\n\nonderdeel je geen wonderen en meer moducalen ik dit met elkaar botsen\n\nander blaudje\nna 13",
+    "correctly_spelled_text": "door het zijn maken van de stof is het echt op een leuke manier van de panda's voorbloeien en de paulus modellen dat je van de panda's snellen\n\n3 door het vijntstempers van panda's de panda's worden het com de panda's en eigen stage binnen\n\nonderdeel je geen wonderen en meer moducalen ik dit met elkaar botsen\n\nander blaadje\nna 13",
+    "spelling_corrections": [
+        {
+            "original": "leuke van",
+            "changes": "leuke manier van"
+        },
+        {
+            "original": "stag",
+            "changes": "stage"
+        },
+        {
+            "original": "blaudje",
+            "changes": "blaadje"
+        }
+    ],
+    "tokens_used": 26043,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728216498,
+    "delta_time_s": 4.750571012496948
+}

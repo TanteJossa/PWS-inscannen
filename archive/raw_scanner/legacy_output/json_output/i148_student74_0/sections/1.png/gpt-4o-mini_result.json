@@ -1,0 +1,21 @@
+{
+    "google_quiestion_number": "1",
+    "question_number": 1,
+    "raw_text": "recirculatie\nvet\n<--\nextreeren\nalcohol\nopgelost vet\nfilteren\nopgelost vet\nstoffen pinda\nvar\n",
+    "correctly_spelled_text": "recirculatie\nvet\n<--\nextreeren\nalcohol\nopgelost vet\nfilteren\nopgelost vet\nstoffen pinda\nvar\n",
+    "spelling_corrections": [
+        {
+            "original": "recirculate",
+            "changes": "recirculatie"
+        },
+        {
+            "original": "stoffen pinda",
+            "changes": "stoffen pinda"
+        }
+    ],
+    "tokens_used": 14543,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727736131,
+    "delta_time_s": 3.937964677810669
+}

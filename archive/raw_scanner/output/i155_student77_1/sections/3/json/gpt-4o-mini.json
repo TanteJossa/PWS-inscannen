@@ -1,0 +1,17 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 9,
+    "raw_text": "Er is geen massa verloren omdat er voor de pijl evenveel protonen zijn als er de pijl en dus een blijft dat het massatotal het zelfde",
+    "correctly_spelled_text": "Er is geen massa verloren omdat er voor de pijl evenveel protonen zijn als er de pijl en dus blijft dat het massatotaal het zelfde",
+    "spelling_corrections": [
+        {
+            "original": "massatotal",
+            "changes": "massatotaal"
+        }
+    ],
+    "tokens_used": 14576,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728213326,
+    "delta_time_s": 2.7265686988830566
+}

@@ -1,0 +1,17 @@
+{
+    "google_quiestion_number": "7",
+    "question_number": 7,
+    "raw_text": "Ik heb SNEL een nieuwe gemaakt anders onoverzichtelijk",
+    "correctly_spelled_text": "Ik heb snel een nieuwe gemaakt anders onoverzichtelijk",
+    "spelling_corrections": [
+        {
+            "original": "SNEL",
+            "changes": "snel"
+        }
+    ],
+    "tokens_used": 14479,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727739351,
+    "delta_time_s": 2.618821144104004
+}

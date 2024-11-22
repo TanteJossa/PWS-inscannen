@@ -1,0 +1,17 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 1,
+    "raw_text": "90 er zijn 2 gassen in een open reactievat, das de gassen gaan in de lucht waardoor de moeilijk te meten zijn.",
+    "correctly_spelled_text": "90 er zijn 2 gassen in een open reactievat, dat de gassen gaan in de lucht waardoor de moeilijk te meten zijn.",
+    "spelling_corrections": [
+        {
+            "original": "das",
+            "changes": "dat"
+        }
+    ],
+    "tokens_used": 14561,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728214754,
+    "delta_time_s": 2.39300274848938
+}

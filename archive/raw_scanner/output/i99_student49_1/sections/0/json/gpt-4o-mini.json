@@ -1,0 +1,33 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 4,
+    "raw_text": "u omdat er even veel C, O, en H voor als achter de pijltj staan, dat dan de massa niet veranderd.  zijn das hun en ook geen maar zijn wel een de wet van massa behoud",
+    "correctly_spelled_text": "u omdat er evenveel C, O, en H voor als achter de pijltjes staan, dat dan de massa niet verandert. zijn dat hun en ook geen maar zijn wel een de wet van massa behoud",
+    "spelling_corrections": [
+        {
+            "original": "even veel",
+            "changes": "evenveel"
+        },
+        {
+            "original": "pijltj",
+            "changes": "pijltjes"
+        },
+        {
+            "original": "veranderd.",
+            "changes": "verandert."
+        },
+        {
+            "original": "das",
+            "changes": "dat"
+        },
+        {
+            "original": "zijn",
+            "changes": "zijn"
+        }
+    ],
+    "tokens_used": 14635,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728216502,
+    "delta_time_s": 4.156665563583374
+}

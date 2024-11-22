@@ -1,0 +1,17 @@
+{
+    "google_quiestion_number": "D",
+    "question_number": 1,
+    "raw_text": "De verbranding van zuiverendillende benzine is een exotherm proces, want",
+    "correctly_spelled_text": "De verbranding van zuiverendillende benzine is een exotherm proces, want",
+    "spelling_corrections": [
+        {
+            "original": "zuiverendillende",
+            "changes": "zuiverende"
+        }
+    ],
+    "tokens_used": 14495,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727737929,
+    "delta_time_s": 1.6914045810699463
+}

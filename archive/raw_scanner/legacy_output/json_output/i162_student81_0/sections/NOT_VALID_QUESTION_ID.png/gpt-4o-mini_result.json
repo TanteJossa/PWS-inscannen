@@ -1,0 +1,25 @@
+{
+    "google_quiestion_number": "NOT_VALID_QUESTION_ID",
+    "question_number": 13,
+    "raw_text": "Het optredende kristallisatieproces in de hand warmer is een exotherm proces omdat er energie (warmte) in dit geval vrijkomt.",
+    "correctly_spelled_text": "Het optredende kristallisatieproces in de hand warmer is een exotherm proces omdat er energie (warmte) in dit geval vrijkomt.",
+    "spelling_corrections": [
+        {
+            "original": "kristallisatieproces",
+            "changes": "kristallisatieproces"
+        },
+        {
+            "original": "exotherm",
+            "changes": "exotherm"
+        },
+        {
+            "original": "energie (warmte)",
+            "changes": "energie (warmte)"
+        }
+    ],
+    "tokens_used": 14550,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727736494,
+    "delta_time_s": 2.743375539779663
+}

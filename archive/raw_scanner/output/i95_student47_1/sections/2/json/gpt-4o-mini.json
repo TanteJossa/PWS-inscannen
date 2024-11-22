@@ -1,0 +1,25 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 8,
+    "raw_text": "De verklaring Op microniveau wordt de verdelingsgraad groter dus meer contactoppervlakte dus de kans dat er een aanvaring komen met zuurstofmoleculen is groter. Waardoor in het botsende deeltjes model ze meer botsen. Wat leidt tot een effectieve botsing hoe meer effectieve botsing per seconde, hoe sneller de reactie verloopt.",
+    "correctly_spelled_text": "De verklaring Op microniveau wordt de verdelingsgraad groter dus meer contactoppervlakte dus de kans dat er een aanvaring komt met zuurstofmoleculen is groter. Waardoor in het botsende deeltjesmodel ze meer botsen. Wat leidt tot een effectieve botsing hoe meer effectieve botsingen per seconde, hoe sneller de reactie verloopt.",
+    "spelling_corrections": [
+        {
+            "original": "aanvaring komen",
+            "changes": "aanvaring komt"
+        },
+        {
+            "original": "deeltjes model",
+            "changes": "deeltjesmodel"
+        },
+        {
+            "original": "effectieve botsing",
+            "changes": "effectieve botsingen"
+        }
+    ],
+    "tokens_used": 14679,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728216478,
+    "delta_time_s": 3.040306806564331
+}

@@ -1,0 +1,25 @@
+{
+    "google_quiestion_number": "pindas",
+    "question_number": 1,
+    "raw_text": "hele pinda's\nVermalen\n\ngemalen pinda's\n\nopgelost vet\nmet stukjes pinda\n\nstukjes pinda\n\nAlcohol\nopgelost vet\n\nvet",
+    "correctly_spelled_text": "hele pinda's\nVermalen\n\ngemalen pinda's\n\nopgelost vet\nmet stukjes pinda\n\nstukjes pinda\n\nAlcohol\nopgelost vet\n\nvet",
+    "spelling_corrections": [
+        {
+            "original": "gemalen pinda's",
+            "changes": "gemalen pinda's"
+        },
+        {
+            "original": "stukjes pinda",
+            "changes": "stukjes pinda"
+        },
+        {
+            "original": "Alcohol",
+            "changes": "Alcohol"
+        }
+    ],
+    "tokens_used": 14573,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727738322,
+    "delta_time_s": 4.005230903625488
+}

@@ -1,0 +1,33 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 3,
+    "raw_text": "de ketelister versuveld de water na sulleid je begint altijd mulderen veel als dat mee einduit van de ketelster\n\nde ketelister voor versmild de werkelijkheid door en je umblidt altijd niet een vest als dat je mee a begiad",
+    "correctly_spelled_text": "de ketelister verzorgt de water na sulleid je begint altijd mulderen veel als dat mee eindigt van de ketelster\n\nde ketelister voor vermaakt de werkelijkheid door en je omblijdt altijd niet een vest als dat je mee a begint",
+    "spelling_corrections": [
+        {
+            "original": "versuveld",
+            "changes": "verzorgt"
+        },
+        {
+            "original": "einduit",
+            "changes": "eindigt"
+        },
+        {
+            "original": "versmild",
+            "changes": "vermaakt"
+        },
+        {
+            "original": "umblidt",
+            "changes": "omblijdt"
+        },
+        {
+            "original": "begiad",
+            "changes": "begint"
+        }
+    ],
+    "tokens_used": 14667,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728215709,
+    "delta_time_s": 3.49973464012146
+}

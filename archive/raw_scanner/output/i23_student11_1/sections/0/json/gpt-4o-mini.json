@@ -1,0 +1,21 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 5,
+    "raw_text": "s Als het vak open is kunnen stoffen verdampen of juist er bij blijven. En als dat bijvoorbeeld pas aan het einde van de reactie gebeurd dan lijkt de reactie vergiftig, niet aan de inhoud van de pij. \n\n6. \"Dat dan is niet helemaal mass...\"",
+    "correctly_spelled_text": "Als het vak open is kunnen stoffen verdampen of juist er bij blijven. En als dat bijvoorbeeld pas aan het einde van de reactie gebeurt dan lijkt de reactie vergiftig, niet aan de inhoud van de pij. \n\n6. \"Dat dan is niet helemaal mass...\"",
+    "spelling_corrections": [
+        {
+            "original": "s",
+            "changes": "(verwijderd)"
+        },
+        {
+            "original": "gebeurd",
+            "changes": "gebeurt"
+        }
+    ],
+    "tokens_used": 14636,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728214930,
+    "delta_time_s": 2.788884162902832
+}

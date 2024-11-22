@@ -1,0 +1,21 @@
+{
+    "google_quiestion_number": "NOT_VALID_QUESTION_ID",
+    "question_number": 3,
+    "raw_text": "De indbox, van het systeem is het de mijne\nen grote opvanklijken en verschillende delen en microvissen\nveel verder uit elkaar dan in hoe het dit systeem de delen\nmeer gaan bosten.\n\n4\nIn microvissen zie je dat als er geen massa verschillen zijn\nzijn dezelfde elementen voor als je bij zijn.",
+    "correctly_spelled_text": "De inbox, van het systeem is het de mijne\nen grote opvallijken en verschillende delen en microvissen\nveel verder uit elkaar dan in hoe het dit systeem de delen\nmeer gaan bosten.\n\n4\nIn microvissen zie je dat als er geen massa verschillen zijn\nzijn dezelfde elementen voor als je bij zijn.",
+    "spelling_corrections": [
+        {
+            "original": "opvanklijken",
+            "changes": "opvallijken"
+        },
+        {
+            "original": "massa verschillen",
+            "changes": "massaverschillen"
+        }
+    ],
+    "tokens_used": 14612,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727736711,
+    "delta_time_s": 5.382577419281006
+}

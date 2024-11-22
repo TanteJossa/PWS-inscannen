@@ -1,0 +1,17 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 8,
+    "raw_text": "exotherm, omdat er bij het open en het klikken van de handwarmers allemaal energie vrijkomt! Doordat er energie vrijkomt worden de handwarmers warm.\n9 endotherm, het er kan alleen een verbranding optreden als er energie 16 wordt toegevoegd",
+    "correctly_spelled_text": "exotherm, omdat er bij het open en het klikken van de handwarmers allemaal energie vrijkomt! Doordat er energie vrijkomt worden de handwarmers warm.\n9 endotherm, het kan alleen een verbranding optreden als er energie 16 wordt toegevoegd",
+    "spelling_corrections": [
+        {
+            "original": "het er kan",
+            "changes": "het kan"
+        }
+    ],
+    "tokens_used": 14622,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728214169,
+    "delta_time_s": 4.511057615280151
+}

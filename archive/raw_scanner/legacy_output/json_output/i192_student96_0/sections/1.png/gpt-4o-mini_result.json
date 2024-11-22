@@ -1,0 +1,21 @@
+{
+    "google_quiestion_number": "1",
+    "question_number": 1,
+    "raw_text": "hele\nstijfges pinda's  \nvermelden  \n  \ngemalen pinda's  \n  \nopgelost  wel  \nexaheren  \n\nstijfges pinda  \n  \nfilteren  \n\nRecirculatie  \n  \nopgelost  wel met stijfges pinda  \n  \nvet  \n\n  \ndestilleren  \n\n2\ngedaan  ( Recirculatie  voor Pijl van  \nopgelost  wel met stijfges pinda  \n  \ngemalen pinda).",
+    "correctly_spelled_text": "hele\nstijfgeest pinda's  \nvermelden  \n  \ngemalen pinda's  \n  \nopgelost  wel  \nexaheren  \n\nstijfgeest pinda  \n  \nfilteren  \n\nRecirculatie  \n  \nopgelost  wel met stijfgeest pinda  \n  \nvet  \n\n  \ndestilleren  \n\n2\ngedaan  ( Recirculatie  voor Pijl van  \nopgelost  wel met stijfgeest pinda  \n  \ngemalen pinda).",
+    "spelling_corrections": [
+        {
+            "original": "stijfges",
+            "changes": "stijfgeest"
+        },
+        {
+            "original": "stijfges",
+            "changes": "stijfgeest"
+        }
+    ],
+    "tokens_used": 14760,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727737509,
+    "delta_time_s": 21.06487727165222
+}

@@ -1,0 +1,29 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 9,
+    "raw_text": "Dit is de wet van massa behoud, \nErgaten massa verliezen omdathde stoffen dieze \nvoor depilizer, ook na depilizer. Dit betekene dat \ngeen massa is verloren",
+    "correctly_spelled_text": "Dit is de wet van massa behoud. \nErgaten massa verliezen omdat de stoffen deze \nvoor depilizer, ook na depilizer. Dit betekent dat \ngeen massa is verloren.",
+    "spelling_corrections": [
+        {
+            "original": "behoud,",
+            "changes": "behoud."
+        },
+        {
+            "original": "omdathde",
+            "changes": "omdat de"
+        },
+        {
+            "original": "dieze",
+            "changes": "deze"
+        },
+        {
+            "original": "betekene",
+            "changes": "betekent"
+        }
+    ],
+    "tokens_used": 14630,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728212544,
+    "delta_time_s": 6.943038463592529
+}

@@ -1,0 +1,41 @@
+{
+    "google_quiestion_number": "3",
+    "question_number": 3,
+    "raw_text": "door de punda's ti saan fynstompe, werdel je z in meerdere stulben waardoor gcontactop. er meer contactoppervlakt is en de uitkomst van de punda waardoor meerdere deeltjes met elkaar kunnen reageren en de reactietijd toe neemt.",
+    "correctly_spelled_text": "door de punda's te gaan fynstompen, werd je z in meerdere stappen waardoor contact op. er meer contactoppervlakte is en de uitkomst van de punda waardoor meerdere deeltjes met elkaar kunnen reageren en de reactietijd toeneemt.",
+    "spelling_corrections": [
+        {
+            "original": "ti",
+            "changes": "te"
+        },
+        {
+            "original": "fynstompe",
+            "changes": "fynstompen"
+        },
+        {
+            "original": "stulben",
+            "changes": "stappen"
+        },
+        {
+            "original": "gcontactop.",
+            "changes": "contact op."
+        },
+        {
+            "original": "oppervlakt",
+            "changes": "oppervlakte"
+        },
+        {
+            "original": "deeltjes met elkaar",
+            "changes": "deeltjes met elkaar kunnen"
+        },
+        {
+            "original": "toe neemt",
+            "changes": "toeneemt."
+        }
+    ],
+    "tokens_used": 14641,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727739569,
+    "delta_time_s": 4.026071548461914
+}

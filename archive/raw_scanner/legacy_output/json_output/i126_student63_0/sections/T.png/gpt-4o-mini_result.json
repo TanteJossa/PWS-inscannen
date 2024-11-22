@@ -1,0 +1,17 @@
+{
+    "google_quiestion_number": "T",
+    "question_number": 1,
+    "raw_text": "1  chemische energie -> warmte energie\n\nO dit is een endotherm proces",
+    "correctly_spelled_text": "1  chemische energie -> warmte-energie\n\nO dit is een endotherm proces",
+    "spelling_corrections": [
+        {
+            "original": "warmte energie",
+            "changes": "warmte-energie"
+        }
+    ],
+    "tokens_used": 14496,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727735620,
+    "delta_time_s": 2.6985323429107666
+}

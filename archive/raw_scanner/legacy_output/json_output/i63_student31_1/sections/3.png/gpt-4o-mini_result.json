@@ -1,0 +1,17 @@
+{
+    "google_quiestion_number": "3",
+    "question_number": 3,
+    "raw_text": "de ratvasb\n\ndat als de snelheid lager is waardoor de reactie ook minder energie verbruikt.",
+    "correctly_spelled_text": "de ratvas\n\ndat als de snelheid lager is waardoor de reactie ook minder energie verbruikt.",
+    "spelling_corrections": [
+        {
+            "original": "ratvasb",
+            "changes": "ratvas"
+        }
+    ],
+    "tokens_used": 14500,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727740009,
+    "delta_time_s": 2.6208789348602295
+}

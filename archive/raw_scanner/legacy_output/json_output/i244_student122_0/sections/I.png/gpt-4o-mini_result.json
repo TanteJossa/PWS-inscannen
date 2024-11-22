@@ -1,0 +1,25 @@
+{
+    "google_quiestion_number": "I",
+    "question_number": 10,
+    "raw_text": "Doordat het in een open reactie wat wordt wi: ge: werd kan het kwijtraken in de lucht. De zuurstof deeltjes nemen het op. Daardoor zal aan het eind van de thermolyse deeltjes te minder massa zijn dan aan het begin",
+    "correctly_spelled_text": "Doordat het in een open reactie wat wordt uitgevoerd kan het kwijtraken in de lucht. De zuurstofdeeltjes nemen het op. Daardoor zal aan het eind van de thermolyse deeltjes minder massa zijn dan aan het begin",
+    "spelling_corrections": [
+        {
+            "original": "wi: ge: werd",
+            "changes": "uitgevoerd"
+        },
+        {
+            "original": "de zuurstof deeltjes",
+            "changes": "de zuurstofdeeltjes"
+        },
+        {
+            "original": "de thermolyse deeltjes te minder massa zijn",
+            "changes": "de thermolyse deeltjes minder massa zijn"
+        }
+    ],
+    "tokens_used": 14602,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727738807,
+    "delta_time_s": 4.206411838531494
+}

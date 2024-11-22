@@ -1,0 +1,33 @@
+{
+    "google_quiestion_number": "O2",
+    "question_number": 6,
+    "raw_text": "Die is een goedchem proces, ginder de aanie van chemisch.\nDie is een goedchem proces, andere de chemisch naar binnen gaat.",
+    "correctly_spelled_text": "Dit is een goed chemisch proces, waarbij de aanmaak van chemisch.\nDit is een goed chemisch proces, waarbij de chemisch naar binnen gaat.",
+    "spelling_corrections": [
+        {
+            "original": "goedchem",
+            "changes": "goed chemisch"
+        },
+        {
+            "original": "ginder",
+            "changes": "waarbij"
+        },
+        {
+            "original": "aanie",
+            "changes": "aanmaak"
+        },
+        {
+            "original": "andere",
+            "changes": "waarbij"
+        },
+        {
+            "original": "chemisch",
+            "changes": "chemisch"
+        }
+    ],
+    "tokens_used": 14560,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727737274,
+    "delta_time_s": 4.070989370346069
+}

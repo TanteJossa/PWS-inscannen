@@ -1,0 +1,21 @@
+{
+    "google_quiestion_number": "di",
+    "question_number": 7,
+    "raw_text": "7. Chemische energie -> warmte\n8. Exotherm proces, want er komt energie vrij uit de reactie C in de vorm van warmte.\n9. Exotherm, er komt veel energie uit de reactie vrij, daardoor het verwarming kan stijgen.\n10. 2 C7H5 + 5 O2 -> 14 CO2 + 6 H2O\n(4*2) + 6 + (2*2) = 38\n1902",
+    "correctly_spelled_text": "7. Chemische energie -> warmte\n8. Exotherm proces, want er komt energie vrij uit de reactie C in de vorm van warmte.\n9. Exotherm, er komt veel energie uit de reactie vrij, daardoor het verwarming kan stijgen.\n10. 2 C7H5 + 5 O2 -> 14 CO2 + 6 H2O\n(4*2) + 6 + (2*2) = 38\n1902",
+    "spelling_corrections": [
+        {
+            "original": "Exolterm",
+            "changes": "Exotherm"
+        },
+        {
+            "original": "het verwarming",
+            "changes": "de verwarming"
+        }
+    ],
+    "tokens_used": 14670,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727735858,
+    "delta_time_s": 4.190433740615845
+}

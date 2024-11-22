@@ -1,0 +1,49 @@
+{
+    "google_quiestion_number": "hel7.89110-IC.",
+    "question_number": 1,
+    "raw_text": "hele publiek\n\nVermelen\n\ngemiddeld\n\nversterken\n\nongelijk\n\nniet gelijk\n\nfilteren\n\nongelijk\n\nleiden\n\n5\n\nbezig\n\nlicht\n\nv t = ...",
+    "correctly_spelled_text": "hele publiek\n\nVermelen\n\ngemiddeld\n\nversterken\n\nongelijk\n\nniet gelijk\n\nfilteren\n\nongelijk\n\nleiden\n\n5\n\nbezig\n\nlicht\n\nv t = ...",
+    "spelling_corrections": [
+        {
+            "original": "gemiddeld",
+            "changes": "gemiddeld"
+        },
+        {
+            "original": "versterken",
+            "changes": "versterken"
+        },
+        {
+            "original": "ongelijk",
+            "changes": "ongelijk"
+        },
+        {
+            "original": "niet gelijk",
+            "changes": "niet gelijk"
+        },
+        {
+            "original": "filteren",
+            "changes": "filteren"
+        },
+        {
+            "original": "ongelijk",
+            "changes": "ongelijk"
+        },
+        {
+            "original": "leiden",
+            "changes": "leiden"
+        },
+        {
+            "original": "bezig",
+            "changes": "bezig"
+        },
+        {
+            "original": "licht",
+            "changes": "licht"
+        }
+    ],
+    "tokens_used": 14646,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727738201,
+    "delta_time_s": 3.802194595336914
+}

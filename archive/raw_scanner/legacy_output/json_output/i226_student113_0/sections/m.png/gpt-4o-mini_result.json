@@ -1,0 +1,29 @@
+{
+    "google_quiestion_number": "m",
+    "question_number": 4,
+    "raw_text": "Elk molecuul heeft een bepaalde massa, je ziet hierboven dat er geen moleculen verloren gaan, de massa van elk deeltje blijft dus bestaan dus de massa rechts en links van de uit is hetzelfde.",
+    "correctly_spelled_text": "Elk molecuul heeft een bepaalde massa, je ziet hierboven dat er geen moleculen verloren gaan, de massa van elk deeltje blijft dus bestaan dus de massa rechts en links van de uit is hetzelfde.",
+    "spelling_corrections": [
+        {
+            "original": "molecuul",
+            "changes": "molecuul"
+        },
+        {
+            "original": "moleculen",
+            "changes": "moleculen"
+        },
+        {
+            "original": "deeltje",
+            "changes": "deeltje"
+        },
+        {
+            "original": "uit",
+            "changes": "uit"
+        }
+    ],
+    "tokens_used": 14576,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727738371,
+    "delta_time_s": 2.579322576522827
+}

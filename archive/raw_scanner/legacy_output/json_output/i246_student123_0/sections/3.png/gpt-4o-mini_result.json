@@ -1,0 +1,25 @@
+{
+    "google_quiestion_number": "3",
+    "question_number": 3,
+    "raw_text": "De katalysator in de tekst wordt zo beschrijver dat het me doet denken dat het een limiet is. In een limiet kan je bijvoorbeeld de temperatuur verhogen wat als een katalysator zou werken. Als de temperatuur lager is, heb je de deeltjes met energie wat betekent dat ze harder en sneller gaan, dat ze tegen elkaar aan komen op een reactieverwekkende manier en dat wanneer dat gebeurd dat harder tegen elkaar aan komen, wat ook helpt.",
+    "correctly_spelled_text": "De katalysator in de tekst wordt zo beschreven dat het me doet denken dat het een limiet is. In een limiet kan je bijvoorbeeld de temperatuur verhogen wat als een katalysator zou werken. Als de temperatuur lager is, heb je de deeltjes met energie wat betekent dat ze harder en sneller gaan, dat ze tegen elkaar aan komen op een reactieverwekkende manier en dat wanneer dat gebeurt dat harder tegen elkaar aan komen, wat ook helpt.",
+    "spelling_corrections": [
+        {
+            "original": "beschrijver",
+            "changes": "beschreven"
+        },
+        {
+            "original": "de deeltjes",
+            "changes": "de deeltjes"
+        },
+        {
+            "original": "dat gebeurd",
+            "changes": "dat gebeurt"
+        }
+    ],
+    "tokens_used": 14663,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727738827,
+    "delta_time_s": 5.024439811706543
+}

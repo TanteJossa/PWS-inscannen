@@ -1,0 +1,21 @@
+{
+    "google_quiestion_number": "10",
+    "question_number": 1,
+    "raw_text": "er zijn 2 gassen in een open reactievat, dus de gassen gaan in de lucht waardoor de mogelijkheid te meten zijn.",
+    "correctly_spelled_text": "er zijn 2 gassen in een open reactievat, dus de gassen gaan in de lucht waardoor de mogelijkheid te meten zijn.",
+    "spelling_corrections": [
+        {
+            "original": "reactievat",
+            "changes": "reactievat"
+        },
+        {
+            "original": "mogelijk",
+            "changes": "mogelijk"
+        }
+    ],
+    "tokens_used": 14520,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727738336,
+    "delta_time_s": 3.0065524578094482
+}

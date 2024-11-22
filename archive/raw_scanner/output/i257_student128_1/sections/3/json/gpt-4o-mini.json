@@ -1,0 +1,21 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 8,
+    "raw_text": "exotherm, maakt en gebruikt eerst chemische energie gebruik om het proces te starten en daarna komt er warmte energie omdat het opwarmt.",
+    "correctly_spelled_text": "exotherm, maakt en gebruikt eerst chemische energie om het proces te starten en daarna komt er warmte-energie omdat het opwarmt.",
+    "spelling_corrections": [
+        {
+            "original": "gebruik",
+            "changes": "om"
+        },
+        {
+            "original": "warmte energie",
+            "changes": "warmte-energie"
+        }
+    ],
+    "tokens_used": 14574,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728215219,
+    "delta_time_s": 3.496922492980957
+}

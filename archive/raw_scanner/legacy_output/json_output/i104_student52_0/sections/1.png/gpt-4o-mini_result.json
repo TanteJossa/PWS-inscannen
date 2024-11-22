@@ -1,0 +1,21 @@
+{
+    "google_quiestion_number": "1",
+    "question_number": 1,
+    "raw_text": "Het verbranden is een ontbrandings proces. Dit kunt duidelijk er een energie met wachten toegeveegd om de benzine te verlinden. De temperatuur van de benzine moet boven de ontbrandingstemperatuur zijn (door energie toe te voegen) (wat waarom om de benzine te verlinden.",
+    "correctly_spelled_text": "Het verbranden is een ontbrandingsproces. Dit kunt duidelijk er een energie met wachten toegeveegd om de benzine te verlinden. De temperatuur van de benzine moet boven de ontbrandingstemperatuur zijn (door energie toe te voegen) (wat waarom om de benzine te verlinden.",
+    "spelling_corrections": [
+        {
+            "original": "ontbrandings proces",
+            "changes": "ontbrandingsproces"
+        },
+        {
+            "original": "ontbrandingstemperatuur",
+            "changes": "ontbrandingstemperatuur"
+        }
+    ],
+    "tokens_used": 14598,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727734944,
+    "delta_time_s": 4.564882040023804
+}

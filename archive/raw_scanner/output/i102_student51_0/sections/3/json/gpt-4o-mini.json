@@ -1,0 +1,21 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 1,
+    "raw_text": "dus geen massa verloren\nbl is er niet",
+    "correctly_spelled_text": "dus geen massa verloren\nbl is er niet",
+    "spelling_corrections": [
+        {
+            "original": "verloren",
+            "changes": "verloren"
+        },
+        {
+            "original": "er",
+            "changes": "er"
+        }
+    ],
+    "tokens_used": 14535,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728212305,
+    "delta_time_s": 2.9715445041656494
+}

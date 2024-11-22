@@ -1,0 +1,55 @@
+{
+  "analyzeResult": {
+    "modelVersion": "2022-04-30",
+    "readResults": [
+      {
+        "angle": 1.907,
+        "height": 845,
+        "lines": [
+          {
+            "appearance": {
+              "style": {
+                "confidence": 1,
+                "name": "handwriting"
+              }
+            },
+            "boundingBox": [
+              86,
+              57,
+              101,
+              57,
+              100,
+              78,
+              85,
+              77
+            ],
+            "text": "6",
+            "words": [
+              {
+                "boundingBox": [
+                  85,
+                  57,
+                  99,
+                  57,
+                  98,
+                  78,
+                  85,
+                  77
+                ],
+                "confidence": 0.987,
+                "text": "6"
+              }
+            ]
+          }
+        ],
+        "page": 1,
+        "unit": "pixel",
+        "width": 105
+      }
+    ],
+    "version": "3.2.0"
+  },
+  "createdDateTime": "2024-10-06T09:32:42Z",
+  "lastUpdatedDateTime": "2024-10-06T09:32:43Z",
+  "status": "succeeded"
+}

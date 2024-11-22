@@ -1,0 +1,41 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 3,
+    "raw_text": "3 Doordat de stulijes pinda nu'bel klein zijn kunnen ze heel snel beweg waardoor er meer hans is dat de deelt.jes elkaer ralen.",
+    "correctly_spelled_text": "3 Doordat de stuifjes pinda nu wel klein zijn kunnen ze heel snel bewegen waardoor er meer kans is dat de deeltjes elkaar raken.",
+    "spelling_corrections": [
+        {
+            "original": "stulijes",
+            "changes": "stuifjes"
+        },
+        {
+            "original": "nu'bel",
+            "changes": "nu wel"
+        },
+        {
+            "original": "beweg",
+            "changes": "bewegen"
+        },
+        {
+            "original": "hans",
+            "changes": "kans"
+        },
+        {
+            "original": "deelt.jes",
+            "changes": "deeltjes"
+        },
+        {
+            "original": "elkaer",
+            "changes": "elkaar"
+        },
+        {
+            "original": "ralen",
+            "changes": "raken"
+        }
+    ],
+    "tokens_used": 14639,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728214278,
+    "delta_time_s": 5.164428472518921
+}

@@ -1,0 +1,21 @@
+{
+    "google_quiestion_number": "23420521",
+    "question_number": 1,
+    "raw_text": "1.  dat kan je niet in een keer bij en dan begint de zaakje. je hoeft niet de hele tijd warm als er bij te houden.",
+    "correctly_spelled_text": "1.  dat kan je niet in \u00e9\u00e9n keer bij en dan begint de zaak. je hoeft niet de hele tijd warm als er bij te houden.",
+    "spelling_corrections": [
+        {
+            "original": "een keer",
+            "changes": "\u00e9\u00e9n keer"
+        },
+        {
+            "original": "de zaakje",
+            "changes": "de zaak"
+        }
+    ],
+    "tokens_used": 14527,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727737448,
+    "delta_time_s": 2.867577075958252
+}

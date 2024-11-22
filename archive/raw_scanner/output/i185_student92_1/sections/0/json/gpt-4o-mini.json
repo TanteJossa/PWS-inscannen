@@ -1,0 +1,17 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 5,
+    "raw_text": "Een deel van de massa wordt gas en als het in de lucht zijt, is het moeilijker aan te geven hoeveel het is.",
+    "correctly_spelled_text": "Een deel van de massa wordt gas en als het in de lucht zit, is het moeilijker aan te geven hoeveel het is.",
+    "spelling_corrections": [
+        {
+            "original": "zijt",
+            "changes": "zit"
+        }
+    ],
+    "tokens_used": 14557,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728213981,
+    "delta_time_s": 3.598845958709717
+}

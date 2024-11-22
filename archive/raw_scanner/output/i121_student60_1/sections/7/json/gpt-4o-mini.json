@@ -1,0 +1,17 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 12,
+    "raw_text": "12 elektrisch \u2192 chemisch.",
+    "correctly_spelled_text": "12 elektrisch \u2192 chemisch.",
+    "spelling_corrections": [
+        {
+            "original": "elektrisch",
+            "changes": "elektrisch"
+        }
+    ],
+    "tokens_used": 14520,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728212624,
+    "delta_time_s": 3.7176425457000732
+}

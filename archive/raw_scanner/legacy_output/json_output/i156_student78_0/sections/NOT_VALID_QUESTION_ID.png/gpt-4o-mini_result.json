@@ -1,0 +1,29 @@
+{
+    "google_quiestion_number": "NOT_VALID_QUESTION_ID",
+    "question_number": 3,
+    "raw_text": "De katalysator versneld de reactisnelheid.\n\n-28,16*10^5 J/mol = -2818000 J/mol\n\nVormalen\n\nEXTRACTEN\n\nJocieeren\n\nalcohol\n\nfilteren\n\n\n",
+    "correctly_spelled_text": "De katalysator versnelt de reactiesnelheid.\n\n-28,16*10^5 J/mol = -2818000 J/mol\n\nVormelen\n\nEXTRACTEN\n\nJoceren\n\nalcohol\n\nfilteren\n\n\n",
+    "spelling_corrections": [
+        {
+            "original": "versneld",
+            "changes": "versnelt"
+        },
+        {
+            "original": "reactisnelheid",
+            "changes": "reactiesnelheid"
+        },
+        {
+            "original": "Vormalen",
+            "changes": "Vormelen"
+        },
+        {
+            "original": "Jocieeren",
+            "changes": "Joceren"
+        }
+    ],
+    "tokens_used": 25946,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727736362,
+    "delta_time_s": 4.594547510147095
+}

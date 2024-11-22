@@ -1,0 +1,49 @@
+{
+    "google_quiestion_number": "3",
+    "question_number": 13,
+    "raw_text": "De teichiewonte van de batoyntilore is van glucos is de zworine turris de glucos resant. bij deze bereslte wonte tind er en rieht niets reorots glucos de lesgint is.",
+    "correctly_spelled_text": "De teichiewonte van de batoyntilore is van glucose is de zworine turris de glucose resant. Bij deze bereslte wonte tind er en rieht niets reorots glucose de lesgint is.",
+    "spelling_corrections": [
+        {
+            "original": "glucos",
+            "changes": "glucose"
+        },
+        {
+            "original": "zworine",
+            "changes": "zworine"
+        },
+        {
+            "original": "turris",
+            "changes": "turris"
+        },
+        {
+            "original": "bereslte",
+            "changes": "bereslte"
+        },
+        {
+            "original": "tind",
+            "changes": "tind"
+        },
+        {
+            "original": "rieht",
+            "changes": "rijkt"
+        },
+        {
+            "original": "niets",
+            "changes": "niets"
+        },
+        {
+            "original": "reorots",
+            "changes": "reorots"
+        },
+        {
+            "original": "lesgint",
+            "changes": "lesgint"
+        }
+    ],
+    "tokens_used": 14650,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727739541,
+    "delta_time_s": 5.09260368347168
+}

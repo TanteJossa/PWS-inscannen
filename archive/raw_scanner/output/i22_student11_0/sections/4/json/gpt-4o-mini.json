@@ -1,0 +1,21 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 3,
+    "raw_text": "op micro niveau zie je de materialen zitten. ligt de niet gemakken pinda's",
+    "correctly_spelled_text": "op microniveau zie je de materialen zitten. ligt de niet gemaakte pinda's",
+    "spelling_corrections": [
+        {
+            "original": "micro niveau",
+            "changes": "microniveau"
+        },
+        {
+            "original": "gemakken",
+            "changes": "gemaakte"
+        }
+    ],
+    "tokens_used": 14551,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728214824,
+    "delta_time_s": 1.8785789012908936
+}

@@ -1,0 +1,21 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 1,
+    "raw_text": "hele pinda's\nvermalen\nextraheren\noplossing uit het stijfjes pinda\nfilteren\nstijfjes pinda\ndestilleren\nvet\nalcohol",
+    "correctly_spelled_text": "hele pinda's\nvermalen\nextraheren\noplossing uit het stijfsel pinda\nfilteren\nstijfsel pinda\ndestilleren\nvet\nalcohol",
+    "spelling_corrections": [
+        {
+            "original": "stijfjes",
+            "changes": "stijfsel"
+        },
+        {
+            "original": "stijfjes",
+            "changes": "stijfsel"
+        }
+    ],
+    "tokens_used": 14604,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728215801,
+    "delta_time_s": 3.9053401947021484
+}

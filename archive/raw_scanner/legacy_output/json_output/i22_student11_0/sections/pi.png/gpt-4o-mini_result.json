@@ -1,0 +1,25 @@
+{
+    "google_quiestion_number": "pi",
+    "question_number": 27,
+    "raw_text": "helepijls\nverraden\nDe brandpijlen\nexctraheren\nfilteren\noplost niet\ndeeltijd\nalcohol\n\n3 op micro niveau, zie zo de modellen zettel.",
+    "correctly_spelled_text": "helepijls\nverraden\nDe brandpijlen\nextraheren\nfilteren\noplost niet\ndeeltijd\nalcohol\n\n3 op micro niveau, zie zo de modellen zettel.",
+    "spelling_corrections": [
+        {
+            "original": "exctraheren",
+            "changes": "extraheren"
+        },
+        {
+            "original": "deeltijd",
+            "changes": "deeltijd"
+        },
+        {
+            "original": "zettel",
+            "changes": "zettel"
+        }
+    ],
+    "tokens_used": 14575,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727738433,
+    "delta_time_s": 2.5778110027313232
+}

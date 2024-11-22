@@ -1,0 +1,17 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 1,
+    "raw_text": "hele pinda's\nvermalen\ngemalen pinda's\nfilteren\n\nvet\ndecilleren\n\nvet\nalcohol\n\nstudies pinda\nextractie",
+    "correctly_spelled_text": "hele pinda's\nvermalen\ngemalen pinda's\nfilteren\n\nvet\ndestilleren\n\nvet\nalcohol\n\nstudies pinda\nextractie",
+    "spelling_corrections": [
+        {
+            "original": "decilleren",
+            "changes": "destilleren"
+        }
+    ],
+    "tokens_used": 14589,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728214271,
+    "delta_time_s": 6.516886949539185
+}

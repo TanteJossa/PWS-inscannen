@@ -1,0 +1,21 @@
+{
+    "google_quiestion_number": "8",
+    "question_number": 8,
+    "raw_text": "door het maken van de junbaar krijg je een grote verdeling, maar dat zorgt ervoor dat op meer niveaus er een groter oog is op op de botron dat zo versnelld de reactietijd",
+    "correctly_spelled_text": "door het maken van de junbare krijg je een grote verdeling, maar dat zorgt ervoor dat op meer niveaus er een groter oog is op de botron dat zo versnelld de reactietijd",
+    "spelling_corrections": [
+        {
+            "original": "junbaar",
+            "changes": "junbare"
+        },
+        {
+            "original": "versnelld",
+            "changes": "versneld"
+        }
+    ],
+    "tokens_used": 14553,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727739791,
+    "delta_time_s": 3.0981006622314453
+}

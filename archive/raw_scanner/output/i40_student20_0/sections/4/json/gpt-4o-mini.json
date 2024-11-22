@@ -1,0 +1,57 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 13,
+    "raw_text": "de teichiewonte van de batoyntire is van glucos is de tweede vorm de glucos resend bij deze besaule wronte tind er en rieht niet reordt glucos de leginilt is.",
+    "correctly_spelled_text": "de teichiewonte van de batoontire is van glucose is de tweede vorm van glucose resente bij deze besaule wronte tijd er en richt niet reordt glucose de leginilt is.",
+    "spelling_corrections": [
+        {
+            "original": "teichiewonte",
+            "changes": "teichiewonte -> teichiewonte"
+        },
+        {
+            "original": "batoyntire",
+            "changes": "batoyntire -> batoontire"
+        },
+        {
+            "original": "glucos",
+            "changes": "glucos -> glucose"
+        },
+        {
+            "original": "de tweede vorm de glucos",
+            "changes": "de tweede vorm de glucos -> de tweede vorm van glucose"
+        },
+        {
+            "original": "resend",
+            "changes": "resend -> resente"
+        },
+        {
+            "original": "besaule",
+            "changes": "besaule -> besaule"
+        },
+        {
+            "original": "wronte",
+            "changes": "wronte -> wronte"
+        },
+        {
+            "original": "tind",
+            "changes": "tind -> tijd"
+        },
+        {
+            "original": "rieht",
+            "changes": "rieht -> richt"
+        },
+        {
+            "original": "reordt",
+            "changes": "reordt -> reordt"
+        },
+        {
+            "original": "leginilt",
+            "changes": "leginilt -> leginilt"
+        }
+    ],
+    "tokens_used": 14759,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728215574,
+    "delta_time_s": 4.830573797225952
+}

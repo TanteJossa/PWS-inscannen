@@ -1,0 +1,25 @@
+{
+    "google_quiestion_number": "A",
+    "question_number": 1,
+    "raw_text": "de teatre uitgangs met de zaan dat de is\n\"tele\"  \"zomer\"  \"tegoe\"  \"5. Dus dan is er niet equeal mass...",
+    "correctly_spelled_text": "de theateruitgang met de zaan dat de is\n\"tele\"  \"zomer\"  \"toegevoegd\"  \"5. Dus dan is er niet gelijk mass...",
+    "spelling_corrections": [
+        {
+            "original": "teatre",
+            "changes": "theater"
+        },
+        {
+            "original": "tegoe",
+            "changes": "toegevoegd"
+        },
+        {
+            "original": "equeal",
+            "changes": "gelijk"
+        }
+    ],
+    "tokens_used": 14556,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727738690,
+    "delta_time_s": 5.041478395462036
+}

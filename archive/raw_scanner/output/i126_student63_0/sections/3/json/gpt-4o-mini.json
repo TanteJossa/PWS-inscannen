@@ -1,0 +1,21 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 5,
+    "raw_text": "Dit zal loslijs zijn aantel een deel van de massa in de lucht opzijst\n6 6s8g - 13 b - 5s = 47 b koper(II) oxide",
+    "correctly_spelled_text": "Dit zal loslijs zijn aantal een deel van de massa in de lucht opzijst\n6 6s8g - 13 b - 5s = 47 b koper(II) oxide",
+    "spelling_corrections": [
+        {
+            "original": "loslijs",
+            "changes": "loslijs -> loslijs"
+        },
+        {
+            "original": "aantel",
+            "changes": "aantel -> aantal"
+        }
+    ],
+    "tokens_used": 14610,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728212739,
+    "delta_time_s": 2.788994550704956
+}

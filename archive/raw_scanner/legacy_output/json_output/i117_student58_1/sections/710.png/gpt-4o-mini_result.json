@@ -1,0 +1,33 @@
+{
+    "google_quiestion_number": "710",
+    "question_number": 6,
+    "raw_text": "hele pinte\n\nveranderen\n\nalcohol\n\nafvalstoffen\n\nuitwisseling\n\nfiltreren\n\nvet\n\nin blok schema\n\n2. Vari\u00ebren aan de hand van een globaal\ngeheel, of aansteken is dus dan kan er meer van uit gaan\nals je beide pinte zijn gelijken, omdat je gewoon bij meer kan\n\n3. Vari\u00ebren in producten en recepten waardoor de schakelingspijpen\nzijn ontstaan. Het is dus niet zo dat je altijd hetzelfde\nkunt zien, dat is geen massa, want dat gaat ook niet en\nhetzelfde aantal van elk echt is. Bijvoorbeeld links zijn er mogelijk\n5 O'tjes en rechts 6.",
+    "correctly_spelled_text": "hele pinten\n\nveranderen\n\nalcohol\n\nafvalstoffen\n\nuitwisseling\n\nfiltreren\n\nvet\n\nin blok schema\n\n2. Vari\u00ebren aan de hand van een globaal\ngeheel, of aansteken is dus dan kan er meer van uitgaan\nals je beide punten zijn gelijken, omdat je gewoon bij meer kan\n\n3. Vari\u00ebren in producten en recepten waardoor de schakelpijpen\nzijn ontstaan. Het is dus niet zo dat je altijd hetzelfde\nkunt zien, dat is geen massa, want dat gaat ook niet en\nhetzelfde aantal van elk echt is. Bijvoorbeeld links zijn er mogelijk\n5 O'tjes en rechts 6.",
+    "spelling_corrections": [
+        {
+            "original": "hele pinte",
+            "changes": "hele pinten"
+        },
+        {
+            "original": "uitwisseling",
+            "changes": "uitwisseling"
+        },
+        {
+            "original": "pinte",
+            "changes": "punten"
+        },
+        {
+            "original": "schakelingspijpen",
+            "changes": "schakelpijpen"
+        },
+        {
+            "original": "uit gaan",
+            "changes": "uitgaan"
+        }
+    ],
+    "tokens_used": 26133,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727735396,
+    "delta_time_s": 6.924903392791748
+}

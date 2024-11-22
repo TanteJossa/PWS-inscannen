@@ -1,0 +1,17 @@
+{
+    "google_quiestion_number": "10",
+    "question_number": 11,
+    "raw_text": "De katalysator zorgt ervoor dat een reactie minder actief... energie nodig heeft, waardoor de reactie sneller kan verlopen.",
+    "correctly_spelled_text": "De katalysator zorgt ervoor dat een reactie minder actief... energie nodig heeft, waardoor de reactie sneller kan verlopen.",
+    "spelling_corrections": [
+        {
+            "original": "actief...",
+            "changes": "actief..."
+        }
+    ],
+    "tokens_used": 14502,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727737645,
+    "delta_time_s": 3.4605705738067627
+}

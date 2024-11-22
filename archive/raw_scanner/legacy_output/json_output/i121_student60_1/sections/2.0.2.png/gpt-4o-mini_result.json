@@ -1,0 +1,25 @@
+{
+    "google_quiestion_number": "2.0.2",
+    "question_number": 8,
+    "raw_text": "8  Verdunningsgraad\n9  Cu2CO5H12(s) \u21cc 2 CuO(s) + CO2(g) + H2O(g)\nevenveel deeltjes voor als na de pgl",
+    "correctly_spelled_text": "8  Verdunningsgraad\n9  Cu2CO5H12(s) \u21cc 2 CuO(s) + CO2(g) + H2O(g)\nevenveel deeltjes voor als na de pgl",
+    "spelling_corrections": [
+        {
+            "original": "Verdunningsgraad",
+            "changes": ""
+        },
+        {
+            "original": "Cu2CO5H12(s) \u21cc 2 CuO(s) + CO2(g) + H2O(g)",
+            "changes": ""
+        },
+        {
+            "original": "evenveel deeltjes voor als na de pgl",
+            "changes": ""
+        }
+    ],
+    "tokens_used": 14605,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727735497,
+    "delta_time_s": 4.2162511348724365
+}

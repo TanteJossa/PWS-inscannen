@@ -1,0 +1,17 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 4,
+    "raw_text": "Eten\n\ngerecyleerde reststof\n\nbeginstof\n\nE<sub>in</sub>product\n\nafvalreactie",
+    "correctly_spelled_text": "Eten\n\ngerecycleerde reststof\n\nbeginstof\n\nE<sub>in</sub>product\n\nafvalreactie",
+    "spelling_corrections": [
+        {
+            "original": "gerecyleerde",
+            "changes": "gerecycleerde"
+        }
+    ],
+    "tokens_used": 14573,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728214965,
+    "delta_time_s": 2.6259710788726807
+}

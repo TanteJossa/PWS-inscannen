@@ -1,0 +1,21 @@
+{
+    "google_quiestion_number": ".3",
+    "question_number": 4,
+    "raw_text": "de katalysator woegt een stof toe daardoor wordt het een andere stof en heeft het dus ook een andere reactietijd.\n\nspecifieke warmte\n\nhele pinda's\n\nvermijden\n\nalcohol\n\ngemalen pinda's\n\noplossen in het stysopijn\n\nstudies pinda's\n\nalcohol\n\nvet",
+    "correctly_spelled_text": "de katalysator voegt een stof toe daardoor wordt het een andere stof en heeft het dus ook een andere reactietijd.\n\nspecifieke warmte\n\nhele pinda's\n\nvermijden\n\nalcohol\n\ngemalen pinda's\n\noplossen in het styropor\n\nstudies pinda's\n\nalcohol\n\nvet",
+    "spelling_corrections": [
+        {
+            "original": "woegt",
+            "changes": "voegt"
+        },
+        {
+            "original": "stysopijn",
+            "changes": "styropor"
+        }
+    ],
+    "tokens_used": 25958,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727736012,
+    "delta_time_s": 35.68886756896973
+}

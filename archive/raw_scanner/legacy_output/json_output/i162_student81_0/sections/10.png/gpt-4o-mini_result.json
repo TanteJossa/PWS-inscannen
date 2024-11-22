@@ -1,0 +1,17 @@
+{
+    "google_quiestion_number": "10",
+    "question_number": 10,
+    "raw_text": "Ondanks het wat open is en er dus dat je de warmte niet kan zien meer lucht in de lucht zit\n\n2 CuO (s) + O2 (g) -> H2O (g)\nkoper(II)oxide\n\n65 - 13 - S = 67 gram\nDas Das is er 67 gram koper(II)oxide ontstaan\nchemisch reacti",
+    "correctly_spelled_text": "Ondanks het wat open is en er dus dat je de warmte niet kan zien, meer lucht in de lucht zit\n\n2 CuO (s) + O2 (g) -> H2O (g)\nkoper(II)oxide\n\n65 - 13 - S = 67 gram\nDat is er 67 gram koper(II)oxide ontstaan\nchemisch reacti",
+    "spelling_corrections": [
+        {
+            "original": "Das Das",
+            "changes": "Dat"
+        }
+    ],
+    "tokens_used": 14615,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727736445,
+    "delta_time_s": 4.755769491195679
+}

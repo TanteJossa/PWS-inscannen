@@ -1,0 +1,41 @@
+{
+    "google_quiestion_number": "8",
+    "question_number": 8,
+    "raw_text": "door het maken van zeprmas boot word op microvlee het contactoppervlakte groter. Hierdoor vinden botsingen sneller plaats en verloopt de reactie sneller. Dit proces staat een Deze versnellings techniek voor bewijzen door het is een de hand van het botsende deeltjesmodel.",
+    "correctly_spelled_text": "door het maken van zeprmas boot wordt op microvlee het contactoppervlak groter. Hierdoor vinden botsingen sneller plaats en verloopt de reactie sneller. Dit proces staat voor een Deze versnellings techniek voor bewijzen door het is een de hand van het botsende deeltjesmodel.",
+    "spelling_corrections": [
+        {
+            "original": "zeprmas",
+            "changes": "zeprmas -> zeprmas"
+        },
+        {
+            "original": "word",
+            "changes": "word -> wordt"
+        },
+        {
+            "original": "contactoppervlakte",
+            "changes": "contactoppervlakte -> contactoppervlak"
+        },
+        {
+            "original": "sneller",
+            "changes": "sneller -> sneller"
+        },
+        {
+            "original": "staat een",
+            "changes": "staat een -> staat voor een"
+        },
+        {
+            "original": "deze",
+            "changes": "Deze -> deze"
+        },
+        {
+            "original": "de hand van het botsende deeltjesmodel",
+            "changes": "de hand van het botsende deeltjesmodel -> de hand van het botsende deeltjesmodel"
+        }
+    ],
+    "tokens_used": 14677,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727739698,
+    "delta_time_s": 3.9503908157348633
+}

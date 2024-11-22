@@ -1,0 +1,25 @@
+{
+    "google_quiestion_number": "13",
+    "question_number": 13,
+    "raw_text": "Een exotherm proces, uit chemische energie wordt een andere soort energie gemaakt",
+    "correctly_spelled_text": "Een exotherm proces, uit chemische energie wordt een andere soort energie gemaakt",
+    "spelling_corrections": [
+        {
+            "original": "exotherm",
+            "changes": "exotherm"
+        },
+        {
+            "original": "energie wordt",
+            "changes": "energie wordt"
+        },
+        {
+            "original": "soort energie",
+            "changes": "soort energie"
+        }
+    ],
+    "tokens_used": 25846,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727739368,
+    "delta_time_s": 5.789796590805054
+}

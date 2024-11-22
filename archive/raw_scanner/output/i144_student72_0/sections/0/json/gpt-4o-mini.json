@@ -1,0 +1,25 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 1,
+    "raw_text": "1. exotherm is dat wanneer een bepaalde reactie plaatsvindt. dan komt er energie vrij en daardoor loopt de motor",
+    "correctly_spelled_text": "1. Exotherm is dat wanneer een bepaalde reactie plaatsvindt. Dan komt er energie vrij en daardoor loopt de motor.",
+    "spelling_corrections": [
+        {
+            "original": "exotherm",
+            "changes": "Exotherm"
+        },
+        {
+            "original": "een bepaalde reactie plaatsvindt.",
+            "changes": "een bepaalde reactie plaatsvindt."
+        },
+        {
+            "original": "dan komt er energie vrij en daardoor loopt de motor",
+            "changes": "Dan komt er energie vrij en daardoor loopt de motor."
+        }
+    ],
+    "tokens_used": 14605,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728213102,
+    "delta_time_s": 4.048666954040527
+}

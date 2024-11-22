@@ -1,0 +1,17 @@
+{
+    "google_quiestion_number": "hi",
+    "question_number": 1,
+    "raw_text": "hiveaizen, dat omdat de pinden gemalen zijn, zijn er meer deeltjes die tegen elkaar kunnen botsen en is de reactie des sneller.",
+    "correctly_spelled_text": "hiervoor, dat omdat de pinden gemalen zijn, zijn er meer deeltjes die tegen elkaar kunnen botsen en is de reactie des sneller.",
+    "spelling_corrections": [
+        {
+            "original": "hiveaizen",
+            "changes": "hiervoor"
+        }
+    ],
+    "tokens_used": 14518,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727740095,
+    "delta_time_s": 2.3979227542877197
+}

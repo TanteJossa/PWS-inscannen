@@ -1,0 +1,37 @@
+{
+    "google_quiestion_number": "5",
+    "question_number": 5,
+    "raw_text": "In de reactieve(gelijk)ing zitten twee gassen en gassen gaan de lucht in. Hierdoor kan het moeilijk zijn op om de massa aan de rechter kant van de (p) te vinden en is de vet van belang van massa moeilijker de zien",
+    "correctly_spelled_text": "In de reactieve gelijking zitten twee gassen en gassen gaan de lucht in. Hierdoor kan het moeilijk zijn om de massa aan de rechterkant van de p te vinden en is de wet van belang van massa moeilijker te zien",
+    "spelling_corrections": [
+        {
+            "original": "reactieve(gelijk)ing",
+            "changes": "reactieve gelijking"
+        },
+        {
+            "original": "op om",
+            "changes": "om"
+        },
+        {
+            "original": "de rechter kant",
+            "changes": "de rechterkant"
+        },
+        {
+            "original": "(p)",
+            "changes": "p"
+        },
+        {
+            "original": "de vet",
+            "changes": "de wet"
+        },
+        {
+            "original": "moeilijker de zien",
+            "changes": "moeilijker te zien"
+        }
+    ],
+    "tokens_used": 14620,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727738578,
+    "delta_time_s": 3.9311459064483643
+}

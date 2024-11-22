@@ -1,0 +1,21 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 9,
+    "raw_text": "Ondaf en eveel atomen van Cu, Cl, H en de pyp1 2j/n.",
+    "correctly_spelled_text": "Ondaat en evenveel atomen van Cu, Cl, H en de pyp1 2j/n.",
+    "spelling_corrections": [
+        {
+            "original": "Ondaf",
+            "changes": "Ondaat"
+        },
+        {
+            "original": "eveel",
+            "changes": "evenveel"
+        }
+    ],
+    "tokens_used": 14561,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728214408,
+    "delta_time_s": 5.003404140472412
+}

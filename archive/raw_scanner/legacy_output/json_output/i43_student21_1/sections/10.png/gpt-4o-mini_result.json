@@ -1,0 +1,17 @@
+{
+    "google_quiestion_number": "10",
+    "question_number": 10,
+    "raw_text": "C9H16S + 11 O2 -> 7 CO2 + 8 H2O + S O2",
+    "correctly_spelled_text": "C9H16S + 11 O2 -> 7 CO2 + 8 H2O + SO2",
+    "spelling_corrections": [
+        {
+            "original": "S O2",
+            "changes": "SO2"
+        }
+    ],
+    "tokens_used": 14506,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727739580,
+    "delta_time_s": 2.326890468597412
+}

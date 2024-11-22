@@ -1,0 +1,69 @@
+{
+  "analyzeResult": {
+    "modelVersion": "2022-04-30",
+    "readResults": [
+      {
+        "angle": -2.7997,
+        "height": 845,
+        "lines": [
+          {
+            "appearance": {
+              "style": {
+                "confidence": 0.982,
+                "name": "handwriting"
+              }
+            },
+            "boundingBox": [
+              10,
+              244,
+              81,
+              241,
+              82,
+              252,
+              10,
+              256
+            ],
+            "text": "gevolg van",
+            "words": [
+              {
+                "boundingBox": [
+                  12,
+                  245,
+                  50,
+                  243,
+                  50,
+                  254,
+                  12,
+                  257
+                ],
+                "confidence": 0.6,
+                "text": "gevolg"
+              },
+              {
+                "boundingBox": [
+                  61,
+                  242,
+                  79,
+                  242,
+                  79,
+                  252,
+                  61,
+                  254
+                ],
+                "confidence": 0.522,
+                "text": "van"
+              }
+            ]
+          }
+        ],
+        "page": 1,
+        "unit": "pixel",
+        "width": 105
+      }
+    ],
+    "version": "3.2.0"
+  },
+  "createdDateTime": "2024-10-06T09:29:38Z",
+  "lastUpdatedDateTime": "2024-10-06T09:29:38Z",
+  "status": "succeeded"
+}

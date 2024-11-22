@@ -1,0 +1,21 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 6,
+    "raw_text": "hele pinda's\nVermolen\nalcohol\ngegeten pinda's\nopgelost met stysop\nvet\n",
+    "correctly_spelled_text": "hele pinda's\nVermalen\nalcohol\ngegeten pinda's\nopgelost met styropor\nvet\n",
+    "spelling_corrections": [
+        {
+            "original": "Vermolen",
+            "changes": "Vermalen"
+        },
+        {
+            "original": "stysop",
+            "changes": "styropor"
+        }
+    ],
+    "tokens_used": 14577,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728213152,
+    "delta_time_s": 3.9071452617645264
+}

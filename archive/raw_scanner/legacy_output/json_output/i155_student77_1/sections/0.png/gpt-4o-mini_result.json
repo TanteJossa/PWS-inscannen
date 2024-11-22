@@ -1,0 +1,17 @@
+{
+    "google_quiestion_number": "0",
+    "question_number": 1,
+    "raw_text": "dus geen wittte uit maar die blijft erin",
+    "correctly_spelled_text": "dus geen witte uit maar die blijft erin",
+    "spelling_corrections": [
+        {
+            "original": "wittte",
+            "changes": "witte"
+        }
+    ],
+    "tokens_used": 14475,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727736262,
+    "delta_time_s": 2.090003252029419
+}

@@ -1,0 +1,37 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 1,
+    "raw_text": "Exochem proces, want de als de benine \nwordt verbrand, ontstaat er \nbegingsverandering. \nwaarneer wat de temperatuur van de omgeving laat stijgen.",
+    "correctly_spelled_text": "Exotherm proces, want als de benzine \nwordt verbrand, ontstaat er \nbegingsverandering. \nwaarneer de temperatuur van de omgeving laat stijgen.",
+    "spelling_corrections": [
+        {
+            "original": "Exochem",
+            "changes": "Exotherm"
+        },
+        {
+            "original": "benine",
+            "changes": "benzine"
+        },
+        {
+            "original": "de als de",
+            "changes": "als de"
+        },
+        {
+            "original": "verbrand, ontstaat er",
+            "changes": "verbrand, ontstaat er"
+        },
+        {
+            "original": "begingsverandering",
+            "changes": "verandering"
+        },
+        {
+            "original": "wat de",
+            "changes": "de"
+        }
+    ],
+    "tokens_used": 14645,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728214954,
+    "delta_time_s": 2.8030552864074707
+}

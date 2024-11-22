@@ -1,0 +1,17 @@
+{
+    "google_quiestion_number": "wi2.Qnerg0",
+    "question_number": 12,
+    "raw_text": "Y-as\nactivatie-energie\nactivatie-energie\n\u0394E<0\nenergie\nbeginsenergie\nreactie\nwarmte\nEindsenergie\nX-as\nTijd (sec)",
+    "correctly_spelled_text": "Y-as\nactivatie-energie\nactivatie-energie\n\u0394E<0\nenergie\nbeginsenergie\nreactie\nwarmte\nEindenergie\nX-as\nTijd (sec)",
+    "spelling_corrections": [
+        {
+            "original": "Eindsenergie",
+            "changes": "Eindenergie"
+        }
+    ],
+    "tokens_used": 14544,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727735879,
+    "delta_time_s": 3.6772830486297607
+}

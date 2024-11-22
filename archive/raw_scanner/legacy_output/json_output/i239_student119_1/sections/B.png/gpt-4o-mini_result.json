@@ -1,0 +1,37 @@
+{
+    "google_quiestion_number": "B",
+    "question_number": 8,
+    "raw_text": "8 als je de pindas fyn gaat stampen worden de stoffen fyner verdeeld en krijg je dus hogere verzadingsgraad.\nEn dus ook een hoge contactoppervlakte, waardoor er meer botsingen ontstaan.\nDie botsingen worden effectiever en de reactiesnelheid wordt verhoogd.",
+    "correctly_spelled_text": "8 als je de pinda's fijn gaat stampen worden de stoffen fijner verdeeld en krijg je dus hogere verzadingsgraad.\nEn dus ook een hoge contactoppervlakte, waardoor er meer botsingen ontstaan.\nDie botsingen worden effectiever en de reactiesnelheid wordt verhoogd.",
+    "spelling_corrections": [
+        {
+            "original": "pindas",
+            "changes": "pinda's"
+        },
+        {
+            "original": "fyn",
+            "changes": "fijn"
+        },
+        {
+            "original": "fyner",
+            "changes": "fijner"
+        },
+        {
+            "original": "verzadinggraad",
+            "changes": "verzadingsgraad"
+        },
+        {
+            "original": "botsingen",
+            "changes": "botsingen"
+        },
+        {
+            "original": "verhooga",
+            "changes": "verhoogd"
+        }
+    ],
+    "tokens_used": 14639,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727738677,
+    "delta_time_s": 4.117907524108887
+}

@@ -1,0 +1,29 @@
+{
+    "google_quiestion_number": "3",
+    "question_number": 3,
+    "raw_text": "Joost en dan schudden de eiten meyer met pinda en alcohol op micontreeu binen de deeltjes volgens het basenk deeltjesmodel en het vet lost sneller op in de alcohol, omdat de verdelheid hoger is.",
+    "correctly_spelled_text": "Joost en dan schudden de eitjes meyer met pinda en alcohol op microcure binnen de deeltjes volgens het basis deeltjesmodel en het vet lost sneller op in de alcohol, omdat de verdeling hoger is.",
+    "spelling_corrections": [
+        {
+            "original": "eiten",
+            "changes": "eitjes"
+        },
+        {
+            "original": "micontreeu",
+            "changes": "microcure"
+        },
+        {
+            "original": "basenk",
+            "changes": "basis"
+        },
+        {
+            "original": "verdelheid",
+            "changes": "verdeling"
+        }
+    ],
+    "tokens_used": 14587,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727737283,
+    "delta_time_s": 3.794912338256836
+}

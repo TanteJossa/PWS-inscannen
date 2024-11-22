@@ -1,0 +1,25 @@
+{
+    "google_quiestion_number": "8",
+    "question_number": 8,
+    "raw_text": "Het is een endotherm proces want er moet energie worden toegevoerd (minuten) zodat het weer warmer kan worden",
+    "correctly_spelled_text": "Het is een endotherm proces want er moet energie worden toegevoerd (minuten) zodat het weer warmer kan worden",
+    "spelling_corrections": [
+        {
+            "original": "endotherm",
+            "changes": "endotherm"
+        },
+        {
+            "original": "toegevoerd",
+            "changes": "toegevoerd"
+        },
+        {
+            "original": "kan",
+            "changes": "kan"
+        }
+    ],
+    "tokens_used": 14526,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727729915,
+    "delta_time_s": 2.671264886856079
+}

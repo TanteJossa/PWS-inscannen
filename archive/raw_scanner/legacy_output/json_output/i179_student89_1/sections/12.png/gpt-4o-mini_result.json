@@ -1,0 +1,21 @@
+{
+    "google_quiestion_number": "12",
+    "question_number": 12,
+    "raw_text": "chemische energie \u2192 mazinte en fothorn\n",
+    "correctly_spelled_text": "chemische energie \u2192 magneten en foton\n",
+    "spelling_corrections": [
+        {
+            "original": "mazinte",
+            "changes": "magneten"
+        },
+        {
+            "original": "fothorn",
+            "changes": "foton"
+        }
+    ],
+    "tokens_used": 14489,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727737178,
+    "delta_time_s": 2.9554293155670166
+}

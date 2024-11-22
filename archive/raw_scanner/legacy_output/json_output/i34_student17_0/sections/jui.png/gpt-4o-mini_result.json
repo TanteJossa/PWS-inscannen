@@ -1,0 +1,25 @@
+{
+    "google_quiestion_number": "jui",
+    "question_number": 1,
+    "raw_text": "letjun's\nreverwoord\nquartern\nuitjes\nextran\nregard het niet\nziet\nverder\nbeslissing\nneut",
+    "correctly_spelled_text": "letjun's\nherverwoord\nquartern\nuitjes\nextra\nregard het niet\nziet\nverder\nbeslissing\nneut",
+    "spelling_corrections": [
+        {
+            "original": "reverwoord",
+            "changes": "herverwoord"
+        },
+        {
+            "original": "extran",
+            "changes": "extra"
+        },
+        {
+            "original": "beslissing",
+            "changes": "beslissing"
+        }
+    ],
+    "tokens_used": 14548,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727739429,
+    "delta_time_s": 3.1057636737823486
+}

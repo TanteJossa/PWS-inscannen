@@ -1,0 +1,25 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 1,
+    "raw_text": "den er is 17 gram Kopij-(II)oxide ontereom",
+    "correctly_spelled_text": "de er is 17 gram Koper(II)oxide aanwezig",
+    "spelling_corrections": [
+        {
+            "original": "den",
+            "changes": "de"
+        },
+        {
+            "original": "Kopij",
+            "changes": "Koper"
+        },
+        {
+            "original": "ontereom",
+            "changes": "aanwezig"
+        }
+    ],
+    "tokens_used": 14556,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728213234,
+    "delta_time_s": 2.83890700340271
+}

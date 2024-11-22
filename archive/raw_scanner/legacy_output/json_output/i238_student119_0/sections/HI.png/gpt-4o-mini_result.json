@@ -1,0 +1,29 @@
+{
+    "google_quiestion_number": "HI",
+    "question_number": 1,
+    "raw_text": "Het is een exotherm proces omdat er energie vrijkomt. De chemische energie wordt dus ook omgezet in een ander energievorm. Het is een endotherm proces omdat er energie nodig is om de reactie te laten verlopen. De chemische energie wordt omgezet in een andere",
+    "correctly_spelled_text": "Het is een exotherm proces omdat er energie vrijkomt. De chemische energie wordt dus ook omgezet in een ander energievorm. Het is een endotherm proces omdat er energie nodig is om de reactie te laten verlopen. De chemische energie wordt omgezet in een andere",
+    "spelling_corrections": [
+        {
+            "original": "exotherm",
+            "changes": "exotherm"
+        },
+        {
+            "original": "energievorm",
+            "changes": "energievorm"
+        },
+        {
+            "original": "endotherm",
+            "changes": "endotherm"
+        },
+        {
+            "original": "nodig",
+            "changes": "nodig"
+        }
+    ],
+    "tokens_used": 14606,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727738666,
+    "delta_time_s": 3.6498985290527344
+}

@@ -1,0 +1,25 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 10,
+    "raw_text": "Het wordt lastig aan te tonen omdat het een open reactiet is en er dus gassen met let vat kunnen gaan in de ruimte eromteen.",
+    "correctly_spelled_text": "Het wordt lastig aan te tonen omdat het een open reactie is en er dus gassen met het vat kunnen gaan in de ruimte eromheen.",
+    "spelling_corrections": [
+        {
+            "original": "reactiet",
+            "changes": "reactie"
+        },
+        {
+            "original": "let vat",
+            "changes": "het vat"
+        },
+        {
+            "original": "eromteen",
+            "changes": "eromheen"
+        }
+    ],
+    "tokens_used": 14586,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728215993,
+    "delta_time_s": 3.983962297439575
+}

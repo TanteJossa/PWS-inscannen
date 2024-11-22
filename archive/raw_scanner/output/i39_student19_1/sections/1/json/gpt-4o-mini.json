@@ -1,0 +1,25 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 6,
+    "raw_text": "\n\n6. \nOmdat er aan de som links van de nul altijd evenveel massa is als aan de som rechts van de nul, is er altijd massa te vinden bij een reactie. \n2. Er van alle atomen hetzelfde aantal aan de linker kant van de nul als aan de rechter kant evenveel massa.\n\n7. Dit is mogelijk, want dat is een open reactie. \nEr kunnen ook nog stoffen bij! \n\n8. 65g-13g-5g-47g, van hoop (III) oxide.",
+    "correctly_spelled_text": "\n\n6. \nOmdat er aan de som links van de nul altijd evenveel massa is als aan de som rechts van de nul, is er altijd massa te vinden bij een reactie. \n2. Er van alle atomen hetzelfde aantal aan de linker kant van de nul als aan de rechter kant evenveel massa.\n\n7. Dit is mogelijk, want dat is een open reactie. \nEr kunnen ook nog stoffen bij! \n\n8. 65g-13g-5g-47g, van hoop (III) oxide.",
+    "spelling_corrections": [
+        {
+            "original": "massa te vinden bij een lectie.",
+            "changes": "massa te vinden bij een reactie."
+        },
+        {
+            "original": "Er van alle atomen hetzelfde aantal aan de linker kant van de nul als de rechter kant evenveel massa.",
+            "changes": "Er van alle atomen hetzelfde aantal aan de linker kant van de nul als aan de rechter kant evenveel massa."
+        },
+        {
+            "original": "Dit is mogelijk, want dat is een open reacht.",
+            "changes": "Dit is mogelijk, want dat is een open reactie."
+        }
+    ],
+    "tokens_used": 26166,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728215547,
+    "delta_time_s": 7.246244430541992
+}

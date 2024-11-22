@@ -1,0 +1,21 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 2,
+    "raw_text": "op micro-niveau is de beginnende\nals de pati\u00ebntelijk vind een bepaald worden\nis de lesgint bijv. verlaagd en\nop micro-niveau laten de klassieke beters",
+    "correctly_spelled_text": "op micro-niveau is de beginnende\nals de pati\u00ebntelijk vind een bepaald worden\nis de lesgint bijv. verlaagd en\nop micro-niveau laten de klassieke beters",
+    "spelling_corrections": [
+        {
+            "original": "begonnen",
+            "changes": "beginnende"
+        },
+        {
+            "original": "lesgint",
+            "changes": "lesgint"
+        }
+    ],
+    "tokens_used": 14597,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728215539,
+    "delta_time_s": 5.559640645980835
+}

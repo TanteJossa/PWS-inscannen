@@ -1,0 +1,21 @@
+{
+    "google_quiestion_number": "C",
+    "question_number": 10,
+    "raw_text": "Omdat het reaci\u00ebrvat open is, kan je \n de SBB met de rest van de gealigneerde",
+    "correctly_spelled_text": "Omdat het reaci\u00ebrvat open is, kan je \n de SBB met de rest van de gealigneerde",
+    "spelling_corrections": [
+        {
+            "original": "reaci\u00ebrvat",
+            "changes": "reacervat"
+        },
+        {
+            "original": "gealigneerde",
+            "changes": "gealigneerde"
+        }
+    ],
+    "tokens_used": 14525,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727738724,
+    "delta_time_s": 2.63107967376709
+}

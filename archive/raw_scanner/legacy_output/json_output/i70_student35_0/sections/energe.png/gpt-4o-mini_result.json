@@ -1,0 +1,17 @@
+{
+    "google_quiestion_number": "energe",
+    "question_number": 1,
+    "raw_text": "energie(E)\n\nbeginsel\n\n\u0394E<0\n\nreactie\nproduct\n\nreactie verloop ->",
+    "correctly_spelled_text": "energie(E)\n\nbeginsel\n\n\u0394E<0\n\nreactie\nproduct\n\nreactie verloop ->",
+    "spelling_corrections": [
+        {
+            "original": "beginsel",
+            "changes": "beginsel"
+        }
+    ],
+    "tokens_used": 25842,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727740172,
+    "delta_time_s": 3.5864710807800293
+}

@@ -1,0 +1,21 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 4,
+    "raw_text": "\n\neind product\n\nbeginst\n\nachieving average\n\nc - readinwonte\n\n\u0394E\n\n",
+    "correctly_spelled_text": "\neindproduct\n\nbeginst\n\nachieving average\n\nc - readinwonte\n\n\u0394E\n\n",
+    "spelling_corrections": [
+        {
+            "original": "eind product",
+            "changes": "eindproduct"
+        },
+        {
+            "original": "beginst",
+            "changes": "beginst"
+        }
+    ],
+    "tokens_used": 14575,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728215712,
+    "delta_time_s": 2.435922145843506
+}

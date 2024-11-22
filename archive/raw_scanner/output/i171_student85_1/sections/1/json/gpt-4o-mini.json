@@ -1,0 +1,21 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 6,
+    "raw_text": "65 g malachiet ontstaat 33 g koolstofdioxide en 5 gram water dus!\n65 g - 33 g = 52 g\n52 g - 5 g = 47 g\nEr ontstaat dus 47 gram koper(II)oxide",
+    "correctly_spelled_text": "65 g malachiet ontstaat 33 g koolstofdioxide en 5 gram water dus!\n65 g - 33 g = 52 g\n52 g - 5 g = 47 g\nEr ontstaat dus 47 gram koper(II)oxide",
+    "spelling_corrections": [
+        {
+            "original": "5 gram",
+            "changes": "5 g"
+        },
+        {
+            "original": "5 gram",
+            "changes": "5 g"
+        }
+    ],
+    "tokens_used": 14625,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728213710,
+    "delta_time_s": 3.159282684326172
+}

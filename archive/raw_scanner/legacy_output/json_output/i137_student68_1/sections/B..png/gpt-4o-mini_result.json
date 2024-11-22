@@ -1,0 +1,25 @@
+{
+    "google_quiestion_number": "B.",
+    "question_number": 8,
+    "raw_text": "B. Exotherm proces, want er komt energie vrij, uit de reactie komt de warmte van warmte.",
+    "correctly_spelled_text": "B. Exotherm proces, want er komt energie vrij, uit de reactie komt de warmte van warmte.",
+    "spelling_corrections": [
+        {
+            "original": "Exotherm proces,",
+            "changes": "Exotherm proces,"
+        },
+        {
+            "original": "komt energie vrij,",
+            "changes": "komt energie vrij,"
+        },
+        {
+            "original": "uit de reactie komt de warmte van warmte.",
+            "changes": "uit de reactie komt de warmte van warmte."
+        }
+    ],
+    "tokens_used": 14541,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727735854,
+    "delta_time_s": 2.631225347518921
+}

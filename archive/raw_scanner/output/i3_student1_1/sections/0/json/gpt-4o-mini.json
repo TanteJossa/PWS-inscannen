@@ -1,0 +1,29 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 3,
+    "raw_text": "doodat je de pinda's stampel woult het oppervalkte gober en de concentratie waardoet je op het bolende deeltjes model kun zien dat de moleculen makkelijk tegen elkaar kunnen baken,",
+    "correctly_spelled_text": "doordat je de pinda's stampel wilt het oppervlakte gober en de concentratie waardoor je op het bolende deeltjes model kunt zien dat de moleculen makkelijk tegen elkaar kunnen baken,",
+    "spelling_corrections": [
+        {
+            "original": "woult",
+            "changes": "wilt"
+        },
+        {
+            "original": "oppervalkte",
+            "changes": "oppervlakte"
+        },
+        {
+            "original": "waardoet",
+            "changes": "waardoor"
+        },
+        {
+            "original": "kun",
+            "changes": "kunt"
+        }
+    ],
+    "tokens_used": 14628,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728215550,
+    "delta_time_s": 2.4368841648101807
+}

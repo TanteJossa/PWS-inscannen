@@ -1,0 +1,21 @@
+{
+    "google_quiestion_number": "g",
+    "question_number": 1,
+    "raw_text": "g= Ondaat en eveel atomen van 2H, Cu, Cl, C, H en na de py1",
+    "correctly_spelled_text": "g= Onder de even atomen van 2H, Cu, Cl, C, H en na de py1",
+    "spelling_corrections": [
+        {
+            "original": "Ondaat",
+            "changes": "Onder"
+        },
+        {
+            "original": "eveel",
+            "changes": "even"
+        }
+    ],
+    "tokens_used": 14514,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727737801,
+    "delta_time_s": 2.4354493618011475
+}

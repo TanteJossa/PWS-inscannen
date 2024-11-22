@@ -1,0 +1,25 @@
+{
+    "google_quiestion_number": "12",
+    "question_number": 12,
+    "raw_text": "11. als de katalysator zegt er 100% dat de ontbindings temperatuur lager ligt waardoor de reactiesnelheid die te rug is om een goede reactie te krijgen. Eigenlijk zou (een goede kost.)",
+    "correctly_spelled_text": "11. Als de katalysator zegt er 100% dat de ontbindings temperatuur lager ligt waardoor de reactiesnelheid die te rug is om een goede reactie te krijgen. Eigenlijk zou (een goede kost.)",
+    "spelling_corrections": [
+        {
+            "original": "als",
+            "changes": "Als"
+        },
+        {
+            "original": "ligt",
+            "changes": "ligt"
+        },
+        {
+            "original": "te rug",
+            "changes": "terug"
+        }
+    ],
+    "tokens_used": 14558,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727734844,
+    "delta_time_s": 2.994101047515869
+}

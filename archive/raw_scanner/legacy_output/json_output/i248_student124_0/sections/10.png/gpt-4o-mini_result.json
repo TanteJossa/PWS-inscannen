@@ -1,0 +1,21 @@
+{
+    "google_quiestion_number": "10",
+    "question_number": 10,
+    "raw_text": "let zou moeilijk zijn om te tonen dat de wet van mass behoud er  koperd  onder CO2 een gas is en H2O dat raak je kwijt.",
+    "correctly_spelled_text": "het zou moeilijk zijn om te tonen dat de wet van mass behoud er koper onder CO2 een gas is en H2O dat raak je kwijt.",
+    "spelling_corrections": [
+        {
+            "original": "let",
+            "changes": "het"
+        },
+        {
+            "original": "koperd",
+            "changes": "koper"
+        }
+    ],
+    "tokens_used": 14524,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727738862,
+    "delta_time_s": 2.329124927520752
+}

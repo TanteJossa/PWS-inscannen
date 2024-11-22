@@ -1,0 +1,21 @@
+{
+    "google_quiestion_number": "01",
+    "question_number": 10,
+    "raw_text": "Het is lastig omdat in het een opbouw is er zouden dus piepkleine deeltjes bij kunnen komen.\nDe die vast ook een massa bij zich hebben. Alleen kunnen we dat niet zien.",
+    "correctly_spelled_text": "Het is lastig omdat in het een opbouw is, er zouden dus piepkleine deeltjes bij kunnen komen.\nDe die vast ook een massa bij zich hebben. Alleen kunnen we dat niet zien.",
+    "spelling_corrections": [
+        {
+            "original": "is er zouden",
+            "changes": "is, er zouden"
+        },
+        {
+            "original": "deeltjes bij kunnen komen.",
+            "changes": "deeltjes bij kunnen komen."
+        }
+    ],
+    "tokens_used": 14555,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727736266,
+    "delta_time_s": 3.267852544784546
+}

@@ -1,0 +1,25 @@
+{
+    "google_quiestion_number": "1",
+    "question_number": 7,
+    "raw_text": "zie vraag 6\nop micro niveau\n\nHierdoor zijn de pindas figuren verdeeld en hebben ze dus een groter opp waardoor er sneller modellen langs elkaar kunnen bewegen dit leidt tot betere uitjes model.\n\nVolgens de wet van behoud kan er nooit massa verloren gaan of bijkomen wanneer je het in dit geval verhit.",
+    "correctly_spelled_text": "zie vraag 6\nop micro niveau\n\nHierdoor zijn de pindas figuren verdeeld en hebben ze dus een groter opp waardoor er sneller modellen langs elkaar kunnen bewegen dit leidt tot betere uitjes model.\n\nVolgens de wet van behoud kan er nooit massa verloren gaan of bijkomen wanneer je het in dit geval verhit.",
+    "spelling_corrections": [
+        {
+            "original": "pindas",
+            "changes": "pinda's"
+        },
+        {
+            "original": "opp",
+            "changes": "opp."
+        },
+        {
+            "original": "uitjes",
+            "changes": "uitjes."
+        }
+    ],
+    "tokens_used": 14610,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727736427,
+    "delta_time_s": 2.99460768699646
+}

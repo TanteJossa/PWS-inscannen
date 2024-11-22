@@ -1,0 +1,17 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 1,
+    "raw_text": "1(2)\n\nalcohol\n\n",
+    "correctly_spelled_text": "1.2\n\nalcohol\n\n",
+    "spelling_corrections": [
+        {
+            "original": "1(2)",
+            "changes": "1.2"
+        }
+    ],
+    "tokens_used": 14529,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728214602,
+    "delta_time_s": 1.6511321067810059
+}

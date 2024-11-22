@@ -1,0 +1,29 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 9,
+    "raw_text": "endotherme reactie, om iets te verbranden heb je energie nodig ...\n10\n2W2 + C7H6S + O2 \u2192",
+    "correctly_spelled_text": "endotherme reactie, om iets te verbranden heb je energie nodig ...\n10\n2W\u2082 + C\u2087H\u2086S + O\u2082 \u2192",
+    "spelling_corrections": [
+        {
+            "original": "W2",
+            "changes": "W\u2082"
+        },
+        {
+            "original": "C7",
+            "changes": "C\u2087"
+        },
+        {
+            "original": "H6",
+            "changes": "H\u2086"
+        },
+        {
+            "original": "O2",
+            "changes": "O\u2082"
+        }
+    ],
+    "tokens_used": 14605,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728213722,
+    "delta_time_s": 6.320568323135376
+}

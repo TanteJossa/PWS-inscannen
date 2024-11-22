@@ -1,0 +1,45 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 3,
+    "raw_text": "3 het (g)rotamp(e)n van de pinda's zorgt ervoor dat de reactiesnelheid hoger wordt. Op microniveau kan je dat uitleggen met het botsend deeltjesmodel. Als de pinda's gemalen worden krijgen de deeltjes een groter contactoppervlak doordat grotere contactoppervlakken de deeltjes veel vaker tegen elkaar aan kunnen laten botsen. Dit zorgt voor een effectieve botsing. Op macroniveau betekent dat de reactie sneller gaat.\n\n4 In de reactie vergelijking kan je zien dat een enkele atoom verloren gaat en bij een kloppende reactie vergelijking kan er geen massa verloren gaan omdat...",
+    "correctly_spelled_text": "3 het (g)rotampen van de pinda's zorgt ervoor dat de reactiesnelheid hoger wordt. Op microniveau kan je dat uitleggen met het botsend deeltjesmodel. Als de pinda's gemalen worden krijgen de deeltjes een groter contactoppervlak doordat grotere contactoppervlakken de deeltjes veel vaker tegen elkaar aan kunnen laten botsen. Dit zorgt voor een effectieve botsing. Op macroniveau betekent dat de reactie sneller gaat.\n\n4 In de reactie vergelijking kan je zien dat een enkele atoom verloren gaat en bij een kloppende reactie vergelijking kan er geen massa verloren gaan omdat...",
+    "spelling_corrections": [
+        {
+            "original": "(g)rotamp(e)n",
+            "changes": "(g)rotampen"
+        },
+        {
+            "original": "pinda's gemalen",
+            "changes": "pinda's gemalen"
+        },
+        {
+            "original": "de deeltjes een groter contactoppervlak",
+            "changes": "de deeltjes een groter contactoppervlak"
+        },
+        {
+            "original": "contactoppervlakken de deeltjes",
+            "changes": "contactoppervlakken de deeltjes"
+        },
+        {
+            "original": "effectieve botsing. Op macroniveau",
+            "changes": "effectieve botsing. Op macroniveau"
+        },
+        {
+            "original": "In de reactie vergelijking",
+            "changes": "In de reactie vergelijking"
+        },
+        {
+            "original": "een enkele atoom verloren gaat",
+            "changes": "een enkele atoom verloren gaat"
+        },
+        {
+            "original": "kloppende reactie vergelijking",
+            "changes": "kloppende reactie vergelijking"
+        }
+    ],
+    "tokens_used": 14899,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728215808,
+    "delta_time_s": 5.253378391265869
+}

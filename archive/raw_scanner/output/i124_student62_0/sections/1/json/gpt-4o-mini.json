@@ -1,0 +1,25 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 10,
+    "raw_text": "O2 + C2H4O5\n\nDe katalysator heeft als taak id de reactiesnelheid te verhogen, het de reactietijd te beinvloeden en de temperatuur de basis van te verhogen.\n\nAan katalysator heeft geen invloed.\n\nBe\u00efnvloeden.\n\nBelonen-Bestraf.",
+    "correctly_spelled_text": "O2 + C2H4O5\n\nDe katalysator heeft als taak de reactiesnelheid te verhogen, het de reactietijd te be\u00efnvloeden en de temperatuur de basis van te verhogen.\n\nAan katalysator heeft geen invloed.\n\nBe\u00efnvloeden.\n\nBelonen-Bestraffen.",
+    "spelling_corrections": [
+        {
+            "original": "id",
+            "changes": "de"
+        },
+        {
+            "original": "beinvloeden",
+            "changes": "be\u00efnvloeden"
+        },
+        {
+            "original": "Bestraf",
+            "changes": "Bestraffen"
+        }
+    ],
+    "tokens_used": 25995,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728212662,
+    "delta_time_s": 20.712433338165283
+}

@@ -1,0 +1,29 @@
+{
+    "google_quiestion_number": "bSCw12",
+    "question_number": 3,
+    "raw_text": "Als je de pinda's fijnstampt is het oppervlak groter en dan de deeltjes tijdens de reactie ergens tegen aan botsen.\n\nOmdat er aan elk element evenveel voor de reactie als na de react: zijn\n\nOmdat er dan tijdens de reactie andere stoffen bij kunnen komen.",
+    "correctly_spelled_text": "Als je de pinda's fijnstampt is het oppervlak groter en dan de deeltjes tijdens de reactie ergens tegenaan botsen.\n\nOmdat er aan elk element evenveel voor de reactie als na de reactie zijn.\n\nOmdat er dan tijdens de reactie andere stoffen bij kunnen komen.",
+    "spelling_corrections": [
+        {
+            "original": "de deeltjes",
+            "changes": "deeltjes"
+        },
+        {
+            "original": "tegen aan",
+            "changes": "tegenaan"
+        },
+        {
+            "original": "react:",
+            "changes": "reactie"
+        },
+        {
+            "original": "de rood",
+            "changes": "de reactie"
+        }
+    ],
+    "tokens_used": 25939,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727739955,
+    "delta_time_s": 4.6862876415252686
+}

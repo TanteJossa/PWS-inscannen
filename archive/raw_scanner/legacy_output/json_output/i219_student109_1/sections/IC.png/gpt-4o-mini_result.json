@@ -1,0 +1,21 @@
+{
+    "google_quiestion_number": "IC",
+    "question_number": 11,
+    "raw_text": "11. 6,5 g meldiciteit - 13 g O2 - 5 g H2O = massa AuO = 47 g\nEr met eel 47 g koper(II) oxide",
+    "correctly_spelled_text": "11. 6,5 g meldigheid - 13 g O2 - 5 g H2O = massa AuO = 47 g\nEr met een 47 g koper(II) oxide",
+    "spelling_corrections": [
+        {
+            "original": "meldiciteit",
+            "changes": "meldigheid"
+        },
+        {
+            "original": "met eel",
+            "changes": "met een"
+        }
+    ],
+    "tokens_used": 14552,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727738207,
+    "delta_time_s": 3.093324661254883
+}

@@ -1,0 +1,17 @@
+{
+    "google_quiestion_number": "go",
+    "question_number": 1,
+    "raw_text": "geldt de regel dat hoe groter de getallen zijn, hoe kleiner de uitkomsten in de delingen zijn, maar effectievere bewerkingen. (wanneer de reactie dan sneller gaat.",
+    "correctly_spelled_text": "geldt de regel dat hoe groter de getallen zijn, hoe kleiner de uitkomsten in de delingen zijn, maar effectievere bewerkingen. (wanneer de reactie dan sneller gaat.",
+    "spelling_corrections": [
+        {
+            "original": "effectievere",
+            "changes": "effectievere"
+        }
+    ],
+    "tokens_used": 14536,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727739386,
+    "delta_time_s": 3.9927315711975098
+}

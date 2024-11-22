@@ -1,0 +1,49 @@
+{
+    "google_quiestion_number": "M",
+    "question_number": 13,
+    "raw_text": "Mensen zijn warmbloedig - je bent meestal ongeveer 37\u00b0 C. Dit is de reactie warmte van de fotosynthese van glucose.",
+    "correctly_spelled_text": "Mensen zijn warmbloedig - je bent meestal ongeveer 37\u00b0 C. Dit is de reactie warmte van de fotosynthese van glucose.",
+    "spelling_corrections": [
+        {
+            "original": "warmbloedig",
+            "changes": "warmbloedig"
+        },
+        {
+            "original": "meestal",
+            "changes": "meestal"
+        },
+        {
+            "original": "ongeveer",
+            "changes": "ongeveer"
+        },
+        {
+            "original": "de",
+            "changes": "de"
+        },
+        {
+            "original": "reactie",
+            "changes": "reactie"
+        },
+        {
+            "original": "van",
+            "changes": "van"
+        },
+        {
+            "original": "fotosynthese",
+            "changes": "fotosynthese"
+        },
+        {
+            "original": "van",
+            "changes": "van"
+        },
+        {
+            "original": "glucose",
+            "changes": "glucose"
+        }
+    ],
+    "tokens_used": 14596,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727739259,
+    "delta_time_s": 2.9159679412841797
+}

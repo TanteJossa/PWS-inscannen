@@ -1,0 +1,21 @@
+{
+    "google_quiestion_number": "g",
+    "question_number": 9,
+    "raw_text": "endotherme reactie, om iets te verbranden heb je energie nodig\n2W2 + C2, th2S + O2 \u2192\n\ndezelfde katalysator is een van de 4 dingen die je kan doen om een reactie sneller te laten verlopen, de katalysator is hier zuurstof. Het wordt be\u00efnvloed door",
+    "correctly_spelled_text": "endotherme reactie, om iets te verbranden heb je energie nodig\n2W2 + C2, th2S + O2 \u2192\n\ndeze katalysator is een van de 4 dingen die je kan doen om een reactie sneller te laten verlopen, de katalysator is hier zuurstof. Het wordt be\u00efnvloed door",
+    "spelling_corrections": [
+        {
+            "original": "dezelfde",
+            "changes": "deze"
+        },
+        {
+            "original": "zuurstof",
+            "changes": "zuurstof"
+        }
+    ],
+    "tokens_used": 25943,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727736899,
+    "delta_time_s": 4.791163682937622
+}

@@ -1,0 +1,25 @@
+{
+    "google_quiestion_number": "13",
+    "question_number": 13,
+    "raw_text": "en extraheer pas proces het geeft zichtbaar energie vrij in de lucht in de vorm van warmte",
+    "correctly_spelled_text": "en extraheer per proces het geeft zichtbaar energie vrij in de lucht in de vorm van warmte",
+    "spelling_corrections": [
+        {
+            "original": "extraheer",
+            "changes": "extraheer -> extraheer"
+        },
+        {
+            "original": "pas",
+            "changes": "pas -> per"
+        },
+        {
+            "original": "zichtelijk",
+            "changes": "zichtelijk -> zichtbaar"
+        }
+    ],
+    "tokens_used": 14517,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727739803,
+    "delta_time_s": 2.3852617740631104
+}

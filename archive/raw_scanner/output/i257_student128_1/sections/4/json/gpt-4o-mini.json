@@ -1,0 +1,33 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 9,
+    "raw_text": "9) Exotherm, wanneer er wordt chemische energie gebruikt om het te laten verbinden waardoor bewegingsenergie kan om bij een motor te laten werken.",
+    "correctly_spelled_text": "9) Exotherm, wanneer er wordt chemische energie gebruikt om het te laten verbinden waardoor bewegingsenergie kan om bij een motor te laten werken.",
+    "spelling_corrections": [
+        {
+            "original": "wordt",
+            "changes": "wordt"
+        },
+        {
+            "original": "chemische",
+            "changes": "chemische"
+        },
+        {
+            "original": "verbinden",
+            "changes": "verbinden"
+        },
+        {
+            "original": "bewegingsenergie",
+            "changes": "bewegingsenergie"
+        },
+        {
+            "original": "bij een motor",
+            "changes": "bij een motor"
+        }
+    ],
+    "tokens_used": 14612,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728215222,
+    "delta_time_s": 2.611586570739746
+}

@@ -1,0 +1,17 @@
+{
+    "google_quiestion_number": "Or",
+    "question_number": 1,
+    "raw_text": "\n\ngeschakelde weerstand\n\nAE < 0\n\nbegin/meetlen\n\n\neffecten\n\n- de verloop rechte\n\n",
+    "correctly_spelled_text": "\n\ngeschakelde weerstand\n\nAE < 0\n\nbegin/meetlen\n\neffecten\n\n- de verlooprechte\n\n",
+    "spelling_corrections": [
+        {
+            "original": "verloop rechte",
+            "changes": "verlooprechte"
+        }
+    ],
+    "tokens_used": 14525,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727737477,
+    "delta_time_s": 2.048783779144287
+}

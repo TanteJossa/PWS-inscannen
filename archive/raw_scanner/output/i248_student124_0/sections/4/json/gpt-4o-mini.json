@@ -1,0 +1,17 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 13,
+    "raw_text": "Het kristalisatie proces is exotherm en daar er energie in de vorm van warmte vrij komt.",
+    "correctly_spelled_text": "Het kristallisatiet proces is exotherm en daar er energie in de vorm van warmte vrij komt.",
+    "spelling_corrections": [
+        {
+            "original": "kristalisatie",
+            "changes": "kristallisatiet"
+        }
+    ],
+    "tokens_used": 14553,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728215060,
+    "delta_time_s": 4.300034999847412
+}

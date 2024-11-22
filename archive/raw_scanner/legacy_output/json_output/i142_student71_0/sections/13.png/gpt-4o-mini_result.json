@@ -1,0 +1,17 @@
+{
+    "google_quiestion_number": "13",
+    "question_number": 13,
+    "raw_text": "De reactie warmte is het gebruik de warmte in je lichaam die je warm houdt.",
+    "correctly_spelled_text": "De reactie warmte is het gebruik van de warmte in je lichaam die je warm houdt.",
+    "spelling_corrections": [
+        {
+            "original": "gebruik",
+            "changes": "gebruik van"
+        }
+    ],
+    "tokens_used": 14486,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727735927,
+    "delta_time_s": 2.0694191455841064
+}

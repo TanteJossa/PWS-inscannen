@@ -1,0 +1,17 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 2,
+    "raw_text": "\n\nstukjes pinda\nal cohol\n",
+    "correctly_spelled_text": "\n\nstukjes pinda\nalcohol\n",
+    "spelling_corrections": [
+        {
+            "original": "al cohol",
+            "changes": "alcohol"
+        }
+    ],
+    "tokens_used": 14531,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728213695,
+    "delta_time_s": 1.738168478012085
+}

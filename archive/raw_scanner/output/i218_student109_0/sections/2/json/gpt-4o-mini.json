@@ -1,0 +1,21 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 3,
+    "raw_text": "Een katalysator zorgt de reactiesnelheid door de activeringsenergie omlaag te brengen, dit maakt het er makkelijker om reacties te laten verlopen met een katalysator.",
+    "correctly_spelled_text": "Een katalysator zorgt voor de reactiesnelheid door de activeringsenergie omlaag te brengen, dit maakt het makkelijker om reacties te laten verlopen met een katalysator.",
+    "spelling_corrections": [
+        {
+            "original": "de reactiesnelheid",
+            "changes": "voor de reactiesnelheid"
+        },
+        {
+            "original": "het er makkelijker",
+            "changes": "makkelijker"
+        }
+    ],
+    "tokens_used": 14596,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728214648,
+    "delta_time_s": 2.785001039505005
+}

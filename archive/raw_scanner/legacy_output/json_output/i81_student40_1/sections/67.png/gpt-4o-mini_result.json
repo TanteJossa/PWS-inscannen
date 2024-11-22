@@ -1,0 +1,17 @@
+{
+    "google_quiestion_number": "67",
+    "question_number": 8,
+    "raw_text": "Door het fijnstampen van de pinda's wordt de concentratie op microniveau groter.\nWat in het botsende deeltjesmodel betekent dat er meer botsingen plaats zullen vinden, waardoor de reactiet snelheid stijgt.",
+    "correctly_spelled_text": "Door het fijnstampen van de pinda's wordt de concentratie op microniveau groter.\nWat in het botsende deeltjesmodel betekent dat er meer botsingen plaats zullen vinden, waardoor de reactiesnelheid stijgt.",
+    "spelling_corrections": [
+        {
+            "original": "reactiet snelheid",
+            "changes": "reactiesnelheid"
+        }
+    ],
+    "tokens_used": 25883,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727740450,
+    "delta_time_s": 4.54575252532959
+}

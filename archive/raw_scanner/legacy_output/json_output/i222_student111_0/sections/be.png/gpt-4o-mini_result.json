@@ -1,0 +1,17 @@
+{
+    "google_quiestion_number": "be",
+    "question_number": 1,
+    "raw_text": "betekenen dat de frictie tap lager is, waar betekent dat het sneller gaat.",
+    "correctly_spelled_text": "betekenen dat de frictietap lager is, waar betekent dat het sneller gaat.",
+    "spelling_corrections": [
+        {
+            "original": "frictie tap",
+            "changes": "frictietap"
+        }
+    ],
+    "tokens_used": 14496,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727738274,
+    "delta_time_s": 1.8649077415466309
+}

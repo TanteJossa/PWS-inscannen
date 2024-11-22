@@ -1,0 +1,21 @@
+{
+    "google_quiestion_number": "10",
+    "question_number": 1,
+    "raw_text": "de verveniging van zuurstofhoudende benzine \nen is een is een \n",
+    "correctly_spelled_text": "de verbranding van zuurstofhoudende benzine \nen is een \n",
+    "spelling_corrections": [
+        {
+            "original": "verveniging",
+            "changes": "verbranding"
+        },
+        {
+            "original": "is een is een",
+            "changes": "is een"
+        }
+    ],
+    "tokens_used": 14504,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727735057,
+    "delta_time_s": 2.3627474308013916
+}

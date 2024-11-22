@@ -1,0 +1,195 @@
+{
+  "analyzeResult": {
+    "modelVersion": "2022-04-30",
+    "readResults": [
+      {
+        "angle": 2.0428,
+        "height": 845,
+        "lines": [
+          {
+            "appearance": {
+              "style": {
+                "confidence": 1,
+                "name": "handwriting"
+              }
+            },
+            "boundingBox": [
+              75,
+              57,
+              89,
+              57,
+              89,
+              75,
+              75,
+              74
+            ],
+            "text": "4",
+            "words": [
+              {
+                "boundingBox": [
+                  78,
+                  57,
+                  87,
+                  57,
+                  86,
+                  75,
+                  77,
+                  75
+                ],
+                "confidence": 0.947,
+                "text": "4"
+              }
+            ]
+          },
+          {
+            "appearance": {
+              "style": {
+                "confidence": 1,
+                "name": "handwriting"
+              }
+            },
+            "boundingBox": [
+              85,
+              230,
+              99,
+              230,
+              99,
+              246,
+              85,
+              245
+            ],
+            "text": "5",
+            "words": [
+              {
+                "boundingBox": [
+                  90,
+                  230,
+                  98,
+                  230,
+                  97,
+                  246,
+                  89,
+                  246
+                ],
+                "confidence": 0.904,
+                "text": "5"
+              }
+            ]
+          },
+          {
+            "appearance": {
+              "style": {
+                "confidence": 1,
+                "name": "handwriting"
+              }
+            },
+            "boundingBox": [
+              95,
+              527,
+              81,
+              526,
+              82,
+              511,
+              96,
+              512
+            ],
+            "text": "9",
+            "words": [
+              {
+                "boundingBox": [
+                  90,
+                  527,
+                  81,
+                  526,
+                  82,
+                  511,
+                  91,
+                  512
+                ],
+                "confidence": 0.82,
+                "text": "9"
+              }
+            ]
+          },
+          {
+            "appearance": {
+              "style": {
+                "confidence": 1,
+                "name": "handwriting"
+              }
+            },
+            "boundingBox": [
+              80,
+              624,
+              98,
+              624,
+              99,
+              640,
+              81,
+              639
+            ],
+            "text": "7",
+            "words": [
+              {
+                "boundingBox": [
+                  89,
+                  624,
+                  97,
+                  624,
+                  97,
+                  640,
+                  88,
+                  640
+                ],
+                "confidence": 0.995,
+                "text": "7"
+              }
+            ]
+          },
+          {
+            "appearance": {
+              "style": {
+                "confidence": 1,
+                "name": "handwriting"
+              }
+            },
+            "boundingBox": [
+              84,
+              726,
+              98,
+              727,
+              98,
+              744,
+              84,
+              744
+            ],
+            "text": "8",
+            "words": [
+              {
+                "boundingBox": [
+                  84,
+                  726,
+                  96,
+                  726,
+                  95,
+                  744,
+                  84,
+                  743
+                ],
+                "confidence": 0.961,
+                "text": "8"
+              }
+            ]
+          }
+        ],
+        "page": 1,
+        "unit": "pixel",
+        "width": 105
+      }
+    ],
+    "version": "3.2.0"
+  },
+  "createdDateTime": "2024-10-06T09:43:06Z",
+  "lastUpdatedDateTime": "2024-10-06T09:43:06Z",
+  "status": "succeeded"
+}

@@ -1,0 +1,17 @@
+{
+    "google_quiestion_number": "H",
+    "question_number": 3,
+    "raw_text": "Het fijnstampen van de pindas heeft op microniveau",
+    "correctly_spelled_text": "Het fijnstampen van de pinda's heeft op microniveau",
+    "spelling_corrections": [
+        {
+            "original": "pindas",
+            "changes": "pinda's"
+        }
+    ],
+    "tokens_used": 14483,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727738082,
+    "delta_time_s": 2.4523136615753174
+}

@@ -1,0 +1,21 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 1,
+    "raw_text": "Het is een exotherme reactie, omdat er warmte vrijkomt en dus komt er meer energie vrij dan er wordt gebruikt.",
+    "correctly_spelled_text": "Het is een exotherme reactie, omdat er warmte vrijkomt en dus komt er meer energie vrij dan er wordt gebruikt.",
+    "spelling_corrections": [
+        {
+            "original": "vrijkomt",
+            "changes": "vrijkomt"
+        },
+        {
+            "original": "en dus komt er meer energie vrij dan er wordt gebruikt",
+            "changes": "en dus komt er meer energie vrij dan er wordt gebruikt"
+        }
+    ],
+    "tokens_used": 25921,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728214693,
+    "delta_time_s": 2.9114038944244385
+}

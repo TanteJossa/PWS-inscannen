@@ -1,0 +1,21 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 5,
+    "raw_text": "In de reactievergelijking zitten twee gassen en gassen gaan de lucht in. Hierdoor kan het moeilijk zijn op de massa aan de rechter kant van de (p) te weten en is de wet van behoud van massa moeilijker de zien.",
+    "correctly_spelled_text": "In de reactievergelijking zitten twee gassen en gassen gaan de lucht in. Hierdoor kan het moeilijk zijn op de massa aan de rechterkant van de (p) te weten en is de wet van behoud van massa moeilijker te zien.",
+    "spelling_corrections": [
+        {
+            "original": "rechter kant",
+            "changes": "rechterkant"
+        },
+        {
+            "original": "de zien",
+            "changes": "te zien"
+        }
+    ],
+    "tokens_used": 14617,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728214886,
+    "delta_time_s": 2.4742133617401123
+}

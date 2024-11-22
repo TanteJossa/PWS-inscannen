@@ -1,0 +1,25 @@
+{
+    "google_quiestion_number": "12",
+    "question_number": 1,
+    "raw_text": "Door de pinda's fijn te stampen hebben ze een hogere verwerkings- \ngraad en dus een groot contactoppervlak waardoor ze sneller \nkunnen boten. Volgens het boeiende deel (persoonlijk) gaat het meer \nsnel als er een hogere verwerkingsgraad is.\n\nLinks van de pijl heb je 2 Cu-atomen, 1 C-atoom, 5 O-atomen en 2 H-atomen, en dat heb je ook rechts van \nde pijl. Aanzienlijke atomen kunnen geen massa verliezen, dus \nbijft de totale massa hetzelfde.",
+    "correctly_spelled_text": "Door de pinda's fijn te stampen hebben ze een hogere verwerkings- \ngraad en dus een groot contactoppervlak waardoor ze sneller \nkunnen boten. Volgens het boeiende deel (persoonlijk) gaat het meer \nsnel als er een hogere verwerkingsgraad is.\n\nLinks van de pijl heb je 2 Cu-atomen, 1 C-atoom, 5 O-atomen en 2 H-atomen, en dat heb je ook rechts van \nde pijl. Aanzienlijke atomen kunnen geen massa verliezen, dus \nbijft de totale massa hetzelfde.",
+    "spelling_corrections": [
+        {
+            "original": "verwerkings- \ngraad",
+            "changes": "verwerkingsgraad"
+        },
+        {
+            "original": "contactoppervlak waardoor ze sneller \nkunnen boten",
+            "changes": "contactoppervlak waardoor ze sneller kunnen boten"
+        },
+        {
+            "original": "persoonlijk) gaat het meer \nsnel als er een hogere verwerkingsgraad is.",
+            "changes": "persoonlijk) gaat het sneller als er een hogere verwerkingsgraad is."
+        }
+    ],
+    "tokens_used": 14780,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727737616,
+    "delta_time_s": 5.315002918243408
+}

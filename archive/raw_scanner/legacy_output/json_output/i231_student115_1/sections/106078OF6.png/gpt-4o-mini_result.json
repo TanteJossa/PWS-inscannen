@@ -1,0 +1,17 @@
+{
+    "google_quiestion_number": "106078OF6",
+    "question_number": 6,
+    "raw_text": "nele pinas\nvermalen\ngeelande pinas\nexchangen\nopbessen\nfilteren\nvet\nalcohol\nrecirculatie van alcohol\n",
+    "correctly_spelled_text": "nele pinas\nvermalen\ngemalen pinas\nexchangen\nopbessen\nfilteren\nvet\nalcohol\nrecirculatie van alcohol\n",
+    "spelling_corrections": [
+        {
+            "original": "geelande",
+            "changes": "gemalen"
+        }
+    ],
+    "tokens_used": 25867,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727738465,
+    "delta_time_s": 3.671950101852417
+}

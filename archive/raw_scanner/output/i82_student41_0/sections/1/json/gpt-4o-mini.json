@@ -1,0 +1,17 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 1,
+    "raw_text": "en staat hetzelfde voor de pijl als na de pijl.\nhet staat evenveel voor de pijl als na de pijl!",
+    "correctly_spelled_text": "en staat hetzelfde voor de pijl als na de pijl.\nhet staat evenveel voor de pijl als na de pijl!",
+    "spelling_corrections": [
+        {
+            "original": "evenveel",
+            "changes": "evenveel"
+        }
+    ],
+    "tokens_used": 14563,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728216267,
+    "delta_time_s": 3.076002359390259
+}

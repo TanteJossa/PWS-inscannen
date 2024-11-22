@@ -86,26 +86,23 @@ def scan(original_img):
 
     for c in cnts:
         peri = cv2.arcLength(c, True)
-        approx = cv2.approxPolyDP(c, 0.04 * peri, True)
-        print(len(approx))
+        approx = cv2.approxPolyDP(c, 0.02 * peri, True)
+        # print(len(approx))
         if len(approx) == 4:
             doc = approx
             break
     
-    print(doc, type(doc))
+    # print(doc, type(doc))
     
     if (isinstance(doc, np.ndarray) ):
         warped_image, heightA, heightB, widthA, widthB = perspective_transform(copy, doc.reshape(4, 2) * ratio)
-    
-    # image must take at least 1/2 of the image
+        # image must take at least 1/2 of the image
     height, width, scale = copy.shape
     
 
-    
-    if (not isinstance(doc, np.ndarray) or (heightA / height < 1/2) 
-        or (heightB / height < 1/2) 
-        or (widthA / width < 1/2) 
-        or (widthB / width < 1/2) 
+    if (not isinstance(doc, np.ndarray) 
+        or ((heightA / height < 1/2)  and  (heightB / height < 1/2) )
+        or ((widthA / width < 1/2) and  (widthB / width < 1/2))
     ):
         return original_img
         

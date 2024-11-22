@@ -1,0 +1,29 @@
+{
+    "google_quiestion_number": "81",
+    "question_number": 81,
+    "raw_text": "exotherm, omdat e warmte vij komt.\nHet is eerst koud en verdwijnt, omdat het warm.\ndoordat de oplossing ge\u00efntroduceerd wordt, geeft energie af.\nenergie geeft energie wel.",
+    "correctly_spelled_text": "exotherm, omdat er warmte bij komt.\nHet is eerst koud en verdwijnt, omdat het warm is.\ndoordat de oplossing ge\u00efntroduceerd wordt, geeft energie af.\nenergie geeft energie wel.",
+    "spelling_corrections": [
+        {
+            "original": "e",
+            "changes": "er"
+        },
+        {
+            "original": "vij",
+            "changes": "bij"
+        },
+        {
+            "original": "woudt",
+            "changes": "is"
+        },
+        {
+            "original": "milieu",
+            "changes": "ge\u00efntroduceerd"
+        }
+    ],
+    "tokens_used": 14576,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727739717,
+    "delta_time_s": 3.3264501094818115
+}

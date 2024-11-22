@@ -1,0 +1,45 @@
+{
+    "google_quiestion_number": "Y",
+    "question_number": 1,
+    "raw_text": "1 Dit is een exotherm proces want het is verbranding en er komen gassen vrij,\n2 een C7H16S -> 2 C6H7 + 1/16 S\n3 een katalysator zorgt dat het activeringsproces verlaagd wordt en tijdens de reactie minder energie wordt verbruikt",
+    "correctly_spelled_text": "1 Dit is een exotherm proces want het is verbranding en er komen gassen vrij,\n2 een C7H16S -> 2 C6H7 + 1/16 S\n3 een katalysator zorgt dat het activeringsproces verlaagd wordt en tijdens de reactie minder energie wordt verbruikt",
+    "spelling_corrections": [
+        {
+            "original": "exotherm",
+            "changes": "exotherm"
+        },
+        {
+            "original": "gassen",
+            "changes": "gassen"
+        },
+        {
+            "original": "C7H16S",
+            "changes": "C7H16S"
+        },
+        {
+            "original": "C6H7",
+            "changes": "C6H7"
+        },
+        {
+            "original": "katalysator",
+            "changes": "katalysator"
+        },
+        {
+            "original": "activerings",
+            "changes": "activerings"
+        },
+        {
+            "original": "verlaagd",
+            "changes": "verlaagd"
+        },
+        {
+            "original": "energie",
+            "changes": "energie"
+        }
+    ],
+    "tokens_used": 14676,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727740774,
+    "delta_time_s": 5.495045900344849
+}

@@ -1,0 +1,17 @@
+{
+    "google_quiestion_number": "3",
+    "question_number": 3,
+    "raw_text": "De katalysator wordt gebruikt in de reactie, maar komt uit de reactie hetzelfde uit.",
+    "correctly_spelled_text": "De katalysator wordt gebruikt in de reactie, maar komt uit de reactie hetzelfde uit.",
+    "spelling_corrections": [
+        {
+            "original": "hetzelfde",
+            "changes": "hetzelfde"
+        }
+    ],
+    "tokens_used": 14491,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727730761,
+    "delta_time_s": 2.445483446121216
+}

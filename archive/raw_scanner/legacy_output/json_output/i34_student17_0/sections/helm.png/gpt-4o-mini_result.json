@@ -1,0 +1,25 @@
+{
+    "google_quiestion_number": "helm",
+    "question_number": 1,
+    "raw_text": "1. Ik heb een hond.\n2. Hij is bruin.\n3. Hij houdt van spelen.",
+    "correctly_spelled_text": "1. Ik heb een hond.\n2. Hij is bruin.\n3. Hij houdt van spelen.",
+    "spelling_corrections": [
+        {
+            "original": "hond.",
+            "changes": "hond."
+        },
+        {
+            "original": "bruin.",
+            "changes": "bruin."
+        },
+        {
+            "original": "spelen.",
+            "changes": "spelen."
+        }
+    ],
+    "tokens_used": 14523,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727739426,
+    "delta_time_s": 2.7961692810058594
+}

@@ -1,0 +1,17 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 8,
+    "raw_text": "8. exotherm: er komt warmte energie: vrij (het wordt warm). Het gaat van chemische energie naar warmte.",
+    "correctly_spelled_text": "8. exotherm: er komt warmte-energie: vrij (het wordt warm). Het gaat van chemische energie naar warmte.",
+    "spelling_corrections": [
+        {
+            "original": "warmte energie",
+            "changes": "warmte-energie"
+        }
+    ],
+    "tokens_used": 14561,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728215359,
+    "delta_time_s": 2.082540512084961
+}

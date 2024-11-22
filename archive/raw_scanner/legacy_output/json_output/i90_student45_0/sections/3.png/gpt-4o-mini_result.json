@@ -1,0 +1,21 @@
+{
+    "google_quiestion_number": "3",
+    "question_number": 3,
+    "raw_text": "3 een katalysator zorgt dat het activerings proces verkort wordt en tijdens de reactie minder energie wordt verbruikt",
+    "correctly_spelled_text": "3 een katalysator zorgt dat het activeringsproces verkort wordt en tijdens de reactie minder energie wordt verbruikt",
+    "spelling_corrections": [
+        {
+            "original": "activerings proces",
+            "changes": "activeringsproces"
+        },
+        {
+            "original": "energie wordt verbruikt",
+            "changes": "energie wordt verbruikt"
+        }
+    ],
+    "tokens_used": 14526,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727740717,
+    "delta_time_s": 5.418610334396362
+}

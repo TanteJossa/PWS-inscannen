@@ -1,0 +1,21 @@
+{
+    "google_quiestion_number": "C",
+    "question_number": 1,
+    "raw_text": "die in je lichtum plaatsvind",
+    "correctly_spelled_text": "die in je lichtum plaatsvindt",
+    "spelling_corrections": [
+        {
+            "original": "lichtum",
+            "changes": "lichtum"
+        },
+        {
+            "original": "plaatsvind",
+            "changes": "plaatsvindt"
+        }
+    ],
+    "tokens_used": 25816,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727739256,
+    "delta_time_s": 2.6575708389282227
+}

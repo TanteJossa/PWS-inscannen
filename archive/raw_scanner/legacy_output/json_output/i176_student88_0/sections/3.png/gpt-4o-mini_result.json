@@ -1,0 +1,17 @@
+{
+    "google_quiestion_number": "3",
+    "question_number": 13,
+    "raw_text": "Het is een exotherm proces, omdat er komt meer energie vrij dan dat er in gaat en de energie overgangen is van chemische energie naar een andere energie.",
+    "correctly_spelled_text": "Het is een exotherm proces, omdat er komt meer energie vrij dan dat er in gaat en de energieovergang is van chemische energie naar een andere energie.",
+    "spelling_corrections": [
+        {
+            "original": "energie overgangen",
+            "changes": "energieovergang"
+        }
+    ],
+    "tokens_used": 25858,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727737022,
+    "delta_time_s": 2.7894856929779053
+}

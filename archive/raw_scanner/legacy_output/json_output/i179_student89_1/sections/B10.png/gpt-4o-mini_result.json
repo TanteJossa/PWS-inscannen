@@ -1,0 +1,17 @@
+{
+    "google_quiestion_number": "B10",
+    "question_number": 10,
+    "raw_text": "Tel kan er niet in kijken omdat die vater heel hoog zijn.\n\n11\n47 gram\n\n12\nchemische energie -> maximale\n\nenfolfom\n\n",
+    "correctly_spelled_text": "Tel kan er niet in kijken omdat die water heel hoog zijn.\n\n11\n47 gram\n\n12\nchemische energie -> maximale\n\nenfolfom\n\n",
+    "spelling_corrections": [
+        {
+            "original": "vater",
+            "changes": "water"
+        }
+    ],
+    "tokens_used": 14528,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727737191,
+    "delta_time_s": 2.179189443588257
+}

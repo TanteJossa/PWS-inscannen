@@ -1,0 +1,21 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 3,
+    "raw_text": "3. Door een Katalysator te gebruiken, verhoog je de activatie-energie, waardoor een reactie sneller kan plaatsvinden, dus de reactietijd lager.",
+    "correctly_spelled_text": "3. Door een katalysator te gebruiken, verhoog je de activatie-energie, waardoor een reactie sneller kan plaatsvinden, dus de reactietijd lager.",
+    "spelling_corrections": [
+        {
+            "original": "Katalysator",
+            "changes": "katalysator"
+        },
+        {
+            "original": "reactiesnelheid",
+            "changes": "reactietijd"
+        }
+    ],
+    "tokens_used": 14587,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728215109,
+    "delta_time_s": 3.1991665363311768
+}

@@ -1,0 +1,29 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 8,
+    "raw_text": "endotherme reactie, Je hebt eerst energie nodig om de reactie te laten verlopen, en bij deze reactie is de energie vuur om het water te koken tot het niet het kookpunt",
+    "correctly_spelled_text": "endotherme reactie. Je hebt eerst energie nodig om de reactie te laten verlopen, en bij deze reactie is de energie vuur om het water te koken tot het niet het kookpunt.",
+    "spelling_corrections": [
+        {
+            "original": "Je",
+            "changes": "je"
+        },
+        {
+            "original": "eerst",
+            "changes": "eerst."
+        },
+        {
+            "original": "laten",
+            "changes": "laten."
+        },
+        {
+            "original": "tot",
+            "changes": "tot."
+        }
+    ],
+    "tokens_used": 14606,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728213715,
+    "delta_time_s": 2.860557794570923
+}

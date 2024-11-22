@@ -1,0 +1,29 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 2,
+    "raw_text": "- het alcht herbuiken ze woer op m het poss te herhalen",
+    "correctly_spelled_text": "- het altijd herhalen ze weer op m het pas te herhalen",
+    "spelling_corrections": [
+        {
+            "original": "alcht",
+            "changes": "altijd"
+        },
+        {
+            "original": "herbuiken",
+            "changes": "herhalen"
+        },
+        {
+            "original": "woer",
+            "changes": "weer"
+        },
+        {
+            "original": "poss",
+            "changes": "pas"
+        }
+    ],
+    "tokens_used": 14566,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728215484,
+    "delta_time_s": 2.3586113452911377
+}

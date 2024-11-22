@@ -1,0 +1,21 @@
+{
+    "google_quiestion_number": "NOT_VALID_QUESTION_ID",
+    "question_number": 4,
+    "raw_text": "\n\n\nreactiewarmte\n\nactiveringsenergie.\n\nproces \u2192\n\n\n\n\n5a\n\n-281,1\u00d710\u2075 J/mol.\nIk denk -281,1\u00d710\u2075 = -2,8116000",
+    "correctly_spelled_text": "\n\n\nreactiewarmte\n\nactiveringsenergie.\n\nproces \u2192\n\n\n\n\n5a\n\n-281,1 \u00d7 10\u2075 J/mol.\nIk denk -281,1 \u00d7 10\u2075 = -2,8116000",
+    "spelling_corrections": [
+        {
+            "original": "-281,1\u00d710\u2075 J/mol.",
+            "changes": "-281,1 \u00d7 10\u2075 J/mol."
+        },
+        {
+            "original": "Ik denk -281,1\u00d710\u2075 = -2,8116000",
+            "changes": "Ik denk -281,1 \u00d7 10\u2075 = -2,8116000"
+        }
+    ],
+    "tokens_used": 14635,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727730683,
+    "delta_time_s": 5.7705464363098145
+}

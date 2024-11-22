@@ -1,0 +1,61 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 1,
+    "raw_text": "hele paden\nvermalen\ngrote paden\nEX\nthuren\nappels met ma\nstages paden\ndestilleren\nalcohol\nstages paden\nBitteren\nbesluiten\nalcohol\nlee?",
+    "correctly_spelled_text": "hele paden\nvermalen\ngrote paden\nEX\nthuren\nappels met ma\nstages paden\ndestilleren\nalcohol\nstages paden\nBitteren\nbesluiten\nalcohol\nlee?",
+    "spelling_corrections": [
+        {
+            "original": "vermalen",
+            "changes": "vermalen"
+        },
+        {
+            "original": "EX",
+            "changes": "EX"
+        },
+        {
+            "original": "thuren",
+            "changes": "thuren"
+        },
+        {
+            "original": "appels met ma",
+            "changes": "appels met ma"
+        },
+        {
+            "original": "stages paden",
+            "changes": "stages paden"
+        },
+        {
+            "original": "destilleren",
+            "changes": "destilleren"
+        },
+        {
+            "original": "alcohol",
+            "changes": "alcohol"
+        },
+        {
+            "original": "stages paden",
+            "changes": "stages paden"
+        },
+        {
+            "original": "Bitteren",
+            "changes": "Bitteren"
+        },
+        {
+            "original": "besluiten",
+            "changes": "besluiten"
+        },
+        {
+            "original": "alcohol",
+            "changes": "alcohol"
+        },
+        {
+            "original": "lee?",
+            "changes": "lee?"
+        }
+    ],
+    "tokens_used": 14738,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728216493,
+    "delta_time_s": 3.5495502948760986
+}

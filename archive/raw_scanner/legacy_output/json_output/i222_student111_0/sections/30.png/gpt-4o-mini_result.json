@@ -1,0 +1,33 @@
+{
+    "google_quiestion_number": "30",
+    "question_number": 1,
+    "raw_text": "3door een katalysator is de act vermindert de activerings energie wat in een energiediagram betekenen dat de reactie trap lager is, wat betekent dat het sneller gaat.",
+    "correctly_spelled_text": "Door een katalysator is de act vermindert de activeringsenergie wat in een energiediagram betekent dat de reactie trap lager is, wat betekent dat het sneller gaat.",
+    "spelling_corrections": [
+        {
+            "original": "3door",
+            "changes": "Door"
+        },
+        {
+            "original": "act",
+            "changes": "act"
+        },
+        {
+            "original": "activerings energie",
+            "changes": "activeringsenergie"
+        },
+        {
+            "original": "betekenen",
+            "changes": "betekent"
+        },
+        {
+            "original": "trap",
+            "changes": "reactie trap"
+        }
+    ],
+    "tokens_used": 14572,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727738226,
+    "delta_time_s": 3.0208287239074707
+}

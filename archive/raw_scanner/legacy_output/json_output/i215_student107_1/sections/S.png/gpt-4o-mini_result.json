@@ -1,0 +1,17 @@
+{
+    "google_quiestion_number": "S",
+    "question_number": 5,
+    "raw_text": "Er zal namelijk ook massa in CO2 en H2O zitten en aangezien het gassen zijn zullen ze zich verspreiden door de lucht. De reactievat is open dus het zal moeilijk zijn om de massa te berekenen, als de massa zich verspreid over de ruimte.",
+    "correctly_spelled_text": "Er zal namelijk ook massa in CO2 en H2O zitten en aangezien het gassen zijn zullen ze zich verspreiden door de lucht. De reactievat is open dus het zal moeilijk zijn om de massa te berekenen, als de massa zich verspreid over de ruimte.",
+    "spelling_corrections": [
+        {
+            "original": "verspreid",
+            "changes": "verspreiden"
+        }
+    ],
+    "tokens_used": 14568,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727738119,
+    "delta_time_s": 2.8871774673461914
+}

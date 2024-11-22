@@ -1,0 +1,85 @@
+{
+    "google_quiestion_number": "12-13-588g10-D",
+    "question_number": 7,
+    "raw_text": "\n 20da pr het zeache pradt hebb\n het alstublieft zodt je het opnieu\n lan gebanihen.\n\n g- \n Ondat en eveel Cu, C, O, H\n atomen van en na de pypl\n 21pn.\n\n 10- \n Na de eacte onstaan de gas\n muge nota a halsetdwezel\n indicale en die gaan het wet\n genen wil. Wacht dan de\n messe kleine zal 21pn.\n\n 12\n 65-13.5 = 47 gram hepa (Cl) anke",
+    "correctly_spelled_text": "\n 20da per het zeachen product heb\n het alstublieft zodat je het opnieuw\n kan gebruiken.\n\n g- \n Ondat en evenveel Cu, C, O, H\n atomen van en na de pypl\n 21pn.\n\n 10- \n Na de exacte onstaan de gas\n muge nota a halsetdwezel\n indicatie en die gaan het wet\n genen wil. Wacht dan de\n messe kleine zal 21pn.\n\n 12\n 65-13.5 = 47 gram hepa (Cl) anke",
+    "spelling_corrections": [
+        {
+            "original": "zeache",
+            "changes": "zeachen"
+        },
+        {
+            "original": "pradt",
+            "changes": "product"
+        },
+        {
+            "original": "alstublieft",
+            "changes": "alstublieft"
+        },
+        {
+            "original": "zodt",
+            "changes": "zodat"
+        },
+        {
+            "original": "lan",
+            "changes": "kan"
+        },
+        {
+            "original": "eveel",
+            "changes": "evenveel"
+        },
+        {
+            "original": "atomen",
+            "changes": "atomen"
+        },
+        {
+            "original": "pypl",
+            "changes": "pypl"
+        },
+        {
+            "original": "eacte",
+            "changes": "exacte"
+        },
+        {
+            "original": "onstaan",
+            "changes": "ontstaan"
+        },
+        {
+            "original": "muge",
+            "changes": "mug"
+        },
+        {
+            "original": "halsetdwezel",
+            "changes": "halsetdwezel"
+        },
+        {
+            "original": "indicale",
+            "changes": "indicatie"
+        },
+        {
+            "original": "gaan",
+            "changes": "gaan"
+        },
+        {
+            "original": "genen",
+            "changes": "genen"
+        },
+        {
+            "original": "Wacht",
+            "changes": "Wacht"
+        },
+        {
+            "original": "messe",
+            "changes": "messe"
+        },
+        {
+            "original": "hepa",
+            "changes": "hepa"
+        }
+    ],
+    "tokens_used": 26233,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727737777,
+    "delta_time_s": 10.636739730834961
+}

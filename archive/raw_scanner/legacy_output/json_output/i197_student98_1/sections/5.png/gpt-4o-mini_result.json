@@ -1,0 +1,17 @@
+{
+    "google_quiestion_number": "5",
+    "question_number": 5,
+    "raw_text": "Het is moeilijk omdat het een open reactie vet is en er kunnen dus stoffen ontsnappen",
+    "correctly_spelled_text": "Het is moeilijk omdat het een open reactie vet is en er kunnen dus stoffen ontsnappen",
+    "spelling_corrections": [
+        {
+            "original": "extraheer",
+            "changes": "extraheer"
+        }
+    ],
+    "tokens_used": 14492,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727737596,
+    "delta_time_s": 2.2188849449157715
+}

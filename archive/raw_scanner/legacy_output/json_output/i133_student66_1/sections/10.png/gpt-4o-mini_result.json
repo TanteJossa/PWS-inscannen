@@ -1,0 +1,25 @@
+{
+    "google_quiestion_number": "10",
+    "question_number": 11,
+    "raw_text": "De kta katalysator be\u00efnvloed de reactiensnelheid door de activerings energie te verlagen, waardoor de reactie eerder kan beginnen",
+    "correctly_spelled_text": "De katalysator be\u00efnvloedt de reactiensnelheid door de activeringsenergie te verlagen, waardoor de reactie eerder kan beginnen",
+    "spelling_corrections": [
+        {
+            "original": "kta",
+            "changes": "katalysator"
+        },
+        {
+            "original": "be\u00efnvloed",
+            "changes": "be\u00efnvloedt"
+        },
+        {
+            "original": "energie",
+            "changes": "energie"
+        }
+    ],
+    "tokens_used": 14535,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727735790,
+    "delta_time_s": 3.126021385192871
+}

@@ -1,0 +1,17 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 12,
+    "raw_text": "chemische energie -> mazinte\nen afbaken.",
+    "correctly_spelled_text": "chemische energie -> mazinte\nen afbaken.",
+    "spelling_corrections": [
+        {
+            "original": "mazinte",
+            "changes": "mazinte"
+        }
+    ],
+    "tokens_used": 14531,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728213887,
+    "delta_time_s": 2.7853569984436035
+}

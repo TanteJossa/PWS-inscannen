@@ -1,0 +1,29 @@
+{
+    "google_quiestion_number": "7",
+    "question_number": 1,
+    "raw_text": "wordt  kan  ik  een  aanstaar  of  bedigingsvoegen  verbrandt",
+    "correctly_spelled_text": "wordt kan ik een aanstaar of bedigingsvoegen verbrand",
+    "spelling_corrections": [
+        {
+            "original": "kan",
+            "changes": "kan"
+        },
+        {
+            "original": "aanstaar",
+            "changes": "aanstaar"
+        },
+        {
+            "original": "bedigingsvoegen",
+            "changes": "bedigingsvoegen"
+        },
+        {
+            "original": "verbrandt",
+            "changes": "verbrand"
+        }
+    ],
+    "tokens_used": 14529,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727738760,
+    "delta_time_s": 2.2630743980407715
+}

@@ -1,0 +1,25 @@
+{
+    "google_quiestion_number": "3",
+    "question_number": 3,
+    "raw_text": "Het verfijnen van de begiftstof dit is een van de 4 mogelijkheden om een reactie sneller te laten verlopen Op microniveau zie je dat de deeltjes allemaal met elkaar botsen. Als de deeltjes met elkaar botsen noemen we dat een botsende deeltjesmodel-> moleculen botsen dan",
+    "correctly_spelled_text": "Het verfijnen van de beginstof dit is een van de 4 mogelijkheden om een reactie sneller te laten verlopen Op microniveau zie je dat de deeltjes allemaal met elkaar botsen. Als de deeltjes met elkaar botsen noemen we dat een botsend deeltjesmodel-> moleculen botsen dan",
+    "spelling_corrections": [
+        {
+            "original": "begiftstof",
+            "changes": "beginstof"
+        },
+        {
+            "original": "de deeltjes",
+            "changes": "de deeltjes"
+        },
+        {
+            "original": "botsende",
+            "changes": "botsend"
+        }
+    ],
+    "tokens_used": 14602,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727736806,
+    "delta_time_s": 5.037792205810547
+}

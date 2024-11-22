@@ -1,0 +1,33 @@
+{
+    "google_quiestion_number": "13",
+    "question_number": 1,
+    "raw_text": "De rectitiewijze van de gluwse die wij verhanden in ons lidbon, is onze lidbonwente.",
+    "correctly_spelled_text": "De rectiewijze van de glucose die wij verhandelen in ons lichaam, is onze lichaamwente.",
+    "spelling_corrections": [
+        {
+            "original": "rectitiewijze",
+            "changes": "rectiewijze"
+        },
+        {
+            "original": "gluwse",
+            "changes": "glucose"
+        },
+        {
+            "original": "verhanden",
+            "changes": "verhandelen"
+        },
+        {
+            "original": "lidbon",
+            "changes": "lichaam"
+        },
+        {
+            "original": "lidbonwente",
+            "changes": "lichaamwente"
+        }
+    ],
+    "tokens_used": 14553,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727736234,
+    "delta_time_s": 4.515016555786133
+}

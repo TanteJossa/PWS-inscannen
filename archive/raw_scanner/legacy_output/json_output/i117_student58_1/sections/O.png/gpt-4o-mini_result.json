@@ -1,0 +1,21 @@
+{
+    "google_quiestion_number": "O",
+    "question_number": 10,
+    "raw_text": "Ontdek je dat niet precies kan zeggen hoeveel massa er aan is, en dat je niet het perfecte antwoord kan geven.\nOmdat je niet precies weet hoeveel massa er is, was dus, je kunt het niet vergelijken met elkaar.",
+    "correctly_spelled_text": "Ontdek je dat niet precies kan zeggen hoeveel massa er aan is, en dat je niet het perfecte antwoord kan geven.\nOmdat je niet precies weet hoeveel massa er is, was dus, je kunt het niet vergelijken met elkaar.",
+    "spelling_corrections": [
+        {
+            "original": "Ontdek je dat niet precies kan zeggen hoeveel massa er aan is, en dat je niet het perfecte antwoord kan geven.",
+            "changes": ""
+        },
+        {
+            "original": "Omdat je niet precies weet hoeveel massa er is, was dus, je kunt het niet vergelijken met elkaar.",
+            "changes": ""
+        }
+    ],
+    "tokens_used": 14593,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727735404,
+    "delta_time_s": 3.6532254219055176
+}

@@ -1,0 +1,21 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 8,
+    "raw_text": "Het ongeruikte wordt groter waardoor er op meer plekken effectieve reacties, inclusief.\nOp microscopisch zijn er dus, veel meer deeltjes om tegen elkaar aan te botsen wat de reactietijd verhoogt.",
+    "correctly_spelled_text": "Het ongeruikte wordt groter waardoor er op meer plekken effectieve reacties, inclusief.\nOp microscopisch niveau zijn er dus veel meer deeltjes om tegen elkaar aan te botsen wat de reactietijd verhoogt.",
+    "spelling_corrections": [
+        {
+            "original": "on geruikte",
+            "changes": "ongeregelde"
+        },
+        {
+            "original": "microscopisch",
+            "changes": "microscopisch niveau"
+        }
+    ],
+    "tokens_used": 14614,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728214403,
+    "delta_time_s": 2.757888078689575
+}

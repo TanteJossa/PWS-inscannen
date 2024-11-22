@@ -1,0 +1,21 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 11,
+    "raw_text": "Een Katalysator versnelt de reactie, zonder de reactie met minder energie kan verlopen, en des",
+    "correctly_spelled_text": "Een katalysator versnelt de reactie, zonder de reactie met minder energie kan verlopen, en des",
+    "spelling_corrections": [
+        {
+            "original": "Katalysator",
+            "changes": "katalysator"
+        },
+        {
+            "original": "versnelt de reactie, zonder de reactie met minder energie kan verlopen, en des",
+            "changes": "versnelt de reactie, zonder de reactie met minder energie kan verlopen, en des"
+        }
+    ],
+    "tokens_used": 14592,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728213245,
+    "delta_time_s": 3.922523021697998
+}

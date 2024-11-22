@@ -1,0 +1,33 @@
+{
+    "google_quiestion_number": "8",
+    "question_number": 8,
+    "raw_text": "Het is een exotherm proces, omdat de energie die er uitkomt, er uitkomt in warmte en dat voel je.\n\nHet is een endotherm proces, wanneer je meer el energie in stoppen om het proces op gang te laten lopen. En er is energie nodig om de energie te verbranden.\n\nC2H6S + 3O2 \u2192 8CO2 + 8H2O \u2022 5\n2C2H6S + 3O2 \u2192 8CO2 + 16H2O + 25\n\nDoor een katalysator toe te voegen, heb je de energie te minder activeringsenergie nodig; en daardoor het korter tot je de activiteitsgraad bereikt, dat be\u00efnvloed de reactiesnelheid.",
+    "correctly_spelled_text": "Het is een exotherm proces, omdat de energie die er uitkomt, er uitkomt in warmte en dat voel je.\n\nHet is een endotherm proces, wanneer je meer energie in moet stoppen om het proces op gang te laten lopen. En er is energie nodig om de energie te verbranden.\n\nC2H6S + 3O2 \u2192 8CO2 + 8H2O \u2022 5\n2C2H6S + 3O2 \u2192 8CO2 + 16H2O + 25\n\nDoor een katalysator toe te voegen, heb je de energie te minder activeringsenergie nodig; en daardoor het korter tot je de activiteitsgraad bereikt, dat be\u00efnvloedt de reactiesnelheid.",
+    "spelling_corrections": [
+        {
+            "original": "el energie",
+            "changes": "de energie"
+        },
+        {
+            "original": "verbranden.",
+            "changes": "verbranden.\n"
+        },
+        {
+            "original": "katalysator",
+            "changes": "katalysator"
+        },
+        {
+            "original": "activeringsenergie",
+            "changes": "activeringsenergie"
+        },
+        {
+            "original": "be\u00efnvloed",
+            "changes": "be\u00efnvloedt"
+        }
+    ],
+    "tokens_used": 26166,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727735915,
+    "delta_time_s": 9.158203840255737
+}

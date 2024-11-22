@@ -1,0 +1,17 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 5,
+    "raw_text": "De reactievat is open, de reactievat moet altijd dicht zijn, hierdoor is het lastig om te bepalen of er massa verloren of bij is gekomen, vandaar dat hier de wet van massabehoud niet eigenlijk niet geld",
+    "correctly_spelled_text": "De reactievat is open, de reactievat moet altijd dicht zijn, hierdoor is het lastig om te bepalen of er massa verloren of bij is gekomen, vandaar dat hier de wet van massabehoud niet eigenlijk niet geldt",
+    "spelling_corrections": [
+        {
+            "original": "geld",
+            "changes": "geldig"
+        }
+    ],
+    "tokens_used": 14598,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728213706,
+    "delta_time_s": 2.6167538166046143
+}

@@ -1,0 +1,21 @@
+{
+    "google_quiestion_number": "12",
+    "question_number": 12,
+    "raw_text": "(hemisde energie\u00eb \u2192 warmte",
+    "correctly_spelled_text": "(hemisferische energie \u2192 warmte",
+    "spelling_corrections": [
+        {
+            "original": "hemisde",
+            "changes": "hemisferische"
+        },
+        {
+            "original": "energie\u00eb",
+            "changes": "energie"
+        }
+    ],
+    "tokens_used": 14484,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727740876,
+    "delta_time_s": 2.220426321029663
+}

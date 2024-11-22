@@ -1,0 +1,21 @@
+{
+    "google_quiestion_number": "3-",
+    "question_number": 3,
+    "raw_text": "Ik daar het eigenschaapen van de pindeis exact",
+    "correctly_spelled_text": "Ik daar het eigenschap van de pindeis exact",
+    "spelling_corrections": [
+        {
+            "original": "eigenschaapen",
+            "changes": "eigenschap"
+        },
+        {
+            "original": "pindeis",
+            "changes": "pindeis"
+        }
+    ],
+    "tokens_used": 14494,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727739099,
+    "delta_time_s": 2.8029773235321045
+}

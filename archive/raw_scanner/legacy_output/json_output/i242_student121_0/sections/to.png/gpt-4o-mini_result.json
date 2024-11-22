@@ -1,0 +1,25 @@
+{
+    "google_quiestion_number": "to",
+    "question_number": 1,
+    "raw_text": "toestand sneller bereikt. Hierdoor gaat her 3,5 keer sneller en er is de reactiet snelheid versneld. Zo is de reactiet snelheid be\u00efnvloed\n\nE\n\nE\n\nbeginstof\n\nE<sub>c</sub>\n\n eindproduct\n\nafloop reactie",
+    "correctly_spelled_text": "toestand sneller bereikt. Hierdoor gaat het 3,5 keer sneller en is de reactiet snelheid versneld. Zo is de reactiet snelheid be\u00efnvloed\n\nE\n\nE\n\nbeginstof\n\nE<sub>c</sub>\n\n eindproduct\n\nafloop reactie",
+    "spelling_corrections": [
+        {
+            "original": "her",
+            "changes": "het"
+        },
+        {
+            "original": "3,5",
+            "changes": ""
+        },
+        {
+            "original": "is de reactiet snelheid versneld",
+            "changes": "is de reactiet snelheid versneld"
+        }
+    ],
+    "tokens_used": 14605,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727738769,
+    "delta_time_s": 4.504167079925537
+}

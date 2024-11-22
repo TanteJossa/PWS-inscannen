@@ -1,0 +1,25 @@
+{
+    "google_quiestion_number": "SE",
+    "question_number": 5,
+    "raw_text": "Dit zal loslijs zijn ambt een deel van de massa in de lucht obstijgt",
+    "correctly_spelled_text": "Dit zal loslijs zijn een deel van de massa in de lucht opstijgt",
+    "spelling_corrections": [
+        {
+            "original": "loslijs",
+            "changes": "loslijf"
+        },
+        {
+            "original": "ambt",
+            "changes": "en"
+        },
+        {
+            "original": "obstijgt",
+            "changes": "opstijgt"
+        }
+    ],
+    "tokens_used": 14517,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727735617,
+    "delta_time_s": 4.78363823890686
+}

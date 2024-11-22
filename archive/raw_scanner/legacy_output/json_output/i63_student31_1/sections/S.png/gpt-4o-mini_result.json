@@ -1,0 +1,29 @@
+{
+    "google_quiestion_number": "S",
+    "question_number": 1,
+    "raw_text": "S Als je de deeltjes gaat tellen zie je dat links en rechts evenveel massa is. Dus er is geen massa bijgekomen of verloren gegaan. die niet zelf zijn.",
+    "correctly_spelled_text": "Als je de deeltjes gaat tellen zie je dat links en rechts evenveel massa is. Dus er is geen massa bijgekomen of verloren gegaan. die niet zelf zijn.",
+    "spelling_corrections": [
+        {
+            "original": "S",
+            "changes": "Verwijderd"
+        },
+        {
+            "original": "de deeltjes",
+            "changes": "deeltjes"
+        },
+        {
+            "original": "evenveel",
+            "changes": "evenveel"
+        },
+        {
+            "original": "bijgekomen",
+            "changes": "bijgekomen"
+        }
+    ],
+    "tokens_used": 14556,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727740015,
+    "delta_time_s": 3.1055524349212646
+}

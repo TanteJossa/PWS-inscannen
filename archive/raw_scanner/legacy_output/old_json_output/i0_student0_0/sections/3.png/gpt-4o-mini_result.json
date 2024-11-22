@@ -1,0 +1,25 @@
+{
+    "google_quiestion_number": "3",
+    "question_number": 3,
+    "raw_text": "de katalysator brengt de C2H5OH\nAntwoord: Activerings energie\nhandhaven de reactie snelheid Snellen 15.\n\nE\ngeactiveerde toestand\nC2H5OH\n\u0394Eo\n\nReactieproduct\nCO2 + H2O + SO2\n\nVerloopreactie\n\n5.\n\nhele proces\n\nVerander producten",
+    "correctly_spelled_text": "de katalysator brengt de C2H5OH\nAntwoord: Activeringsenergie\nhandhaven de reactiesnelheid Snellen 15.\n\nE\ngeactiveerde toestand\nC2H5OH\n\u0394Eo\n\nReactieproduct\nCO2 + H2O + SO2\n\nVerloopreactie\n\n5.\n\nhele proces\n\nVeranderproducten",
+    "spelling_corrections": [
+        {
+            "original": "Activerings energie",
+            "changes": "Activeringsenergie"
+        },
+        {
+            "original": "reactie snelheid",
+            "changes": "reactiesnelheid"
+        },
+        {
+            "original": "Verander producten",
+            "changes": "Veranderproducten"
+        }
+    ],
+    "tokens_used": 25984,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727728966,
+    "delta_time_s": 6.709918260574341
+}

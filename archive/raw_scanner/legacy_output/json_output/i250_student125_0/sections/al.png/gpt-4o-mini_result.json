@@ -1,0 +1,17 @@
+{
+    "google_quiestion_number": "al",
+    "question_number": 1,
+    "raw_text": "en de rechs van de pijl zijn.",
+    "correctly_spelled_text": "en de rechten van de pijl zijn.",
+    "spelling_corrections": [
+        {
+            "original": "rechs",
+            "changes": "rechten"
+        }
+    ],
+    "tokens_used": 14472,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727738922,
+    "delta_time_s": 2.053746461868286
+}

@@ -1,0 +1,17 @@
+{
+    "google_quiestion_number": "GD",
+    "question_number": 6,
+    "raw_text": "6  via fidens een reactie kwalis je geen massa  \ndus 6G - 12 = 6 = 42  \ndie er is 27 groot koper oxide aanstaan  \n\n7  chemische energie -> warmte  \n\n8  exotherm, want er komt energie uit die je hand verwarmt.  \n\n9  endotherm, want als je een machine moet gebruiken dan moet er een bepaalde in en komen en gassen uit dus er goede energie (benzine) in  \n\n10  C + O2 -> CO2  \n",
+    "correctly_spelled_text": "6  via fidens een reactie kwalis je geen massa  \ndus 6G - 12 = 6 = 42  \ndie er is 27 groot koperoxide aanstaan  \n\n7  chemische energie -> warmte  \n\n8  exotherm, want er komt energie uit die je hand verwarmt.  \n\n9  endotherm, want als je een machine moet gebruiken dan moet er een bepaalde in en komen en gassen uit dus er goede energie (benzine) in  \n\n10  C + O2 -> CO2  \n",
+    "spelling_corrections": [
+        {
+            "original": "koper oxide",
+            "changes": "koperoxide"
+        }
+    ],
+    "tokens_used": 14710,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727735813,
+    "delta_time_s": 6.228526830673218
+}

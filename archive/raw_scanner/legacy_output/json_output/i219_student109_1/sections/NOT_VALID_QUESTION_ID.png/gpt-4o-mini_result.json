@@ -1,0 +1,21 @@
+{
+    "google_quiestion_number": "NOT_VALID_QUESTION_ID",
+    "question_number": 9,
+    "raw_text": "Dit blijkt doordat je voor 2 ms de juiste prijs even veel van exact de zelfde tijd hebt voor 2,21, gewoon anders vertellen verhouden, in nieuwe momenten blijft het maar hetzelfde.",
+    "correctly_spelled_text": "Dit blijkt doordat je voor 2 ms de juiste prijs evenveel van exact dezelfde tijd hebt voor 2,21, gewoon anders vertellen verhouden, in nieuwe momenten blijft het maar hetzelfde.",
+    "spelling_corrections": [
+        {
+            "original": "even veel",
+            "changes": "evenveel"
+        },
+        {
+            "original": "de zelfde",
+            "changes": "dezelfde"
+        }
+    ],
+    "tokens_used": 14543,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727738211,
+    "delta_time_s": 3.4360389709472656
+}

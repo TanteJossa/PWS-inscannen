@@ -1,0 +1,33 @@
+{
+    "google_quiestion_number": "678gco10IT13",
+    "question_number": 6,
+    "raw_text": "6 13:55:18 g\nb5-18=u7g\naus er ontstaat u7g, koper (II) oxide\n7 NaCH3COO(s) + H2O \u2192 NaCH3COO\n8 endotherm, want gaat van energie naar chemische reactie.\n\n9 Een eindotherme reactie zet om",
+    "correctly_spelled_text": "6 13:55:18 g\nb5-18=u7g\naus er ontstaat u7g, koper (II) oxide\n7 NaCH3COO(s) + H2O \u2192 NaCH3COO\n8 endotherm, want gaat van energie naar chemische reactie.\n\n9 Een eindotherme reactie zet om",
+    "spelling_corrections": [
+        {
+            "original": "b5-18=u7g",
+            "changes": "b5-18=u7g"
+        },
+        {
+            "original": "aus er ontstaat u7g, koper (II) oxide",
+            "changes": "aus er ontstaat u7g, koper (II) oxide"
+        },
+        {
+            "original": "NaCH3COO(s) + H2O \u2192 NaCH3COO",
+            "changes": "NaCH3COO(s) + H2O \u2192 NaCH3COO"
+        },
+        {
+            "original": "endotherm, want gaat van energie naar chemische reactie.",
+            "changes": "endotherm, want gaat van energie naar chemische reactie."
+        },
+        {
+            "original": "Een eindotherme reactie zet om",
+            "changes": "Een eindotherme reactie zet om"
+        }
+    ],
+    "tokens_used": 14735,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727729361,
+    "delta_time_s": 6.026824951171875
+}

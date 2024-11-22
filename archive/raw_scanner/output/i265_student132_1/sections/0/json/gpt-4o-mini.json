@@ -1,0 +1,25 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 5,
+    "raw_text": "De Het reaktievit is open, daardoor kan de massa dus verschillen als e bijv. doordat het reaktievat open is of een andere massa afkomt.\n\nof er geldt: Cn(Hn)=(2)Cn(OHn)(Cn(H2O)n)",
+    "correctly_spelled_text": "De reactievat is open, daardoor kan de massa dus verschillen als je bijv. doordat het reactievat open is of een andere massa afkomt.\n\nof er geldt: Cn(Hn)=(2)Cn(OHn)(Cn(H2O)n)",
+    "spelling_corrections": [
+        {
+            "original": "rektievit",
+            "changes": "reactievat"
+        },
+        {
+            "original": "e",
+            "changes": "je"
+        },
+        {
+            "original": "rektievat",
+            "changes": "reactievat"
+        }
+    ],
+    "tokens_used": 14646,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728215350,
+    "delta_time_s": 5.520974636077881
+}

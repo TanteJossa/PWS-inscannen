@@ -1,0 +1,21 @@
+{
+    "google_quiestion_number": "d",
+    "question_number": 1,
+    "raw_text": "duidelijk effect heeft bo-in en gaat de schadingsmethode sneller",
+    "correctly_spelled_text": "duidelijk effect heeft bo-in en gaat de schadingsmethode sneller",
+    "spelling_corrections": [
+        {
+            "original": "duidelijk effect heeft bo-in",
+            "changes": ""
+        },
+        {
+            "original": "en gaat de schadingsmethode sneller",
+            "changes": ""
+        }
+    ],
+    "tokens_used": 14502,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727739220,
+    "delta_time_s": 1.9086592197418213
+}

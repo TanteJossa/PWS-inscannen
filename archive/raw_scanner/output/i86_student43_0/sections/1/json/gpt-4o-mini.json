@@ -1,0 +1,37 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 6,
+    "raw_text": "6 volgens de wet van massabehoud staat er links van de pijl evenveel massa als rechts van de pijl. Dus in totaal zou er weer\n65 gram reactief moeten ontstaan.\nde Co2 + H2O zijn in totaal 13+5=18g\n65-18=47\nin totaal is er 47 gram hopen dat er oxide ontstaat na de pijl.",
+    "correctly_spelled_text": "6 volgens de wet van massabehoud staat er links van de pijl evenveel massa als rechts van de pijl. Dus in totaal zou er weer\n65 gram reactief moeten ontstaan.\nde CO2 + H2O zijn in totaal 13+5=18g\n65-18=47\nin totaal is er 47 gram hopen dat er oxide ontstaat na de pijl.",
+    "spelling_corrections": [
+        {
+            "original": "massabehoud",
+            "changes": "massabehoud"
+        },
+        {
+            "original": "reactief",
+            "changes": "reactief"
+        },
+        {
+            "original": "Co2",
+            "changes": "CO2"
+        },
+        {
+            "original": "ontstaan.",
+            "changes": "ontstaan."
+        },
+        {
+            "original": "oxide",
+            "changes": "oxide"
+        },
+        {
+            "original": "hopen",
+            "changes": "hopen"
+        }
+    ],
+    "tokens_used": 14716,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728216343,
+    "delta_time_s": 4.96045708656311
+}

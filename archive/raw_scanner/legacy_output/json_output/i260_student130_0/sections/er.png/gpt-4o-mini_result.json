@@ -1,0 +1,21 @@
+{
+    "google_quiestion_number": "er",
+    "question_number": 1,
+    "raw_text": "en contact oppevaletate hrisic. Hierdoor kunnen maar",
+    "correctly_spelled_text": "en contact oppervlakte hrisic. Hierdoor kunnen maar",
+    "spelling_corrections": [
+        {
+            "original": "oppevaletate",
+            "changes": "oppervlakte"
+        },
+        {
+            "original": "Hierdoor",
+            "changes": "Hierdoor"
+        }
+    ],
+    "tokens_used": 14496,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727739223,
+    "delta_time_s": 2.800402879714966
+}

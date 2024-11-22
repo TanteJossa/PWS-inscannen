@@ -1,0 +1,37 @@
+{
+    "google_quiestion_number": "113",
+    "question_number": 13,
+    "raw_text": "De fotosynthese haalt energie van het zonlicht.",
+    "correctly_spelled_text": "De fotosynthese haalt energie van het zonlicht.",
+    "spelling_corrections": [
+        {
+            "original": "fotosynthese",
+            "changes": "fotosynthese"
+        },
+        {
+            "original": "haalt",
+            "changes": "haalt"
+        },
+        {
+            "original": "energie",
+            "changes": "energie"
+        },
+        {
+            "original": "van",
+            "changes": "van"
+        },
+        {
+            "original": "het",
+            "changes": "het"
+        },
+        {
+            "original": "zonlicht",
+            "changes": "zonlicht."
+        }
+    ],
+    "tokens_used": 25859,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727737369,
+    "delta_time_s": 3.5800561904907227
+}

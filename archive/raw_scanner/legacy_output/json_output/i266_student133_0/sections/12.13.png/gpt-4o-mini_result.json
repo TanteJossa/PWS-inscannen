@@ -1,0 +1,17 @@
+{
+    "google_quiestion_number": "12.13",
+    "question_number": 11,
+    "raw_text": "De katalysator kan ervoor zorgen dat de activiteitsenergie wordt verlaagd;  \nhet kost dus minder energie om de reactie te laten verlopen en zal de reactie dus sneller plaatsvinden..",
+    "correctly_spelled_text": "De katalysator kan ervoor zorgen dat de activiteitsenergie wordt verlaagd;  \nhet kost dus minder energie om de reactie te laten verlopen en zal de reactie dus sneller plaatsvinden.",
+    "spelling_corrections": [
+        {
+            "original": "plaatsvinden..",
+            "changes": "plaatsvinden."
+        }
+    ],
+    "tokens_used": 14534,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727739313,
+    "delta_time_s": 3.425180196762085
+}

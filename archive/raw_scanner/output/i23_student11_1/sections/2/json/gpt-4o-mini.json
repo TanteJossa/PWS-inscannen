@@ -1,0 +1,17 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 7,
+    "raw_text": "chemische enzy + werk",
+    "correctly_spelled_text": "chemische energie + werk",
+    "spelling_corrections": [
+        {
+            "original": "enzy",
+            "changes": "energie"
+        }
+    ],
+    "tokens_used": 14517,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728214935,
+    "delta_time_s": 2.496760129928589
+}

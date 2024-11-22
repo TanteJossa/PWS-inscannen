@@ -1,0 +1,29 @@
+{
+    "google_quiestion_number": "23AEchemischeenerge",
+    "question_number": 1,
+    "raw_text": "\u0394E\nklinische energie\n\nactivatie-energie\nreactiewarmte\n\nafloop reactie",
+    "correctly_spelled_text": "\u0394E\nklinische energie\n\nactivatie-energie\nreactiewarmte\n\nafloop reactie",
+    "spelling_corrections": [
+        {
+            "original": "klinische energie",
+            "changes": "klinische energie"
+        },
+        {
+            "original": "activiersnraje",
+            "changes": "activatie-energie"
+        },
+        {
+            "original": "reactiewarme",
+            "changes": "reactiewarmte"
+        },
+        {
+            "original": "afloop reactie",
+            "changes": "afloop reactie"
+        }
+    ],
+    "tokens_used": 14542,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727736904,
+    "delta_time_s": 2.797534704208374
+}

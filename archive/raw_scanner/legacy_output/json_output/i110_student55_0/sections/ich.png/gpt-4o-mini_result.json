@@ -1,0 +1,17 @@
+{
+    "google_quiestion_number": "ich",
+    "question_number": 1,
+    "raw_text": "a tecora",
+    "correctly_spelled_text": "a tecora",
+    "spelling_corrections": [
+        {
+            "original": "tecora",
+            "changes": "tecora"
+        }
+    ],
+    "tokens_used": 14464,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727735176,
+    "delta_time_s": 1.7085058689117432
+}

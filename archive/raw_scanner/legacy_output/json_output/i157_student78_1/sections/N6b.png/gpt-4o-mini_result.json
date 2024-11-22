@@ -1,0 +1,21 @@
+{
+    "google_quiestion_number": "N6b",
+    "question_number": 1,
+    "raw_text": "Massa gaat niet verloren omdat je uit de reactievergelijking ziet dat dezelfde moleculen er nog in zitten\n\nHet zal lastig zijn om praktisch aan te tonen dat deze reactie voldoet aan de wet van massa, omdat het eruit ziet alsof het minder wordt.\n\n13 g Ca 5 g H2O 2 CaO + 2 H2O\n\ndus 67 gram - ijzer(II)oxide\n\nNaCl3COO (s) \u2192 NaCH3COO (s) + H2O (l)\n\nEen endotherme proces want er gaat minder energie in dan dat er uit komt.",
+    "correctly_spelled_text": "Massa gaat niet verloren omdat je uit de reactievergelijking ziet dat dezelfde moleculen er nog in zitten\n\nHet zal lastig zijn om praktisch aan te tonen dat deze reactie voldoet aan de wet van massa, omdat het eruit ziet alsof het minder wordt.\n\n13 g Ca 5 g H2O 2 CaO + 2 H2O\n\ndus 67 gram - ijzer(II)oxide\n\nNaCl3COO (s) \u2192 NaCH3COO (s) + H2O (l)\n\nEen endotherm proces want er gaat minder energie in dan dat er uit komt.",
+    "spelling_corrections": [
+        {
+            "original": "endotherme",
+            "changes": "endotherm"
+        },
+        {
+            "original": "proces",
+            "changes": "proces"
+        }
+    ],
+    "tokens_used": 26066,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727736388,
+    "delta_time_s": 7.772663116455078
+}

@@ -1,0 +1,37 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 3,
+    "raw_text": "stukjes pindas gaat sulken in een reactie van de  \nbeschrijving verdelinggraag; is groter als de andere. Dus  \nboven zorgen grote contactoppervlakte op microscopische  \nniveau, hebben de deeltjes een en andere keer echt de deeltjes baten. De  \ncontactoppervlakte is ook groter. Bij de bestaande deeltjesmodel  \ngeldt de regel dat hoe groter de oppervlakte, hoe  \ngroter de deeltjes basis dan meer effectieve belagingen.  \n(waarin de reactie den sneller gaat).",
+    "correctly_spelled_text": "stukjes pindas gaat sulken in een reactie van de  \nbeschrijving verdeling; is groter dan de andere. Dus  \nboven zorgen grote contactoppervlakte op microscopische  \nniveau, hebben de deeltjes een en andere keer echt de deeltjes baten. De  \ncontactoppervlakte is ook groter. Bij het bestaande deeltjesmodel  \ngeldt de regel dat hoe groter de oppervlakte, hoe  \ngroter de deeltjesbasis dan meer effectieve belagingen.  \n(waarin de reactie dan sneller gaat).",
+    "spelling_corrections": [
+        {
+            "original": "verdelinggraag",
+            "changes": "verdeling"
+        },
+        {
+            "original": "als",
+            "changes": "dan"
+        },
+        {
+            "original": "de deeltjes basis",
+            "changes": "deeltjesbasis"
+        },
+        {
+            "original": "bestaande",
+            "changes": "bestaande"
+        },
+        {
+            "original": "de deeltjes basis",
+            "changes": "deeltjesbasis"
+        },
+        {
+            "original": "den",
+            "changes": "dan"
+        }
+    ],
+    "tokens_used": 14805,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728215493,
+    "delta_time_s": 5.7607386112213135
+}

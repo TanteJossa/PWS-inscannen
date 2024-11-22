@@ -1,0 +1,29 @@
+{
+    "google_quiestion_number": "at",
+    "question_number": 1,
+    "raw_text": "atmeent ; vaandaar de reactie_stellerwecoup. De katalysator wordt gebruit",
+    "correctly_spelled_text": "atmeent; waardoor de reactie sneller verloopt. De katalysator wordt gebruikt",
+    "spelling_corrections": [
+        {
+            "original": "atmeent ;",
+            "changes": "atmeent; "
+        },
+        {
+            "original": "vaandaar",
+            "changes": "waardoor"
+        },
+        {
+            "original": "reactie_stellerwecoup.",
+            "changes": "reactie sneller verloopt."
+        },
+        {
+            "original": "katalysator wordt gebruit",
+            "changes": "katalysator wordt gebruikt"
+        }
+    ],
+    "tokens_used": 14551,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727737928,
+    "delta_time_s": 7.51392126083374
+}

@@ -1,0 +1,29 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 13,
+    "raw_text": "Exotherm proceses, want de warmte er ten warme uit wat er voor zorgt dat de temperatuur in de omgeving stijgt. Er komt meer energie uit dan dat er wordt geabsorbeerd",
+    "correctly_spelled_text": "Exotherme processen, want de warmte er ten warme uit wat ervoor zorgt dat de temperatuur in de omgeving stijgt. Er komt meer energie uit dan dat er wordt geabsorbeerd",
+    "spelling_corrections": [
+        {
+            "original": "Exotherm",
+            "changes": "Exotherme"
+        },
+        {
+            "original": "proceses",
+            "changes": "processen"
+        },
+        {
+            "original": "er voor",
+            "changes": "ervoor"
+        },
+        {
+            "original": "geabsorbeerd",
+            "changes": "geabsorbeerd"
+        }
+    ],
+    "tokens_used": 25952,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728215023,
+    "delta_time_s": 2.837237596511841
+}

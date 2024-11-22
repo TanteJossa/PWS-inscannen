@@ -1,0 +1,25 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 1,
+    "raw_text": "zullen worden en de lucht in gaan door de thermodynamsche, waardoor het zich overal verspreid en je het niet meer kunt meten.",
+    "correctly_spelled_text": "zullen worden en de lucht in gaan door de thermodynamische, waardoor het zich overal verspreidt en je het niet meer kunt meten.",
+    "spelling_corrections": [
+        {
+            "original": "thermodynamsche",
+            "changes": "thermodynamische"
+        },
+        {
+            "original": "verspreid",
+            "changes": "verspreidt"
+        },
+        {
+            "original": "kunt",
+            "changes": "kunt"
+        }
+    ],
+    "tokens_used": 14591,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728216272,
+    "delta_time_s": 2.7420780658721924
+}

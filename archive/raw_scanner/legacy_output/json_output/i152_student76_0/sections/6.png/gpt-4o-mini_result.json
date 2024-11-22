@@ -1,0 +1,21 @@
+{
+    "google_quiestion_number": "6",
+    "question_number": 1,
+    "raw_text": "G 6, 65 - 5 - 13 = 47\ndus er is 47 gram Koper(II)oxide aanwezig.",
+    "correctly_spelled_text": "G 6, 65 - 5 - 13 = 47\ndus er is 47 gram Koper(II)oxide aanwezig.",
+    "spelling_corrections": [
+        {
+            "original": "G 6, 65 - 5 - 13 = 47",
+            "changes": ""
+        },
+        {
+            "original": "dus er is 47 gram Koper(II)oxide aanwezig.",
+            "changes": ""
+        }
+    ],
+    "tokens_used": 14548,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727736210,
+    "delta_time_s": 2.784377098083496
+}

@@ -1,0 +1,29 @@
+{
+    "handprint_question_number": "10-",
+    "question_number": 8,
+    "raw_text": "& En exotherm proces, want het blijven is de activatiering energie alleen je hoeft niet te blijven blikken om de handwarmere worm te houden, de energie die de reactie creert is genoeg om de reactie gaande te houden, ook wordt chemische energie omgezet in warmte energie.",
+    "correctly_spelled_text": "En exotherm proces, want het blijven is de activeringsenergie alleen je hoeft niet te blijven blikken om de handwarmer warm te houden, de energie die de reactie cre\u00ebert is genoeg om de reactie gaande te houden, ook wordt chemische energie omgezet in warmte-energie.",
+    "spelling_corrections": [
+        {
+            "original": "activatiering",
+            "changes": "activeringsenergie"
+        },
+        {
+            "original": "handwarmere",
+            "changes": "handwarmer"
+        },
+        {
+            "original": "creert",
+            "changes": "cre\u00ebert"
+        },
+        {
+            "original": "warmte energie",
+            "changes": "warmte-energie"
+        }
+    ],
+    "tokens_used": 14666,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1728215313,
+    "delta_time_s": 4.626494884490967
+}

@@ -1,0 +1,25 @@
+{
+    "google_quiestion_number": "42",
+    "question_number": 1,
+    "raw_text": "het is een exotherm proces omdat er meer energie vrijkomt dan er in de beginstoffen gaat. dit is het exotherm  \n onder  blud  te  geffect",
+    "correctly_spelled_text": "het is een exotherm proces omdat er meer energie vrijkomt dan er in de beginstoffen gaat. dit is het exotherm  \n onder  blud  te  effect",
+    "spelling_corrections": [
+        {
+            "original": "exotherm",
+            "changes": "exotherm"
+        },
+        {
+            "original": "blud",
+            "changes": "blud"
+        },
+        {
+            "original": "geffect",
+            "changes": "effect"
+        }
+    ],
+    "tokens_used": 14556,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727729268,
+    "delta_time_s": 3.0437793731689453
+}

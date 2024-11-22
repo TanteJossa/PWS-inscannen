@@ -1,0 +1,21 @@
+{
+    "google_quiestion_number": "1021013C",
+    "question_number": 10,
+    "raw_text": "het zou moeilijk zijn om te horen dat de wet van wassen behoud er  onder CO2 een gas is en H2O dat, dus raak je ze kwijt.\n650 - 120 - 5g = 47g koper (II) oxide",
+    "correctly_spelled_text": "het zou moeilijk zijn om te horen dat de wet van behoud van massa er onder CO2 een gas is en H2O dat, dus raak je ze kwijt.\n650 - 120 - 5g = 47g koper (II) oxide",
+    "spelling_corrections": [
+        {
+            "original": "de wet van wassen behoud er",
+            "changes": "de wet van behoud van massa er"
+        },
+        {
+            "original": "H2O dat, dus raak je ze kwijt.",
+            "changes": "H2O dat, dus raak je ze kwijt."
+        }
+    ],
+    "tokens_used": 14594,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727738865,
+    "delta_time_s": 3.1998772621154785
+}

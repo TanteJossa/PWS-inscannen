@@ -1,0 +1,41 @@
+{
+    "google_quiestion_number": "NOT_VALID_QUESTION_ID",
+    "question_number": 9,
+    "raw_text": "In ciele sactie is er spaken van de wet van massa behoud. Das geldt dat eng de massa voor en na de fyi gelijk zyn, endant atomen my.",
+    "correctly_spelled_text": "In deze situatie is er sprake van de wet van massa behoud. Dat geldt dat en de massa voor en na de fy gelijk zijn, en dat atomen my.",
+    "spelling_corrections": [
+        {
+            "original": "ciele sactie",
+            "changes": "deze situatie"
+        },
+        {
+            "original": "spaken",
+            "changes": "sprake"
+        },
+        {
+            "original": "Das",
+            "changes": "Dat"
+        },
+        {
+            "original": "eng",
+            "changes": "en"
+        },
+        {
+            "original": "fyi",
+            "changes": "fy"
+        },
+        {
+            "original": "gelijk zyn",
+            "changes": "gelijk zijn"
+        },
+        {
+            "original": "endant",
+            "changes": "en dat"
+        }
+    ],
+    "tokens_used": 14586,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727736752,
+    "delta_time_s": 3.5897648334503174
+}

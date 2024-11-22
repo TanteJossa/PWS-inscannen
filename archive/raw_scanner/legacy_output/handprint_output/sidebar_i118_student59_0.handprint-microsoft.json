@@ -1,0 +1,125 @@
+{
+  "analyzeResult": {
+    "modelVersion": "2022-04-30",
+    "readResults": [
+      {
+        "angle": 7.6276,
+        "height": 845,
+        "lines": [
+          {
+            "appearance": {
+              "style": {
+                "confidence": 0.692,
+                "name": "other"
+              }
+            },
+            "boundingBox": [
+              57,
+              188,
+              65,
+              189,
+              64,
+              197,
+              57,
+              196
+            ],
+            "text": "\u0666",
+            "words": [
+              {
+                "boundingBox": [
+                  60,
+                  188,
+                  65,
+                  189,
+                  64,
+                  197,
+                  59,
+                  196
+                ],
+                "confidence": 0.276,
+                "text": "\u0666"
+              }
+            ]
+          },
+          {
+            "appearance": {
+              "style": {
+                "confidence": 0.428,
+                "name": "handwriting"
+              }
+            },
+            "boundingBox": [
+              58,
+              199,
+              63,
+              200,
+              62,
+              208,
+              57,
+              207
+            ],
+            "text": "1",
+            "words": [
+              {
+                "boundingBox": [
+                  58,
+                  199,
+                  62,
+                  200,
+                  61,
+                  207,
+                  57,
+                  207
+                ],
+                "confidence": 0.898,
+                "text": "1"
+              }
+            ]
+          },
+          {
+            "appearance": {
+              "style": {
+                "confidence": 0.428,
+                "name": "handwriting"
+              }
+            },
+            "boundingBox": [
+              78,
+              250,
+              94,
+              250,
+              94,
+              263,
+              78,
+              263
+            ],
+            "text": "13",
+            "words": [
+              {
+                "boundingBox": [
+                  80,
+                  250,
+                  94,
+                  250,
+                  94,
+                  263,
+                  80,
+                  263
+                ],
+                "confidence": 0.54,
+                "text": "13"
+              }
+            ]
+          }
+        ],
+        "page": 1,
+        "unit": "pixel",
+        "width": 105
+      }
+    ],
+    "version": "3.2.0"
+  },
+  "createdDateTime": "2024-09-30T21:54:39Z",
+  "lastUpdatedDateTime": "2024-09-30T21:54:40Z",
+  "status": "succeeded"
+}

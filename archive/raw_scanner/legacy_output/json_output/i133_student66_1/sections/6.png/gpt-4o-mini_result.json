@@ -1,0 +1,17 @@
+{
+    "google_quiestion_number": "6",
+    "question_number": 7,
+    "raw_text": "7\nchemische energie -> warmte\n8\nexotherm, want er komt energie uit dit je hand verwarmt.\n9\nendotherm, want als je een machine moet gebruiken dan moet er eerst benzine in en komen er gassen uit dus ex fock energie (benzine) in",
+    "correctly_spelled_text": "7\nchemische energie -> warmte\n8\nexotherm, want er komt energie uit dit je hand verwarmt.\n9\nendotherm, want als je een machine moet gebruiken dan moet er eerst benzine in en komen er gassen uit dus ex fock energie (benzine) in",
+    "spelling_corrections": [
+        {
+            "original": "ex fock",
+            "changes": "fock -> foc"
+        }
+    ],
+    "tokens_used": 14583,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727735795,
+    "delta_time_s": 5.343104839324951
+}

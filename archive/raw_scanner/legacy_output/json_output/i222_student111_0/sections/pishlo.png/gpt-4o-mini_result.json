@@ -1,0 +1,17 @@
+{
+    "google_quiestion_number": "pishlo",
+    "question_number": 1,
+    "raw_text": "leefstijlen\ngeef de leefstijlen\nbeschrijven\nopgaves",
+    "correctly_spelled_text": "leefstijlen\ngeef de leefstijlen\nbeschrijven\nopgaven",
+    "spelling_corrections": [
+        {
+            "original": "opgaves",
+            "changes": "opgaven"
+        }
+    ],
+    "tokens_used": 14496,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727738300,
+    "delta_time_s": 2.328529119491577
+}

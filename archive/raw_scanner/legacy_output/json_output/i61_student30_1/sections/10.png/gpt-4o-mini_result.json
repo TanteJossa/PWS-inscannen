@@ -1,0 +1,33 @@
+{
+    "google_quiestion_number": "10",
+    "question_number": 10,
+    "raw_text": "E_7 H_1 S(1) + 2 O_2 (g) -> S O_2 (g) + E_7 H_{16} O_2 (g)",
+    "correctly_spelled_text": "E\u2087 H\u2081 S(1) + 2 O\u2082 (g) -> SO\u2082 (g) + E\u2087 H\u2081\u2086 O\u2082 (g)",
+    "spelling_corrections": [
+        {
+            "original": "E_7",
+            "changes": "E\u2087"
+        },
+        {
+            "original": "H_1",
+            "changes": "H\u2081"
+        },
+        {
+            "original": "O_2",
+            "changes": "O\u2082"
+        },
+        {
+            "original": "S O_2",
+            "changes": "SO\u2082"
+        },
+        {
+            "original": "E_7 H_{16} O_2",
+            "changes": "E\u2087 H\u2081\u2086 O\u2082"
+        }
+    ],
+    "tokens_used": 14598,
+    "model_used": "gpt-4o-mini",
+    "model_version": "gpt-4o-mini-2024-07-18",
+    "timestamp": 1727739976,
+    "delta_time_s": 4.112389326095581
+}
