@@ -116,7 +116,7 @@ def extract_red_pen(id, base64_image):
                             red_pen_pixdata[x + i - radius, y + j - radius] = clean_pixdata2[x + i - radius, y + j - radius]
 
                             # copy the old red pen values
-                            clean_pixdata[x + i - radius, y + j - radius] = (255, 255, 255)
+                            # clean_pixdata[x + i - radius, y + j - radius] = (255, 255, 255)
                         except:
                             pass
 

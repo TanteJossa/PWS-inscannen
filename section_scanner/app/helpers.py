@@ -20,6 +20,11 @@ def pillow_to_base64(pillow_image):
     buffered = BytesIO()
     pillow_image.save(buffered, format="PNG")
     img_str = base64.b64encode(buffered.getvalue()).decode('utf-8')
+    
+    
+    if not img_str.startswith('data:image'):
+        img_str = "data:image/png;base64," + img_str
+    
     return img_str
 
 def base64_to_pillow(base64_string):
@@ -50,6 +55,10 @@ def cv2_to_base64(cv2_image):
     if success:
         # Step 3: Convert the buffer to a base64 string
         base64_string = base64.b64encode(buffer).decode('utf-8')
+        
+        if not base64_string.startswith('data:image'):
+            base64_string = "data:image/png;base64," + base64_string
+        
         return base64_string
     else:
         return None
@@ -100,7 +109,10 @@ def png_to_base64(file_path, quality=1):
     else:
         with open(file_path, "rb") as image_file:
             base64_string = base64.b64encode(image_file.read()).decode("utf-8")
-    return "data:image/png;base64,"+base64_string #
+    if not base64_string.startswith('data:image'):
+        base64_string = "data:image/png;base64," + base64_string
+    
+    return base64_string #
 
 def base64_to_png(base64_string, output_path):
     if not output_path.endswith('.png'):
