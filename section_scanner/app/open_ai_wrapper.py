@@ -45,7 +45,7 @@ def copy_image(image_path, target_path):
 
 def get_client():
     with open("creds/openaikey.json", "r") as f:
-        openai_key = json.load(f)["key"]
+        openai_key = json.load(f)["key2"]
     
 
     openai_client = OpenAI(api_key=openai_key)
@@ -76,35 +76,36 @@ def get_response_json(response, gpt_model, start_time, end_time):
     return output_json
 
 
-def single_request(messages, response_format):
+def openai_single_request(messages, response_format, model = False, temperature=False):
+    if (not model):
+        model = "gpt-4o-mini"
+        
+    if not temperature:
+        temperature = 0.02
     
     openai_client = get_client()
     
-    gpt_model = "gpt-4o-mini"
-
     start_time = time.time()
 
-    print("GPT request... ")
     
     try:
         response = openai_client.beta.chat.completions.parse(
-            model=gpt_model,
-            temperature=0.05,
+            model=model,
+            temperature=temperature,
             messages=messages,
             response_format=response_format,
             # max_tokens=30_000, #test image was 15k tokens
             timeout=14
         )
     except Exception as e:
-        print("GPT request... ERROR")
+        print("GPT request... ERROR", str(e))
         raise Exception(str(e))
         return False
-    print("GPT request... Done")
 
     end_time = time.time()
 
 
-    reponse_json = get_response_json(response, gpt_model, start_time, end_time)
+    reponse_json = get_response_json(response, model, start_time, end_time)
 
     return reponse_json
 

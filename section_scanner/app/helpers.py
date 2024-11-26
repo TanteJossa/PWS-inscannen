@@ -237,7 +237,7 @@ def get_black_square_data(image,  min_size=15):
         x, y, w, h = cv2.boundingRect(contour)
         
         # oly select filled boxes on the right
-        if (x > int(1.7/21 * image.width)):
+        if (x > int(1.9/21 * image.width)):
             continue
         
 

@@ -1,0 +1,126 @@
+[
+    {
+        "quote": "Je moet schieten, anders kun je niet scoren.",
+        "quote_changed": "Je moet schieten, nders kun je niet scoren.",
+        "person": "Johan Cruijff",
+        "year": 1980,
+        "test": "enkele letterverandering",
+        "score": 0.19370876948914964,
+        "changes": [
+            [
+                "delete",
+                [
+                    18,
+                    19
+                ],
+                ""
+            ]
+        ]
+    },
+    {
+        "quote": "Je moet schieten, anders kun je niet scoren.",
+        "quote_changed": "Je moet schoten, anders kun je niet scoren.",
+        "person": "Johan Cruijff",
+        "year": 1980,
+        "test": "enkele woordverandering, geen betekenisverandering",
+        "score": 0.21462842758854445,
+        "changes": [
+            [
+                "replace",
+                [
+                    11,
+                    13
+                ],
+                "o"
+            ]
+        ]
+    },
+    {
+        "quote": "Je moet schieten, anders kun je niet scoren.",
+        "quote_changed": "Je moet schoten, anders kun je niet scoren.",
+        "person": "Johan Cruijff",
+        "year": 1980,
+        "test": "woordweglating",
+        "score": 0.21462842758854445,
+        "changes": [
+            [
+                "replace",
+                [
+                    11,
+                    13
+                ],
+                "o"
+            ]
+        ]
+    },
+    {
+        "quote": "Je moet schieten, anders kun je niet scoren.",
+        "quote_changed": "Je moet roeien, anders kun je niet scoren.",
+        "person": "Johan Cruijff",
+        "year": 1980,
+        "test": "enkele woordverandering, wel betekenisverandering",
+        "score": 0.3282647912249081,
+        "changes": [
+            [
+                "replace",
+                [
+                    8,
+                    11
+                ],
+                "roe"
+            ],
+            [
+                "delete",
+                [
+                    12,
+                    14
+                ],
+                ""
+            ]
+        ]
+    },
+    {
+        "quote": "Je moet schieten, anders kun je niet scoren.",
+        "quote_changed": "Je moet schoten,.",
+        "person": "Johan Cruijff",
+        "year": 1980,
+        "test": "zinsdeelweglating",
+        "score": 1.1590909090909092,
+        "changes": [
+            [
+                "replace",
+                [
+                    11,
+                    13
+                ],
+                "o"
+            ],
+            [
+                "delete",
+                [
+                    17,
+                    43
+                ],
+                ""
+            ]
+        ]
+    },
+    {
+        "quote": "Je moet schieten, anders kun je niet scoren.",
+        "quote_changed": "",
+        "person": "Johan Cruijff",
+        "year": 1980,
+        "test": "tekstweglating",
+        "score": 1.5,
+        "changes": [
+            [
+                "delete",
+                [
+                    0,
+                    44
+                ],
+                ""
+            ]
+        ]
+    }
+]

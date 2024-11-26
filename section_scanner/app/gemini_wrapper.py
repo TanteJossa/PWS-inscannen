@@ -17,38 +17,53 @@ genai.configure(api_key=data["key"])
 class DefaultResponse(typing_extensions.TypedDict):
     response: str
 
-def google_single_image_request(tekst, base64_image, model="gemini-1.5-flash", id=get_random_id(), response_format=None):
-    # 1. Remove the Data URI Prefix
-    base64_image = base64_image.split(",")[1]  # Get the part after the comma
-
-    # 2. Decode (Now with clean base64 data)
-    image_data = base64.b64decode(base64_image)
-    image = Image.open(io.BytesIO(image_data))
+def google_single_image_request(text, base64_image=False, model=False, temperature=False, id=get_random_id(), response_format=None):
+    if not model:
+        model = "gemini-1.5-flash"
+    if not temperature:
+        temperature = 0.05
     
-    # Save to a BytesIO buffer
-    img_buffer = io.BytesIO()
-    image.save(img_buffer, format="PNG") 
-    img_buffer.seek(0)  # Reset the buffer to the beginning
+    task_list = []
+
+    if base64_image:
+        if base64_string.startswith('data:image'):
+            base64_string = base64_string.split(',')[1]    
+
+        # 1. Remove the Data URI Prefix
+        base64_image = base64_image.split(",")[1]  # Get the part after the comma
+
+        # 2. Decode (Now with clean base64 data)
+        image_data = base64.b64decode(base64_image)
+        image = Image.open(io.BytesIO(image_data))
+        
+        # Save to a BytesIO buffer
+        img_buffer = io.BytesIO()
+        image.save(img_buffer, format="PNG") 
+        img_buffer.seek(0)  # Reset the buffer to the beginning
 
 
+        
+        image_file = genai.upload_file(img_buffer, mime_type="image/png")    
+        task_list.append(image_file)
     
-    image_file = genai.upload_file(img_buffer, mime_type="image/png")    
+    task_list.append('\n\n', text)
 
     model = genai.GenerativeModel(model)
     print('Starting gemini request...')
     result = model.generate_content(
-        [image_file, "\n\n", tekst], 
+        task_list, 
         generation_config=genai.GenerationConfig(
             response_mime_type="application/json",
-            response_schema= response_format
+            response_schema= response_format,
+            temperature=temperature,
         )
         
     )
     print('Starting gemini request... Done')
 
     
-    
-    image_file.delete()
+    if base64_image:
+        image_file.delete()
     
     return result
     print(f"{result.text=}")

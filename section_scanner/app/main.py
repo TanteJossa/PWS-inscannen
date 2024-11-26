@@ -27,7 +27,8 @@ from scan_module import (
     sectionize,
     question_selector_info,
     stack_answer_sections,
-    transcribe_answer
+    transcribe_answer,
+    scan_page
 )
 
 
@@ -111,77 +112,29 @@ def get_qr_section():
         return {"error": str(e)}
 
 @app.route("/scan_page", methods = ['GET', 'POST'])
-def scan_page():
+def scan_fullpage():
     try:
         start_time = time.time()
         if ("id" in request.json):
             id = request.json.get("id")
         else:
             id = "No ID found"
+            
+        if ("gpt_text" in request.json):
+            transcribe_text = request.json.get("gpt_text")
+        else:
+            transcribe_text = False
+            
+        if ("model" in request.json):
+            model = request.json.get("model")
+        else:
+            model = False
+            
         process_id = get_random_id()
         
         image_string = request.json.get("Base64Image")
-        # CROP
-        # base64_to_png(image_string, input_dir+process_id+'.png')
-        crop_output_string = crop(process_id, image_string)
         
-        # crop_output_string = png_to_base64(output_dir+process_id+'.png')
-
-        # COL COR
-        # base64_to_png(crop_output_string, input_dir+process_id+'.png')
-        color_correction_result = extract_red_pen(process_id, crop_output_string)
-        
-        
-        clean_output_string = color_correction_result["original"] #png_to_base64(output_dir+process_id+'/original.png')
-        red_pen_output_string = color_correction_result["red_pen"] #png_to_base64(output_dir+process_id+'/red_pen.png')
-        
-
-        # STUDENT ID
-        # base64_to_png(clean_output_string, input_dir+process_id+'.png')
-        student_id_data = get_student_id(process_id, clean_output_string)
-                
-        
-        # DETECT SQUARES
-        square_data = detect_squares(process_id, clean_output_string)
-        
-        # SECTIONIZE        
-        image_sections = sectionize(process_id, square_data["black_square_info"], clean_output_string)
-
-        sections = []
-                      
-        for section in image_sections:
-            question_selector_info_result = question_selector_info(process_id, section["question_selector"])
-
-            question_id = question_selector_info_result["selected_question"]
-
-            section["question_id"] = question_id
-            sections.append(section)
-        
-
-
-        unique_questions = []
-        [unique_questions.append(x["question_id"]) for x in sections if x["question_id"] not in unique_questions ]
-        # print(len(sections))
-        print('all: ',unique_questions, len(sections))
-        questions = []
-        
-        for unique_question_id in unique_questions:
-            question_sections = [x for x in sections if x["question_id"] == unique_question_id]
-
-            if (len(question_sections) == 0):
-                continue
-            linked_image = stack_answer_sections(process_id, [x["answer"] for x in question_sections])
-
-            extracted_text_result = transcribe_answer(process_id, linked_image)
-
-            questions.append({
-                "image": linked_image,
-                "question_id": unique_question_id,
-                "text_result": extracted_text_result
-            })
-
-
-
+        output = scan_page(process_id, image_string=image_string, model=model, transcribe_text=transcribe_text)
         
         # cleanup_files(process_id)
         end_time = time.time()
@@ -191,12 +144,7 @@ def scan_page():
             "process_id": process_id,
             "start_time": start_time,
             "end_time": end_time,
-            "output": {
-                "cropped_base64": crop_output_string,
-                "red_pen_base64": red_pen_output_string,
-                "student_id_data": student_id_data,
-                "questions": questions,
-            },
+            "output": output,
         }
     except Exception as e:    
         return {"error": str(e)}

@@ -6,6 +6,7 @@ import cv2
 import json
 from pydantic import BaseModel
 import typing_extensions as typing
+from concurrent.futures import ThreadPoolExecutor
 
 
 from helpers import (
@@ -24,8 +25,7 @@ from helpers import (
 
 from gemini_wrapper import google_single_image_request
 
-from open_ai_wrapper import (
-    num_tokens_from_messages,
+from gpt_manager import (
     single_request
 )
 
@@ -144,7 +144,19 @@ class TekstInBox(BaseModel):
     tekst: str
     other_possibility: str
 
-def get_student_id(id, base64_image):
+class GoogleTekstInBox(typing.TypedDict):
+    tekst: str
+    other_possibility: str
+
+def get_student_id(id, base64_image, provider=False, model=False, temperature=False, schema=False, text=False):
+    if not provider:
+        provider = "openai"    
+    
+    if not text:
+        text = """Your job is to recognize the number in the black box next to the words Leerling ID and 'schrijf NETJES!'
+            return -1 if the box is empty
+        """
+    
     
     img = base64_to_pillow(base64_image)
     # img = Image.open(input_dir + id + '.png')
@@ -156,60 +168,18 @@ def get_student_id(id, base64_image):
     
     # cropped.save(output_dir+id+'.png')
     
-    base64_image = "data:image/png;base64,"+pillow_to_base64(cropped)
+    base64_image = pillow_to_base64(cropped)
     
+    if (provider=="openai"):
+        schema = TekstInBox
+    if (provider=="google"):
+        schema = GoogleTekstInBox
     
-    messages = [
-        {
-            "role": "system",
-            "content": [
-                {
-                    "type": "text",
-                    "text": """Your job is to recognize the number in the black box next to the words Leerling ID and 'schrijf NETJES!'
-                        return -1 if the box is empty
-                    """,
-                    
-                                # de vraagnummers moeten getallen zijn
-                                # als een vraagnummer een letter heeft, bijvoorbeeld 1a of 2c
-                                # noteer dat dan al volgt: 1.a en 2.c dus, {getal}.{letter}
-                },
-                {
-                    "type": "text",
-                    "text": "Give you result in JSON like in the given schema"    
-                },
-            ]
-        },
-        {
-            "role": "user",
-            "content": [
-                {
-                    "type": "image_url",
-                    "image_url": {
-                        "url": f"{base64_image}"
-                    }
-                }
-            ]
-        }
-    ]
-    
-    result = single_request(messages, TekstInBox)
-    result_data = result["result_data"]
-    request_data = result["request_data"]
 
-    response = {
-        "student_id": result_data["tekst"],
-        "other_possibility": result_data["other_possibility"],
+    result = single_request(provider=provider, model=model, temperature=temperature, schema=schema, text=text, image=base64_image)
 
-        "tokens_used": request_data["total_tokens"],
-
-        "model_used": result["model_used"],
-        "model_version": result["model_version"],
-        
-        "timestamp":  result["timestamp"],
-        "delta_time_s":  result["delta_time_s"],
-    }
     
-    return response
+    return result
 
 def get_qr_sections(id, base64_image):
     img = base64_to_pillow(base64_image)
@@ -355,19 +325,19 @@ def sectionize(id,square_data, base64_image):
         section_name = "full"
         # full.save(section_output_dir+'full.png')
         
-        section_finder_end = int(full.width * (1.45/21))
+        section_finder_end = square_x_max[index] #+ int(full.width * (1.45/21))
 
         section_finder_crop = (0, 0, section_finder_end+5, full.height)
         section_finder_image = full.copy().crop(section_finder_crop)
         # section_finder_image.save(section_output_dir+'section_finder.png')
 
-        question_selector_end = int(full.width * (2.8/21))
+        question_selector_end = section_finder_end + int(full.width * (1.3/21))
 
         question_selector_crop = (section_finder_end, 0, question_selector_end, full.height)
         question_selector_image = full.copy().crop(question_selector_crop)
         # question_selector_image.save(section_output_dir+'question_selector.png')
         
-        answer_crop = (question_selector_end-5, 0, full.width, full.height)
+        answer_crop = (question_selector_end - int(full.width * (0.3/21)), 0, full.width, full.height)
         answer_image = full.copy().crop(answer_crop)
         # answer_image.save(section_output_dir+'answer.png')
         
@@ -412,73 +382,53 @@ class CheckboxSelection(BaseModel):
     checkboxes: list[Checkbox]
     most_certain_checked_number: int
     certainty: float
+    
+    
+class GoogleCheckbox(typing.TypedDict):
+    number: int
+    checked_chance: float
+    percentage_filled: float
+    certainty: float
 
 
-def question_selector_info(id, base64_image):
+class GoogleCheckboxSelection(typing.TypedDict ):
+    checkboxes: list[GoogleCheckbox]
+    most_certain_checked_number: int
+    certainty: float
+
+
+def question_selector_info(id, base64_image, provider=False, model=False, scan_command_text=False, temperature=False):
+    if not provider:
+        provider = "openai"
+        
+    if not scan_command_text:
+        scan_command_text = """
+        You'll get a picture of checkboxes that a student used to select an answer
+        your job is to see which check box is most likly the one to be ment to be checked
+        only 1 can be chosen
+        pick zero if no boxes are checked 
+        take into account the arrows that point to a chosen box, or crossed out boxes
+            """
+            # de vraagnummers moeten getallen zijn
+            # als een vraagnummer een letter heeft, bijvoorbeeld 1a of 2c
+            # noteer dat dan al volgt: 1.a en 2.c dus, {getal}.{letter}
+
+
     # base64_image = base64_to_pillow(base64_image)
     # base64_image = png_to_base64(input_dir+id+ '.png')
 
     if not base64_image.startswith('data:image'):
         base64_image = "data:image/png;base64,"+ base64_image
     
-    messages = [
-        {
-            "role": "system",
-            "content": [
-                {
-                    "type": "text",
-                    "text": """
-                            You'll get a picture of checkboxes that a student used to select an answer
-                            your job is to see which check box is most likly the one to be ment to be checked
-                            only 1 can be chosen
-                            pick zero if no boxes are checked 
-                            take into account the arrows that point to a chosen box, or crossed out boxes
-                                """
-                                # de vraagnummers moeten getallen zijn
-                                # als een vraagnummer een letter heeft, bijvoorbeeld 1a of 2c
-                                # noteer dat dan al volgt: 1.a en 2.c dus, {getal}.{letter}
-                },
-                {
-                    "type": "text",
-                    "text": "Give you result in JSON like in the given schema"    
-                },
-            ]
-        },
-        {
-            "role": "user",
-            "content": [
-                {
-                    "type": "text",
-                    "text": "extract checked checkbox number. pick zero if no boxes are checked "    
-                },
-                {
-                    "type": "image_url",
-                    "image_url": {
-                        "url": f"{base64_image}"
-                    }
-                }
-            ]
-        }
-    ]
-    
-    result = single_request(messages, CheckboxSelection)
-    result_data = result["result_data"]
-    request_data = result["request_data"]
-
-    response = {
-        "checkboxes": result_data["checkboxes"],
-        "selected_question": result_data["most_certain_checked_number"],
-
-        "tokens_used": request_data["total_tokens"],
-
-        "model_used": result["model_used"],
-        "model_version": result["model_version"],
+    if(provider == 'google'):
+        schema = GoogleCheckboxSelection
+    elif(provider == 'openai'):
+        schema = CheckboxSelection
         
-        "timestamp":  result["timestamp"],
-        "delta_time_s":  result["delta_time_s"],
-    }
+    result = single_request(provider=provider,model=model, temperature=temperature, schema=schema, image=base64_image, text=scan_command_text)
+
     
-    return response
+    return result
     
     
 def stack_answer_sections(id, images: list[str]):
@@ -544,12 +494,16 @@ class GoogleQuestionAnswer(typing.TypedDict):
     spelling_corrections: list[SpellingCorrection]
     
 
-def transcribe_answer(id, base64_image, api="openai"):
-
+def transcribe_answer(id, base64_image, provider="openai", model=False, request_text=False, temperature=False):
+    if not provider:
+        provider = "openai"
+        
     if not base64_image.startswith('data:image'):
         base64_image = "data:image/png;base64,"+ base64_image
-
-    request_text = """Je krijgt een foto van een Nederlandse toetsantwoord. 
+    
+    
+    if not request_text:
+        request_text = """Je krijgt een foto van een Nederlandse toetsantwoord. 
                     Je moet deze omzetten in tekst. 
                     Deze toets moet nog worden nagekeken je. 
                     Verander niets aan de inhoud. 
@@ -559,84 +513,141 @@ def transcribe_answer(id, base64_image, api="openai"):
                     probeer zo veel mogelijk tekst te extraheren 
                     negeer uitgekrasde letters of woorden
                     """
+    if (provider == 'openai'):
+        schema = QuestionAnswer
+    elif (provider == 'google'):
+        schema = GoogleQuestionAnswer
 
-    if api=="openai":
-        messages = [
-            {
-                "role": "system",
-                "content": [
-                    {
-                        "type": "text",
-                        "text": request_text
-                                    # de vraagnummers moeten getallen zijn
-                                    # als een vraagnummer een letter heeft, bijvoorbeeld 1a of 2c
-                                    # noteer dat dan al volgt: 1.a en 2.c dus, {getal}.{letter}
-                    },
-                    {
-                        "type": "text",
-                        "text": "Geef antwoord in JSON zoals in een aangegeven schema staat"    
-                    },
-                ]
-            },
-            {
-                "role": "user",
-                "content": [
-                    {
-                        "type": "text",
-                        "text": "extraheer de tekst"    
-                    },
-                    {
-                        "type": "image_url",
-                        "image_url": {
-                            "url": f"{base64_image}"
-                        }
-                    }
-                ]
+    result = single_request(text=request_text, provider=provider, model=model, schema=schema, temperature=temperature)
+
+    return result
+
+def scan_page(process_id, image_string, provider=False ,model=False,temperature=False, transcribe_text=False):
+    if not provider:
+        provider = "openai"
+    # CROP
+    print('Starting: ', 'CROP')
+    # base64_to_png(image_string, input_dir+process_id+'.png')
+    
+    crop_output_string = crop(process_id, image_string)
+    
+    # crop_output_string = png_to_base64(output_dir+process_id+'.png')
+
+    # COL COR
+    print('Starting: ', 'COL COR')
+    # base64_to_png(crop_output_string, input_dir+process_id+'.png')
+    
+    color_correction_result = extract_red_pen(process_id, crop_output_string)
+    
+    
+    clean_output_string = color_correction_result["original"] #png_to_base64(output_dir+process_id+'/original.png')
+    red_pen_output_string = color_correction_result["red_pen"] #png_to_base64(output_dir+process_id+'/red_pen.png')
+    
+
+    # STUDENT ID
+    print('Starting: ', 'STUDENT ID')
+    # base64_to_png(clean_output_string, input_dir+process_id+'.png')
+    
+    student_id_data = get_student_id(process_id, clean_output_string, provider=provider, model=model, temperature=temperature)
+            
+    
+    # DETECT SQUARES
+    print('Starting: ', 'DETECT SQUARES')
+    
+    square_data = detect_squares(process_id, clean_output_string)
+    
+    # SECTIONIZE       
+    print('Starting: ', 'SECTIONIZE       ')
+    
+    image_sections = sectionize(process_id, square_data["black_square_info"], clean_output_string)
+
+    # QUESTION SELECTOR
+    print('Starting: ', 'QUESTION SELECTOR')
+    
+
+    sections = []
+    
+    def process_section(section):
+        question_selector_info_result = question_selector_info(process_id, section["question_selector"])
+
+        question_id = question_selector_info_result["selected_question"]
+
+        section["question_id"] = question_id
+        return section
+            
+
+    # Use ThreadPoolExecutor to process sections concurrently
+    with ThreadPoolExecutor() as executor:
+        results = executor.map(process_section, image_sections)
+
+    # Collect results
+    sections = list(results)        
+    
+    # for section in image_sections:
+        
+    #     question_selector_info_result = question_selector_info(process_id, section["question_selector"])
+
+    #     question_id = question_selector_info_result["selected_question"]
+
+    #     section["question_id"] = question_id
+    #     sections.append(section)
+    
+
+
+    unique_questions = []
+    [unique_questions.append(x["question_id"]) for x in sections if x["question_id"] not in unique_questions ]
+    # print(len(sections))
+    print('all: ',unique_questions, len(sections))
+    questions = []
+    
+    # STACKING AND TRANSCRIBING
+    print('Starting: ', 'STACKING AND TRANSCRIBING')
+    
+    def process_question(unique_question_id):
+        question_sections = [x for x in sections if x["question_id"] == unique_question_id]
+
+        if (len(question_sections) == 0):
+            pass
+        try:
+            linked_image = stack_answer_sections(process_id, [x["answer"] for x in question_sections])
+
+            extracted_text_result = transcribe_answer(process_id, linked_image, model=model, request_text=transcribe_text, temperature=temperature)
+
+            return {
+                "image": linked_image,
+                "question_id": unique_question_id,
+                "text_result": extracted_text_result
             }
-        ]
+        except:
+            pass
         
-        result = single_request(messages, QuestionAnswer)
-        result_data = result["result_data"]
-        request_data = result["request_data"]
-        response = {
-            "raw_text": result_data["raw_text"],
-            "correctly_spelled_text": result_data["correctly_spelled_text"],
-            "spelling_corrections": result_data["spelling_corrections"],
-            
-            "tokens_used": request_data["total_tokens"],
+    # Use ThreadPoolExecutor to process sections concurrently
+    with ThreadPoolExecutor() as executor:
+        results = executor.map(process_question, unique_questions)
 
-            "model_used": result["model_used"],
-            "model_version": result["model_version"],
-            
-            "timestamp":  result["timestamp"],
-            "delta_time_s":  result["delta_time_s"],
-        }
-    if api=="google":
-        google_model = "gemini-1.5-flash"
-        result = google_single_image_request(
-            tekst=request_text,
-            base64_image=base64_image,
-            model=google_model,
-            id=id,
-            response_format=GoogleQuestionAnswer
-        )
-        result_data = json.loads(result.text)
-        response = {
-            "raw_text": result_data["raw_text"],
-            "correctly_spelled_text": result_data["correctly_spelled_text"],
-            # "spelling_corrections": result_data["spelling_corrections"],
-            
-            "tokens_used": request_data.safety_attributes[0].quota_information.tokens_used,
+    # Collect results
+    questions = [question for question in results if question is not None]
+    
+    # for unique_question_id in unique_questions:
+    #     question_sections = [x for x in sections if x["question_id"] == unique_question_id]
 
-            "model_used": google_model,
-            "model_version": google_model,
-            
-            "timestamp":  0,
-            "delta_time_s":  0,
-        }
-        
-    
-    
-    return response
+    #     if (len(question_sections) == 0):
+    #         continue
+    #     try:
+    #         linked_image = stack_answer_sections(process_id, [x["answer"] for x in question_sections])
 
-    
+    #         extracted_text_result = transcribe_answer(process_id, linked_image, model=model, request_text=transribe_gpt_text)
+
+    #         questions.append({
+    #             "image": linked_image,
+    #             "question_id": unique_question_id,
+    #             "text_result": extracted_text_result
+    #         })
+    #     except:
+    #         continue
+    return {
+        "cropped_base64": crop_output_string,
+        "red_pen_base64": red_pen_output_string,
+        "student_id_data": student_id_data,
+        "questions": questions,
+    }

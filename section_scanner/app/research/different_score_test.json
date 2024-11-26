@@ -1,0 +1,415 @@
+[
+    {
+        "quote": "Ik heb een heel zwaar leven.",
+        "quote_changed": "Ik heb een heel zwaar leven.",
+        "person": "Brigitte Kaandorp",
+        "year": 2009,
+        "test": "nulmeting",
+        "score": 0.0,
+        "changes": []
+    },
+    {
+        "quote": "Een dag niet gelachen is een dag niet geleefd.",
+        "quote_changed": "Een dag niet gelachen is een dag niet geleeft.",
+        "person": "Charlie Chaplin",
+        "year": 1930,
+        "test": "enkele letterverandering , geen betekenisverandering",
+        "score": 0.15220711585124339,
+        "changes": [
+            [
+                "replace",
+                [
+                    44,
+                    45
+                ],
+                "t"
+            ]
+        ]
+    },
+    {
+        "quote": "Een dag niet gelachen is een dag niet geleefd.",
+        "quote_changed": "Een  niet gelachen is een dag niet geleefd.",
+        "person": "Charlie Chaplin",
+        "year": 1930,
+        "test": "woordweglating",
+        "score": 0.16739880820827535,
+        "changes": [
+            [
+                "delete",
+                [
+                    4,
+                    7
+                ],
+                ""
+            ]
+        ]
+    },
+    {
+        "quote": "Rrrrrr, hah, is gewoon Boef man. Ha, jij bent vies maar ik doe gemener. In de club, kom je moeder tegen. En ik wil snel weg want we moeten wegen. En je klant is geholpen, je moet vroeger wezen. Ik was alles kwijt, maar floes herenigd. Voor me zondes af en toe gebeden. Ik ga uit eten voor een goede prijs. Ik ben een uitgever, ze boeken mij. Van alarm voorzien aan de achterkant. Dus ze komen via voor, maar wat dacht je dan?",
+        "quote_changed": "Rrrrrr, hah, is gewoon Boef man.test, jij bent vies maar ik doe gemener. In de club, komtest moeder tegen. En ik wil snel weg wantest we moeten wegen. En je klant is geholpen, je moetest vroeger wezen. Ik was alles kwijt, maar floetest herenigd. Voor me zondes af en toe gebeden. Ik gtest uit eten voor een goede prijs. Ik ben een uitgever, ze boeken mij. Van alarm voortest aan de achterkant. Dus ze komen via voor, maar wat dacht je dan?",
+        "person": "Boef",
+        "year": 2017,
+        "test": "random toevoeging woorden",
+        "score": 0.19282032005454008,
+        "changes": [
+            [
+                "replace",
+                [
+                    32,
+                    35
+                ],
+                "test"
+            ],
+            [
+                "replace",
+                [
+                    87,
+                    90
+                ],
+                "test"
+            ],
+            [
+                "insert",
+                [
+                    128,
+                    128
+                ],
+                "est"
+            ],
+            [
+                "insert",
+                [
+                    178,
+                    178
+                ],
+                "est"
+            ],
+            [
+                "replace",
+                [
+                    223,
+                    224
+                ],
+                "test"
+            ],
+            [
+                "replace",
+                [
+                    273,
+                    274
+                ],
+                "test"
+            ],
+            [
+                "replace",
+                [
+                    356,
+                    360
+                ],
+                "test"
+            ]
+        ]
+    },
+    {
+        "quote": "Ik begrijp niet waarom u hier zo negatief en vervelend over doet. (...) Laten we blij zijn met elkaar! Laten wij optimistisch zijn! Laten we zeggen: Nederland kan het weer! Die VOC-mentaliteit, over grenzen heen kijken, dynamiek! Toch?",
+        "quote_changed": "Ik begrijp niet waarom u hier zo negatief en vervelend over doet. (...) Laten we blij zijn met elkaar! Laten wij optimistisch zijn! Laten we zeggen: Nederland kan het weer! Die",
+        "person": "Jan-Peter Balkenende",
+        "year": 2006,
+        "test": "weglating einde van grotere tekst",
+        "score": 0.3767350827049003,
+        "changes": [
+            [
+                "delete",
+                [
+                    176,
+                    235
+                ],
+                ""
+            ]
+        ]
+    },
+    {
+        "quote": "Ik heb nooit last van hoogtevrees, wel van dieptevrees.",
+        "quote_changed": "Ik hebt ooit last van hoogtevrees, well vann dieptevrees.",
+        "person": "Youp van 't Hek",
+        "year": 1998,
+        "test": "enkele letterweglating, betekenisverandering",
+        "score": 0.4277380519915124,
+        "changes": [
+            [
+                "insert",
+                [
+                    6,
+                    6
+                ],
+                "t"
+            ],
+            [
+                "delete",
+                [
+                    7,
+                    8
+                ],
+                ""
+            ],
+            [
+                "insert",
+                [
+                    38,
+                    38
+                ],
+                "l"
+            ],
+            [
+                "insert",
+                [
+                    41,
+                    41
+                ],
+                "n"
+            ]
+        ]
+    },
+    {
+        "quote": "Praat Nederlands met me. Even Nederlands met me. Mijn gevoel zegt mij dat wij vanavond samen kijken. Naar de Champs-\u00c9lys\u00e9es en naar de Notre Dame en naar de Seine. En daarna samen op La Tour Eiffel",
+        "quote_changed": "Praat Nedertands met me. Even Neterlands met me. Mijn tevoet zegt mij dat wij vanatond samet kitken. Naar de Champs-\u00c9lts\u00e9es en naar de Notre Dameten naar detSeine. En daarta samet op La Tour Etffel",
+        "person": "Kenny B",
+        "year": 2015,
+        "test": "random lettermutaties",
+        "score": 0.48204781125878554,
+        "changes": [
+            [
+                "replace",
+                [
+                    11,
+                    12
+                ],
+                "t"
+            ],
+            [
+                "replace",
+                [
+                    32,
+                    33
+                ],
+                "t"
+            ],
+            [
+                "replace",
+                [
+                    54,
+                    55
+                ],
+                "t"
+            ],
+            [
+                "replace",
+                [
+                    59,
+                    60
+                ],
+                "t"
+            ],
+            [
+                "replace",
+                [
+                    82,
+                    83
+                ],
+                "t"
+            ],
+            [
+                "replace",
+                [
+                    91,
+                    92
+                ],
+                "t"
+            ],
+            [
+                "replace",
+                [
+                    95,
+                    96
+                ],
+                "t"
+            ],
+            [
+                "replace",
+                [
+                    118,
+                    119
+                ],
+                "t"
+            ],
+            [
+                "replace",
+                [
+                    145,
+                    146
+                ],
+                "t"
+            ],
+            [
+                "replace",
+                [
+                    156,
+                    157
+                ],
+                "t"
+            ],
+            [
+                "replace",
+                [
+                    171,
+                    172
+                ],
+                "t"
+            ],
+            [
+                "replace",
+                [
+                    178,
+                    179
+                ],
+                "t"
+            ],
+            [
+                "replace",
+                [
+                    192,
+                    193
+                ],
+                "t"
+            ]
+        ]
+    },
+    {
+        "quote": "Als het niet kan zoals het moet, dan moet het maar zoals het kan.",
+        "quote_changed": "Als het niet kan zoals  het maar zoals het kan.",
+        "person": "Dolf Jansen",
+        "year": 2005,
+        "test": " weglating in midden",
+        "score": 0.49014852696378863,
+        "changes": [
+            [
+                "delete",
+                [
+                    23,
+                    41
+                ],
+                ""
+            ]
+        ]
+    },
+    {
+        "quote": "Ik ben niet dik, ik ben een ruimtewonder.",
+        "quote_changed": "Ik bn nit dik, ik bn n ruimtwondr.",
+        "person": "Brigitte Kaandorp",
+        "year": 2003,
+        "test": "letter e weggelaten",
+        "score": 0.6707317073170732,
+        "changes": [
+            [
+                "delete",
+                [
+                    4,
+                    5
+                ],
+                ""
+            ],
+            [
+                "delete",
+                [
+                    9,
+                    10
+                ],
+                ""
+            ],
+            [
+                "delete",
+                [
+                    21,
+                    22
+                ],
+                ""
+            ],
+            [
+                "delete",
+                [
+                    24,
+                    26
+                ],
+                ""
+            ],
+            [
+                "delete",
+                [
+                    33,
+                    34
+                ],
+                ""
+            ],
+            [
+                "delete",
+                [
+                    38,
+                    39
+                ],
+                ""
+            ]
+        ]
+    },
+    {
+        "quote": "Ik geloof in God, behalve als ik vis.",
+        "quote_changed": "Ik geloof in God, be",
+        "person": "Herman Brood",
+        "year": 1995,
+        "test": "weglating aan einde",
+        "score": 0.7644031351267621,
+        "changes": [
+            [
+                "delete",
+                [
+                    20,
+                    37
+                ],
+                ""
+            ]
+        ]
+    },
+    {
+        "quote": "Ik ben niet gek, ik ben een vliegtuig.",
+        "quote_changed": "Ik ben niet , ik  een .",
+        "person": "Supergrover",
+        "year": 1974,
+        "test": "dubbelle woordweglating",
+        "score": 0.8947368421052632,
+        "changes": [
+            [
+                "delete",
+                [
+                    12,
+                    15
+                ],
+                ""
+            ],
+            [
+                "delete",
+                [
+                    20,
+                    23
+                ],
+                ""
+            ],
+            [
+                "delete",
+                [
+                    28,
+                    37
+                ],
+                ""
+            ]
+        ]
+    }
+]
