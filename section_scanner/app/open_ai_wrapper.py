@@ -87,6 +87,8 @@ def openai_single_request(messages, response_format, model = False, temperature=
     
     start_time = time.time()
 
+    if model in ['o1-mini', 'o1-preview']:
+        temperature = 1
     
     try:
         response = openai_client.beta.chat.completions.parse(
@@ -98,7 +100,7 @@ def openai_single_request(messages, response_format, model = False, temperature=
             timeout=14
         )
     except Exception as e:
-        print("GPT request... ERROR", str(e))
+        print(f"GPT request... (openai, {model}) ERROR", str(e))
         raise Exception(str(e))
         return False
 

@@ -12,12 +12,13 @@ with open('creds/google_gemini.json', 'r') as f:
     data = json.load(f)
 
 
-genai.configure(api_key=data["key"])
 
 class DefaultResponse(typing_extensions.TypedDict):
     response: str
 
 def google_single_image_request(text, base64_image=False, model=False, temperature=False, id=get_random_id(), response_format=None):
+    genai.configure(api_key=data["key"],transport="rest")
+
     if not model:
         model = "gemini-1.5-flash"
     if not temperature:
@@ -26,11 +27,8 @@ def google_single_image_request(text, base64_image=False, model=False, temperatu
     task_list = []
 
     if base64_image:
-        if base64_string.startswith('data:image'):
-            base64_string = base64_string.split(',')[1]    
-
-        # 1. Remove the Data URI Prefix
-        base64_image = base64_image.split(",")[1]  # Get the part after the comma
+        if base64_image.startswith('data:image'):
+            base64_image = base64_image.split(',')[1]    
 
         # 2. Decode (Now with clean base64 data)
         image_data = base64.b64decode(base64_image)
@@ -45,24 +43,33 @@ def google_single_image_request(text, base64_image=False, model=False, temperatu
         
         image_file = genai.upload_file(img_buffer, mime_type="image/png")    
         task_list.append(image_file)
-    
-    task_list.append('\n\n', text)
+        task_list.append('\n\n')
 
-    model = genai.GenerativeModel(model)
-    print('Starting gemini request...')
-    result = model.generate_content(
-        task_list, 
-        generation_config=genai.GenerationConfig(
-            response_mime_type="application/json",
-            response_schema= response_format,
-            temperature=temperature,
+    task_list.append(text)
+    task_list.append('\n\n')
+    task_list.append('return in the format of the correct schema')
+
+    google_model = genai.GenerativeModel(model)
+    # print('Starting gemini request...')
+    try:
+        result = google_model.generate_content(
+            task_list, 
+            generation_config=genai.GenerationConfig(
+                response_mime_type="application/json",
+                response_schema= response_format,
+                temperature=temperature,
+            )
+            
         )
-        
-    )
-    print('Starting gemini request... Done')
+    except Exception as e:
+        print(f"GPT request... (google, {model}) ERROR", str(e))
+        raise Exception(str(e))
+
+    # print('Starting gemini request... Done')
 
     
     if base64_image:
+    
         image_file.delete()
     
     return result

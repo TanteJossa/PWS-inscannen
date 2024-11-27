@@ -140,12 +140,12 @@ def extract_red_pen(id, base64_image):
         "red_pen": pillow_to_base64(red_pen_image)
     }
 
-class TekstInBox(BaseModel):
-    tekst: str
+class TextInBox(BaseModel):
+    text: str
     other_possibility: str
 
-class GoogleTekstInBox(typing.TypedDict):
-    tekst: str
+class GoogleTextInBox(typing.TypedDict):
+    text: str
     other_possibility: str
 
 def get_student_id(id, base64_image, provider=False, model=False, temperature=False, schema=False, text=False):
@@ -171,9 +171,9 @@ def get_student_id(id, base64_image, provider=False, model=False, temperature=Fa
     base64_image = pillow_to_base64(cropped)
     
     if (provider=="openai"):
-        schema = TekstInBox
+        schema = TextInBox
     if (provider=="google"):
-        schema = GoogleTekstInBox
+        schema = GoogleTextInBox
     
 
     result = single_request(provider=provider, model=model, temperature=temperature, schema=schema, text=text, image=base64_image)
@@ -428,7 +428,7 @@ def question_selector_info(id, base64_image, provider=False, model=False, scan_c
     result = single_request(provider=provider,model=model, temperature=temperature, schema=schema, image=base64_image, text=scan_command_text)
 
     
-    return result
+    return result["result"]
     
     
 def stack_answer_sections(id, images: list[str]):
@@ -469,9 +469,9 @@ class QuestionAnswer(BaseModel):
     # let openai reasses the question number (they are better than google )
     certainty: float 
     student_handwriting_percent: float
-    # get the unchanged raw tekst
+    # get the unchanged raw text
     raw_text: str
-    # get the spel corrected tekst that should be graded
+    # get the spel corrected text that should be graded
     correctly_spelled_text: str
     # get the spelling changes the model made
     spelling_corrections: list[SpellingCorrection]
@@ -480,15 +480,16 @@ class QuestionAnswer(BaseModel):
 class GoogleSpellingCorrection(typing.TypedDict):
     original: str
     changes: str
+    is_crossed_out: bool
 
 # answer class schema
 class GoogleQuestionAnswer(typing.TypedDict):
     # let openai reasses the question number (they are better than google )
     certainty: float 
     student_handwriting_percent: float
-    # get the unchanged raw tekst
+    # get the unchanged raw text
     raw_text: str
-    # get the spel corrected tekst that should be graded
+    # get the spel corrected text that should be graded
     correctly_spelled_text: str
     # get the spelling changes the model made
     spelling_corrections: list[SpellingCorrection]
@@ -504,21 +505,22 @@ def transcribe_answer(id, base64_image, provider="openai", model=False, request_
     
     if not request_text:
         request_text = """Je krijgt een foto van een Nederlandse toetsantwoord. 
-                    Je moet deze omzetten in tekst. 
+                    Je moet deze omzetten in text. 
                     Deze toets moet nog worden nagekeken je. 
                     Verander niets aan de inhoud. 
                     Bedenk geen nieuwe woorden of woordonderdelen. 
                     Verander alleen kleine spelfoutjes.
                     houd in het antwoord ook rekening met meerdere regels en geeft die aan met een '\\n'
-                    probeer zo veel mogelijk tekst te extraheren 
-                    negeer uitgekrasde letters of woorden
+                    probeer zo veel mogelijk text te extraheren 
+                    negeer uitgekrasde letters of woorden, geef die wil aan in spelling corrections
+                    de student_handwriting_percent is how leesbaar het handschrift van een leerling is: 0 betekend zeer moeilijk leesbaar en 100 is alsof het geprint is
                     """
     if (provider == 'openai'):
         schema = QuestionAnswer
     elif (provider == 'google'):
         schema = GoogleQuestionAnswer
 
-    result = single_request(text=request_text, provider=provider, model=model, schema=schema, temperature=temperature)
+    result = single_request(text=request_text, image=base64_image, provider=provider, model=model, schema=schema, temperature=temperature)
 
     return result
 
@@ -569,8 +571,8 @@ def scan_page(process_id, image_string, provider=False ,model=False,temperature=
     
     def process_section(section):
         question_selector_info_result = question_selector_info(process_id, section["question_selector"])
-
-        question_id = question_selector_info_result["selected_question"]
+        
+        question_id = question_selector_info_result["most_certain_checked_number"]
 
         section["question_id"] = question_id
         return section

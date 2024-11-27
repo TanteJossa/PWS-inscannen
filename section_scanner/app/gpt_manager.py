@@ -1,3 +1,5 @@
+from google.generativeai.types import GenerateContentResponse
+
 from open_ai_wrapper import (
     openai_single_request
 )
@@ -18,11 +20,9 @@ class DefaultOpenAiSchema(BaseModel):
 def single_request(provider="openai", model=False, temperature=False, schema=False, image=False, text=""):
     if not provider:
         provider = "openai"
-    if not text:
-        text = ""
         
         
-    print("GPT request... ")
+    print(f"GPT request ({provider}, {model}) ... ")
 
     if provider == 'openai':
         if not schema:
@@ -30,7 +30,7 @@ def single_request(provider="openai", model=False, temperature=False, schema=Fal
             
         messages = [
             {
-                "role": "system",
+                "role": "user",
                 "content": [
                     {
                         "type": "text",
@@ -80,9 +80,9 @@ def single_request(provider="openai", model=False, temperature=False, schema=Fal
             schema = DefaultGeminiSchema
         
         start_time = time.time()
-          
-        result = google_single_image_request(
-            tekst=text,
+        
+        result:GenerateContentResponse = google_single_image_request(
+            text=text,
             base64_image=image,
             model=model,
             id=id,
@@ -91,13 +91,12 @@ def single_request(provider="openai", model=False, temperature=False, schema=Fal
         result_data = json.loads(result.text)
 
         end_time = time.time()
-
+        # print(result, result.usage_metadata.total_token_count)
         response = {
-            "raw_text": result_data["raw_text"],
-            "correctly_spelled_text": result_data["correctly_spelled_text"],
+            "result": result_data,
             # "spelling_corrections": result_data["spelling_corrections"],
             
-            "tokens_used": request_data.safety_attributes[0].quota_information.tokens_used,
+            "tokens_used": result.usage_metadata.total_token_count,
 
             "model_used": model,
             "model_version": model,
@@ -107,6 +106,6 @@ def single_request(provider="openai", model=False, temperature=False, schema=Fal
             "delta_time_s":  (end_time - start_time) / 1000,
         }
     
-    print("GPT request... Done")
+    print(f"GPT request ({provider}, {model}) ... Done")
 
     return response
