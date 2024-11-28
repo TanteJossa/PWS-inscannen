@@ -88,7 +88,7 @@ def single_request(provider="openai", model=False, temperature=False, schema=Fal
             id=id,
             response_format=schema
         )
-        result_data = json.loads(result.text)
+        result_data = json.loads(result['candidates'][0]['content']['parts'][0]['text'])
 
         end_time = time.time()
         # print(result, result.usage_metadata.total_token_count)
@@ -96,7 +96,7 @@ def single_request(provider="openai", model=False, temperature=False, schema=Fal
             "result": result_data,
             # "spelling_corrections": result_data["spelling_corrections"],
             
-            "tokens_used": result.usage_metadata.total_token_count,
+            "tokens_used": result["usageMetadata"]["totalTokenCount"],
 
             "model_used": model,
             "model_version": model,

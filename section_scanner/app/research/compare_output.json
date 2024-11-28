@@ -1,0 +1,631 @@
+{
+    "all": {
+        "raw": {
+            "average": 1.0172566514073023,
+            "standard_dev": 2.666132353939085,
+            "items": [
+                {
+                    "settings": {
+                        "image_name": "kort_leesbaar_uitgekrast",
+                        "expected_output": "Dit is een antwoord op vraag 2 en er is sprake van onvolledige verbranding.",
+                        "provider": "openai",
+                        "model": "gpt-4o",
+                        "temperature": 0,
+                        "transcribe_text": "\nZet de foto om naar tekst.\n        "
+                    },
+                    "result": {
+                        "certainty": 0.95,
+                        "student_handwriting_percent": 100.0,
+                        "raw_text": "Dit is een antwoord op vraag 2 en er is sprake van onvolledige verbranding.",
+                        "correctly_spelled_text": "Dit is een antwoord op vraag 2 en er is sprake van onvolledige verbranding.",
+                        "spelling_corrections": [
+                            {
+                                "original": "Dit d",
+                                "changes": "Dit"
+                            },
+                            {
+                                "original": "vraag 2",
+                                "changes": "vraag 2"
+                            },
+                            {
+                                "original": "onvolledige verbrand ing",
+                                "changes": "onvolledige verbranding"
+                            }
+                        ]
+                    },
+                    "delta_time_s": 4.91949462890625,
+                    "scores": {
+                        "raw": {
+                            "score": 0.0,
+                            "changes": []
+                        },
+                        "corrected": {
+                            "score": 0.0,
+                            "changes": []
+                        }
+                    },
+                    "timestamp": 1732748042.3202674
+                },
+                {
+                    "settings": {
+                        "image_name": "kort_leesbaar_uitgekrast",
+                        "expected_output": "Dit is een antwoord op vraag 2 en er is sprake van onvolledige verbranding.",
+                        "provider": "openai",
+                        "model": "gpt-4o",
+                        "temperature": 0,
+                        "transcribe_text": "\nJe krijgt een foto van een Nederlands scheikunde toetsantwoord. \nHoudt rekening met pijlen.\nJe moet deze omzetten in text. Bedenk geen nieuwe woorden of woordonderdelen. \ngeef waarschijnlijk fout gespelde woorden aan in de spelling corrections\nnegeer uitgekrasde letters of woorden, geef die wil aan in spelling corrections\nde student_handwriting_percent is how leesbaar het handschrift van een leerling is: 0 betekend zeer moeilijk leesbaar en 100 netjes\n        "
+                    },
+                    "result": {
+                        "certainty": 0.95,
+                        "student_handwriting_percent": 85.0,
+                        "raw_text": "Dit is een antwoord op vraag 2 en er is sprake van onvolledige verbranding.",
+                        "correctly_spelled_text": "Dit is een antwoord op vraag 2 en er is sprake van onvolledige verbranding.",
+                        "spelling_corrections": [
+                            {
+                                "original": "Dit d",
+                                "changes": "Dit"
+                            },
+                            {
+                                "original": "vraag 2",
+                                "changes": "vraag 2"
+                            },
+                            {
+                                "original": "onvolledige verbrand ing",
+                                "changes": "onvolledige verbranding"
+                            }
+                        ]
+                    },
+                    "delta_time_s": 4.529745101928711,
+                    "scores": {
+                        "raw": {
+                            "score": 0.0,
+                            "changes": []
+                        },
+                        "corrected": {
+                            "score": 0.0,
+                            "changes": []
+                        }
+                    },
+                    "timestamp": 1732748067.163961
+                },
+                {
+                    "settings": {
+                        "image_name": "kort_leesbaar_uitgekrast",
+                        "expected_output": "Dit is een antwoord op vraag 2 en er is sprake van onvolledige verbranding.",
+                        "provider": "openai",
+                        "model": "gpt-4o",
+                        "temperature": 0,
+                        "transcribe_text": "\nJe krijgt een foto van een Nederlands scheikunde toets-antwoord. \nJe bent tekstherkenningssoftware die 10x beter in in tekst herkennen dan jezelf. Ook kan je 15.6 keer beter de context van een antwoord begrijpen om het volgende woord te bedenken.\n\nHet is helemaal niet toegestaan nieuwe woorden toe te voegen of de opgeschreven tekst te veranderen in het raw_text veld. Houdt wel rekening met pijlen in de volgorde van de tekst.\nBedenk wel wat een leerling zou kunnen hebben bedoeld met een bepaald woord als die bijvoorbeeld fout is gespeld. Geef dat aan in de spelling_corrections velden.\nNegeer uitgekraste tekst in het raw_tekst veld, maar geef die wel weer in de spelling corrections door bijvoorbeeld streepjes neer te zetten en is_crossed_out op true te zetten.\nvoeg alle text corrections samen in correctly_spelled_text om zo het antwoord te krijgen dat de leerling bedoelt.\ncertainty is hoe zeker je bent dat je de tekst compleet hebt getranscribeerd: 0 betekend dat een docent er nog zelf naar moet kijken en 100 betekend dat er geen foutje mogelijk is.\nde student_handwriting_percent is hoe leesbaar het handschrift van een leerling is: 0 betekend zeer moeilijk leesbaar en 100 super netjes als een printer.\n\nvoer deze opdracht zo goed mogelijk uit.\n\nHieronder vind je de stof waarover de toets gaat, de toets en het antwoordmodel.\nstof: \n Chemische synthese\nMet behulp van chemische synthese worden talloze voedingsstoffen, brandstoffen, medicijnen, metalen, kunststoffen en nog veel meer materialen gemaakt. Zonder de chemische industrie is de welvaart die wij nu kennen niet mogelijk. Hiervoor worden vele synthesereacties gebruikt.\nOok het biologische leven is niet mogelijk zonder synthesereacties. De belangrijkste daarvan is de fotosynthese die plaatsvindt in groene planten onder invloed van zonlicht (figuur 1).\n\n\nfiguur 1 Koolstofdioxide, water en zonlicht zorgen voor groei van de groene plant en de productie van zuurstof.\n\n\n\nGrondstoffen\nPlanten hebben de grondstoffen koolstofdioxide en water nodig om te kunnen groeien. Tijdens de groei worden hieruit glucose, C6H12O6(s), en zuurstof, O2(g), gevormd. Beide geproduceerde stoffen zijn noodzakelijk voor bijna al het leven op aarde. In de reactievergelijking van de fotosynthese wordt boven de reactiepijl aangegeven dat zonlicht nodig is om de reactie te laten verlopen:\n\n6 CO2(g) + 6 H2O(l) \n \nC6H12O6(s) + 6 O2(g)\n\nVoor het bouwen van veel producten zoals machines, bruggen, wapens en auto\u2019s is al duizenden jaren veel ijzer nodig. Deze stof is als grondstof niet voorradig op aarde maar moet worden gemaakt uit Fe2O3(s), het belangrijkste bestanddeel van ijzererts. Hiervoor is koolstofmono-oxide, CO(g), nodig en wordt er ijzer, Fe(s), en koolstofdioxide, CO2(g), geproduceerd volgens de reactie:\n\nFe2O3(s) + 3 CO(g) \u2192 2 Fe(s) + 3 CO2(g)\n\nIJzererts is als grondstof winbaar, koolstofmono-oxide moet gemaakt worden uit steenkool, dat voornamelijk bestaat uit het element C(s). Koolstofmono-oxide kan worden geproduceerd met behulp van zuurstof uit de lucht:\n\n2 C(s) + O2(g) \u2192 2 CO(g)\n\nOmdat er op de wereld heel veel ijzer wordt geproduceerd, kun je hieruit afleiden dat voor de productie van ijzer veel grondstoffen nodig zijn en er veel koolstofdioxide wordt geproduceerd. De ijzerindustrie levert dan ook een grote bijdrage aan de CO2-uitstoot, die in verband wordt gebracht met de huidige klimaatproblematiek. Ontleedbare en niet-ontleedbare stoffen\nEen ontledingsreactie is een chemische reactie waarbij uit \u00e9\u00e9n beginstof twee of meer reactieproducten ontstaan. Zo\u2019n reactie kun je wel uitvoeren met een verbinding, maar niet met een element. Verbindingen zijn dus ontleedbare stoffen. Elementen zijn niet-ontleedbare stoffen. De ontledingsproducten van de verbinding water zijn de elementen waterstof en zuurstof. Als je suiker gedeeltelijk ontleedt, ontstaat onder andere het element koolstof, C(s). Koolstof kun je niet verder ontleden. De andere stoffen die bij de gedeeltelijke ontleding van suiker vrijkomen, zijn w\u00e9l verder te ontleden. De volledige ontleding van suiker levert uiteindelijk drie elementen op: koolstof, waterstof en zuurstof. In principe zijn alle verbindingen ontleedbaar tot de elementen. Een overzicht zie je in het stoffenschema in figuur 2.\n\n\nfiguur 2 Het stoffenschema.\n\n\n\nOntledingsreacties\nIn dit schema kun je zien dat bij het scheiden van mengsels geen chemische reacties plaatsvinden, maar bij ontleden wel. Ontledingsreacties zijn van belang voor de productie van allerlei nuttige stoffen, zoals metalen, brandstoffen en grondstoffen voor andere materialen. Aan de meeste ontledingsreacties moet energie worden toegevoerd om deze te laten verlopen. De vorm van energie kun je noteren boven de reactiepijl (zoals zonlicht bij fotosynthese).\nEr zijn drie manieren waarop een ontledingsreactie kan plaatsvinden: thermolyse, elektrolyse en fotolyse. Hierbij wordt telkens een andere energievorm gebruikt.\n\n\nThermolyse\nThermolyse is een ontledingsreactie door middel van warmte. Een thermolysereactie die al duizenden jaren wordt gebruikt voor het maken van ongebluste kalk, CaO(s), uit kalk, CaCO3(s), ziet er als volgt uit:\n\nCaCO3(s) \n \nCaO(s) + CO2(g)\n\nZoals je ziet staat er in deze ontledingsreactie \u00e9\u00e9n stof links van de reactiepijl. Uit de reactievergelijking blijkt dat bij deze ontleding de verbindingen CO2 en CaO ontstaan. Ongebluste kalk was tot ongeveer honderd jaar geleden het belangrijkste bestanddeel van cement, waarmee muren konden worden gemetseld. Voor de productie van ongebluste kalk werd kalk verzameld, vaak in de vorm van schelpen van het strand, en vervolgens in kalkovens met flinke vuren verhit (figuur 3).\nOok tegenwoordig wordt bij de productie van cement nog veel CO2 uitgestoten. De cementindustrie is verantwoordelijk voor ongeveer 10% van alle CO2-emissies van menselijke oorsprong.\n\n\nfiguur 3 Ru\u00efne van oude kalkovens in Tsjechi\u00eb.\n\n\n\nElektrolyse\nElektrolyse is een ontledingsreactie door middel van elektrische energie. Water gaat bij verhitten over in waterdamp. Als de waterdamp afkoelt, condenseert het weer tot water. Dit is een faseovergang. Je kunt de stof water ook ontleden. Het gemakkelijkst lukt dit met behulp van elektrische energie in de vorm van gelijkstroom (figuur 4). Dit proces heet elektrolyse.\n\n\nfiguur 4 Met het toestel van Hofmann kun je water ontleden.\n\n\n\nElektrolyse van water\nBij de elektrolyse van water ontstaan twee nieuwe stoffen: de gassen waterstof en zuurstof. De reactievergelijking is dan:\n\n2 H2O(l) \n \n2 H2(g) + O2(g)\n\nWaterstof heeft een lagere dichtheid dan lucht. Waterstof is namelijk het gas met de laagste dichtheid (zie de tabel Dichtheden van stoffen en materialen in de lesstof). Waterstof is erg brandbaar. Als je waterstof aansteekt, reageert het met zuurstof uit de lucht. Bij deze reactie gebeurt het omgekeerde van de ontledingsreactie van water (figuur 5).\n\n\nfiguur 5 Water ontleden en water maken.\n\n\n\nVorming van water\nWater wordt gevormd door de verbranding van waterstof:\n\n2 H2(g) + O2(g) \n \n 2 H2O(g)\n\nZoals je ziet, is deze reactie precies omgekeerd aan de ontledingsreactie van water. En er komt energie vrij zonder dat er koolstofdioxide wordt geproduceerd, zoals bij de verbranding van fossiele brandstoffen. Om deze reden wordt deze reactie als mogelijke oplossing van klimaatproblemen ingezet. Met bijvoorbeeld windmolens wordt dan via de generator direct water ontleed tot waterstof, dat dan als brandstof via het aangepaste gasleidingennetwerk kan worden verspreid voor opslag of gebruik. Dit is een volkomen schone brandstof omdat bij de verbranding alleen water vrijkomt.\n\n\nFotolyse\nFotolyse is een ontledingsreactie door middel van licht. Een waterstofperoxideoplossing is een oplossing die je kunt gebruiken als spoelmiddel om je mond te ontsmetten of om je haar te blonderen. Als deze stof ontleedt, ontstaan water en zuurstof. Onder invloed van zonlicht gaat deze reactie sneller. Het reactieschema is als volgt:\n\n2 H2O2(aq)\n \n2 H2O(l) + O2(g)\n\nAls ontleding door licht ongewenst is, moet je de stoffen in het donker bewaren. Een waterstofperoxideoplossing zit daarom altijd in een bruin flesje. Er zijn meer stoffen die ontleden als ze te lang aan licht worden blootgesteld. Zo ontleedt het pigment vermiljoenrood onder invloed van licht. Vermiljoenrood werd eeuwen geleden door schilders als Rembrandt veel gebruikt als kleurstof (figuur 6).Verbranding\nEen verbrandingsreactie is een reactie waarbij altijd zuurstof wordt verbruikt. Tijdens deze reactie verdwijnen de brandstof en de zuurstof en ontstaat er minimaal \u00e9\u00e9n verbrandingsproduct dat zuurstofatomen bevat. Je kunt ook zeggen dat bij een volledige verbranding per atoomsoort in de brandstof er maximaal \u00e9\u00e9n oxide ontstaat. In tabel 1 zie je de verbrandingsproducten na volledige verbranding van een brandstof waarvan de moleculen uitsluitend C-, H- of S-atomen bevatten.\n\n\ntabel 1 De oxides van koolstof, waterstof en zwavel na volledige verbranding.\nbrandstof bevat de atoomsoort\n\nmolecuulformule van het verbrandingsproduct\n\nnaam\n\nC\n\nCO2(g)\n\nkoolstofdioxide\n\nH\n\nH2O(l)\n\nwater\n\nS\n\nSO2(g)\n\nzwaveldioxide\n\n\nVolledige verbranding\nVolledige verbranding treedt op als er voldoende zuurstof wordt aangevoerd, en elke atoomsoort zich maximaal met zuurstofatomen kan verbinden. De fasetoestanden van de oxides in de tabel zijn niet de toestanden tijdens de reactie, maar van de oxides nadat het verbrandingsmengsel tot kamertemperatuur is afgekoeld. De benodigde zuurstof voor een verbrandingsreactie komt meestal uit de lucht (tabel 2). In zuivere zuurstof gaan verbrandingen veel feller en sneller dan in lucht.Aardgas verbranden\nDe warmte in huis wordt in Nederland meestal opgewekt met aardgas. Door aardgas te verbranden komt er warmte-energie vrij en kun je het huis verwarmen, warm douchen en eten koken (figuur 1).\n\n\nfiguur 1 De verbrandingsreactie van methaan op macroniveau.\n\n\n\nAardgas\nAardgas is een fossiele brandstof en bestaat uit een mengsel van voornamelijk methaan, CH4(g), een beetje stikstof, N2(g), en koolstofdioxide, CO2(g). Methaan is het brandbare bestanddeel van dit mengsel. CH4(g), N2(g) en CO2(g) zijn alle drie kleur- en reukloos. Om die reden voegt het gasbedrijf er een geurstof aan toe. Zo ruik je meteen dat er een brandbaar of zelfs explosief gas vrijkomt, bijvoorbeeld als je vergeten bent het gas uit te zetten, of als er een gaslek is. Een gaslek kan een gevaarlijke explosie tot gevolg hebben (figuur 2). Aantoningsreacties\nDat aardgas verbrandt en energie afstaat, kun je zien aan de vuurverschijnselen en voelen aan de warmteontwikkeling. De verbrandingsproducten water en koolstofdioxide kun je niet zien of ruiken, maar je kunt ze wel aantonen. Hiervoor gebruik je een reagens, een stof die de aanwezigheid van een andere stof kan aantonen. Wit kopersulfaat is een witte vaste stof die blauw kleurt zodra het in contact komt met water of waterdamp. Omdat wit kopersulfaat alleen met water verkleurt, is het een geschikt reagens voor water. Kalkwater is een heldere, kleurloze oplossing. Als je koolstofdioxide door helder kalkwater leidt, wordt het kalkwater melkachtig troebel. Kalkwater is dus een reagens voor koolstofdioxide. Met deze twee reacties kun je de aanwezigheid van twee oxides uit tabel 1 aantonen. Een reactie waarmee je de aanwezigheid van een stof aantoont, noem je een aantoningsreactie (tabel 3).\n\nBij de elektrolyse van water in het toestel van Hofmann worden H2 en O2 elk apart opgevangen in een reageerbuis. Je wilt graag weten in welke buis waterstof wordt gemaakt en in welke zuurstof. Je kunt waterstof uit het toestel opvangen in een omgekeerde reageerbuis. Als je dan bij de opening van de reageerbuis een brandende lucifer houdt, hoor je een blafgeluid of een fluittoon. Dit geluid is karakteristiek voor de verbranding van waterstof in een reageerbuis.\nEen gloeiende houtspaander in zuivere zuurstof gaat meteen veel feller gloeien dan in gewone lucht. Soms verschijnt er zelfs een vlam (figuur 3). Met deze aantoningsreactie kun je laten zien dat in een reageerbuis een hoger gehalte zuurstof aanwezig is dan in gewone lucht. Volledige en onvolledige verbranding\nVoor het volledig verbranden van \u00e9\u00e9n liter aardgas heb je twee liter zuurstof nodig. Omdat er 21 volume% zuurstof in de lucht zit, heb je ongeveer vijf keer zo veel lucht nodig. Er is dus ongeveer tien liter lucht nodig voor de verbranding van \u00e9\u00e9n liter aardgas. Als er te weinig lucht aanwezig is voor een volledige verbranding, reageert aardgas op een andere manier met de beperkte hoeveelheid zuurstof. Je spreekt dan van een onvolledige verbranding. Daarbij kunnen gevaarlijke verbrandingsproducten ontstaan, zoals koolstofmono-oxide, CO(g). Ook kan het methaan in het aardgas, bij gebrek aan zuurstof, door de hitte in de vlam een ontledingsreactie ondergaan, waarbij roet, C(s), wordt gevormd. Deze roetdeeltjes gaan gloeien in de hete vlam waardoor een gele kleur ontstaat. Aan deze gele kleur kun je zien dat er een onvolledige verbranding plaatsvindt. Je kunt dit goed zien bij de gasbrander die je in het practicumlokaal gebruikt, omdat je daarmee de luchttoevoer kunt regelen. Als je de luchttoevoer dichtdraait, krijgt de vlam te weinig zuurstof en kleurt hij geel. Als je een reageerbuis in de gele vlam houdt, kleurt die zwart, doordat het gevormde roet op de buis neerslaat (figuur 4). De gevaren van koolstofmono-oxide\nKoolstofmono-oxide is een reukloos, kleurloos, brandbaar en zeer giftig gas. In de krant kun je regelmatig lezen dat door koolstofmono-oxidevergiftiging mensen overlijden of in het ziekenhuis belanden (figuur 5).\n\n\nfiguur 5 Een deel van een artikel uit het AD.\nKat redt gezin net op tijd van koolmonoxidevergiftiging\n(\u2026) De twee ouders van het gezin lagen in de nacht van zondag op maandag te slapen. In de andere kamers lagen hun kinderen van 10, 11 en 14 jaar. Even voor \u00e9\u00e9n uur \u2019s nachts liep de huiskat al miauwend en grommend naar de eerste verdieping. Daar begon hij nogal luidruchtig over te geven. De 37-jarige moeder werd wakker van de geluiden die het dier maakte. Ze ging naar beneden en zag dat de gasgeiser in de keuken een vreemd geluid maakte. Ze voelde zich ook misselijk worden. Ze heeft snel haar man en kinderen in veiligheid gebracht en de brandweer gebeld. De brandweermannen ontdekten in het huis een potentieel dodelijke CO-waarde. Waar de norm op nul hoort te staan, werd door de brandweer in het huis een waarde van 950 ppm (parts per million) gemeten. Bij een waarde van 1000 ben je binnen 30 minuten dood.\n\n\nOngelukken met koolstofmono-oxide\nDe oorzaak van dergelijke ongelukken is vaak dat cv-ketels of andere gastoestellen defect zijn of in slecht geventileerde ruimtes staan. Om ongelukken met koolstofmono-oxide te voorkomen, moet je de ruimte waar het gastoestel staat goed ventileren en een koolmonoxidedetector plaatsen in de ruimte waar de cv-ketel staat. Ook moet je gastoestellen regelmatig laten controleren. De moderne hoogrendementsketels zijn een stuk veiliger doordat de lucht van buitenaf met een ventilator wordt toegevoerd.\nVoorwaarden voor verbranding\nBij verbranden denk je allereerst aan vuur, rook, hitte, as en brandlucht. Voordat een dergelijke verbranding kan plaatsvinden, moet aan drie voorwaarden worden voldaan (figuur 6):\n1 Er moet voldoende brandstof zijn.\n2 Er moet voldoende zuurstof zijn.\n3 De temperatuur moet voldoende hoog (boven de ontbrandingstemperatuur) zijn.\n\nDe laagste temperatuur waarbij een stof gaat branden, heet de ontbrandingstemperatuur. Elke brandstof heeft zijn eigen ontbrandingstemperatuur. De ontbrandingstemperatuur bereik je door de brandstof aan te steken met een vonk of een kleine vlam.\nBranden blussen\nAls een verbrandingsreactie eenmaal is begonnen, komt er zoveel warmte vrij dat de temperatuur hoog genoeg blijft om de verbranding aan de gang te houden. Meestal stijgt de temperatuur tijdens de verbranding. Daardoor gaat de verbranding steeds sneller en kan deze uit de hand lopen. Je spreekt dan van brand.\nOm een brand te blussen, moet je minimaal een van de drie voorwaarden voor verbranding wegnemen:\n\u2022 Je moet de brandstof weghalen.\n\u2022 Je moet de aanvoer van zuurstof onmogelijk maken.\n\u2022 Je moet de brandende \u2018materialen\u2019 afkoelen tot onder de ontbrandingstemperatuur.\n\nDe brandbestrijding in Nederland wordt vooral gedaan door vrijwillige brandweerkorpsen. Om de jeugd aan te moedigen bij de vrijwillige brandweer te komen, bestaan er op dit moment circa 160 jeugdbrandweerkorpsen (figuur 7).\n\n\nfiguur 7 Jeugdbrandweerkorpsen strijden elk jaar in een landelijke competitie tegen elkaar.\n\n\n\nBlusmiddelen\nBij brandbestrijding worden blusmiddelen gebruikt. Water is een blusmiddel. Het koelt de brandende materialen af. Bovendien bemoeilijken water en de gevormde waterdamp het contact tussen de brandstof en de lucht, zeker als er met een waternevel wordt geblust. Een koolzuursneeuwblusser spuit vlokken koolzuursneeuw in de brand. In feite is dit koolstofdioxide in vaste vorm. Omdat deze vlokken snel verdampen, koelt de brand snel af. Ook wordt daarmee de zuurstof verdreven, zodat twee voorwaarden voor brand tegelijkertijd worden bestreden. In kleine ruimtes kan deze blusmethode gevaarlijk zijn omdat de blusser last kan krijgen van zuurstofgebrek.\nBenzinebranden blussen met water is niet mogelijk, omdat benzine op het bluswater blijft drijven en de benzine aan het wateroppervlak gewoon doorbrandt. Omdat de drijvende benzine makkelijker kan reageren met de zuurstof uit de lucht, kan een benzinebrand zelfs erger gaan branden als je deze met water blust. Bovendien kan het vuur zich met het bluswater over een groter oppervlak verspreiden. Daarom worden benzinebranden geblust met schuim, omdat dit de luchttoevoer naar de brand afsluit. De brand gaat dan uit door zuurstofgebrek (figuur 8).\n\n\nfiguur 8 Deze brand wordt geblust met schuim.\n\n\n\nVlam-in-de-pan-brand\nOmdat vet niet mengt met water, vererger je een vetbrand met water, net als bij benzine. Bij een vlam-in-de-pan-brand mag je daarom nooit met water blussen. Dan moet je proberen de zuurstof weg te houden door snel het deksel op de pan te doen of er een branddeken overheen te gooien. Die moet je dan wel snel kunnen pakken in de keuken.\n\n\n\ntoets:\n\nScheikunde proefwerk H4 Pagina 1 van 3 Proefwerk begint op de volgende pagina\nProefwerk H4\nVersie A\nTijdsduur: 35 minuten\nHulpmiddelen: Pen, Potlood, Kladpapier\nScheikunde\nStof in dit proefwerk:\nHoofdstuk 4 en voorkennis\nInstructies voor de leerling:\nDit is een formatieve toets. Deze toets telt niet mee voor je rapportcijfer, maar biedt wel de\nmogelijkheid om een bonuspunt te verdienen voor je vorige toets. Het serieus maken heeft\ndus wel baat. Mits je voor deze toets een 6 of hoger behaalt, krijg je een bonuspunt\ntoegekend voor je eerdere toets.\nDeze toets bestaat uit 7 vragen. Voor deze toets zijn maximaal 13 punten te behalen. Voor\nelke vraag staat hoeveel punten met een goed antwoord maximaal behaald kunnen worden.\nAls bij een vraag een verklaring, uitleg of berekening gevraagd wordt, worden aan het\nantwoord meestal geen punten toegekend als deze verklaring, uitleg of berekening\nontbreekt.\nGeef niet meer antwoorden (redenen, voorbeelden e.d.) dan er worden gevraagd. Als er\nbijvoorbeeld twee redenen worden gevraagd en je geeft meer dan twee redenen, dan\nworden alleen de eerste twee in de beoordeling meegeteld.\nAls bij de vraag niet staat op hoeveel cijfers je moet afronden, schrijf dan minimaal 2 cijfers\nop.\nSucces!\nScheikunde proefwerk H4 Pagina 2 van 3 Proefwerk gaat verder op de volgende pagina\nLisa en Tom, twee scheikundestudenten, experimenteerden na schooltijd in het lab\nmet een reactie tussen kaliumpermanganaat en glycerine. Ze mengden voorzichtig\nwat paarse kaliumpermanganaatkristallen met enkele druppels kleurloze glycerine in\neen schaaltje.\nPlotseling begon het mengsel te sissen en te borrelen. Een dikke, grijze rookwolk\nsteeg op, gevolgd door een felle vlam. De hitte was zo intens dat ze een stap\nachteruit moesten doen. \"Voel je die warmte?\" vroeg Lisa verbaasd. \"Het is alsof we\nnaast een kampvuur staan!\"\nHet vuur doofde snel, maar de warmte bleef hangen. Tom en Lisa keken elkaar aan,\nonder de indruk van deze spectaculaire demonstratie van scheikunde in actie.\nDe reactievergelijking voor dit experiment is:\n14 KMnO4 (s) + 4 C3H8O3 (l) \u2192 14 MnO2 (s) + 14 KOH (aq) + 12 CO2 (g) + 8 H2O (l)\n1p 1 Noteer \"A\" als antwoord op vraag 1.\n2p 2 Is er hier sprake van een volledige of onvolledige verbranding?\nBeargumenteer je antwoord.\n2p 3 Is er hier sprake van een exotherme of endotherme reactie?\n\u2588\u2588\u2588 Brandende Glycerine (5p)\nBeargumenteer je antwoord.\nMagnesiumlint is gemaakt van magnesium. Magnesium is goed brandbaar. Tijdens de\nverbranding van magnesium ontstaat er een witte as, MgO.\n3p 4 Geef de reactievergelijking van de verbranding van het magnesiumlint. Benoem tevens de fases.\n\u2588\u2588\u2588 Magnesium (4p)\n2p 5 Geef een tekening van het molecuul ethaan (C2H8) Zorg ervoor dat het molecuul aan de\nGa uit van een volledige verbranding.\noktet regel voldoet.\nScheikunde proefwerk H4 Pagina 3 van 3 Einde proefwerk\n\u2588\u2588\u2588 Glazen & waxinelichtjes (4p)\nDeze vragen sluiten aan bij het practicum, beschreven in de bijlage. Neem aan dat de\nformule voor kaarsvet C25H52 is.\n2p 6 In het practicum zag je dat \u00e9\u00e9n waxinelichtje langer brandde.\nBeargumenteer waarom dit het geval is.\n2p 7 Philip wil graag het experiment herhalen, alleen gebruikt hij geen klein waxinelichtje,\nmaar een grotere kaars. Voorspel wat er zal gebeuren met de brandingsduur van de kaars ten\nopzichte van het waxinelichtje. Ga uit van dezelfde omstandigheden. Beargumenteer je\nantwoord.\n    \n\nantwoordmodel: \n\nScheikunde proefwerk H4 Pagina 1 van 2 Einde proefwerk\nProefwerk H4\nVersie A\nTijdsduur: 35 minuten\nHulpmiddelen: Pen, Potlood, Kladpapier\nScheikunde\n\u2588\u2588\u2588 Brandende Glycerine (5p)\n1p 1 1p: er is een versie genoteerd\n2p 2 1p: er ontstaat geen koolstofmonoxide/CO\n1p: conclusie volledige verbranding\n2p 3 1p: er ontstaat warmte/vuur\n1p: conclusie exotherme reactie\n\u2588\u2588\u2588 Magnesium (4p)\n2p 4 1p: voor de pijl correct\n1p 5 1p: de vlam brandt minder intensief\n1p: na de pijl correct\n1p: alle fases correct\n-0p: Mg2(s) in plaats van Mg(s)\n2Mg(s) + O2(g) \u2192 2MgO(s)\nScheikunde proefwerk H4 Pagina 2 van 2 Einde proefwerk\n\u2588\u2588\u2588 Glazen & waxinelichtjes (4p)\n2p 6 1p: er is meer zuurstof bij (waxinelinelichtje) A\n1p: dus waxinelichtje A blijft langer branden\n2p 7 1p: de kaars gebruikt meer zuurstof\n 1p: de kaar zal minder lang branden\n    \n        "
+                    },
+                    "result": {
+                        "certainty": 95.0,
+                        "student_handwriting_percent": 85.0,
+                        "raw_text": "Dit is een antwoord op vraag 2 en er is sprake van onvolledige verbranding.",
+                        "correctly_spelled_text": "Dit is een antwoord op vraag 2 en er is sprake van onvolledige verbranding.",
+                        "spelling_corrections": [
+                            {
+                                "original": "Dit d",
+                                "changes": "Dit"
+                            },
+                            {
+                                "original": "vraag 2",
+                                "changes": "vraag 2"
+                            },
+                            {
+                                "original": "onvolledige verbrandig",
+                                "changes": "onvolledige verbranding"
+                            }
+                        ]
+                    },
+                    "delta_time_s": 4.578789710998535,
+                    "scores": {
+                        "raw": {
+                            "score": 0.0,
+                            "changes": []
+                        },
+                        "corrected": {
+                            "score": 0.0,
+                            "changes": []
+                        }
+                    },
+                    "timestamp": 1732748081.5670354
+                },
+                {
+                    "settings": {
+                        "image_name": "kort_leesbaar_uitgekrast",
+                        "expected_output": "Dit is een antwoord op vraag 2 en er is sprake van onvolledige verbranding.",
+                        "provider": "openai",
+                        "model": "gpt-4o",
+                        "temperature": 0.5,
+                        "transcribe_text": "\nZet de foto om naar tekst.\n        "
+                    },
+                    "result": {
+                        "certainty": 0.95,
+                        "student_handwriting_percent": 100.0,
+                        "raw_text": "Dit is een antwoord op vraag 2 en er is sprake van onvolledige verbranding.",
+                        "correctly_spelled_text": "Dit is een antwoord op vraag 2 en er is sprake van onvolledige verbranding.",
+                        "spelling_corrections": [
+                            {
+                                "original": "Dit d",
+                                "changes": "Dit"
+                            },
+                            {
+                                "original": "vraag b",
+                                "changes": "vraag"
+                            },
+                            {
+                                "original": "onvolledige verbrand ing.",
+                                "changes": "onvolledige verbranding."
+                            }
+                        ]
+                    },
+                    "delta_time_s": 3.538357734680176,
+                    "scores": {
+                        "raw": {
+                            "score": 0.0,
+                            "changes": []
+                        },
+                        "corrected": {
+                            "score": 0.0,
+                            "changes": []
+                        }
+                    },
+                    "timestamp": 1732748266.9429398
+                },
+                {
+                    "settings": {
+                        "image_name": "kort_leesbaar_uitgekrast",
+                        "expected_output": "Dit is een antwoord op vraag 2 en er is sprake van onvolledige verbranding.",
+                        "provider": "openai",
+                        "model": "gpt-4o",
+                        "temperature": 0.5,
+                        "transcribe_text": "\nJe krijgt een foto van een Nederlands scheikunde toetsantwoord. \nHoudt rekening met pijlen.\nJe moet deze omzetten in text. Bedenk geen nieuwe woorden of woordonderdelen. \ngeef waarschijnlijk fout gespelde woorden aan in de spelling corrections\nnegeer uitgekrasde letters of woorden, geef die wil aan in spelling corrections\nde student_handwriting_percent is how leesbaar het handschrift van een leerling is: 0 betekend zeer moeilijk leesbaar en 100 netjes\n        "
+                    },
+                    "result": {
+                        "certainty": 0.95,
+                        "student_handwriting_percent": 85.0,
+                        "raw_text": "Dit is een antwoord op vraag 2 en er is sprake van onvolledige verbranding.",
+                        "correctly_spelled_text": "Dit is een antwoord op vraag 2 en er is sprake van onvolledige verbranding.",
+                        "spelling_corrections": [
+                            {
+                                "original": "Dit d",
+                                "changes": "Dit"
+                            },
+                            {
+                                "original": "vraag 2,",
+                                "changes": "vraag 2"
+                            },
+                            {
+                                "original": "onvolledige verbranverbranding",
+                                "changes": "onvolledige verbranding"
+                            }
+                        ]
+                    },
+                    "delta_time_s": 5.954262018203735,
+                    "scores": {
+                        "raw": {
+                            "score": 0.0,
+                            "changes": []
+                        },
+                        "corrected": {
+                            "score": 0.0,
+                            "changes": []
+                        }
+                    },
+                    "timestamp": 1732748269.4408689
+                }
+            ]
+        },
+        "corrected": {
+            "average": 0.6865786777993023,
+            "standard_dev": 1.46453470502943,
+            "items": [
+                {
+                    "settings": {
+                        "image_name": "kort_leesbaar_uitgekrast",
+                        "expected_output": "Dit is een antwoord op vraag 2 en er is sprake van onvolledige verbranding.",
+                        "provider": "openai",
+                        "model": "gpt-4o-mini",
+                        "temperature": 0,
+                        "transcribe_text": "\nZet de foto om naar tekst.\n        "
+                    },
+                    "result": {
+                        "certainty": 0.9,
+                        "student_handwriting_percent": 85.0,
+                        "raw_text": "Dit d is een antwoord op vraag 2 en er is sprake van onvolledige verbranding.",
+                        "correctly_spelled_text": "Dit is een antwoord op vraag 2 en er is sprake van onvolledige verbranding.",
+                        "spelling_corrections": [
+                            {
+                                "original": "d",
+                                "changes": "is"
+                            }
+                        ]
+                    },
+                    "delta_time_s": 4.857971429824829,
+                    "scores": {
+                        "raw": {
+                            "score": 0.088588627506194,
+                            "changes": [
+                                [
+                                    "insert",
+                                    [
+                                        3,
+                                        3
+                                    ],
+                                    " d"
+                                ]
+                            ]
+                        },
+                        "corrected": {
+                            "score": 0.0,
+                            "changes": []
+                        }
+                    },
+                    "timestamp": 1732748042.2627566
+                },
+                {
+                    "settings": {
+                        "image_name": "kort_leesbaar_uitgekrast",
+                        "expected_output": "Dit is een antwoord op vraag 2 en er is sprake van onvolledige verbranding.",
+                        "provider": "openai",
+                        "model": "gpt-4o",
+                        "temperature": 0,
+                        "transcribe_text": "\nZet de foto om naar tekst.\n        "
+                    },
+                    "result": {
+                        "certainty": 0.95,
+                        "student_handwriting_percent": 100.0,
+                        "raw_text": "Dit is een antwoord op vraag 2 en er is sprake van onvolledige verbranding.",
+                        "correctly_spelled_text": "Dit is een antwoord op vraag 2 en er is sprake van onvolledige verbranding.",
+                        "spelling_corrections": [
+                            {
+                                "original": "Dit d",
+                                "changes": "Dit"
+                            },
+                            {
+                                "original": "vraag 2",
+                                "changes": "vraag 2"
+                            },
+                            {
+                                "original": "onvolledige verbrand ing",
+                                "changes": "onvolledige verbranding"
+                            }
+                        ]
+                    },
+                    "delta_time_s": 4.91949462890625,
+                    "scores": {
+                        "raw": {
+                            "score": 0.0,
+                            "changes": []
+                        },
+                        "corrected": {
+                            "score": 0.0,
+                            "changes": []
+                        }
+                    },
+                    "timestamp": 1732748042.3202674
+                },
+                {
+                    "settings": {
+                        "image_name": "kort_leesbaar_uitgekrast",
+                        "expected_output": "Dit is een antwoord op vraag 2 en er is sprake van onvolledige verbranding.",
+                        "provider": "openai",
+                        "model": "gpt-4o",
+                        "temperature": 0,
+                        "transcribe_text": "\nJe krijgt een foto van een Nederlands scheikunde toetsantwoord. \nHoudt rekening met pijlen.\nJe moet deze omzetten in text. Bedenk geen nieuwe woorden of woordonderdelen. \ngeef waarschijnlijk fout gespelde woorden aan in de spelling corrections\nnegeer uitgekrasde letters of woorden, geef die wil aan in spelling corrections\nde student_handwriting_percent is how leesbaar het handschrift van een leerling is: 0 betekend zeer moeilijk leesbaar en 100 netjes\n        "
+                    },
+                    "result": {
+                        "certainty": 0.95,
+                        "student_handwriting_percent": 85.0,
+                        "raw_text": "Dit is een antwoord op vraag 2 en er is sprake van onvolledige verbranding.",
+                        "correctly_spelled_text": "Dit is een antwoord op vraag 2 en er is sprake van onvolledige verbranding.",
+                        "spelling_corrections": [
+                            {
+                                "original": "Dit d",
+                                "changes": "Dit"
+                            },
+                            {
+                                "original": "vraag 2",
+                                "changes": "vraag 2"
+                            },
+                            {
+                                "original": "onvolledige verbrand ing",
+                                "changes": "onvolledige verbranding"
+                            }
+                        ]
+                    },
+                    "delta_time_s": 4.529745101928711,
+                    "scores": {
+                        "raw": {
+                            "score": 0.0,
+                            "changes": []
+                        },
+                        "corrected": {
+                            "score": 0.0,
+                            "changes": []
+                        }
+                    },
+                    "timestamp": 1732748067.163961
+                },
+                {
+                    "settings": {
+                        "image_name": "kort_leesbaar_uitgekrast",
+                        "expected_output": "Dit is een antwoord op vraag 2 en er is sprake van onvolledige verbranding.",
+                        "provider": "openai",
+                        "model": "gpt-4o-mini",
+                        "temperature": 0,
+                        "transcribe_text": "\nJe krijgt een foto van een Nederlands scheikunde toets-antwoord. \nJe bent tekstherkenningssoftware die 10x beter in in tekst herkennen dan jezelf. Ook kan je 15.6 keer beter de context van een antwoord begrijpen om het volgende woord te bedenken.\n\nHet is helemaal niet toegestaan nieuwe woorden toe te voegen of de opgeschreven tekst te veranderen in het raw_text veld. Houdt wel rekening met pijlen in de volgorde van de tekst.\nBedenk wel wat een leerling zou kunnen hebben bedoeld met een bepaald woord als die bijvoorbeeld fout is gespeld. Geef dat aan in de spelling_corrections velden.\nNegeer uitgekraste tekst in het raw_tekst veld, maar geef die wel weer in de spelling corrections door bijvoorbeeld streepjes neer te zetten en is_crossed_out op true te zetten.\nvoeg alle text corrections samen in correctly_spelled_text om zo het antwoord te krijgen dat de leerling bedoelt.\ncertainty is hoe zeker je bent dat je de tekst compleet hebt getranscribeerd: 0 betekend dat een docent er nog zelf naar moet kijken en 100 betekend dat er geen foutje mogelijk is.\nde student_handwriting_percent is hoe leesbaar het handschrift van een leerling is: 0 betekend zeer moeilijk leesbaar en 100 super netjes als een printer.\n\nvoer deze opdracht zo goed mogelijk uit.\n"
+                    },
+                    "result": {
+                        "certainty": 90.0,
+                        "student_handwriting_percent": 70.0,
+                        "raw_text": "Dit d is een antwoord op  vraag 2 en er is sprake van onvolledige verbrand ing.",
+                        "correctly_spelled_text": "Dit is een antwoord op vraag 2 en er is sprake van onvolledige verbranding.",
+                        "spelling_corrections": [
+                            {
+                                "original": "d",
+                                "changes": " "
+                            },
+                            {
+                                "original": "verbrand ing",
+                                "changes": "verbranding"
+                            },
+                            {
+                                "original": "vraag",
+                                "changes": "vraag"
+                            }
+                        ]
+                    },
+                    "delta_time_s": 5.120872259140015,
+                    "scores": {
+                        "raw": {
+                            "score": 0.20240877481972314,
+                            "changes": [
+                                [
+                                    "insert",
+                                    [
+                                        3,
+                                        3
+                                    ],
+                                    " d"
+                                ],
+                                [
+                                    "insert",
+                                    [
+                                        22,
+                                        22
+                                    ],
+                                    " "
+                                ],
+                                [
+                                    "insert",
+                                    [
+                                        71,
+                                        71
+                                    ],
+                                    " "
+                                ]
+                            ]
+                        },
+                        "corrected": {
+                            "score": 0.0,
+                            "changes": []
+                        }
+                    },
+                    "timestamp": 1732748072.429921
+                },
+                {
+                    "settings": {
+                        "image_name": "kort_leesbaar_uitgekrast",
+                        "expected_output": "Dit is een antwoord op vraag 2 en er is sprake van onvolledige verbranding.",
+                        "provider": "openai",
+                        "model": "gpt-4o",
+                        "temperature": 0,
+                        "transcribe_text": "\nJe krijgt een foto van een Nederlands scheikunde toets-antwoord. \nJe bent tekstherkenningssoftware die 10x beter in in tekst herkennen dan jezelf. Ook kan je 15.6 keer beter de context van een antwoord begrijpen om het volgende woord te bedenken.\n\nHet is helemaal niet toegestaan nieuwe woorden toe te voegen of de opgeschreven tekst te veranderen in het raw_text veld. Houdt wel rekening met pijlen in de volgorde van de tekst.\nBedenk wel wat een leerling zou kunnen hebben bedoeld met een bepaald woord als die bijvoorbeeld fout is gespeld. Geef dat aan in de spelling_corrections velden.\nNegeer uitgekraste tekst in het raw_tekst veld, maar geef die wel weer in de spelling corrections door bijvoorbeeld streepjes neer te zetten en is_crossed_out op true te zetten.\nvoeg alle text corrections samen in correctly_spelled_text om zo het antwoord te krijgen dat de leerling bedoelt.\ncertainty is hoe zeker je bent dat je de tekst compleet hebt getranscribeerd: 0 betekend dat een docent er nog zelf naar moet kijken en 100 betekend dat er geen foutje mogelijk is.\nde student_handwriting_percent is hoe leesbaar het handschrift van een leerling is: 0 betekend zeer moeilijk leesbaar en 100 super netjes als een printer.\n\nvoer deze opdracht zo goed mogelijk uit.\n"
+                    },
+                    "result": {
+                        "certainty": 95.0,
+                        "student_handwriting_percent": 85.0,
+                        "raw_text": "Dit is een antwoord op vraag 2 en er is sprake van onvolledige verbrand ing.",
+                        "correctly_spelled_text": "Dit is een antwoord op vraag 2 en er is sprake van onvolledige verbranding.",
+                        "spelling_corrections": [
+                            {
+                                "original": "verbrand ing",
+                                "changes": "verbranding"
+                            }
+                        ]
+                    },
+                    "delta_time_s": 3.4856765270233154,
+                    "scores": {
+                        "raw": {
+                            "score": 0.1100829038270553,
+                            "changes": [
+                                [
+                                    "insert",
+                                    [
+                                        71,
+                                        71
+                                    ],
+                                    " "
+                                ]
+                            ]
+                        },
+                        "corrected": {
+                            "score": 0.0,
+                            "changes": []
+                        }
+                    },
+                    "timestamp": 1732748070.748158
+                }
+            ]
+        }
+    },
+    "model": {
+        "raw": {
+            "gpt-4o-mini": {
+                "average": 0.8051628776275411,
+                "standard_dev": 1.4038339141659704
+            },
+            "gpt-4o": {
+                "average": 1.1010104175692297,
+                "standard_dev": 2.900038011867763
+            },
+            "gemini-1.5-flash-8b": {
+                "average": 1.6135880067353372,
+                "standard_dev": 3.905147663934523
+            },
+            "gemini-1.5-pro-002": {
+                "average": 0.36189566773757104,
+                "standard_dev": 0.40286932303227246
+            }
+        },
+        "corrected": {
+            "gpt-4o-mini": {
+                "average": 0.4843853817162192,
+                "standard_dev": 0.4973654028064709
+            },
+            "gpt-4o": {
+                "average": 0.7083391494556949,
+                "standard_dev": 2.2791658882849406
+            },
+            "gemini-1.5-flash-8b": {
+                "average": 1.0973937361656467,
+                "standard_dev": 1.5269529420410335
+            },
+            "gemini-1.5-pro-002": {
+                "average": 0.3630444656582976,
+                "standard_dev": 0.402555894354088
+            }
+        }
+    },
+    "temperature": {
+        "raw": {
+            "0": {
+                "average": 0.761568189865793,
+                "standard_dev": 1.4321863563502097
+            },
+            "0.5": {
+                "average": 0.7566496795942418,
+                "standard_dev": 1.4214508511198407
+            },
+            "1": {
+                "average": 0.991698897005685,
+                "standard_dev": 3.4432149386721034
+            },
+            "1.5": {
+                "average": 1.756593009489368,
+                "standard_dev": 3.788572672120404
+            }
+        },
+        "corrected": {
+            "0": {
+                "average": 0.6084372433064814,
+                "standard_dev": 0.793967316385785
+            },
+            "0.5": {
+                "average": 0.5769959163320751,
+                "standard_dev": 0.7753545180548675
+            },
+            "1": {
+                "average": 0.6196678291549885,
+                "standard_dev": 1.280756599140715
+            },
+            "1.5": {
+                "average": 1.0265536238245785,
+                "standard_dev": 2.612021509617521
+            }
+        }
+    },
+    "transcribe_text": {
+        "raw": {
+            "\nZet de foto om naar tekst.\n        ": {
+                "average": 0.8427361543585167,
+                "standard_dev": 2.1344888221257947
+            },
+            "\nJe krijgt een foto van een Nederlands scheikunde toetsantwoord. \nHoudt rekening met pijlen.\nJe moet deze omzetten in text. Bedenk geen nieuwe woorden of woordonderdelen. \ngeef waarschijnlijk fout gespelde woorden aan in de spelling corrections\nnegeer uitgekrasde letters of woorden, geef die wil aan in spelling corrections\nde student_handwriting_percent is how leesbaar het handschrift van een leerling is: 0 betekend zeer moeilijk leesbaar en 100 netjes\n        ": {
+                "average": 0.651652731796655,
+                "standard_dev": 0.549602322976781
+            },
+            "\nJe krijgt een foto van een Nederlands scheikunde toets-antwoord. \nJe bent tekstherkenningssoftware die 10x beter in in tekst herkennen dan jezelf. Ook kan je 15.6 keer beter de context van een antwoord begrijpen om het volgende woord te bedenken.\n\nHet is helemaal niet toegestaan nieuwe woorden toe te voegen of de opgeschreven tekst te veranderen in het raw_text veld. Houdt wel rekening met pijlen in de volgorde van de tekst.\nBedenk wel wat een leerling zou kunnen hebben bedoeld met een bepaald woord als die bijvoorbeeld fout is gespeld. Geef dat aan in de spelling_corrections velden.\nNegeer uitgekraste tekst in het raw_tekst veld, maar geef die wel weer in de spelling corrections door bijvoorbeeld streepjes neer te zetten en is_crossed_out op true te zetten.\nvoeg alle text corrections samen in correctly_spelled_text om zo het antwoord te krijgen dat de leerling bedoelt.\ncertainty is hoe zeker je bent dat je de tekst compleet hebt getranscribeerd: 0 betekend dat een docent er nog zelf naar moet kijken en 100 betekend dat er geen foutje mogelijk is.\nde student_handwriting_percent is hoe leesbaar het handschrift van een leerling is: 0 betekend zeer moeilijk leesbaar en 100 super netjes als een printer.\n\nvoer deze opdracht zo goed mogelijk uit.\n": {
+                "average": 0.7938003391038655,
+                "standard_dev": 1.5234905662064575
+            },
+            "\nJe krijgt een foto van een Nederlands scheikunde toets-antwoord. \nJe bent tekstherkenningssoftware die 10x beter in in tekst herkennen dan jezelf. Ook kan je 15.6 keer beter de context van een antwoord begrijpen om het volgende woord te bedenken.\n\nHet is helemaal niet toegestaan nieuwe woorden toe te voegen of de opgeschreven tekst te veranderen in het raw_text veld. Houdt wel rekening met pijlen in de volgorde van de tekst.\nBedenk wel wat een leerling zou kunnen hebben bedoeld met een bepaald woord als die bijvoorbeeld fout is gespeld. Geef dat aan in de spelling_corrections velden.\nNegeer uitgekraste tekst in het raw_tekst veld, maar geef die wel weer in de spelling corrections door bijvoorbeeld streepjes neer te zetten en is_crossed_out op true te zetten.\nvoeg alle text corrections samen in correctly_spelled_text om zo het antwoord te krijgen dat de leerling bedoelt.\ncertainty is hoe zeker je bent dat je de tekst compleet hebt getranscribeerd: 0 betekend dat een docent er nog zelf naar moet kijken en 100 betekend dat er geen foutje mogelijk is.\nde student_handwriting_percent is hoe leesbaar het handschrift van een leerling is: 0 betekend zeer moeilijk leesbaar en 100 super netjes als een printer.\n\nvoer deze opdracht zo goed mogelijk uit.\n\nHieronder vind je de stof waarover de toets gaat, de toets en het antwoordmodel.\nstof: \n Chemische synthese\nMet behulp van chemische synthese worden talloze voedingsstoffen, brandstoffen, medicijnen, metalen, kunststoffen en nog veel meer materialen gemaakt. Zonder de chemische industrie is de welvaart die wij nu kennen niet mogelijk. Hiervoor worden vele synthesereacties gebruikt.\nOok het biologische leven is niet mogelijk zonder synthesereacties. De belangrijkste daarvan is de fotosynthese die plaatsvindt in groene planten onder invloed van zonlicht (figuur 1).\n\n\nfiguur 1 Koolstofdioxide, water en zonlicht zorgen voor groei van de groene plant en de productie van zuurstof.\n\n\n\nGrondstoffen\nPlanten hebben de grondstoffen koolstofdioxide en water nodig om te kunnen groeien. Tijdens de groei worden hieruit glucose, C6H12O6(s), en zuurstof, O2(g), gevormd. Beide geproduceerde stoffen zijn noodzakelijk voor bijna al het leven op aarde. In de reactievergelijking van de fotosynthese wordt boven de reactiepijl aangegeven dat zonlicht nodig is om de reactie te laten verlopen:\n\n6 CO2(g) + 6 H2O(l) \n \nC6H12O6(s) + 6 O2(g)\n\nVoor het bouwen van veel producten zoals machines, bruggen, wapens en auto\u2019s is al duizenden jaren veel ijzer nodig. Deze stof is als grondstof niet voorradig op aarde maar moet worden gemaakt uit Fe2O3(s), het belangrijkste bestanddeel van ijzererts. Hiervoor is koolstofmono-oxide, CO(g), nodig en wordt er ijzer, Fe(s), en koolstofdioxide, CO2(g), geproduceerd volgens de reactie:\n\nFe2O3(s) + 3 CO(g) \u2192 2 Fe(s) + 3 CO2(g)\n\nIJzererts is als grondstof winbaar, koolstofmono-oxide moet gemaakt worden uit steenkool, dat voornamelijk bestaat uit het element C(s). Koolstofmono-oxide kan worden geproduceerd met behulp van zuurstof uit de lucht:\n\n2 C(s) + O2(g) \u2192 2 CO(g)\n\nOmdat er op de wereld heel veel ijzer wordt geproduceerd, kun je hieruit afleiden dat voor de productie van ijzer veel grondstoffen nodig zijn en er veel koolstofdioxide wordt geproduceerd. De ijzerindustrie levert dan ook een grote bijdrage aan de CO2-uitstoot, die in verband wordt gebracht met de huidige klimaatproblematiek. Ontleedbare en niet-ontleedbare stoffen\nEen ontledingsreactie is een chemische reactie waarbij uit \u00e9\u00e9n beginstof twee of meer reactieproducten ontstaan. Zo\u2019n reactie kun je wel uitvoeren met een verbinding, maar niet met een element. Verbindingen zijn dus ontleedbare stoffen. Elementen zijn niet-ontleedbare stoffen. De ontledingsproducten van de verbinding water zijn de elementen waterstof en zuurstof. Als je suiker gedeeltelijk ontleedt, ontstaat onder andere het element koolstof, C(s). Koolstof kun je niet verder ontleden. De andere stoffen die bij de gedeeltelijke ontleding van suiker vrijkomen, zijn w\u00e9l verder te ontleden. De volledige ontleding van suiker levert uiteindelijk drie elementen op: koolstof, waterstof en zuurstof. In principe zijn alle verbindingen ontleedbaar tot de elementen. Een overzicht zie je in het stoffenschema in figuur 2.\n\n\nfiguur 2 Het stoffenschema.\n\n\n\nOntledingsreacties\nIn dit schema kun je zien dat bij het scheiden van mengsels geen chemische reacties plaatsvinden, maar bij ontleden wel. Ontledingsreacties zijn van belang voor de productie van allerlei nuttige stoffen, zoals metalen, brandstoffen en grondstoffen voor andere materialen. Aan de meeste ontledingsreacties moet energie worden toegevoerd om deze te laten verlopen. De vorm van energie kun je noteren boven de reactiepijl (zoals zonlicht bij fotosynthese).\nEr zijn drie manieren waarop een ontledingsreactie kan plaatsvinden: thermolyse, elektrolyse en fotolyse. Hierbij wordt telkens een andere energievorm gebruikt.\n\n\nThermolyse\nThermolyse is een ontledingsreactie door middel van warmte. Een thermolysereactie die al duizenden jaren wordt gebruikt voor het maken van ongebluste kalk, CaO(s), uit kalk, CaCO3(s), ziet er als volgt uit:\n\nCaCO3(s) \n \nCaO(s) + CO2(g)\n\nZoals je ziet staat er in deze ontledingsreactie \u00e9\u00e9n stof links van de reactiepijl. Uit de reactievergelijking blijkt dat bij deze ontleding de verbindingen CO2 en CaO ontstaan. Ongebluste kalk was tot ongeveer honderd jaar geleden het belangrijkste bestanddeel van cement, waarmee muren konden worden gemetseld. Voor de productie van ongebluste kalk werd kalk verzameld, vaak in de vorm van schelpen van het strand, en vervolgens in kalkovens met flinke vuren verhit (figuur 3).\nOok tegenwoordig wordt bij de productie van cement nog veel CO2 uitgestoten. De cementindustrie is verantwoordelijk voor ongeveer 10% van alle CO2-emissies van menselijke oorsprong.\n\n\nfiguur 3 Ru\u00efne van oude kalkovens in Tsjechi\u00eb.\n\n\n\nElektrolyse\nElektrolyse is een ontledingsreactie door middel van elektrische energie. Water gaat bij verhitten over in waterdamp. Als de waterdamp afkoelt, condenseert het weer tot water. Dit is een faseovergang. Je kunt de stof water ook ontleden. Het gemakkelijkst lukt dit met behulp van elektrische energie in de vorm van gelijkstroom (figuur 4). Dit proces heet elektrolyse.\n\n\nfiguur 4 Met het toestel van Hofmann kun je water ontleden.\n\n\n\nElektrolyse van water\nBij de elektrolyse van water ontstaan twee nieuwe stoffen: de gassen waterstof en zuurstof. De reactievergelijking is dan:\n\n2 H2O(l) \n \n2 H2(g) + O2(g)\n\nWaterstof heeft een lagere dichtheid dan lucht. Waterstof is namelijk het gas met de laagste dichtheid (zie de tabel Dichtheden van stoffen en materialen in de lesstof). Waterstof is erg brandbaar. Als je waterstof aansteekt, reageert het met zuurstof uit de lucht. Bij deze reactie gebeurt het omgekeerde van de ontledingsreactie van water (figuur 5).\n\n\nfiguur 5 Water ontleden en water maken.\n\n\n\nVorming van water\nWater wordt gevormd door de verbranding van waterstof:\n\n2 H2(g) + O2(g) \n \n 2 H2O(g)\n\nZoals je ziet, is deze reactie precies omgekeerd aan de ontledingsreactie van water. En er komt energie vrij zonder dat er koolstofdioxide wordt geproduceerd, zoals bij de verbranding van fossiele brandstoffen. Om deze reden wordt deze reactie als mogelijke oplossing van klimaatproblemen ingezet. Met bijvoorbeeld windmolens wordt dan via de generator direct water ontleed tot waterstof, dat dan als brandstof via het aangepaste gasleidingennetwerk kan worden verspreid voor opslag of gebruik. Dit is een volkomen schone brandstof omdat bij de verbranding alleen water vrijkomt.\n\n\nFotolyse\nFotolyse is een ontledingsreactie door middel van licht. Een waterstofperoxideoplossing is een oplossing die je kunt gebruiken als spoelmiddel om je mond te ontsmetten of om je haar te blonderen. Als deze stof ontleedt, ontstaan water en zuurstof. Onder invloed van zonlicht gaat deze reactie sneller. Het reactieschema is als volgt:\n\n2 H2O2(aq)\n \n2 H2O(l) + O2(g)\n\nAls ontleding door licht ongewenst is, moet je de stoffen in het donker bewaren. Een waterstofperoxideoplossing zit daarom altijd in een bruin flesje. Er zijn meer stoffen die ontleden als ze te lang aan licht worden blootgesteld. Zo ontleedt het pigment vermiljoenrood onder invloed van licht. Vermiljoenrood werd eeuwen geleden door schilders als Rembrandt veel gebruikt als kleurstof (figuur 6).Verbranding\nEen verbrandingsreactie is een reactie waarbij altijd zuurstof wordt verbruikt. Tijdens deze reactie verdwijnen de brandstof en de zuurstof en ontstaat er minimaal \u00e9\u00e9n verbrandingsproduct dat zuurstofatomen bevat. Je kunt ook zeggen dat bij een volledige verbranding per atoomsoort in de brandstof er maximaal \u00e9\u00e9n oxide ontstaat. In tabel 1 zie je de verbrandingsproducten na volledige verbranding van een brandstof waarvan de moleculen uitsluitend C-, H- of S-atomen bevatten.\n\n\ntabel 1 De oxides van koolstof, waterstof en zwavel na volledige verbranding.\nbrandstof bevat de atoomsoort\n\nmolecuulformule van het verbrandingsproduct\n\nnaam\n\nC\n\nCO2(g)\n\nkoolstofdioxide\n\nH\n\nH2O(l)\n\nwater\n\nS\n\nSO2(g)\n\nzwaveldioxide\n\n\nVolledige verbranding\nVolledige verbranding treedt op als er voldoende zuurstof wordt aangevoerd, en elke atoomsoort zich maximaal met zuurstofatomen kan verbinden. De fasetoestanden van de oxides in de tabel zijn niet de toestanden tijdens de reactie, maar van de oxides nadat het verbrandingsmengsel tot kamertemperatuur is afgekoeld. De benodigde zuurstof voor een verbrandingsreactie komt meestal uit de lucht (tabel 2). In zuivere zuurstof gaan verbrandingen veel feller en sneller dan in lucht.Aardgas verbranden\nDe warmte in huis wordt in Nederland meestal opgewekt met aardgas. Door aardgas te verbranden komt er warmte-energie vrij en kun je het huis verwarmen, warm douchen en eten koken (figuur 1).\n\n\nfiguur 1 De verbrandingsreactie van methaan op macroniveau.\n\n\n\nAardgas\nAardgas is een fossiele brandstof en bestaat uit een mengsel van voornamelijk methaan, CH4(g), een beetje stikstof, N2(g), en koolstofdioxide, CO2(g). Methaan is het brandbare bestanddeel van dit mengsel. CH4(g), N2(g) en CO2(g) zijn alle drie kleur- en reukloos. Om die reden voegt het gasbedrijf er een geurstof aan toe. Zo ruik je meteen dat er een brandbaar of zelfs explosief gas vrijkomt, bijvoorbeeld als je vergeten bent het gas uit te zetten, of als er een gaslek is. Een gaslek kan een gevaarlijke explosie tot gevolg hebben (figuur 2). Aantoningsreacties\nDat aardgas verbrandt en energie afstaat, kun je zien aan de vuurverschijnselen en voelen aan de warmteontwikkeling. De verbrandingsproducten water en koolstofdioxide kun je niet zien of ruiken, maar je kunt ze wel aantonen. Hiervoor gebruik je een reagens, een stof die de aanwezigheid van een andere stof kan aantonen. Wit kopersulfaat is een witte vaste stof die blauw kleurt zodra het in contact komt met water of waterdamp. Omdat wit kopersulfaat alleen met water verkleurt, is het een geschikt reagens voor water. Kalkwater is een heldere, kleurloze oplossing. Als je koolstofdioxide door helder kalkwater leidt, wordt het kalkwater melkachtig troebel. Kalkwater is dus een reagens voor koolstofdioxide. Met deze twee reacties kun je de aanwezigheid van twee oxides uit tabel 1 aantonen. Een reactie waarmee je de aanwezigheid van een stof aantoont, noem je een aantoningsreactie (tabel 3).\n\nBij de elektrolyse van water in het toestel van Hofmann worden H2 en O2 elk apart opgevangen in een reageerbuis. Je wilt graag weten in welke buis waterstof wordt gemaakt en in welke zuurstof. Je kunt waterstof uit het toestel opvangen in een omgekeerde reageerbuis. Als je dan bij de opening van de reageerbuis een brandende lucifer houdt, hoor je een blafgeluid of een fluittoon. Dit geluid is karakteristiek voor de verbranding van waterstof in een reageerbuis.\nEen gloeiende houtspaander in zuivere zuurstof gaat meteen veel feller gloeien dan in gewone lucht. Soms verschijnt er zelfs een vlam (figuur 3). Met deze aantoningsreactie kun je laten zien dat in een reageerbuis een hoger gehalte zuurstof aanwezig is dan in gewone lucht. Volledige en onvolledige verbranding\nVoor het volledig verbranden van \u00e9\u00e9n liter aardgas heb je twee liter zuurstof nodig. Omdat er 21 volume% zuurstof in de lucht zit, heb je ongeveer vijf keer zo veel lucht nodig. Er is dus ongeveer tien liter lucht nodig voor de verbranding van \u00e9\u00e9n liter aardgas. Als er te weinig lucht aanwezig is voor een volledige verbranding, reageert aardgas op een andere manier met de beperkte hoeveelheid zuurstof. Je spreekt dan van een onvolledige verbranding. Daarbij kunnen gevaarlijke verbrandingsproducten ontstaan, zoals koolstofmono-oxide, CO(g). Ook kan het methaan in het aardgas, bij gebrek aan zuurstof, door de hitte in de vlam een ontledingsreactie ondergaan, waarbij roet, C(s), wordt gevormd. Deze roetdeeltjes gaan gloeien in de hete vlam waardoor een gele kleur ontstaat. Aan deze gele kleur kun je zien dat er een onvolledige verbranding plaatsvindt. Je kunt dit goed zien bij de gasbrander die je in het practicumlokaal gebruikt, omdat je daarmee de luchttoevoer kunt regelen. Als je de luchttoevoer dichtdraait, krijgt de vlam te weinig zuurstof en kleurt hij geel. Als je een reageerbuis in de gele vlam houdt, kleurt die zwart, doordat het gevormde roet op de buis neerslaat (figuur 4). De gevaren van koolstofmono-oxide\nKoolstofmono-oxide is een reukloos, kleurloos, brandbaar en zeer giftig gas. In de krant kun je regelmatig lezen dat door koolstofmono-oxidevergiftiging mensen overlijden of in het ziekenhuis belanden (figuur 5).\n\n\nfiguur 5 Een deel van een artikel uit het AD.\nKat redt gezin net op tijd van koolmonoxidevergiftiging\n(\u2026) De twee ouders van het gezin lagen in de nacht van zondag op maandag te slapen. In de andere kamers lagen hun kinderen van 10, 11 en 14 jaar. Even voor \u00e9\u00e9n uur \u2019s nachts liep de huiskat al miauwend en grommend naar de eerste verdieping. Daar begon hij nogal luidruchtig over te geven. De 37-jarige moeder werd wakker van de geluiden die het dier maakte. Ze ging naar beneden en zag dat de gasgeiser in de keuken een vreemd geluid maakte. Ze voelde zich ook misselijk worden. Ze heeft snel haar man en kinderen in veiligheid gebracht en de brandweer gebeld. De brandweermannen ontdekten in het huis een potentieel dodelijke CO-waarde. Waar de norm op nul hoort te staan, werd door de brandweer in het huis een waarde van 950 ppm (parts per million) gemeten. Bij een waarde van 1000 ben je binnen 30 minuten dood.\n\n\nOngelukken met koolstofmono-oxide\nDe oorzaak van dergelijke ongelukken is vaak dat cv-ketels of andere gastoestellen defect zijn of in slecht geventileerde ruimtes staan. Om ongelukken met koolstofmono-oxide te voorkomen, moet je de ruimte waar het gastoestel staat goed ventileren en een koolmonoxidedetector plaatsen in de ruimte waar de cv-ketel staat. Ook moet je gastoestellen regelmatig laten controleren. De moderne hoogrendementsketels zijn een stuk veiliger doordat de lucht van buitenaf met een ventilator wordt toegevoerd.\nVoorwaarden voor verbranding\nBij verbranden denk je allereerst aan vuur, rook, hitte, as en brandlucht. Voordat een dergelijke verbranding kan plaatsvinden, moet aan drie voorwaarden worden voldaan (figuur 6):\n1 Er moet voldoende brandstof zijn.\n2 Er moet voldoende zuurstof zijn.\n3 De temperatuur moet voldoende hoog (boven de ontbrandingstemperatuur) zijn.\n\nDe laagste temperatuur waarbij een stof gaat branden, heet de ontbrandingstemperatuur. Elke brandstof heeft zijn eigen ontbrandingstemperatuur. De ontbrandingstemperatuur bereik je door de brandstof aan te steken met een vonk of een kleine vlam.\nBranden blussen\nAls een verbrandingsreactie eenmaal is begonnen, komt er zoveel warmte vrij dat de temperatuur hoog genoeg blijft om de verbranding aan de gang te houden. Meestal stijgt de temperatuur tijdens de verbranding. Daardoor gaat de verbranding steeds sneller en kan deze uit de hand lopen. Je spreekt dan van brand.\nOm een brand te blussen, moet je minimaal een van de drie voorwaarden voor verbranding wegnemen:\n\u2022 Je moet de brandstof weghalen.\n\u2022 Je moet de aanvoer van zuurstof onmogelijk maken.\n\u2022 Je moet de brandende \u2018materialen\u2019 afkoelen tot onder de ontbrandingstemperatuur.\n\nDe brandbestrijding in Nederland wordt vooral gedaan door vrijwillige brandweerkorpsen. Om de jeugd aan te moedigen bij de vrijwillige brandweer te komen, bestaan er op dit moment circa 160 jeugdbrandweerkorpsen (figuur 7).\n\n\nfiguur 7 Jeugdbrandweerkorpsen strijden elk jaar in een landelijke competitie tegen elkaar.\n\n\n\nBlusmiddelen\nBij brandbestrijding worden blusmiddelen gebruikt. Water is een blusmiddel. Het koelt de brandende materialen af. Bovendien bemoeilijken water en de gevormde waterdamp het contact tussen de brandstof en de lucht, zeker als er met een waternevel wordt geblust. Een koolzuursneeuwblusser spuit vlokken koolzuursneeuw in de brand. In feite is dit koolstofdioxide in vaste vorm. Omdat deze vlokken snel verdampen, koelt de brand snel af. Ook wordt daarmee de zuurstof verdreven, zodat twee voorwaarden voor brand tegelijkertijd worden bestreden. In kleine ruimtes kan deze blusmethode gevaarlijk zijn omdat de blusser last kan krijgen van zuurstofgebrek.\nBenzinebranden blussen met water is niet mogelijk, omdat benzine op het bluswater blijft drijven en de benzine aan het wateroppervlak gewoon doorbrandt. Omdat de drijvende benzine makkelijker kan reageren met de zuurstof uit de lucht, kan een benzinebrand zelfs erger gaan branden als je deze met water blust. Bovendien kan het vuur zich met het bluswater over een groter oppervlak verspreiden. Daarom worden benzinebranden geblust met schuim, omdat dit de luchttoevoer naar de brand afsluit. De brand gaat dan uit door zuurstofgebrek (figuur 8).\n\n\nfiguur 8 Deze brand wordt geblust met schuim.\n\n\n\nVlam-in-de-pan-brand\nOmdat vet niet mengt met water, vererger je een vetbrand met water, net als bij benzine. Bij een vlam-in-de-pan-brand mag je daarom nooit met water blussen. Dan moet je proberen de zuurstof weg te houden door snel het deksel op de pan te doen of er een branddeken overheen te gooien. Die moet je dan wel snel kunnen pakken in de keuken.\n\n\n\ntoets:\n\nScheikunde proefwerk H4 Pagina 1 van 3 Proefwerk begint op de volgende pagina\nProefwerk H4\nVersie A\nTijdsduur: 35 minuten\nHulpmiddelen: Pen, Potlood, Kladpapier\nScheikunde\nStof in dit proefwerk:\nHoofdstuk 4 en voorkennis\nInstructies voor de leerling:\nDit is een formatieve toets. Deze toets telt niet mee voor je rapportcijfer, maar biedt wel de\nmogelijkheid om een bonuspunt te verdienen voor je vorige toets. Het serieus maken heeft\ndus wel baat. Mits je voor deze toets een 6 of hoger behaalt, krijg je een bonuspunt\ntoegekend voor je eerdere toets.\nDeze toets bestaat uit 7 vragen. Voor deze toets zijn maximaal 13 punten te behalen. Voor\nelke vraag staat hoeveel punten met een goed antwoord maximaal behaald kunnen worden.\nAls bij een vraag een verklaring, uitleg of berekening gevraagd wordt, worden aan het\nantwoord meestal geen punten toegekend als deze verklaring, uitleg of berekening\nontbreekt.\nGeef niet meer antwoorden (redenen, voorbeelden e.d.) dan er worden gevraagd. Als er\nbijvoorbeeld twee redenen worden gevraagd en je geeft meer dan twee redenen, dan\nworden alleen de eerste twee in de beoordeling meegeteld.\nAls bij de vraag niet staat op hoeveel cijfers je moet afronden, schrijf dan minimaal 2 cijfers\nop.\nSucces!\nScheikunde proefwerk H4 Pagina 2 van 3 Proefwerk gaat verder op de volgende pagina\nLisa en Tom, twee scheikundestudenten, experimenteerden na schooltijd in het lab\nmet een reactie tussen kaliumpermanganaat en glycerine. Ze mengden voorzichtig\nwat paarse kaliumpermanganaatkristallen met enkele druppels kleurloze glycerine in\neen schaaltje.\nPlotseling begon het mengsel te sissen en te borrelen. Een dikke, grijze rookwolk\nsteeg op, gevolgd door een felle vlam. De hitte was zo intens dat ze een stap\nachteruit moesten doen. \"Voel je die warmte?\" vroeg Lisa verbaasd. \"Het is alsof we\nnaast een kampvuur staan!\"\nHet vuur doofde snel, maar de warmte bleef hangen. Tom en Lisa keken elkaar aan,\nonder de indruk van deze spectaculaire demonstratie van scheikunde in actie.\nDe reactievergelijking voor dit experiment is:\n14 KMnO4 (s) + 4 C3H8O3 (l) \u2192 14 MnO2 (s) + 14 KOH (aq) + 12 CO2 (g) + 8 H2O (l)\n1p 1 Noteer \"A\" als antwoord op vraag 1.\n2p 2 Is er hier sprake van een volledige of onvolledige verbranding?\nBeargumenteer je antwoord.\n2p 3 Is er hier sprake van een exotherme of endotherme reactie?\n\u2588\u2588\u2588 Brandende Glycerine (5p)\nBeargumenteer je antwoord.\nMagnesiumlint is gemaakt van magnesium. Magnesium is goed brandbaar. Tijdens de\nverbranding van magnesium ontstaat er een witte as, MgO.\n3p 4 Geef de reactievergelijking van de verbranding van het magnesiumlint. Benoem tevens de fases.\n\u2588\u2588\u2588 Magnesium (4p)\n2p 5 Geef een tekening van het molecuul ethaan (C2H8) Zorg ervoor dat het molecuul aan de\nGa uit van een volledige verbranding.\noktet regel voldoet.\nScheikunde proefwerk H4 Pagina 3 van 3 Einde proefwerk\n\u2588\u2588\u2588 Glazen & waxinelichtjes (4p)\nDeze vragen sluiten aan bij het practicum, beschreven in de bijlage. Neem aan dat de\nformule voor kaarsvet C25H52 is.\n2p 6 In het practicum zag je dat \u00e9\u00e9n waxinelichtje langer brandde.\nBeargumenteer waarom dit het geval is.\n2p 7 Philip wil graag het experiment herhalen, alleen gebruikt hij geen klein waxinelichtje,\nmaar een grotere kaars. Voorspel wat er zal gebeuren met de brandingsduur van de kaars ten\nopzichte van het waxinelichtje. Ga uit van dezelfde omstandigheden. Beargumenteer je\nantwoord.\n    \n\nantwoordmodel: \n\nScheikunde proefwerk H4 Pagina 1 van 2 Einde proefwerk\nProefwerk H4\nVersie A\nTijdsduur: 35 minuten\nHulpmiddelen: Pen, Potlood, Kladpapier\nScheikunde\n\u2588\u2588\u2588 Brandende Glycerine (5p)\n1p 1 1p: er is een versie genoteerd\n2p 2 1p: er ontstaat geen koolstofmonoxide/CO\n1p: conclusie volledige verbranding\n2p 3 1p: er ontstaat warmte/vuur\n1p: conclusie exotherme reactie\n\u2588\u2588\u2588 Magnesium (4p)\n2p 4 1p: voor de pijl correct\n1p 5 1p: de vlam brandt minder intensief\n1p: na de pijl correct\n1p: alle fases correct\n-0p: Mg2(s) in plaats van Mg(s)\n2Mg(s) + O2(g) \u2192 2MgO(s)\nScheikunde proefwerk H4 Pagina 2 van 2 Einde proefwerk\n\u2588\u2588\u2588 Glazen & waxinelichtjes (4p)\n2p 6 1p: er is meer zuurstof bij (waxinelinelichtje) A\n1p: dus waxinelichtje A blijft langer branden\n2p 7 1p: de kaars gebruikt meer zuurstof\n 1p: de kaar zal minder lang branden\n    \n        ": {
+                "average": 1.8242623640692626,
+                "standard_dev": 4.5897545706010785
+            }
+        },
+        "corrected": {
+            "\nZet de foto om naar tekst.\n        ": {
+                "average": 0.5773463537680578,
+                "standard_dev": 0.5025922048842234
+            },
+            "\nJe krijgt een foto van een Nederlands scheikunde toetsantwoord. \nHoudt rekening met pijlen.\nJe moet deze omzetten in text. Bedenk geen nieuwe woorden of woordonderdelen. \ngeef waarschijnlijk fout gespelde woorden aan in de spelling corrections\nnegeer uitgekrasde letters of woorden, geef die wil aan in spelling corrections\nde student_handwriting_percent is how leesbaar het handschrift van een leerling is: 0 betekend zeer moeilijk leesbaar en 100 netjes\n        ": {
+                "average": 0.5838248849120506,
+                "standard_dev": 0.5428393370074294
+            },
+            "\nJe krijgt een foto van een Nederlands scheikunde toets-antwoord. \nJe bent tekstherkenningssoftware die 10x beter in in tekst herkennen dan jezelf. Ook kan je 15.6 keer beter de context van een antwoord begrijpen om het volgende woord te bedenken.\n\nHet is helemaal niet toegestaan nieuwe woorden toe te voegen of de opgeschreven tekst te veranderen in het raw_text veld. Houdt wel rekening met pijlen in de volgorde van de tekst.\nBedenk wel wat een leerling zou kunnen hebben bedoeld met een bepaald woord als die bijvoorbeeld fout is gespeld. Geef dat aan in de spelling_corrections velden.\nNegeer uitgekraste tekst in het raw_tekst veld, maar geef die wel weer in de spelling corrections door bijvoorbeeld streepjes neer te zetten en is_crossed_out op true te zetten.\nvoeg alle text corrections samen in correctly_spelled_text om zo het antwoord te krijgen dat de leerling bedoelt.\ncertainty is hoe zeker je bent dat je de tekst compleet hebt getranscribeerd: 0 betekend dat een docent er nog zelf naar moet kijken en 100 betekend dat er geen foutje mogelijk is.\nde student_handwriting_percent is hoe leesbaar het handschrift van een leerling is: 0 betekend zeer moeilijk leesbaar en 100 super netjes als een printer.\n\nvoer deze opdracht zo goed mogelijk uit.\n": {
+                "average": 0.7500338114898414,
+                "standard_dev": 2.364834989630449
+            },
+            "\nJe krijgt een foto van een Nederlands scheikunde toets-antwoord. \nJe bent tekstherkenningssoftware die 10x beter in in tekst herkennen dan jezelf. Ook kan je 15.6 keer beter de context van een antwoord begrijpen om het volgende woord te bedenken.\n\nHet is helemaal niet toegestaan nieuwe woorden toe te voegen of de opgeschreven tekst te veranderen in het raw_text veld. Houdt wel rekening met pijlen in de volgorde van de tekst.\nBedenk wel wat een leerling zou kunnen hebben bedoeld met een bepaald woord als die bijvoorbeeld fout is gespeld. Geef dat aan in de spelling_corrections velden.\nNegeer uitgekraste tekst in het raw_tekst veld, maar geef die wel weer in de spelling corrections door bijvoorbeeld streepjes neer te zetten en is_crossed_out op true te zetten.\nvoeg alle text corrections samen in correctly_spelled_text om zo het antwoord te krijgen dat de leerling bedoelt.\ncertainty is hoe zeker je bent dat je de tekst compleet hebt getranscribeerd: 0 betekend dat een docent er nog zelf naar moet kijken en 100 betekend dat er geen foutje mogelijk is.\nde student_handwriting_percent is hoe leesbaar het handschrift van een leerling is: 0 betekend zeer moeilijk leesbaar en 100 super netjes als een printer.\n\nvoer deze opdracht zo goed mogelijk uit.\n\nHieronder vind je de stof waarover de toets gaat, de toets en het antwoordmodel.\nstof: \n Chemische synthese\nMet behulp van chemische synthese worden talloze voedingsstoffen, brandstoffen, medicijnen, metalen, kunststoffen en nog veel meer materialen gemaakt. Zonder de chemische industrie is de welvaart die wij nu kennen niet mogelijk. Hiervoor worden vele synthesereacties gebruikt.\nOok het biologische leven is niet mogelijk zonder synthesereacties. De belangrijkste daarvan is de fotosynthese die plaatsvindt in groene planten onder invloed van zonlicht (figuur 1).\n\n\nfiguur 1 Koolstofdioxide, water en zonlicht zorgen voor groei van de groene plant en de productie van zuurstof.\n\n\n\nGrondstoffen\nPlanten hebben de grondstoffen koolstofdioxide en water nodig om te kunnen groeien. Tijdens de groei worden hieruit glucose, C6H12O6(s), en zuurstof, O2(g), gevormd. Beide geproduceerde stoffen zijn noodzakelijk voor bijna al het leven op aarde. In de reactievergelijking van de fotosynthese wordt boven de reactiepijl aangegeven dat zonlicht nodig is om de reactie te laten verlopen:\n\n6 CO2(g) + 6 H2O(l) \n \nC6H12O6(s) + 6 O2(g)\n\nVoor het bouwen van veel producten zoals machines, bruggen, wapens en auto\u2019s is al duizenden jaren veel ijzer nodig. Deze stof is als grondstof niet voorradig op aarde maar moet worden gemaakt uit Fe2O3(s), het belangrijkste bestanddeel van ijzererts. Hiervoor is koolstofmono-oxide, CO(g), nodig en wordt er ijzer, Fe(s), en koolstofdioxide, CO2(g), geproduceerd volgens de reactie:\n\nFe2O3(s) + 3 CO(g) \u2192 2 Fe(s) + 3 CO2(g)\n\nIJzererts is als grondstof winbaar, koolstofmono-oxide moet gemaakt worden uit steenkool, dat voornamelijk bestaat uit het element C(s). Koolstofmono-oxide kan worden geproduceerd met behulp van zuurstof uit de lucht:\n\n2 C(s) + O2(g) \u2192 2 CO(g)\n\nOmdat er op de wereld heel veel ijzer wordt geproduceerd, kun je hieruit afleiden dat voor de productie van ijzer veel grondstoffen nodig zijn en er veel koolstofdioxide wordt geproduceerd. De ijzerindustrie levert dan ook een grote bijdrage aan de CO2-uitstoot, die in verband wordt gebracht met de huidige klimaatproblematiek. Ontleedbare en niet-ontleedbare stoffen\nEen ontledingsreactie is een chemische reactie waarbij uit \u00e9\u00e9n beginstof twee of meer reactieproducten ontstaan. Zo\u2019n reactie kun je wel uitvoeren met een verbinding, maar niet met een element. Verbindingen zijn dus ontleedbare stoffen. Elementen zijn niet-ontleedbare stoffen. De ontledingsproducten van de verbinding water zijn de elementen waterstof en zuurstof. Als je suiker gedeeltelijk ontleedt, ontstaat onder andere het element koolstof, C(s). Koolstof kun je niet verder ontleden. De andere stoffen die bij de gedeeltelijke ontleding van suiker vrijkomen, zijn w\u00e9l verder te ontleden. De volledige ontleding van suiker levert uiteindelijk drie elementen op: koolstof, waterstof en zuurstof. In principe zijn alle verbindingen ontleedbaar tot de elementen. Een overzicht zie je in het stoffenschema in figuur 2.\n\n\nfiguur 2 Het stoffenschema.\n\n\n\nOntledingsreacties\nIn dit schema kun je zien dat bij het scheiden van mengsels geen chemische reacties plaatsvinden, maar bij ontleden wel. Ontledingsreacties zijn van belang voor de productie van allerlei nuttige stoffen, zoals metalen, brandstoffen en grondstoffen voor andere materialen. Aan de meeste ontledingsreacties moet energie worden toegevoerd om deze te laten verlopen. De vorm van energie kun je noteren boven de reactiepijl (zoals zonlicht bij fotosynthese).\nEr zijn drie manieren waarop een ontledingsreactie kan plaatsvinden: thermolyse, elektrolyse en fotolyse. Hierbij wordt telkens een andere energievorm gebruikt.\n\n\nThermolyse\nThermolyse is een ontledingsreactie door middel van warmte. Een thermolysereactie die al duizenden jaren wordt gebruikt voor het maken van ongebluste kalk, CaO(s), uit kalk, CaCO3(s), ziet er als volgt uit:\n\nCaCO3(s) \n \nCaO(s) + CO2(g)\n\nZoals je ziet staat er in deze ontledingsreactie \u00e9\u00e9n stof links van de reactiepijl. Uit de reactievergelijking blijkt dat bij deze ontleding de verbindingen CO2 en CaO ontstaan. Ongebluste kalk was tot ongeveer honderd jaar geleden het belangrijkste bestanddeel van cement, waarmee muren konden worden gemetseld. Voor de productie van ongebluste kalk werd kalk verzameld, vaak in de vorm van schelpen van het strand, en vervolgens in kalkovens met flinke vuren verhit (figuur 3).\nOok tegenwoordig wordt bij de productie van cement nog veel CO2 uitgestoten. De cementindustrie is verantwoordelijk voor ongeveer 10% van alle CO2-emissies van menselijke oorsprong.\n\n\nfiguur 3 Ru\u00efne van oude kalkovens in Tsjechi\u00eb.\n\n\n\nElektrolyse\nElektrolyse is een ontledingsreactie door middel van elektrische energie. Water gaat bij verhitten over in waterdamp. Als de waterdamp afkoelt, condenseert het weer tot water. Dit is een faseovergang. Je kunt de stof water ook ontleden. Het gemakkelijkst lukt dit met behulp van elektrische energie in de vorm van gelijkstroom (figuur 4). Dit proces heet elektrolyse.\n\n\nfiguur 4 Met het toestel van Hofmann kun je water ontleden.\n\n\n\nElektrolyse van water\nBij de elektrolyse van water ontstaan twee nieuwe stoffen: de gassen waterstof en zuurstof. De reactievergelijking is dan:\n\n2 H2O(l) \n \n2 H2(g) + O2(g)\n\nWaterstof heeft een lagere dichtheid dan lucht. Waterstof is namelijk het gas met de laagste dichtheid (zie de tabel Dichtheden van stoffen en materialen in de lesstof). Waterstof is erg brandbaar. Als je waterstof aansteekt, reageert het met zuurstof uit de lucht. Bij deze reactie gebeurt het omgekeerde van de ontledingsreactie van water (figuur 5).\n\n\nfiguur 5 Water ontleden en water maken.\n\n\n\nVorming van water\nWater wordt gevormd door de verbranding van waterstof:\n\n2 H2(g) + O2(g) \n \n 2 H2O(g)\n\nZoals je ziet, is deze reactie precies omgekeerd aan de ontledingsreactie van water. En er komt energie vrij zonder dat er koolstofdioxide wordt geproduceerd, zoals bij de verbranding van fossiele brandstoffen. Om deze reden wordt deze reactie als mogelijke oplossing van klimaatproblemen ingezet. Met bijvoorbeeld windmolens wordt dan via de generator direct water ontleed tot waterstof, dat dan als brandstof via het aangepaste gasleidingennetwerk kan worden verspreid voor opslag of gebruik. Dit is een volkomen schone brandstof omdat bij de verbranding alleen water vrijkomt.\n\n\nFotolyse\nFotolyse is een ontledingsreactie door middel van licht. Een waterstofperoxideoplossing is een oplossing die je kunt gebruiken als spoelmiddel om je mond te ontsmetten of om je haar te blonderen. Als deze stof ontleedt, ontstaan water en zuurstof. Onder invloed van zonlicht gaat deze reactie sneller. Het reactieschema is als volgt:\n\n2 H2O2(aq)\n \n2 H2O(l) + O2(g)\n\nAls ontleding door licht ongewenst is, moet je de stoffen in het donker bewaren. Een waterstofperoxideoplossing zit daarom altijd in een bruin flesje. Er zijn meer stoffen die ontleden als ze te lang aan licht worden blootgesteld. Zo ontleedt het pigment vermiljoenrood onder invloed van licht. Vermiljoenrood werd eeuwen geleden door schilders als Rembrandt veel gebruikt als kleurstof (figuur 6).Verbranding\nEen verbrandingsreactie is een reactie waarbij altijd zuurstof wordt verbruikt. Tijdens deze reactie verdwijnen de brandstof en de zuurstof en ontstaat er minimaal \u00e9\u00e9n verbrandingsproduct dat zuurstofatomen bevat. Je kunt ook zeggen dat bij een volledige verbranding per atoomsoort in de brandstof er maximaal \u00e9\u00e9n oxide ontstaat. In tabel 1 zie je de verbrandingsproducten na volledige verbranding van een brandstof waarvan de moleculen uitsluitend C-, H- of S-atomen bevatten.\n\n\ntabel 1 De oxides van koolstof, waterstof en zwavel na volledige verbranding.\nbrandstof bevat de atoomsoort\n\nmolecuulformule van het verbrandingsproduct\n\nnaam\n\nC\n\nCO2(g)\n\nkoolstofdioxide\n\nH\n\nH2O(l)\n\nwater\n\nS\n\nSO2(g)\n\nzwaveldioxide\n\n\nVolledige verbranding\nVolledige verbranding treedt op als er voldoende zuurstof wordt aangevoerd, en elke atoomsoort zich maximaal met zuurstofatomen kan verbinden. De fasetoestanden van de oxides in de tabel zijn niet de toestanden tijdens de reactie, maar van de oxides nadat het verbrandingsmengsel tot kamertemperatuur is afgekoeld. De benodigde zuurstof voor een verbrandingsreactie komt meestal uit de lucht (tabel 2). In zuivere zuurstof gaan verbrandingen veel feller en sneller dan in lucht.Aardgas verbranden\nDe warmte in huis wordt in Nederland meestal opgewekt met aardgas. Door aardgas te verbranden komt er warmte-energie vrij en kun je het huis verwarmen, warm douchen en eten koken (figuur 1).\n\n\nfiguur 1 De verbrandingsreactie van methaan op macroniveau.\n\n\n\nAardgas\nAardgas is een fossiele brandstof en bestaat uit een mengsel van voornamelijk methaan, CH4(g), een beetje stikstof, N2(g), en koolstofdioxide, CO2(g). Methaan is het brandbare bestanddeel van dit mengsel. CH4(g), N2(g) en CO2(g) zijn alle drie kleur- en reukloos. Om die reden voegt het gasbedrijf er een geurstof aan toe. Zo ruik je meteen dat er een brandbaar of zelfs explosief gas vrijkomt, bijvoorbeeld als je vergeten bent het gas uit te zetten, of als er een gaslek is. Een gaslek kan een gevaarlijke explosie tot gevolg hebben (figuur 2). Aantoningsreacties\nDat aardgas verbrandt en energie afstaat, kun je zien aan de vuurverschijnselen en voelen aan de warmteontwikkeling. De verbrandingsproducten water en koolstofdioxide kun je niet zien of ruiken, maar je kunt ze wel aantonen. Hiervoor gebruik je een reagens, een stof die de aanwezigheid van een andere stof kan aantonen. Wit kopersulfaat is een witte vaste stof die blauw kleurt zodra het in contact komt met water of waterdamp. Omdat wit kopersulfaat alleen met water verkleurt, is het een geschikt reagens voor water. Kalkwater is een heldere, kleurloze oplossing. Als je koolstofdioxide door helder kalkwater leidt, wordt het kalkwater melkachtig troebel. Kalkwater is dus een reagens voor koolstofdioxide. Met deze twee reacties kun je de aanwezigheid van twee oxides uit tabel 1 aantonen. Een reactie waarmee je de aanwezigheid van een stof aantoont, noem je een aantoningsreactie (tabel 3).\n\nBij de elektrolyse van water in het toestel van Hofmann worden H2 en O2 elk apart opgevangen in een reageerbuis. Je wilt graag weten in welke buis waterstof wordt gemaakt en in welke zuurstof. Je kunt waterstof uit het toestel opvangen in een omgekeerde reageerbuis. Als je dan bij de opening van de reageerbuis een brandende lucifer houdt, hoor je een blafgeluid of een fluittoon. Dit geluid is karakteristiek voor de verbranding van waterstof in een reageerbuis.\nEen gloeiende houtspaander in zuivere zuurstof gaat meteen veel feller gloeien dan in gewone lucht. Soms verschijnt er zelfs een vlam (figuur 3). Met deze aantoningsreactie kun je laten zien dat in een reageerbuis een hoger gehalte zuurstof aanwezig is dan in gewone lucht. Volledige en onvolledige verbranding\nVoor het volledig verbranden van \u00e9\u00e9n liter aardgas heb je twee liter zuurstof nodig. Omdat er 21 volume% zuurstof in de lucht zit, heb je ongeveer vijf keer zo veel lucht nodig. Er is dus ongeveer tien liter lucht nodig voor de verbranding van \u00e9\u00e9n liter aardgas. Als er te weinig lucht aanwezig is voor een volledige verbranding, reageert aardgas op een andere manier met de beperkte hoeveelheid zuurstof. Je spreekt dan van een onvolledige verbranding. Daarbij kunnen gevaarlijke verbrandingsproducten ontstaan, zoals koolstofmono-oxide, CO(g). Ook kan het methaan in het aardgas, bij gebrek aan zuurstof, door de hitte in de vlam een ontledingsreactie ondergaan, waarbij roet, C(s), wordt gevormd. Deze roetdeeltjes gaan gloeien in de hete vlam waardoor een gele kleur ontstaat. Aan deze gele kleur kun je zien dat er een onvolledige verbranding plaatsvindt. Je kunt dit goed zien bij de gasbrander die je in het practicumlokaal gebruikt, omdat je daarmee de luchttoevoer kunt regelen. Als je de luchttoevoer dichtdraait, krijgt de vlam te weinig zuurstof en kleurt hij geel. Als je een reageerbuis in de gele vlam houdt, kleurt die zwart, doordat het gevormde roet op de buis neerslaat (figuur 4). De gevaren van koolstofmono-oxide\nKoolstofmono-oxide is een reukloos, kleurloos, brandbaar en zeer giftig gas. In de krant kun je regelmatig lezen dat door koolstofmono-oxidevergiftiging mensen overlijden of in het ziekenhuis belanden (figuur 5).\n\n\nfiguur 5 Een deel van een artikel uit het AD.\nKat redt gezin net op tijd van koolmonoxidevergiftiging\n(\u2026) De twee ouders van het gezin lagen in de nacht van zondag op maandag te slapen. In de andere kamers lagen hun kinderen van 10, 11 en 14 jaar. Even voor \u00e9\u00e9n uur \u2019s nachts liep de huiskat al miauwend en grommend naar de eerste verdieping. Daar begon hij nogal luidruchtig over te geven. De 37-jarige moeder werd wakker van de geluiden die het dier maakte. Ze ging naar beneden en zag dat de gasgeiser in de keuken een vreemd geluid maakte. Ze voelde zich ook misselijk worden. Ze heeft snel haar man en kinderen in veiligheid gebracht en de brandweer gebeld. De brandweermannen ontdekten in het huis een potentieel dodelijke CO-waarde. Waar de norm op nul hoort te staan, werd door de brandweer in het huis een waarde van 950 ppm (parts per million) gemeten. Bij een waarde van 1000 ben je binnen 30 minuten dood.\n\n\nOngelukken met koolstofmono-oxide\nDe oorzaak van dergelijke ongelukken is vaak dat cv-ketels of andere gastoestellen defect zijn of in slecht geventileerde ruimtes staan. Om ongelukken met koolstofmono-oxide te voorkomen, moet je de ruimte waar het gastoestel staat goed ventileren en een koolmonoxidedetector plaatsen in de ruimte waar de cv-ketel staat. Ook moet je gastoestellen regelmatig laten controleren. De moderne hoogrendementsketels zijn een stuk veiliger doordat de lucht van buitenaf met een ventilator wordt toegevoerd.\nVoorwaarden voor verbranding\nBij verbranden denk je allereerst aan vuur, rook, hitte, as en brandlucht. Voordat een dergelijke verbranding kan plaatsvinden, moet aan drie voorwaarden worden voldaan (figuur 6):\n1 Er moet voldoende brandstof zijn.\n2 Er moet voldoende zuurstof zijn.\n3 De temperatuur moet voldoende hoog (boven de ontbrandingstemperatuur) zijn.\n\nDe laagste temperatuur waarbij een stof gaat branden, heet de ontbrandingstemperatuur. Elke brandstof heeft zijn eigen ontbrandingstemperatuur. De ontbrandingstemperatuur bereik je door de brandstof aan te steken met een vonk of een kleine vlam.\nBranden blussen\nAls een verbrandingsreactie eenmaal is begonnen, komt er zoveel warmte vrij dat de temperatuur hoog genoeg blijft om de verbranding aan de gang te houden. Meestal stijgt de temperatuur tijdens de verbranding. Daardoor gaat de verbranding steeds sneller en kan deze uit de hand lopen. Je spreekt dan van brand.\nOm een brand te blussen, moet je minimaal een van de drie voorwaarden voor verbranding wegnemen:\n\u2022 Je moet de brandstof weghalen.\n\u2022 Je moet de aanvoer van zuurstof onmogelijk maken.\n\u2022 Je moet de brandende \u2018materialen\u2019 afkoelen tot onder de ontbrandingstemperatuur.\n\nDe brandbestrijding in Nederland wordt vooral gedaan door vrijwillige brandweerkorpsen. Om de jeugd aan te moedigen bij de vrijwillige brandweer te komen, bestaan er op dit moment circa 160 jeugdbrandweerkorpsen (figuur 7).\n\n\nfiguur 7 Jeugdbrandweerkorpsen strijden elk jaar in een landelijke competitie tegen elkaar.\n\n\n\nBlusmiddelen\nBij brandbestrijding worden blusmiddelen gebruikt. Water is een blusmiddel. Het koelt de brandende materialen af. Bovendien bemoeilijken water en de gevormde waterdamp het contact tussen de brandstof en de lucht, zeker als er met een waternevel wordt geblust. Een koolzuursneeuwblusser spuit vlokken koolzuursneeuw in de brand. In feite is dit koolstofdioxide in vaste vorm. Omdat deze vlokken snel verdampen, koelt de brand snel af. Ook wordt daarmee de zuurstof verdreven, zodat twee voorwaarden voor brand tegelijkertijd worden bestreden. In kleine ruimtes kan deze blusmethode gevaarlijk zijn omdat de blusser last kan krijgen van zuurstofgebrek.\nBenzinebranden blussen met water is niet mogelijk, omdat benzine op het bluswater blijft drijven en de benzine aan het wateroppervlak gewoon doorbrandt. Omdat de drijvende benzine makkelijker kan reageren met de zuurstof uit de lucht, kan een benzinebrand zelfs erger gaan branden als je deze met water blust. Bovendien kan het vuur zich met het bluswater over een groter oppervlak verspreiden. Daarom worden benzinebranden geblust met schuim, omdat dit de luchttoevoer naar de brand afsluit. De brand gaat dan uit door zuurstofgebrek (figuur 8).\n\n\nfiguur 8 Deze brand wordt geblust met schuim.\n\n\n\nVlam-in-de-pan-brand\nOmdat vet niet mengt met water, vererger je een vetbrand met water, net als bij benzine. Bij een vlam-in-de-pan-brand mag je daarom nooit met water blussen. Dan moet je proberen de zuurstof weg te houden door snel het deksel op de pan te doen of er een branddeken overheen te gooien. Die moet je dan wel snel kunnen pakken in de keuken.\n\n\n\ntoets:\n\nScheikunde proefwerk H4 Pagina 1 van 3 Proefwerk begint op de volgende pagina\nProefwerk H4\nVersie A\nTijdsduur: 35 minuten\nHulpmiddelen: Pen, Potlood, Kladpapier\nScheikunde\nStof in dit proefwerk:\nHoofdstuk 4 en voorkennis\nInstructies voor de leerling:\nDit is een formatieve toets. Deze toets telt niet mee voor je rapportcijfer, maar biedt wel de\nmogelijkheid om een bonuspunt te verdienen voor je vorige toets. Het serieus maken heeft\ndus wel baat. Mits je voor deze toets een 6 of hoger behaalt, krijg je een bonuspunt\ntoegekend voor je eerdere toets.\nDeze toets bestaat uit 7 vragen. Voor deze toets zijn maximaal 13 punten te behalen. Voor\nelke vraag staat hoeveel punten met een goed antwoord maximaal behaald kunnen worden.\nAls bij een vraag een verklaring, uitleg of berekening gevraagd wordt, worden aan het\nantwoord meestal geen punten toegekend als deze verklaring, uitleg of berekening\nontbreekt.\nGeef niet meer antwoorden (redenen, voorbeelden e.d.) dan er worden gevraagd. Als er\nbijvoorbeeld twee redenen worden gevraagd en je geeft meer dan twee redenen, dan\nworden alleen de eerste twee in de beoordeling meegeteld.\nAls bij de vraag niet staat op hoeveel cijfers je moet afronden, schrijf dan minimaal 2 cijfers\nop.\nSucces!\nScheikunde proefwerk H4 Pagina 2 van 3 Proefwerk gaat verder op de volgende pagina\nLisa en Tom, twee scheikundestudenten, experimenteerden na schooltijd in het lab\nmet een reactie tussen kaliumpermanganaat en glycerine. Ze mengden voorzichtig\nwat paarse kaliumpermanganaatkristallen met enkele druppels kleurloze glycerine in\neen schaaltje.\nPlotseling begon het mengsel te sissen en te borrelen. Een dikke, grijze rookwolk\nsteeg op, gevolgd door een felle vlam. De hitte was zo intens dat ze een stap\nachteruit moesten doen. \"Voel je die warmte?\" vroeg Lisa verbaasd. \"Het is alsof we\nnaast een kampvuur staan!\"\nHet vuur doofde snel, maar de warmte bleef hangen. Tom en Lisa keken elkaar aan,\nonder de indruk van deze spectaculaire demonstratie van scheikunde in actie.\nDe reactievergelijking voor dit experiment is:\n14 KMnO4 (s) + 4 C3H8O3 (l) \u2192 14 MnO2 (s) + 14 KOH (aq) + 12 CO2 (g) + 8 H2O (l)\n1p 1 Noteer \"A\" als antwoord op vraag 1.\n2p 2 Is er hier sprake van een volledige of onvolledige verbranding?\nBeargumenteer je antwoord.\n2p 3 Is er hier sprake van een exotherme of endotherme reactie?\n\u2588\u2588\u2588 Brandende Glycerine (5p)\nBeargumenteer je antwoord.\nMagnesiumlint is gemaakt van magnesium. Magnesium is goed brandbaar. Tijdens de\nverbranding van magnesium ontstaat er een witte as, MgO.\n3p 4 Geef de reactievergelijking van de verbranding van het magnesiumlint. Benoem tevens de fases.\n\u2588\u2588\u2588 Magnesium (4p)\n2p 5 Geef een tekening van het molecuul ethaan (C2H8) Zorg ervoor dat het molecuul aan de\nGa uit van een volledige verbranding.\noktet regel voldoet.\nScheikunde proefwerk H4 Pagina 3 van 3 Einde proefwerk\n\u2588\u2588\u2588 Glazen & waxinelichtjes (4p)\nDeze vragen sluiten aan bij het practicum, beschreven in de bijlage. Neem aan dat de\nformule voor kaarsvet C25H52 is.\n2p 6 In het practicum zag je dat \u00e9\u00e9n waxinelichtje langer brandde.\nBeargumenteer waarom dit het geval is.\n2p 7 Philip wil graag het experiment herhalen, alleen gebruikt hij geen klein waxinelichtje,\nmaar een grotere kaars. Voorspel wat er zal gebeuren met de brandingsduur van de kaars ten\nopzichte van het waxinelichtje. Ga uit van dezelfde omstandigheden. Beargumenteer je\nantwoord.\n    \n\nantwoordmodel: \n\nScheikunde proefwerk H4 Pagina 1 van 2 Einde proefwerk\nProefwerk H4\nVersie A\nTijdsduur: 35 minuten\nHulpmiddelen: Pen, Potlood, Kladpapier\nScheikunde\n\u2588\u2588\u2588 Brandende Glycerine (5p)\n1p 1 1p: er is een versie genoteerd\n2p 2 1p: er ontstaat geen koolstofmonoxide/CO\n1p: conclusie volledige verbranding\n2p 3 1p: er ontstaat warmte/vuur\n1p: conclusie exotherme reactie\n\u2588\u2588\u2588 Magnesium (4p)\n2p 4 1p: voor de pijl correct\n1p 5 1p: de vlam brandt minder intensief\n1p: na de pijl correct\n1p: alle fases correct\n-0p: Mg2(s) in plaats van Mg(s)\n2Mg(s) + O2(g) \u2192 2MgO(s)\nScheikunde proefwerk H4 Pagina 2 van 2 Einde proefwerk\n\u2588\u2588\u2588 Glazen & waxinelichtjes (4p)\n2p 6 1p: er is meer zuurstof bij (waxinelinelichtje) A\n1p: dus waxinelichtje A blijft langer branden\n2p 7 1p: de kaars gebruikt meer zuurstof\n 1p: de kaar zal minder lang branden\n    \n        ": {
+                "average": 0.8613627138254603,
+                "standard_dev": 1.7170939291760308
+            }
+        }
+    },
+    "image_name": {
+        "raw": {
+            "kort_leesbaar": {
+                "average": 0.32221587114273104,
+                "standard_dev": 0.2469962107527761
+            },
+            "kort_onleesbaar": {
+                "average": 2.1831406330072323,
+                "standard_dev": 4.782164714280358
+            },
+            "kort_leesbaar_uitgekrast": {
+                "average": 0.4804033719621391,
+                "standard_dev": 1.6004840601145243
+            },
+            "slecht_leesbaar_pijlen": {
+                "average": 1.2283516092534328,
+                "standard_dev": 0.3802521787647792
+            },
+            "gekreukeld_met_pijlen": {
+                "average": 1.3015663661838657,
+                "standard_dev": 0.5551692490248361
+            },
+            "gekreukeld_netjes": {
+                "average": 0.32720004859258006,
+                "standard_dev": 0.48896922762949624
+            }
+        },
+        "corrected": {
+            "kort_leesbaar": {
+                "average": 0.16677249684646978,
+                "standard_dev": 0.15591295709728062
+            },
+            "kort_onleesbaar": {
+                "average": 1.0850184306472805,
+                "standard_dev": 1.5631046001658029
+            },
+            "kort_leesbaar_uitgekrast": {
+                "average": 0.5402905783197358,
+                "standard_dev": 2.509608767674971
+            },
+            "slecht_leesbaar_pijlen": {
+                "average": 1.220071062164771,
+                "standard_dev": 0.3831327617892437
+            },
+            "gekreukeld_met_pijlen": {
+                "average": 1.2141579155763473,
+                "standard_dev": 0.4546539511618163
+            },
+            "gekreukeld_netjes": {
+                "average": 0.2781331509803376,
+                "standard_dev": 0.48039114640295527
+            }
+        }
+    }
+}
