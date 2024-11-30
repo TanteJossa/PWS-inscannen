@@ -684,6 +684,28 @@
             ]
         }
     },
+    "provider": {
+        "raw": {
+            "openai": {
+                "average": 0.7218743859554269,
+                "standard_dev": 2.357656116219395
+            },
+            "google": {
+                "average": 1.0630622002288033,
+                "standard_dev": 11.076691818055489
+            }
+        },
+        "corrected": {
+            "openai": {
+                "average": 0.5204734632399758,
+                "standard_dev": 2.335569286861007
+            },
+            "google": {
+                "average": 0.8585542706329926,
+                "standard_dev": 1.895282540809224
+            }
+        }
+    },
     "model": {
         "raw": {
             "gpt-4o-mini": {
