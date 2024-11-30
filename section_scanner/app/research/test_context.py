@@ -268,5 +268,12 @@ Scheikunde proefwerk H4 Pagina 2 van 2 Einde proefwerk
 1p: dus waxinelichtje A blijft langer branden
 2p 7 1p: de kaars gebruikt meer zuurstof
  1p: de kaar zal minder lang branden
-    """
+    """,
+    "vraagspecifiek_antwoordmodel": """
+1p: er ontstaat geen koolstofmonoxide/CO
+1p: conclusie volledige verbranding
+    """,
+    "vraagspecifiek_vraag": """Is er hier sprake van een volledige of onvolledige verbranding?
+Beargumenteer je antwoord.
+"""
 }
