@@ -28,7 +28,8 @@ from scan_module import (
     question_selector_info,
     stack_answer_sections,
     transcribe_answer,
-    scan_page
+    scan_page,
+    grade_answer
 )
 
 
@@ -365,11 +366,26 @@ def question_section_from_question_selector():
             id = request.json.get("id")
         else:
             id = "No ID found"
+        if ("provider" in request.json):
+            provider = request.json.get("provider")
+        else:
+            provider = False
+        if ("model" in request.json):
+            model = request.json.get("model")
+        else:
+            model = False
+            
+            
         process_id = get_random_id()
         image_string = request.json.get("Base64Image")
         # base64_to_png(image_string, input_dir+process_id+'.png')
                 
-        data = question_selector_info(process_id, image_string)
+        data = question_selector_info(
+            process_id, 
+            image_string,
+            provider=provider,
+            model=model
+        )
 
         # cleanup_files(process_id)
         end_time = time.time()
@@ -429,11 +445,23 @@ def extract_text_from_answer():
             id = request.json.get("id")
         else:
             id = "No ID found"
+        if ("provider" in request.json):
+            provider = request.json.get("provider")
+        else:
+            provider = False
+        if ("model" in request.json):
+            model = request.json.get("model")
+        else:
+            model = False
+        if ("transcribeText" in request.json):
+            transcribe_text = request.json.get("transcribeText")
+        else:
+            transcribe_text = False
         process_id = get_random_id()
         image_string = request.json.get("Base64Image")
         # base64_to_png(image_string, input_dir+process_id+'.png')
                 
-        data = transcribe_answer(process_id, image_string)
+        data = transcribe_answer(process_id, image_string, provider, model, transcribe_text)
 
         # cleanup_files(process_id)
         end_time = time.time()
@@ -448,6 +476,50 @@ def extract_text_from_answer():
     except Exception as e:    
         return {"error": str(e)}
 
+@app.route('/grade', methods = ['GET', 'POST'])
+def grade_with_answer():
+    try:
+        start_time = time.time()
+        if ("id" in request.json):
+            id = request.json.get("id")
+        else:
+            id = "No ID found"
+        if ("provider" in request.json):
+            provider = request.json.get("provider")
+        else:
+            provider = False
+        if ("model" in request.json):
+            model = request.json.get("model")
+        else:
+            model = False
+        if ("requestText" in request.json):
+            request_text = request.json.get("requestText")
+        else:
+            request_text = False
+            
+
+        if ("studentImage" in request.json):
+            student_image = request.json.get("studentImage")
+        else:
+            student_image = False
+            
+        process_id = get_random_id()
+        # base64_to_png(image_string, input_dir+process_id+'.png')
+            
+        data = grade_answer(process_id, request_text, student_image, provider, model)
+
+        # cleanup_files(process_id)
+        end_time = time.time()
+
+        return {
+            "id": id,
+            "process_id": process_id,
+            "start_time": start_time,
+            "end_time": end_time,
+            "output": data
+        }
+    except Exception as e:    
+        return {"error": str(e)}
 
         
 if __name__ == "__main__":

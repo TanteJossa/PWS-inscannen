@@ -11,23 +11,20 @@ import typing_extensions as typing
 import json
 import time
 
-class DefaultGeminiSchema(typing.TypedDict):
-    result: str
+
+
     
-class DefaultOpenAiSchema(BaseModel):
-    result: str
-    
-def single_request(provider="openai", model=False, temperature=False, schema=False, image=False, text=""):
+def single_request(provider=False, model=False, temperature=False, schema=False, image=False, text=""):
     if not provider:
-        provider = "openai"
-        
-        
+        provider = "google"
+
+
     print(f"GPT request ({provider}, {model}) ... ")
 
+
+
     if provider == 'openai':
-        if not schema:
-            schema = DefaultOpenAiSchema
-            
+
         messages = [
             {
                 "role": "user",
@@ -76,11 +73,9 @@ def single_request(provider="openai", model=False, temperature=False, schema=Fal
         }
 
     if provider == 'google':
-        if not schema:
-            schema = DefaultGeminiSchema
         
         start_time = time.time()
-        
+
         result:GenerateContentResponse = google_single_image_request(
             text=text,
             base64_image=image,
@@ -90,6 +85,7 @@ def single_request(provider="openai", model=False, temperature=False, schema=Fal
         )
         result_data = json.loads(result['candidates'][0]['content']['parts'][0]['text'])
 
+        
         end_time = time.time()
         # print(result, result.usage_metadata.total_token_count)
         response = {
@@ -105,7 +101,7 @@ def single_request(provider="openai", model=False, temperature=False, schema=Fal
             "timestamp":  end_time,
             "delta_time_s":  (end_time - start_time) / 1000,
         }
-    
+
     print(f"GPT request ({provider}, {model}) ... Done")
 
     return response

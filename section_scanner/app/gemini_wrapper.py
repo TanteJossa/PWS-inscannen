@@ -54,17 +54,18 @@ def get_type_name(type_hint) -> str:
      else:
          return "UNKNOWN"  # Or raise an error for unhandled types
 
-class DefaultResponse(typing_extensions.TypedDict):
-    response: str
+class DefaultGeminiSchema(typing.TypedDict):
+    result: str
+    
 
 def google_single_image_request(text, base64_image=False, model=False, temperature=False, id=get_random_id(), response_format=False):
     genai.configure(api_key=data["key"],transport="rest")
 
     if not response_format:
-        response_format = DefaultResponse
+        response_format = DefaultGeminiSchema
         
     if not model:
-        model = "gemini-1.5-flash"
+        model = "gemini-1.5-pro"
     if not temperature:
         temperature = 0.05
     

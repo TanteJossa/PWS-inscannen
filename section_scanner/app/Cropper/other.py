@@ -4,7 +4,9 @@ from skimage.filters import threshold_local
 import numpy as np
 from helpers import (
     pillow_to_cv2,
-    cv2_to_pillow
+    cv2_to_pillow,
+    # cv2_to_base64,
+    # base64_to_png
 )
 
 
@@ -72,13 +74,11 @@ def scan(original_img):
     # The resized height in hundreds
     ratio = original_img.shape[0] / 500.0
     img_resize = imutils.resize(original_img, height=500)
-
-        
+  
     gray_image = cv2.cvtColor(img_resize, cv2.COLOR_BGR2GRAY)
-
     blurred_image = cv2.GaussianBlur(gray_image, (5, 5), 0)
     edged_img = cv2.Canny(blurred_image, 75, 200)
-    
+
     cnts, _ = cv2.findContours(edged_img, cv2.RETR_LIST, cv2.CHAIN_APPROX_SIMPLE)
     cnts = sorted(cnts, key=cv2.contourArea, reverse=True)[:5]
 
@@ -87,12 +87,9 @@ def scan(original_img):
     for c in cnts:
         peri = cv2.arcLength(c, True)
         approx = cv2.approxPolyDP(c, 0.02 * peri, True)
-        # print(len(approx))
         if len(approx) == 4:
             doc = approx
             break
-    
-    # print(doc, type(doc))
     
     if (isinstance(doc, np.ndarray) ):
         warped_image, heightA, heightB, widthA, widthB = perspective_transform(copy, doc.reshape(4, 2) * ratio)
@@ -105,11 +102,5 @@ def scan(original_img):
         or ((widthA / width < 1/2) and  (widthB / width < 1/2))
     ):
         return original_img
-        
-    
-    # warped_image = cv2.cvtColor(warped_image, cv2.COLOR_BGR2GRAY)
-    
-    # T = threshold_local(warped_image, 11, offset=10, method="gaussian")
-    # warped = (warped_image > T).astype("uint8") * 255
     
     return warped_image

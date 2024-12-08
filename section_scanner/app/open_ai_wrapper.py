@@ -75,13 +75,18 @@ def get_response_json(response, gpt_model, start_time, end_time):
 
     return output_json
 
+class DefaultOpenAiSchema(BaseModel):
+    result: str
 
-def openai_single_request(messages, response_format, model = False, temperature=False):
+def openai_single_request(messages, response_format=False, model = False, temperature=False):
     if (not model):
         model = "gpt-4o-mini"
         
     if not temperature:
         temperature = 0.02
+        
+    if not response_format:
+        response_format = DefaultOpenAiSchema
     
     openai_client = get_client()
     

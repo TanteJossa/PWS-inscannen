@@ -21,6 +21,7 @@ from helpers import (
     cv2_to_base64,
     base64_to_pillow,
     base64_to_cv2,
+    four_point_transform
 )
 
 from gemini_wrapper import google_single_image_request
@@ -115,8 +116,6 @@ def extract_red_pen(id, base64_image):
                         try:
                             red_pen_pixdata[x + i - radius, y + j - radius] = clean_pixdata2[x + i - radius, y + j - radius]
 
-                            # copy the old red pen values
-                            # clean_pixdata[x + i - radius, y + j - radius] = (255, 255, 255)
                         except:
                             pass
 
@@ -200,9 +199,8 @@ def get_qr_sections(id, base64_image):
     sections = []
     
     for index, qr_data in enumerate(data):
-        top_left, bottom_right = qr_data["coords"]
-        
-        section_img = cv2_img[top_left[1]:bottom_right[1] , top_left[0]:bottom_right[0]]
+        # top_left, bottom_right = qr_data["coords"]
+        section_img = four_point_transform(cv2_img, qr_data["polygon"]) # cv2_img[top_left[1]:bottom_right[1] , top_left[0]:bottom_right[0]]
         # cv2.imwrite(output_dir+id+'/'+str(index)+'.png', section_img)
         
         base64_section = cv2_to_base64(section_img)
@@ -495,9 +493,9 @@ class GoogleQuestionAnswer(typing.TypedDict):
     spelling_corrections: list[SpellingCorrection]
     
 
-def transcribe_answer(id, base64_image, provider="openai", model=False, request_text=False, temperature=False):
+def transcribe_answer(id, base64_image, provider=False, model=False, request_text=False, temperature=False):
     if not provider:
-        provider = "openai"
+        provider = "google"
         
     if not base64_image.startswith('data:image'):
         base64_image = "data:image/png;base64,"+ base64_image
@@ -653,3 +651,44 @@ def scan_page(process_id, image_string, provider=False ,model=False,temperature=
         "student_id_data": student_id_data,
         "questions": questions,
     }
+    
+class GradePoint(BaseModel):
+    has_point: bool
+    feedback: str
+    point_index: int
+
+class GradeResult(BaseModel):
+    points: list[GradePoint]
+
+
+class GoogleGradePoint(typing.TypedDict):
+    has_point: bool
+    feedback: str
+    point_index: int
+    
+class GoogleGradeResult(typing.TypedDict):
+    points: list[GradePoint]
+    feedback: str
+
+
+def grade_answer(process_id, request_text=False, student_image=False, provider=False, model=False, temperature=False):
+    if (not provider):
+        provider = "google"
+        
+    if student_image:
+        if not student_image.startswith('data:image'):
+            student_image = "data:image/png;base64,"+ student_image
+    
+    
+    if not request_text:
+        request_text = """kijk na"""
+        
+    if (provider == 'openai'):
+        schema = GradeResult
+    elif (provider == 'google'):
+        schema = GoogleGradeResult
+    else:
+        schema = False
+        
+    result = single_request(text=request_text, image=student_image, provider=provider, model=model, schema=schema, temperature=temperature)
+    return result

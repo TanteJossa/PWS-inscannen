@@ -6,7 +6,7 @@ import os
 import numpy as np
 from io import BytesIO
 import cv2
-from pyzbar.pyzbar import decode
+from pyzbar.pyzbar import decode, Decoded
 import io
 import segno
 from collections import defaultdict
@@ -137,6 +137,65 @@ def clamp(n, min, max):
     else: 
         return n 
 
+# https://pyimagesearch.com/2014/08/25/4-point-opencv-getperspective-transform-example/
+def order_points(pts):
+	# initialzie a list of coordinates that will be ordered
+	# such that the first entry in the list is the top-left,
+	# the second entry is the top-right, the third is the
+	# bottom-right, and the fourth is the bottom-left
+	rect = np.zeros((4, 2), dtype = "float32")
+	# the top-left point will have the smallest sum, whereas
+	# the bottom-right point will have the largest sum
+	s = np.array(pts).sum(axis = 1)
+	rect[0] = pts[np.argmin(s)]
+	rect[2] = pts[np.argmax(s)]
+	# now, compute the difference between the points, the
+	# top-right point will have the smallest difference,
+	# whereas the bottom-left will have the largest difference
+	diff = np.diff(pts, axis = 1)
+	rect[1] = pts[np.argmin(diff)]
+	rect[3] = pts[np.argmax(diff)]
+	# return the ordered coordinates
+	return rect
+
+def four_point_transform(image, pts):
+    # obtain a consistent order of the points and unpack them
+    # individually
+    rect = order_points(pts)
+
+    (tl, tr, br, bl) = rect
+
+    # compute the width of the new image, which will be the
+    # maximum distance between bottom-right and bottom-left
+    # x-coordiates or the top-right and top-left x-coordinates
+    widthA = np.sqrt(((br[0] - bl[0]) ** 2) + ((br[1] - bl[1]) ** 2))
+    widthB = np.sqrt(((tr[0] - tl[0]) ** 2) + ((tr[1] - tl[1]) ** 2))
+    maxWidth = max(int(widthA), int(widthB))
+
+    # compute the height of the new image, which will be the
+    # maximum distance between the top-right and bottom-right
+    # y-coordinates or the top-left and bottom-left y-coordinates
+    heightA = np.sqrt(((tr[0] - br[0]) ** 2) + ((tr[1] - br[1]) ** 2))
+    heightB = np.sqrt(((tl[0] - bl[0]) ** 2) + ((tl[1] - bl[1]) ** 2))
+    maxHeight = max(int(heightA), int(heightB))
+
+    # now that we have the dimensions of the new image, construct
+    # the set of destination points to obtain a "birds eye view",
+    # (i.e. top-down view) of the image, again specifying points
+    # in the top-left, top-right, bottom-right, and bottom-left
+    # order
+    dst = np.array([
+        [0, 0],
+        [maxWidth - 1, 0],
+        [maxWidth - 1, maxHeight - 1],
+        [0, maxHeight - 1]], dtype = "float32")
+
+    # compute the perspective transform matrix and then apply it
+    M = cv2.getPerspectiveTransform(rect, dst)
+    warped = cv2.warpPerspective(image, M, (maxWidth, maxHeight))
+
+    # return the warped image
+    return warped
 
 def scan_qrcode_from_image(pillow_image):    
 
@@ -159,38 +218,82 @@ def scan_qrcode_from_image(pillow_image):
     qr_code_coords = []
 
     # Iterate through detected QR codes
-    for qr1, qr2 in pair_same_output(qr_codes, lambda x: x.data):
-                
+    for qr1, qr2 in pair_same_output(qr_codes, lambda x: x.data):        
+        
         # Get the data from the QR code
         qr1_data = qr1.data.decode('utf-8')
         qr2_data = qr2.data.decode('utf-8')
 
         # Get the bounding box (rectangle)
-        rect1_points = qr1.rect  # This is a tuple (x, y, width, height)
-        rect2_points = qr2.rect  # This is a tuple (x, y, width, height)
-
-        p1 = (rect1_points[0] , rect1_points[1] + rect2_points[3])
-        p2 = (rect2_points[0]+ rect1_points[2], rect2_points[1])
-
-        if (rect1_points[0] < rect2_points[0]):
-            top_left = p1
-            bottom_right = p2
-        else:
-            top_left = p2
-            bottom_right = p1
+        _, _, qr1_width, qr1_height = qr1.rect  # This is a tuple (x, y, width, height)
+        _, _, qr2_width, qr2_height = qr2.rect  # This is a tuple (x, y, width, height)
         
+        # Get the data from the QR code
+        if (qr1.polygon[0][0] < qr2.polygon[0][0]):
+            pol1 = qr1.polygon
+            pol2 = qr2.polygon
+        else:
+            pol2 = qr1.polygon
+            pol1 = qr2.polygon        
+                        
+        # https://docs.google.com/drawings/d/1mjl77u_CYfVI8T09_lvpzwu73qHWqMe3QVYpb99blr8
+        p1, p2, p4, p3 = order_points(pol1)
+        p5, p6, p8, p7 = order_points(pol2)
+        
+        pol_top_left = p2
+        pol_bottom_right = p7
+        
+        a1 = (p2[1] - p1[1]) / (p2[0] - p1[0])
+        if (abs(a1) > 0.02):
+            b1 = p2[1] - p2[0] * a1
+
+            a2 = (p5[1] - p7[1]) / (p5[0] - p7[0])
+            b2 = p5[1] - p5[0] * a2
+            
+            x1 = (b2 - b1) / (a1 - a2)
+            y1 = a1 * x1 + b1
+            pol_top_right = (x1, y1)
+            
+            a3 = (p4[1] - p2[1]) / (p4[0] - p2[0])
+            b3 = p4[1] - p4[0] * a3
+            
+            a4 = (p7[1] - p8[1]) / (p7[0] - p8[0])
+            b4 = p7[1] - p7[0] * a4
+            
+            x2 = (b4 - b3) / (a3 - a4)
+            y2 = a3 * x2 + b3
+            pol_bottom_left = (x2, y2)
+        
+            coords = [pol_top_left, pol_top_right, pol_bottom_right, pol_bottom_left]
+        else:
+            coords = [pol_top_left, (p7[0],p4[1]), pol_bottom_right, (p4[0], p7[1])]
+
+        coords = [(x[0].item(), x[1].item()) for x in coords]
+        # print(coords, pillow_image.width, pillow_image.height)
 
         qr_code_coords.append({
-            "coords": [top_left, bottom_right],
+            # "coords": [top_left, bottom_right],
+            "polygon": coords,
             "data": qr1_data
         })
+        font = ImageFont.load_default(size=pillow_image.width / 35)
         
         # Draw the rectangle (color: green, thicknessp: 3)
-        draw.rectangle([top_left, bottom_right], outline="green", width=10)
+        draw.polygon(coords, outline="green", width=10)
+        for index, coord in enumerate([p1, p2, p3, p4,  p5, p6, p7, p8]):
+            draw.point(coord, 'red')
+            draw.text(coord,'p'+str(index+1), fill="blue", font=font, stroke_width=3)
+            
+        for index, coord in enumerate(coords):
+            draw.point(coord, 'red')
+            draw.text(coord,'c'+str(index+1), fill="red", font=font, stroke_width=3)
+            
+        # Draw the rectangle (color: green, thicknessp: 3)
+        draw.polygon(coords, outline="green", width=10)
         
         # Display the decoded QR code data on the image
         font = ImageFont.load_default(size=15)
-        text_position = (top_left[0], top_left[1] - 10)  # Place text above the rectangle
+        text_position = (pol_top_left[0], pol_top_left[1] - 10)  # Place text above the rectangle
         draw.text(text_position, qr1_data, fill="green", font=font)
 
 
@@ -201,13 +304,11 @@ def get_black_square_data(image,  min_size=15):
 
     # Convert the image to grayscale to help detect the black squares
     gray_img = image.convert('L')
-    gray_img.point(lambda x: 0 if x < 128 else 255, '1')
-    
+    gray_img.point(lambda x: 0 if x < 150 else 255, '1')
     # Convert the PIL image to a NumPy array
     arr_image = np.array(gray_img.copy())
-
     # Threshold the array to ensure it's binary
-    binary_image = (arr_image < 150).astype(int)  # Assuming black is below 128
+    binary_image = (arr_image < 150).astype(int)  # Assuming black is below 150
 
     arr_binary_image = np.array(binary_image.copy())
     
@@ -221,13 +322,16 @@ def get_black_square_data(image,  min_size=15):
     contours, _ = cv2.findContours(binary_image, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
     contour_image =  image.copy()
     
-    # temp = image.copy()
+    temp = image.copy()
     
 
     # for contour in contours:
     #     draw = ImageDraw.Draw(temp)
-    #     contour_points = [(int(point[0][0]), int(point[0][1])) for point in contour]
-    #     draw.polygon(contour_points, outline=(0, 255, 0), width=2)
+    #     contour_points = [(int(point[0][0]), int(point[0][1])) for point in contour if len(point[0]) ==2 ]
+    #     if (len(contour_points) > 1):
+    #         draw.polygon(contour_points, outline=(0, 255, 0), width=2)
+        
+    # base64_to_png(pillow_to_base64(temp), './test_output/countour.png')
 
     
 
@@ -250,11 +354,6 @@ def get_black_square_data(image,  min_size=15):
         if (average_color < 0.7):
             continue
         
-        # draw_temp = ImageDraw.Draw(contour_image)
-        # contour_points = [(int(point[0][0]), int(point[0][1])) for point in contour]
-        
-
-        
         # Check if the bounding box is a square and larger than 15x15
         if w >= min_size and h >= min_size:  # Allow a small tolerance for non-perfect squares
             # Append the rectangle properties: (start_height, height, x_min, x_max)
@@ -263,16 +362,6 @@ def get_black_square_data(image,  min_size=15):
             draw = ImageDraw.Draw(contour_image)
             contour_points = [(int(point[0][0]), int(point[0][1])) for point in contour]
             draw.polygon(contour_points, outline=(0, 255, 0), width=2)
-            
-            # id = get_random_id()
-            # cv2.imwrite('./tempshow/'+str(int(average_color*100))+'.png', arr_binary_image[ y:y+h, x:x+w] * 255)
-
-            # draw_temp.polygon(contour_points, outline=(0, 255, 0), width=2)
-
-            # contour_image = draw.polygon(contour, fill=(0,255,0))
-            
-
-    
     
     return rectangles, gray_img, contour_image
 
