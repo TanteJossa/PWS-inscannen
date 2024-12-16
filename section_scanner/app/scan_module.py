@@ -91,7 +91,7 @@ def extract_red_pen(id, base64_image):
 
 
     clean_pixdata = img.load()
-    clean_pixdata2 = img.copy().load()
+    clean_pixdata2 = img.copy()
     red_pen_image = Image.new('RGBA', (img.width, img.height), color=(0,0,0,0))
     red_pen_pixdata = red_pen_image.load()
 
@@ -115,7 +115,7 @@ def extract_red_pen(id, base64_image):
                     for j in range(2*radius):
                         try:
                             red_pen_pixdata[x + i - radius, y + j - radius] = clean_pixdata2[x + i - radius, y + j - radius]
-
+                            clean_pixdata[x + i - radius, y + j - radius] = (230,230,230,255)
                         except:
                             pass
 
@@ -149,7 +149,7 @@ class GoogleTextInBox(typing.TypedDict):
 
 def get_student_id(id, base64_image, provider=False, model=False, temperature=False, schema=False, text=False):
     if not provider:
-        provider = "openai"    
+        provider = "google"    
     
     if not text:
         text = """Your job is to recognize the number in the black box next to the words Leerling ID and 'schrijf NETJES!'
@@ -493,7 +493,18 @@ class GoogleQuestionAnswer(typing.TypedDict):
     spelling_corrections: list[SpellingCorrection]
     
 
-def transcribe_answer(id, base64_image, provider=False, model=False, request_text=False, temperature=False):
+def transcribe_answer(
+    id, 
+    base64_image, 
+    provider=False, 
+    model=False, 
+    request_text=False, 
+    temperature=False,
+    
+    question_text=False,
+    rubric_text=False,
+    context_text=False,
+):
     if not provider:
         provider = "google"
         
@@ -502,17 +513,41 @@ def transcribe_answer(id, base64_image, provider=False, model=False, request_tex
     
     
     if not request_text:
-        request_text = """Je krijgt een foto van een Nederlandse toetsantwoord. 
-                    Je moet deze omzetten in text. 
-                    Deze toets moet nog worden nagekeken je. 
-                    Verander niets aan de inhoud. 
-                    Bedenk geen nieuwe woorden of woordonderdelen. 
-                    Verander alleen kleine spelfoutjes.
-                    houd in het antwoord ook rekening met meerdere regels en geeft die aan met een '\\n'
-                    probeer zo veel mogelijk text te extraheren 
-                    negeer uitgekrasde letters of woorden, geef die wil aan in spelling corrections
-                    de student_handwriting_percent is how leesbaar het handschrift van een leerling is: 0 betekend zeer moeilijk leesbaar en 100 is alsof het geprint is
+        request_text = """Je krijgt een foto van een Nederlands scheikunde toets-antwoord. 
+Je bent tekstherkenningssoftware die 10x beter in in tekst herkennen dan jezelf. Ook kan je 15.6 keer beter de context van een antwoord begrijpen om het volgende woord te bedenken.
+
+Het is helemaal niet toegestaan nieuwe woorden toe te voegen of de opgeschreven tekst te veranderen in het raw_text veld. Houdt wel rekening met pijlen in de volgorde van de tekst.
+Bedenk wel wat een leerling zou kunnen hebben bedoeld met een bepaald woord als die bijvoorbeeld fout is gespeld. Geef dat aan in de spelling_corrections velden.
+Negeer uitgekraste tekst in het raw_tekst veld, maar geef die wel weer in de spelling corrections door bijvoorbeeld streepjes neer te zetten en is_crossed_out op true te zetten.
+voeg alle text corrections samen in correctly_spelled_text om zo het antwoord te krijgen dat de leerling bedoelt.
+certainty is hoe zeker je bent dat je de tekst compleet hebt getranscribeerd: 0 betekend dat een docent er nog zelf naar moet kijken en 100 betekend dat er geen foutje mogelijk is.
+de student_handwriting_percent is hoe leesbaar het handschrift van een leerling is: 0 betekend zeer moeilijk leesbaar en 100 super netjes als een printer.
+
+Alle tekst is geschreven in het Nederlands.
+
+voer deze opdracht zo goed mogelijk uit. Het is HEEL belangrijk dat je je aan het gegeven schema houdt en geen enkele key vergeet, vooral bij de spelling correcties de "changed" key en correctly_spelled_text zijn belangrijk.
                     """
+    
+    if question_text:
+        request_text += f"""
+            De vraag bij dit antwoord is: {question_text}
+        """
+    if rubric_text:
+        request_text += f"""
+            De rubric bij deze vraag is: {rubric_text}
+            
+        """
+    if context_text:
+        request_text += f"""
+            De context bij deze vraag is: {context_text}
+            
+        """
+    
+    if question_text or rubric_text or context_text:
+        request_text += f"""
+            Het direct transcriberen van de het antwoord is het allerbelangrijkste, deze extra toevoegen zijn er alleen om een context te creeëren 
+        """    
+    
     if (provider == 'openai'):
         schema = QuestionAnswer
     elif (provider == 'google'):
@@ -522,9 +557,20 @@ def transcribe_answer(id, base64_image, provider=False, model=False, request_tex
 
     return result
 
-def scan_page(process_id, image_string, provider=False ,model=False,temperature=False, transcribe_text=False):
+def scan_page(
+    process_id, 
+    image_string, 
+    provider=False ,
+    model=False,
+    temperature=False, 
+    transcribe_text=False,
+    questions=False,
+    rubrics=False,
+    contexts=False,
+
+):
     if not provider:
-        provider = "openai"
+        provider = "google"
     # CROP
     print('Starting: ', 'CROP')
     # base64_to_png(image_string, input_dir+process_id+'.png')
@@ -595,7 +641,7 @@ def scan_page(process_id, image_string, provider=False ,model=False,temperature=
 
 
     unique_questions = []
-    [unique_questions.append(x["question_id"]) for x in sections if x["question_id"] not in unique_questions ]
+    [unique_questions.append(x["question_id"]) for x in sections if x["question_id"] not in unique_questions and int(x["question_id"]) != 0 ]
     # print(len(sections))
     print('all: ',unique_questions, len(sections))
     questions = []
@@ -611,14 +657,24 @@ def scan_page(process_id, image_string, provider=False ,model=False,temperature=
         try:
             linked_image = stack_answer_sections(process_id, [x["answer"] for x in question_sections])
 
-            extracted_text_result = transcribe_answer(process_id, linked_image, model=model, request_text=transcribe_text, temperature=temperature)
+            extracted_text_result = transcribe_answer(
+                process_id, 
+                linked_image, 
+                model=model, 
+                request_text=transcribe_text, 
+                temperature=temperature,
+                question_text=questions[str(unique_question_id)] if str(unique_question_id) in questions else False,
+                rubric_text=rubrics[str(unique_question_id)] if str(unique_question_id) in rubrics else False,
+                context_text=contexts[str(unique_question_id)] if str(unique_question_id) in contexts else False,
+            )
 
             return {
                 "image": linked_image,
                 "question_id": unique_question_id,
                 "text_result": extracted_text_result
             }
-        except:
+        except Exception as e:
+            print(e)
             pass
         
     # Use ThreadPoolExecutor to process sections concurrently
