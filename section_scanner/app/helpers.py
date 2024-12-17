@@ -24,7 +24,6 @@ def pillow_to_base64(pillow_image):
     pillow_image.save(buffered, format="PNG")
     img_str = base64.b64encode(buffered.getvalue()).decode('utf-8')
     
-    
     if not img_str.startswith('data:image'):
         img_str = "data:image/png;base64," + img_str
     

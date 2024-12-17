@@ -99,7 +99,7 @@ def single_request(provider=False, model=False, temperature=False, schema=False,
             "provider": provider,
             
             "timestamp":  end_time,
-            "delta_time_s":  (end_time - start_time) / 1000,
+            "delta_time_s":  (end_time - start_time),
         }
 
     print(f"GPT request ({provider}, {model}) ... Done")

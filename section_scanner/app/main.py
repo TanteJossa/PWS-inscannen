@@ -131,11 +131,37 @@ def scan_fullpage():
         else:
             model = False
             
+        if ("questions" in request.json):
+            questions = request.json.get("questions")
+        else:
+            questions = False
+            
+        if ("rubrics" in request.json):
+            rubrics = request.json.get("rubrics")
+        else:
+            rubrics = False
+            
+        if ("contexts" in request.json):
+            contexts = request.json.get("contexts")
+        else:
+            contexts = False
+        
+            
+        
+        
         process_id = get_random_id()
         
         image_string = request.json.get("Base64Image")
         
-        output = scan_page(process_id, image_string=image_string, model=model, transcribe_text=transcribe_text)
+        output = scan_page(
+            process_id, 
+            image_string=image_string, 
+            model=model, 
+            transcribe_text=transcribe_text,
+            questions=questions,
+            rubrics=rubrics,
+            contexts=contexts
+        )
         
         # cleanup_files(process_id)
         end_time = time.time()
@@ -160,10 +186,9 @@ def crop_page():
         process_id = get_random_id()
         image_string = request.json.get("Base64Image")
         # base64_to_png(image_string, input_dir+process_id+'.png')
-        
+        print(image_string)
         output_string = crop(process_id, image_string)
         # output_string = png_to_base64(output_dir+process_id+'.png')
-        
         
         # cleanup_files(process_id)
         end_time = time.time()
@@ -189,6 +214,8 @@ def colcor_page():
         process_id = get_random_id()
         image_string = request.json.get("Base64Image")
         # base64_to_png(image_string, input_dir+process_id+'.png')
+        
+        print(image_string)
         
         color_correction_result = extract_red_pen(process_id, image_string)
         
@@ -457,11 +484,38 @@ def extract_text_from_answer():
             transcribe_text = request.json.get("transcribeText")
         else:
             transcribe_text = False
+           
+           
+
+
+
+        if ("questionText" in request.json):
+            question_text = request.json.get("questionText")
+        else:
+            question_text = False
+        if ("rubricText" in request.json):
+            rubric_text = request.json.get("rubricText")
+        else:
+            rubric_text = False
+        if ("contextText" in request.json):
+            context_text = request.json.get("contextText")
+        else:
+            context_text = False
+            
         process_id = get_random_id()
         image_string = request.json.get("Base64Image")
         # base64_to_png(image_string, input_dir+process_id+'.png')
                 
-        data = transcribe_answer(process_id, image_string, provider, model, transcribe_text)
+        data = transcribe_answer(
+            process_id, 
+            image_string, 
+            provider, 
+            model, 
+            transcribe_text,
+            question_text,
+            rubric_text,
+            context_text,
+        )
 
         # cleanup_files(process_id)
         end_time = time.time()

@@ -69,7 +69,7 @@ def get_response_json(response, gpt_model, start_time, end_time):
         "model_version": dict_response["model"],
         
         "timestamp": int(end_time),
-        "delta_time_s": end_time - start_time,
+        "delta_time_s": end_time - start_time ,
     }
 
 

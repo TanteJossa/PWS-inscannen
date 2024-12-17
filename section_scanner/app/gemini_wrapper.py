@@ -65,7 +65,8 @@ def google_single_image_request(text, base64_image=False, model=False, temperatu
         response_format = DefaultGeminiSchema
         
     if not model:
-        model = "gemini-1.5-pro"
+        model = "gemini-1.5-pro-002"
+        model = "gemini-2.0-flash-exp"
     if not temperature:
         temperature = 0.05
     
