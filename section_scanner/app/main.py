@@ -534,26 +534,58 @@ def extract_text_from_answer():
 def grade_with_answer():
     try:
         start_time = time.time()
-        if ("id" in request.json):
-            id = request.json.get("id")
+        
+        if (request.content_type != None and request.content_type == 'application/json'):
+            data = request.get_json(silent=True)
+        else:
+            data = request.args.to_dict()
+            print(data)
+        
+        if ("id" in data):
+            id = data.get("id")
         else:
             id = "No ID found"
-        if ("provider" in request.json):
-            provider = request.json.get("provider")
+        if ("provider" in data):
+            provider = data.get("provider")
         else:
             provider = False
-        if ("model" in request.json):
-            model = request.json.get("model")
+        if ("model" in data):
+            model = data.get("model")
         else:
             model = False
-        if ("requestText" in request.json):
-            request_text = request.json.get("requestText")
+        if ("requestText" in data):
+            request_text = data.get("requestText")
         else:
-            request_text = False
-            
+            if ("rubric" in data):
+                rubric = data.get("rubric")
+            else:
+                rubric = "Klopt dit"
+                
+            if ("question" in data):
+                question = data.get("question")
+            else:
+                question = "Geen vraag gevonden"
+                
+            if ("answer" in data):
+                answer = data.get("answer")
+            else:
+                answer = "Geen antwoord gevonden"
+                
+            request_text = f"""
+                Kijk deze toetsvraag van een leerling zo goed mogelijk na en geef korte feedback en het puntnummer bij elk punt. Geef ook een totale feedback met daarin een zo kort mogelijke uitleg over of iemand slodig is of het waarschijnlijk niet begrijpt. Spreek in de totale feedback de leerling aan en maximaal 1-2 zinnen. 
+                
+                Vraag: {question}
+                
+                Rubriek: {rubric}
+                
+                Antwoord: {answer}
+                
+                Houdt je aan de gegeven schema.
+            """
 
-        if ("studentImage" in request.json):
-            student_image = request.json.get("studentImage")
+
+        if ("studentImage" in data):
+            student_image = data.get("studentImage")
         else:
             student_image = False
             
