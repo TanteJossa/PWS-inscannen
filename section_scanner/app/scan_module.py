@@ -377,7 +377,7 @@ class Checkbox(BaseModel):
 
 
 class CheckboxSelection(BaseModel):
-    checkboxes: list[Checkbox]
+    # checkboxes: list[Checkbox]
     most_certain_checked_number: int
     certainty: float
     
@@ -390,7 +390,7 @@ class GoogleCheckbox(typing.TypedDict):
 
 
 class GoogleCheckboxSelection(typing.TypedDict ):
-    checkboxes: list[GoogleCheckbox]
+    # checkboxes: list[GoogleCheckbox]
     most_certain_checked_number: int
     certainty: float
 
@@ -443,6 +443,7 @@ def stack_answer_sections(id, images: list[str]):
     # image =) Image.open(input_path + images[0] + '.png')
     # output_image_path = output_dir+id+'.png'
     # image.save(output_image_path)
+
     
     for base_64_image in images[1::]:
         # image = base64_to_pillow(base)
@@ -472,7 +473,7 @@ class QuestionAnswer(BaseModel):
     # get the spel corrected text that should be graded
     correctly_spelled_text: str
     # get the spelling changes the model made
-    spelling_corrections: list[SpellingCorrection]
+    # spelling_corrections: list[SpellingCorrection]
     
 # schema classes
 class GoogleSpellingCorrection(typing.TypedDict):
@@ -490,7 +491,7 @@ class GoogleQuestionAnswer(typing.TypedDict):
     # get the spel corrected text that should be graded
     correctly_spelled_text: str
     # get the spelling changes the model made
-    spelling_corrections: list[SpellingCorrection]
+    # spelling_corrections: list[SpellingCorrection]
     
 
 def transcribe_answer(
@@ -527,7 +528,6 @@ Alle tekst is geschreven in het Nederlands.
 
 voer deze opdracht zo goed mogelijk uit. Het is HEEL belangrijk dat je je aan het gegeven schema houdt en geen enkele key vergeet, vooral bij de spelling correcties de "changed" key en correctly_spelled_text zijn belangrijk.
                     """
-    
     if question_text:
         request_text += f"""
             De vraag bij dit antwoord is: {question_text}
@@ -554,7 +554,6 @@ voer deze opdracht zo goed mogelijk uit. Het is HEEL belangrijk dat je je aan he
         schema = GoogleQuestionAnswer
 
     result = single_request(text=request_text, image=base64_image, provider=provider, model=model, schema=schema, temperature=temperature)
-
     return result
 
 def scan_page(
@@ -657,15 +656,32 @@ def scan_page(
         try:
             linked_image = stack_answer_sections(process_id, [x["answer"] for x in question_sections])
 
+
+            if questions and str(unique_question_id) in questions:
+                question_text = questions[str(unique_question_id)]
+            else:
+                question_text = False
+                
+            if rubrics and str(unique_question_id) in rubrics:
+                rubric_text = rubrics[str(unique_question_id)]
+            else:
+                rubric_text = False
+                
+            if contexts and str(unique_question_id) in contexts:
+                context_text = contexts[str(unique_question_id)]
+            else:
+                context_text = False
+                
+
             extracted_text_result = transcribe_answer(
                 process_id, 
-                linked_image, 
+                base64_image=linked_image, 
                 model=model, 
                 request_text=transcribe_text, 
                 temperature=temperature,
-                question_text=questions[str(unique_question_id)] if str(unique_question_id) in questions else False,
-                rubric_text=rubrics[str(unique_question_id)] if str(unique_question_id) in rubrics else False,
-                context_text=contexts[str(unique_question_id)] if str(unique_question_id) in contexts else False,
+                question_text=question_text,
+                rubric_text=rubric_text,
+                context_text=context_text,
             )
 
             return {
@@ -681,6 +697,7 @@ def scan_page(
     with ThreadPoolExecutor() as executor:
         results = executor.map(process_question, unique_questions)
 
+    
     # Collect results
     questions = [question for question in results if question is not None]
     
@@ -748,3 +765,238 @@ def grade_answer(process_id, request_text=False, student_image=False, provider=F
         
     result = single_request(text=request_text, image=student_image, provider=provider, model=model, schema=schema, temperature=temperature)
     return result
+
+
+class TestQuestionPoint(typing.TypedDict):
+    point_text: str
+    point_name: str
+    has_point: bool
+    point_index: int
+    point_weight: int
+    target_name: str
+    
+
+class TestQuestion(typing.TypedDict):
+    question_number: str
+    question_text: str
+    points: list[TestQuestionPoint]
+    is_draw_question: bool
+    
+
+class TestTarget(typing.TypedDict):
+    target_name: str
+    explanation: str
+    
+class TestData(typing.TypedDict):
+    questions: list[TestQuestion]
+    targets: list[TestTarget]
+
+
+def get_test_structure(process_id=False, request_text=False, test_data=False):
+    provider = 'google'
+    model = "gemini-exp-1206"
+    
+    task_list = []
+    
+    if not request_text:
+        request_text = """Deel  in
+        
+        """
+    
+    task_list.append({
+        "text": request_text,
+    })
+
+    for key in test_data.keys():
+        task_list.append({"text": f"\n{key}:\n"} )
+        
+        for item in test_data[key]:
+            if(item["type"] == 'text'):
+                task_list.append({"text": item["data"]})
+                
+            if(item["type"] == 'image'):
+                base64_image = item["data"]
+                
+                if base64_image.startswith('data:image'):
+                    base64_image = base64_image.split(',')[1]   
+                task_list.append({
+                    "inline_data": {
+                        "mime_type":"image/png",
+                        "data": base64_image
+                    }
+                })
+    
+    task_list.append({"text": "\n\n Houd je strak aan de format/schema, zorg dat elk veld een kloppende waarde heeft."})
+    result = single_request(provider, model, schema=TestData, messages=task_list, limit_output=False)
+    return result
+    
+    
+from reportlab.lib.pagesizes import letter, A4, landscape
+from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, Table, TableStyle, PageBreak, KeepTogether
+from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
+from reportlab.lib import colors
+from io import BytesIO
+import base64
+    
+def get_base64_student_result_pdf(process_id=False, student_results=[], add_student_feedback=False):
+    buffer = BytesIO()
+    doc = SimpleDocTemplate(
+        buffer, 
+        pagesize=A4, 
+        leftMargin=0.5*72, rightMargin=0.5*72,
+        topMargin=0.5*72, bottomMargin=0.5*72,
+        authort="ToetsPWS-JKK-JKW",
+        title="LeerlingResultatenToetsPWS",
+        subject="Automatisch nakijken"
+    )
+    styles = getSampleStyleSheet()
+
+    normal_style = styles['Normal']
+    normal_bold_style = ParagraphStyle(
+        name='NormalBold',
+        parent=styles['Normal'],
+        fontName='Helvetica-Bold',
+    )
+
+    story = []
+
+    for student in student_results:
+        student_elements = []  # List to hold elements for the current student
+
+            
+        student_id = student.get('student_id')
+        question_results = student.get('question_results', [])
+        targets = student.get('targets', [])
+
+        # Title
+        title_text = f"Leerling: {student_id}"
+        student_elements.append(Paragraph(title_text, styles['h1']))
+        student_elements.append(Spacer(1, 12))
+
+        # Question Table
+        if question_results:
+            # Prepare table data
+            question_table_data = []
+            # Header row
+            if question_results:
+                header_row = ["Vraag", "Antwoord", "Score", "Feedback", "Points"]  # Feedback always present
+                if add_student_feedback:
+                    header_row.append("Student Feedback")
+                question_table_data.append([Paragraph(col, normal_bold_style) for col in header_row])
+
+                # Data rows
+                for result in question_results:
+                    row_data = []
+                    row_data.append(Paragraph(str(result.get('question_number', '')), normal_style))
+                    row_data.append(Paragraph(str(result.get('student_answer', '')), normal_style))
+                    row_data.append(Paragraph(str(result.get('score', '')), normal_style))
+                    row_data.append(Paragraph(str(result.get('feedback', '')), normal_style))
+
+                    point_table_data = []
+                    for point in result.get('points', []):
+                        point_table_data.append([
+                            Paragraph(str(point.get('point_name', '')), normal_style),
+                            Paragraph(str(point.get('points', '')), normal_style),
+                            Paragraph(str(point.get('feedback', '')), normal_style)
+                        ])
+                    col_widths = [1 * 72, 0.2 * 72, None]
+                    point_table = Table(point_table_data, colWidths=col_widths)
+                    point_table.setStyle(TableStyle([
+                        # ('BACKGROUND', (0, 0), (-1, -1), colors.lightgrey),
+                        ('TEXTCOLOR', (0, 0), (-1, -1), colors.black),
+                        ('ALIGN', (0, 0), (-1, -1), 'LEFT'),
+                        ('FONTNAME', (0, 0), (-1, -1), 'Helvetica'),
+                        ('FONTSIZE', (0, 0), (-1, -1), 8),
+                        ('GRID', (0, 0), (-1, -1), 0.5, colors.black),
+                        # ('BOTTOMPADDING', (0, 0), (-1, -1), 0),
+                        # ('TOPPADDING', (0, 0), (-1, -1), 0),
+                        # ('LEFTPADDING', (0, 0), (-1, -1), 0),
+                        # ('RIGHTPADDING', (0, 0), (-1, -1), 0),
+                    ]))
+                    row_data.append(point_table)
+
+                    if add_student_feedback:
+                        row_data.append("") # Empty cell for student feedback
+
+                    question_table_data.append(row_data)
+
+                # Create the table
+                col_widths = [0.5 * 72, None, 0.5 * 72, None, None] # Example: 0.5 inch for Question Number and Score
+                if (add_student_feedback):
+                    col_widths.append(None)
+                question_table = Table(question_table_data, colWidths=col_widths)
+                point_column_index = 4
+                question_table.setStyle(TableStyle([
+                    ('BACKGROUND', (0, 0), (-1, 0), colors.lightgrey),
+                    ('TEXTCOLOR', (0, 0), (-1, 0), colors.whitesmoke),
+                    ('ALIGN', (0, 0), (-1, -1), 'LEFT'),
+                    ('VALIGN', (0, 0), (-1, -1), 'TOP'),
+                    ('FONTNAME', (0, 0), (-1, 0), 'Helvetica-Bold'),
+                    ('BOTTOMPADDING', (0, 0), (-1, 0), 6),
+                    ('GRID', (0, 0), (-1, -1), 1, colors.black),
+                    ('LEFTPADDING', (point_column_index, 0), (point_column_index, -1), 0), # Points column
+                    ('RIGHTPADDING', (point_column_index, 0), (point_column_index, -1), 0), # Points column
+                    ('TOPPADDING', (point_column_index, 0), (point_column_index, -1), 0),   # Points column
+                    ('BOTTOMPADDING', (point_column_index, 0), (point_column_index, -1), 0),# Points column
+                    ('LEFTPADDING', (0, 0), (2, -1), 2), # Add padding back to other columns
+                    ('RIGHTPADDING', (0, 0), (2, -1), 2),
+                ]))
+                if col_widths:
+                    question_table.colWidths = col_widths
+                student_elements.append(question_table)
+            else:
+                student_elements.append(Paragraph("No question results available for this student.", styles['Italic']))
+
+        student_elements.append(Spacer(1, 12))
+
+        # Target Table
+        if targets:
+            student_elements.append(Paragraph("<b>Leerdoelen</b>", styles['h2']))
+            target_table_data = []
+            if targets:
+                target_header_row = ["Leerdoel", "Uitleg", "Score", "%"]
+                target_table_data.append([Paragraph(col, normal_bold_style) for col in target_header_row])
+
+                for target in targets:
+                    row_data = []
+
+                    row_data.append(Paragraph(str(target.get('target_name', '')), normal_style))
+                    row_data.append(Paragraph(str(target.get('explanation', '')), normal_style))
+                    row_data.append(Paragraph(str(target.get('score', '')), normal_style))
+                    row_data.append(Paragraph(str(target.get('percent', '')), normal_style))
+
+                    target_table_data.append(row_data)
+                    
+                column_widths = [1.2 * 72, None, 0.6 * 72, 0.7 * 72]
+                target_table = Table(target_table_data, colWidths=column_widths)
+                target_table.setStyle(TableStyle([
+                    ('BACKGROUND', (0, 0), (-1, 0), colors.beige),
+                    ('TEXTCOLOR', (0, 0), (-1, 0), colors.black),
+                    ('ALIGN', (0, 0), (-1, -1), 'LEFT'),
+                    ('FONTNAME', (0, 0), (-1, 0), 'Helvetica-Bold'),
+                    ('BOTTOMPADDING', (0, 0), (-1, 0), 6),
+                    ('GRID', (0, 0), (-1, -1), 1, colors.black),
+                    ('LEFTPADDING', (0, 0), (-1, -1), 5),
+                    ('RIGHTPADDING', (0, 0), (-1, -1), 5),
+                ]))
+                student_elements.append(target_table)
+            else:
+                student_elements.append(Paragraph("Geen leerdoelen gevonden", styles['Italic']))
+        else:
+            student_elements.append(Paragraph("Geen leerdoelen gevonden", styles['Italic']))
+
+        
+        # Add a KeepTogether to try and keep the student's content on as few pages as possible
+        story.append(KeepTogether(student_elements))
+
+        # Ensure even number of pages per student
+        if len(story) % 2 != 0:
+            story.append(PageBreak())        
+            
+    doc.build(story)
+
+    pdf_value = buffer.getvalue()
+    pdf_base64 = base64.b64encode(pdf_value).decode('utf-8')
+    buffer.close()
+    return pdf_base64
+

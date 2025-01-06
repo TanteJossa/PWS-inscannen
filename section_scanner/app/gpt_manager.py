@@ -11,10 +11,11 @@ import typing_extensions as typing
 import json
 import time
 
+from fix_busted_json import repair_json
 
 
     
-def single_request(provider=False, model=False, temperature=False, schema=False, image=False, text=""):
+def single_request(provider=False, model=False, temperature=False, schema=False, image=False, text="", messages=False, limit_output=True):
     if not provider:
         provider = "google"
 
@@ -75,16 +76,39 @@ def single_request(provider=False, model=False, temperature=False, schema=False,
     if provider == 'google':
         
         start_time = time.time()
-
+        
         result:GenerateContentResponse = google_single_image_request(
             text=text,
             base64_image=image,
             model=model,
             id=id,
-            response_format=schema
+            response_format=schema,
+            task_list=messages,
+            limit_output=limit_output
         )
-        result_data = json.loads(result['candidates'][0]['content']['parts'][0]['text'])
+        if ('candidates' in result):
+            try:
+                result_data = json.loads(result['candidates'][0]['content']['parts'][0]['text'])
+            except:
+                invalid_json = result['candidates'][0]['content']['parts'][0]['text']
+                try:
+                    print('Trying to repair json: ',invalid_json)
+                    valid_json = invalid_json+"}"
+                    result_data = json.loads(valid_json)
+                except:
+                    print('Single Request Error: ',invalid_json)
+                    result_data = {}
+        else:
+            if result:
+                result_data = result
+            else:
+                result_data = {}
 
+
+        if ("usageMetadata" in result and "totalTokenCount" in result["usageMetadata"]):
+            token_count = int(result["usageMetadata"]["totalTokenCount"])
+        else:
+            token_count = 0
         
         end_time = time.time()
         # print(result, result.usage_metadata.total_token_count)
@@ -92,7 +116,7 @@ def single_request(provider=False, model=False, temperature=False, schema=False,
             "result": result_data,
             # "spelling_corrections": result_data["spelling_corrections"],
             
-            "tokens_used": result["usageMetadata"]["totalTokenCount"],
+            "tokens_used": token_count,
 
             "model_used": model,
             "model_version": model,

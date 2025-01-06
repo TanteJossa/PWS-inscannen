@@ -58,47 +58,48 @@ class DefaultGeminiSchema(typing.TypedDict):
     result: str
     
 
-def google_single_image_request(text, base64_image=False, model=False, temperature=False, id=get_random_id(), response_format=False):
+def google_single_image_request(text, base64_image=False, model=False, temperature=False, id=get_random_id(), response_format=False, task_list=False, limit_output= True):
     genai.configure(api_key=data["key"],transport="rest")
 
     if not response_format:
         response_format = DefaultGeminiSchema
         
     if not model:
-        model = "gemini-1.5-pro-002"
-        model = "gemini-2.0-flash-exp"
+        model = "gemini-1.5-pro"
+        # model = "gemini-2.0-flash-exp"
     if not temperature:
         temperature = 0.05
-    
-    task_list = []
 
-    if base64_image:
-        if base64_image.startswith('data:image'):
-            base64_image = base64_image.split(',')[1]    
+    if not task_list:
+        task_list = []
 
-        # # 2. Decode (Now with clean base64 data)
-        # image_data = base64.b64decode(base64_image)
-        # image = Image.open(io.BytesIO(image_data))
-        
-        # # Save to a BytesIO buffer
-        # img_buffer = io.BytesIO()
-        # image.save(img_buffer, format="PNG") 
-        # img_buffer.seek(0)  # Reset the buffer to the beginning
+        if base64_image:
+            if base64_image.startswith('data:image'):
+                base64_image = base64_image.split(',')[1]    
+
+            # # 2. Decode (Now with clean base64 data)
+            # image_data = base64.b64decode(base64_image)
+            # image = Image.open(io.BytesIO(image_data))
+            
+            # # Save to a BytesIO buffer
+            # img_buffer = io.BytesIO()
+            # image.save(img_buffer, format="PNG") 
+            # img_buffer.seek(0)  # Reset the buffer to the beginning
 
 
-        
-        # image_file = genai.upload_file(img_buffer, mime_type="image/png")    
-        task_list.append({
-            "inline_data": {
-                "mime_type":"image/png",
-                "data": base64_image
-            }
-        })
+            
+            # image_file = genai.upload_file(img_buffer, mime_type="image/png")    
+            task_list.append({
+                "inline_data": {
+                    "mime_type":"image/png",
+                    "data": base64_image
+                }
+            })
+            task_list.append({"text": "\n\n"})
+
+        task_list.append({"text": text})
         task_list.append({"text": "\n\n"})
-
-    task_list.append({"text": text})
-    task_list.append({"text": "\n\n"})
-    task_list.append({"text": 'return in the format of the correct schema'})
+        task_list.append({"text": 'return in the format of the correct schema'})
 
     # google_model = genai.GenerativeModel(model)
     # print('Starting gemini request...')
@@ -116,10 +117,15 @@ def google_single_image_request(text, base64_image=False, model=False, temperatu
             "generationConfig": {
                 "response_mime_type": "application/json",
                 "temperature": temperature,
-                "response_schema": typed_dict_to_schema(response_format)
+                "response_schema": typed_dict_to_schema(response_format),
+                
             }
         }   
+        if limit_output:
+            payload["generationConfig"]["max_output_tokens"] = 1000
+        
         result = requests.post(url, headers=headers, data=json.dumps(payload))
+        
         result = json.loads(result.text)
         
         
@@ -135,7 +141,7 @@ def google_single_image_request(text, base64_image=False, model=False, temperatu
         # )
     except Exception as e:
         print(f"GPT request... (google, {model}) ERROR", str(e))
-        raise Exception(str(e))
+        raise Exception('Error in google_single_image_request: '+str(e))
 
     # print('Starting gemini request... Done')
 

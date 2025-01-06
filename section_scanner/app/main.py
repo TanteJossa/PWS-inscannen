@@ -29,8 +29,11 @@ from scan_module import (
     stack_answer_sections,
     transcribe_answer,
     scan_page,
-    grade_answer
+    grade_answer,
+    get_test_structure,
+    get_base64_student_result_pdf
 )
+import threading
 
 
 
@@ -54,6 +57,9 @@ def create_app():
      return "pong"
   
   return app
+
+concurrent_limit = 25
+request_semaphore = threading.Semaphore(concurrent_limit)
 
 app = Flask(__name__) #create_app()
 CORS(app, resources={r"/*": {"origins": "*"}})
@@ -114,6 +120,8 @@ def get_qr_section():
 
 @app.route("/scan_page", methods = ['GET', 'POST'])
 def scan_fullpage():
+    request_semaphore.acquire()
+
     try:
         start_time = time.time()
         if ("id" in request.json):
@@ -174,7 +182,11 @@ def scan_fullpage():
             "output": output,
         }
     except Exception as e:    
-        return {"error": str(e)}
+         return {"error": str(e)}
+    finally:
+        request_semaphore.release()
+    
+
 @app.route("/crop", methods = ['GET', 'POST'])
 def crop_page():
     try:
@@ -446,9 +458,11 @@ def link_answer_sections():
         #     image_id = get_random_id()
         #     image_ids.append(image_id)
         #     base64_to_png(image_string, input_dir+process_id+'/'+image_id+'.png')
-                
-        output_image = stack_answer_sections(process_id, image_strings)
-
+        if (len(image_strings) > 0):
+            output_image = stack_answer_sections(process_id, image_strings)
+        else:
+            output_image = ""
+        
         # output_image = png_to_base64(output_dir+process_id+'.png')
         
         # cleanup_files(process_id)
@@ -572,13 +586,17 @@ def grade_with_answer():
                 answer = "Geen antwoord gevonden"
                 
             request_text = f"""
-                Kijk deze toetsvraag van een leerling zo goed mogelijk na en geef korte feedback en het puntnummer bij elk punt. Geef ook een totale feedback met daarin een zo kort mogelijke uitleg over of iemand slodig is of het waarschijnlijk niet begrijpt. Spreek in de totale feedback de leerling aan en maximaal 1-2 zinnen. 
+                Kijk deze toetsvraag van een leerling zo goed mogelijk na en geef korte feedback en het puntnummer bij elk punt, point_index is 0 voor het eerste punt. Geef ook een totale feedback met daarin een zo kort mogelijke uitleg over of iemand slodig is of het waarschijnlijk niet begrijpt en misschien tip als je denkt dat iemand ergens HEEL veel aan heeft. Spreek in de totale feedback de leerling aan en maximaal 1-2 zinnen. 
+                Let op een feedback op een punt is 1 zin. en de totale feedback is maximaal 20-35 woorden. Spreek de leerling aan in de 2e persoon.
                 
                 Vraag: {question}
                 
                 Rubriek: {rubric}
                 
-                Antwoord: {answer}
+                <Begin Antwoord Leerling>
+                {answer}
+                
+                </Einde Antwoord Leerling>
                 
                 Houdt je aan de gegeven schema.
             """
@@ -607,6 +625,98 @@ def grade_with_answer():
     except Exception as e:    
         return {"error": str(e)}
 
+
+@app.route('/test-data', methods = ['GET', 'POST'])
+def get_test_data():
+    # try:
+    start_time = time.time()
+    
+    if (request.content_type != None and request.content_type == 'application/json'):
+        data = request.get_json(silent=True)
+    else:
+        data = request.args.to_dict()
+        print(data)
+    
+    if ("id" in data):
+        id = data.get("id")
+    else:
+        id = "No ID found"
+
         
+    if ("requestText" in data):
+        request_text = data.get("requestText")
+    else:
+        request_text = False
+
+    if ("testData" in data):
+        test_data = data.get("testData")
+    else:
+        test_data = False
+        
+    process_id = get_random_id()
+    # base64_to_png(image_string, input_dir+process_id+'.png')
+        
+    data = get_test_structure(process_id, request_text, test_data)
+
+    # cleanup_files(process_id)
+    end_time = time.time()
+
+    return {
+        "id": id,
+        "process_id": process_id,
+        "start_time": start_time,
+        "end_time": end_time,
+        "output": data
+    }
+    # except Exception as e:    
+        # return {"error": str(e)}       
+
+@app.route('/student-result-pdf', methods = ['GET', 'POST'])
+def get_result_pdf():
+    # try:
+    start_time = time.time()
+    
+    if (request.content_type != None and request.content_type == 'application/json'):
+        data = request.get_json(silent=True)
+    else:
+        data = request.args.to_dict()
+        print(data)
+    
+    if ("id" in data):
+        id = data.get("id")
+    else:
+        id = "No ID found"
+
+        
+    if ("studentResults" in data):
+        student_results = data.get("studentResults")
+    else:
+        student_results = False
+        
+    if ("addStudentFeedback" in data):
+        add_student_feedback = data.get("addStudentFeedback")
+    else:
+        add_student_feedback = False
+        
+    process_id = get_random_id()
+    # base64_to_png(image_string, input_dir+process_id+'.png')
+        
+    data = get_base64_student_result_pdf(process_id, student_results, add_student_feedback)
+
+    # cleanup_files(process_id)
+    end_time = time.time()
+
+    return {
+        "id": id,
+        "process_id": process_id,
+        "start_time": start_time,
+        "end_time": end_time,
+        "output": data
+    }
+    # except Exception as e:    
+        # return {"error": str(e)}       
+
+
+
 if __name__ == "__main__":
     app.run(debug=True, host="0.0.0.0", port=int(os.environ.get("PORT", 8080)))
