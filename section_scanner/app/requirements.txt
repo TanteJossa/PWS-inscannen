@@ -79,6 +79,7 @@ pydantic_core==2.27.1
 Pygments==2.18.0
 PyMySQL==1.1.1
 pyparsing==3.2.0
+pypiwin32==223
 python-dateutil==2.9.0.post0
 pywin32==308
 pyzbar==0.1.9
@@ -102,7 +103,7 @@ tqdm==4.67.0
 traitlets==5.14.3
 typing_extensions==4.12.2
 uritemplate==4.1.1
-urllib3==1.23
+urllib3==2.3.0
 uuid==1.30
 wcwidth==0.2.13
 Werkzeug==3.1.3
