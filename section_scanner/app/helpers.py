@@ -364,6 +364,100 @@ def get_black_square_data(image,  min_size=15):
     
     return rectangles, gray_img, contour_image
 
+def findSquares(binary_img):
+    """
+    Finds squares in a binary image.
+
+    Args:
+        binary_img: Input binary image as a NumPy array (0s and 255s).
+
+    Returns:
+        A list of square contours.
+    """
+    height, width = binary_img.shape
+    squares = []
+    visited_pixels = np.zeros_like(binary_img, dtype=bool)
+
+    for y in range(height):
+        for x in range(width):
+            if binary_img[y, x] == 1 and not visited_pixels[y, x]:
+                # Consider this as a potential top-left corner of a square
+                for size in range(5, min(height - y, width - x)):  # Minimum size of 5 to avoid noise
+                    # Calculate potential other corners
+                    top_right_x = x + size
+                    bottom_left_y = y + size
+                    bottom_right_x = x + size
+                    bottom_right_y = y + size
+                    # Check if potential corners exist within bounds and are white
+                    if (top_right_x < width and binary_img[y, top_right_x] == 1 and
+                        bottom_left_y < height and binary_img[bottom_left_y, x] == 1 and
+                        bottom_right_x < width and bottom_right_y < height and binary_img[bottom_right_y, bottom_right_x] == 1):
+
+                        # Verify the sides are mostly filled (allowing for connections)
+                        top_edge = binary_img[y, x : top_right_x + 1]
+                        bottom_edge = binary_img[bottom_left_y, x : bottom_right_x + 1]
+                        left_edge = binary_img[y : bottom_left_y + 1, x]
+                        right_edge = binary_img[y : bottom_right_y + 1, top_right_x]
+
+                        top_filled = np.sum(top_edge == 1) >= (size * 0.8)  # At least 80% filled
+                        bottom_filled = np.sum(bottom_edge == 1) >= (size * 0.8)
+                        left_filled = np.sum(left_edge == 1) >= (size * 0.8)
+                        right_filled = np.sum(right_edge == 1) >= (size * 0.8)
+
+                        if top_filled and bottom_filled and left_filled and right_filled:
+                            square_coords = [(x, y), (top_right_x, y), (top_right_x, bottom_right_y), (x, bottom_left_y)]
+                            squares.append(np.array([np.array(coord) for coord in square_coords]))
+
+                            # Mark the pixels of this square as visited to avoid duplicates
+                            for sy in range(y, bottom_right_y + 1):
+                                for sx in range(x, bottom_right_x + 1):
+                                    if 0 <= sy < height and 0 <= sx < width:
+                                        visited_pixels[sy, sx] = True
+                            break  # Move to the next potential top-left corner
+
+    return squares
+
+def removeContainedSquares(squares):
+    """
+    Removes squares that are fully contained within other squares.
+
+    Args:
+        squares: A list of square contours.
+
+    Returns:
+        A list of square contours with contained squares removed.
+    """
+    filtered_squares = []
+    n = len(squares)
+    is_contained = [False] * n
+
+    for i in range(n):
+        if is_contained[i]:
+            continue  # Skip if already marked as contained
+        for j in range(n):
+            if i == j:
+                continue
+
+            # Check if squares[i] is contained in squares[j]
+            all_points_inside = True
+            for point_array in squares[i]:  # Iterate over the rows (points)
+                pt = tuple(point_array) # Extract the point tuple
+                pt = tuple([int(round(pt[0]) ), int(round( pt[1] )) ])
+
+                result = cv2.pointPolygonTest(squares[j], pt, False)
+                if result  < 0:
+                    all_points_inside = False
+                    break
+
+            if all_points_inside:
+                is_contained[i] = True
+                break  # No need to check further for this square
+
+    for i in range(n):
+        if not is_contained[i]:
+            filtered_squares.append(squares[i])
+
+    return filtered_squares
 
 def stack_images_vertically(img1, img2):
 

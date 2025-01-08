@@ -1,4 +1,4 @@
-from PIL import Image, ImageEnhance, ImageFont, ImageDraw                                                           
+from PIL import Image, ImageEnhance, ImageFont, ImageFilter, ImageDraw                                                           
 import sys
 import os
 import copy
@@ -21,7 +21,9 @@ from helpers import (
     cv2_to_base64,
     base64_to_pillow,
     base64_to_cv2,
-    four_point_transform
+    four_point_transform,
+    findSquares,
+    removeContainedSquares
 )
 
 from gemini_wrapper import google_single_image_request
@@ -289,7 +291,7 @@ def sectionize(id,square_data, base64_image):
         if (index >= len(square_heights) - 1 ):
             continue
         
-        y = clamp(h_break - 7, 0, image.height - 1)
+        y = clamp(h_break - 20, 0, image.height - 1)
         next_y = clamp(square_heights[index+1] - 5, 0, image.height - 1)
         
         # min height and fix
@@ -396,69 +398,7 @@ class GoogleCheckboxSelection(typing.TypedDict ):
 
 
 def question_selector_info(id, base64_image, provider=False, model=False, scan_command_text=False, temperature=False):
-    img_pil = base64_to_pillow(base64_image)
-    img_np = base64_to_cv2(base64_image)
-    img_cv = cv2.cvtColor(np.array(img_pil), cv2.COLOR_RGB2BGR)
-    original_image_with_contours = img_cv.copy() # Keep a copy for drawing contours
 
-    gray_img = img_pil.convert('L')
-    arr_image = np.array(gray_img.copy())
-    binary_image = (arr_image < 150).astype(np.uint8)  # Assuming black is below 150
-    arr_binary_image = np.array(binary_image.copy())
-
-    # Find contours in the binary image
-    contours, _ = cv2.findContours(binary_image, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
-    contour_image = Image.fromarray((arr_binary_image * 255).astype(np.uint8)).convert('RGB') #img_pil.copy()
-    
-    fill_percentages = []
-    checkbox_counter = 1
-
-    # Iterate over contours
-    for contour in contours:
-        # Get the bounding box for each contour
-        x, y, w, h = cv2.boundingRect(contour)
-        linewidth = int(w / 6)
-        x, x2 = x+linewidth, x+w-linewidth-1
-        y, y2 = y+linewidth, y+h-linewidth-1
-        # oly select filled boxes on the right
-        # if (x > int(1.9/21 * img_pil.width)):
-        #     continue
-        
-
-        # only if black squares
-        countour_crop = arr_binary_image[ y:y2, x:x2]
-        average_color = np.sum(arr_binary_image[ y:y2, x:x2]) / countour_crop.size
-        min_size = 10
-        
-        # Check if the bounding box is a square and larger than 15x15
-        if w >= min_size and h >= min_size and abs(w - h) < min_size / 3:  # Allow a small tolerance for non-perfect squares
-            # Append the rectangle properties: (start_height, height, x_min, x_max)
-            draw = ImageDraw.Draw(contour_image)
-            contour_points = [(x, y), (x2, y), (x2, y2), (x, y2)]
-
-            draw.polygon(contour_points, outline=(0, 255, 0), width=1)
-
-            fill_percentages.append({
-                "percentage_filled": round(average_color, 3),
-                "height": y,
-            })
-            checkbox_counter += 1
-            
-    # contour_image.show()
-    # cv2.waitKey(0)
-    # cv2.destroyAllWindows()    
-
-    fill_percentages.sort(key=lambda x: x["height"])
-    fill_percentages_dict = {}
-    for (index, x) in enumerate(fill_percentages):
-        fill_percentages_dict[str(index+1)] = x["percentage_filled"] 
-    
-    most_certain_checked_number = max(fill_percentages_dict, key=fill_percentages_dict.get)
-    
-    return {
-        "most_certain_checked_number": most_certain_checked_number,
-        "checkboxes": fill_percentages_dict,
-    }
 
     if not provider:
         provider = "openai"
