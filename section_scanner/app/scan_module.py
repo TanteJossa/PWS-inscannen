@@ -863,7 +863,8 @@ from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
 from reportlab.lib import colors
 from io import BytesIO
 import base64
-    
+from reportlab.lib.units import inch
+
 def get_base64_student_result_pdf(process_id=False, student_results=[], add_student_feedback=False):
     buffer = BytesIO()
     doc = SimpleDocTemplate(
@@ -1026,3 +1027,118 @@ def get_base64_student_result_pdf(process_id=False, student_results=[], add_stud
     buffer.close()
     return pdf_base64
 
+
+def get_base64_test_pdf(process_id=False, test_data=False):
+    buffer = BytesIO()
+    doc = SimpleDocTemplate(
+        buffer,
+        pagesize=A4,
+        leftMargin=0.5 * inch,
+        rightMargin=0.5 * inch,
+        topMargin=0.5 * inch,
+        bottomMargin=0.5 * inch,
+        author="ToetsGenerator",
+        title="Toets",
+        subject="Testgegenereerde toets"
+    )
+    styles = getSampleStyleSheet()
+
+    normal_style = styles['Normal']
+    normal_bold_style = ParagraphStyle(
+        name='NormalBold',
+        parent=styles['Normal'],
+        fontName='Helvetica-Bold',
+    )
+
+    story = []
+
+    if test_data:
+        settings = test_data.get('settings', {})
+        test_name = settings.get('test_name', 'Naamloze Toets')
+        show_answers = settings.get('show_answers', True)  # Default to True if not set
+        show_targets = settings.get('show_targets', True)  # Default to True if not set
+
+        story.append(Paragraph(f"<b>Toets: {test_name}</b>", styles['h1']))
+        story.append(Spacer(1, 12))
+
+        # Targets Section
+        targets = test_data.get('targets', [])
+        if targets and show_targets:
+            story.append(Paragraph("<b>Leerdoelen</b>", styles['h2']))
+            target_table_data = []
+            target_header_row = ["Leerdoel", "Uitleg"]
+            target_table_data.append([Paragraph(col, normal_bold_style) for col in target_header_row])
+            for target in targets:
+                target_table_data.append([
+                    Paragraph(target.get('target_name', ''), normal_style),
+                    Paragraph(target.get('explanation', ''), normal_style)
+                ])
+            col_widths = [1.5 * inch, None]  # Smaller first column
+            target_table = Table(target_table_data, colWidths=col_widths)
+            target_table.setStyle(TableStyle([
+                ('BACKGROUND', (0, 0), (-1, 0), colors.beige),
+                ('TEXTCOLOR', (0, 0), (-1, 0), colors.black),
+                ('ALIGN', (0, 0), (-1, -1), 'LEFT'),
+                ('FONTNAME', (0, 0), (-1, 0), 'Helvetica-Bold'),
+                ('BOTTOMPADDING', (0, 0), (-1, 0), 6),
+                ('GRID', (0, 0), (-1, -1), 1, colors.black),
+                ('LEFTPADDING', (0, 0), (-1, -1), 5),
+                ('RIGHTPADDING', (0, 0), (-1, -1), 5),
+            ]))
+            story.append(target_table)
+            story.append(Spacer(1, 12))
+
+        # Questions Section
+        questions = test_data.get('questions', [])
+        if questions:
+            story.append(Paragraph("<b>Vragen</b>", styles['h2']))
+            for i, question in enumerate(questions):
+                question_elements = []
+                if question.get('question_context'):
+                    question_elements.append(Paragraph(question.get('question_context', ''), normal_style))
+                    question_elements.append(Spacer(1, 6))
+                question_elements.append(Paragraph(f"<b>Vraag {question.get('question_number', '')}:</b> {question.get('question_text', '')}", normal_bold_style))
+                question_elements.append(Spacer(1, 6))
+
+                points = question.get('points', [])
+                if show_answers and points:
+                    point_table_data = []
+                    point_header_row = ["Onderdeel", "Uitleg"]
+                    point_table_data.append([Paragraph(col, normal_bold_style) for col in point_header_row])
+                    for point in points:
+                        point_table_data.append([
+                            Paragraph(point.get('point_name', ''), normal_style),
+                            Paragraph(point.get('point_text', ''), normal_style)
+                        ])
+                    col_widths = [1 * inch, None]  # Smaller first column
+                    point_table = Table(point_table_data, colWidths=col_widths)
+                    point_table.setStyle(TableStyle([
+                        ('BACKGROUND', (0, 0), (-1, 0), colors.lightgrey),
+                        ('TEXTCOLOR', (0, 0), (-1, 0), colors.whitesmoke),
+                        ('ALIGN', (0, 0), (-1, -1), 'LEFT'),
+                        ('FONTNAME', (0, 0), (-1, 0), 'Helvetica-Bold'),
+                        ('BOTTOMPADDING', (0, 0), (-1, 0), 6),
+                        ('GRID', (0, 0), (-1, -1), 1, colors.black),
+                        ('LEFTPADDING', (0, 0), (-1, -1), 5),
+                        ('RIGHTPADDING', (0, 0), (-1, -1), 5),
+                    ]))
+                    question_elements.append(point_table)
+
+                story.append(KeepTogether(question_elements))
+
+                if i < len(questions) - 1:  # Add a separator if it's not the last question
+                    story.append(Spacer(1, 18))
+                    story.append(Paragraph("", styles['Normal'])) # Simple visual separator
+                    story.append(Spacer(1, 18))
+
+        else:
+            story.append(Paragraph("Geen vragen gevonden voor deze toets.", styles['Italic']))
+    else:
+        story.append(Paragraph("Geen testgegevens beschikbaar.", styles['Italic']))
+
+    doc.build(story)
+
+    pdf_value = buffer.getvalue()
+    pdf_base64 = base64.b64encode(pdf_value).decode('utf-8')
+    buffer.close()
+    return pdf_base64

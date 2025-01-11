@@ -33,7 +33,8 @@ from scan_module import (
     get_test_structure,
     get_base64_student_result_pdf,
     get_gpt_test,
-    get_gpt_test_question
+    get_gpt_test_question,
+    get_base64_test_pdf
 )
 import threading
 
@@ -797,6 +798,46 @@ def get_result_pdf():
     # except Exception as e:    
         # return {"error": str(e)}       
 
+@app.route('/test-pdf', methods = ['GET', 'POST'])
+def get_test_pdf():
+    # try:
+    start_time = time.time()
+    
+    if (request.content_type != None and request.content_type == 'application/json'):
+        data = request.get_json(silent=True)
+    else:
+        data = request.args.to_dict()
+        print(data)
+    
+    if ("id" in data):
+        id = data.get("id")
+    else:
+        id = "No ID found"
+
+        
+    if ("testData" in data):
+        test_data = data.get("testData")
+    else:
+        test_data = False
+        
+        
+    process_id = get_random_id()
+    # base64_to_png(image_string, input_dir+process_id+'.png')
+        
+    data = get_base64_test_pdf(process_id, test_data)
+
+    # cleanup_files(process_id)
+    end_time = time.time()
+
+    return {
+        "id": id,
+        "process_id": process_id,
+        "start_time": start_time,
+        "end_time": end_time,
+        "output": data
+    }
+    # except Exception as e:    
+        # return {"error": str(e)}       
 
 
 if __name__ == "__main__":
