@@ -103,6 +103,7 @@ def google_single_image_request(text, base64_image=False, model=False, temperatu
 
     # google_model = genai.GenerativeModel(model)
     # print('Starting gemini request...')
+    
     try:
         url = f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent?key={API_KEY}"
         headers = {

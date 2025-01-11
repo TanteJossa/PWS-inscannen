@@ -783,6 +783,7 @@ class TestQuestionPoint(typing.TypedDict):
 class TestQuestion(typing.TypedDict):
     question_number: str
     question_text: str
+    question_context: str
     points: list[TestQuestionPoint]
     is_draw_question: bool
     
@@ -833,8 +834,29 @@ def get_test_structure(process_id=False, request_text=False, test_data=False):
     task_list.append({"text": "\n\n Houd je strak aan de format/schema, zorg dat elk veld een kloppende waarde heeft."})
     result = single_request(provider, model, schema=TestData, messages=task_list, limit_output=False)
     return result
+
+def get_gpt_test(process_id=False, request_text=False):
+    provider = 'google'
+    model = "gemini-exp-1206"
     
     
+    if not request_text:
+        request_text = """Maak een makkelijke toets met 3 vragen"""
+
+    result = single_request(provider, model, schema=TestData, text=request_text, limit_output=False)
+    return result
+
+def get_gpt_test_question(process_id=False, request_text=False):
+    provider = 'google'
+    model = "gemini-exp-1206"
+    
+    
+    if not request_text:
+        request_text = """Maak een makkelijke toets met 3 vragen"""
+
+    result = single_request(provider, model, schema=TestQuestion, text=request_text, limit_output=False)
+    return result
+
 from reportlab.lib.pagesizes import letter, A4, landscape
 from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, Table, TableStyle, PageBreak, KeepTogether
 from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle

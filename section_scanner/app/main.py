@@ -31,7 +31,9 @@ from scan_module import (
     scan_page,
     grade_answer,
     get_test_structure,
-    get_base64_student_result_pdf
+    get_base64_student_result_pdf,
+    get_gpt_test,
+    get_gpt_test_question
 )
 import threading
 
@@ -63,6 +65,9 @@ request_semaphore = threading.Semaphore(concurrent_limit)
 
 app = Flask(__name__) #create_app()
 CORS(app, resources={r"/*": {"origins": "*"}})
+# CORS(app)
+# app.config['CORS_HEADERS'] = 'Content-Type'
+
 def cleanup_files(id):
     # input
     try:
@@ -91,6 +96,7 @@ def hello_world():
     return f"Hello {name}!"
 
 @app.route("/create_qr_section", methods = ['GET', 'POST'])
+
 def get_qr_section():
     try:
         start_time = time.time()
@@ -670,6 +676,81 @@ def get_test_data():
     }
     # except Exception as e:    
         # return {"error": str(e)}       
+
+@app.route('/gpt-test', methods = ['GET', 'POST'])
+def generate_gpt_test_data():
+    # try:
+    start_time = time.time()
+    
+    if (request.content_type != None and request.content_type == 'application/json'):
+        data = request.get_json(silent=True)
+    else:
+        data = request.args.to_dict()
+        print(data)
+    
+    if ("id" in data):
+        id = data.get("id")
+    else:
+        id = "No ID found"
+
+        
+    if ("requestText" in data):
+        request_text = data.get("requestText")
+    else:
+        request_text = False
+        
+    process_id = get_random_id()
+    # base64_to_png(image_string, input_dir+process_id+'.png')
+        
+    data = get_gpt_test(process_id, request_text)
+
+    # cleanup_files(process_id)
+    end_time = time.time()
+
+    return {
+        "id": id,
+        "process_id": process_id,
+        "start_time": start_time,
+        "end_time": end_time,
+        "output": data
+    }
+@app.route('/gpt-test-question', methods = ['GET', 'POST'])
+def get_test_question_data():
+    # try:
+    start_time = time.time()
+    
+    if (request.content_type != None and request.content_type == 'application/json'):
+        data = request.get_json(silent=True)
+    else:
+        data = request.args.to_dict()
+        print(data)
+    
+    if ("id" in data):
+        id = data.get("id")
+    else:
+        id = "No ID found"
+
+        
+    if ("requestText" in data):
+        request_text = data.get("requestText")
+    else:
+        request_text = False
+        
+    process_id = get_random_id()
+    # base64_to_png(image_string, input_dir+process_id+'.png')
+        
+    data = get_gpt_test_question(process_id, request_text)
+
+    # cleanup_files(process_id)
+    end_time = time.time()
+
+    return {
+        "id": id,
+        "process_id": process_id,
+        "start_time": start_time,
+        "end_time": end_time,
+        "output": data
+    }
 
 @app.route('/student-result-pdf', methods = ['GET', 'POST'])
 def get_result_pdf():
