@@ -1027,118 +1027,109 @@ def get_base64_student_result_pdf(process_id=False, student_results=[], add_stud
     buffer.close()
     return pdf_base64
 
+import pdfkit
+import base64
+import markdown
+from markdown_katex import KatexExtension
+import re
+
+def convert_math_delimiters_markdown(text):
+    """Converts inline and display math delimiters to Markdown-style fenced blocks."""
+    def replace_inline(match):
+        return f"$`{match.group(1)}`$"  # Add extra spaces for markdown
+
+    def replace_display(match):
+        return f"\n```math\n{match.group(1)}\n```\n" # Add extra spaces for markdown
+
+    text = re.sub(r'\$\$([^\$]+?)\$\$', replace_display, text)
+    text = re.sub(r'\$([^\$]+?)\$', replace_inline, text)
+    return text
 
 def get_base64_test_pdf(process_id=False, test_data=False):
-    buffer = BytesIO()
-    doc = SimpleDocTemplate(
-        buffer,
-        pagesize=A4,
-        leftMargin=0.5 * inch,
-        rightMargin=0.5 * inch,
-        topMargin=0.5 * inch,
-        bottomMargin=0.5 * inch,
-        author="ToetsGenerator",
-        title="Toets",
-        subject="Testgegenereerde toets"
+    md = markdown.Markdown(
+        extensions=[KatexExtension(), 'tables'],
+        extension_configs={'markdown_katex': {'insert_as_tag': True, 'no_inline_svg': True,}}
     )
-    styles = getSampleStyleSheet()
-
-    normal_style = styles['Normal']
-    normal_bold_style = ParagraphStyle(
-        name='NormalBold',
-        parent=styles['Normal'],
-        fontName='Helvetica-Bold',
-    )
-
-    story = []
+    html_content = """
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Toets</title>
+        <style>
+            body { font-family: sans-serif; }
+            h1 { text-align: center; }
+            h2 { border-bottom: 1px solid #000; padding-bottom: 5px; }
+            .question { margin-bottom: 20px; page-break-inside: avoid; } /* Added page-break-inside: avoid; */
+            .question-context { font-style: italic; margin-bottom: 10px; }
+            .points-table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+            .points-table th, .points-table td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+            .points-table th { background-color: #f0f0f0; }
+            .target-table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+            .target-table th, .target-table td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+            .target-table th { background-color: #e0e0e0; }
+            .page-break { page-break-after: always; }
+            pre { background-color: #f4f4f4; padding: 10px; border: 1px solid #ddd; overflow-x: auto; }
+        </style>
+    </head>
+    <body>
+    """
 
     if test_data:
         settings = test_data.get('settings', {})
         test_name = settings.get('test_name', 'Naamloze Toets')
-        show_answers = settings.get('show_answers', True)  # Default to True if not set
-        show_targets = settings.get('show_targets', True)  # Default to True if not set
+        show_answers = settings.get('show_answers', True)
+        show_targets = settings.get('show_targets', True)
 
-        story.append(Paragraph(f"<b>Toets: {test_name}</b>", styles['h1']))
-        story.append(Spacer(1, 12))
+        html_content += f"<h1>{test_name}</h1>"
 
         # Targets Section
         targets = test_data.get('targets', [])
         if targets and show_targets:
-            story.append(Paragraph("<b>Leerdoelen</b>", styles['h2']))
-            target_table_data = []
-            target_header_row = ["Leerdoel", "Uitleg"]
-            target_table_data.append([Paragraph(col, normal_bold_style) for col in target_header_row])
+            html_content += "<h2>Leerdoelen</h2>"
+            html_content += "<table class='target-table'>"
+            html_content += "<thead><tr><th>Leerdoel</th><th>Uitleg</th></tr></thead><tbody>"
             for target in targets:
-                target_table_data.append([
-                    Paragraph(target.get('target_name', ''), normal_style),
-                    Paragraph(target.get('explanation', ''), normal_style)
-                ])
-            col_widths = [1.5 * inch, None]  # Smaller first column
-            target_table = Table(target_table_data, colWidths=col_widths)
-            target_table.setStyle(TableStyle([
-                ('BACKGROUND', (0, 0), (-1, 0), colors.beige),
-                ('TEXTCOLOR', (0, 0), (-1, 0), colors.black),
-                ('ALIGN', (0, 0), (-1, -1), 'LEFT'),
-                ('FONTNAME', (0, 0), (-1, 0), 'Helvetica-Bold'),
-                ('BOTTOMPADDING', (0, 0), (-1, 0), 6),
-                ('GRID', (0, 0), (-1, -1), 1, colors.black),
-                ('LEFTPADDING', (0, 0), (-1, -1), 5),
-                ('RIGHTPADDING', (0, 0), (-1, -1), 5),
-            ]))
-            story.append(target_table)
-            story.append(Spacer(1, 12))
+                target_name_md = convert_math_delimiters_markdown(target.get('target_name', ''))
+                target_explanation_md = convert_math_delimiters_markdown(target.get('explanation', ''))
+                html_content += f"<tr><td>{md.convert(target_name_md)}</td><td>{md.convert(target_explanation_md)}</td></tr>"
+            html_content += "</tbody></table>"
 
         # Questions Section
         questions = test_data.get('questions', [])
         if questions:
-            story.append(Paragraph("<b>Vragen</b>", styles['h2']))
+            html_content += "<h2>Vragen</h2>"
             for i, question in enumerate(questions):
-                question_elements = []
+                html_content += "<div class='question'>"
                 if question.get('question_context'):
-                    question_elements.append(Paragraph(question.get('question_context', ''), normal_style))
-                    question_elements.append(Spacer(1, 6))
-                question_elements.append(Paragraph(f"<b>Vraag {question.get('question_number', '')}:</b> {question.get('question_text', '')}", normal_bold_style))
-                question_elements.append(Spacer(1, 6))
+                    question_context_md = convert_math_delimiters_markdown(question.get('question_context', ''))
+                    html_content += f"<div class='question-context'>{md.convert(question_context_md)}</div>"
+                question_text_md = convert_math_delimiters_markdown(question.get('question_text', ''))
+                html_content += f"<strong>Vraag {question.get('question_number', '')}:</strong> {md.convert(question_text_md)}"
 
                 points = question.get('points', [])
                 if show_answers and points:
-                    point_table_data = []
-                    point_header_row = ["Onderdeel", "Uitleg"]
-                    point_table_data.append([Paragraph(col, normal_bold_style) for col in point_header_row])
+                    html_content += "<table class='points-table'>"
+                    html_content += "<thead><tr><th>Onderdeel</th><th>Uitleg</th></tr></thead><tbody>"
                     for point in points:
-                        point_table_data.append([
-                            Paragraph(point.get('point_name', ''), normal_style),
-                            Paragraph(point.get('point_text', ''), normal_style)
-                        ])
-                    col_widths = [1 * inch, None]  # Smaller first column
-                    point_table = Table(point_table_data, colWidths=col_widths)
-                    point_table.setStyle(TableStyle([
-                        ('BACKGROUND', (0, 0), (-1, 0), colors.lightgrey),
-                        ('TEXTCOLOR', (0, 0), (-1, 0), colors.whitesmoke),
-                        ('ALIGN', (0, 0), (-1, -1), 'LEFT'),
-                        ('FONTNAME', (0, 0), (-1, 0), 'Helvetica-Bold'),
-                        ('BOTTOMPADDING', (0, 0), (-1, 0), 6),
-                        ('GRID', (0, 0), (-1, -1), 1, colors.black),
-                        ('LEFTPADDING', (0, 0), (-1, -1), 5),
-                        ('RIGHTPADDING', (0, 0), (-1, -1), 5),
-                    ]))
-                    question_elements.append(point_table)
-
-                story.append(KeepTogether(question_elements))
-
-                if i < len(questions) - 1:  # Add a separator if it's not the last question
-                    story.append(Spacer(1, 18))
-                    story.append(Paragraph("", styles['Normal'])) # Simple visual separator
-                    story.append(Spacer(1, 18))
+                        point_name_md = convert_math_delimiters_markdown(point.get('point_name', ''))
+                        point_text_md = convert_math_delimiters_markdown(point.get('point_text', ''))
+                        html_content += f"<tr><td>{md.convert(point_name_md)}</td><td>{md.convert(point_text_md)}</td></tr>"
+                    html_content += "</tbody></table>"
+                html_content += "</div>"
+                if i < len(questions) - 1:
+                    html_content += "<hr>"
 
         else:
-            story.append(Paragraph("Geen vragen gevonden voor deze toets.", styles['Italic']))
+            html_content += "<p>Geen vragen gevonden voor deze toets.</p>"
     else:
-        story.append(Paragraph("Geen testgegevens beschikbaar.", styles['Italic']))
+        html_content += "<p>Geen testgegevens beschikbaar.</p>"
 
-    doc.build(story)
+    html_content += """
+    </body>
+    </html>
+    """
 
-    pdf_value = buffer.getvalue()
-    pdf_base64 = base64.b64encode(pdf_value).decode('utf-8')
-    buffer.close()
+    pdf_bytes = pdfkit.from_string(html_content, False)
+    pdf_base64 = base64.b64encode(pdf_bytes).decode('utf-8')
     return pdf_base64
