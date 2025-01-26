@@ -6,14 +6,21 @@ import numpy as np
 import time
 import os
 import warnings
+import pathlib
+import platform
 
 # Suppress FutureWarnings temporarily
 warnings.filterwarnings("ignore", category=FutureWarning)
 
 EXPECTED_NUMBER_OF_CHECKBOXES: int
 
+if platform.system() == 'Windows':
+    pathlib.PosixPath = pathlib.WindowsPath
+else:
+    pathlib.WindowsPath = pathlib.PosixPath
+
 # Load the model globally
-MODEL_WEIGHTS = 'yolov5/best.pt'
+MODEL_WEIGHTS = pathlib.Path('yolov5/best.pt')
 DEVICE = 'cuda' if torch.cuda.is_available() else 'cpu'
 model = torch.hub.load('ultralytics/yolov5', 'custom', path=MODEL_WEIGHTS, force_reload=False)
 model.to(DEVICE)

@@ -425,7 +425,7 @@ def sectionize(id,square_data, base64_image):
     
 #     if(provider == 'google'):
 #         schema = GoogleCheckboxSelection
-#     elif(provider == 'openai'):
+#     elif(provider in ['openai', 'deepseek']):
 #         schema = CheckboxSelection
         
 #     result = single_request(provider=provider,model=model, temperature=temperature, schema=schema, image=base64_image, text=scan_command_text)
@@ -558,7 +558,7 @@ voer deze opdracht zo goed mogelijk uit. Het is HEEL belangrijk dat je je aan he
             Het direct transcriberen van de het antwoord is het allerbelangrijkste, deze extra toevoegen zijn er alleen om een context te creeëren 
         """    
     
-    if (provider == 'openai'):
+    if (provider in ['openai', 'deepseek']):
         schema = QuestionAnswer
     elif (provider == 'google'):
         schema = GoogleQuestionAnswer
@@ -766,7 +766,7 @@ def grade_answer(process_id, request_text=False, student_image=False, provider=F
     if not request_text:
         request_text = """kijk na"""
         
-    if (provider == 'openai'):
+    if (provider in ['openai', 'deepseek']):
         schema = GradeResult
     elif (provider == 'google'):
         schema = GoogleGradeResult
@@ -780,7 +780,6 @@ def grade_answer(process_id, request_text=False, student_image=False, provider=F
 class TestQuestionPoint(typing.TypedDict):
     point_text: str
     point_name: str
-    has_point: bool
     point_index: int
     point_weight: int
     target_name: str
@@ -788,7 +787,6 @@ class TestQuestionPoint(typing.TypedDict):
 class OpenAiTestQuestionPoint(BaseModel):
     point_text: str
     point_name: str
-    has_point: bool
     point_index: int
     point_weight: int
     target_name: str

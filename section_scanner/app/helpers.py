@@ -13,6 +13,7 @@ from collections import defaultdict
 from typing import Dict, Any
 import hashlib
 import json
+import re 
 
 ppi = 200
 inch_per_cm = 0.393701
@@ -126,6 +127,23 @@ def base64_to_png(base64_string, output_path):
 def get_random_id():
     return str(uuid.uuid4())
 
+def json_from_string(s:str):
+    # Find the first '{' and last '}' in the string
+    first_brace = s.find('{')
+    last_brace = s.rfind('}')
+    
+    # Check if braces exist and are correctly ordered
+    if first_brace == -1 or last_brace == -1 or first_brace >= last_brace:
+        return None
+    
+    # Extract the substring between the first '{' and last '}'
+    json_str = s[first_brace : last_brace + 1]
+    
+    try:
+        # Parse the JSON string
+        return json.loads(json_str)
+    except json.JSONDecodeError:
+        return None
 
 
 def clamp(n, min, max): 

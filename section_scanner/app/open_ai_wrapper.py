@@ -1,4 +1,5 @@
 from openai import OpenAI
+import openai
 import base64
 import tiktoken
 import json
@@ -10,7 +11,9 @@ import shutil
 import time
 import uuid
 from pydantic import BaseModel
+import re
 
+from helpers import json_from_string
 
 
 def num_tokens_from_messages(messages, model="gpt-3.5-turbo-0613"):
@@ -65,7 +68,18 @@ def get_response_json(response, gpt_model, start_time, end_time):
     
     dict_response = response.to_dict()
     choice_response = dict_response["choices"][0]
-    result_data = choice_response["message"]["parsed"]
+    if (choice_response["message"]["parsed"]):
+        result_data = choice_response["message"]["parsed"]
+    else:
+        try:
+            json_result = json_from_string(choice_response["message"]["content"])
+            if (json_result):
+                result_data = json_result
+            else:
+                raise Exception("No json result found")
+        except:
+            result_data = choice_response["message"]["content"]
+                
     request_data = dict_response["usage"]
 
     output_json = {
@@ -101,7 +115,37 @@ def openai_single_request(messages, response_format=False, model = False, provid
         client = get_openai_client()
     elif provider == "deepseek":
         client = get_deepseek_client()
-    
+        
+        # Generate schema dictionary
+        schema_dict = response_format.model_json_schema()
+
+        # Convert to JSON string
+        json_schema_str = json.dumps(schema_dict, indent=2)
+        messages.append({
+            "role": "user",
+            "content": [
+                {
+                    "type": "text",
+                    "text": "Het JSON schema is: \n"+json_schema_str
+                },
+            ]
+        })
+        response_format = {"type": "json_object"}
+        
+        if model == 'deepseek-reasoner':
+            all_text = ""
+            for message in messages:
+                for sub_message in message["content"]:
+                    if (sub_message["type"] == "text"):
+                        all_text += sub_message["text"] + '\n'
+            messages = [{
+                "role": "user",
+                "content": [{
+                    "type": "text",
+                    "text": all_text
+                }]
+            }]
+            response_format = openai.NOT_GIVEN
     start_time = time.time()
 
     if model in ['o1-mini', 'o1-preview']:
@@ -114,7 +158,7 @@ def openai_single_request(messages, response_format=False, model = False, provid
             messages=messages,
             response_format=response_format,
             # max_tokens=30_000, #test image was 15k tokens
-            timeout=25
+            timeout=60
         )
     except Exception as e:
         print(f"GPT request... ({provider}, {model}) ERROR", str(e))
@@ -123,7 +167,7 @@ def openai_single_request(messages, response_format=False, model = False, provid
 
     end_time = time.time()
 
-
+    print(response.to_dict())
     reponse_json = get_response_json(response, model, start_time, end_time)
 
     return reponse_json
