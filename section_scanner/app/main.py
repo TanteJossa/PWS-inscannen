@@ -1,3 +1,4 @@
+import json
 import os
 import time
 import shutil
@@ -61,7 +62,7 @@ def create_app():
   
   return app
 
-concurrent_limit = 25
+concurrent_limit = 30
 request_semaphore = threading.Semaphore(concurrent_limit)
 
 app = Flask(__name__) #create_app()
@@ -412,25 +413,33 @@ def question_section_from_question_selector():
             id = request.json.get("id")
         else:
             id = "No ID found"
-        if ("provider" in request.json):
-            provider = request.json.get("provider")
+            
+        if ("base64Images" in request.json):
+            image_strings = json.loads(request.json.get("base64Images"))
         else:
-            provider = False
-        if ("model" in request.json):
-            model = request.json.get("model")
+            image_strings = []
+            
+        if ("checkbox_count" in request.json):
+            checkbox_count = json.loads(request.json.get("checkbox_count"))
         else:
-            model = False
+            checkbox_count = 7
+            
+        # if ("provider" in request.json):
+        #     provider = request.json.get("provider")
+        # else:
+        #     provider = False
+        # if ("model" in request.json):
+        #     model = request.json.get("model")
+        # else:
+        #     model = False
             
             
         process_id = get_random_id()
-        image_string = request.json.get("Base64Image")
         # base64_to_png(image_string, input_dir+process_id+'.png')
-                
         data = question_selector_info(
             process_id, 
-            image_string,
-            provider=provider,
-            model=model
+            image_strings,
+            checkbox_count=checkbox_count
         )
 
         # cleanup_files(process_id)
@@ -699,11 +708,18 @@ def generate_gpt_test_data():
         request_text = data.get("requestText")
     else:
         request_text = False
-        
+    if ("provider" in data):
+        provider = data.get("provider")
+    else:
+        provider = False
+    if ("model" in data):
+        model = data.get("model")
+    else:
+        model = False
     process_id = get_random_id()
     # base64_to_png(image_string, input_dir+process_id+'.png')
         
-    data = get_gpt_test(process_id, request_text)
+    data = get_gpt_test(process_id, request_text, provider,model)
 
     # cleanup_files(process_id)
     end_time = time.time()
@@ -731,6 +747,14 @@ def get_test_question_data():
     else:
         id = "No ID found"
 
+    if ("provider" in data):
+        provider = data.get("provider")
+    else:
+        provider = False
+    if ("model" in data):
+        model = data.get("model")
+    else:
+        model = False
         
     if ("requestText" in data):
         request_text = data.get("requestText")
@@ -740,7 +764,7 @@ def get_test_question_data():
     process_id = get_random_id()
     # base64_to_png(image_string, input_dir+process_id+'.png')
         
-    data = get_gpt_test_question(process_id, request_text)
+    data = get_gpt_test_question(process_id, request_text, provider, model)
 
     # cleanup_files(process_id)
     end_time = time.time()

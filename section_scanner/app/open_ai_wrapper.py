@@ -43,7 +43,7 @@ def copy_image(image_path, target_path):
 
 
 
-def get_client():
+def get_openai_client():
     with open("creds/openaikey.json", "r") as f:
         openai_key = json.load(f)["key2"]
     
@@ -51,6 +51,15 @@ def get_client():
     openai_client = OpenAI(api_key=openai_key)
     
     return openai_client
+
+def get_deepseek_client():
+    with open("creds/deepseek.json", "r") as f:
+        deepseek_key = json.load(f)["key"]
+    
+
+    deepseek_client = OpenAI(api_key=deepseek_key,base_url="https://api.deepseek.com")
+    
+    return deepseek_client
 
 def get_response_json(response, gpt_model, start_time, end_time):
     
@@ -78,7 +87,7 @@ def get_response_json(response, gpt_model, start_time, end_time):
 class DefaultOpenAiSchema(BaseModel):
     result: str
 
-def openai_single_request(messages, response_format=False, model = False, temperature=False):
+def openai_single_request(messages, response_format=False, model = False, provider="openai", temperature=False):
     if (not model):
         model = "gpt-4o-mini"
         
@@ -88,7 +97,10 @@ def openai_single_request(messages, response_format=False, model = False, temper
     if not response_format:
         response_format = DefaultOpenAiSchema
     
-    openai_client = get_client()
+    if provider == "openai":
+        client = get_openai_client()
+    elif provider == "deepseek":
+        client = get_deepseek_client()
     
     start_time = time.time()
 
@@ -96,16 +108,16 @@ def openai_single_request(messages, response_format=False, model = False, temper
         temperature = 1
     
     try:
-        response = openai_client.beta.chat.completions.parse(
+        response = client.beta.chat.completions.parse(
             model=model,
             temperature=temperature,
             messages=messages,
             response_format=response_format,
             # max_tokens=30_000, #test image was 15k tokens
-            timeout=14
+            timeout=25
         )
     except Exception as e:
-        print(f"GPT request... (openai, {model}) ERROR", str(e))
+        print(f"GPT request... ({provider}, {model}) ERROR", str(e))
         raise Exception(str(e))
         return False
 
@@ -115,97 +127,3 @@ def openai_single_request(messages, response_format=False, model = False, temper
     reponse_json = get_response_json(response, model, start_time, end_time)
 
     return reponse_json
-
-# def batch_request(api_requests):
-#     openai_client = get_client()
-    
-#     gpt_model = "gpt-4o-mini"
-
-#     request_id = uuid.uuid4()
-
-#     start_time = time.time()
-
-#     print("GPT request... ")
-#     request_data = []
-    
-#     for (i, api_request) in enumerate(api_requests):
-#         request_data.append({
-#             "custom_id": "request-"+i, 
-#             "method": "POST", 
-#             "url": "/v1/chat/completions", 
-#             "body": api_request
-#         })
-    
-    
-#     with open("batchinput.jsonl", "w") as f:
-#         f.write(request_data)
-    
-#     input_file = openai_client.files.create(
-#         file=open("batchinput.jsonl", "rb"),
-#         purpose="batch"
-#     )
-    
-#     try:
-#         batch_input_file_id = input_file.id
-
-#         batch_data = openai_client.batches.create(
-#             input_file_id=batch_input_file_id,
-#             endpoint="/v1/chat/completions",
-#             completion_window="h",
-#             metadata={
-#                 "description": "nightly eval job"
-#             }
-#         )
-#     except:
-#         print("GPT request... ERROR")
-#         return False
-    
-#     with open('./batch/'+request_id+'.json', 'w') as f:
-#         f.write(batch_data)
-    
-#     print("GPT request... Done")
-
-#     end_time = time.time()
-
-#     # # from pprint import pprint
-#     # # pprint(response)
-#     # json_output_path = current_path + r"/single_request_json_output"
-
-
-#     # try:
-#     #     os.makedirs(json_output_path)
-#     # except:
-#     #     pass
-
-#     # student_json_output_path = json_output_path + "/"
-#     # # + student + "/sections" 
-#     # try:
-#     #     os.makedirs(student_json_output_path)
-#     # except:
-#     #     pass
-
-#     # # TODO: choose better name
-#     # #  currently using the original image file name
-#     # image_json_output_path = student_json_output_path #+ "/" + image_name
-#     # try:
-#     #     os.makedirs(image_json_output_path)
-#     # except:
-#     #     pass
-
-#     # # copy image here
-#     # # copy_image(input_image_path, image_json_output_path)
-        
-
-#     # json_output_path = image_json_output_path + "/" + gpt_model + "_result.json"
-
-#     # reponse_json = get_response_json(response, gpt_model, start_time, end_time)
-
-#     # with open(json_output_path, "w") as outfile:
-#     #     outfile.write(reponse_json)
-        
-#     # print("Written to file "+json_output_path)
-
-
-
-
-# scan_section(student, image_name)

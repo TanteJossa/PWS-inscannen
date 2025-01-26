@@ -26,6 +26,8 @@ from helpers import (
     removeContainedSquares
 )
 
+from yolov5_manager import get_checkbox
+
 from gemini_wrapper import google_single_image_request
 
 from gpt_manager import (
@@ -371,67 +373,71 @@ def sectionize(id,square_data, base64_image):
 
 #     result = poller.result().to_dict()
 #     return result
-class Checkbox(BaseModel):
-    number: int
-    checked_chance: float
-    percentage_filled: float
-    certainty: float
+# class Checkbox(BaseModel):
+#     number: int
+#     checked_chance: float
+#     percentage_filled: float
+#     certainty: float
 
 
-class CheckboxSelection(BaseModel):
-    # checkboxes: list[Checkbox]
-    most_certain_checked_number: int
-    certainty: float
+# class CheckboxSelection(BaseModel):
+#     # checkboxes: list[Checkbox]
+#     most_certain_checked_number: int
+#     certainty: float
     
     
-class GoogleCheckbox(typing.TypedDict):
-    number: int
-    checked_chance: float
-    percentage_filled: float
-    certainty: float
+# class GoogleCheckbox(typing.TypedDict):
+#     number: int
+#     checked_chance: float
+#     percentage_filled: float
+#     certainty: float
 
 
-class GoogleCheckboxSelection(typing.TypedDict ):
-    # checkboxes: list[GoogleCheckbox]
-    most_certain_checked_number: int
-    certainty: float
+# class GoogleCheckboxSelection(typing.TypedDict ):
+#     # checkboxes: list[GoogleCheckbox]
+#     most_certain_checked_number: int
+#     certainty: float
+
+# def question_selector_info(id, base64_image, provider=False, model=False, scan_command_text=False, temperature=False):
 
 
-def question_selector_info(id, base64_image, provider=False, model=False, scan_command_text=False, temperature=False):
-
-
-    if not provider:
-        provider = "openai"
+#     if not provider:
+#         provider = "openai"
         
-    if not scan_command_text:
-        scan_command_text = """
-        You'll get a picture of checkboxes that a student used to select an answer
-        your job is to see which check box is most likly the one to be ment to be checked
-        only 1 can be chosen
-        pick zero if no boxes are checked 
-        take into account the arrows that point to a chosen box, or crossed out boxes
-            """
-            # de vraagnummers moeten getallen zijn
-            # als een vraagnummer een letter heeft, bijvoorbeeld 1a of 2c
-            # noteer dat dan al volgt: 1.a en 2.c dus, {getal}.{letter}
+#     if not scan_command_text:
+#         scan_command_text = """
+#         You'll get a picture of checkboxes that a student used to select an answer
+#         your job is to see which check box is most likly the one to be ment to be checked
+#         only 1 can be chosen
+#         pick zero if no boxes are checked 
+#         take into account the arrows that point to a chosen box, or crossed out boxes
+#             """
+#             # de vraagnummers moeten getallen zijn
+#             # als een vraagnummer een letter heeft, bijvoorbeeld 1a of 2c
+#             # noteer dat dan al volgt: 1.a en 2.c dus, {getal}.{letter}
 
 
-    # base64_image = base64_to_pillow(base64_image)
-    # base64_image = png_to_base64(input_dir+id+ '.png')
+#     # base64_image = base64_to_pillow(base64_image)
+#     # base64_image = png_to_base64(input_dir+id+ '.png')
 
-    if not base64_image.startswith('data:image'):
-        base64_image = "data:image/png;base64,"+ base64_image
+#     if not base64_image.startswith('data:image'):
+#         base64_image = "data:image/png;base64,"+ base64_image
     
-    if(provider == 'google'):
-        schema = GoogleCheckboxSelection
-    elif(provider == 'openai'):
-        schema = CheckboxSelection
+#     if(provider == 'google'):
+#         schema = GoogleCheckboxSelection
+#     elif(provider == 'openai'):
+#         schema = CheckboxSelection
         
-    result = single_request(provider=provider,model=model, temperature=temperature, schema=schema, image=base64_image, text=scan_command_text)
+#     result = single_request(provider=provider,model=model, temperature=temperature, schema=schema, image=base64_image, text=scan_command_text)
 
     
-    return result["result"]
+#     return result["result"]
     
+    
+def question_selector_info(id, base64_images, checkbox_count=7):
+    results = get_checkbox(checkbox_count, base64_images)
+    
+    return results
     
 def stack_answer_sections(id, images: list[str]):
     # input_path = input_dir+id+'/'
@@ -779,6 +785,13 @@ class TestQuestionPoint(typing.TypedDict):
     point_weight: int
     target_name: str
     
+class OpenAiTestQuestionPoint(BaseModel):
+    point_text: str
+    point_name: str
+    has_point: bool
+    point_index: int
+    point_weight: int
+    target_name: str
 
 class TestQuestion(typing.TypedDict):
     question_number: str
@@ -787,8 +800,19 @@ class TestQuestion(typing.TypedDict):
     points: list[TestQuestionPoint]
     is_draw_question: bool
     
+class OpenAiTestQuestion(BaseModel):
+    question_number: str
+    question_text: str
+    question_context: str
+    points: list[OpenAiTestQuestionPoint]
+    is_draw_question: bool
+    
 
 class TestTarget(typing.TypedDict):
+    target_name: str
+    explanation: str
+    
+class OpenAiTestTarget(BaseModel):
     target_name: str
     explanation: str
     
@@ -796,6 +820,9 @@ class TestData(typing.TypedDict):
     questions: list[TestQuestion]
     targets: list[TestTarget]
 
+class OpenAiTestData(BaseModel):
+    questions: list[OpenAiTestQuestion]
+    targets: list[OpenAiTestTarget]
 
 def get_test_structure(process_id=False, request_text=False, test_data=False):
     provider = 'google'
@@ -835,26 +862,47 @@ def get_test_structure(process_id=False, request_text=False, test_data=False):
     result = single_request(provider, model, schema=TestData, messages=task_list, limit_output=False)
     return result
 
-def get_gpt_test(process_id=False, request_text=False):
-    provider = 'google'
-    model = "gemini-exp-1206"
+def get_gpt_test(process_id=False, request_text=False, provider=False, model=False):
+    # provider = 'google'
+    # model = "gemini-exp-1206"
     
     
     if not request_text:
         request_text = """Maak een makkelijke toets met 3 vragen"""
-
-    result = single_request(provider, model, schema=TestData, text=request_text, limit_output=False)
+    if not provider:
+        provider = "google"
+    if not model:
+        model = "gemini-exp-1206"
+    
+    if provider == 'google':
+        schema = TestData
+    else:
+        schema = OpenAiTestData
+    
+    result = single_request(provider, model, schema=schema, text=request_text, limit_output=False)
     return result
 
-def get_gpt_test_question(process_id=False, request_text=False):
-    provider = 'google'
-    model = "gemini-exp-1206"
+def get_gpt_test_question(process_id=False, request_text=False, provider=False, model=False):
+    # provider = 'google'
+    # model = "gemini-exp-1206"
     
     
     if not request_text:
         request_text = """Maak een makkelijke toets met 3 vragen"""
 
-    result = single_request(provider, model, schema=TestQuestion, text=request_text, limit_output=False)
+    if not provider:
+        provider = "google"
+    if not model:
+        model = "gemini-exp-1206"
+    
+    if provider == 'google':
+        schema = TestQuestion
+    else:
+        schema = OpenAiTestQuestion
+    
+    
+
+    result = single_request(provider, model, schema=schema, text=request_text, limit_output=False)
     return result
 
 from reportlab.lib.pagesizes import letter, A4, landscape

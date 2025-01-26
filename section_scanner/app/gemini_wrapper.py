@@ -118,6 +118,7 @@ def google_single_image_request(text, base64_image=False, model=False, temperatu
             "generationConfig": {
                 "response_mime_type": "application/json",
                 "temperature": temperature,
+                "topP": 0.95,
                 "response_schema": typed_dict_to_schema(response_format),
                 
             }

@@ -24,7 +24,7 @@ def single_request(provider=False, model=False, temperature=False, schema=False,
 
 
 
-    if provider == 'openai':
+    if provider in ['openai', "deepseek"]:
 
         messages = [
             {
@@ -58,8 +58,26 @@ def single_request(provider=False, model=False, temperature=False, schema=False,
                 ]
             })
             
+        if (provider == 'deepseek'):
+            # Generate schema dictionary
+            schema_dict = schema.model_json_schema()
+
+            # Convert to JSON string
+            json_schema_str = json.dumps(schema_dict, indent=2)
+            print(json_schema_str)
+            messages.append({
+                "role": "user",
+                "content": [
+                    {
+                        "type": "text",
+                        "text": "Het JSON schema is: \n"+json_schema_str
+                    },
+                ]
+            })
+            schema = {"type": "json_object"}
             
-        result = openai_single_request(messages=messages, response_format=schema, model=model, temperature=temperature)
+            
+        result = openai_single_request(messages=messages, response_format=schema, model=model, provider=provider, temperature=temperature)
         result_data = result["result_data"]
         request_data = result["request_data"]
         response = {
