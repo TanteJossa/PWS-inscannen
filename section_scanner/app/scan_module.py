@@ -1092,7 +1092,25 @@ def convert_math_delimiters_markdown(text):
     text = re.sub(r'\$([^\$]+?)\$', replace_inline, text)
     return text
 
-def get_base64_test_pdf(process_id=False, test_data=False):
+
+
+from docx import Document
+from docx.shared import Pt, RGBColor
+from docx.oxml.ns import qn
+from docx.enum.text import WD_PARAGRAPH_ALIGNMENT
+from io import BytesIO
+import markdown
+import base64
+
+def get_base64_test_pdf(process_id=False, test_data={}):
+    output_type = test_data.get('settings', {}).get('output_type', 'pdf') if test_data else 'pdf'
+    
+    if output_type == 'docx':
+        return generate_docx_base64(test_data)
+    else:
+        return generate_pdf_base64(test_data)
+
+def generate_pdf_base64(test_data):
     md = markdown.Markdown(
         extensions=[KatexExtension(), 'tables'],
         extension_configs={'markdown_katex': {'insert_as_tag': True, 'no_inline_svg': True,}}
@@ -1178,5 +1196,272 @@ def get_base64_test_pdf(process_id=False, test_data=False):
     """
 
     pdf_bytes = pdfkit.from_string(html_content, False)
-    pdf_base64 = base64.b64encode(pdf_bytes).decode('utf-8')
-    return pdf_base64
+    base64_output = base64.b64encode(pdf_bytes).decode('utf-8')
+
+    
+    return base64_output
+
+from docx import Document
+from docx.document import Document as _Document
+from docx.shared import Pt, Cm
+from docx.enum.text import WD_ALIGN_PARAGRAPH
+from docx.oxml.shared import OxmlElement
+from docx.oxml.ns import qn
+from docx.oxml import parse_xml
+from latex2mathml.converter import convert as latex_to_mathml
+from lxml import etree
+import re
+import base64
+from io import BytesIO
+import markdown
+from bs4 import BeautifulSoup, Tag
+
+# Load XSLT for MathML to OMML conversion
+mml2omml_stylesheet_path = 'MML2OMML.XSL'  # Ensure this file is available
+mml2omml_stylesheet = etree.parse(mml2omml_stylesheet_path)
+mml2omml_transform = etree.XSLT(mml2omml_stylesheet)
+
+
+def add_markdown_table(doc, table_element):
+    """Convert BeautifulSoup table element to Word table"""
+    # Create Word table with proper dimensions
+    rows = table_element.find_all('tr')
+    cols = max(len(row.find_all(['th', 'td'])) for row in rows)
+    word_table = doc.add_table(rows=0, cols=cols)
+    word_table.style = 'Table Grid'
+
+    # Process rows
+    for html_row in rows:
+        cells = html_row.find_all(['th', 'td'])
+        word_row = word_table.add_row()
+        
+        for idx, cell in enumerate(cells):
+            # Handle mixed content in cells
+            add_markdown_to_doc(doc, cell.decode_contents(), parent=word_row.cells[idx])
+    
+    return word_table
+
+        
+def add_markdown_to_doc(doc, markdown_text, parent=None):
+    """Add Markdown content with robust formatting support"""
+    html = markdown.markdown(markdown_text, extensions=['tables', 'extra'])
+    soup = BeautifulSoup(html, 'html.parser')
+    
+    container = parent or doc
+    p = container.add_paragraph()
+    # if isinstance(container, _Document) else container
+
+    def process_element(element, current_para=None):
+        current_para = current_para or p
+        if isinstance(element, str):
+            handle_text(element, current_para)
+            return
+
+        if element.name in ['strong', 'em', 'del', 'u', 'code']:
+            print(element.contents)
+            run = current_para.add_run()
+            apply_formatting(run, element.name)
+            for child in element.contents:
+                process_element(child, current_para)
+        elif element.name == 'table':
+            add_markdown_table(doc, element)
+        else:
+            for child in element.contents:
+                process_element(child, current_para)
+
+    def handle_text(text, parent_para):
+        segments = re.split(r'(\\\(.*?\\\)|\\\[.*?\\\]|\$.*?\$)', text)
+        for seg in segments:
+            if not seg:
+                continue
+                
+            if re.match(r'(\\\(.*?\\\)|\\\[.*?\\\]|\$.*?\$)', seg):
+                latex_content = re.sub(r'^\$|\\\(|\\\[|\$|\\\)|\\\]$', '', seg)
+                try:
+                    mathml = latex_to_mathml(latex_content)
+                    tree = etree.fromstring(mathml)
+                    omml = mml2omml_transform(tree)
+                    run = parent_para.add_run()
+                    run._element.append(parse_xml(etree.tostring(omml)))
+                except Exception as e:
+                    error_run = parent_para.add_run(f'[Math Error: {latex_content}]')
+                    error_run.font.color.rgb = (0xFF, 0x00, 0x00)
+            else:
+                parent_para.add_run(seg)
+
+    def apply_formatting(run, tag):
+        formats = {
+            'strong': {'bold': True},
+            'em': {'italic': True},
+            'del': {'strike': True},
+            'u': {'underline': True},
+            'code': {'font': 'Courier New'}
+        }
+        for prop, val in formats.get(tag, {}).items():
+            setattr(run, prop, val) if prop != 'font' else setattr(run.font, 'name', val)
+
+    process_element(soup)
+    return p
+
+    def apply_formatting(run, tag):
+        format_map = {
+            'strong': {'bold': True},
+            'em': {'italic': True},
+            'del': {'strike': True},
+            'u': {'underline': True},
+            'code': {'font': 'Courier New'}
+        }
+        if tag in format_map:
+            for prop, value in format_map[tag].items():
+                if prop == 'font':
+                    run.font.name = value
+                else:
+                    setattr(run.font, prop, value)
+
+    process_element(soup)
+    return p
+        
+def insertHR(paragraph):
+    p = paragraph._p  # p is the <w:p> XML element
+    pPr = p.get_or_add_pPr()
+    pBdr = OxmlElement('w:pBdr')
+    pPr.insert_element_before(pBdr,
+        'w:shd', 'w:tabs', 'w:suppressAutoHyphens', 'w:kinsoku', 'w:wordWrap',
+        'w:overflowPunct', 'w:topLinePunct', 'w:autoSpaceDE', 'w:autoSpaceDN',
+        'w:bidi', 'w:adjustRightInd', 'w:snapToGrid', 'w:spacing', 'w:ind',
+        'w:contextualSpacing', 'w:mirrorIndents', 'w:suppressOverlap', 'w:jc',
+        'w:textDirection', 'w:textAlignment', 'w:textboxTightWrap',
+        'w:outlineLvl', 'w:divId', 'w:cnfStyle', 'w:rPr', 'w:sectPr',
+        'w:pPrChange'
+    )
+    bottom = OxmlElement('w:bottom')
+    bottom.set(qn('w:val'), 'single')
+    bottom.set(qn('w:sz'), '6')
+    bottom.set(qn('w:space'), '1')
+    bottom.set(qn('w:color'), 'auto')
+    pBdr.append(bottom)
+    
+def generate_docx_base64(test_data={}):
+
+    # Initialize DOCX document
+    doc = Document()
+    settings = test_data.get('settings', {})
+    test_name = settings.get('test_name', 'Naamloze Toets')
+    show_answers = settings.get('show_answers', True)
+    show_targets = settings.get('show_targets', True)
+
+    # Add test name as heading
+    doc.add_heading(test_name, level=1)
+
+    # Targets Section
+    targets = test_data.get('targets', [])
+    if targets and show_targets:
+        doc.add_heading('Leerdoelen', level=2)
+        table = doc.add_table(rows=0, cols=2)
+        table.columns[0].width = Cm(5)            
+        for cell in table.columns[0].cells:
+            cell.width = Cm(5)                
+        table.columns[1].width = Cm(10)            
+        for cell in table.columns[1].cells:
+            cell.width = Cm(10)  
+        hdr_cells = table.rows[0].cells
+        hdr_cells[0].text = 'Leerdoel'
+        hdr_cells[1].text = 'Uitleg'
+        for target in targets:
+            row_cells = table.add_row().cells
+            add_markdown_to_doc(doc, target.get('target_name', ''))
+            target_name_para = row_cells[0].paragraphs[0]
+            for elem in doc.paragraphs[-1]._element:
+                target_name_para._element.append(elem)
+            doc.paragraphs[-1]._element.getparent().remove(doc.paragraphs[-1]._element)
+
+            add_markdown_to_doc(doc, target.get('explanation', ''))
+            explanation_para = row_cells[1].paragraphs[0]
+            for elem in doc.paragraphs[-1]._element:
+                explanation_para._element.append(elem)
+            doc.paragraphs[-1]._element.getparent().remove(doc.paragraphs[-1]._element)
+
+    # Questions Section
+    questions = test_data.get('questions', [])
+    if questions:
+        doc.add_heading('Vragen', level=2)
+        for question in questions:
+
+            p = doc.add_paragraph()
+            insertHR(p)
+            
+            # Question context
+            if question.get('question_context'):
+                add_markdown_to_doc(doc, question['question_context'])
+                
+                # paragraph_format = p.paragraph_format
+                # paragraph_format.left_indent = Cm(1)
+                # paragraph_format.right_indent = Cm(0)
+                # paragraph_format.alignment = WD_ALIGN_PARAGRAPH.LEFT
+            
+            points = question.get('points', [])
+            
+            table = doc.add_table(rows=0, cols=3)
+            # table.autofit = False 
+            table.columns[0].width = Cm(1.1)            
+            for cell in table.columns[0].cells:
+                cell.width = Cm(1.1)
+            table.columns[1].width = Cm(2)               
+            for cell in table.columns[1].cells:
+                cell.width = Cm(2)
+            table.columns[2].width = Cm(12)               
+            # for cell in table.columns[1].cells:
+                # cell.width = Cm(12)
+                
+            row_cells = table.add_row().cells
+            runner = row_cells[0].paragraphs[0].add_run(str(sum([point["point_weight"] for point in points]))+'pt.')
+            runner.bold = True
+            runner = row_cells[1].paragraphs[0].add_run(f"Vraag {question.get('question_number', '')}")
+            runner.bold = True
+            
+            add_markdown_to_doc(doc, question["question_text"])
+            point_text_para = row_cells[2].paragraphs[0]
+            for elem in doc.paragraphs[-1]._element:
+                point_text_para._element.append(elem)
+            doc.paragraphs[-1]._element.getparent().remove(doc.paragraphs[-1]._element)
+            
+            
+            # q_text = f"{question.get('question_text', '')}"
+            # Question text
+            # add_markdown_to_doc(hdr_cells[2], q_text, style='Heading3')
+            
+            # Points table
+            if show_answers and points:
+                table = doc.add_table(rows=1, cols=2)
+                table.columns[0].width = Cm(5)            
+                for cell in table.columns[0].cells:
+                    cell.width = Cm(5)                
+                table.columns[1].width = Cm(10)            
+                for cell in table.columns[1].cells:
+                    cell.width = Cm(10)         
+                hdr_cells = table.rows[0].cells
+                hdr_cells[0].text = 'Onderdeel'
+                hdr_cells[1].text = 'Uitleg'
+                for point in question['points']:
+                    row_cells = table.add_row().cells
+                    add_markdown_to_doc(doc, point.get('point_name', ''))
+                    point_name_para = row_cells[0].paragraphs[0]
+                    for elem in doc.paragraphs[-1]._element:
+                        point_name_para._element.append(elem)
+                    doc.paragraphs[-1]._element.getparent().remove(doc.paragraphs[-1]._element)
+
+                    add_markdown_to_doc(doc, point.get('point_text', ''))
+                    point_text_para = row_cells[1].paragraphs[0]
+                    for elem in doc.paragraphs[-1]._element:
+                        point_text_para._element.append(elem)
+                    doc.paragraphs[-1]._element.getparent().remove(doc.paragraphs[-1]._element)
+            
+            doc.add_paragraph().paragraph_format.page_break_before = False
+
+    # Save to bytes buffer and encode as base64
+    buffer = BytesIO()
+    doc.save(buffer)
+    buffer.seek(0)
+    base64_output = base64.b64encode(buffer.read()).decode('utf-8')
+    return base64_output
+
