@@ -10,7 +10,9 @@ from pydantic import BaseModel
 import typing_extensions as typing
 import json
 import time
-
+from helpers import (
+    OpenAi_module_models
+)
 from fix_busted_json import repair_json
 
 
@@ -24,7 +26,7 @@ def single_request(provider=False, model=False, temperature=False, schema=False,
 
 
 
-    if provider in ['openai', "deepseek"]:
+    if provider in OpenAi_module_models:
 
         messages = [
             {

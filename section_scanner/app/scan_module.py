@@ -23,7 +23,8 @@ from helpers import (
     base64_to_cv2,
     four_point_transform,
     findSquares,
-    removeContainedSquares
+    removeContainedSquares,
+    OpenAi_module_models
 )
 
 from yolov5_manager import get_checkbox
@@ -425,7 +426,7 @@ def sectionize(id,square_data, base64_image):
     
 #     if(provider == 'google'):
 #         schema = GoogleCheckboxSelection
-#     elif(provider in ['openai', 'deepseek']):
+#     elif(provider in OpenAi_module_models):
 #         schema = CheckboxSelection
         
 #     result = single_request(provider=provider,model=model, temperature=temperature, schema=schema, image=base64_image, text=scan_command_text)
@@ -558,7 +559,7 @@ voer deze opdracht zo goed mogelijk uit. Het is HEEL belangrijk dat je je aan he
             Het direct transcriberen van de het antwoord is het allerbelangrijkste, deze extra toevoegen zijn er alleen om een context te creeëren 
         """    
     
-    if (provider in ['openai', 'deepseek']):
+    if (provider in OpenAi_module_models):
         schema = QuestionAnswer
     elif (provider == 'google'):
         schema = GoogleQuestionAnswer
@@ -766,7 +767,7 @@ def grade_answer(process_id, request_text=False, student_image=False, provider=F
     if not request_text:
         request_text = """kijk na"""
         
-    if (provider in ['openai', 'deepseek']):
+    if (provider in OpenAi_module_models):
         schema = GradeResult
     elif (provider == 'google'):
         schema = GoogleGradeResult
