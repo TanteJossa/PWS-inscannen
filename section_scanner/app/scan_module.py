@@ -1251,25 +1251,27 @@ def add_markdown_to_doc(doc, markdown_text, parent=None):
     p = container.add_paragraph()
     # if isinstance(container, _Document) else container
 
-    def process_element(element, current_para=None):
+    def process_element(element, current_para=None, format_name=None):
         current_para = current_para or p
         if isinstance(element, str):
-            handle_text(element, current_para)
+
+            handle_text(element, current_para, format_name)
             return
 
         if element.name in ['strong', 'em', 'del', 'u', 'code']:
-            print(element.contents)
             run = current_para.add_run()
+            
             apply_formatting(run, element.name)
+            
             for child in element.contents:
-                process_element(child, current_para)
+                process_element(child, current_para,  element.name)
         elif element.name == 'table':
             add_markdown_table(doc, element)
         else:
             for child in element.contents:
                 process_element(child, current_para)
 
-    def handle_text(text, parent_para):
+    def handle_text(text, parent_para, format_name):
         segments = re.split(r'(\\\(.*?\\\)|\\\[.*?\\\]|\$.*?\$)', text)
         for seg in segments:
             if not seg:
@@ -1287,7 +1289,12 @@ def add_markdown_to_doc(doc, markdown_text, parent=None):
                     error_run = parent_para.add_run(f'[Math Error: {latex_content}]')
                     error_run.font.color.rgb = (0xFF, 0x00, 0x00)
             else:
-                parent_para.add_run(seg)
+                run = parent_para.add_run(seg)
+
+            if format_name:
+                apply_formatting(run, format_name)
+                # run.bold = True
+            
 
     def apply_formatting(run, tag):
         formats = {
@@ -1357,7 +1364,7 @@ def generate_docx_base64(test_data={}):
     targets = test_data.get('targets', [])
     if targets and show_targets:
         doc.add_heading('Leerdoelen', level=2)
-        table = doc.add_table(rows=0, cols=2)
+        table = doc.add_table(rows=1, cols=2)
         table.columns[0].width = Cm(5)            
         for cell in table.columns[0].cells:
             cell.width = Cm(5)                
