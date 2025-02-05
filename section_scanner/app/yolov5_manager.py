@@ -22,9 +22,7 @@ else:
 # Load the model globally
 MODEL_WEIGHTS = pathlib.Path('yolov5/best.pt')
 DEVICE = 'cuda' if torch.cuda.is_available() else 'cpu'
-model = torch.hub.load('ultralytics/yolov5', 'custom', path=MODEL_WEIGHTS, force_reload=False)
-model.to(DEVICE)
-model.iou = 0.2
+model = None
 
 class Checkbox:
     """
@@ -163,6 +161,7 @@ def get_detections(model, image, img_size=512):
     Returns:
         list: List of detections with bounding box coordinates, confidence, and class ID.
     """
+
     # Convert BGR to RGB
     image_rgb = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
 
@@ -323,6 +322,12 @@ def process_image_data(image, img_size=512, threshold=127, margin_ratio=0.05, vi
     """
     Processes an image to detect and filter checkboxes, and visualize the results.
     """
+    
+    global model
+    if (model == None):
+        model = torch.hub.load('ultralytics/yolov5', 'custom', path=MODEL_WEIGHTS, force_reload=False)
+        model.to(DEVICE)
+        model.iou = 0.2    
     # Perform inference
     detections = get_detections(model, image, img_size)
 
