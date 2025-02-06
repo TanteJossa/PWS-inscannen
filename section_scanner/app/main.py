@@ -604,6 +604,7 @@ def grade_with_answer():
             request_text = f"""
                 Kijk deze toetsvraag van een leerling zo goed mogelijk na en geef korte feedback en het puntnummer bij elk punt, point_index is 0 voor het eerste punt. Geef ook een totale feedback met daarin een zo kort mogelijke uitleg over of iemand slodig is of het waarschijnlijk niet begrijpt en misschien tip als je denkt dat iemand ergens HEEL veel aan heeft. Spreek in de totale feedback de leerling aan en maximaal 1-2 zinnen. 
                 Let op een feedback op een punt is 1 zin. en de totale feedback is maximaal 20-35 woorden. Spreek de leerling aan in de 2e persoon.
+                Het is heel belangrijk dat de has_point key in elk punt staat, vergeet dit niet, dus: {{punten: [{{has_point: bool}}]}}
                 
                 Vraag: {question}
                 
@@ -614,7 +615,8 @@ def grade_with_answer():
                 
                 </Einde Antwoord Leerling>
                 
-                Houdt je aan de gegeven schema.
+                Houdt je aan de gegeven schema en vergeet has_point niet toe te voegen.
+                
             """
 
 

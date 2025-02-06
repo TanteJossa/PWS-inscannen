@@ -751,7 +751,7 @@ class GoogleGradePoint(typing.TypedDict):
     point_index: int
     
 class GoogleGradeResult(typing.TypedDict):
-    points: list[GradePoint]
+    points: list[GoogleGradePoint]
     feedback: str
 
 

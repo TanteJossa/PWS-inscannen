@@ -138,7 +138,7 @@ def json_from_string(s:str):
     
     # Extract the substring between the first '{' and last '}'
     json_str = s[first_brace : last_brace + 1]
-    
+
     try:
         # Parse the JSON string
         return json.loads(json_str)
@@ -559,3 +559,156 @@ OpenAi_module_models = {
     }
 }
 
+from typing import TypedDict, List, Dict, Any, Type, Union
+import json
+from enum import Enum
+
+def typed_dict_to_string(
+    typed_dict_class,
+    include_type_hints: bool = True,
+    pretty_print: bool = False,
+    include_docstring: bool = True,
+    _indent_level: int = 0,  # Internal parameter for recursion
+) -> str:
+    """
+    Converts a TypedDict class to a string representation, optionally including
+    type hints, docstrings and pretty-printing. Handles nested TypedDicts
+    and other type annotations recursively.
+
+    Args:
+        typed_dict_class: The TypedDict class to convert.
+        include_type_hints: Whether to include type hints in the string
+                           representation. Defaults to True.
+        pretty_print: Whether to pretty-print the output (add indentation
+                      and newlines).  Defaults to False.
+        include_docstring: Whether to include the docstring in the output string. Defaults to True
+        _indent_level: (Internal) Current indentation level.
+
+    Returns:
+        A string representation of the TypedDict class.
+
+    Raises:
+        TypeError: If typed_dict_class is not a TypedDict.
+        ValueError: if total=False is provided with a TypedDict.
+    """
+
+    if not (isinstance(typed_dict_class, type) and issubclass(typed_dict_class, dict)):
+        raise TypeError("typed_dict_class must be a TypedDict class.")
+
+    # if not getattr(typed_dict_class, "__total__", True):  # Check for total=False
+    #     raise ValueError(
+    #         "The TypedDict must use total=True. It's required for a complete string representation."
+    #     )
+
+    indent = "    " * _indent_level if pretty_print else ""
+    next_indent = "    " * (_indent_level + 1) if pretty_print else ""
+    lines = []
+
+    lines.append(f"{indent}class {typed_dict_class.__name__}:")
+
+    if include_docstring and typed_dict_class.__doc__:
+        docstring_lines = typed_dict_class.__doc__.splitlines()
+        if pretty_print:
+            lines.append(next_indent + '"""')
+            lines.extend([next_indent + line for line in docstring_lines])
+            lines.append(next_indent + '"""')
+        else:
+            lines.append(
+                next_indent
+                + '"""'
+                + typed_dict_class.__doc__.replace("\n", " ")
+                + '"""'
+            )
+
+    if not include_type_hints:
+        if not hasattr(typed_dict_class, "__annotations__"):
+            return f"{indent}class {typed_dict_class.__name__}: pass"
+
+        for key in typed_dict_class.__annotations__.keys():
+            lines.append(f"{next_indent}{key}")
+        return "\n".join(lines)
+
+    annotations = typed_dict_class.__annotations__
+    for key, value in annotations.items():
+        type_str = _get_type_string(
+            value, include_type_hints, pretty_print, include_docstring, _indent_level + 1
+        )
+        lines.append(f"{next_indent}{key}: {type_str}")
+
+    return "\n".join(lines)
+
+
+def _get_type_string(
+    type_hint: Any,
+    include_type_hints: bool,
+    pretty_print: bool,
+    include_docstring: bool,
+    indent_level: int,
+) -> str:
+    """
+    Recursively generates string representations for type hints, handling
+    TypedDicts, Lists, Dicts, Unions, Enums, and basic types.
+
+    Args:
+        type_hint: The type hint to convert.
+        include_type_hints: Whether to include type hints.
+        pretty_print: Whether to pretty-print.
+        include_docstring: Whether to include the docstring.
+        indent_level: Current indentation level.
+
+    Returns:
+        String representation of the type hint.
+    """
+    indent = "    " * indent_level if pretty_print else ""
+
+    if isinstance(type_hint, type) and issubclass(type_hint, dict):  # TypedDict
+        return (
+            "\n" + typed_dict_to_string(
+                type_hint,
+                include_type_hints,
+                pretty_print,
+                include_docstring,
+                indent_level,
+            )
+            if pretty_print
+            else typed_dict_to_string(
+                type_hint,
+                include_type_hints,
+                pretty_print,
+                include_docstring,
+                indent_level,
+            )
+        )
+    elif isinstance(type_hint, type) and issubclass(type_hint, Enum):  # Enum
+        return type_hint.__name__
+    elif hasattr(type_hint, "__origin__"):  # For generic types like List, Dict, Union
+        origin = type_hint.__origin__
+        args = type_hint.__args__
+
+        if origin is list:
+            arg_str = _get_type_string(
+                args[0], include_type_hints, pretty_print, include_docstring, indent_level
+            )
+            return f"list[{arg_str}]"
+        elif origin is dict:
+            key_str = _get_type_string(
+                args[0], include_type_hints, pretty_print, include_docstring, indent_level
+            )
+            value_str = _get_type_string(
+                args[1], include_type_hints, pretty_print, include_docstring, indent_level
+            )
+            return f"dict[{key_str}, {value_str}]"
+        elif origin is Union:
+            arg_strs = [
+                _get_type_string(
+                    arg, include_type_hints, pretty_print, include_docstring, indent_level
+                )
+                for arg in args
+            ]
+            return " | ".join(arg_strs)
+        else:
+            return str(type_hint).replace("typing.", "") # Handle other generic types if needed.
+    elif isinstance(type_hint, str):  # ForwardRef (string-based type hint)
+        return type_hint
+    else:  # Basic types (int, str, bool, etc.)
+        return str(type_hint).replace("typing.", "")

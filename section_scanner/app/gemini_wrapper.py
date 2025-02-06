@@ -4,9 +4,10 @@ import json
 import base64 
 from PIL import Image
 import io
+from pydantic import BaseModel
 import typing_extensions 
 import re 
-from helpers import get_random_id
+from helpers import get_random_id, json_from_string, typed_dict_to_string
 import typing
 import requests
 
@@ -56,8 +57,33 @@ def get_type_name(type_hint) -> str:
 
 class DefaultGeminiSchema(typing.TypedDict):
     result: str
-    
 
+class DefaultGeminiSchemaPdantic(BaseModel):
+    result: str
+
+def typed_dict_to_string_alternative(data) -> str:
+    """Converts any TypedDict to a formatted string.  More robust.
+
+    Handles any TypedDict (not just Person), including those with different
+    keys and types, and adds error handling in case of unexpected input.
+
+    Args:
+      data:  The TypedDict to convert.  Crucially, it uses a general
+        TypedDict type hint, not a specific one like Person.
+
+    Returns:
+      A formatted string representation of the TypedDict.
+    """
+    try:
+        # Iterate through the key-value pairs and format them.
+        parts = [f"{key}: {value}" for key, value in data.items()]
+        return ", ".join(parts)
+    except AttributeError as e:
+        return f"Error: Input is not a dictionary-like object: {e}"
+    except Exception as e: #catch other potential errors.
+        return f"An unexpected error occurred: {e}"
+
+import inspect
 def google_single_image_request(text, base64_image=False, model=False, temperature=False, id=get_random_id(), response_format=False, task_list=False, limit_output= True):
     genai.configure(api_key=data["key"],transport="rest")
 
@@ -101,8 +127,27 @@ def google_single_image_request(text, base64_image=False, model=False, temperatu
         task_list.append({"text": "\n\n"})
         task_list.append({"text": 'return in the format of the correct schema'})
 
-    # google_model = genai.GenerativeModel(model)
-    # print('Starting gemini request...')
+        # google_model = genai.GenerativeModel(model)
+        # print('Starting gemini request...')
+    
+        # Generate schema dictionary
+        # schema_dict = response_format.model_json_schema()
+
+        # Convert to JSON string
+        
+        if (isinstance(response_format, BaseModel)):
+            type_text = response_format.model_json_schema()
+        elif(inspect.isclass(response_format)):
+            type_text = typed_dict_to_string(response_format)
+        else:
+            type_text = ""
+
+        # json_schema_str = json.dumps(response_format, indent=2)
+        task_list.append(
+            {
+                "text": "Het JSON schema is je mag maar 1 json object genereren en je mag de keys absoluut niet veranderen: \n"+type_text
+            }
+        )    
     
     try:
         url = f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent?key={API_KEY}"
@@ -116,10 +161,10 @@ def google_single_image_request(text, base64_image=False, model=False, temperatu
                 }
             ],
             "generationConfig": {
-                "response_mime_type": "application/json",
+                # "response_mime_type": "application/json",
                 "temperature": temperature,
-                "topP": 0.95,
-                "response_schema": typed_dict_to_schema(response_format),
+                # "topP": 0.95,
+                # "response_schema": typed_dict_to_schema(response_format),
                 
             }
         }   
@@ -128,7 +173,12 @@ def google_single_image_request(text, base64_image=False, model=False, temperatu
         
         result = requests.post(url, headers=headers, data=json.dumps(payload))
         
-        result = json.loads(result.text)
+        result = result.json()
+        if (isinstance(result,dict) ):
+            parts = result.get("candidates",[{}])[0].get("content",{}).get("parts",[])
+            if (len(parts) > 0):
+                part = parts[0]
+                result = json_from_string(part.get("text", ""))
         
         
         
