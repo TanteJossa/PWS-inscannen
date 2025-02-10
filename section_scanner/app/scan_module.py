@@ -24,12 +24,10 @@ from helpers import (
     four_point_transform,
     findSquares,
     removeContainedSquares,
-    OpenAi_module_models
 )
 
 from yolov5_manager import get_checkbox
 
-from gemini_wrapper import google_single_image_request
 
 from gpt_manager import (
     single_request
@@ -148,11 +146,11 @@ class TextInBox(BaseModel):
     text: str
     other_possibility: str
 
-class GoogleTextInBox(typing.TypedDict):
-    text: str
-    other_possibility: str
+# class GoogleTextInBox(typing.TypedDict):
+#     text: str
+#     other_possibility: str
 
-def get_student_id(id, base64_image, provider=False, model=False, temperature=False, schema=False, text=False):
+def get_student_id(id, base64_image, provider=False, model=False, temperature=False, schema=TextInBox, text=False):
     if not provider:
         provider = "google"    
     
@@ -174,10 +172,10 @@ def get_student_id(id, base64_image, provider=False, model=False, temperature=Fa
     
     base64_image = pillow_to_base64(cropped)
     
-    if (provider=="openai"):
-        schema = TextInBox
-    if (provider=="google"):
-        schema = GoogleTextInBox
+    # if (provider=="openai"):
+    #     schema = TextInBox
+    # if (provider=="google"):
+    #     schema = GoogleTextInBox
     
 
     result = single_request(provider=provider, model=model, temperature=temperature, schema=schema, text=text, image=base64_image)
@@ -353,87 +351,7 @@ def sectionize(id,square_data, base64_image):
     
     return base64_sections
         
-        
-        
 
-# first tried microsoft azure, but chapGPT worked better
-# from azure.core.credentials import AzureKeyCredential
-# from azure.ai.formrecognizer import DocumentAnalysisClient
-
-# with open("creds/microsoft.json", "r") as f:
-#     data = json.load(f)
-#     azure_endpoint = data["endpoint"]
-#     azure_credential = AzureKeyCredential(data["subscription_key"])
-#     azure_document_intelligence_client = DocumentAnalysisClient(endpoint, credential)
-
-# def question_selector_info(id):
-
-#     with open(input_dir+id+'.png', 'rb') as f:
-
-#         poller = document_intelligence_client.begin_analyze_document(model_id="prebuilt-document", document=f)
-
-#     result = poller.result().to_dict()
-#     return result
-# class Checkbox(BaseModel):
-#     number: int
-#     checked_chance: float
-#     percentage_filled: float
-#     certainty: float
-
-
-# class CheckboxSelection(BaseModel):
-#     # checkboxes: list[Checkbox]
-#     most_certain_checked_number: int
-#     certainty: float
-    
-    
-# class GoogleCheckbox(typing.TypedDict):
-#     number: int
-#     checked_chance: float
-#     percentage_filled: float
-#     certainty: float
-
-
-# class GoogleCheckboxSelection(typing.TypedDict ):
-#     # checkboxes: list[GoogleCheckbox]
-#     most_certain_checked_number: int
-#     certainty: float
-
-# def question_selector_info(id, base64_image, provider=False, model=False, scan_command_text=False, temperature=False):
-
-
-#     if not provider:
-#         provider = "openai"
-        
-#     if not scan_command_text:
-#         scan_command_text = """
-#         You'll get a picture of checkboxes that a student used to select an answer
-#         your job is to see which check box is most likly the one to be ment to be checked
-#         only 1 can be chosen
-#         pick zero if no boxes are checked 
-#         take into account the arrows that point to a chosen box, or crossed out boxes
-#             """
-#             # de vraagnummers moeten getallen zijn
-#             # als een vraagnummer een letter heeft, bijvoorbeeld 1a of 2c
-#             # noteer dat dan al volgt: 1.a en 2.c dus, {getal}.{letter}
-
-
-#     # base64_image = base64_to_pillow(base64_image)
-#     # base64_image = png_to_base64(input_dir+id+ '.png')
-
-#     if not base64_image.startswith('data:image'):
-#         base64_image = "data:image/png;base64,"+ base64_image
-    
-#     if(provider == 'google'):
-#         schema = GoogleCheckboxSelection
-#     elif(provider in OpenAi_module_models):
-#         schema = CheckboxSelection
-        
-#     result = single_request(provider=provider,model=model, temperature=temperature, schema=schema, image=base64_image, text=scan_command_text)
-
-    
-#     return result["result"]
-    
     
 def question_selector_info(id, base64_images, checkbox_count=7):
     results = get_checkbox(checkbox_count, base64_images)
@@ -487,22 +405,22 @@ class QuestionAnswer(BaseModel):
     # spelling_corrections: list[SpellingCorrection]
     
 # schema classes
-class GoogleSpellingCorrection(typing.TypedDict):
-    original: str
-    changes: str
-    is_crossed_out: bool
+# class GoogleSpellingCorrection(typing.TypedDict):
+#     original: str
+#     changes: str
+#     is_crossed_out: bool
 
-# answer class schema
-class GoogleQuestionAnswer(typing.TypedDict):
-    # let openai reasses the question number (they are better than google )
-    certainty: float 
-    student_handwriting_percent: float
-    # get the unchanged raw text
-    raw_text: str
-    # get the spel corrected text that should be graded
-    correctly_spelled_text: str
-    # get the spelling changes the model made
-    # spelling_corrections: list[SpellingCorrection]
+# # answer class schema
+# class GoogleQuestionAnswer(typing.TypedDict):
+#     # let openai reasses the question number (they are better than google )
+#     certainty: float 
+#     student_handwriting_percent: float
+#     # get the unchanged raw text
+#     raw_text: str
+#     # get the spel corrected text that should be graded
+#     correctly_spelled_text: str
+#     # get the spelling changes the model made
+#     # spelling_corrections: list[SpellingCorrection]
     
 
 def transcribe_answer(
@@ -559,10 +477,11 @@ voer deze opdracht zo goed mogelijk uit. Het is HEEL belangrijk dat je je aan he
             Het direct transcriberen van de het antwoord is het allerbelangrijkste, deze extra toevoegen zijn er alleen om een context te creeëren 
         """    
     
-    if (provider in OpenAi_module_models):
-        schema = QuestionAnswer
-    elif (provider == 'google'):
-        schema = GoogleQuestionAnswer
+    schema = QuestionAnswer
+    # if (provider in OpenAi_module_models):
+    #     schema = QuestionAnswer
+    # elif (provider == 'google'):
+    #     schema = GoogleQuestionAnswer
 
     result = single_request(text=request_text, image=base64_image, provider=provider, model=model, schema=schema, temperature=temperature)
     return result
@@ -745,14 +664,14 @@ class GradeResult(BaseModel):
     points: list[GradePoint]
 
 
-class GoogleGradePoint(typing.TypedDict):
-    has_point: bool
-    feedback: str
-    point_index: int
+# class GoogleGradePoint(typing.TypedDict):
+#     has_point: bool
+#     feedback: str
+#     point_index: int
     
-class GoogleGradeResult(typing.TypedDict):
-    points: list[GoogleGradePoint]
-    feedback: str
+# class GoogleGradeResult(typing.TypedDict):
+#     points: list[GoogleGradePoint]
+#     feedback: str
 
 
 def grade_answer(process_id, request_text=False, student_image=False, provider=False, model=False, temperature=False):
@@ -767,23 +686,24 @@ def grade_answer(process_id, request_text=False, student_image=False, provider=F
     if not request_text:
         request_text = """kijk na"""
         
-    if (provider in OpenAi_module_models):
-        schema = GradeResult
-    elif (provider == 'google'):
-        schema = GoogleGradeResult
-    else:
-        schema = False
+    schema = GradeResult
+    # if (provider in OpenAi_module_models):
+    #     schema = GradeResult
+    # elif (provider == 'google'):
+    #     schema = GoogleGradeResult
+    # else:
+    #     schema = False
         
     result = single_request(text=request_text, image=student_image, provider=provider, model=model, schema=schema, temperature=temperature)
     return result
 
 
-class TestQuestionPoint(typing.TypedDict):
-    point_text: str
-    point_name: str
-    point_index: int
-    point_weight: int
-    target_name: str
+# class TestQuestionPoint(typing.TypedDict):
+#     point_text: str
+#     point_name: str
+#     point_index: int
+#     point_weight: int
+#     target_name: str
     
 class OpenAiTestQuestionPoint(BaseModel):
     point_text: str
@@ -792,12 +712,12 @@ class OpenAiTestQuestionPoint(BaseModel):
     point_weight: int
     target_name: str
 
-class TestQuestion(typing.TypedDict):
-    question_number: str
-    question_text: str
-    question_context: str
-    points: list[TestQuestionPoint]
-    is_draw_question: bool
+# class TestQuestion(typing.TypedDict):
+#     question_number: str
+#     question_text: str
+#     question_context: str
+#     points: list[TestQuestionPoint]
+#     is_draw_question: bool
     
 class OpenAiTestQuestion(BaseModel):
     question_number: str
@@ -807,17 +727,17 @@ class OpenAiTestQuestion(BaseModel):
     is_draw_question: bool
     
 
-class TestTarget(typing.TypedDict):
-    target_name: str
-    explanation: str
+# class TestTarget(typing.TypedDict):
+#     target_name: str
+#     explanation: str
     
 class OpenAiTestTarget(BaseModel):
     target_name: str
     explanation: str
     
-class TestData(typing.TypedDict):
-    questions: list[TestQuestion]
-    targets: list[TestTarget]
+# class TestData(typing.TypedDict):
+#     questions: list[TestQuestion]
+#     targets: list[TestTarget]
 
 class OpenAiTestData(BaseModel):
     questions: list[OpenAiTestQuestion]
@@ -857,8 +777,10 @@ def get_test_structure(process_id=False, request_text=False, test_data=False):
                     }
                 })
     
+    schema = OpenAiTestData
+    
     task_list.append({"text": "\n\n Houd je strak aan de format/schema, zorg dat elk veld een kloppende waarde heeft."})
-    result = single_request(provider, model, schema=TestData, messages=task_list, limit_output=False)
+    result = single_request(provider, model, schema=schema, messages=task_list, limit_output=False)
     return result
 
 def get_gpt_test(process_id=False, request_text=False, provider=False, model=False):
@@ -873,11 +795,12 @@ def get_gpt_test(process_id=False, request_text=False, provider=False, model=Fal
     if not model:
         model = "gemini-exp-1206"
     
-    if provider == 'google':
-        schema = TestData
-    else:
-        schema = OpenAiTestData
+    # if provider == 'google':
+    #     schema = TestData
+    # else:
+    #     schema = OpenAiTestData
     
+    schema = OpenAiTestData
     result = single_request(provider, model, schema=schema, text=request_text, limit_output=False)
     return result
 
@@ -894,11 +817,12 @@ def get_gpt_test_question(process_id=False, request_text=False, provider=False, 
     if not model:
         model = "gemini-exp-1206"
     
-    if provider == 'google':
-        schema = TestQuestion
-    else:
-        schema = OpenAiTestQuestion
+    # if provider == 'google':
+    #     schema = TestQuestion
+    # else:
+    #     schema = OpenAiTestQuestion
     
+    schema = OpenAiTestQuestion
     
 
     result = single_request(provider, model, schema=schema, text=request_text, limit_output=False)

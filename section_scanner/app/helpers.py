@@ -536,29 +536,6 @@ def dict_hash(dictionary: Dict[str, Any]) -> str:
     dhash.update(encoded)
     return dhash.hexdigest()
 
-with open("creds/openaikey.json", "r") as f:
-    openai_key = json.load(f)["key2"]
-with open("creds/deepseek.json", "r") as f:
-    deepseek_key = json.load(f)["key"]
-with open("creds/alibaba.json", "r") as f:
-    alibaba_key = json.load(f)["key"]
-
-
-OpenAi_module_models = {
-    "openai": {
-        "base_url": None,
-        "key": openai_key
-    },
-    "deepseek": {
-        "base_url": "https://api.deepseek.com",
-        "key": deepseek_key
-    },
-    "alibaba": {
-        "base_url": "https://dashscope-intl.aliyuncs.com/compatible-mode/v1",
-        "key": alibaba_key
-    }
-}
-
 from typing import TypedDict, List, Dict, Any, Type, Union
 import json
 from enum import Enum

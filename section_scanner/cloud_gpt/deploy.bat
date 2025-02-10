@@ -1,0 +1,1 @@
+gcloud run deploy gpt-function --source . --region europe-west4 --allow-unauthenticated --memory 2G --timeout 300 --min-instances 0 --max-instances 5 --service-account toetspws@appspot.gserviceaccount.com  --project toetspws
