@@ -63,7 +63,6 @@ def get_test_pdf():
         data = request.get_json(silent=True)
     else:
         data = request.args.to_dict()
-        print(data)
     
     if ("id" in data):
         id = data.get("id")
@@ -75,7 +74,7 @@ def get_test_pdf():
         input_data = data.get("data")
     else:
         input_data = False
-        
+
     if ("provider" in data):
         provider = data.get("provider")
     else:
@@ -118,4 +117,4 @@ def get_test_pdf():
 
 
 if __name__ == "__main__":
-    app.run(debug=True, host="0.0.0.0", port=int(os.environ.get("PORT", 8080)))
+    app.run(debug=True, host="0.0.0.0", port=int(os.environ.get("PORT", 8081)))

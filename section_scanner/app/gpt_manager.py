@@ -39,22 +39,23 @@ def single_request(provider=False, model=False, temperature=False, schema=False,
             schema_string = schema.model_json_schema()
         except:
             schema_string = False
-    elif isinstance(schema, typing.TypedDict):
-        try:
-            schema_string = typed_dict_to_string(schema)
-        except:
-            schema_string = False
+    # elif isinstance(schema, ):
+    #     try:
+    #         schema_string = typed_dict_to_string(schema)
+    #     except:
+    #         schema_string = False
     else:
         schema_string = False
         
+    is_localhost = False    
     
-    response = requests.post('https://gpt-function-771520566941.europe-west4.run.app/gpt', {
-        "provider": "deepseek",
-        "model": "deepseek-sub_message",
+    response = requests.post('http://127.0.0.1:8081/gpt' if is_localhost else 'https://gpt-function-771520566941.europe-west4.run.app/gpt', {}, {
+        "provider": provider,
+        "model": model,
         "data": messages,
         "schema_string": schema_string
     })
-    
+    response = response.json()
     if ('output' in response):
         print(f"GPT request ({provider}, {model}) ... Done")
         return response["output"]

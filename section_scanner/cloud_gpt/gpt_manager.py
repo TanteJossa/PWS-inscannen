@@ -13,8 +13,6 @@ from helpers import (
     OpenAi_module_models
 )
 
-from fix_busted_json import repair_json
-
 def get_openai_messages(input_data):
     messages = []
     for item in input_data:
@@ -24,13 +22,17 @@ def get_openai_messages(input_data):
                 "content": item["text"]
             })
         if item["type"] == "image":
+            base64_image = item["image"]
+            if not base64_image.startswith('data:image'):
+                base64_image = "data:image/png;base64," + base64_image    
+                
             messages.append({
                 "role": "user",
                 "content": [
                     {
                         "type": "image_url",
                         "image_url": {
-                            "url": f"{item['image']}"
+                            "url": f"{base64_image}"
                         }
                     }
                 ]
@@ -79,8 +81,7 @@ def single_request(
         model = "gemini-2.0-flash"
     if not temperature:
         temperature = 0.1
-        
-        
+                
     if schema_string:
         input_data.append({
             "type": "text",
