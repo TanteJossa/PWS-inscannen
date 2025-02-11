@@ -116,5 +116,17 @@ def get_test_pdf():
         # return {"error": str(e)}       
 
 
+@app.route('/providers', methods=['GET'])
+def get_providers():
+    providers = {
+        "google": ["gemini-2.0-pro-exp-02-05", "gemini-2.0-flash", "gemini-1.5-pro", "learnlm-1.5-pro-experimental", "gemini-exp-1206"],
+        "openai": ["gpt-4o-mini", "gpt-4o", "gpt-o3-mini"],
+        "deepseek": ["deepseek-chat", "deepseek-reasoner"],
+        "alibaba": ["qwen-turbo", "qwen-plus", "qwen-max-2025-01-25", "qwen-max"]
+    }
+    return jsonify(providers)
+
+
+
 if __name__ == "__main__":
     app.run(debug=True, host="0.0.0.0", port=int(os.environ.get("PORT", 8081)))
