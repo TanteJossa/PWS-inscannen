@@ -5,7 +5,9 @@ import typing_extensions as typing
 import json
 import time
 from helpers import (
-    typed_dict_to_string
+    typed_dict_to_string,
+    is_localhost,
+    GPT_URL
 )
 
 
@@ -47,9 +49,9 @@ def single_request(provider=False, model=False, temperature=False, schema=False,
     else:
         schema_string = False
         
-    is_localhost = False    
+    url = 'http://127.0.0.1:8081/gpt' if is_localhost else GPT_URL
     
-    response = requests.post('http://127.0.0.1:8081/gpt' if is_localhost else 'https://gpt-function-771520566941.europe-west4.run.app/gpt', {}, {
+    response = requests.post(url, {}, {
         "provider": provider,
         "model": model,
         "data": messages,

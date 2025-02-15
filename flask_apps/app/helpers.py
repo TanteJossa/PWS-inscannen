@@ -20,6 +20,12 @@ inch_per_cm = 0.393701
 
 cm_to_px = lambda x: int(x*ppi*inch_per_cm)
 
+
+is_localhost = False
+
+GPT_URL = 'https://gpt-function-771520566941.europe-west4.run.app/gpt'
+DOC_URL = 'https://docgen-function-771520566941.europe-west4.run.app'
+
 def pillow_to_base64(pillow_image):
     buffered = BytesIO()
     pillow_image.save(buffered, format="PNG")

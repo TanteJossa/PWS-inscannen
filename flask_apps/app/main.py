@@ -6,6 +6,8 @@ from flask import Flask, request, jsonify, Response
 from flask_cors import CORS, cross_origin
 import random
 
+import requests
+
 # from firebase_functions import https_fn
 # from firebase_admin import initialize_app, db
 
@@ -13,6 +15,8 @@ from helpers import (
     png_to_base64, 
     base64_to_png, 
     get_random_id,
+    is_localhost,
+    DOC_URL
 )
 from scan_module import (
     input_dir,
@@ -32,10 +36,8 @@ from scan_module import (
     scan_page,
     grade_answer,
     get_test_structure,
-    get_base64_student_result_pdf,
     get_gpt_test,
     get_gpt_test_question,
-    get_base64_test_pdf
 )
 import threading
 
@@ -601,10 +603,17 @@ def grade_with_answer():
             else:
                 answer = "Geen antwoord gevonden"
                 
+            if ("gradeRules" in data):
+                grade_rules = data.get("gradeRules")
+            else:
+                grade_rules = "Geen extra regels gevonden"
+                
             request_text = f"""
                 Kijk deze toetsvraag van een leerling zo goed mogelijk na en geef korte feedback en het puntnummer bij elk punt, point_index is 0 voor het eerste punt. Geef ook een totale feedback met daarin een zo kort mogelijke uitleg over of iemand slodig is of het waarschijnlijk niet begrijpt en misschien tip als je denkt dat iemand ergens HEEL veel aan heeft. Spreek in de totale feedback de leerling aan en maximaal 1-2 zinnen. 
-                Let op een feedback op een punt is 1 zin. en de totale feedback is maximaal 20-35 woorden. Spreek de leerling aan in de 2e persoon.
+                Let op een feedback op een punt is 1 zin. en de totale feedback is maximaal 20-35 woorden. Spreek de leerling aan in de 2e persoon. De feedback moet niet herhalen wat een leerling al kan zien aan zijn antwoord, maar meer een hint of tip om het de volgende keer beter te doen met (als het in de woorden past) een voorbeeld.
                 Het is heel belangrijk dat de has_point key in elk punt staat, vergeet dit niet, dus: {{punten: [{{has_point: bool}}]}}
+                
+                Extra nakijkregels: {grade_rules}
                 
                 Vraag: {question}
                 
@@ -779,92 +788,52 @@ def get_test_question_data():
         "output": data
     }
 
-@app.route('/student-result-pdf', methods = ['GET', 'POST'])
+
+@app.route('/student-result-pdf', methods=['GET', 'POST'])
 def get_result_pdf():
-    # try:
-    start_time = time.time()
-    
-    if (request.content_type != None and request.content_type == 'application/json'):
-        data = request.get_json(silent=True)
-    else:
-        data = request.args.to_dict()
-        print(data)
-    
-    if ("id" in data):
-        id = data.get("id")
-    else:
-        id = "No ID found"
+    with request_semaphore:
+        start_time = time.time()
+        data = request.get_json() if request.is_json else request.args.to_dict()
+        process_id = data.get("id", "No ID found")
+        student_results = data.get("studentResults", [])
+        add_student_feedback = data.get("addStudentFeedback", False)
 
-        
-    if ("studentResults" in data):
-        student_results = data.get("studentResults")
-    else:
-        student_results = False
-        
-    if ("addStudentFeedback" in data):
-        add_student_feedback = data.get("addStudentFeedback")
-    else:
-        add_student_feedback = False
-        
-    process_id = get_random_id()
-    # base64_to_png(image_string, input_dir+process_id+'.png')
-        
-    data = get_base64_student_result_pdf(process_id, student_results, add_student_feedback)
 
-    # cleanup_files(process_id)
-    end_time = time.time()
+        try:
+            url = f"{'http://127.0.0.1:8082' if is_localhost else DOC_URL}/student-result-pdf"
+            response = requests.post(url, json=data, timeout=60)  # Add timeout
+            response.raise_for_status()  # Raise HTTPError for bad responses (4xx or 5xx)
+            result = response.json()
 
-    return {
-        "id": id,
-        "process_id": process_id,
-        "start_time": start_time,
-        "end_time": end_time,
-        "output": data
-    }
-    # except Exception as e:    
-        # return {"error": str(e)}       
+            # Adjust keys to match the original function's output if needed
+            result["id"] = process_id  # Make sure id is consistent
+            return jsonify(result)
+        except requests.exceptions.RequestException as e:
+            return jsonify({"error": f"Error communicating with doc server: {e}"}), 500
 
-@app.route('/test-pdf', methods = ['GET', 'POST'])
+
+
+@app.route('/test-pdf', methods=['GET', 'POST'])
 def get_test_pdf():
-    # try:
-    start_time = time.time()
-    
-    if (request.content_type != None and request.content_type == 'application/json'):
-        data = request.get_json(silent=True)
-    else:
-        data = request.args.to_dict()
-        print(data)
-    
-    if ("id" in data):
-        id = data.get("id")
-    else:
-        id = "No ID found"
-
-        
-    if ("testData" in data):
+    with request_semaphore:
+        start_time = time.time()
+        data = request.get_json() if request.is_json else request.args.to_dict()
+        process_id = data.get("id", "No ID found")
         test_data = data.get("testData")
-    else:
-        test_data = False
-        
-        
-    process_id = get_random_id()
-    # base64_to_png(image_string, input_dir+process_id+'.png')
-        
-    data = get_base64_test_pdf(process_id, test_data)
+        if not test_data:
+            return jsonify({"error": "No test data provided"}), 400
 
-    # cleanup_files(process_id)
-    end_time = time.time()
+        try:
+            url = f"{'http://127.0.0.1:8082' if is_localhost else DOC_URL}/test-pdf"
+            response = requests.post(url, json=data, timeout=60)  # Add timeout
+            response.raise_for_status()
+            result = response.json()
+            result["id"] = process_id  # Ensure consistent ID
+            return jsonify(result)
 
-    return {
-        "id": id,
-        "process_id": process_id,
-        "start_time": start_time,
-        "end_time": end_time,
-        "output": data
-    }
-    # except Exception as e:    
-        # return {"error": str(e)}       
-
-
+        except requests.exceptions.RequestException as e:
+            return jsonify({"error": f"Error communicating with doc server: {e}"}), 500
+            
+    
 if __name__ == "__main__":
     app.run(debug=True, host="0.0.0.0", port=int(os.environ.get("PORT", 8080)))
