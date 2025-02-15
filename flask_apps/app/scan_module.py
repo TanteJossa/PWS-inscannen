@@ -146,6 +146,10 @@ class TextInBox(BaseModel):
     text: str
     other_possibility: str
 
+# TextInBox = {
+#     "text": str,
+#     "other_possibility": str
+# }
 # class GoogleTextInBox(typing.TypedDict):
 #     text: str
 #     other_possibility: str
@@ -660,17 +664,27 @@ class GradePoint(BaseModel):
     feedback: str
     point_index: int
 
+# GradePoint = {
+#     "has_point": bool,
+#     "feedback": str,
+#     "point_index": int
+# }
+
 class GradeResult(BaseModel):
     points: list[GradePoint]
+    feedback: str
 
+# GradeResult = {
+#     "points": list[GradePoint]
+# }
 
-# class GoogleGradePoint(typing.TypedDict):
+# class GradePoint(typing.TypedDict):
 #     has_point: bool
 #     feedback: str
 #     point_index: int
     
-# class GoogleGradeResult(typing.TypedDict):
-#     points: list[GoogleGradePoint]
+# class GradeResult(typing.TypedDict):
+#     points: list[GradePoint]
 #     feedback: str
 
 

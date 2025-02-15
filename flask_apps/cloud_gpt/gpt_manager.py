@@ -85,7 +85,7 @@ def single_request(
     if schema_string:
         input_data.append({
             "type": "text",
-            "text": f"Geef alleen een json object als response met de volgende structuur:\n {schema_string}"
+            "text": f"Geef alleen een json object als response met de volgende structuur, gebruik precies de benaming van de keys, dus ookal is het in een andere taal:\n {schema_string}"
         })
 
 

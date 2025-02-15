@@ -36,9 +36,9 @@ def single_request(provider=False, model=False, temperature=False, schema=False,
         schema_string = schema
     elif isinstance(schema, dict):
         schema_string = json.dumps(schema)
-    elif isinstance(schema, BaseModel):
+    elif hasattr(schema, '__class__'):
         try:
-            schema_string = schema.model_json_schema()
+            schema_string = json.dumps(schema.model_json_schema())
         except:
             schema_string = False
     # elif isinstance(schema, ):
@@ -48,7 +48,7 @@ def single_request(provider=False, model=False, temperature=False, schema=False,
     #         schema_string = False
     else:
         schema_string = False
-        
+    
     url = 'http://127.0.0.1:8081/gpt' if is_localhost else GPT_URL
     
     response = requests.post(url, {}, {

@@ -624,7 +624,7 @@ def grade_with_answer():
                 
                 </Einde Antwoord Leerling>
                 
-                Houdt je aan de gegeven schema en vergeet has_point niet toe te voegen.
+                Houdt je exact aan de gegeven schema en vergeet has_point niet toe te voegen.
                 
             """
 
