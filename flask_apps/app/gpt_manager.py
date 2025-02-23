@@ -6,10 +6,10 @@ import json
 import time
 from helpers import (
     typed_dict_to_string,
+    base_model_to_schema_string,
     is_localhost,
     GPT_URL
 )
-
 
     
 def single_request(provider=False, model=False, temperature=False, schema=False, image=False, text="", messages=False, limit_output=True):
@@ -38,7 +38,7 @@ def single_request(provider=False, model=False, temperature=False, schema=False,
         schema_string = json.dumps(schema)
     elif hasattr(schema, '__class__'):
         try:
-            schema_string = json.dumps(schema.model_json_schema())
+            schema_string = base_model_to_schema_string(schema)
         except:
             schema_string = False
     # elif isinstance(schema, ):
@@ -55,7 +55,8 @@ def single_request(provider=False, model=False, temperature=False, schema=False,
         "provider": provider,
         "model": model,
         "data": messages,
-        "schema_string": schema_string
+        "schema_string": schema_string,
+        "temperature": temperature
     })
     response = response.json()
     if ('output' in response):

@@ -689,8 +689,8 @@ class GradeResult(BaseModel):
 
 
 def grade_answer(process_id, request_text=False, student_image=False, provider=False, model=False, temperature=False):
-    if (not provider):
-        provider = "google"
+    # if (not provider):
+    #     provider = "google"
         
     if student_image:
         if not student_image.startswith('data:image'):
@@ -719,7 +719,7 @@ def grade_answer(process_id, request_text=False, student_image=False, provider=F
 #     point_weight: int
 #     target_name: str
     
-class OpenAiTestQuestionPoint(BaseModel):
+class TestQuestionPoint(BaseModel):
     point_text: str
     point_name: str
     point_index: int
@@ -733,11 +733,11 @@ class OpenAiTestQuestionPoint(BaseModel):
 #     points: list[TestQuestionPoint]
 #     is_draw_question: bool
     
-class OpenAiTestQuestion(BaseModel):
+class TestQuestion(BaseModel):
     question_number: str
     question_text: str
     question_context: str
-    points: list[OpenAiTestQuestionPoint]
+    points: list[TestQuestionPoint]
     is_draw_question: bool
     
 
@@ -745,7 +745,7 @@ class OpenAiTestQuestion(BaseModel):
 #     target_name: str
 #     explanation: str
     
-class OpenAiTestTarget(BaseModel):
+class TestTarget(BaseModel):
     target_name: str
     explanation: str
     
@@ -753,9 +753,9 @@ class OpenAiTestTarget(BaseModel):
 #     questions: list[TestQuestion]
 #     targets: list[TestTarget]
 
-class OpenAiTestData(BaseModel):
-    questions: list[OpenAiTestQuestion]
-    targets: list[OpenAiTestTarget]
+class TestData(BaseModel):
+    questions: list[TestQuestion]
+    targets: list[TestTarget]
 
 def get_test_structure(process_id=False, request_text=False, test_data=False):
     provider = 'google'
@@ -791,7 +791,7 @@ def get_test_structure(process_id=False, request_text=False, test_data=False):
                     }
                 })
     
-    schema = OpenAiTestData
+    schema = TestData
     
     task_list.append({"text": "\n\n Houd je strak aan de format/schema, zorg dat elk veld een kloppende waarde heeft."})
     result = single_request(provider, model, schema=schema, messages=task_list, limit_output=False)
@@ -803,18 +803,18 @@ def get_gpt_test(process_id=False, request_text=False, provider=False, model=Fal
     
     
     if not request_text:
-        request_text = """Maak een makkelijke toets met 3 vragen"""
-    if not provider:
-        provider = "google"
-    if not model:
-        model = "gemini-exp-1206"
+        request_text = """Maak een toets met 3 vragen"""
+    # if not provider:
+    #     provider = "google"
+    # if not model:
+    #     model = "gemini-exp-1206"
     
     # if provider == 'google':
     #     schema = TestData
     # else:
     #     schema = OpenAiTestData
     
-    schema = OpenAiTestData
+    schema = TestData
     result = single_request(provider, model, schema=schema, text=request_text, limit_output=False)
     return result
 
@@ -836,7 +836,7 @@ def get_gpt_test_question(process_id=False, request_text=False, provider=False, 
     # else:
     #     schema = OpenAiTestQuestion
     
-    schema = OpenAiTestQuestion
+    schema = TestQuestion
     
 
     result = single_request(provider, model, schema=schema, text=request_text, limit_output=False)

@@ -695,3 +695,88 @@ def _get_type_string(
         return type_hint
     else:  # Basic types (int, str, bool, etc.)
         return str(type_hint).replace("typing.", "")
+    
+    
+from pydantic import BaseModel, Field
+from typing import Optional, List, get_origin, get_args
+
+
+
+def base_model_to_schema_string(model_class: type[BaseModel], indent_level=0) -> str:
+    """
+    Converts a Pydantic BaseModel class schema to a nicely formatted string for AI parsing.
+    Handles nested BaseModels and lists of BaseModels or primitive types.
+    """
+    schema_string = ""
+    indent = ""
+    if indent_level != 0:
+        schema_string += f"{indent}{model_class.__name__}:\n"
+        indent = "  " * (indent_level - 1)
+    
+    for field_name, field in model_class.__fields__.items():
+        field_type = field.annotation
+        type_str = ""
+
+        origin = get_origin(field_type)
+        args = get_args(field_type)
+
+        if origin is list:
+            if args:
+                arg_type = args[0]
+                if isinstance(arg_type, type) and issubclass(arg_type, BaseModel):
+                    type_str = f"list[{arg_type.__name__}]"
+                else:
+                    type_str = f"list[{arg_type.__name__ if hasattr(arg_type, '__name__') else str(arg_type)}]" # handle typing.Optional, etc
+            else:
+                type_str = "list" # should not happen in pydantic usually
+        elif isinstance(field_type, type) and issubclass(field_type, BaseModel):
+            type_str = field_type.__name__
+        else:
+            type_str = field_type.__name__ if hasattr(field_type, '__name__') else str(field_type) # handle typing.Optional, etc
+
+        schema_string += f"{indent}  {field_name}: {type_str}\n"
+
+        if origin is list:
+            if args:
+                arg_type = args[0]
+                if isinstance(arg_type, type) and issubclass(arg_type, BaseModel):
+                    schema_string += base_model_to_schema_string(arg_type, indent_level + 1)
+        elif isinstance(field_type, type) and issubclass(field_type, BaseModel):
+            schema_string += base_model_to_schema_string(field_type, indent_level + 1)
+    return schema_string
+    """
+    Generates a human-readable schema string from a Pydantic BaseModel,
+    suitable for AI parsing, handling nested models and lists.
+    """
+    indent = "  " * indent_level
+    schema_str = f"{indent}Model: {model.__class__.__name__}\n{indent}Fields:\n"
+    for field_name, field_info in model.model_fields.items():
+        field_type = field_info.annotation
+        description = field_info.description or ""
+        required = field_info.is_required()
+
+        schema_str += f"{indent}  - Field: {field_name}\n"
+        schema_str += f"{indent}    Type: {get_type_string(field_type)}\n" # Use get_type_string
+        if description:
+            schema_str += f"{indent}    Description: {description}\n"
+        schema_str += f"{indent}    Required: {'Yes' if required else 'No'}\n"
+
+        origin_type = get_origin(field_type)
+        args_type = get_args(field_type)
+
+        if origin_type is list: # Handle List types
+            if args_type: # List with a specified type argument
+                list_item_type = args_type[0]
+                if issubclass(list_item_type, BaseModel) and list_item_type != BaseModel: # Check if list item is a BaseModel
+                    schema_str += f"{indent}    List Item Schema:\n"
+                    schema_str += model_to_schema_string(list_item_type(), indent_level + 3) # Recursive call for list item model
+            else:
+                schema_str += f"{indent}    Note: List item type is not specified in type hints.\n"
+
+        elif issubclass(field_type, BaseModel) and field_type != BaseModel and field_type != model.__class__: # Handle nested BaseModel
+            schema_str += f"{indent}    Nested Model Schema:\n"
+            schema_str += model_to_schema_string(field_type(), indent_level + 3) # Recursive call for nested model
+
+        schema_str += "\n" # Separate fields with a newline
+
+    return schema_str

@@ -35,9 +35,9 @@ from scan_module import (
     transcribe_answer,
     scan_page,
     grade_answer,
-    get_test_structure,
     get_gpt_test,
     get_gpt_test_question,
+    get_test_structure
 )
 import threading
 
