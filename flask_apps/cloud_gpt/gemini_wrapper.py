@@ -1,4 +1,3 @@
-import google.generativeai as genai
 import json
 
 from helpers import json_from_string
@@ -9,13 +8,36 @@ with open('creds/google_gemini.json', 'r') as f:
 API_KEY = data["key"]
 
 
+def get_google_messages(input_data):
+    messages = []
+    for item in input_data:
+        if item["type"] == "text":
+            messages.append({
+                "text": item["text"]
+            })
+        if item["type"] == "image" and "image" in item:
+            base64_image = item["image"]
+            if base64_image.startswith('data:image'):
+                base64_image = base64_image.split(',')[1]    
+
+            messages.append({
+                "inline_data": {
+                    "mime_type":"image/png",
+                    "data": base64_image
+                }
+            })
+            messages.append({"text": "\n\n"})
+            
+    return messages
+
+
 def google_single_request(
     task_list=False,
     model=False,
     limit_output=False,
     temperature=False,
 ):
-    genai.configure(api_key=data["key"],transport="rest")
+    # genai.configure(api_key=data["key"],transport="rest")
 
     if not model:
         model = "gemini-2.0-flash"

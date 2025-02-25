@@ -11,6 +11,32 @@ def get_client(provider):
     else:
         raise Exception("Provider not found")
     
+def get_openai_messages(input_data):
+    messages = []
+    for item in input_data:
+        if item["type"] == "text":
+            messages.append({
+                "role": "user", 
+                "content": item["text"]
+            })
+        if item["type"] == "image":
+            base64_image = item["image"]
+            if not base64_image.startswith('data:image'):
+                base64_image = "data:image/png;base64," + base64_image    
+                
+            messages.append({
+                "role": "user",
+                "content": [
+                    {
+                        "type": "image_url",
+                        "image_url": {
+                            "url": f"{base64_image}"
+                        }
+                    }
+                ]
+            })
+            
+    return messages
 
 
 from pydantic import ValidationError

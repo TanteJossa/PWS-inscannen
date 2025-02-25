@@ -122,7 +122,8 @@ def get_providers():
         "google": ["gemini-2.0-pro-exp-02-05", "gemini-2.0-flash", "gemini-1.5-pro", "learnlm-1.5-pro-experimental", "gemini-exp-1206"],
         "openai": ["gpt-4o-mini", "gpt-4o", "gpt-o3-mini"],
         "deepseek": ["deepseek-chat", "deepseek-reasoner"],
-        "alibaba": ["qwen-turbo", "qwen-plus", "qwen-max-2025-01-25", "qwen-max"]
+        "alibaba": ["qwen-turbo", "qwen-plus", "qwen-max-2025-01-25", "qwen-max"],
+        "anthropic": ["claude-3-5-sonnet-20241022", "claude-3-5-haiku-20241022", "claude-3-7-sonnet-20250219"]
     }
     return jsonify(providers)
 
