@@ -30,10 +30,10 @@ def single_request(
             "type": "text",
             "text": "eindig dit gesprek zo snel mogelijk."
         }]
-    if not provider:
+    if not provider or not model:
         provider = "google"  # A default, can be changed
-    if not model:
         model = "gemini-2.0-flash"  # a default
+
     if not temperature:
         temperature = 0.1
 

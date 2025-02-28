@@ -104,6 +104,8 @@ def openai_single_request(messages, response_format=False, model = False, provid
 
     client = get_client(provider)
     
+    messages = get_openai_messages(messages)
+    
     to_use_response_format = openai.NOT_GIVEN
         
     if model == 'deepseek-reasoner':

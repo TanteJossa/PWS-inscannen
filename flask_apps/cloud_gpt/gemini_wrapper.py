@@ -10,12 +10,18 @@ API_KEY = data["key"]
 
 def get_google_messages(input_data):
     messages = []
+    
     for item in input_data:
-        if item["type"] == "text":
+        if "type" not in item:
+            continue
+        
+        if item["type"] == "text" and "text" in item:
             messages.append({
                 "text": item["text"]
             })
-        if item["type"] == "image" and "image" in item:
+        print(item["type"])
+
+        if item["type"] == "image" and "image" in item  and isinstance(item["image"], str):
             base64_image = item["image"]
             if base64_image.startswith('data:image'):
                 base64_image = base64_image.split(',')[1]    
@@ -27,7 +33,7 @@ def get_google_messages(input_data):
                 }
             })
             messages.append({"text": "\n\n"})
-            
+
     return messages
 
 
@@ -47,7 +53,9 @@ def google_single_request(
 
     if not task_list:
         task_list = []
-    
+        
+    messages = get_google_messages(task_list)
+
     try:
         url = f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent?key={API_KEY}"
         headers = {
@@ -56,12 +64,12 @@ def google_single_request(
         payload = {
             "contents": [
                 {
-                    "parts":task_list
+                    "parts":messages
                 }
             ],
             "generationConfig": {
                 # "response_mime_type": "application/json",
-                "temperature": temperature,
+                # "temperature": temperature,
                 # "topP": 0.95,
                 # "response_schema": typed_dict_to_schema(response_format),
                 

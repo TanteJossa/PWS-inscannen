@@ -679,11 +679,21 @@ def get_test_data():
         test_data = data.get("testData")
     else:
         test_data = False
+
+    if ("provider" in data):
+        provider = data.get("provider")
+    else:
+        provider = False
         
+    if ("model" in data):
+        model = data.get("model")
+    else:
+        model = False
+ 
     process_id = get_random_id()
     # base64_to_png(image_string, input_dir+process_id+'.png')
         
-    data = get_test_structure(process_id, request_text, test_data)
+    data = get_test_structure(process_id, request_text, test_data,provider, model)
 
     # cleanup_files(process_id)
     end_time = time.time()

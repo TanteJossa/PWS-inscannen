@@ -757,9 +757,9 @@ class TestData(BaseModel):
     questions: list[TestQuestion]
     targets: list[TestTarget]
 
-def get_test_structure(process_id=False, request_text=False, test_data=False):
-    provider = 'google'
-    model = "gemini-exp-1206"
+def get_test_structure(process_id=False, request_text=False, test_data=False, provider=False, model=False):
+    # provider = 'google'
+    # model = "gemini-exp-1206"
     
     task_list = []
     
@@ -767,33 +767,33 @@ def get_test_structure(process_id=False, request_text=False, test_data=False):
         request_text = """Deel  in
         
         """
-    
+
+        
     task_list.append({
         "text": request_text,
+        "type": "text"
     })
 
     for key in test_data.keys():
-        task_list.append({"text": f"\n{key}:\n"} )
+        task_list.append({"text": f"\n{key}:\n", "type": "text"} )
         
         for item in test_data[key]:
             if(item["type"] == 'text'):
-                task_list.append({"text": item["data"]})
+                task_list.append({"text": item["data"], "type": "text"})
                 
             if(item["type"] == 'image'):
                 base64_image = item["data"]
                 
                 if base64_image.startswith('data:image'):
                     base64_image = base64_image.split(',')[1]   
-                task_list.append({
-                    "inline_data": {
-                        "mime_type":"image/png",
-                        "data": base64_image
-                    }
-                })
-    
+                    task_list.append({
+                        "type": "image",
+                        "image": base64_image
+                        
+                    })
     schema = TestData
     
-    task_list.append({"text": "\n\n Houd je strak aan de format/schema, zorg dat elk veld een kloppende waarde heeft."})
+    task_list.append({"text": "\n\n Houd je strak aan de format/schema, zorg dat elk veld een kloppende waarde heeft.", "type": "text"})
     result = single_request(provider, model, schema=schema, messages=task_list, limit_output=False)
     return result
 
@@ -827,9 +827,9 @@ def get_gpt_test_question(process_id=False, request_text=False, provider=False, 
         request_text = """Maak een makkelijke toets met 3 vragen"""
 
     if not provider:
-        provider = "google"
+        provider = False
     if not model:
-        model = "gemini-exp-1206"
+        model = False
     
     # if provider == 'google':
     #     schema = TestQuestion
