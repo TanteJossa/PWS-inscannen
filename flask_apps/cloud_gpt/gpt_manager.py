@@ -52,19 +52,29 @@ def single_request(
             result = openai_single_request(
                 messages=messages, model=model, provider=provider, temperature=temperature)
         except:
-            result = {"result_data": {
-                "error": "something went wrong, maybe a timeout"}}
+            result = {
+                "result_data": {
+                    "error": "something went wrong, maybe a timeout"
+                },
+                "request_data": {
+                "tokens_used": 0,
+                "model_used": model,
+                "model_version": model,
+                "timestamp": 0,
+                "delta_time_s": 0
+            }
+            }
         result_data = result["result_data"]
         request_data = result["request_data"]
         response = {
             "result": result_data,
-            "tokens_used": request_data["total_tokens"],
+            "tokens_used": request_data.get("total_tokens", 0),
 
-            "model_used": result["model_used"],
-            "model_version": result["model_version"],
+            "model_used": result.get("model_used", "not_found"),
+            "model_version": result.get("model_version", "not_found"),
 
-            "timestamp":  result["timestamp"],
-            "delta_time_s":  result["delta_time_s"],
+            "timestamp":  result.get("timestamp", 0),
+            "delta_time_s":  result.get("delta_time_s", 0),
         }
 
     elif provider == 'google':

@@ -37,7 +37,8 @@ with open("creds/deepseek.json", "r") as f:
     deepseek_key = json.load(f)["key"]
 with open("creds/alibaba.json", "r") as f:
     alibaba_key = json.load(f)["key"]
-
+with open("creds/groq.json", "r") as f:
+    groq_key = json.load(f)["key"]
 
 OpenAi_module_models = {
     "openai": {
@@ -51,5 +52,9 @@ OpenAi_module_models = {
     "alibaba": {
         "base_url": "https://dashscope-intl.aliyuncs.com/compatible-mode/v1",
         "key": alibaba_key
+    },
+    "groq": {
+        "base_url": "https://api.groq.com/openai/v1",
+        "key": groq_key
     }
 }

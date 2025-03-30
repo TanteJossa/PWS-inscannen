@@ -75,7 +75,7 @@ def get_response_json(response, gpt_model, start_time, end_time):
     
     # Prepare request data
     request_data = dict_response.get("usage", {})
-    
+
     # Construct the output JSON
     output_json = {
         "result_data": result_data,
@@ -108,20 +108,21 @@ def openai_single_request(messages, response_format=False, model = False, provid
     
     to_use_response_format = openai.NOT_GIVEN
         
-    if model == 'deepseek-reasoner':
+    if model == 'deepseek-reasoner' or provider in ["groq"]:
         all_text = ""
         for message in messages:
-            for sub_message in message["content"]:
-                if (isinstance(sub_message, dict) and sub_message["type"] == "text"):
-                    all_text += sub_message["text"] + '\n'
+            content = message.get("content", "")
+            # for sub_message in message["content"]:
+            if (isinstance(content, str)):
+                all_text += content + '\n'
+                # all_text += sub_message + '\n'
+            # else:
+                
         messages = [{
             "role": "user",
-            "content": [{
-                "type": "text",
-                "text": all_text
-            }]
+            "content": all_text
         }]
-
+        
     if model in ['o1-mini', 'o1-preview']:
         temperature = 1
     

@@ -8,6 +8,7 @@ import os
 import warnings
 import pathlib
 import platform
+from helpers import resize_to_width 
 
 # Suppress FutureWarnings temporarily
 warnings.filterwarnings("ignore", category=FutureWarning)
@@ -161,10 +162,16 @@ def get_detections(model, image, img_size=512):
     Returns:
         list: List of detections with bounding box coordinates, confidence, and class ID.
     """
+    scale = img_size / image.shape[1]
+    
+    
+    # image_resized = resize_to_width(image, img_size)
 
     # Convert BGR to RGB
     image_rgb = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
-
+    # cv2.imshow('image', image_rgb)
+    # cv2.waitKey(0)
+    # cv2.destroyAllWindows()
     # Perform inference
     results = model(image_rgb, size=img_size)
 

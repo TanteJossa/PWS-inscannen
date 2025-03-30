@@ -21,7 +21,7 @@ inch_per_cm = 0.393701
 cm_to_px = lambda x: int(x*ppi*inch_per_cm)
 
 
-is_localhost = False
+is_localhost = True
 
 GPT_URL = 'https://gpt-function-771520566941.europe-west4.run.app/gpt'
 DOC_URL = 'https://docgen-function-771520566941.europe-west4.run.app'
@@ -532,6 +532,50 @@ def pair_same_output(lst, func):
     
     return pairs
 
+def resize_to_width(image, target_height, interpolation=cv2.INTER_AREA):
+    """
+    Resizes an image to a specific target width, maintaining the aspect ratio.
+
+    Args:
+        image (numpy.ndarray): The input image (loaded using cv2.imread).
+        target_width (int): The desired width of the resized image.
+        interpolation (int, optional): The interpolation method to use for resizing.
+                                      Defaults to cv2.INTER_AREA, which is generally
+                                      good for shrinking images. Other options include
+                                      cv2.INTER_LINEAR (good default),
+                                      cv2.INTER_CUBIC (better for enlarging).
+
+    Returns:
+        numpy.ndarray: The resized image, or the original image if target_width
+                       is invalid or the original width is zero.
+    """
+    # Get original dimensions (height, width)
+    original_height, original_width = image.shape[:2]
+
+    # --- Input Validation ---
+    if target_height <= 0:
+        print("Warning: target_width must be positive. Returning original image.")
+        return image
+    if original_width == 0:
+        print("Warning: Original image width is zero. Cannot resize. Returning original image.")
+        return image
+
+    # Calculate the aspect ratio
+    aspect_ratio = original_width / original_height
+
+    # Calculate the target height based on the target width and aspect ratio
+    target_width = int(target_height * aspect_ratio)
+
+    # Ensure target height is at least 1 pixel
+    target_height = max(1, target_height)
+
+    # Create the target dimensions tuple (width, height for cv2.resize)
+    new_dim = (target_width, int(target_height))
+
+    # Resize the image
+    resized_image = cv2.resize(image, new_dim, interpolation=interpolation)
+
+    return resized_image
 
 def dict_hash(dictionary: Dict[str, Any]) -> str:
     """MD5 hash of a dictionary."""

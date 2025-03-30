@@ -58,7 +58,11 @@ def single_request(provider=False, model=False, temperature=False, schema=False,
         "schema_string": schema_string,
         "temperature": temperature
     })
-    response = response.json()
+    try:
+        response = response.json()
+    except Exception as e:
+        print('error', response.text, str(e))
+        response = {'error':'json error'}
     if ('output' in response):
         print(f"GPT request ({provider}, {model}) ... Done")
         return response["output"]
