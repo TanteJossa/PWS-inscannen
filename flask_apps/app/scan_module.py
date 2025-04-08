@@ -505,23 +505,23 @@ def scan_page(
     if not provider:
         provider = "google"
     # CROP
-    print('Starting: ', 'CROP')
+    # print('Starting: ', 'CROP')
     # base64_to_png(image_string, input_dir+process_id+'.png')
     
-    crop_output_string = crop(process_id, image_string)
+    # crop_output_string = crop(process_id, image_string)
     
     # crop_output_string = png_to_base64(output_dir+process_id+'.png')
 
     # COL COR
-    print('Starting: ', 'COL COR')
+    # print('Starting: ', 'COL COR')
     # base64_to_png(crop_output_string, input_dir+process_id+'.png')
     
-    color_correction_result = extract_red_pen(process_id, crop_output_string)
+    # color_correction_result = extract_red_pen(process_id, crop_output_string)
     
+    # clean_output_string = color_correction_result["original"] #png_to_base64(output_dir+process_id+'/original.png')
+    # red_pen_output_string = color_correction_result["red_pen"] #png_to_base64(output_dir+process_id+'/red_pen.png')
     
-    clean_output_string = color_correction_result["original"] #png_to_base64(output_dir+process_id+'/original.png')
-    red_pen_output_string = color_correction_result["red_pen"] #png_to_base64(output_dir+process_id+'/red_pen.png')
-    
+    clean_output_string = image_string
 
     # STUDENT ID
     print('Starting: ', 'STUDENT ID')
@@ -544,24 +544,22 @@ def scan_page(
     print('Starting: ', 'QUESTION SELECTOR')
     
 
-    sections = []
     
-    def process_section(section):
-        question_selector_info_result = question_selector_info(process_id, section["question_selector"])
-        
-        question_id = question_selector_info_result["most_certain_checked_number"]
-
-        section["question_id"] = question_id
-        return section
-            
-
-    # Use ThreadPoolExecutor to process sections concurrently
-    with ThreadPoolExecutor() as executor:
-        results = executor.map(process_section, image_sections)
-
     # Collect results
-    sections = list(results)        
+    section_results = question_selector_info(process_id, [section["question_selector"] for section in image_sections])   
+    if (len(section_results) != len(image_sections)):
+        return {
+            'error': 'section_scan_failed, lengths not the same'
+        }
+    sections = []
+    for index in range(len(image_sections)):
+        sections.append({
+            "question_id": section_results[index]["selected_checkbox"],
+            "images": image_sections[index]
+        })
+        
     
+
     # for section in image_sections:
         
     #     question_selector_info_result = question_selector_info(process_id, section["question_selector"])
@@ -588,7 +586,7 @@ def scan_page(
         if (len(question_sections) == 0):
             pass
         try:
-            linked_image = stack_answer_sections(process_id, [x["answer"] for x in question_sections])
+            linked_image = stack_answer_sections(process_id, [x["images"]["answer"] for x in question_sections])
 
 
             if questions and str(unique_question_id) in questions:
@@ -653,10 +651,11 @@ def scan_page(
     #     except:
     #         continue
     return {
-        "cropped_base64": crop_output_string,
-        "red_pen_base64": red_pen_output_string,
+        "square_image": square_data["image"],
+        "sections": sections,
         "student_id_data": student_id_data,
         "questions": questions,
+        "success": True
     }
     
 class GradePoint(BaseModel):
